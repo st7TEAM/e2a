@@ -25,7 +25,8 @@ libenigma_gui_a_SOURCES = \
 	ewidgetdesktop.cpp \
 	ewindow.cpp \
 	ewindowstyle.cpp \
-	ewindowstyleskinned.cpp
+	ewindowstyleskinned.cpp \
+	egauge.cpp
 
 guiincludedir = $(pkgincludedir)/lib/gui
 guiinclude_HEADERS = \
@@ -47,4 +48,5 @@ guiinclude_HEADERS = \
 	ewidgetdesktop.h \
 	ewindow.h \
 	ewindowstyle.h \
-	ewindowstyleskinned.h
+	ewindowstyleskinned.h \
+	egauge.h
