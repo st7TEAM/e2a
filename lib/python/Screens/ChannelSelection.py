@@ -11,6 +11,12 @@ from EpgSelection import EPGSelection
 from enigma import eServiceReference, eEPGCache, eServiceCenter, eRCInput, eTimer, eDVBDB, iPlayableService, iServiceInformation, getPrevAsciiCode, eEnv
 from Components.config import config, ConfigSubsection, ConfigText
 from Tools.NumericalTextInput import NumericalTextInput
+#Blackhole
+from Blackhole.BhEpgSearch import Nab_EpgSearch, Nab_EpgSearchLast
+from Components.PluginComponent import plugins
+from Plugins.Plugin import PluginDescriptor
+from Screens.VirtualKeyBoard import VirtualKeyBoard
+#end
 profile("ChannelSelection.py 2")
 from Components.NimManager import nimmanager
 profile("ChannelSelection.py 2.1")
@@ -1052,8 +1058,42 @@ class ChannelSelectionBase(Screen):
 	def keyNumberGlobal(self, number):
 		unichar = self.numericalTextInput.getKey(number)
 		charstr = unichar.encode("utf-8")
-		if len(charstr) == 1:
+#Blackhole		
+		if config.misc.deliteepgbuttons.value:
+			if unichar == "1":
+				self.session.openWithCallback(self.ShowsearchNab, VirtualKeyBoard, title="Enter event to search", text="")
+			elif unichar == "2":
+				self.Show2Nab()
+			elif unichar == "3":
+				self.Show3Nab()
+			elif unichar == "4":
+				self.session.open(Nab_EpgSearchLast)
+		elif len(charstr) == 1:
 			self.servicelist.moveToChar(charstr[0])
+
+	def ShowsearchNab(self, cmd):
+		if cmd is not None:
+			self.session.open(Nab_EpgSearch, cmd)
+
+	def Show2Nab(self):
+		ref=self.getCurrentSelection()
+		ptr=eEPGCache.getInstance()
+		if ptr.startTimeQuery(ref) != -1:
+			self.session.open(EPGSelection, ref)
+		else:
+			self.session.open(MessageBox, "Sorry no epg currently available for this service.", MessageBox.TYPE_INFO)
+	
+	def Show3Nab(self):
+		myplugin = ""
+		for p in plugins.getPlugins(where = PluginDescriptor.WHERE_EVENTINFO):		
+			nam = p.name
+			pos = nam.find('EPG')
+			if pos != -1:
+				myplugin = p
+		if myplugin:
+			myplugin(session = self.session, servicelist = self)
+
+#end
 
 	def keyAsciiCode(self):
 		unichar = unichr(getPrevAsciiCode())
