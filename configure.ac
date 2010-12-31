@@ -198,6 +198,7 @@ lib/python/Plugins/SystemPlugins/FactoryTest/Makefile
 lib/python/Plugins/SystemPlugins/Fancontrol/Makefile
 lib/python/Plugins/SystemPlugins/Fancontrol/meta/Makefile
 lib/python/Tools/Makefile
+lib/python/Blackhole/Makefile
 lib/service/Makefile
 lib/components/Makefile
 po/Makefile
