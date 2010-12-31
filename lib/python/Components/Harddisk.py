@@ -178,6 +178,10 @@ class Harddisk:
 		return numPart
 
 	def unmount(self):
+#BlackHole
+		res = system("umount /media/hdd")
+		res = system("mount /dev/sda1 /media/hdd")
+#end		
 		try:
 			mounts = open("/proc/mounts")
 		except IOError:
@@ -234,10 +238,14 @@ class Harddisk:
                         try:                                                                                
                                 if MajorMinor(real_path) == MajorMinor(self.partitionPath(real_path[-1])):
 					cmd = "mount -t ext3 " + parts[0]
-					res = system(cmd)
+#BlackHole					
+#					res = system(cmd)
 					break
 			except OSError:
 				pass
+	
+		res = system("mount /dev/sda1 /media/hdd")
+#end
 
 		return (res >> 8)
 
