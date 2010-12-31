@@ -735,7 +735,8 @@ class NimManager:
 				entries[current_slot]["isempty"] = True
 		nimfile.close()
 		
-		from os import path
+#BlackHole
+		from os import path, listdir
 		
 		for id, entry in entries.items():
 			if not (entry.has_key("name") and entry.has_key("type")):
@@ -755,7 +756,11 @@ class NimManager:
 			if not (entry.has_key("multi_type")):
 				entry["multi_type"] = {}
 			self.nim_slots.append(NIM(slot = id, description = entry["name"], type = entry["type"], has_outputs = entry["has_outputs"], internally_connectable = entry["internally_connectable"], multi_type = entry["multi_type"], frontend_id = entry["frontend_device"], i2c = entry["i2c"], is_empty = entry["isempty"]))
-
+#BlackHole
+		adapter_count = len(listdir("/dev/dvb"))
+		while adapter_count > len(self.nim_slots):
+			self.nim_slots.append(NIM(slot = len(self.nim_slots), description = "Dummy Tuner", type = "DVB-T", has_outputs = False, internally_connectable = None, multi_type = {}))
+	
 	def hasNimType(self, chktype):
 		for slot in self.nim_slots:
 			if slot.isCompatible(chktype):
