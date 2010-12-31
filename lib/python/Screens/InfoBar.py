@@ -9,7 +9,7 @@ profile("LOAD:enigma")
 from enigma import iPlayableService
 
 profile("LOAD:InfoBarGenerics")
-from Screens.InfoBarGenerics import InfoBarShowHide, \
+from Screens.InfoBarGenerics import InfoBarShowHide, InfoBar_Nab, \
 	InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarRdsDecoder, \
 	InfoBarEPG, InfoBarSeek, InfoBarInstantRecord, \
 	InfoBarAudioSelection, InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarUnhandledKey, \
@@ -26,8 +26,11 @@ from Components.ServiceEventTracker import ServiceEventTracker, InfoBarBase
 profile("LOAD:HelpableScreen")
 from Screens.HelpMenu import HelpableScreen
 
-class InfoBar(InfoBarBase, InfoBarShowHide,
-	InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder,
+from Blackhole.BhBlue import DeliteBp
+from Blackhole.BhGreen import DeliteGp
+
+class InfoBar(InfoBarBase, InfoBarShowHide, InfoBar_Nab,
+	InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp,
 	InfoBarInstantRecord, InfoBarAudioSelection, 
 	HelpableScreen, InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarUnhandledKey,
 	InfoBarSubserviceSelection, InfoBarTimeshift, InfoBarSeek,
@@ -52,8 +55,8 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 		self.allowPiP = True
 		
 		for x in HelpableScreen, \
-				InfoBarBase, InfoBarShowHide, \
-				InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, \
+				InfoBarBase, InfoBarShowHide, InfoBar_Nab, \
+				InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp, \
 				InfoBarInstantRecord, InfoBarAudioSelection, InfoBarUnhandledKey, \
 				InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarSubserviceSelection, \
 				InfoBarTimeshift, InfoBarSeek, InfoBarSummarySupport, InfoBarTimeshiftState, \
@@ -130,7 +133,7 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 		from Screens.Subtitles import Subtitles
 		self.session.open(Subtitles)
 
-class MoviePlayer(InfoBarBase, InfoBarShowHide, \
+class MoviePlayer(InfoBarBase, InfoBarShowHide, InfoBar_Nab, \
 		InfoBarMenu, \
 		InfoBarSeek, InfoBarShowMovies, InfoBarAudioSelection, HelpableScreen, InfoBarNotifications,
 		InfoBarServiceNotifications, InfoBarPVRState, InfoBarCueSheetSupport, InfoBarSimpleEventView,
@@ -152,7 +155,7 @@ class MoviePlayer(InfoBarBase, InfoBarShowHide, \
 		
 		self.allowPiP = False
 		
-		for x in HelpableScreen, InfoBarShowHide, InfoBarMenu, \
+		for x in HelpableScreen, InfoBarShowHide, InfoBarMenu, InfoBar_Nab, \
 				InfoBarBase, InfoBarSeek, InfoBarShowMovies, \
 				InfoBarAudioSelection, InfoBarNotifications, InfoBarSimpleEventView, \
 				InfoBarServiceNotifications, InfoBarPVRState, InfoBarCueSheetSupport, \
@@ -161,6 +164,10 @@ class MoviePlayer(InfoBarBase, InfoBarShowHide, \
 				InfoBarPlugins, InfoBarPiP:
 			x.__init__(self)
 
+#Blackhole
+		self.oldeiconfig = config.misc.deliteeinfo.value
+		config.misc.deliteeinfo.value = False
+#End
 		self.lastservice = session.nav.getCurrentlyPlayingServiceReference()
 		session.nav.playService(service)
 		self.returning = False
@@ -168,6 +175,11 @@ class MoviePlayer(InfoBarBase, InfoBarShowHide, \
 
 	def __onClose(self):
 		self.session.nav.playService(self.lastservice)
+#Blackhole
+		config.misc.deliteeinfo.value = self.oldeiconfig
+		config.misc.deliteeinfo.save()
+#End
+
 
 	def handleLeave(self, how):
 		self.is_closing = True
