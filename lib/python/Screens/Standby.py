@@ -176,3 +176,12 @@ class TryQuitMainloop(MessageBox):
 	def __onHide(self):
 		global inTryQuitMainloop
 		inTryQuitMainloop = False
+
+#Delite
+from os import system
+class DeliteReboot(Screen):
+	def __init__(self, session):
+		system("/etc/init.d/umountnfs.sh")
+		system("reboot")
+
+
