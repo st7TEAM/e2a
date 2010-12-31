@@ -18,6 +18,20 @@
 #include <lib/python/python.h>
 #include <dvbsi++/descriptor_tag.h>
 
+//BlackHole
+#include <xmlccwrap/xmlccwrap.h>
+//BlackHole socket
+#include <sys/socket.h>
+#include <sys/un.h>
+
+//BlackHole
+void Nabilo_pop_sock(char *cmd, char *text);
+
+std::string langext[] = { "None", "it", "uk", "au", "sw", "no", "", "", "", ""};
+unsigned char InitialBuffer[32];
+bool OnReadBuffer;
+//End
+
 int eventData::CacheSize=0;
 descriptorMap eventData::descriptors;
 __u8 eventData::data[4108];
@@ -127,8 +141,10 @@ const eit_event_struct* eventData::get() const
 			pos += b;
 			descriptors_length += b;
 		}
-		else
-			eFatal("LINE %d descriptor not found in descriptor cache %08x!!!!!!", __LINE__, *(p-1));
+//BlackHole
+		//else
+			//eFatal("LINE %d descriptor not found in descriptor cache %08x!!!!!!", __LINE__, *(p-1));
+//end
 		tmp-=4;
 	}
 	ASSERT(pos <= 4108);
@@ -158,8 +174,9 @@ eventData::~eventData()
 					descriptors.erase(it);	// remove entry from descriptor map
 				}
 			}
-			else
-				eFatal("LINE %d descriptor not found in descriptor cache %08x!!!!!!", __LINE__, *(d-1));
+//BlackHole
+			//else
+			//	eFatal("LINE %d descriptor not found in descriptor cache %08x!!!!!!", __LINE__, *(d-1));
 			ByteSize -= 4;
 		}
 		delete [] EITdata;
@@ -360,6 +377,14 @@ void eEPGCache::DVBChannelRunning(iDVBChannel *chan)
 					eDebug("[eEPGCache] couldnt initialize mhw reader!!");
 					return;
 				}
+//BlackHole
+				res = demux->createSectionReader ( this, data.m_SKYReader );
+				if ( res )
+				{
+					eDebug ( "[eEPGCache] couldnt initialize sky reader!!" );
+					return;
+				}
+//end
 #endif
 				if (m_running) {
 					data.state=0;
@@ -524,7 +549,7 @@ void eEPGCache::sectionRead(const __u8 *data, int source, channel_data *channel)
 		channel->haveData |= source;
 
 	singleLock s(cache_lock);
-	// hier wird immer eine eventMap zurück gegeben.. entweder eine vorhandene..
+	// hier wird immer eine eventMap zurï¿½ck gegeben.. entweder eine vorhandene..
 	// oder eine durch [] erzeugte
 	std::pair<eventMap,timeMap> &servicemap = eventDB[service];
 	eventMap::iterator prevEventIt = servicemap.first.end();
@@ -874,6 +899,9 @@ void eEPGCache::gotMessage( const Message &msg )
 				m_knownChannels.find(msg.channel);
 			if ( channel != m_knownChannels.end() )
 				channel->second->abortEPG();
+// Blackhole sock	
+			Nabilo_pop_sock("popclose", "");
+
 			break;
 		}
 		case Message::quit:
@@ -992,6 +1020,22 @@ void eEPGCache::thread()
 
 void eEPGCache::load()
 {
+//BlackHole
+	
+	FILE *fp = fopen ( "/etc/skyitepgpath", "r" );
+	if ( fp )
+	{
+	  	fgets ( m_filename, sizeof ( m_filename ), fp ); 
+		fclose(fp);
+	}
+	else
+	{
+		sprintf (m_filename, "/hdd/epg.dat");
+	}
+//	eDebug ("[EPG SKY] reading epg file: %s %s", fileDat, fileMd5 );
+//	strncpy(m_filename, path, 1024);
+//end
+
 	FILE *f = fopen(m_filename, "r");
 	if (f)
 	{
@@ -1088,6 +1132,22 @@ void eEPGCache::load()
 
 void eEPGCache::save()
 {
+//BlackHole
+	
+	FILE *fp = fopen ( "/etc/skyitepgpath", "r" );
+	if ( fp )
+	{
+	  	fgets ( m_filename, sizeof ( m_filename ), fp ); 
+		fclose(fp);
+	}
+	else
+	{
+		sprintf (m_filename, "/hdd/epg.dat");
+	}
+//	eDebug ("[EPG SKY] reading epg file: %s %s", fileDat, fileMd5 );
+//	strncpy(m_filename, path, 1024);
+//end
+
 	/* create empty file */
 	FILE *f = fopen(m_filename, "w");
 
@@ -1183,6 +1243,37 @@ void eEPGCache::save()
 	fseek(f, sizeof(int), SEEK_SET);
 	fwrite("ENIGMA_EPG_V7", 13, 1, f);
 	fclose(f);
+
+
+//BlackHole
+	char mybuf[256];
+	char fileOut[256];
+	FILE *fp2 = fopen ( "/etc/bhepgbackup", "r" );
+	if ( fp2 )
+	{
+	  	fgets ( mybuf, sizeof ( mybuf ), fp2 ); 
+		sprintf (fileOut, "%sepg.dat.bak", mybuf);
+		fclose(fp2); 
+
+		int c;
+  		FILE *in,*out;
+		in = fopen(m_filename, "r" );
+     		out = fopen(fileOut, "w" );
+     		if(in==NULL || !in) {
+			return;
+     		}
+     		else if(out==NULL || !out) {
+			return;
+     		}
+     		while((c=getc(in))!=EOF)
+			putc(c,out);
+
+		fclose(in);
+		fclose(out);
+	}
+
+//end
+
 }
 
 eEPGCache::channel_data::channel_data(eEPGCache *ml)
@@ -1264,6 +1355,54 @@ void eEPGCache::channel_data::startEPG()
 	mask.data[1] = 0;
 	mask.mask[1] = 0;
 	m_MHWTimeoutet=false;
+
+//BlackHole
+	FILE *f = fopen ( "/etc/skyitepglock", "r" );
+	if ( f == NULL )
+	{
+		langvalue = 0;
+
+		//1:0:1:e30:16a8:fbff:820000:0:0:0: IT
+		//1:0:2:fd1:7d4:2:11a0000:0:0:0: UK
+		//1:0:1:4270:11:1000:6180000:0:0:0: AU
+
+		eDVBChannelID chid = channel->getChannelID();
+		unsigned short int CurNid = chid.original_network_id.get();
+		unsigned short int CurTid = chid.transport_stream_id.get();
+		unsigned short int nsp_curr = chid.dvbnamespace.get();
+
+		if ( (CurTid == 0x16a8 && CurNid == 0xfbff) )
+			langvalue = 1;
+		else if ( (CurTid == 0x7d4 && CurNid == 0x2) )
+			langvalue = 2;
+		else if ( (CurTid == 0x11 && CurNid == 0x1000) )
+			langvalue = 3;
+
+		if ( langvalue > 0 )
+		{
+			eDebug("[EPGC SKY] Valid Current: Tid %04x Nid %04x -> %x", CurTid, CurNid, nsp_curr);
+
+			OnReadBuffer = true;
+			memset ( &InitialBuffer, 0, 32 );
+
+			if ( ReadDictionary() && ReadChannelsOff() )
+			{
+				ReadThemesOff();
+
+				mask.pid = 0x30;
+				mask.data[0] = 0xA0;
+				mask.mask[0] = 0xF0;
+				m_SKYReader->connectRead ( slot ( *this, &eEPGCache::channel_data::readSKYData ), m_SKYConn );
+				m_SKYReader->start ( mask );
+				isRunning |= MHW;
+				memcpy ( &m_SKYFilterMask, &mask, sizeof ( eDVBSectionFilterMask ) );
+			}
+		}
+	}
+	else
+		fclose(f);	
+
+//end
 #endif
 
 	mask.pid = 0x12;
@@ -1338,6 +1477,11 @@ void eEPGCache::channel_data::abortNonAvail()
 			m_MHWConn=0;
 			m_MHWReader2->stop();
 			m_MHWConn2=0;
+//BlackHole
+			m_SKYReader->stop();
+			m_SKYConn=0;
+//end
+
 		}
 #endif
 		if ( isRunning & VIASAT )
@@ -1418,6 +1562,10 @@ void eEPGCache::channel_data::abortEPG()
 			m_MHWConn=0;
 			m_MHWReader2->stop();
 			m_MHWConn2=0;
+//BlackHole
+			m_SKYReader->stop();
+			m_SKYConn=0;
+//end
 		}
 #endif
 	}
@@ -1533,6 +1681,16 @@ void eEPGCache::channel_data::readData( const __u8 *data)
 			cache->sectionRead(data, source, this);
 		}
 	}
+}
+
+// BlackHole
+RESULT eEPGCache::Nab_reset_timer()
+{
+	
+	eDebug("[EPGC] Funzione Nab Reset Timer Chiamata.");
+	channelLastUpdated.clear();
+	return -1;
+
 }
 
 RESULT eEPGCache::lookupEventTime(const eServiceReference &service, time_t t, const eventData *&result, int direction)
@@ -2546,6 +2704,232 @@ PyObject *eEPGCache::search(ePyObject arg)
 	return ret;
 }
 
+
+//BlackHole
+time_t calcDate ( const xmlChar *date )
+{
+	time_t ttDate;
+	tm currDay;
+	
+	char year[5];
+	char mon[3];
+	char mday[3];
+	char hour[3];
+	char min[3];
+
+	sprintf (year,"%s",xmlStrsub(date,0,4));
+	sprintf (mon,"%s",xmlStrsub(date,4,2));
+	sprintf (mday,"%s",xmlStrsub(date,6,2));
+	sprintf (hour,"%s",xmlStrsub(date,8,2));
+	sprintf (min,"%s",xmlStrsub(date,10,2));
+
+	currDay.tm_year = atoi(year) - 1900;
+	currDay.tm_mon = atoi(mon) - 1;
+	currDay.tm_mday = atoi(mday);
+	currDay.tm_hour = atoi(hour);
+	currDay.tm_min = atoi(min);
+
+	ttDate = mktime ( &currDay );
+
+	return ttDate;
+}
+
+
+RESULT eEPGCache::readXmltv(ePyObject arg)
+{
+//  sw   http://xmltv.tvsajten.com/xmltv/
+//  no   http://epg.mspc.no/xmltv/
+
+
+	if (PyTuple_Check(arg))
+	{
+		int tuplesize=PyTuple_Size(arg);
+		if (tuplesize > 0)
+		{
+			const char *provider=0;	
+			int maxdays = 0;
+			const char *language=0;	
+
+			channel_data *cdata = new channel_data(this);
+
+			ePyObject obj0 = PyTuple_GET_ITEM(arg,0);
+			if (PyString_Check(obj0))
+			{
+
+				ePyObject obj1 = PyTuple_GET_ITEM(arg,1);
+				ePyObject obj2 = PyTuple_GET_ITEM(arg,2);
+				ePyObject obj3 = PyTuple_GET_ITEM(arg,3);
+				if (PyString_Check(obj1) && PyString_Check(obj2))
+				{
+					provider = PyString_AS_STRING(obj1);
+					maxdays = atoi(PyString_AS_STRING(obj2));
+					language = PyString_AS_STRING(obj3);
+
+					int langvalue = 0;
+					for (langvalue = 0; langvalue < 10; langvalue++)
+						if (!strcmp(langext[langvalue].c_str(), language))
+							break;
+
+					eDebug ("[XMLTV] Reading URL: %s  maxdays: %d  language: %s", provider, maxdays, langext[langvalue].c_str());
+
+					LIBXML_TEST_VERSION
+
+
+					cdata->langvalue = langvalue;
+
+					if (  cdata->ReadChannelsOff() )
+					{
+						char poptxt[512];
+						sprintf (poptxt, "Reading data from %s\nUpdating cache in progress...\n", provider);
+						Nabilo_pop_sock("popshow", poptxt);
+
+						time_t now;
+						tm timeinfo;
+						time ( &now );
+						timeinfo = *localtime ( &now );
+
+						for (int day=0; day<maxdays; day++)
+						{
+							for (std::map<__u16, mhw_channel_name_t>::iterator itChannel(cdata->m_channels.begin()); itChannel != cdata->m_channels.end(); ++itChannel)
+							{
+								unsigned short int ChannelId = itChannel->first;
+	
+								char filename[256];
+								sprintf (filename,"%s%s_%d-%02d-%02d.xml.gz",provider,itChannel->second.name_ext,timeinfo.tm_year+1900,timeinfo.tm_mon+1,timeinfo.tm_mday);
+
+								eDebug ("[XMLTV] Reading: %s", filename);
+
+								sprintf (poptxt, "Reading data from %s\nUpdating cache in progress...\nReading channel %s day %d-%02d-%02d", provider, itChannel->second.name_ext, timeinfo.tm_year+1900, timeinfo.tm_mon+1, timeinfo.tm_mday);
+								Nabilo_pop_sock("popsettext", poptxt);
+
+								xmlTextReaderPtr reader;
+								int ret;
+
+								reader = xmlReaderForFile ( filename, NULL, 0 );
+								if ( reader != NULL )
+								{
+									ret = xmlTextReaderRead ( reader );
+									while ( ret == 1 )
+									{
+										int evready = 0;
+										ret = xmlTextReaderRead ( reader );
+		
+										const xmlChar *name, *value, *start, *stop, *channel;
+										time_t StartTime, EndTime;
+										int duration = 0;
+
+										char ntitle[4096];
+										__u8 nsummary[4096];
+		
+										name = xmlTextReaderConstName ( reader );
+										if ( name == NULL )
+											name = BAD_CAST "--";
+										else
+										{
+											if ( xmlTextReaderNodeType ( reader ) == 1 )
+											{
+												if ( xmlStrEqual ( name, xmlCharStrdup ( "programme" ) ) )
+												{
+													start = xmlTextReaderGetAttributeNo ( reader,0 );
+													stop = xmlTextReaderGetAttributeNo ( reader,1 );
+													channel = xmlTextReaderGetAttributeNo ( reader,2 );
+					
+													StartTime = calcDate (start);
+													EndTime = calcDate (stop);
+					
+													duration = (EndTime - StartTime)/60;
+												}
+												else if ( xmlStrEqual ( name, xmlCharStrdup ( "title" ) ) )
+												{
+													xmlTextReaderRead ( reader );
+													value = xmlTextReaderConstValue ( reader );
+													if ( value != NULL )
+														sprintf(ntitle, "%s", value);
+												}
+												else if ( xmlStrEqual ( name, xmlCharStrdup ( "desc" ) ) )
+												{
+													xmlTextReaderRead ( reader );
+													value = xmlTextReaderConstValue ( reader );
+													if ( value != NULL )
+														sprintf(nsummary, "%s", value);
+					
+													evready = 1;	
+												}
+											}
+										}
+					
+										if (evready)
+										{
+											tm Curr_Day;
+											Curr_Day = *localtime ( &StartTime );
+					
+											mhw_title_t title;
+					
+											title.channel_id = ChannelId;
+					
+											title.mhw2_mjd_hi = 0;
+											title.mhw2_mjd_lo = 0;
+											title.mhw2_duration_hi = 0;
+											title.mhw2_duration_lo = 0;
+
+											title.dh.day = Curr_Day.tm_wday;
+											title.dh.hours = Curr_Day.tm_hour;
+											title.ms.minutes = Curr_Day.tm_min;
+						
+											title.duration_hi = ( duration&0xFF00 ) >> 8;
+											title.duration_lo = duration&0xFF;
+						
+											title.program_id_hi = title.channel_id;
+											title.program_id_mh = title.dh.day;
+											title.program_id_ml = title.dh.hours;
+											title.program_id_lo = title.ms.minutes;
+					
+											int slen = strlen ( ntitle ) +1;
+											if ( slen > 33 )
+												slen = 33;
+											memcpy ( title.title_ext, ntitle, slen );
+					
+											std::string the_text = nsummary;
+					
+											cdata->isSKY = true;
+											cdata->storeTitleWeb(title, the_text, nsummary); 
+										}
+									}
+									xmlFreeTextReader ( reader );
+									if ( ret != 0 )
+									{
+										eDebug( "[XMLTV] %s : failed to parse\n", filename );
+										sprintf (poptxt, "Reading data from %s\nError: failed to parse file!", provider);
+										Nabilo_pop_sock("popsettext", poptxt);
+
+									}
+								}
+								else
+								{
+									eDebug( "[XMLTV] Unable to open %s\n", filename );
+									sprintf (poptxt, "Reading data from %s\nError: Unable to open %s", provider, filename);
+									Nabilo_pop_sock("popsettext", poptxt);
+								}
+
+								xmlCleanupParser();
+								xmlMemoryDump();
+							}
+							timeinfo.tm_mday = timeinfo.tm_mday++;
+							mktime ( &timeinfo );
+						}
+						cdata->cache->save();
+						cdata->isSKY = false;
+					}
+				}
+			}
+		}
+	}
+	Nabilo_pop_sock("popclose", "");
+}
+//end
+
+
+
 #ifdef ENABLE_PRIVATE_EPG
 #include <dvbsi++/descriptor_tag.h>
 #include <dvbsi++/unknown_descriptor.h>
@@ -3134,6 +3518,313 @@ void eEPGCache::channel_data::storeTitle(std::map<__u32, mhw_title_t>::iterator 
 	cache->sectionRead( data, MHW, this );
 }
 
+
+
+//BlackHole
+
+void eEPGCache::channel_data::storeTitleSKY(std::map<__u32, mhw_title_t>::iterator itTitle, std::string sumText, const __u8 *data)
+// data is borrowed from calling proc to save memory space.
+{
+	__u8 name[34];
+
+	unsigned short int ChannelId;
+
+	ChannelId = ( itTitle->second.section_length_lo << 8 ) | itTitle->second.channel_id;
+
+	eit_t *packet = (eit_t *) data;
+	packet->table_id = 0x50;
+	packet->section_syntax_indicator = 1;
+
+	packet->service_id_hi = m_channels[ ChannelId ].channel_id_hi;
+	packet->service_id_lo = m_channels[ ChannelId ].channel_id_lo;
+	packet->version_number = 0;	// eEPGCache::sectionRead() will dig this for the moment
+	packet->current_next_indicator = 0;
+	packet->section_number = 0;	// eEPGCache::sectionRead() will dig this for the moment
+	packet->last_section_number = 0;	// eEPGCache::sectionRead() will dig this for the moment
+	packet->transport_stream_id_hi = m_channels[ ChannelId ].transport_stream_id_hi;
+	packet->transport_stream_id_lo = m_channels[ ChannelId ].transport_stream_id_lo;
+	packet->original_network_id_hi = m_channels[ ChannelId ].network_id_hi;
+	packet->original_network_id_lo = m_channels[ ChannelId ].network_id_lo;
+	packet->segment_last_section_number = 0; // eEPGCache::sectionRead() will dig this for the moment
+	packet->segment_last_table_id = 0x50;
+
+	__u8 *title;
+	std::string prog_title;
+	int prog_title_length;
+
+	title = ( __u8* ) ( itTitle->second.title_ext ) ;
+	prog_title = ( char * ) delimitName ( title, name, 33 );
+	
+	prog_title_length = prog_title.length();
+
+	int packet_length = EIT_SIZE + EIT_LOOP_SIZE + EIT_SHORT_EVENT_DESCRIPTOR_SIZE + prog_title_length + 1;
+
+	eit_event_t *event_data = (eit_event_t *) (data + EIT_SIZE);
+	event_data->event_id_hi = (( itTitle->first ) >> 8 ) & 0xFF;
+	event_data->event_id_lo = ( itTitle->first ) & 0xFF;
+
+	time_t dt = ::time(0);
+	tm localnow;
+	localtime_r( &dt, &localnow );
+
+	dt += 3600*(itTitle->second.dh.hours - localnow.tm_hour);  // Shift dt to the recording hour.
+
+	tm recdate;
+	gmtime_r( &dt, &recdate );   // This will also take care of DST.
+
+	if (isSKY)
+	{
+	u_char *data = ( u_char* ) event_data;
+	data[2] = itTitle->second.mhw2_mjd_hi;
+	data[3] = itTitle->second.mhw2_mjd_lo;
+
+	data[4] = toBCD(recdate.tm_hour);
+	data[5] = toBCD(itTitle->second.ms.minutes);
+	data[6] = 0;
+	}
+
+	timeMHW2DVB ( HILO ( itTitle->second.duration ), ( u_char * ) event_data + 7 );
+
+	event_data->running_status = 0;
+	event_data->free_CA_mode = 0;
+	int descr_ll = EIT_SHORT_EVENT_DESCRIPTOR_SIZE + 1 + prog_title_length;
+
+	eit_short_event_descriptor_struct *short_event_descriptor =
+		(eit_short_event_descriptor_struct *) ( (u_char *) event_data + EIT_LOOP_SIZE);
+	short_event_descriptor->descriptor_tag = EIT_SHORT_EVENT_DESCRIPTOR;
+	short_event_descriptor->descriptor_length = EIT_SHORT_EVENT_DESCRIPTOR_SIZE +
+		prog_title_length - 1;
+	short_event_descriptor->language_code_1 = 'e';
+	short_event_descriptor->language_code_2 = 'n';
+	short_event_descriptor->language_code_3 = 'g';
+	short_event_descriptor->event_name_length = prog_title_length;
+	u_char *event_name = (u_char *) short_event_descriptor + EIT_SHORT_EVENT_DESCRIPTOR_SIZE;
+	memcpy(event_name, prog_title.c_str(), prog_title_length);
+
+	// Set text length
+	event_name[prog_title_length] = 0;
+
+	if ( sumText.length() > 0 )
+	// There is summary info
+	{
+		unsigned int sum_length = sumText.length();
+		if ( sum_length + short_event_descriptor->descriptor_length <= 0xff )
+		// Store summary in short event descriptor
+		{
+			// Increase all relevant lengths
+			event_name[prog_title_length] = sum_length;
+			short_event_descriptor->descriptor_length += sum_length;
+			packet_length += sum_length;
+			descr_ll += sum_length;
+			sumText.copy( (char *) event_name+prog_title_length+1, sum_length );
+		}
+		else
+		// Store summary in extended event descriptors
+		{
+			int remaining_sum_length = sumText.length();
+			int nbr_descr = int(remaining_sum_length/247) + 1;
+			for ( int i=0; i < nbr_descr; i++)
+			// Loop once per extended event descriptor
+			{
+				eit_extended_descriptor_struct *ext_event_descriptor = (eit_extended_descriptor_struct *) (data + packet_length);
+				sum_length = remaining_sum_length > 247 ? 247 : remaining_sum_length;
+				remaining_sum_length -= sum_length;
+				packet_length += 8 + sum_length;
+				descr_ll += 8 + sum_length;
+
+				ext_event_descriptor->descriptor_tag = EIT_EXTENDED_EVENT_DESCRIPOR;
+				ext_event_descriptor->descriptor_length = sum_length + 6;
+				ext_event_descriptor->descriptor_number = i;
+				ext_event_descriptor->last_descriptor_number = nbr_descr - 1;
+				ext_event_descriptor->iso_639_2_language_code_1 = 'e';
+				ext_event_descriptor->iso_639_2_language_code_2 = 'n';
+				ext_event_descriptor->iso_639_2_language_code_3 = 'g';
+				u_char *the_text = (u_char *) ext_event_descriptor + 8;
+				the_text[-2] = 0;
+				the_text[-1] = sum_length;
+				sumText.copy( (char *) the_text, sum_length, sumText.length() - sum_length - remaining_sum_length );
+			}
+		}
+	}
+
+	// Add content descriptor
+	u_char *descriptor = (u_char *) data + packet_length;
+	packet_length += 4;
+	descr_ll += 4;
+
+	int content_id = 0;
+	std::string content_descr = (char *) delimitName( m_themes[itTitle->second.theme_id].name, name, 15 );
+	if ( content_descr.find( "FILM" ) != std::string::npos )
+		content_id = 0x10;
+	else if ( content_descr.find( "SPORT" ) != std::string::npos )
+		content_id = 0x40;
+
+	descriptor[0] = 0x54;
+	descriptor[1] = 2;
+	descriptor[2] = content_id;
+	descriptor[3] = 0;
+
+	event_data->descriptors_loop_length_hi = (descr_ll & 0xf00)>>8;
+	event_data->descriptors_loop_length_lo = (descr_ll & 0xff);
+
+	packet->section_length_hi = ((packet_length - 3)&0xf00)>>8;
+	packet->section_length_lo = (packet_length - 3)&0xff;
+
+	// Feed the data to eEPGCache::sectionRead()
+	cache->sectionRead( data, MHW, this );
+}
+
+
+
+void eEPGCache::channel_data::storeTitleWeb(mhw_title_t Title, std::string sumText, const __u8 *data)
+{
+	__u8 name[34];
+
+	unsigned short int ChannelId = Title.channel_id;
+
+	eit_t *packet = (eit_t *) data;
+
+	packet->table_id = 0x50;
+	packet->section_syntax_indicator = 1;
+	packet->service_id_hi = m_channels[ ChannelId ].channel_id_hi;
+	packet->service_id_lo = m_channels[ ChannelId ].channel_id_lo;
+	packet->version_number = 0;
+	packet->current_next_indicator = 0;
+	packet->section_number = 0;
+	packet->last_section_number = 0;
+	packet->transport_stream_id_hi = m_channels[ ChannelId ].transport_stream_id_hi;
+	packet->transport_stream_id_lo = m_channels[ ChannelId ].transport_stream_id_lo;
+	packet->original_network_id_hi = m_channels[ ChannelId ].network_id_hi;
+	packet->original_network_id_lo = m_channels[ ChannelId ].network_id_lo;
+	packet->segment_last_section_number = 0;
+	packet->segment_last_table_id = 0x50;
+
+	__u8 *title;
+	std::string prog_title;
+	int prog_title_length;
+
+	title = ( __u8* ) ( Title.title_ext ) ;
+	prog_title = ( char * ) delimitName ( title, name, 33 );
+
+	prog_title_length = prog_title.length();
+
+	int packet_length = EIT_SIZE + EIT_LOOP_SIZE + EIT_SHORT_EVENT_DESCRIPTOR_SIZE + prog_title_length + 1;
+
+	eit_event_t *event_data = (eit_event_t *) (data + EIT_SIZE);
+	event_data->event_id_hi = (( Title.program_id_hi ) >> 8 ) & 0xFF;
+	event_data->event_id_lo = ( Title.program_id_lo ) & 0xFF;
+
+	if (isSKY)
+	{
+		time_t dt = ::time(0);
+		tm localnow;
+		localtime_r( &dt, &localnow );
+
+		dt += 3600*(Title.dh.hours - localnow.tm_hour);  // Shift dt to the recording hour.
+
+		tm recdate;
+		gmtime_r( &dt, &recdate );   // This will also take care of DST.
+
+		u_char *data = ( u_char* ) event_data;
+		data[2] = Title.mhw2_mjd_hi;
+		data[3] = Title.mhw2_mjd_lo;
+	
+		data[4] = toBCD(recdate.tm_hour);
+		data[5] = toBCD(Title.ms.minutes);
+		data[6] = 0;
+
+		timeMHW2DVB ( HILO ( Title.duration ), ( u_char * ) event_data + 7 );
+	}
+
+	event_data->running_status = 0;
+	event_data->free_CA_mode = 0;
+	int descr_ll = EIT_SHORT_EVENT_DESCRIPTOR_SIZE + 1 + prog_title_length;
+
+	eit_short_event_descriptor_struct *short_event_descriptor =
+		(eit_short_event_descriptor_struct *) ( (u_char *) event_data + EIT_LOOP_SIZE);
+	short_event_descriptor->descriptor_tag = EIT_SHORT_EVENT_DESCRIPTOR;
+	short_event_descriptor->descriptor_length = EIT_SHORT_EVENT_DESCRIPTOR_SIZE +
+		prog_title_length - 1;
+	short_event_descriptor->language_code_1 = 'e';
+	short_event_descriptor->language_code_2 = 'n';
+	short_event_descriptor->language_code_3 = 'g';
+	short_event_descriptor->event_name_length = prog_title_length;
+	u_char *event_name = (u_char *) short_event_descriptor + EIT_SHORT_EVENT_DESCRIPTOR_SIZE;
+	memcpy(event_name, prog_title.c_str(), prog_title_length);
+
+	// Set text length
+	event_name[prog_title_length] = 0;
+
+	if ( sumText.length() > 0 )
+	// There is summary info
+	{
+		unsigned int sum_length = sumText.length();
+		if ( sum_length + short_event_descriptor->descriptor_length <= 0xff )
+		// Store summary in short event descriptor
+		{
+			// Increase all relevant lengths
+			event_name[prog_title_length] = sum_length;
+			short_event_descriptor->descriptor_length += sum_length;
+			packet_length += sum_length;
+			descr_ll += sum_length;
+			sumText.copy( (char *) event_name+prog_title_length+1, sum_length );
+		}
+		else
+		// Store summary in extended event descriptors
+		{
+			int remaining_sum_length = sumText.length();
+			int nbr_descr = int(remaining_sum_length/247) + 1;
+			for ( int i=0; i < nbr_descr; i++)
+			// Loop once per extended event descriptor
+			{
+				eit_extended_descriptor_struct *ext_event_descriptor = (eit_extended_descriptor_struct *) (data + packet_length);
+				sum_length = remaining_sum_length > 247 ? 247 : remaining_sum_length;
+				remaining_sum_length -= sum_length;
+				packet_length += 8 + sum_length;
+				descr_ll += 8 + sum_length;
+
+				ext_event_descriptor->descriptor_tag = EIT_EXTENDED_EVENT_DESCRIPOR;
+				ext_event_descriptor->descriptor_length = sum_length + 6;
+				ext_event_descriptor->descriptor_number = i;
+				ext_event_descriptor->last_descriptor_number = nbr_descr - 1;
+				ext_event_descriptor->iso_639_2_language_code_1 = 'e';
+				ext_event_descriptor->iso_639_2_language_code_2 = 'n';
+				ext_event_descriptor->iso_639_2_language_code_3 = 'g';
+				u_char *the_text = (u_char *) ext_event_descriptor + 8;
+				the_text[-2] = 0;
+				the_text[-1] = sum_length;
+				sumText.copy( (char *) the_text, sum_length, sumText.length() - sum_length - remaining_sum_length );
+			}
+		}
+	}
+
+	// Add content descriptor
+	u_char *descriptor = (u_char *) data + packet_length;
+	packet_length += 4;
+	descr_ll += 4;
+
+	int content_id = 0;
+	std::string content_descr = (char *) delimitName( m_themes[Title.theme_id].name, name, 15 );
+	if ( content_descr.find( "FILM" ) != std::string::npos )
+		content_id = 0x10;
+	else if ( content_descr.find( "SPORT" ) != std::string::npos )
+		content_id = 0x40;
+
+	descriptor[0] = 0x54;
+	descriptor[1] = 2;
+	descriptor[2] = content_id;
+	descriptor[3] = 0;
+
+	event_data->descriptors_loop_length_hi = (descr_ll & 0xf00)>>8;
+	event_data->descriptors_loop_length_lo = (descr_ll & 0xff);
+
+	packet->section_length_hi =  ((packet_length - 3)&0xf00)>>8;
+	packet->section_length_lo =  (packet_length - 3)&0xff;
+}
+//End
+
+
+
 void eEPGCache::channel_data::startTimeout(int msec)
 {
 	m_MHWTimeoutTimer->start(msec,true);
@@ -3167,10 +3858,26 @@ void eEPGCache::channel_data::startMHWReader2(__u16 pid, __u8 tid, int ext)
 	m_MHWReader2->start(m_MHWFilterMask2);
 }
 
+//BlackHole
+void eEPGCache::channel_data::startSKYReader ( __u16 pid, __u8 tid )
+{
+	m_SKYFilterMask.pid = pid;
+	m_SKYFilterMask.data[0] = tid;
+	m_SKYReader->start ( m_SKYFilterMask );
+	eDebug ( "[EPGC SKY] start 0x%02x 0x%02x", pid, tid );
+}
+//end
+
+
 void eEPGCache::channel_data::readMHWData(const __u8 *data)
 {
-	if ( m_MHWReader2 )
+//BlackHole
+	if ( m_MHWReader2 || m_SKYReader )
+	{
 		m_MHWReader2->stop();
+		m_SKYReader->stop();
+	}
+//end
 
 	if ( state > 1 || // aborted
 		// have si data.. so we dont read mhw data
@@ -3185,7 +3892,8 @@ void eEPGCache::channel_data::readMHWData(const __u8 *data)
 		int record_size = sizeof( mhw_channel_name_t );
 		int nbr_records = int (len/record_size);
 
-		m_channels.resize(nbr_records);
+		//BlackHole
+		//m_channels.resize(nbr_records);
 		for ( int i = 0; i < nbr_records; i++ )
 		{
 			mhw_channel_name_t *channel = (mhw_channel_name_t*) &data[4 + i*record_size];
@@ -3225,6 +3933,14 @@ void eEPGCache::channel_data::readMHWData(const __u8 *data)
 			m_themes[idx+sub_idx] = *theme;
 		}
 		eDebug("[EPGC] mhw %d themes found", m_themes.size());
+
+//BlackHole
+		char poptxt[512];
+		sprintf (poptxt, "Found EPG data stream.\nUpdating cache in progress, don't change channel.\nReading Titles...\nFound %d channels\nFound %d themes\n", m_channels.size(), m_themes.size());
+		Nabilo_pop_sock("popshow", poptxt);
+
+//end
+
 		// Themes table has been read, start reading the titles table.
 		startMHWReader(0xD2, 0x90);
 		startTimeout(4000);
@@ -3263,6 +3979,13 @@ void eEPGCache::channel_data::readMHWData(const __u8 *data)
 		}
 		if ( !m_program_ids.empty())
 		{
+//BlackHole
+			char poptxt[512];
+			sprintf (poptxt, "Found EPG data stream.\nUpdating cache in progress, don't change channel.\nReading Summaries...\nFound %d channels\nFound %d themes\nFound %d titles\n", m_channels.size(), m_themes.size(), m_titles.size());
+			Nabilo_pop_sock("popsettext", poptxt);
+			nTitles = m_titles.size();
+//end
+
 			// Titles table has been read, there are summaries to read.
 			// Start reading summaries, store corresponding titles on the fly.
 			startMHWReader(0xD3, 0x90);
@@ -3316,6 +4039,13 @@ void eEPGCache::channel_data::readMHWData(const __u8 *data)
 				return;	// Continue reading of the current table.
 		}
 	}
+//BlackHole
+	char poptxt[512];
+	sprintf (poptxt, "Cache UPDATED!\n\nFound %d channels\nFound %d themes\nFound %d titles\nFound %d summaries\nFinished!\n", m_channels.size(), m_themes.size(), nTitles, nTitles - m_program_ids.size());
+	Nabilo_pop_sock("popsettext", poptxt);
+	
+//end
+
 	eDebug("[EPGC] mhw finished(%ld) %d summaries not found",
 		::time(0),
 		m_program_ids.size());
@@ -3327,16 +4057,29 @@ void eEPGCache::channel_data::readMHWData(const __u8 *data)
 	m_MHWConn=0;
 	if ( m_MHWReader )
 		m_MHWReader->stop();
+//BlackHole
 	if (haveData)
+	{
 		finishEPG();
+		cache->save();
+		sleep(1);
+		Nabilo_pop_sock("popclose", "");
+	}
+//end
 }
 
 void eEPGCache::channel_data::readMHWData2(const __u8 *data)
 {
 	int dataLen = (((data[1]&0xf) << 8) | data[2]) + 3;
 
-	if ( m_MHWReader )
+//BlackHole
+
+	if ( m_MHWReader || m_SKYReader )
+	{
 		m_MHWReader->stop();
+		m_SKYReader->stop();
+	}
+//end
 
 	if ( state > 1 || // aborted
 		// have si data.. so we dont read mhw data
@@ -3348,7 +4091,8 @@ void eEPGCache::channel_data::readMHWData2(const __u8 *data)
 	// Channels table
 	{
 		int num_channels = data[120];
-		m_channels.resize(num_channels);
+//BlackHole
+//		m_channels.resize(num_channels);
 		if(dataLen > 120)
 		{
 			int ptr = 121 + 8 * num_channels;
@@ -3505,6 +4249,14 @@ start_summary:
 			eDebug("[EPGC] mhw2 %d titles(%d with summary) found", m_titles.size(), m_program_ids.size());
 			if (!m_program_ids.empty())
 			{
+//BlackHole
+				char poptxt[512];
+				sprintf (poptxt, "Found EPG data stream.\nUpdating cache in progress, don't change channel.\nReading Summaries...\nFound %d channels\nFound %d themes\nFound %d titles\n",m_channels.size(), m_themes.size(), m_titles.size());
+				Nabilo_pop_sock("popsettext", poptxt);
+
+				nTitles = m_titles.size();
+//end
+
 				// Titles table has been read, there are summaries to read.
 				// Start reading summaries, store corresponding titles on the fly.
 				startMHWReader2(m_mhw2_summary_pid, 0x96);
@@ -3621,12 +4373,24 @@ start_summary:
 		}
 		else if ( m_MHWFilterMask2.pid == m_mhw2_channel_pid && m_MHWFilterMask2.data[0] == 0xC8 && m_MHWFilterMask2.data[1] == 1)
 		{
+//BlackHole
+			char poptxt[512];
+			sprintf (poptxt, "Found EPG data stream.\nUpdating cache in progress, don't change channel.\nReading Titles...\nFound %d channels\nFound %d themes\n", m_channels.size(), m_themes.size());
+			Nabilo_pop_sock("popshow", poptxt);
+//end
+
 			// Themes table has been read, start reading the titles table.
 			startMHWReader2(m_mhw2_title_pid, 0xe6);
 			return;
 		}
 		else
 		{
+//BlackHole
+			char poptxt[512];
+			sprintf (poptxt, "Cache UPDATED!\n\nFound %d channels\nFound %d themes\nFound %d titles\nFound %d summaries\nFinished!\n",m_channels.size(), m_themes.size(), m_titles.size(), nTitles, nTitles - m_program_ids.size());
+			Nabilo_pop_sock("popsettext", poptxt);
+//end
+
 			// Summaries have been read, titles that have summaries have been stored.
 			// Now store titles that do not have summaries.
 			for (std::map<__u32, mhw_title_t>::iterator itTitle(m_titles.begin()); itTitle != m_titles.end(); itTitle++)
@@ -3641,7 +4405,760 @@ abort:
 	m_MHWConn2=0;
 	if ( m_MHWReader2 )
 		m_MHWReader2->stop();
+//BlackHole
 	if (haveData)
+	{
 		finishEPG();
+		cache->save();
+
+		sleep(1);
+		Nabilo_pop_sock("popclose", "");
+	}
+//end
 }
+
+
+//BlackHole
+int eEPGCache::channel_data::DecodeHuffmanCode ( const __u8* Data, int Length )
+{
+	int i;
+	int p;
+	int q;
+	bool CodeError;
+	unsigned char Byte;
+	unsigned char lastByte = 0;
+	unsigned char Mask;
+	unsigned char lastMask = 0;
+	nH = &H;
+	p = 0;
+	q = 0;
+	DecodeText[0] = '\0';
+	DecodeErrorText[0] = '\0';
+	CodeError = false;
+	for ( i = 0; i < Length; i ++ )
+	{
+		Byte = Data[i];
+		Mask = 0x80;
+		if ( i == 0 )
+		{
+			Mask = 0x20;
+			lastByte = i;
+			lastMask = Mask;
+		}
+	loop1: ;
+		if ( ( Byte & Mask ) == 0 )
+		{
+			if ( CodeError )
+			{
+				DecodeErrorText[q] = 0x30;
+				q ++;
+				goto nextloop1;
+			}
+			if ( nH->P0 != NULL )
+			{
+				nH = nH->P0;
+				if ( nH->Value != NULL )
+				{
+					memcpy ( &DecodeText[p], nH->Value, strlen ( nH->Value ) );
+					p += strlen ( nH->Value );
+					nH = &H;
+					lastByte = i;
+					lastMask = Mask;
+				}
+			}
+			else
+			{
+				memcpy ( &DecodeText[p], "<not found>", 11 );
+				p += 9;
+				i = lastByte;
+				Byte = Data[lastByte];
+				Mask = lastMask;
+				CodeError = true;
+				goto loop1;
+			}
+		}
+		else
+		{
+			if ( CodeError )
+			{
+				DecodeErrorText[q] = 0x31;
+				q ++;
+				goto nextloop1;
+			}
+			if ( nH->P1 != NULL )
+			{
+				nH = nH->P1;
+				if ( nH->Value != NULL )
+				{
+					memcpy ( &DecodeText[p], nH->Value, strlen ( nH->Value ) );
+					p += strlen ( nH->Value );
+					nH = &H;
+					lastByte = i;
+					lastMask = Mask;
+				}
+			}
+			else
+			{
+				memcpy ( &DecodeText[p], "<not found>", 11 );
+				p += 9;
+				i = lastByte;
+				Byte = Data[lastByte];
+				Mask = lastMask;
+				CodeError = true;
+				goto loop1;
+			}
+		}
+	nextloop1: ;
+		Mask = Mask >> 1;
+		if ( Mask > 0 )
+		{
+			goto loop1;
+		}
+	}
+	DecodeText[p] = '\0';
+	DecodeErrorText[q] = '\0';
+	return p;
+}
+
+
+bool eEPGCache::channel_data::ReadDictionary ( void )
+{
+	char FileName[256];
+	sprintf (FileName,"/usr/share/dict/dictionary.%s", langext[langvalue].c_str());
+
+	FILE *FileDict;
+	char *Line;
+	char Buffer[256];
+
+	FileDict = fopen ( FileName, "r" );
+	if ( FileDict == NULL )
+	{
+		eDebug ( "[EPGC SKY] Can't open dictionary: %s\n", FileName );
+		return false;
+	}
+	else
+	{
+		int i;
+		int LenPrefix;
+		char string1[256];
+		char string2[256];
+		H.Value = NULL;
+		H.P0 = NULL;
+		H.P1 = NULL;
+
+		eDebug ( "[EPGC SKY] reading dictionary..." );
+
+		while ( ( Line = fgets ( Buffer, sizeof ( Buffer ), FileDict ) ) != NULL )
+		{
+			//if( ! isempty( Line ) )
+			// {
+			memset ( string1, 0, sizeof ( string1 ) );
+			memset ( string2, 0, sizeof ( string2 ) );
+			if ( sscanf ( Line, "%c=%[^\n]\n", string1, string2 ) == 2 )
+			{
+				goto codingstart;
+			}
+			else if ( sscanf ( Line, "%[^=]=%[^\n]\n", string1, string2 ) == 2 )
+			{
+			codingstart:;
+				nH = &H;
+				LenPrefix = strlen ( string2 );
+				for ( i = 0; i < LenPrefix; i ++ )
+				{
+					switch ( string2[i] )
+					{
+						case '0':
+							if ( nH->P0 == NULL )
+							{
+								nH->P0 = new sNodeH();
+								nH = nH->P0;
+								nH->Value = NULL;
+								nH->P0 = NULL;
+								nH->P1 = NULL;
+								if ( ( LenPrefix - 1 ) == i )
+								{
+									asprintf ( &nH->Value, "%s", string1 );
+								}
+							}
+							else
+							{
+								nH = nH->P0;
+								if ( nH->Value != NULL || ( LenPrefix - 1 ) == i )
+								{
+									eDebug ( "[EPGC SKY] Error, huffman prefix code already exists for \"%s\"=%s with '%s'\n", string1, string2, nH->Value );
+								}
+							}
+							break;
+						case '1':
+							if ( nH->P1 == NULL )
+							{
+								nH->P1 = new sNodeH();
+								nH = nH->P1;
+								nH->Value = NULL;
+								nH->P0 = NULL;
+								nH->P1 = NULL;
+								if ( ( LenPrefix - 1 ) == i )
+								{
+									asprintf ( &nH->Value, "%s", string1 );
+								}
+							}
+							else
+							{
+								nH = nH->P1;
+								if ( nH->Value != NULL || ( LenPrefix - 1 ) == i )
+								{
+									eDebug ( "[EPGC SKY] Error, huffman prefix code already exists for \"%s\"=%s with '%s'\n", string1, string2, nH->Value );
+								}
+							}
+							break;
+						default:
+							break;
+					}
+				}
+			}
+		}
+		fclose ( FileDict );
+	}
+
+	// check tree huffman nodes
+	FileDict = fopen ( FileName, "r" );
+	if ( FileDict )
+	{
+		int i;
+		int LenPrefix;
+		char string1[256];
+		char string2[256];
+		while ( ( Line = fgets ( Buffer, sizeof ( Buffer ), FileDict ) ) != NULL )
+		{
+			memset ( string1, 0, sizeof ( string1 ) );
+			memset ( string2, 0, sizeof ( string2 ) );
+			if ( sscanf ( Line, "%c=%[^\n]\n", string1, string2 ) == 2 )
+			{
+				goto verifystart;
+			}
+			else if ( sscanf ( Line, "%[^=]=%[^\n]\n", string1, string2 ) == 2 )
+			{
+			verifystart:;
+				nH = &H;
+				LenPrefix = strlen ( string2 );
+				for ( i = 0; i < LenPrefix; i ++ )
+				{
+					switch ( string2[i] )
+					{
+						case '0':
+							if ( nH->P0 != NULL )
+							{
+								nH = nH->P0;
+							}
+							break;
+						case '1':
+							if ( nH->P1 != NULL )
+							{
+								nH = nH->P1;
+							}
+							break;
+						default:
+							break;
+					}
+				}
+				if ( nH->Value != NULL )
+				{
+					if ( memcmp ( nH->Value, string1, strlen ( nH->Value ) ) != 0 )
+					{
+						eDebug ( "[EPGC SKY] Error, huffman prefix value '%s' not equal to '%s'\n", nH->Value, string1 );
+					}
+				}
+				else
+				{
+					eDebug ( "[EPGC SKY] Error, huffman prefix value is not exists for \"%s\"=%s\n", string1, string2 );
+				}
+			}
+		}
+		fclose ( FileDict );
+	}
+
+	return true;
+}
+
+
+
+bool eEPGCache::channel_data::ReadChannelsOff()
+{
+	char FileName[256];
+	sprintf (FileName,"/usr/share/dict/channels.%s", langext[langvalue].c_str());
+
+	FILE *fChannels;
+	fChannels = fopen ( FileName, "r" );
+	if ( fChannels )
+	{
+		int Filtro=1;
+		unsigned short int channid = 0;
+		std::string service;
+
+		char linea[256];
+		eDebug ( "[EPGC SKY] reading channels from file" );
+		while ( fgets ( linea, sizeof ( linea ), fChannels ) )
+		{
+			mhw_channel_name_t channel;
+
+			int i=0;
+			char * pch;
+			pch = strtok ( linea,";" );
+			while ( pch != NULL )
+			{
+				if ( i==0 )
+					Filtro = atoi ( pch );
+				else if ( i==1 )
+					channid = atoi ( pch );
+				else if ( i==4 )
+					service = pch;
+				else if ( i==5 )
+				{
+					int slen = strlen ( pch )-1;
+					memcpy(channel.name_ext, pch, slen);
+					channel.name_ext[slen] = 0;
+				}
+				pch = strtok ( NULL, ";" );
+				i++;
+			}
+
+			if ( Filtro == 1 )
+			{
+				replace ( service.begin(), service.end(), '\n', '\0' );
+
+				i=0;
+				pch = strtok ( ( char* ) service.c_str(),":" );
+				while ( pch != NULL )
+				{
+					if ( i==0 )
+					{
+						channel.channel_id_hi = (( strtoul ( pch, 0, 16 )) & 0xFF00) >> 8;
+						channel.channel_id_lo = (( strtoul ( pch, 0, 16 )) & 0xFF);
+					}
+					else if ( i==1 )
+					{
+						channel.transport_stream_id_hi = (( strtoul ( pch, 0, 16 )) & 0xFF00) >> 8;
+						channel.transport_stream_id_lo = (( strtoul ( pch, 0, 16 )) & 0xFF);
+					}
+					else if ( i==2 )
+					{
+						channel.network_id_hi = (( strtoul ( pch, 0, 16 )) & 0xFF00) >> 8;
+						channel.network_id_lo = (( strtoul ( pch, 0, 16 )) & 0xFF);
+					}
+					pch = strtok ( NULL, ":" );
+					i++;	
+				}
+				m_channels[channid] = channel;
+			}
+		}
+		fclose ( fChannels );
+		if ( m_channels.size() == 0 )
+			return false;
+
+		eDebug ( "[EPGC SKY] found %d channels", m_channels.size() );
+	}
+	else
+		return false;
+
+	return true;
+}
+
+
+
+bool eEPGCache::channel_data::ReadThemesOff()
+{
+	char FileName[256];
+	sprintf (FileName,"/usr/share/dict/themes.%s", langext[langvalue].c_str());
+
+	FILE *fThemes;
+	fThemes = fopen ( FileName,"r" );
+
+	if ( fThemes )
+	{
+		char linea[256];
+		unsigned int themeid = 0;
+		int Filtro = 1;
+
+		eDebug ( "[EPGC SKY] reading themes from file" );
+		while ( fgets ( linea, sizeof ( linea ), fThemes ) )
+		{
+			std::string tmp = linea;
+			replace ( tmp.begin(), tmp.end(), '\n', '\0' );
+			sprintf ( linea,"%s",tmp.c_str() );
+
+			if ( strstr ( linea,"THM" ) || strstr ( linea,"SUB" ) )
+			{
+				mhw_theme_name_t theme;
+
+				int i=0;
+				char * pch;
+				pch = strtok ( linea,";" );
+				while ( pch != NULL )
+				{
+					if ( i==1 )
+						Filtro = atoi ( pch );
+					else if ( i==2 )
+						themeid = strtoul ( pch, 0, 16 );
+					else if ( i==3 )
+						memcpy(theme.name, pch, 15);
+
+					pch = strtok ( NULL, ";" );
+					i++;
+				}
+
+				m_themes[themeid]=theme;
+			}
+		}
+		fclose ( fThemes );
+		if ( m_themes.size() == 0 )
+			return false;
+
+		eDebug ( "[EPGC SKY] found %d themes", m_themes.size() );
+
+	}
+	else
+		return false;
+
+	return true;
+}
+
+
+
+void eEPGCache::channel_data::readSKYData ( const __u8 *data )
+{
+	if ( m_MHWReader2 || m_MHWReader )
+	{
+		m_MHWReader->stop();
+		m_MHWReader2->stop();
+	}
+
+	if ( state> 1 || // aborted
+	// have si data.. so we dont read sky data
+	        ( haveData & ( SCHEDULE|SCHEDULE_OTHER ) ) )
+	{
+		eDebug ( "[EPGC SKY] aborted %d", state );
+	}
+	else if ( m_SKYFilterMask.pid >= 0x30 && m_SKYFilterMask.pid <= 0x37 && m_SKYFilterMask.data[0] >= 0xA0 && m_SKYFilterMask.data[0] <= 0xA3 )
+		// Titles table
+	{
+		tm Curr_Day;
+		time_t StartTime;
+		int p;
+		unsigned short int Length;
+		unsigned short int ChannelId;
+		unsigned short int MjdTime;
+		unsigned short int EventId;
+		int Len1;
+		int Len2;
+		__u32 title_id;
+		__u32 program_id;
+
+		Length = ( ( data[1] & 0x0f ) << 8 ) | data[2];
+		if ( Length > 20 )
+		{
+			if ( memcmp ( &InitialBuffer[0], data, 20 ) == 0 )
+			{
+				OnReadBuffer = false;
+			}
+			else
+			{
+				if ( InitialBuffer[0] == 0 )
+				{
+					if ( m_titles.size() == 0 )
+					{
+						isSKY = false;
+						logPid = 0x30;
+						filPid = 0xA0;
+
+						haveData |= MHW;
+						eDebug ( "[EPGC SKY] start reading data..." );
+						Nabilo_pop_sock("popshow", "Found EPG data stream.\nUpdating cache in progress, don't change channel.\nReading Titles...\n");
+
+					}
+					pT = 0;
+					memcpy ( &InitialBuffer[0], data, 20 );
+				}
+
+				ChannelId = ( data[3] << 8 ) | data[4];
+				MjdTime = ( data[8] << 8 ) | data[9];
+				if ( ChannelId> 0 )
+				{
+					if ( MjdTime> 0 )
+					{
+
+						p = 10;
+					loop1:;
+						EventId = ( data[p] << 8 ) | data[p+1];
+
+						mhw_title_t title;
+
+						title.section_length_lo = data[3];
+						title.channel_id = data[4];
+
+						title.program_id_hi = data[3];
+						title.program_id_mh = data[4];
+						title.program_id_ml = data[p];
+						title.program_id_lo = data[p+1];
+
+						title.mhw2_mjd_hi = data[8];
+						title.mhw2_mjd_lo = data[9];
+
+						Len1 = ( ( data[p+2] & 0x0f ) << 8 ) | data[p+3];
+						if ( data[p+4] != 0xb5   || Len1 > Length )
+							goto endloop1;
+
+						p += 4;
+						Len2 = data[p+1] - 7;
+
+						if ( ( pT + Len2 + 2 ) > MAX_BUFFER_SIZE_TITLES )
+							return;
+
+						StartTime = ( ( MjdTime - 40587 ) * 86400 ) + ( ( data[p+2] << 9 ) | ( data[p+3] << 1 ) );
+						Curr_Day = *localtime ( &StartTime );
+
+						title.dh.day = Curr_Day.tm_wday;
+						title.dh.hours = Curr_Day.tm_hour;
+						title.ms.minutes = Curr_Day.tm_min;
+
+						int duration;
+						duration = ( ( data[p+4] << 9 ) | ( data[p+5] << 1 ) ) /60;
+						title.duration_hi = ( duration&0xFF00 ) >> 8;
+						title.duration_lo = duration&0xFF;
+
+						title.theme_id = data[p+6];
+
+						title_id = ( ( ChannelId ) <<16 ) | ( ( title.dh.day ) <<13 ) | ( ( title.dh.hours ) <<8 ) | ( title.ms.minutes );
+						program_id = ( ( title.program_id_hi ) <<24 ) | ( ( title.program_id_mh ) <<16 ) | ( ( title.program_id_ml ) <<8 ) | ( title.program_id_lo );
+
+						if ( m_titles.find ( title_id ) == m_titles.end() &&  m_channels.find ( ChannelId ) != m_channels.end() )
+						{
+							if ( DecodeHuffmanCode ( &data[p+9], Len2 ) )
+							{
+								int slen = strlen ( (char*)DecodeText ) +1;
+								if ( slen > 33 )
+									slen = 33;
+								memcpy ( title.title_ext, DecodeText, slen );
+
+								//title.title[slen]=0;
+
+								isSKY = true;
+								startTimeout ( 4000 );
+	
+								m_titles[ title_id ] = title;
+								if ( m_program_ids.find ( program_id ) == m_program_ids.end() )
+								{
+									// program_ids will be used to gather summaries.
+									m_program_ids.insert ( std::pair<__u32,__u32> ( program_id, title_id ) );
+								}
+							}
+							else
+							{
+								eDebug ( "[EPGC SKY] title not found in dictionary" );
+							}
+						}
+
+						pT += ( Len2 + 1 );
+						p += Len1;
+						if ( p < Length )
+						{
+							goto loop1;
+						}
+					endloop1:;
+					}
+				}
+			}
+		}
+		if ( OnReadBuffer )
+			return;
+
+		memset ( &InitialBuffer, 0, 32 );
+		OnReadBuffer = true;
+
+		if ( !m_program_ids.empty() )
+		{
+			// Titles table has been read.
+			// Start reading summaries.
+			if ( logPid < 0x37 )
+			{
+				char poptxt[512];
+				sprintf (poptxt, "Found EPG data stream.\nUpdating cache in progress, don't change channel.\nReading Titles...\n\nFound %d titles\n", m_titles.size());
+				Nabilo_pop_sock("popsettext", poptxt);
+
+				logPid++;
+			}
+			else
+			{
+				eDebug ( "[EPGC SKY] %d titles found", m_titles.size() );
+				logPid = 0x40;
+				filPid = 0xA8;
+				nTitles = m_titles.size();							
+			}
+			startSKYReader ( logPid, filPid );
+			startTimeout ( 4000 );
+			return;
+		}
+	}
+	else if ( m_SKYFilterMask.pid >= 0x40 && m_SKYFilterMask.pid <= 0x47 && m_SKYFilterMask.data[0] >= 0xA8 && m_SKYFilterMask.data[0] <= 0xAB )
+		// Summaries table
+	{
+		int p;
+		unsigned short int Length;
+		unsigned short int ChannelId;
+		unsigned short int MjdTime;
+		unsigned short int EventId;
+		int Len1;
+		int Len2;
+		std::multimap<__u32, __u32>::iterator itProgid;
+		std::map<__u32, mhw_title_t>::iterator itTitle;
+		std::string the_text;
+		__u32 program_id;
+
+		Length = ( ( data[1] & 0x0f ) << 8 ) | data[2];
+		if ( Length > 20 )
+		{
+			if ( memcmp ( &InitialBuffer[0], data, 20 ) == 0 )
+			{
+				OnReadBuffer = false;
+			}
+			else
+			{
+				if ( InitialBuffer[0] == 0 )
+				{
+					pS = 0;
+					memcpy ( &InitialBuffer[0], data, 20 );
+				}
+
+				ChannelId = ( data[3] << 8 ) | data[4];
+				MjdTime = ( data[8] << 8 ) | data[9];
+				if ( ChannelId> 0 )
+				{
+					if ( MjdTime> 0 )
+					{
+						p = 10;
+					loop2:;
+						EventId = ( data[p] << 8 ) | data[p+1];
+
+						mhw_summary_t summary;
+
+						summary.program_id_hi = data[3];
+						summary.program_id_mh = data[4];
+						summary.program_id_ml = data[p];
+						summary.program_id_lo = data[p+1];
+
+						Len1 = ( ( data[p+2] & 0x0f ) << 8 ) | data[p+3];
+						if ( data[p+4] != 0xb9 || Len1 > Length )
+							goto endloop2;
+
+						p += 4;
+						Len2 = data[p+1];
+						if ( ( pS + Len2 + 2 ) > MAX_BUFFER_SIZE_SUMMARIES )
+							return;
+
+						// Create unique key per record
+						program_id = ( ( summary.program_id_hi ) <<24 ) | ( ( summary.program_id_mh ) <<16 ) | ( ( summary.program_id_ml ) <<8 ) | ( summary.program_id_lo );
+
+						itProgid = m_program_ids.find ( program_id ) ;
+						if ( itProgid == m_program_ids.end() )
+						{	//This part is to prevent to looping forever if some summaries are not received yet.
+							//There is a timeout of 4 sec. after the last successfully read summary. 
+							if ( !m_program_ids.empty() && !checkTimeout() )
+								return;
+						}
+						else
+						{
+							if ( DecodeHuffmanCode ( &data[p+2], Len2 ) )
+							{
+								the_text = ( char * ) DecodeText;
+								// Find corresponding title, store title and summary in epgcache.
+								itTitle = m_titles.find ( itProgid->second );
+								if ( itTitle != m_titles.end() )
+								{
+									startTimeout ( 4000 );
+									storeTitleSKY ( itTitle, the_text, DecodeText );
+									m_titles.erase ( itTitle );
+								}
+							}
+							else
+							{
+								eDebug ( "[EPGC SKY] summary not found in dictionary" );
+							}
+							m_program_ids.erase ( itProgid );
+						}
+
+						pS += ( Len2 + 1 );
+						p += Len1;
+
+						if ( p < Length )
+						{
+							goto loop2;
+						}
+					endloop2:;
+					}
+				}
+			}
+		}
+		if ( OnReadBuffer )
+			return;
+
+		memset ( &InitialBuffer, 0, 32 );
+		OnReadBuffer = true;
+
+		if ( logPid < 0x47 )
+		{
+			char poptxt[512];
+			sprintf (poptxt, "Found EPG data stream.\nUpdating cache in progress, don't change channel.\nReading Summaries...\n\nFound %d titles\nFound %d summaries\n", nTitles, nTitles - m_program_ids.size());
+			Nabilo_pop_sock("popsettext", poptxt);
+
+			logPid++;
+			startSKYReader ( logPid, filPid );
+			startTimeout ( 4000 );
+			return;
+		}
+	}
+
+	char poptxt[512];
+	sprintf (poptxt, "Cache UPDATED!\n\nFound %d titles\nFound %d summaries\nFinished!\n", nTitles, nTitles - m_program_ids.size());
+	Nabilo_pop_sock("popsettext", poptxt);
+
+	eDebug ( "[EPGC SKY] finished(%ld) %d summaries not found",
+	         ::time ( 0 ),
+	         m_program_ids.size() );
+	// Summaries have been read, titles that have summaries have been stored.
+	// Now store titles that do not have summaries.
+	for ( std::map<__u32, mhw_title_t>::iterator itTitle ( m_titles.begin() ); itTitle != m_titles.end(); itTitle++ )
+		storeTitleSKY ( itTitle, "", data );
+
+	isRunning &= ~MHW;
+	m_SKYConn=0;
+	if ( m_SKYReader )
+		m_SKYReader->stop();
+	if ( haveData )
+	{
+		finishEPG();
+		cache->save();
+
+		sleep(1);
+		Nabilo_pop_sock("popclose", "");
+	}
+}
+//end
 #endif
+
+//BlackHole socket available parms: <popshow,text> <popsettext,text> <popclose,"">
+void Nabilo_pop_sock(char *cmd, char *text)
+{
+	int sock;
+	struct sockaddr_un server;
+	char buf[512];
+	
+	sock = socket(AF_UNIX, SOCK_STREAM, 0);
+	server.sun_family = AF_UNIX; 
+	strcpy(server.sun_path, "/tmp/Bhapi.socket");
+	bzero(buf, sizeof(buf));
+	sprintf (buf, "%s,%s", cmd, text);
+
+	connect(sock, (struct sockaddr *) &server, sizeof(struct sockaddr_un));
+	write(sock, buf, sizeof(buf));
+	close(sock);
+	
+}
