@@ -13,6 +13,7 @@ typedef struct {
    u_char	channel_id_hi;
    u_char	channel_id_lo;
    u_char	name[16];
+   u_char	name_ext[64];
 } mhw_channel_name_t;
 
 typedef struct {
@@ -85,6 +86,9 @@ typedef struct {
    u_char mhw2_mjd_lo                            :8;
    u_char mhw2_duration_hi                       :8;
    u_char mhw2_duration_lo                       :8;
+//Nabilosat
+   u_char title_ext                            [33];
+//end
 } mhw_title_t;
 
 typedef struct mhw_summary {
