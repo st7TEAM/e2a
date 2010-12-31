@@ -96,6 +96,10 @@ class LanguageSelection(Screen):
 		language.activateLanguage(lang)
 		config.misc.languageselected.value = 0
 		config.misc.languageselected.save()
+#Blackhole
+		config.usage.multibouquet.value = True
+		config.usage.multibouquet.save()
+#End
 		print "ok"
 
 	def updateList(self):
