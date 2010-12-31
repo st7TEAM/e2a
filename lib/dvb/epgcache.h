@@ -2,7 +2,8 @@
 #define __epgcache_h_
 
 #define ENABLE_PRIVATE_EPG 1
-//#define ENABLE_MHW_EPG 1
+//Nabilosat
+#define ENABLE_MHW_EPG 1
 
 #ifndef SWIG
 
@@ -45,6 +46,13 @@
 #define ZAP_DELAY 2000          // 2 sek
 
 #define HILO(x) (x##_hi << 8 | x##_lo)
+
+//Nabilosat 
+#include <libxml/xmlreader.h>
+#define MAX_BUFFER_SIZE_TITLES 4194304
+#define MAX_BUFFER_SIZE_SUMMARIES 16777216 
+//end
+
 
 class eventData;
 class eServiceReferenceDVB;
@@ -195,21 +203,69 @@ class eEPGCache: public eMainloop, private eThread, public Object
 		void startPrivateReader();
 #endif
 #ifdef ENABLE_MHW_EPG
-		std::vector<mhw_channel_name_t> m_channels;
+//Nabilosat
+		std::map<__u16, mhw_channel_name_t> m_channels;
+//		std::vector<mhw_channel_name_t> m_channels;
+//end
 		std::map<__u8, mhw_theme_name_t> m_themes;
 		std::map<__u32, mhw_title_t> m_titles;
 		std::multimap<__u32, __u32> m_program_ids;
-		ePtr<eConnection> m_MHWConn, m_MHWConn2;
-		ePtr<iDVBSectionReader> m_MHWReader, m_MHWReader2;
-		eDVBSectionFilterMask m_MHWFilterMask, m_MHWFilterMask2;
+
+//Nabilosat
+		std::map<__u32, mhw_title_t>::iterator itTit;
+		ePtr<eConnection> m_MHWConn, m_MHWConn2, m_SKYConn;
+		ePtr<iDVBSectionReader> m_MHWReader, m_MHWReader2, m_SKYReader;
+		eDVBSectionFilterMask m_MHWFilterMask, m_MHWFilterMask2, m_SKYFilterMask;
+//end
+
 		ePtr<eTimer> m_MHWTimeoutTimer;
 		__u16 m_mhw2_channel_pid, m_mhw2_title_pid, m_mhw2_summary_pid;
 		bool m_MHWTimeoutet;
 		void MHWTimeout() { m_MHWTimeoutet=true; }
 		void readMHWData(const __u8 *data);
 		void readMHWData2(const __u8 *data);
+//Nabilosat
+
+		struct sNode
+		{
+			char *Value;
+			struct sNode *P0;
+			struct sNode *P1;
+		};
+		typedef struct sNode sNodeH;
+
+		sNodeH H;
+		sNodeH *nH;
+
+		int pT;
+		int pS;
+		int nChannels;
+		int nTitles;
+		int langvalue;
+		bool isSKY;
+
+		unsigned short int CurrentBouquetId;
+		unsigned char DecodeText[4096];
+		unsigned char DecodeErrorText[4096];
+		unsigned char SectionsBAT[255];
+
+		unsigned short int logPid;
+		unsigned short int filPid;
+
+		int DecodeHuffmanCode ( const __u8* Data, int Length );
+		bool ReadDictionary ( void );
+		bool ReadChannelsOff();
+		bool ReadThemesOff();
+
+		void readSKYData(const __u8 *data);
+//end
+
 		void startMHWReader(__u16 pid, __u8 tid);
 		void startMHWReader2(__u16 pid, __u8 tid, int ext=-1);
+//Nabilosat
+		void startSKYReader(__u16 pid, __u8 tid);
+//end
+
 		void startTimeout(int msek);
 		bool checkTimeout() { return m_MHWTimeoutet; }
 		void cleanup();
@@ -218,6 +274,11 @@ class eEPGCache: public eMainloop, private eThread, public Object
 		void timeMHW2DVB( int minutes, u_char *return_time);
 		void timeMHW2DVB( u_char day, u_char hours, u_char minutes, u_char *return_time);
 		void storeTitle(std::map<__u32, mhw_title_t>::iterator itTitle, std::string sumText, const __u8 *data);
+//Nabilosat
+		void storeTitleSKY(std::map<__u32, mhw_title_t>::iterator itTitle, std::string sumText, const __u8 *data);
+		void storeTitleWeb( mhw_title_t Title, std::string sumText, const __u8 *data);
+//end
+
 #endif
 		void readData(const __u8 *data);
 		void readDataViasat(const __u8 *data);
@@ -293,8 +354,9 @@ private:
 // called from epgcache thread
 	int m_running;
 	char m_filename[1024];
-	void save();
-	void load();
+//Nabilosat
+	//void save();
+	//void load();
 #ifdef ENABLE_PRIVATE_EPG
 	void privateSectionRead(const uniqueEPGKey &, const __u8 *);
 #endif
@@ -316,6 +378,9 @@ private:
 	~eEPGCache();
 #endif // SWIG
 public:
+//Nabilosat
+	void save();
+	void load();
 	static eEPGCache *getInstance() { return instance; }
 #ifndef SWIG
 	eEPGCache();
@@ -368,6 +433,10 @@ public:
 	};
 	PyObject *lookupEvent(SWIG_PYOBJECT(ePyObject) list, SWIG_PYOBJECT(ePyObject) convertFunc=(PyObject*)0);
 	PyObject *search(SWIG_PYOBJECT(ePyObject));
+//Nabilosat
+	SWIG_VOID(RESULT) readXmltv(SWIG_PYOBJECT(ePyObject));
+	SWIG_VOID(RESULT) Nab_reset_timer();
+//end
 
 	// eServiceEvent are parsed epg events.. it's safe to use them after cache unlock
 	// for use from python ( members: m_start_time, m_duration, m_short_description, m_extended_description )
