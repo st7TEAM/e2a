@@ -273,8 +273,9 @@ void eListboxPythonStringContent::invalidate()
 
 void eListboxPythonConfigContent::paint(gPainter &painter, eWindowStyle &style, const ePoint &offset, int selected)
 {
-	ePtr<gFont> fnt = new gFont("Regular", 20);
-	ePtr<gFont> fnt2 = new gFont("Regular", 16);
+// Delite: original 20 - 16
+	ePtr<gFont> fnt = new gFont("Regular", 22);
+	ePtr<gFont> fnt2 = new gFont("Regular", 20);
 	eRect itemrect(offset, m_itemsize);
 	eListboxStyle *local_style = 0;
 	bool cursorValid = this->cursorValid();
