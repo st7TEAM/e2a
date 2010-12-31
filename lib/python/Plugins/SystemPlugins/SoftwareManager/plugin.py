@@ -126,7 +126,8 @@ class UpdatePluginMenu(Screen):
 		if self.menu == 0:
 			print "building menu entries"
 			self.list.append(("install-extensions", _("Manage extensions"), _("\nManage extensions or plugins for your STB" ) + self.oktext, None))
-			self.list.append(("software-update", _("Software update"), _("\nOnline update of your STB software." ) + self.oktext, None))
+#Delite
+#			self.list.append(("software-update", _("Software update"), _("\nOnline update of your STB software." ) + self.oktext, None))
 			self.list.append(("software-restore", _("Software restore"), _("\nRestore your STB with a new firmware." ) + self.oktext, None))
 			self.list.append(("system-backup", _("Backup system settings"), _("\nBackup your STB settings." ) + self.oktext + "\n\n" + self.infotext, None))
 			self.list.append(("system-restore",_("Restore system settings"), _("\nRestore your STB settings." ) + self.oktext, None))
@@ -1004,7 +1005,9 @@ class PluginManagerInfo(Screen):
 					info = args['package']
 				else:
 					info = _("STB software because updates are available.")
-
+#Delite
+					continue
+#end
 				self.list.append(self.buildEntryComponent(action,info))
 			self['list'].setList(self.list)
 			self['list'].updateList(self.list)
@@ -1025,7 +1028,9 @@ class PluginManagerInfo(Screen):
 		self.close()
 
 	def process_all(self):
-		self.close((True,None))
+#Delite		
+#		self.close((True,None))
+		self.process_extensions()
 
 	def process_extensions(self):
 		self.list = []
