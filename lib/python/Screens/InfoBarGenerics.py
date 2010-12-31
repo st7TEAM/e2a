@@ -8,7 +8,8 @@ from Components.Label import Label
 from Components.PluginComponent import plugins
 from Components.ServiceEventTracker import ServiceEventTracker
 from Components.Sources.Boolean import Boolean
-from Components.config import config, ConfigBoolean, ConfigClock
+#Blackhole
+from Components.config import config, ConfigBoolean, ConfigClock, ConfigInteger
 from Components.SystemInfo import SystemInfo
 from Components.UsageConfig import preferredInstantRecordPath, defaultMoviePath
 from EpgSelection import EPGSelection
@@ -28,21 +29,34 @@ from Screens.RdsDisplay import RdsInfoDisplay, RassInteractive
 from Screens.TimeDateInput import TimeDateInput
 from Screens.UnhandledKey import UnhandledKey
 from ServiceReference import ServiceReference
+#Blackhole
+from Blackhole.BhEI import Nab_ExtraInfobar, nab_Switch_Autocam
 
 from Tools import Notifications
-from Tools.Directories import fileExists
+#Blackhole
+from Tools.Directories import SCOPE_HDD, resolveFilename, pathExists, fileExists
 
 from enigma import eTimer, eServiceCenter, eDVBServicePMTHandler, iServiceInformation, \
 	iPlayableService, eServiceReference, eEPGCache, eActionMap
 
 from time import time, localtime, strftime
-from os import stat as os_stat
+#Blackhole
+from os import stat as os_stat, remove as os_remove
 from bisect import insort
 
 from RecordTimer import RecordTimerEntry, RecordTimer
 
 # hack alert!
 from Menu import MainMenu, mdom
+
+#Blackhole
+config.misc.delitelcdbri = ConfigInteger(default = 3)
+config.misc.deliteeinfo = ConfigBoolean(default = False)
+config.misc.delitepanicb = ConfigBoolean(default = False)
+config.misc.deliteepgbuttons = ConfigBoolean(default = True)
+class InfoBar_Nab:
+	def __init__(self):
+		self.InfoBar_NabDialog = self.session.instantiateDialog(Nab_ExtraInfobar)
 
 class InfoBarDish:
 	def __init__(self):
@@ -104,6 +118,13 @@ class InfoBarShowHide:
 		self.__state = self.STATE_SHOWN
 		self.__locked = 0
 
+#Blackhole
+		self.__stateNab = self.STATE_HIDDEN
+		self.autocamTimer = eTimer()
+		self.autocamTimer.timeout.get().append(self.checkAutocam)
+		self.autocamTimer_active = 0
+		self.autocampop_active = 0
+#end
 		self.hideTimer = eTimer()
 		self.hideTimer.callback.append(self.doTimerHide)
 		self.hideTimer.start(5000, True)
@@ -113,12 +134,27 @@ class InfoBarShowHide:
 
 	def serviceStarted(self):
 		if self.execing:
+#Blackhole
+			if self.autocamTimer_active == 1:
+				self.autocamTimer.stop()
+			self.autocamTimer.start(1000)
+			self.autocamTimer_active = 1
+			if self.autocampop_active == 1:
+				Notifications.RemovePopup(id = "DeliteAutocam")
+				self.autocampop_active = 0
+#end
 			if config.usage.show_infobar_on_zap.value:
 				self.doShow()
 
 	def __onShow(self):
 		self.__state = self.STATE_SHOWN
 		self.startHideTimer()
+#Blackhole
+		if config.misc.deliteeinfo.value:
+			self.InfoBar_NabDialog.show()
+			self.__stateNab = self.STATE_SHOWN
+			self.instance.hide()
+#end
 
 	def startHideTimer(self):
 		if self.__state == self.STATE_SHOWN and not self.__locked:
@@ -128,6 +164,11 @@ class InfoBarShowHide:
 
 	def __onHide(self):
 		self.__state = self.STATE_HIDDEN
+#Blackhole		
+		if self.__stateNab == self.STATE_SHOWN:
+			self.InfoBar_NabDialog.hide()
+			self.__stateNab = self.STATE_HIDDEN
+#end
 
 	def doShow(self):
 		self.show()
@@ -138,12 +179,20 @@ class InfoBarShowHide:
 		if self.__state == self.STATE_SHOWN:
 			self.hide()
 
+#Blackhole
 	def toggleShow(self):
-		if self.__state == self.STATE_SHOWN:
+		if self.__state == self.STATE_SHOWN and self.__stateNab == self.STATE_SHOWN:
 			self.hide()
 			self.hideTimer.stop()
+		
+		elif self.__state == self.STATE_SHOWN  and self.__stateNab == self.STATE_HIDDEN:
+			self.instance.hide()
+			self.InfoBar_NabDialog.show()
+			self.__stateNab = self.STATE_SHOWN
+			
 		elif self.__state == self.STATE_HIDDEN:
 			self.show()
+#end
 
 	def lockShow(self):
 		self.__locked = self.__locked + 1
@@ -155,6 +204,36 @@ class InfoBarShowHide:
 		self.__locked = self.__locked - 1
 		if self.execing:
 			self.startHideTimer()
+
+#Blackhole
+	def checkAutocam(self):
+		
+		self.autocamTimer.stop()
+		self.autocamTimer_active = 0
+		
+		refstr = ""
+		if self.session.nav.getCurrentlyPlayingServiceReference():
+			refstr = self.session.nav.getCurrentlyPlayingServiceReference().toString()
+		nabcur = "/usr/camscript/Ncam_Ci.sh"
+		nabnew = "/usr/camscript/Ncam_Ci.sh"
+		if fileExists("/etc/BhCamConf"):
+			f = open("/etc/BhCamConf",'r')
+			for line in f.readlines():
+   				parts = line.strip().split("|")
+				if parts[0] == "delcurrent":
+					nabcur = parts[1]
+				elif parts[0] == "deldefault":
+					nabnew = parts[1]
+				elif parts[0] == refstr:
+					nabnew = parts[1]
+			f.close()
+		
+		if nabcur != nabnew:
+			camname = nab_Switch_Autocam(nabcur, nabnew)
+			mymess = "     Black Hole Autocam switching to:\n     " + camname
+			Notifications.AddPopup(text = mymess, type = MessageBox.TYPE_INFO, timeout = 5, id = "DeliteAutocam")
+			self.autocampop_active = 1
+#end
 
 #	def startShow(self):
 #		self.instance.m_animation.startMoveAnimation(ePoint(0, 600), ePoint(0, 380), 100)
@@ -231,7 +310,14 @@ class InfoBarNumberZap:
 			if isinstance(self, InfoBarPiP) and self.pipHandles0Action():
 				self.pipDoHandle0Action()
 			else:
-				self.servicelist.recallPrevService()
+#Blackhole
+				if config.misc.delitepanicb.value:
+					self.servicelist.history = [ ]
+					self.servicelist.history_pos = 0
+					self.zapToNumber(1)
+				else:
+					self.servicelist.recallPrevService()
+# End
 		else:
 			if self.has_key("TimeshiftActions") and not self.timeshift_enabled:
 				self.session.openWithCallback(self.numberEntered, NumberZap, number)
@@ -2084,12 +2170,41 @@ class InfoBarSummary(Screen):
 #			<convert type="ServiceName">Reference</convert>
 #		</widget>
 
+#Blackhole
+config.misc.delitepiconlcd = ConfigBoolean(default = False)
+class NabInfoBarSummary(Screen):
+	skin = """
+	<screen position="0,0" size="132,64">
+		<widget source="session.CurrentService" render="Picon" zPosition="1" position="31,0" size="70,40" path="piconlcd" >
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="session.RecordState" render="FixedLabel" text="R" position="110,10" size="20,20" font="Regular;20" >
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Progress" position="3,42" size="126,4" borderWidth="1" >
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="0,46" size="132,18" font="LCD;20" halign="center" >
+			<convert type="ClockToText">WithSeconds</convert>
+		</widget>
+	</screen>"""
+
+	def __init__(self, session, parent):
+		Screen.__init__(self, session, parent = parent)
+
+#Blackhole end
+
 class InfoBarSummarySupport:
 	def __init__(self):
 		pass
 
 	def createSummary(self):
-		return InfoBarSummary
+#Blackhole
+		if config.misc.delitepiconlcd.value:
+			return NabInfoBarSummary
+		else:
+			return InfoBarSummary
+#Blackhole end
 
 class InfoBarMoviePlayerSummary(Screen):
 	skin = """
