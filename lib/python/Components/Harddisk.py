@@ -503,6 +503,7 @@ class HarddiskManager:
 					("/media/cf", _("Compact Flash")),
 					("/media/mmc1", _("MMC Card")),
 					("/media/net", _("Network Mount")),
+					("/media/upnp", _("DLNA")),
 					("/media/ram", _("Ram Disk")),
 					("/media/usb", _("USB Stick")),
 					("/", _("Internal Flash"))
