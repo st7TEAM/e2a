@@ -16,7 +16,7 @@ from BhUtils import DeliteGetSkinPath, nab_Detect_Machine
 from BhInadyn import DeliteInadyn
 from BhSwap import DeliteSwap
 from BhHdd import DeliteHdd
-from BhNet import DeliteOpenvpn, DeliteSamba, DeliteTelnet, DeliteFtp
+from BhNet import DeliteOpenvpn, DeliteSamba, DeliteTelnet, DeliteFtp, BhDjmount, BhUshare
 from BhNfs import DeliteNfs
 from BhMountWiz import DeliteMountWiz
 
@@ -90,6 +90,10 @@ class DeliteSettings(Screen):
 			self.session.open(DeliteFtp)
 		elif self.sel == 13:
 			self.session.open(DeliteDtt)
+		elif self.sel == 14:
+			self.session.open(BhDjmount)
+		elif self.sel == 15:
+			self.session.open(BhUshare)
 		else:
 			self.noYet()
 		
@@ -198,6 +202,20 @@ class DeliteSettings(Screen):
 		png = LoadPixmap(mypixmap)
 		name = "Usb Tuner Panel"
 		idx = 13
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "UPnP Client Djmount"
+		idx = 14
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "UPnP Server Ushare"
+		idx = 15
 		res = (name, png, idx)
 		self.list.append(res)
 		

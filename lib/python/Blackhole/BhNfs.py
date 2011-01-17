@@ -327,6 +327,16 @@ class DeliteNfsSetup(Screen, ConfigListScreen):
 			self.session.open(MessageBox, "Sorry Nfs Server Script is Missing", MessageBox.TYPE_INFO)
 			self.close()
 			
+		if self.nfs_active.value == True:
+			if fileExists("/etc/rc3.d/S20nfsserver"):
+				pass
+			else:
+				system("ln -s /usr/bin/nfs_server_script.sh /etc/rc3.d/S20nfsserver")
+		else:
+			if fileExists("/etc/rc3.d/S20nfsserver"):
+				system ("rm -f /etc/rc3.d/S20nfsserver")
+			
+			
 		if fileExists("/usr/bin/nfs_server_script.tmp"):
 			system("mv -f  /usr/bin/nfs_server_script.tmp /usr/bin/nfs_server_script.sh")
 			system("chmod 0755 /usr/bin/nfs_server_script.sh")
