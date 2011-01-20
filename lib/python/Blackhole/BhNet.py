@@ -536,10 +536,12 @@ class BhDjmount(Screen):
 	def ServStop(self):
 		if self.my_serv_active == True:
 			rc = system("/etc/init.d/djmount stop")
-			os_remove("/etc/rc3.d/S20djmount")
-				
+			if fileExists("/etc/rc3.d/S20djmount"):
+				os_remove("/etc/rc3.d/S20djmount")
+			
 			mybox = self.session.open(MessageBox, "UPnP Client Disabled.", MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
+			rc = system("sleep 1")
 			self.updateServ()
 		
 
@@ -613,10 +615,12 @@ class BhUshare(Screen):
 	def ServStop(self):
 		if self.my_serv_active == True:
 			rc = system("/etc/init.d/ushare stop")
-			os_remove("/etc/rc3.d/S20ushare")
+			if fileExists("/etc/rc3.d/S20ushare"):
+				os_remove("/etc/rc3.d/S20ushare")
 				
 			mybox = self.session.open(MessageBox, "UPnP Server Disabled.", MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
+			rc = system("sleep 1")
 			self.updateServ()
 		
 
