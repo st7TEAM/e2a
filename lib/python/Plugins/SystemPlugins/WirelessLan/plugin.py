@@ -457,7 +457,7 @@ def configStrings(iface):
 		driver = iNetwork.detectWlanModule(iface)
 	else:
 		driver = 'dreambox'
-	if driver  in ('ralink', 'zydas'):
+	if driver  in ('ralink', 'zydas', 'wext'):
 		return "	pre-up /usr/sbin/wpa_supplicant -i"+iface+" -c/etc/wpa_supplicant.conf -B -D"+driver+"\n	post-down wpa_cli terminate"
 	else:
 		if config.plugins.wlan.essid.value == "hidden...":
