@@ -470,7 +470,8 @@ class Status:
 					else:
 						enc = _("Disabled")
 				else:
-					enc = line[line.index('Encryption key')+15 :line.index('   Security')]
+					enc = line[line.index('Encryption key')+15 :]
+					line = line.replace(' ', '')
 					if enc is not None:
 						enc = _("Enabled")
 				if enc is not None:
