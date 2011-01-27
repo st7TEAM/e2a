@@ -43,7 +43,7 @@ class FileBrowser(Screen):
 				currDir = None
 
 			inhibitDirs = ["/bin", "/boot", "/dev", "/etc", "/home", "/lib", "/proc", "/sbin", "/share", "/sys", "/tmp", "/usr", "/var"]
-			self.filelist = FileList(currDir, matchingPattern = "(?i)^.*\.(iso)", useServiceRef = True)
+			self.filelist = FileList(currDir, matchingPattern = "(?i)^.*\.(iso|img)", useServiceRef = True)
 			self["filelist"] = self.filelist
 
 		self["FilelistActions"] = ActionMap(["SetupActions"],
@@ -268,8 +268,8 @@ class DVDPlayer(Screen, InfoBarBase, InfoBarNotifications, InfoBarSeek, InfoBarP
 		InfoBarBase.__init__(self)
 		InfoBarNotifications.__init__(self)
 		InfoBarCueSheetSupport.__init__(self, actionmap = "MediaPlayerCueSheetActions")
-#Blackhole		
-#		InfoBar_Nab.__init__(self)
+#BlackHole		
+		InfoBar_Nab.__init__(self)
 		InfoBarShowHide.__init__(self)
 		HelpableScreen.__init__(self)
 		self.save_infobar_seek_config()
