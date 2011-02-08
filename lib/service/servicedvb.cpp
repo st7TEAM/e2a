@@ -905,7 +905,7 @@ RESULT eServiceFactoryDVB::lookupService(ePtr<eDVBService> &service, const eServ
 		/* we are sure to have a ..DVB reference as the info() call was forwarded here according to it's ID. */
 		if ((err = db->getService((eServiceReferenceDVB&)ref, service)) != 0)
 		{
-			eDebug("getService failed!");
+//			eDebug("getService failed!");
 			return err;
 		}
 	}
@@ -2405,7 +2405,7 @@ void eDVBServicePlay::updateDecoder(bool sendSeekableStateChanged)
 		eDebug("getting program info failed.");
 	else
 	{
-		eDebugNoNewLine("have %d video stream(s)", program.videoStreams.size());
+		eDebugNoNewLine("have %zd video stream(s)", program.videoStreams.size());
 		if (!program.videoStreams.empty())
 		{
 			eDebugNoNewLine(" (");
@@ -2424,7 +2424,7 @@ void eDVBServicePlay::updateDecoder(bool sendSeekableStateChanged)
 			}
 			eDebugNoNewLine(")");
 		}
-		eDebugNoNewLine(", and %d audio stream(s)", program.audioStreams.size());
+		eDebugNoNewLine(", and %zd audio stream(s)", program.audioStreams.size());
 		if (!program.audioStreams.empty())
 		{
 			eDebugNoNewLine(" (");
@@ -2601,7 +2601,7 @@ void eDVBServicePlay::loadCuesheet()
 			m_cue_entries.insert(cueEntry(where, what));
 		}
 		fclose(f);
-		eDebug("%d entries", m_cue_entries.size());
+		eDebug("%zd entries", m_cue_entries.size());
 	} else
 		eDebug("cutfile not found!");
 	
