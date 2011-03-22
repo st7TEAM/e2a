@@ -1125,14 +1125,14 @@
 		<widget name="key_red" position="100,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_yellow" position="450,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="#a18120" transparent="1" />
     </screen>
-    <!-- 69-DeliteSetupDevicePanelConfl -->
+     <!-- 70-DeliteSetupDevicePanelConfl ( 2 )-->
     <screen name="DeliteSetupDevicePanelConf" position="center,center" size="950,420" title="Black Hole Devices Mountpoints Setup">
         <widget name="config" position="20,10" size="910,275" scrollbarMode="showOnDemand"/>
         <widget name="Linconn" position="20,285" size="910,20" font="Regular;18" halign="center" valign="center" backgroundColor="#9f1313"/>
-        <ePixmap pixmap="skin_default/buttons/red25.png" position="250,360" size="250,40" alphatest="on"/>
-        <ePixmap pixmap="skin_default/buttons/green25.png" position="250,360" size="250,40" alphatest="on"/>
-        <widget name="key_red" position="250,361" zPosition="1" size="250,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
-        <widget name="key_green" position="250,361" zPosition="1" size="250,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <ePixmap pixmap="skin_default/buttons/red25.png" position="150,360" size="250,40" alphatest="on"/>
+        <ePixmap pixmap="skin_default/buttons/green25.png" position="550,360" size="250,40" alphatest="on"/>
+        <widget name="key_red" position="150,360" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="key_green" position="550,360" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
     </screen>
 	<!-- DeliteCCCInfo -->
 	<screen name="DeliteCCcMain"  position="0,0" size="1280,720" title="Black Hole E2 CCcam Info" backgroundColor="transparent" flags="wfNoBorder">
