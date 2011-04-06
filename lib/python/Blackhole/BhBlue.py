@@ -233,6 +233,7 @@ class DeliteBluePanel(Screen):
 			line = f.read()
 			if line.strip() == self.deversion:
 				mycheck = 1
+			f.close()
 		if mycheck == 0:
 			nobox = self.session.open(MessageBox, "Sorry: Wrong image in flash found. You have to install in flash Black Hole image v.  " + self.deversion, MessageBox.TYPE_INFO)
 			nobox.setTitle(_("Info"))

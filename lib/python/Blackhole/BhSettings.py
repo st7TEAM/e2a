@@ -1196,7 +1196,7 @@ class DeliteKernelModShow(Screen):
 			
 class DeliteDtt(Screen):
 	skin = """
-	<screen position="center,center" size="710,340" title="Black Hole External Usb Tuner Panel">
+	<screen position="center,center" size="710,340" title="Black Hole External Usb DVB Tuner Panel">
 		<widget name="lab1" position="10,10" size="690,180" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="lab2" position="20,210" size="300,32" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="labstop" position="330,210" size="140,32" font="Regular;24" valign="center"  halign="center" backgroundColor="red"/>
@@ -1234,7 +1234,7 @@ class DeliteDtt(Screen):
 		self.onLayoutFinish.append(self.updateMe)
 		
 	def MeInstall(self):
-		self.session.openWithCallback(self.updateMe, DeliteDttDriversList)
+		self.session.openWithCallback(self.updateMe, DeliteDttMainConf)
 		
 	
 	def updateMe(self):
@@ -1244,9 +1244,15 @@ class DeliteDtt(Screen):
 			for line in f.readlines():
 				if line.find("#description:") != -1:
 					parts = line.strip().split(':')
-					self.mess = parts[1]
+					self.mess = "Drivers: " + parts[1]
 					break
 			f.close()
+		if fileExists("/etc/bh_usb_dvb.cfg"):
+			f = open("/etc/bh_usb_dvb.cfg",'r')
+			line = f.read()
+			self.mess = "Current Cfg: " + line + "\n" + self.mess
+			f.close()
+		
 		self["lab1"].setText(self.mess)
 		
 		self["labrun"].hide()
@@ -1335,6 +1341,87 @@ class DeliteDtt(Screen):
 		else:
 			self.close()
 	
+class DeliteDttMainConf(Screen):
+	skin = """
+	<screen position="center,center" size="800,520" title="Black Hole Usb Tuners Config">
+           <widget source="list" render="Listbox" position="20,20" size="760,510" scrollbarMode="showOnDemand" >
+            	<convert type="TemplatedMultiContent">
+                    {"template": [
+                       MultiContentEntryText(pos = (90, 25), size = (690, 80), font=0, text = 0),
+                        MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (80, 80), png = 1),
+                    ],
+                    "fonts": [gFont("Regular", 24),gFont("Regular", 24)],
+                    "itemHeight": 86
+                    }
+                    </convert>
+           </widget>
+         	<ePixmap position="100,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
+        	<ePixmap position="450,460" size="250,40" pixmap="skin_default/buttons/yellow25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" position="100,468" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" position="450,468" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+    	</screen>"""
+	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		self["key_red"] = Label(_("Continue"))
+		self["key_yellow"] = Label(_("Cancel"))
+		
+		self.list = []
+		self["list"] = List(self.list)
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"back": self.close,
+			"ok": self.KeyOk,
+			"red": self.KeyOk,
+			"yellow": self.close
+		})
+		
+		self.updateList()
+		
+	def updateList(self):	
+		self.list = [ ]
+		mypath = DeliteGetSkinPath()
+		
+		mypixmap = mypath + "icons/usbtuner_one_mono.png"
+		png = LoadPixmap(mypixmap)
+		name = "One Usb stick mono-tuner"
+		idx = 0
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/usbtuner_one_dual.png"
+		png = LoadPixmap(mypixmap)
+		name = "One Usb stick dual-tuner"
+		idx = 1
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/usbtuner_dual_same.png"
+		png = LoadPixmap(mypixmap)
+		name = "Two Usb sticks same model"
+		idx = 2
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/usbtuner_dual_different.png"
+		png = LoadPixmap(mypixmap)
+		name = "Two Usb sticks different models"
+		idx = 3
+		res = (name, png, idx)
+		self.list.append(res)
+		self["list"].list = self.list
+
+	def KeyOk(self):
+		self.sel = self["list"].getCurrent()
+		if self.sel:
+			self.sel = self.sel[2]
+			self.session.open(DeliteDttDriversList, self.sel)
+			
+		self.close()
+
+	
 class DeliteDttDriversList(Screen):
 	skin = """
 	<screen position="center,center" size="860,540" title="Usb Tuner Available Drivers">
@@ -1344,7 +1431,7 @@ class DeliteDttDriversList(Screen):
 		<widget name="Linconn" position="10,500" size="840,30" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" />
 	</screen>"""
 	
-	def __init__(self, session):
+	def __init__(self, session, device):
 		Screen.__init__(self, session)
 
 		self.list = []
@@ -1360,16 +1447,27 @@ class DeliteDttDriversList(Screen):
 		self.activityTimer.timeout.get().append(self.Listconn)
 		self.activityTimer.start(1, False)
 		self.onClose.append(self.delTimer)
+		
+		self.progress = 0
+		self.device = device
+		self.mainconf = "One Usb stick mono-tuner"
+		if self.device == 1:
+			self.mainconf = "One Usb stick dual-tuner"
+		elif self.device == 2:
+			self.mainconf = "Two Usb sticks same model"
+		elif self.device == 3:
+			self.mainconf = "Two Usb sticks different models"
+			
 	
 	def delTimer(self):
 		del self.activityTimer
 		
 	def DeliteDtt_geturl(self):
 		machine = nab_Detect_Machine()
-		path = "http://www.dreambox-community.net/driversusb/"
-		good = ["bm750", "vusolo"]
-		if machine in good:
-			path = "http://www.vuplus-community.net/driversusb/"
+		path = "http://www.vuplus-community.net/driversusb/"
+#		good = ["bm750", "vusolo"]
+#		if machine in good:
+#			path = "http://www.vuplus-community.net/driversusb/"
 		
 		if machine == "bm750":
 			machine = "vuduo"
@@ -1410,24 +1508,118 @@ class DeliteDttDriversList(Screen):
 			ybox.setTitle("Installation Confirm")
 			
 	def installadd2(self, answer):
-		if answer is True:		
-			system("rm -f /lib/modules/dvbt/*")
-			system("rm -f /usr/bin/delitedtt.sh")
-			system("killall -9 usbtuner")
-			url = self.DeliteDtt_geturl()
-			file = self.sel[1]
-			file = file.strip()
-			url = url + "/" + file
-			cmd = "wget -O /tmp/" + file + " " + url
-			rc = system(cmd)
-			dest = "/tmp/" + file
-			mydir = getcwd()
-			chdir("/")
-			cmd = "tar -xzf " + dest
-			rc = system(cmd)
-			chdir(mydir)
-			cmd = "rm -f " + dest
-			rc = system(cmd)
-			mybox = self.session.open(MessageBox, "Driver Succesfully Installed.\n You can now Enable your Usb tuner", MessageBox.TYPE_INFO)
+		if answer is True:
+			if self.device == 0:
+				self.compose_mono("1")
+			elif self.device == 1:
+				self.compose_mono("2")
+			elif self.device == 2:
+				self.compose_mono("2")
+			elif self.device == 3:
+				if self.progress == 0:
+					self.progress = 1
+					self.compose_mono("3")
+				else:
+					self.compose_dual()
+				
+			#self.session.open(MessageBox, self.device, MessageBox.TYPE_INFO)
+			
+	def write_cfg(self):
+		out = open("/etc/bh_usb_dvb.cfg", "w")
+		out.write(self.mainconf)
+		out.close()
+	
+	def change_usbtuner(self):
+		out = open("/usr/bin/delitedtt.tmp", "w")
+		f = open("/usr/bin/delitedtt.sh",'r')
+		for line in f.readlines():
+			out.write(line)
+			if line.find("/usr/bin/usbtuner -n ") != -1:
+				out.write("/usr/bin/usbtuner -a2 -v1 -n >/dev/null 2>&1 &\n")
+		f.close()
+		out.close()
+		os_rename("/usr/bin/delitedtt.tmp", "/usr/bin/delitedtt.sh")
+				
+	def compose_mono(self, answer):
+		system("rm -f /lib/modules/dvbt/*")
+		system("rm -f /usr/bin/delitedtt.sh")
+		system("killall -9 usbtuner")
+		url = self.DeliteDtt_geturl()
+		file = self.sel[1]
+		file = file.strip()
+		url = url + "/" + file
+		cmd = "wget -O /tmp/" + file + " " + url
+		rc = system(cmd)
+		dest = "/tmp/" + file
+		mydir = getcwd()
+		chdir("/")
+		cmd = "tar -xzf " + dest
+		rc = system(cmd)
+		chdir(mydir)
+		if answer != "1":
+			self.change_usbtuner()
+		cmd = "rm -f " + dest
+		rc = system(cmd)
+		system("chmod 0755 /usr/bin/delitedtt.sh")
+		if answer == "3":
+			os_rename("/usr/bin/delitedtt.sh", "/usr/bin/delitedtt.tmp2")
+			mybox = self.session.open(MessageBox, "First tuner drivers installed.\n You can now select drivers for second tuner", MessageBox.TYPE_INFO)
+			mybox.setTitle("Info")
+		else:
+			self.write_cfg()
+			mybox = self.session.open(MessageBox, "Driver Successfully Installed.\n You can now Enable your Usb tuner", MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
 			self.close()
+	
+	def compose_dual(self):
+		newdrivers = ""
+		description = ""
+		system("killall -9 usbtuner")
+		url = self.DeliteDtt_geturl()
+		file = self.sel[1]
+		file = file.strip()
+		url = url + "/" + file
+		cmd = "wget -O /tmp/" + file + " " + url
+		rc = system(cmd)
+		dest = "/tmp/" + file
+		mydir = getcwd()
+		chdir("/")
+		cmd = "tar -xzf " + dest
+		rc = system(cmd)
+		chdir(mydir)
+		self.change_usbtuner()
+		cmd = "rm -f " + dest
+		rc = system(cmd)
+		
+		f = open("/usr/bin/delitedtt.sh",'r')
+		check = 0
+		for line in f.readlines():
+			if line.find('#description:') != -1:
+				description = line[13:]
+			if line.find('# fine drivers') != -1:
+				break
+			if check == 1:
+				newdrivers = newdrivers + line
+			if line.find('# inizio drivers') != -1:
+				check = 1
+		f.close()
+		
+		out = open("/usr/bin/delitedtt.sh", "w")
+		f = open("/usr/bin/delitedtt.tmp2",'r')
+		for line in f.readlines():
+			if line.find('#description:') != -1:
+				line = line.strip() + " -" + description + "\n"
+			if line.find("# fine drivers") != -1:
+				out.write(newdrivers)
+			out.write(line)
+		f.close()
+		out.close()
+		system("chmod 0755 /usr/bin/delitedtt.sh")
+		self.write_cfg()
+		mybox = self.session.open(MessageBox, "Drivers for tuner1 and tuner2 successfully installed.\n You can now Enable your tuners", MessageBox.TYPE_INFO)
+		mybox.setTitle("Info")
+		self.close()
+	
+	
+	
+	
