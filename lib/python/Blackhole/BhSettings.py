@@ -1239,8 +1239,8 @@ class DeliteDtt(Screen):
 	
 	def updateMe(self):
 		self.mess = "Usb Tuner Drivers not installed"
-		if fileExists("/usr/bin/delitedtt.sh"):
-			f = open("/usr/bin/delitedtt.sh",'r')
+		if fileExists("/usr/bin/bhusbdvb.sh"):
+			f = open("/usr/bin/bhusbdvb.sh",'r')
 			for line in f.readlines():
 				if line.find("#description:") != -1:
 					parts = line.strip().split(':')
@@ -1279,8 +1279,9 @@ class DeliteDtt(Screen):
 		else:
 			if self.my_dtt_active == False:
 				m = "echo -e '\n\nProbing Usb Tuner.........\n\nPlease wait.........\n'"
-				m1 = "/usr/bin/delitedtt.sh"
-				self.session.open(Console, title="Dtt", cmdlist=[m,m1], finishedCallback = self.MeStart2)
+				m1 = "/usr/bin/bhusbdvb.sh"
+				m2 = "sleep 2"
+				self.session.open(Console, title="Dtt", cmdlist=[m,m1,m2], finishedCallback = self.MeStart2)
 			
 	
 	
@@ -1296,11 +1297,11 @@ class DeliteDtt(Screen):
 			out = open("/usr/bin/enigma2sh.tmp", "w")
 			f = open("/usr/bin/enigma2.sh",'r')
 			for line in f.readlines():
-				if line.find("delitedtt.sh") != -1:
+				if line.find("bhusbdvb.sh") != -1:
 					continue
+				if line.find("-d /home/root") != -1:
+					out.write("/usr/bin/bhusbdvb.sh\n")
 				out.write(line)
-				if line.find("cd /home/root") != -1:
-					out.write("/usr/bin/delitedtt.sh\n")
 			f.close()
 			out.close()
 			os_rename("/usr/bin/enigma2sh.tmp", "/usr/bin/enigma2.sh")
@@ -1318,7 +1319,7 @@ class DeliteDtt(Screen):
 			out = open("/usr/bin/enigma2sh.tmp", "w")
 			f = open("/usr/bin/enigma2.sh",'r')
 			for line in f.readlines():
-				if line.find("delitedtt.sh") != -1:
+				if line.find("bhusbdvb.sh") != -1:
 					continue
 				out.write(line)
 			f.close()
@@ -1528,21 +1529,10 @@ class DeliteDttDriversList(Screen):
 		out = open("/etc/bh_usb_dvb.cfg", "w")
 		out.write(self.mainconf)
 		out.close()
-	
-	def change_usbtuner(self):
-		out = open("/usr/bin/delitedtt.tmp", "w")
-		f = open("/usr/bin/delitedtt.sh",'r')
-		for line in f.readlines():
-			out.write(line)
-			if line.find("/usr/bin/usbtuner -n ") != -1:
-				out.write("/usr/bin/usbtuner -a2 -v1 -n >/dev/null 2>&1 &\n")
-		f.close()
-		out.close()
-		os_rename("/usr/bin/delitedtt.tmp", "/usr/bin/delitedtt.sh")
-				
+		
 	def compose_mono(self, answer):
 		system("rm -f /lib/modules/dvbt/*")
-		system("rm -f /usr/bin/delitedtt.sh")
+		system("rm -f /usr/bin/bhusbdvb.sh")
 		system("killall -9 usbtuner")
 		url = self.DeliteDtt_geturl()
 		file = self.sel[1]
@@ -1556,13 +1546,11 @@ class DeliteDttDriversList(Screen):
 		cmd = "tar -xzf " + dest
 		rc = system(cmd)
 		chdir(mydir)
-		if answer != "1":
-			self.change_usbtuner()
 		cmd = "rm -f " + dest
 		rc = system(cmd)
-		system("chmod 0755 /usr/bin/delitedtt.sh")
+		system("chmod 0755 /usr/bin/bhusbdvb.sh")
 		if answer == "3":
-			os_rename("/usr/bin/delitedtt.sh", "/usr/bin/delitedtt.tmp2")
+			os_rename("/usr/bin/bhusbdvb.sh", "/usr/bin/bhusbdvb.tmp2")
 			mybox = self.session.open(MessageBox, "First tuner drivers installed.\n You can now select drivers for second tuner", MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
 		else:
@@ -1587,11 +1575,10 @@ class DeliteDttDriversList(Screen):
 		cmd = "tar -xzf " + dest
 		rc = system(cmd)
 		chdir(mydir)
-		self.change_usbtuner()
 		cmd = "rm -f " + dest
 		rc = system(cmd)
 		
-		f = open("/usr/bin/delitedtt.sh",'r')
+		f = open("/usr/bin/bhusbdvb.sh",'r')
 		check = 0
 		for line in f.readlines():
 			if line.find('#description:') != -1:
@@ -1604,8 +1591,8 @@ class DeliteDttDriversList(Screen):
 				check = 1
 		f.close()
 		
-		out = open("/usr/bin/delitedtt.sh", "w")
-		f = open("/usr/bin/delitedtt.tmp2",'r')
+		out = open("/usr/bin/bhusbdvb.sh", "w")
+		f = open("/usr/bin/bhusbdvb.tmp2",'r')
 		for line in f.readlines():
 			if line.find('#description:') != -1:
 				line = line.strip() + " -" + description + "\n"
@@ -1614,7 +1601,8 @@ class DeliteDttDriversList(Screen):
 			out.write(line)
 		f.close()
 		out.close()
-		system("chmod 0755 /usr/bin/delitedtt.sh")
+		system("chmod 0755 /usr/bin/bhusbdvb.sh")
+		system("rm -f /usr/bin/bhusbdvb.tmp2")
 		self.write_cfg()
 		mybox = self.session.open(MessageBox, "Drivers for tuner1 and tuner2 successfully installed.\n You can now Enable your tuners", MessageBox.TYPE_INFO)
 		mybox.setTitle("Info")
