@@ -749,6 +749,9 @@ class AdapterSetupConfiguration(Screen, HelpableScreen):
 				except ImportError:
 					self.session.open(MessageBox, _("The wireless LAN plugin is not installed!\nPlease install it."), type = MessageBox.TYPE_INFO,timeout = 10 )
 				else:
+					temp_iface=getWNICnames()
+					if temp_iface == []:
+						os_system("ifconfig " + self_iface + " up")
 					ifobj = Wireless(self.iface) # a Wireless NIC Object
 					try:
 						self.wlanresponse = ifobj.getAPaddr()
