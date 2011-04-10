@@ -745,7 +745,7 @@ class AdapterSetupConfiguration(Screen, HelpableScreen):
 			if self.iface in iNetwork.wlan_interfaces:
 				try:
 					from Plugins.SystemPlugins.WirelessLan.plugin import WlanScan
-					from pythonwifi.iwlibs import Wireless
+					from pythonwifi.iwlibs import Wireless, getWNICnames
 				except ImportError:
 					self.session.open(MessageBox, _("The wireless LAN plugin is not installed!\nPlease install it."), type = MessageBox.TYPE_INFO,timeout = 10 )
 				else:
