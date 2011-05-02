@@ -2,18 +2,17 @@ from Screens.Screen import Screen
 
 from Screens.MessageBox import MessageBox
 from Screens.Console import Console
-from enigma import eTimer
+from enigma import eTimer, loadPic
 from Components.ActionMap import ActionMap
 from Components.Label import Label
 from Components.ScrollLabel import ScrollLabel
 from Components.Sources.List import List
-from Components.Pixmap import MultiPixmap
+from Components.Pixmap import Pixmap, MultiPixmap
 from Tools.LoadPixmap import LoadPixmap
 from Tools.Directories import fileExists, pathExists, createDir
 from os import system, listdir, chdir, getcwd, remove as os_remove
 from urllib2 import Request, urlopen, URLError, HTTPError
-from BhUtils import nab_strip_html
-from BhUtils import DeliteGetSkinPath
+from BhUtils import nab_strip_html, DeliteGetSkinPath
 
 
 class DeliteAddons(Screen):
@@ -208,7 +207,7 @@ class Nab_downArea(Screen):
 		
 		mypixmap = mypath + "icons/nablangs.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Image Languages"
+		name = "Black Hole Image Boot Logo"
 		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
@@ -256,8 +255,8 @@ class Nab_downArea(Screen):
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Scripts"
 			self.title = "Black Hole Scripts"
 		elif  self.sel == 4:
-			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Langs"
-			self.title = "Black Hole Languages"
+			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Logos"
+			self.title = "Black Hole Boot Logo"
 		elif  self.sel == 5:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Settings"
 			self.title = "Black Hole Settings"
@@ -343,9 +342,38 @@ class Nab_downCat(Screen):
 	def connectionDone(self):
 		downfile = "/tmp/cpanel.tmp"	
 		if fileExists(downfile):
-			self.session.open(Nab_ShowDownFile, self.myidf)
+			self.session.open(Nab_ShowDownFile, self.myidf, self.mytitle)
 		else:
 			nobox = self.session.open(MessageBox, "Sorry, Connection Failed.", MessageBox.TYPE_INFO)
+
+
+
+class Nab_ShowPreviewFile(Screen):
+	skin = """
+	<screen position="0,0" size="1280,720" title="Black Hole E2 Preview" flags="wfNoBorder">
+		<widget name="lab1" position="0,0" size="1280,720" zPosition="1" />
+		<widget name="lab2" position="0,30" size="1280,30" zPosition="2" font="Regular;26" halign="center" valign="center" backgroundColor="red" foregroundColor="white" />
+	</screen>"""
+	
+	def __init__(self, session, myprev):
+		Screen.__init__(self, session)
+
+		self["lab1"] = Pixmap()
+		self["lab2"] = Label("Black Hole Preview: click ok to exit")
+		self["actions"] = ActionMap(["WizardActions"],
+		{
+			"ok": self.close,
+			"back": self.close,
+		})
+
+		self.fileP = myprev.replace('.tgz', '.jpg')
+		self.onLayoutFinish.append(self.addonsconn)
+
+
+	def addonsconn(self):
+		myicon = "/tmp/" + self.fileP
+		png = loadPic(myicon, 1280, 720, 0, 0, 0, 1)
+		self["lab1"].instance.setPixmap(png)
 
 	
 class Nab_ShowDownFile(Screen):
@@ -354,13 +382,17 @@ class Nab_ShowDownFile(Screen):
 		<widget name="infotext" position="10,15" size="540,315" font="Regular;20" />
 		<ePixmap pixmap="skin_default/buttons/green.png" position="210,365" size="140,40" alphatest="on" />
 		<widget name="key_green" position="210,365" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="400,365" size="140,40" alphatest="on" />
+		<widget name="key_yellow" position="400,365" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
 	</screen>"""
 	
-	def __init__(self, session, myidf):
+	def __init__(self, session, myidf, category):
 		Screen.__init__(self, session)
 
 		self["key_green"] = Label("Download")
+		self["key_yellow"] = Label("Preview")
 		self["infotext"] = ScrollLabel()
+		self.tcat = category
 		
 		step = 0
 		strview = "TITLE: "
@@ -405,11 +437,24 @@ class Nab_ShowDownFile(Screen):
 			"ok": self.KeyGreend,
 			"back": self.close,
 			"green": self.KeyGreend,
+			"yellow": self.KeyYellowd,
 			"up": self["infotext"].pageUp,
 			"down": self["infotext"].pageDown
 
 		})
 			
+		
+	def KeyYellowd(self):
+		if (self.tcat != "Black Hole Skins" and self.tcat != "Black Hole Boot Logo"):
+			nobox = self.session.open(MessageBox, "Sorry, the preview is available only for Skins and Bootlogo.", MessageBox.TYPE_INFO)
+		else:
+			self.fileP = self.fileN.replace('.tgz', '.jpg')
+			self.url = '"http://www.vuplus-community.net/bhaddons/files/' + self.fileP + '"'
+			cmd = "wget -O /tmp/" + self.fileP + " " + self.url
+			self.session.openWithCallback(self.addonsconn2, Nab_ConnectPop, cmd, "N/A")
+			
+	def addonsconn2(self):
+		self.session.open(Nab_ShowPreviewFile, self.fileP)
 		
 	def KeyGreend(self):
 		self.url = '"http://www.vuplus-community.net/bhaddons/files/' + self.fileN + '"'
