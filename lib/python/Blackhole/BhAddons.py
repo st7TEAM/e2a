@@ -342,7 +342,7 @@ class Nab_downCat(Screen):
 	def connectionDone(self):
 		downfile = "/tmp/cpanel.tmp"	
 		if fileExists(downfile):
-			self.session.open(Nab_ShowDownFile, self.myidf, self.mytitle)
+			self.session.open(Nab_ShowDownFile, self.myidf)
 		else:
 			nobox = self.session.open(MessageBox, "Sorry, Connection Failed.", MessageBox.TYPE_INFO)
 
@@ -374,6 +374,7 @@ class Nab_ShowPreviewFile(Screen):
 		myicon = "/tmp/" + self.fileP
 		png = loadPic(myicon, 1280, 720, 0, 0, 0, 1)
 		self["lab1"].instance.setPixmap(png)
+		os_remove(myicon)
 
 	
 class Nab_ShowDownFile(Screen):
@@ -386,13 +387,13 @@ class Nab_ShowDownFile(Screen):
 		<widget name="key_yellow" position="400,365" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
 	</screen>"""
 	
-	def __init__(self, session, myidf, category):
+	def __init__(self, session, myidf):
 		Screen.__init__(self, session)
 
 		self["key_green"] = Label("Download")
 		self["key_yellow"] = Label("Preview")
 		self["infotext"] = ScrollLabel()
-		self.tcat = category
+		self.tcat = ""
 		
 		step = 0
 		strview = "TITLE: "
@@ -422,9 +423,12 @@ class Nab_ShowDownFile(Screen):
 				elif step == 5:
 					strview += "                                Downloads: " + line + "\n"
 					step = 6
-				elif step == 6:
-					strview += "---------------------------------------------------------------------\n" + line + "\n"
+				elif step == 6:	
+					self.tcat = line
 					step = 7
+				elif step == 7:
+					strview += "---------------------------------------------------------------------\n" + line + "\n"
+					step = 8
 				else:
 					strview += line + "\n"
 		
@@ -445,7 +449,7 @@ class Nab_ShowDownFile(Screen):
 			
 		
 	def KeyYellowd(self):
-		if (self.tcat != "Black Hole Skins" and self.tcat != "Black Hole Boot Logo"):
+		if (self.tcat != "Skins" and self.tcat != "Logos"):
 			nobox = self.session.open(MessageBox, "Sorry, the preview is available only for Skins and Bootlogo.", MessageBox.TYPE_INFO)
 		else:
 			self.fileP = self.fileN.replace('.tgz', '.jpg')
