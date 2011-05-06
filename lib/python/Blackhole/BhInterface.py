@@ -71,14 +71,7 @@ class DeliteInterface:
 		myext = ".gz"
 		if myurl.find('.dat.bz2') != -1:
 			myext = ".bz2"
-		myepgpath = "/hdd/epg.dat"
-		if fileExists("/etc/skyitepgpath"):
-			f = open("/etc/skyitepgpath",'r')
- 			for line in f.readlines():
-				line = line.strip()
-				if len(line) > 3:
-					myepgpath = line
- 			f.close()
+		myepgpath = config.misc.epgcache_filename.value
 		myepgfile = myepgpath + myext
 		try:
 			filein = urlopen(myurl)

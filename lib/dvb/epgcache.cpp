@@ -1022,21 +1022,6 @@ void eEPGCache::thread()
 
 void eEPGCache::load()
 {
-//BlackHole
-	
-	FILE *fp = fopen ( "/etc/skyitepgpath", "r" );
-	if ( fp )
-	{
-	  	fgets ( m_filename, sizeof ( m_filename ), fp ); 
-		fclose(fp);
-	}
-	else
-	{
-		sprintf (m_filename, "/hdd/epg.dat");
-	}
-//	eDebug ("[EPG SKY] reading epg file: %s %s", fileDat, fileMd5 );
-//	strncpy(m_filename, path, 1024);
-//end
 
 	FILE *f = fopen(m_filename, "r");
 	if (f)
@@ -1134,22 +1119,6 @@ void eEPGCache::load()
 
 void eEPGCache::save()
 {
-//BlackHole
-	
-	FILE *fp = fopen ( "/etc/skyitepgpath", "r" );
-	if ( fp )
-	{
-	  	fgets ( m_filename, sizeof ( m_filename ), fp ); 
-		fclose(fp);
-	}
-	else
-	{
-		sprintf (m_filename, "/hdd/epg.dat");
-	}
-//	eDebug ("[EPG SKY] reading epg file: %s %s", fileDat, fileMd5 );
-//	strncpy(m_filename, path, 1024);
-//end
-
 	/* create empty file */
 	FILE *f = fopen(m_filename, "w");
 

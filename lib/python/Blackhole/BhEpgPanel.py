@@ -142,7 +142,7 @@ class DeliteEpgPanel(Screen):
 		self["lpinactive"].hide()
 		self["lpactive"].hide()
 		
-		myepgpath = "/hdd/epg.dat"
+		myepgpath = config.misc.epgcache_filename.value
 		
 		if fileExists("/etc/skyitepglock"):
 			self["lsinactive"].show()
@@ -154,14 +154,6 @@ class DeliteEpgPanel(Screen):
 		else:
 			self["luinactive"].show()
 		
-		
-		if fileExists("/etc/skyitepgpath"):
-			f = open("/etc/skyitepgpath",'r')
- 			for line in f.readlines():
-				line = line.strip()
-				if len(line) > 3:
-					myepgpath = line
- 			f.close()
 		
 		self["labpath"].setText(myepgpath)
 		
@@ -386,8 +378,10 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 		self.delitepopdisabled = NoSave(ConfigYesNo(default=True))
 		self.deliteepgbuttons = NoSave(ConfigYesNo(default=True))
 		
+		my_tmp_path = config.misc.epgcache_filename.value
+		
 		self.myepg_path = NoSave(ConfigSelection(default = "/hdd/epg.dat", choices = [
-		("/hdd/epg.dat", "/hdd/epg.dat"), ("/media/cf/epg.dat", "/media/cf/epg.dat"), ("/media/usb/epg.dat", "/media/usb/epg.dat"), ("/media/card/epg.dat", "/media/card/epg.dat"), ("/media/net/epg.dat", "/media/net/epg.dat")]))
+		(my_tmp_path, my_tmp_path), ("/hdd/epg.dat", "/hdd/epg.dat"), ("/media/cf/epg.dat", "/media/cf/epg.dat"), ("/media/usb/epg.dat", "/media/usb/epg.dat"), ("/media/card/epg.dat", "/media/card/epg.dat"), ("/media/net/epg.dat", "/media/net/epg.dat")]))
 		
 		if fileExists("/etc/skyitepglock"):
 			self.deliteepgdisabled.value = False
@@ -396,15 +390,6 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 		
 		self.delitepopdisabled.value = config.misc.deliteepgpop.value
 		self.deliteepgbuttons.value = config.misc.deliteepgbuttons.value
-		
-		my_tmp_path = "/hdd/epg.dat"
-		if fileExists("/etc/skyitepgpath"):
-			f = open("/etc/skyitepgpath",'r')
- 			for line in f.readlines():
-				line = line.strip()
-				if len(line) > 3:
-					my_tmp_path = line
- 			f.close()
 		
 		self.myepg_path.value = my_tmp_path
 		
@@ -429,6 +414,8 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 		config.misc.deliteepgpop.save()
 		config.misc.deliteepgbuttons.value = self.deliteepgbuttons.value
 		config.misc.deliteepgbuttons.save()
+		config.misc.epgcache_filename.value = self.myepg_path.value
+		config.misc.epgcache_filename.save()
 		configfile.save()
 		
 		if fileExists("/etc/skyitepglock"):
@@ -439,10 +426,6 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 				out = open("/etc/skyitepglock", "w")
 				out.write("Black Hole is the Best")
 				out.close()
-		
-		out = open("/etc/skyitepgpath", "w")
-		out.write(self.myepg_path.value)
-		out.close()
 		
 		self.close()
 			
@@ -1315,14 +1298,8 @@ class DeliteDownEpgNow(Screen):
 			self["lab1"].hide()
 			self["lab1"].setText("Wait Please... epg.dat file download in progress....")
 			self["lab1"].show()
-			myepgpath = "/hdd/epg.dat"
-			if fileExists("/etc/skyitepgpath"):
-				f = open("/etc/skyitepgpath",'r')
- 				for line in f.readlines():
-					line = line.strip()
-					if len(line) > 3:
-						myepgpath = line
- 				f.close()
+			myepgpath = config.misc.epgcache_filename.value
+			
 			myepgfile = myepgpath + myext
 			
 			try:
