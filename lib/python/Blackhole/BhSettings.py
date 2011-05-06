@@ -12,7 +12,7 @@ from Components.Sources.List import List
 from Tools.LoadPixmap import LoadPixmap
 from Tools.Directories import fileExists, pathExists, createDir, resolveFilename, SCOPE_SKIN_IMAGE
 from os import system, remove as os_remove, rename as os_rename, popen, getcwd, chdir
-from BhUtils import DeliteGetSkinPath, nab_Detect_Machine
+from BhUtils import DeliteGetSkinPath, nab_Detect_Machine, BhU_get_Version
 from BhInadyn import DeliteInadyn
 from BhSwap import DeliteSwap
 from BhHdd import DeliteHdd
@@ -1465,6 +1465,7 @@ class DeliteDttDriversList(Screen):
 		
 	def DeliteDtt_geturl(self):
 		machine = nab_Detect_Machine()
+		ver = BhU_get_Version()
 		path = "http://www.vuplus-community.net/driversusb/"
 #		good = ["bm750", "vusolo"]
 #		if machine in good:
@@ -1472,7 +1473,7 @@ class DeliteDttDriversList(Screen):
 		
 		if machine == "bm750":
 			machine = "vuduo"
-		path += machine
+		path += ver + "/" + machine
 		return path
 	
 	def Listconn(self):

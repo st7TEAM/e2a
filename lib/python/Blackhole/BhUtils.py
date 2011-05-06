@@ -145,6 +145,15 @@ def nab_Detect_Machine():
 		f.close()
 	return machine
 	
+def BhU_get_Version():
+	ver = "1.0.0"
+	if fileExists("/etc/bhversion"):
+		f = open("/etc/bhversion",'r')
+		ver = f.readline().strip()
+		ver = ver.replace('BlackHole ', '')
+		f.close()
+	return ver
+	
 #def make_Delite_cipher():
 #	key = 'AGA6A3A2ACA1A8A5A6A9A9A4A'
 #	key += '6AGA3AFA3A6AEA1AEA2A7AC'
