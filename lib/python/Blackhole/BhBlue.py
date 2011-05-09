@@ -18,6 +18,7 @@ from os import system, listdir, chdir, getcwd, rename as os_rename
 from BhEpgPanel import DeliteEpgPanel
 from BhSettings import DeliteSettings
 from BhInfo import DeliteInfo
+from BhUtils import BhU_get_Version, BhU_check_proc_version
 import socket
 
 config.delite = ConfigSubsection()
@@ -27,9 +28,6 @@ class DeliteBluePanel(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
-		#self.downTimer = eTimer()
-		
-		self.deversion = "1.4.1"
 		self["lab1"] = Label(_("xx CAMs Installed"))
 		self["lab2"] = Label(_("Set Default CAM"))
 		self["lab3"] = Label(_("Active CAM"))
@@ -228,14 +226,11 @@ class DeliteBluePanel(Screen):
 		
 	def checkKern(self):
 		mycheck = 0
-		if fileExists("/proc/blackhole/version"):
-			f = open("/proc/blackhole/version",'r')
-			line = f.read()
-			if line.strip() == self.deversion:
-				mycheck = 1
-			f.close()
-		if mycheck == 0:
-			nobox = self.session.open(MessageBox, "Sorry: Wrong image in flash found. You have to install in flash Black Hole image v.  " + self.deversion, MessageBox.TYPE_INFO)
+		deversion = BhU_get_Version()
+		if deversion == BhU_check_proc_version():
+			mycheck = 1
+		else:
+			nobox = self.session.open(MessageBox, "Sorry: Wrong image in flash found. You have to install in flash Black Hole image v.  " + deversion, MessageBox.TYPE_INFO)
 			nobox.setTitle(_("Info"))
 			self.myclose()
 		return mycheck

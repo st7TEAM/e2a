@@ -154,6 +154,14 @@ def BhU_get_Version():
 		f.close()
 	return ver
 	
+def BhU_check_proc_version():
+	ver = ""
+	if fileExists("/proc/blackhole/version"):
+		f = open("/proc/blackhole/version",'r')
+		ver = f.readline().strip()
+		f.close()
+	return ver
+	
 #def make_Delite_cipher():
 #	key = 'AGA6A3A2ACA1A8A5A6A9A9A4A'
 #	key += '6AGA3AFA3A6AEA1AEA2A7AC'
