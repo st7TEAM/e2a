@@ -18,6 +18,7 @@ class About(Screen):
 		bhVer = f.readline().strip()
 		f.close()
 		self["ImageVersion"] = StaticText("Image: " + bhVer)
+		
 		self["TunerHeader"] = StaticText(_("Detected NIMs:"))
 
 		fp_version = getFPVersion()
