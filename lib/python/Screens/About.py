@@ -11,14 +11,13 @@ class About(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 
-		self["EnigmaVersion"] = StaticText("Enigma: " + about.getEnigmaVersionString())
+		self["EnigmaVersion"] = StaticText("version: " + about.getEnigmaVersionString())
 #		self["ImageVersion"] = StaticText("Image: " + about.getImageVersionString())
 		bhVer = "Blackhole"
 		f = open("/etc/bhversion",'r')
 		bhVer = f.readline().strip()
 		f.close()
 		self["ImageVersion"] = StaticText("Image: " + bhVer)
-		
 		self["TunerHeader"] = StaticText(_("Detected NIMs:"))
 
 		fp_version = getFPVersion()
