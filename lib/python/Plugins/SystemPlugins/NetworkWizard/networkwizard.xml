@@ -1,6 +1,6 @@
 <wizard>
         <step id="welcome">
-                <text value="Welcome.\n\nIf you want to connect your Dreambox to the Internet, this wizard will guide you through the basic network setup of your Vu+ box.\n\nPress OK to start configuring your network" />
+		<text value="Welcome.\n\nIf you want to connect your Vu+ box to the Internet, this wizard will guide you through the basic network setup of your Vu+ box.\n\nPress OK to start configuring your network" />
                 <displaytext value="Network Wizard" />
 	        <code>
 self.clearSelectedKeys()
