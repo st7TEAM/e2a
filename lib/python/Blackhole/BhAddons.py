@@ -186,14 +186,14 @@ class Nab_downArea(Screen):
 		
 		mypixmap = mypath + "icons/nabplugins.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole E2 Image Plugins"
+		name = "Black Hole Image Plugins"
 		idx = 1
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabskins.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole E2 Image Skins"
+		name = "Black Hole Image Skins"
 		idx = 2
 		res = (name, png, idx)
 		self.list.append(res)
@@ -214,14 +214,14 @@ class Nab_downArea(Screen):
 		
 		mypixmap = mypath + "icons/nabsettings.png"
 		png = LoadPixmap(mypixmap)
-		name = "Enigma2 Settings"
+		name = "Settings"
 		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabpicons.png"
 		png = LoadPixmap(mypixmap)
-		name = "Enigma2 Picons Packages"
+		name = "Picons Packages"
 		idx = 6
 		res = (name, png, idx)
 		self.list.append(res)
@@ -487,7 +487,7 @@ class Nab_ShowDownFile(Screen):
 				rc = system(cmd)
 				if fileExists("/usr/sbin/nab_e2_restart.sh"):
 					rc = system("rm -f /usr/sbin/nab_e2_restart.sh")
-					mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Enigma2 will be now hard restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
+					mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now hard restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
 					mybox.setTitle("Info")
 				else:
 					mybox = self.session.open(MessageBox, "Addon Succesfully Installed.", MessageBox.TYPE_INFO)
@@ -559,7 +559,7 @@ class Nab_downPanel(Screen):
 			rc = system(cmd)
 			if fileExists("/usr/sbin/nab_e2_restart.sh"):
 				rc = system("rm -f /usr/sbin/nab_e2_restart.sh")
-				mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Enigma2 will be now hard restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
+				mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now hard restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
 				mybox.setTitle("Info")
 			else:
 				mybox = self.session.open(MessageBox, "Addon Succesfully Installed.", MessageBox.TYPE_INFO)

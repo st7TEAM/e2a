@@ -407,9 +407,9 @@ class DeliteSetupOSDConf2(Screen, ConfigListScreen):
 		config.usage.infobar_timeout.save()
 		
 		if self.plcd_original != self.delitepiconlcd.value:
-			message = "Picons LCD changes need Enigma2 restart to take effects.\nRestart Enigma now?"
+			message = "Picons LCD changes need gui restart to take effects.\nRestart Gui now?"
 			ybox = self.session.openWithCallback(self.restEn, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Enigma2 Restart.")
+			ybox.setTitle("Gui Restart.")
 		else:
 			self.close()
 			
@@ -513,7 +513,7 @@ class DeliteSetupCronConf(Screen, ConfigListScreen):
 		self.cmdtime = NoSave(ConfigClock(default=0))
 		self.default_command = NoSave(ConfigSelection(default = "None", choices = [
 		("None", "None"), ("/usr/bin/Blackholecmd standby", "standby"), ("/usr/bin/Blackholecmd shutdown", "shutdown"), ("/usr/bin/Blackholecmd reboot", "reboot"),
-		("/usr/bin/Blackholecmd restartenigma2", "restartenigma2"), ("/usr/bin/Blackholecmd restartemu", "restartemu")]))
+		("/usr/bin/Blackholecmd restartenigma2", "restartgui"), ("/usr/bin/Blackholecmd restartemu", "restartemu")]))
 		self.user_command = NoSave(ConfigText(fixed_size = False))
 		self.cmdtime.value = mytmpt = [0,0]
 		self.default_command.value = "None"
@@ -1306,9 +1306,9 @@ class DeliteDtt(Screen):
 			out.close()
 			os_rename("/usr/bin/enigma2sh.tmp", "/usr/bin/enigma2.sh")
 			system("chmod 0755 /usr/bin/enigma2.sh")
-			message = "Tuner activation need Enigma2 restart to take effects.\nRestart Enigma now?"
+			message = "Tuner activation need gui restart to take effects.\nRestart Gui now?"
 			ybox = self.session.openWithCallback(self.restEn, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Enigma2 Restart.")
+			ybox.setTitle("Gui Restart.")
 		else:
 			mybox = self.session.open(MessageBox, "Sorry, No supported device found.", MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")

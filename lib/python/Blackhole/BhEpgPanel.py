@@ -660,8 +660,8 @@ class DeliteOepgSetup(Screen, ConfigListScreen):
 		os_rename("/etc/enigma2/timers.tmp", "/etc/enigma2/timers.xml")
 		
 		
-		ybox = self.session.openWithCallback(self.restEn, MessageBox, "Click Ok to restart Enigma2 and activate changes.", MessageBox.TYPE_INFO)
-		ybox.setTitle("Enigma2 Restart.")
+		ybox = self.session.openWithCallback(self.restEn, MessageBox, "Click Ok to restart gui and activate changes.", MessageBox.TYPE_INFO)
+		ybox.setTitle("Gui Restart.")
 					
 	def restEn(self, answer):
 #Warning E2 brutal kill is needed to make safe the new timers.xml file.
