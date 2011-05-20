@@ -7,6 +7,7 @@ import socket
 
 from Tools.Directories import fileExists
 from urllib2 import Request, urlopen, URLError, HTTPError
+from random import randint
 from enigma import eEPGCache
 from os import system
 
@@ -73,6 +74,13 @@ class DeliteInterface:
 			myext = ".bz2"
 		myepgpath = config.misc.epgcache_filename.value
 		myepgfile = myepgpath + myext
+		
+		randurl = self.selecturL()
+		myurl0 = myurl.replace('http://www.vuplus-community.net/rytec', randurl)
+		online = self.checkOnLine(myurl0)
+		if online == True:
+			myurl = myurl0
+		
 		try:
 			filein = urlopen(myurl)
 		except HTTPError, e:
@@ -97,6 +105,27 @@ class DeliteInterface:
 			epgcache = eEPGCache.getInstance()
 			epgcache.load()
 			epgcache.save()
+	
+	def checkOnLine(self, url):
+		try:
+    			filein = urlopen(url, timeout = 1)
+		except URLError, e:
+			online = False
+		except HTTPError, e:
+			online = False
+		else:
+			filein.close()
+			online = True
+		return online
+
+	def selecturL(self):
+		url = "http://www.xmltvepg.nl"
+		nm = randint(1,3)
+		if nm == 2:
+			url = "http://www.xmltvepg.be"
+		elif nm == 3:
+			url = "http://enigma2.world-of-satellite.com/epg_data"
+		return url
 
 
 class Nab_debOut(Screen):

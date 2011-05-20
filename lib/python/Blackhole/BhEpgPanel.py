@@ -12,6 +12,7 @@ from Tools.Directories import fileExists
 from os import system, remove as os_remove, rename as os_rename
 from enigma import eEPGCache, eTimer, eServiceReference
 from urllib2 import Request, urlopen, URLError, HTTPError
+from random import randint
 import time
 import datetime
 
@@ -101,36 +102,40 @@ class DeliteEpgPanel(Screen):
 
 		if fileExists("/etc/Bhepgproviders.cfg") == False:
 			out = open("/etc/Bhepgproviders.cfg", "w")
-			out.write("Rytec_SKYIT,ext_dat,http://www.xmltvepg.be/italy/epg.dat.gz,7,none\n")
+			out.write("Rytec_SKYIT,ext_dat,http://www.vuplus-community.net/rytec/italy/epg.dat.gz,7,none\n")
 			out.write("Satmate_sky.IT,ext_dat,http://hqsatellite.com/satmate/skyit_epg.dat.gz,7,none\n")
-			out.write("Rytec-SKYUK,ext_dat,http://www.xmltvepg.be/uk/epg.dat.gz,7,none\n")
-			out.write("Rytec_SKYDE,ext_dat,http://www.xmltvepg.be/germany/epg.dat.gz,7,none\n")
-			
+			out.write("Rytec-SKYUK,ext_dat,http://www.vuplus-community.net/rytec/uk/epg.dat.gz,7,none\n")
+			out.write("Satmate_sky.UK,ext_dat,http://hqsatellite.com/satmate/skyuk_epg.dat.gz,7,none\n")
+			out.write("Rytec_SKYDE,ext_dat,http://www.vuplus-community.net/rytec/germany/epg.dat.gz,7,none\n")
+		
 			out.write("Sky-Ita,opentv,Marco Polo,1:0:1:E31:16A8:FBFF:820000:0:0:0:,0\n")
 			out.write("Sky-Uk,opentv,Hip Hop,1:0:2:FD1:7D4:2:11A0000:0:0:0:,0\n")
 			
-			out.write("Rytec-BE-NL,ext_dat,http://www.xmltvepg.be/benl/epg.dat.gz,7,none\n")
-			out.write("Rytec-BE-NL-SKYUK-Telesat,ext_dat,http://www.xmltvepg.be/benluk/epg.dat.gz,7,none\n")
-			
-			out.write("Rytec-CSAT,ext_dat,http://www.xmltvepg.be/csat/epg.dat.gz,7,none\n")
-			out.write("Rytec-NORDIC,ext_dat,http://www.xmltvepg.be/nordic/epg.dat.gz,7,none\n")
-			out.write("Rytec_Dplus,ext_dat,http://www.xmltvepg.be/dplus/epg.dat.gz,7,none\n")
-			out.write("Rytec_NOVA,ext_dat,http://www.xmltvepg.be/nova/epg.dat.gz,7,none\n")
-			out.write("Rytec_Poland,ext_dat,http://www.xmltvepg.be/poland/epg.dat.gz,7,none\n")
-			
-			
+			out.write("Rytec-BE-NL,ext_dat,http://www.vuplus-community.net/rytec/benl/epg.dat.gz,7,none\n")
+			out.write("Rytec-CSAT,ext_dat,http://www.vuplus-community.net/rytec/csat/epg.dat.gz,7,none\n")
+			out.write("Rytec-NORDIC,ext_dat,http://www.vuplus-community.net/rytec/nordic/epg.dat.gz,7,none\n")
+			out.write("Rytec-SWEDEN,ext_dat,http://www.vuplus-community.net/rytec/sweden/epg.dat.gz,7,none\n")
+			out.write("Rytec-DENMARK,ext_dat,http://www.vuplus-community.net/rytec/denmark/epg.dat.gz,7,none\n")
+			out.write("Rytec-NORWAY,ext_dat,http://www.vuplus-community.net/rytec/norway/epg.dat.gz,7,none\n")
+			out.write("Rytec-FINLAND,ext_dat,http://www.vuplus-community.net/rytec/finland/epg.dat.gz,7,none\n")
+			out.write("Rytec_Dplus,ext_dat,http://www.vuplus-community.net/rytec/dplus/epg.dat.gz,7,none\n")
+			out.write("Rytec_MEO-ZON,ext_dat,http://www.vuplus-community.net/rytec/portugal/epg.dat.gz,7,none\n")
+			out.write("Rytec_Poland,ext_dat,http://www.vuplus-community.net/rytec/poland/epg.dat.gz,7,none\n")
+			out.write("Rytec_NOVA,ext_dat,http://www.vuplus-community.net/rytec/nova/epg.dat.gz,7,none\n")
+			out.write("Rytec_NOVA-EN,ext_dat,http://www.vuplus-community.net/rytec/nova_en/epg.dat.gz,7,none\n")
+			out.write("Rytec_UPC_DIRECT,ext_dat,http://www.vuplus-community.net/rytec/magyar/epg.dat.gz,7,none\n")
+			out.write("Rytec_SKYLINK_DIRECT,ext_dat,http://www.vuplus-community.net/rytec/skylink/epg.dat.gz,7,none\n")
+			out.write("Rytec_EXYU,ext_dat,http://www.vuplus-community.net/rytec/exyu/epg.dat.gz,7,none\n")
+			out.write("Rytec_EXYU_SLOVENIA,ext_dat,http://www.vuplus-community.net/rytec/slovenia/epg.dat.gz,7,none\n")
+			out.write("Rytec_BULSATCOM,ext_dat,http://www.vuplus-community.net/rytec/bulsat/epg.dat.gz,7,none\n")
+			out.write("Rytec_OSN-JSC-SPORT,ext_dat,http://www.vuplus-community.net/rytec/osn_jsc/epg.dat.gz,7,none\n")
+			out.write("Rytec_EROTIC,ext_dat,http://www.vuplus-community.net/rytec/erotic/epg.dat.gz,7,none\n")
+			out.write("Rytec_ROMANIA,ext_dat,http://www.vuplus-community.net/rytec/romania/epg.dat.gz,7,none\n")
+			out.write("Rytec_WEST-AFRICA/CSAT HORIZONS,ext_dat,http://www.vuplus-community.net/rytec/csathorizons/epg.dat.gz,7,none\n")
 			out.write("Krkadoni-ExYu,ext_dat,http://krkadoni.com/ext.epg.dat.gz,7,none\n")
-			out.write("Krkadoni-NL,ext_dat,http://krkadoni.com/nl.epg.dat.gz,7,none\n")
+			out.write("SGC-NOVA_GR,ext_dat,http://sgcpm.com/epg/epg.dat.gz,7,none\n")
 			out.write("Australia-Foxtel,opentv,Epg,1:0:1:4270:11:1000:6180000:0:0:0:,0\n")
-#			out.write("Cyfra+,mhw,4Fun,1:0:1:1134:2af8:013e:820000:0:0:0:,0\n")
-#			out.write("Csat,mhw,GuideTv,1:0:1:238d:44a:1:c00000:0:0:0:,0\n")
-#			out.write("Canaldigitaal,mhw,Ned1,1:0:1:FAB:451:35:c00000:0:0:0:,0\n")
-#			out.write("Digital+,mhw,Musica Digital,1:0:2:7594:422:1:C00000:0:0:0:,0\n")
-#			out.write("Viasat,mhw,History,1:0:1:17A2:8:56:300000:0:0:0:,0\n")
-#			out.write("Canal-Digital-Nordic,mhw,Discovery-Travel&Living,1:0:1:3F8:A:46:E080000:0:0:0:,0\n")
-#			out.write("Sweden-tvsajten,xmltv,http://xmltv.tvsajten.com/xmltv/,3,sw\n")
-#			out.write("Cro-private,ext_dat,http://www.krkadoni.com/ext.epg.dat.bz2,7,none\n")
-#			out.write("Norway-mspc,xmltv,http://epg.mspc.no/xmltv/,3,no\n")
+
 			out.close()
 		self.onLayoutFinish.append(self.updatemyinfo)
 		
@@ -1299,11 +1304,17 @@ class DeliteDownEpgNow(Screen):
 			self["lab1"].setText("Wait Please... epg.dat file download in progress....")
 			self["lab1"].show()
 			myepgpath = config.misc.epgcache_filename.value
-			
 			myepgfile = myepgpath + myext
 			
+
+			randurl = self.selecturL()
+			myurl0 = myurl.replace('http://www.vuplus-community.net/rytec', randurl)
+			online = self.checkOnLine(myurl0)
+			if online == True:
+				myurl = myurl0
+			
 			try:
-				filein = urlopen(myurl)
+				filein = urlopen(myurl, timeout = 5)
 			except HTTPError, e:
     				self["lab1"].setText("Sorry, Connection Failed.")
 			except URLError, e:
@@ -1330,6 +1341,7 @@ class DeliteDownEpgNow(Screen):
 				self["lab1"].show()
 				epgcache.save()
 				self["lab1"].setText("Epg Download complete. Press the red button to exit")
+				
 		else:
 			self.oldchanref = self.session.nav.getCurrentlyPlayingServiceReference()
 			chanref = parts[3]
@@ -1338,6 +1350,27 @@ class DeliteDownEpgNow(Screen):
 			ref = eServiceReference(chanref)
 			self.session.nav.playService(ref)
 			
+	def checkOnLine(self, url):
+		try:
+    			filein = urlopen(url, timeout = 1)
+		except URLError, e:
+			online = False
+		except HTTPError, e:
+			online = False
+		else:
+			filein.close()
+			online = True
+		return online
+
+	def selecturL(self):
+		url = "http://www.xmltvepg.nl"
+		nm = randint(1,3)
+		if nm == 2:
+			url = "http://www.xmltvepg.be"
+		elif nm == 3:
+			url = "http://enigma2.world-of-satellite.com/epg_data"
+		return url
+
 
 	def __onClose(self):
 		config.misc.deliteepgpop.value = self.oldpopconfig
