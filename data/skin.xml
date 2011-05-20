@@ -2208,6 +2208,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="340,112" zPosition="2" size="600,10" pixmap="skin_default/po_bar.png" alphatest="on" />
 		<ePixmap position="1162,80" zPosition="1" size="43,59" pixmap="skin_default/bar_radio.png" alphatest="on"/>
 		<ePixmap pixmap="skin_default/ico_rec_off.png" 	position="1160,42" size="44,26" zPosition="1" alphatest="blend" />
+		<ePixmap pixmap="skin_default/picon_default.png" 	position="94,69" size="100,60" zPosition="1" alphatest="blend" />
 		<widget source="session.RecordState" 	render="Pixmap" pixmap="skin_default/ico_rec_on.png" 	position="1160,42" size="44,26" zPosition="2" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
@@ -2216,9 +2217,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="900,42" size="220,25" font="Regular;20" valign="top" halign="right" noWrap="1" backgroundColor="darkgrey" transparent="1">
 			<convert type="ServiceName">Provider</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Picon" position="94,69" zPosition="1" size="100,60" alphatest="on">
-			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="210,75"	size="70,24"	font="Regular;22" halign="right"	backgroundColor="black" transparent="1">
 			<convert type="EventTime">StartTime</convert>
