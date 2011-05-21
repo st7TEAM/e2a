@@ -1,6 +1,6 @@
 <skin>
  	<!--
-    ################### Skin_Default_ Army_SmokeProHD_VU_1.5.x_v.1.1_BH ####################
+    ################### Skin_Default_ Army_SmokeProHD_VU_1.6.x_v.1.1_BH ####################
 
     QUESTA SKIN E' PROTETTA DA COPYRIGHT E PUO' ESSERE USATA SOLO PER
 	LE IMMAGINI  BLACK HOLE. IL CODICE DELLA SKIN PUO' ESSERE MODIFICATO
@@ -13,7 +13,7 @@
 	SKIN CODE AND GRAPHICS TO MAKE A NEW SKIN OR TO ADAPT THIS SKIN FOR
 	DIFFERENT IMAGES.
 
-    ###################  Skin_Default_ Army_SmokeProHD_VU_1.5.x_v.1.1_BH  ####################
+    ###################  Skin_Default_ Army_SmokeProHD_VU_1.6.x_v.1.1_BH  ####################
     -->
 	<output id="0">
 		<resolution xres="1280" yres="720" bpp="32" />
@@ -478,7 +478,7 @@
 	<screen name="Nab_downArea" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
 	    <ePixmap pixmap="skin_default/frame_2-fs8.png" position="0,0" zPosition="-3" size="600,720"  /> 
 	   	<ePixmap position="60,22" zPosition="-1" size="60,40" pixmap="skin_default/menu/logo_hd.png" alphatest="blend" transparent="1" />
-	   	<eLabel text="Black Hole E2 Downloads Manager" position="135,25" zPosition="2" size="350,80" font="RegularAA;28" halign="left" transparent="1" foregroundColor="#00ffff" backgroundColor="#0b67a2" /> 
+	   	<eLabel text="Black Hole  Downloads Manager" position="135,25" zPosition="2" size="350,80" font="RegularAA;28" halign="left" transparent="1" foregroundColor="#00ffff" backgroundColor="#0b67a2" /> 
 			<widget source="list" render="Listbox" position="60,140" size="420,480" zPosition="4" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection420-372x36-fs8.png"  backgroundColorSelected="#10000000" transparent="1">
             <convert type="TemplatedMultiContent">
                 {"template": [
@@ -492,7 +492,7 @@
         </widget>
 	</screen>
 	<!-- Delite DownCategory -->
-	<screen name="Nab_downCat" position="center,center" size="950,520" title="Black Hole E2 Downloads Manager">
+	<screen name="Nab_downCat" position="center,center" size="950,520" title="Black Hole  Downloads Manager">
 		<widget source="list" render="Listbox" position="20,20" size="910,468" zPosition="1" scrollbarMode="showOnDemand" >
             <convert type="TemplatedMultiContent">
                 {"template": [
@@ -505,7 +505,7 @@
         </widget>
 	</screen>
 		<!-- 17 Delite Show Addon Description ( 2 ) -->
-	<screen name="Nab_ShowDownFile" position="center,center" size="1130,460" title="Black Hole E2 Package Details">		
+	<screen name="Nab_ShowDownFile" position="center,center" size="1130,460" title="Black Hole  Package Details">		
 		<widget name="infotext" position="20,20" size="1090,360" font="Regular;24" />
 		<ePixmap position="210,400" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="670,400" size="250,40" pixmap="skin_default/buttons/yellow25.png" alphatest="on" zPosition="1" />
@@ -513,12 +513,12 @@
 		<widget name="key_yellow"  position="670,401" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- 17A Delite Show Addons Preview -->
-	<screen name="Nab_ShowPreviewFile" position="0,0" size="1280,720" title="Black Hole E2 Preview" flags="wfNoBorder">
+	<screen name="Nab_ShowPreviewFile" position="0,0" size="1280,720" title="Black Hole  Preview" flags="wfNoBorder">
         <widget name="lab1" position="0,0" size="1280,720" zPosition="1" />
         <widget name="lab2" position="310,38" size="660,30" zPosition="2" font="OLED;26" halign="center" valign="center" backgroundColor="black" foregroundColor="white" />
     </screen>
 	<!-- Delite Manual Addon Nab Panel -->
-	<screen name="Nab_downPanel" position="center,center" size="800,520" title="Black Hole E2 Manual Install Nab Packages">
+	<screen name="Nab_downPanel" position="center,center" size="800,520" title="Black Hole  Manual Install Nab Packages">
 		<widget source="list" render="Listbox" position="20,20" size="760,468" zPosition="1" scrollbarMode="showOnDemand" >
             <convert type="TemplatedMultiContent">
                 {"template": [
@@ -531,7 +531,7 @@
         </widget>
 	</screen>
 	<!-- Delite Manual Addon Ipk Panel -->
-	<screen name="Nab_downPanelIPK" position="center,center" size="950,520" title="Black Hole E2 Manual Install Ipk Packages ">
+	<screen name="Nab_downPanelIPK" position="center,center" size="950,520" title="Black Hole  Manual Install Ipk Packages ">
 		<widget name="warntext" position="50,460" size="700,100" font="Regular;24" halign="center" valign="center" backgroundColor="#1f771f" />
 		<widget source="list" render="Listbox" position="20,20" size="910,468" zPosition="1" scrollbarMode="showOnDemand" >
             <convert type="TemplatedMultiContent">
@@ -545,7 +545,7 @@
         </widget>
 	</screen>
 	<!-- Delite Uninstall Panel -->
-	<screen name="Nab_uninstPanel" position="center,center" size="950,520" title="Black Hole E2 Uninstall Panel">
+	<screen name="Nab_uninstPanel" position="center,center" size="950,520" title="Black Hole  Uninstall Panel">
 		<widget source="list" render="Listbox" position="20,20" size="910,468" zPosition="1" scrollbarMode="showOnDemand" >
             <convert type="TemplatedMultiContent">
                 {"template": [
@@ -558,14 +558,14 @@
         </widget>
 	</screen>
 	<!-- Delite Stats -->
-	<screen name="Nab_Stats" position="center,center" size="950,520" title="Black Hole E2 Statistics">
+	<screen name="Nab_Stats" position="center,center" size="950,520" title="Black Hole  Statistics">
 		<widget name="infotext" position="20,20" size="910,500" font="Regular;24" />
 	</screen>	
 	<!-- Delite Script -->
 	<screen name="DeliteScript" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
     	<ePixmap pixmap="skin_default/frame_2-fs8.png" position="0,0" zPosition="-3" size="600,720"  /> 
 	 	<ePixmap position="60,22" zPosition="-1" size="60,40" pixmap="skin_default/menu/logo_hd.png" alphatest="blend" transparent="1" />
-	 	<eLabel text="Black Hole E2 Script Panel" position="135,25" zPosition="2" size="350,70" font="RegularAA;28" halign="left" transparent="1" foregroundColor="#00ffff" backgroundColor="#0b67a2" /> 
+	 	<eLabel text="Black Hole  Script Panel" position="135,25" zPosition="2" size="350,70" font="RegularAA;28" halign="left" transparent="1" foregroundColor="#00ffff" backgroundColor="#0b67a2" /> 
 		<widget name="statuslab" position="80,330" size="400,80" font="Regular;24" valign="center" foregroundColor="#ffcc00" backgroundColor="#9f1313" transparent="1" />
 		<ePixmap position="145,495" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 			<widget name="key_red" position="145,495" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
@@ -580,11 +580,11 @@
             </convert>
         </widget>
 	</screen>
-	<!-- Delite E2 Settings -->
+	<!-- Delite  Settings -->
 	<screen name="DeliteSettings" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap pixmap="skin_default/frame_2-fs8.png" position="0,0" zPosition="-3" size="600,720"  /> 
     	<ePixmap position="60,22" zPosition="-1" size="60,40" pixmap="skin_default/menu/logo_hd.png" alphatest="blend" transparent="1" />
-		<eLabel text="Black Hole E2 Settings" position="135,25" size="410,55" font="RegularAA;28" halign="left" foregroundColor="#00ffff" backgroundColor="transpBlack" transparent="1"/>
+		<eLabel text="Black Hole  Settings" position="135,25" size="410,55" font="RegularAA;28" halign="left" foregroundColor="#00ffff" backgroundColor="transpBlack" transparent="1"/>
         <widget source="list" render="Listbox" position="60,95" size="420,582" zPosition="4" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection420-372x36-fs8.png"  backgroundColorSelected="#10000000" transparent="1">
             <convert type="TemplatedMultiContent">
                 {"template": [
@@ -598,29 +598,29 @@
         </widget>
 	</screen>
 	<!--  Delite Osd Setup -->
-		<screen name="DeliteSetupOSD2" position="center,center" size="710,340" title="Black Hole E2 Osd Settings">
+		<screen name="DeliteSetupOSD2" position="center,center" size="710,340" title="Black Hole  Osd Settings">
         <widget name="lsinactive" position="20,20" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
         <widget name="lsactive" position="20,20" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab1" position="70,20" size="300,40" font="Regular;24" valign="center" transparent="1"/>
+        <widget name="lab1" position="70,22" size="400,26" font="Regular;24" valign="center" transparent="1"/>
         <widget name="lbinactive" position="20,80" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
         <widget name="lbactive" position="20,80" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab4" position="70,80" size="650,50" font="Regular;24" valign="center" transparent="1"/>
+        <widget name="lab4" position="70,82" size="650,26" font="Regular;24" valign="center" transparent="1"/>
         <widget name="lpinactive" position="20,140" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
         <widget name="lpactive" position="20,140" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab2" position="70,140" size="300,30" font="Regular;24" valign="center" transparent="1"/>
+        <widget name="lab2" position="70,140" size="300,26" font="Regular;24" valign="center" transparent="1"/>
         <widget name="lab3" position="70,200" size="380,30" font="Regular;24" valign="center" transparent="1"/>
         <widget name="labsize" position="430,200" size="40,32" font="Regular;24" valign="center" backgroundColor="#0b67a2"/>
          <ePixmap position="230,280" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="230,281" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />	
     </screen>
 	<!--  Delite Osd Setup2_Conf2 -->
-    	 <screen name="DeliteSetupOSDConf2" position="center,center" size="710,340" title="Black Hole E2 OSD Setup">
+    	 <screen name="DeliteSetupOSDConf2" position="center,center" size="710,340" title="Black Hole  OSD Setup">
         <widget name="config" position="20,20" size="670,200" scrollbarMode="showOnDemand"  />
          <ePixmap position="230,280" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="230,281" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />	
     </screen>
-    	 <!-- DeliteEpgPanel_E2 EPG Settings -->
-   <screen name="DeliteEpgPanel" position="center,center" size="1130,520" title="Black Hole E2 EPG Settings">
+    	 <!-- DeliteEpgPanel_ EPG Settings -->
+   <screen name="DeliteEpgPanel" position="center,center" size="1130,520" title="Black Hole  EPG Settings">
         <widget name="lsinactive" position="20,20" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
         <widget name="lsactive" position="20,20" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
         <widget name="lab1" position="60,20" size="400,30" font="Regular;24" valign="center" transparent="1"/>
@@ -631,7 +631,7 @@
         <widget name="lpactive" position="20,100" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
         <widget name="lab3" position="60,100" size="450,30" font="Regular;24" valign="center" transparent="1"/>  
         <widget name="lab4" position="60,140" size="260,30" font="Regular;24" valign="center" transparent="1"/>
-        <widget name="labpath" position="380,140" size="260,32" font="Regular;24" valign="center" halign="center" backgroundColor="#0b67a2"/>
+        <widget name="labpath" position="380,140" size="560,32" font="Regular;24" valign="center" halign="center" backgroundColor="#0b67a2"/>
         <widget name="lab5" position="60,180" size="260,30" font="Regular;24" valign="center" transparent="1"/>
         <widget source="list" render="Listbox" position="60,210" size="1010,225" scrollbarMode="showOnDemand">
             <convert type="StringList"/>
@@ -645,14 +645,14 @@
 	 	<widget name="key_yellow"  position="578,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_blue"  position="854,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
-     <!-- DeliteEpgGlobalSetup_ E2 EPG Setup -->
-    <screen name="DeliteEpgGlobalSetup"  position="center,center" size="710,340" title="Black Hole E2 EPG Setup">
+     <!-- DeliteEpgGlobalSetup_  EPG Setup -->
+    <screen name="DeliteEpgGlobalSetup"  position="center,center" size="710,340" title="Black Hole  EPG Setup">
         <widget name="config" position="20,20" size="670,280" scrollbarMode="showOnDemand"  />
         <ePixmap position="230,280" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="230,281" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
       <!--  DeliteExtdatProv -->
-    <screen name="DeliteExtdatProv" position="center,center" size="1130,460" title="Black Hole E2 EPG Settings">
+    <screen name="DeliteExtdatProv" position="center,center" size="1130,460" title="Black Hole  EPG Settings">
         <widget name="lab1" position="60,20" size="300,30" font="Regular;22" transparent="1"/>
         <widget name="labprov" position="300,60" size="530,30" font="Regular;24"/>
         <widget name="lab1a" position="60,60" size="300,30" font="Regular;24" transparent="1"/>
@@ -670,7 +670,7 @@
         <widget name="key_yellow" position="670,401" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
     <!--  DeliteExtdatSetup  -->
-    <screen name="DeliteExtdatSetup" position="center,center" size="800,340" title="Black Hole E2 EPG Setup">
+    <screen name="DeliteExtdatSetup" position="center,center" size="800,340" title="Black Hole  EPG Setup">
         <widget name="lab1" position="20,20" size="240,30" font="Regular;22" transparent="1"/>
         <widget name="labprov" position="270,20" size="340,30" font="Regular;24"/>
         <widget name="config" position="20,70" size="760,220" scrollbarMode="showOnDemand" />
@@ -686,8 +686,8 @@
         <widget name="key_red" position="100,261" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
         <widget name="key_green" position="450,261" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
-    <!-- DeliteOpenepgProv_E2 EPG Settings -->
-    <screen name="DeliteOpenepgProv" position="center,center" size="1130,520" title="Black Hole E2 EPG Settings">
+    <!-- DeliteOpenepgProv_ EPG Settings -->
+    <screen name="DeliteOpenepgProv" position="center,center" size="1130,520" title="Black Hole  EPG Settings">
         <widget name="lab1" position="60,20" size="300,30" font="Regular;24" transparent="1"/>
         <widget name="labprov" position="300,20" size="400,30" font="Regular;24"/>
         <widget name="lab1a" position="60,60" size="300,30" font="Regular;24" transparent="1"/>
@@ -708,16 +708,16 @@
         <widget name="key_green" position="440,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
         <widget name="key_yellow" position="785,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
-     <!-- DeliteOepgSetup_ E2 EPG Setup -->
-    <screen name="DeliteOepgSetup" position="center,center" size="600,340" title="Black Hole E2 EPG Setup">
+     <!-- DeliteOepgSetup_  EPG Setup -->
+    <screen name="DeliteOepgSetup" position="center,center" size="600,340" title="Black Hole  EPG Setup">
         <widget name="lab1" position="20,20" size="240,30" font="Regular;24" transparent="1"/>
         <widget name="labprov" position="270,20" size="340,30" font="Regular;24"/>
         <widget name="config" position="20,50" size="560,280" scrollbarMode="showOnDemand"  />
         <ePixmap position="175,280" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="175,281" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
-    <!-- DeliteXmltepgProv_ E2 EPG Settings -->
-    <screen name="DeliteXmltepgProv" position="center,center" size="1130,520" title="Black Hole E2 EPG Settings">
+    <!-- DeliteXmltepgProv_  EPG Settings -->
+    <screen name="DeliteXmltepgProv" position="center,center" size="1130,520" title="Black Hole  EPG Settings">
         <widget name="lab1" position="60,20" size="300,30" font="Regular;24" transparent="1"/>
         <widget name="labprov" position="300,20" size="400,30" font="Regular;24"/>
         <widget name="lab1a" position="60,60" size="300,30" font="Regular;24" transparent="1"/>
@@ -740,8 +740,8 @@
         <widget name="key_green" position="440,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
         <widget name="key_yellow" position="785,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
-      <!-- DeliteXepgSetup_ E2 EPG Setup -->
-    <screen name="DeliteXepgSetup" position="center,center" size="600,340" title="Black Hole E2 EPG Setup">
+      <!-- DeliteXepgSetup_  EPG Setup -->
+    <screen name="DeliteXepgSetup" position="center,center" size="600,340" title="Black Hole  EPG Setup">
         <widget name="lab1" position="20,20" size="240,30" font="Regular;24" transparent="1"/>
         <widget name="labprov" position="270,20" size="340,30" font="Regular;24"/>
         <widget name="config" position="20,50" size="560,280" scrollbarMode="showOnDemand"  />
@@ -805,17 +805,17 @@
         <widget name="outlabel" position="20,20" size="560,230" font="Regular;20" halign="center" valign="center" transparent="1"/>
     </screen>
  	<!-- StartCamPop  -->
-	<screen name="Nab_DoStartCam" position="center,center" size="484,250" title="Black Hole E2" flags="wfNoBorder">
+	<screen name="Nab_DoStartCam" position="center,center" size="484,250" title="Black Hole " flags="wfNoBorder">
 		<widget name="connect" position="0,0" size="484,250" zPosition="-1" pixmaps="skin_default/startcam_1.png,skin_default/startcam_2.png,skin_default/startcam_3.png,skin_default/startcam_4.png" transparent="1" />
 		<widget name="lab1" position="10,168" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
 	</screen>
 	<!-- ConnectPop  -->
-	<screen name="Nab_ConnectPop" position="center,center" size="484,240" title="Black Hole E2" flags="wfNoBorder">
+	<screen name="Nab_ConnectPop" position="center,center" size="484,240" title="Black Hole " flags="wfNoBorder">
 		<widget name="connect" position="0,0" size="484,250" zPosition="-1" pixmaps="skin_default/connection_1.png,skin_default/connection_2.png,skin_default/connection_3.png,skin_default/connection_4.png,skin_default/connection_5.png" transparent="1" />
 		<widget name="lab1" position="13,186" halign="center" size="460,60" zPosition="1" font="Regular;20" valign="top" transparent="1" />
 	</screen>
 <!--  43 DeliteInfo  -->
-	<screen name="DeliteInfo" position="0,0" size="1280,720" title="Black Hole E2 System Info" flags="wfNoBorder" >
+	<screen name="DeliteInfo" position="0,0" size="1280,720" title="Black Hole  System Info" flags="wfNoBorder" >
 		<ePixmap pixmap="skin_default/background_system.png" position="0,0" size="1280,720" alphatest="on"  transparent="1" />
 	    <ePixmap position="810,221"  size="378,216" pixmap="skin_default/tv_2-fs8.png" alphatest="on" />
       	<widget source="session.VideoPicture" render="Pig" position=" 814,224" size="370,208" zPosition="3" backgroundColor="#df0b1300"/>	
@@ -864,7 +864,7 @@
         <widget name="key_green" position="517,261" zPosition="1" size="250,40" font="Regular;24"  halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
 	<!-- Delite Fast Plugin -->
-	<screen name="DeliteSetupFp" position="center,center" size="710,520" title="Black Hole E2 Fast Plugin Setup">
+	<screen name="DeliteSetupFp" position="center,center" size="710,520" title="Black Hole  Fast Plugin Setup">
 	<ePixmap position="230,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="230,461" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
         <widget source="list" render="Listbox" position="50,20" size="610,380" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection610x50-fs8.png" backgroundColorSelected="#10000000" transparent="1">
@@ -881,7 +881,7 @@
         </widget>
 	</screen>
 	<!-- 47 Delite Inadyn ( 3 )-->
-	<screen name="DeliteInadyn" position="center,center" size="950,420" title="Black Hole E2 Inadyn Manager">
+	<screen name="DeliteInadyn" position="center,center" size="950,420" title="Black Hole  Inadyn Manager">
 		<widget name="linactive" position="20,20" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32"  alphatest="on" />
 		<widget name="lactive" position="20,30" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32"  alphatest="on" />
 		<widget name="lab1" position="60,20" size="350,30" font="Regular;24" valign="center"  transparent="1"/>
@@ -908,7 +908,7 @@
 		<widget name="key_yellow" position="650,251" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Inadyn Conf -->
-	<screen name="DeliteInaSetup" position="center,center" size="710,340" title="Black Hole E2 Inadyn Setup">
+	<screen name="DeliteInaSetup" position="center,center" size="710,340" title="Black Hole  Inadyn Setup">
 		<widget name="config" position="20,20" size="670,200" scrollbarMode="showOnDemand"  />
 		<ePixmap position="383,280" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="373,281" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
@@ -916,11 +916,11 @@
         <eLabel text="Virtual Keyboard" position="96,283" size="250,40" zPosition="2" halign="left" font="Regular;24" foregroundColor="white" backgroundColor="background" transparent="1" /> 
 	</screen>
 	<!-- Delite Inadyn Log -->
-	<screen name="DeliteInaLog" position="center,center" size="800,340" title="Black Hole E2 Inadyn Setup">
+	<screen name="DeliteInaLog" position="center,center" size="800,340" title="Black Hole  Inadyn Setup">
 		<widget name="infotext" position="20,20" size="760,480" font="Regular;20" />
 	</screen>
 	<!-- Delite Swap -->
-	<screen name="DeliteSwap" position="center,center" size="950,340" title="Black Hole E2 Swap File Manager">
+	<screen name="DeliteSwap" position="center,center" size="950,340" title="Black Hole  Swap File Manager">
 		<widget name="linactive" position="20,20" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32"  alphatest="on" />
 		<widget name="lactive" position="20,20" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32"  alphatest="on" />
 		<widget name="lab1" position="60,20" size="310,30" font="Regular;24" valign="center"  transparent="1"/>
@@ -939,10 +939,10 @@
 		<widget name="key_yellow" position="650,281" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Hdd -->
-	<screen name="DeliteHdd" position="center,center" size="950,520" title="Black Hole E2 Hard Disk Panel">
+	<screen name="DeliteHdd" position="center,center" size="950,520" title="Black Hole  Hard Disk Panel">
 		<widget name="infotext" position="20,20" size="910,380" font="Regular;20" />
 		<widget name="lab1" position="20,410" size="100,32" font="Regular;24" valign="center" transparent="1"/>
-		<widget name="labstop" position="150,410" size="150,32" font="Regular;24" valign="center"  halign="center" backgroundColor="red"/>
+		<widget name="labstop" position="150,410" size="300,32" font="Regular;24" valign="center"  halign="center" backgroundColor="red"/>
 		<widget name="labrun" position="150,410" size="150,32" zPosition="1" font="Regular;24" valign="center"  halign="center" backgroundColor="green"/>
 	    <ePixmap position="50,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
         <ePixmap position="350,460" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
@@ -952,7 +952,7 @@
 		<widget name="key_yellow" position="650,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Openvpn -->
-	<screen name="DeliteOpenvpn" position="center,center" size="1130,340" title="Black Hole E2 OpenVpn Panel">
+	<screen name="DeliteOpenvpn" position="center,center" size="1130,340" title="Black Hole  OpenVpn Panel">
 		<widget name="lab1" position="20,20" size="310,64" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="lab1a" position="190,20" size="530,64" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="lab2" position="20,80" size="360,32" font="Regular;24" valign="center" transparent="1"/>
@@ -970,11 +970,11 @@
 		<widget name="key_blue" position="854,281" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite OpenvpnLog -->
-	<screen name="DeliteVpnLog" position="center,center" size="800,340" title="Black Hole E2 OpenVpn Log">
+	<screen name="DeliteVpnLog" position="center,center" size="800,340" title="Black Hole  OpenVpn Log">
 		<widget name="infotext" position="20,20" size="760,310" font="Regular;22" />
 	</screen>
 	<!-- Delite Samba -->
-	<screen name="DeliteSamba" position="center,center" size="950,340" title="Black Hole E2 Samba Panel">
+	<screen name="DeliteSamba" position="center,center" size="950,340" title="Black Hole  Samba Panel">
 		<widget name="lab1" position="20,50" size="400,32" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="labactive" position="310,50" size="250,32" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="lab2" position="30,100" size="340,32" font="Regular;24" valign="center" transparent="1"/>
@@ -988,7 +988,7 @@
 		<widget name="key_yellow" position="650,281" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Telnet -->
-	<screen name="DeliteTelnet" position="center,center" size="710,340" title="Black Hole E2 Telnet Panel">
+	<screen name="DeliteTelnet" position="center,center" size="710,340" title="Black Hole  Telnet Panel">
 		<widget name="lab1" position="20,20" size="680,64" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="lab2" position="20,140" size="300,32" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="labstop" position="330,140" size="140,32" font="Regular;24" valign="center"  halign="center" backgroundColor="red"/>
@@ -999,7 +999,7 @@
         <widget name="key_green" position="390,281" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Ftp -->
-	<screen name="DeliteFtp" position="center,center" size="800,340" title="Black Hole E2 Ftp Panel">
+	<screen name="DeliteFtp" position="center,center" size="800,340" title="Black Hole  Ftp Panel">
 		<widget name="lab1" position="20,20" size="880,64" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="lab2" position="20,140" size="300,32" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="labstop" position="330,140" size="140,32" font="Regular;24" valign="center"  halign="center" backgroundColor="red"/>
@@ -1010,7 +1010,7 @@
         <widget name="key_green" position="450,281" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Nfs -->
-	<screen name="DeliteNfs" position="center,center" size="950,520" title="Black Hole E2 Nfs Server Manager">
+	<screen name="DeliteNfs" position="center,center" size="950,520" title="Black Hole  Nfs Server Manager">
 		<widget name="linactive" position="20,20" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32"  alphatest="on" />
 		<widget name="lactive" position="20,20" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32"  alphatest="on" />
 		<widget name="lab1" position="60,20" size="450,32" font="Regular;24" valign="center"  transparent="1"/>
@@ -1037,13 +1037,13 @@
 		<widget name="key_yellow" position="650,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Nfs Config -->
-	<screen name="DeliteNfsSetup" position="center,center" size="710,520" title="Black Hole E2 Nfs Server Setup">
+	<screen name="DeliteNfsSetup" position="center,center" size="710,520" title="Black Hole  Nfs Server Setup">
 		<widget name="config" position="20,20" size="670,420" scrollbarMode="showOnDemand"  />
 		<ePixmap position="230,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="230,461" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- DeliteCronMang -->
-	<screen name="DeliteCronMang" position="center,center" size="710,520" title="Black Hole E2 Cron Manager">
+	<screen name="DeliteCronMang" position="center,center" size="710,520" title="Black Hole  Cron Manager">
         <widget source="list" render="Listbox" position="20,20" size="670,460" scrollbarMode="showOnDemand"   >
             <convert type="StringList" />
         </widget>
@@ -1053,7 +1053,7 @@
 		<widget name="key_yellow" position="390,461" zPosition="2" size="250,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
         </screen>
      <!-- DeliteSetupCronConf -->
-       <screen name="DeliteSetupCronConf" position="center,center" size="710,340" title="Black Hole E2 Cron Setup">
+       <screen name="DeliteSetupCronConf" position="center,center" size="710,340" title="Black Hole  Cron Setup">
         <widget name="config" position="20,20" size="670,420" scrollbarMode="showOnDemand"  />
         <ePixmap position="70,280" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
         <ePixmap position="390,280" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
@@ -1061,7 +1061,7 @@
         <eLabel text="Virtual Keyboard" position="106,282" size="250,40" zPosition="2" halign="left" font="Regular;24" foregroundColor="white" backgroundColor="background" transparent="1" /> 
     </screen>
 	<!-- Delite Mount Wizard -->
-	<screen name="DeliteMountWiz" position="center,center" size="950,520" title="Black Hole E2 Mountpoints Wizard">
+	<screen name="DeliteMountWiz" position="center,center" size="950,520" title="Black Hole  Mountpoints Wizard">
 		<widget name="lab1" position="20,20" size="640,228" font="Regular;18" valign="center" transparent="1"/>
 		<widget name="infotext" position="20,360" size="640,80" font="Regular;20" />
 		<ePixmap position="50,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
@@ -1072,19 +1072,19 @@
 		<widget name="key_yellow" position="650,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Cifs Wizard -->
-	<screen name="DeliteCifsWiz" position="center,center" size="710,520" title="Black Hole E2 Cifs Wizard">
+	<screen name="DeliteCifsWiz" position="center,center" size="710,520" title="Black Hole  Cifs Wizard">
 		<widget name="lab1" position="10,20" size="640,340" font="Regular;18" valign="center" transparent="1"/>
 		<ePixmap position="230,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="230,461" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Nfs Wizard -->
-	<screen name="DeliteNfsWiz" position="center,center" size="710,520" title="Black Hole E2 Nfs Wizard">
+	<screen name="DeliteNfsWiz" position="center,center" size="710,520" title="Black Hole  Nfs Wizard">
 		<widget name="lab1" position="20,20" size="640,340" font="Regular;18" valign="center" transparent="1"/>
 	<ePixmap position="230,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="230,461" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite New Mount Wizard -->
-	<screen name="NabMountNewNfs" position="center,center" size="710,520" title="Black Hole E2 Mount Point Wizard">
+	<screen name="NabMountNewNfs" position="center,center" size="710,520" title="Black Hole  Mount Point Wizard">
 		<widget name="config" position="20,20" size="670,270" scrollbarMode="showOnDemand"  />
 		<ePixmap position="70,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
         <ePixmap position="390,460" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
@@ -1092,13 +1092,13 @@
 		<widget name="key_green" position="390,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- Delite Test Mount Wizard -->
-	<screen name="Nab_TestMount" position="center,center" size="710,520" title="Black Hole E2 Mounter Test">
+	<screen name="Nab_TestMount" position="center,center" size="710,520" title="Black Hole  Mounter Test">
 		<widget name="label1" position="20,20" size="640,230" font="Regular;20" halign="left" valign="left" />
 	    <ePixmap position="230,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="230,461" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />	
 	</screen>
 	<!-- Delite Mount Editor -->
-	<screen name="DeliteMountMang" position="center,center" size="1130,520" title="Black Hole E2 Mount manager">
+	<screen name="DeliteMountMang" position="center,center" size="1130,520" title="Black Hole  Mount manager">
 		<widget name="lab1" position="20,20" size="640,30" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="infotext" position="20,55" size="640,90" font="Regular;18" />
 		<widget name="lab2" position="20,145" size="640,30" font="Regular;20" valign="center" transparent="1"/>
@@ -1113,12 +1113,12 @@
 		<widget name="blue" position="854,461" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
 	</screen>
 	<!-- DeliteProcInfo -->
-	<screen name="NabProcInfo" position="center,center" size="600,340" title="Black Hole E2 Process Info">
+	<screen name="NabProcInfo" position="center,center" size="600,340" title="Black Hole  Process Info">
 		<widget name="pibartit" zPosition="2" position="10,20" size="560,30" font="Regular;22" valign="center" transparent="1" foregroundColor="white" backgroundColor="transpBlack" />
 		<widget name="infotext" position="20,70" size="560,250" font="Regular;20" />
 	</screen>
 	<!-- DeliteEnInfo -->
-	<screen name="NabEnsetInfo" position="center,center" size="710,460" title="Black Hole E2 Enigma Settings Info">
+	<screen name="NabEnsetInfo" position="center,center" size="710,460" title="Black Hole  Enigma Settings Info">
 		<widget name="infotext" position="20,20" size="670,390" font="Regular;20" />
 	</screen>
 	<!-- DeliteDevicesPanel -->
@@ -1151,10 +1151,10 @@
         <widget name="key_green" position="550,360" zPosition="1" size="250,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
     </screen>
 	<!-- DeliteCCCInfo -->
-	<screen name="DeliteCCcMain"  position="0,0" size="1280,720" title="Black Hole E2 CCcam Info" backgroundColor="transparent" flags="wfNoBorder">
+	<screen name="DeliteCCcMain"  position="0,0" size="1280,720" title="Black Hole  CCcam Info" backgroundColor="transparent" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="600,720" pixmap="skin_default/frame_2-fs8.png"  />
         <ePixmap position="60,22" zPosition="-1" size="60,40" pixmap="skin_default/menu/logo_hd.png" alphatest="blend" transparent="1" />
-        <eLabel text="Black Hole E2 CCcam Info" position="135,25" size="350,70" font="RegularAA;28" halign="left" foregroundColor="#00ffff" backgroundColor="transpBlack" transparent="1"/>
+        <eLabel text="Black Hole  CCcam Info" position="135,25" size="350,70" font="RegularAA;28" halign="left" foregroundColor="#00ffff" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="Linconn" position="120,520" size="700,50" font="Regular;22" halign="center" valign="center" backgroundColor="#9f1313" />
 		<widget source="list" render="Listbox" position="60,120" size="420,415" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection420-372x36-fs8.png"  backgroundColorSelected="#10000000" transparent="1">
             <convert type="TemplatedMultiContent">
@@ -1169,7 +1169,7 @@
             </widget>
 	</screen>
 	<!-- DeliteCCCSetup -->
-	<screen name="DeliteCCcSetup"  position="center,center" size="710,460" title="Black Hole E2 CCcam Info Setup">
+	<screen name="DeliteCCcSetup"  position="center,center" size="710,460" title="Black Hole  CCcam Info Setup">
 		<widget name="lab1" position="20,20" size="670,120" font="Regular;24" valign="center" transparent="1"/>
 		<widget name="config" position="20,140" size="670,250" scrollbarMode="showOnDemand"  />
 		<ePixmap position="390,400" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
@@ -1282,10 +1282,10 @@
 		<!-- Main menu infobar -->
 	<screen name="menu_mainmenu" position="0,0" size="1280,720" title="Main menu"  flags="wfNoBorder"  backgroundColor="transparent"  >
 		<ePixmap pixmap="skin_default/frame_1.1-fs8.png" position="0,0" zPosition="-3" size="1280,720" /> 
-	    <ePixmap position="181,466" zPosition="-1" size="378,216" pixmap="skin_default/tv_1-fs8.png" alphatest="on" />
+	    <ePixmap position="781,446" zPosition="-1" size="378,216" pixmap="skin_default/tv_1-fs8.png" alphatest="on" />
 		<ePixmap position="135,28" zPosition="-1" size="60,49" pixmap="skin_default/menu/logo_hd.png" alphatest="blend" transparent="1" />
       	<widget source="title" render="Label" position="210,27" size="500,32" font="RegularAA;28" halign="left" foregroundColor="#00ffff" backgroundColor="#0b67a2" transparent="1"/>
-        <widget source="session.VideoPicture" render="Pig" position=" 185,470" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
+        <widget source="session.VideoPicture" render="Pig" position=" 785,450" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
         	<widget source="menu" render="Listbox" position="135,90" size="450,440" scrollbarMode="showNever" selectionPixmap="skin_default/icons/listselection450x38-fs8.png"  backgroundColorSelected="#30000000" transparent="1">
         	<convert type="TemplatedMultiContent">
 			{"template": [ MultiContentEntryText(pos = (15, 2), size = (450, 38), flags = RT_HALIGN_LEFT, text = 0) ],
@@ -1294,40 +1294,44 @@
 			}
 				</convert>
 				</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/shutdown.png" position="830,150" size="300,300" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/shutdown.png" position="830,90" size="300,300" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">standby_restart_list</convert>
 			<convert type="ConditionalShowHide" />
 			</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/setup.png" position="830,150" size="300,300" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/setup.png" position="830,90" size="300,300" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">setup_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/plugins.png" position="830,150" size="300,300" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/plugins.png" position="830,90" size="300,300" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">plugin_selection</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/information.png" position="830,150" size="300,300" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/information.png" position="830,90" size="300,300" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/scart.png" position="830,150" size="300,300" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/scart.png" position="830,90" size="300,300" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">scart_switch</convert>
 			<convert type="ConditionalShowHide" /> 
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/timer.png" position="830,150" size="300,300" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/timer.png" position="830,90" size="300,300" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">timer_edit</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/media_player.png" position="830,150" size="300,300" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/media_player.png" position="830,90" size="300,300" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">media_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/dvd_player.png" position="830,150" size="300,300" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/dvd_player.png" position="830,90" size="300,300" alphatest="blend" transparent="1" >
 			<convert type="MenuEntryCompare">dvd_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/BlackHoleEpgBackup.png" position="830,150"  size="300,300" alphatest="blend" transparent="1" >
+		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/BlackHoleEpgBackup.png" position="830,90"  size="300,300" alphatest="blend" transparent="1" >
             <convert type="MenuEntryCompare">BlackHoleEpgBackup</convert>
+            <convert type="ConditionalShowHide" />
+        </widget>
+        <widget source="menu" render="Pixmap" pixmap="skin_default/menu/BlackHolePersonalBackup.png" position="830,90"  size="300,300" alphatest="blend" transparent="1" >
+            <convert type="MenuEntryCompare">BlackHolePersonalBackup</convert>
             <convert type="ConditionalShowHide" />
         </widget>
 	</screen> 
@@ -1417,17 +1421,17 @@
 	</screen>
   <!--  90 About -->
 	<screen name="About" position="center,center" size="1000,520" title="About" >
-	    <ePixmap position="225,15" zPosition="-1" size="550,70" pixmap="skin_default/logo_DM_HD.png" alphatest="blend" transparent="1" />
-		<ePixmap position="670,300" zPosition="-1" size="280,210" pixmap="skin_default/prev.png" alphatest="blend" transparent="1" />
+	    <ePixmap position="78,15" zPosition="-1" size="550,70" pixmap="skin_default/logo_DM_HD.png" alphatest="blend" transparent="1" />
+		<ePixmap position="670,15" zPosition="-1" size="280,210" pixmap="skin_default/prev.png" alphatest="blend" transparent="1" />
 		<eLabel text="Black Hole" position="78,90" size="600,32" font="Regular;26" halign="left" backgroundColor="transpBlack" transparent="1"/>		
 		<widget source="EnigmaVersion" render="Label" position="78,130"	size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 		<widget source="ImageVersion" render="Label" position="78,160" 	size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 		<widget source="FPVersion" render="Label" position="78,200" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 		<widget source="TunerHeader" render="Label" position="78,230" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
-		<widget source="Tuner0" render="Label"	position="78,260" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
-		<widget source="Tuner1" render="Label" 	position="78,290" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
-		<widget source="Tuner2" render="Label" 	position="78,320" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
-		<widget source="Tuner3" render="Label" 	position="78,350" size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<widget source="Tuner0" render="Label"	position="78,260" size="680,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<widget source="Tuner1" render="Label" 	position="78,290" size="680,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<widget source="Tuner2" render="Label" 	position="78,320" size="680,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
+		<widget source="Tuner3" render="Label" 	position="78,350" size="680,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 		<widget source="HDDHeader" render="Label" 	position="78,410" 	size="580,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 		<widget source="hddA" render="Label" position="78,440" 	size="650,28" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 	</screen>
