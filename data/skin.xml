@@ -55,6 +55,14 @@
 		<font filename="nmsbd2.ttf" name="oledRegular" scale="90"/>
 		<font filename="nmsbd.ttf" name="oledDisplay" scale="90"/>
 	</fonts>
+	<!-- Subtitle effects -->
+	<subtitles>
+		<sub name="Subtitle_TTX" font="Regular;30" shadowColor="#40101010" shadowOffset="3,3" />
+		<sub name="Subtitle_Regular" font="Regular;30" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="3,3" />
+		<sub name="Subtitle_Bold" font="Replacement;30" foregroundColor="#DCDCDC" shadowColor="#40101010" shadowOffset="3,3" />
+		<sub name="Subtitle_Italic" font="Regular;30" foregroundColor="#DCAAAA" shadowColor="#40101010" shadowOffset="3,3" />
+		<!-- omitting foregroundColor attribute will enable auto-assignment of color -->
+	</subtitles>
 	<!-- Main screen colors (id=0 Framebuffer) -->
 	<windowstyle type="skinned" id="0">
 		<title offset="40,24" font="Regular;26"/>
