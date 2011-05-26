@@ -657,10 +657,20 @@ void eDVBTeletextParser::addSubtitleString(int color, std::string string, int so
 {
 //	eDebug("(%d)add subtitle string: %s, col %d", m_Y, string.c_str(), color);
 
-	const gRGB pal[8] = { gRGB(102, 102, 102), gRGB(255, 0, 0), gRGB(0, 255, 0), gRGB(255, 255, 0),
-		gRGB(102, 102, 255), gRGB(255, 0, 255), gRGB(0, 255, 255), gRGB(255, 255, 255) };
+	const gRGB pal[8] = { gRGB(0, 0, 0), gRGB(255, 0, 0), gRGB(0, 255, 0), gRGB(255, 255, 0),
+		gRGB(0, 0, 255), gRGB(255, 0, 255), gRGB(0, 255, 255), gRGB(255, 255, 255) };
 
 	if (string.empty()) return;
+
+	for (unsigned int i = 0; i < m_subtitle_page.m_elements.size(); ++i)
+	{
+		if ( m_subtitle_page.m_elements[i].m_source_line == source_line )
+		{
+			m_subtitle_page.m_elements[i].m_text += " ";
+			m_subtitle_page.m_elements[i].m_text += string;
+			return;
+		}
+	}
 
 	m_subtitle_page.m_elements.push_back(eDVBTeletextSubtitlePageElement(pal[color], string, source_line));
 }
