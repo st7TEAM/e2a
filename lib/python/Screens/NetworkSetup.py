@@ -751,7 +751,7 @@ class AdapterSetupConfiguration(Screen, HelpableScreen):
 				else:
 					temp_iface=getWNICnames()
 					if temp_iface == []:
-						os_system("ifconfig " + self_iface + " up")
+						os_system("ifconfig " + self.iface + " up")
 					ifobj = Wireless(self.iface) # a Wireless NIC Object
 					try:
 						self.wlanresponse = ifobj.getAPaddr()
