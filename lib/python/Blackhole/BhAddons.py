@@ -12,7 +12,7 @@ from Tools.LoadPixmap import LoadPixmap
 from Tools.Directories import fileExists, pathExists, createDir
 from os import system, listdir, chdir, getcwd, remove as os_remove
 from urllib2 import Request, urlopen, URLError, HTTPError
-from BhUtils import nab_strip_html, DeliteGetSkinPath
+from BhUtils import nab_strip_html, DeliteGetSkinPath, nab_Detect_Machine
 
 
 class DeliteAddons(Screen):
@@ -241,6 +241,8 @@ class Nab_downArea(Screen):
 		self.sel = self["list"].getCurrent()
 		if self.sel:
 			self.sel = self.sel[2]
+			
+		box = nab_Detect_Machine()
 		
 		self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Cams"
 		self.title = "Buuuuu"
@@ -251,6 +253,9 @@ class Nab_downArea(Screen):
 		elif  self.sel == 2:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Skins"
 			self.title = "Black Hole Skins"
+			if box.find('dm') != -1:
+				self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Dreambox-Skins"
+				self.title = "Black Hole Dreambox Skins"
 		elif  self.sel == 3:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Scripts"
 			self.title = "Black Hole Scripts"
