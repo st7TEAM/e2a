@@ -205,6 +205,12 @@ lib/python/Plugins/SystemPlugins/Fancontrol/Makefile
 lib/python/Plugins/SystemPlugins/Fancontrol/meta/Makefile
 lib/python/Plugins/SystemPlugins/FPGAUpgrade/Makefile
 lib/python/Plugins/SystemPlugins/FPGAUpgrade/meta/Makefile
+lib/python/Plugins/SystemPlugins/WirelessLanSetup/Makefile
+lib/python/Plugins/SystemPlugins/WirelessLanSetup/meta/Makefile
+lib/python/Plugins/SystemPlugins/ManualFancontrol/Makefile
+lib/python/Plugins/SystemPlugins/ManualFancontrol/meta/Makefile
+lib/python/Plugins/SystemPlugins/Blindscan/Makefile
+lib/python/Plugins/SystemPlugins/Blindscan/meta/Makefile
 lib/python/Tools/Makefile
 lib/python/Blackhole/Makefile
 lib/service/Makefile

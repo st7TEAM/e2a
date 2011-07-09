@@ -21,6 +21,7 @@ from enigma import eSctest
 from enigma import eDVBDB
 from Components.NimManager import nimmanager
 from enigma import eDVBCI_UI,eDVBCIInterfaces
+from Tools.Directories import resolveFilename, SCOPE_SYSETC
 
 class TestResultList(HTMLComponent, GUIComponent):
 	def __init__(self, list, enableWrapAround=False, content=eListboxPythonStringContent):
@@ -96,7 +97,7 @@ class FactoryTest(Screen):
 			<widget name="resultlist" position="370,0" size="60,350" />
 			<widget name="testdate" position="20,350" size="150,25" font="Regular;22" />
 			<widget name="testversion" position="20,375" size="150,25" font="Regular;22" />
-			<widget name="mactext" position="180,350" size="230,25" font="Regular;22" />			
+			<widget name="mactext" position="180,350" size="230,25" font="Regular;22" />
 		</screen>"""
 	def __init__(self, session):
 
@@ -123,7 +124,7 @@ class FactoryTest(Screen):
 		}, -2)
 
 		Screen.__init__(self, session)
-		TESTPROGRAM_DATE = "2011-05-16"
+		TESTPROGRAM_DATE = self.getImageVersion() +" (v1.00)"
 		TESTPROGRAM_VERSION = "Version 01.10"
 
 		self.model = 0
@@ -255,13 +256,13 @@ class FactoryTest(Screen):
 			self.smarttestIndex=3
 			tlist.append((" 3. Smartcard test",self.smarttestIndex))
 			self.tuner1_1testIndex=4
-			tlist.append((" 4. T1 H 22K x 4:3 CVBS",self.tuner1_1testIndex))
+			tlist.append((" 4. T1/H/22K x /4:3/CVBS",self.tuner1_1testIndex))
 			self.tuner1_2testIndex=5
-			tlist.append((" 5. T1 V 22k o 16:9 RGB",self.tuner1_2testIndex))
+			tlist.append((" 5. T1/V/22k o/16:9/RGB",self.tuner1_2testIndex))
 			self.tuner2_1testIndex=6
-			tlist.append((" 6. T2 H 22k x 4:3 YC",self.tuner2_1testIndex))
+			tlist.append((" 6. T2/H/22k x/4:3/YC",self.tuner2_1testIndex))
 			self.tuner2_2testIndex=7
-			tlist.append((" 7. T2 V 22k o 16:9 CVBS CAM",self.tuner2_2testIndex))
+			tlist.append((" 7. T2/V/22k o/16:9/CVBS/CAM",self.tuner2_2testIndex))
 			self.scarttestIndex=8
 			tlist.append((" 8. VCR Scart loop",self.scarttestIndex))
 			self.rs232testIndex=9
@@ -271,7 +272,7 @@ class FactoryTest(Screen):
 			self.fdefaultIndex=11
 			tlist.append(("11. Factory default",self.fdefaultIndex))
 			self.shutdownIndex=12
-			tlist.append(("12. Shutdown",self.shutdownIndex))
+			tlist.append(("12. Shutdown(Deep Standby)",self.shutdownIndex))
 			self.tuner_test_first_index = 4
 			self.tuner_test_last_index = 7
 			
@@ -283,9 +284,9 @@ class FactoryTest(Screen):
 			self.smarttestIndex=2
 			tlist.append((" 2. Smartcard test",self.smarttestIndex))
 			self.tuner1_1testIndex=3
-			tlist.append((" 3. T1 H 22K x 4:3 CVBS",self.tuner1_1testIndex))
+			tlist.append((" 3. T1/H/22K x/4:3/CVBS",self.tuner1_1testIndex))
 			self.tuner2_2testIndex = self.tuner1_2testIndex=4
-			tlist.append((" 4. T1 V 22k o 16:9 RGB CAM",self.tuner1_2testIndex))
+			tlist.append((" 4. T1/V/22k o/16:9/RGB/CAM",self.tuner1_2testIndex))
 			self.rs232testIndex=5
 			tlist.append((" 5. RS232 test",self.rs232testIndex))
 			self.ethernettestIndex=6
@@ -293,7 +294,7 @@ class FactoryTest(Screen):
 			self.fdefaultIndex=7
 			tlist.append((" 7. Factory default",self.fdefaultIndex))
 			self.shutdownIndex=8
-			tlist.append((" 8. Shutdown",self.shutdownIndex))
+			tlist.append((" 8. Shutdown(Deep Standby)",self.shutdownIndex))
 			self.tuner_test_first_index = 3
 			self.tuner_test_last_index = 4
 
@@ -343,10 +344,10 @@ class FactoryTest(Screen):
 					getRatio = AspectRatio.pop(0) # ratio
 					AspectRatio.append(getRatio)
 					getColorFormat=ColorFormat.pop(0) # colorFormat
-					menuname=" %d. T%d %s H 22k 0 %s %s" % (current_index, key+1, val["type"], getRatio, getColorFormat)	#menuname
+					menuname=" %d. T%d/%s/H/22k x/%s/%s" % (current_index, key+1, val["type"], getRatio, getColorFormat)	#menuname
 					print current_index
 #						current_index=4
-					self.setTuneInfo(index=current_index, slot=key, type=val["type"], sat=val["sat1"], pol="H", tone=True, ratio=getRatio, color=getColorFormat, cam=False) # setTuneInfo
+					self.setTuneInfo(index=current_index, slot=key, type=val["type"], sat=val["sat1"], pol="H", tone=False, ratio=getRatio, color=getColorFormat, cam=False) # setTuneInfo
 #						self.setTuneInfo(current_index, key, val["type"], val["sat1"], "H", True, getRatio, getColorFormat, False) # setTuneInfo
 					tlist.append((menuname,current_index))
 					current_index+=1
@@ -354,13 +355,13 @@ class FactoryTest(Screen):
 					getRatio = AspectRatio.pop(0)
 					AspectRatio.append(getRatio)
 					getColorFormat=ColorFormat.pop(0)
-					menuname=" %d. T%d %s V 22k x %s %s" % (current_index, key+1, val["type"], getRatio, getColorFormat)
+					menuname=" %d. T%d/%s/V/22k o/%s/%s" % (current_index, key+1, val["type"], getRatio, getColorFormat)
 					if len(self.NimType) == key+1: # CAM test on/off
-						menuname+=" CAM"
+						menuname+="/CAM"
 						camtest = True
 					else:
 						camtest = False
-					self.setTuneInfo( index=current_index, slot=key, type=val["type"], sat=val["sat2"], pol="V", tone=False, ratio=getRatio, color=getColorFormat, cam=camtest)
+					self.setTuneInfo( index=current_index, slot=key, type=val["type"], sat=val["sat2"], pol="V", tone=True, ratio=getRatio, color=getColorFormat, cam=camtest)
 					tlist.append((menuname,current_index))
 					current_index+=1
 # Chang : DVB -T or DVB-C
@@ -374,7 +375,7 @@ class FactoryTest(Screen):
 						getRatio = AspectRatio.pop(0)
 						AspectRatio.append(getRatio)
 						getColorFormat=ColorFormat.pop(0)
-						menuname=" %d. T%d %s %s %s" % (current_index, key+1, val["type"], getRatio, getColorFormat)
+						menuname=" %d. T%d/%s/%s/%s" % (current_index, key+1, val["type"], getRatio, getColorFormat)
 						if len(self.NimType) == key+1 and (additionalMenu is None or x != 0): # CAM test on/off
 							menuname+=" CAM"
 							camtest = True
@@ -394,7 +395,7 @@ class FactoryTest(Screen):
 			tlist.append((" %d. Factory default" % current_index,self.fdefaultIndex))
 			current_index+=1
 			self.shutdownIndex=current_index
-			tlist.append((" %d. Shutdown" % current_index,self.shutdownIndex))
+			tlist.append((" %d. Shutdown(Deep Standby)" % current_index,self.shutdownIndex))
 			
 		self.menulength= len(tlist)
 		self["testlist"] = MenuList(tlist)
@@ -479,6 +480,24 @@ class FactoryTest(Screen):
 		index = int(number)
 		self["testlist"].moveToIndex(index)
 		self["resultlist"].moveToIndex(index)
+
+	def getImageVersion(self):
+		date = 'xxxx-xx-xx'
+		file = open(resolveFilename(SCOPE_SYSETC, 'image-version'), 'r')
+		lines = file.readlines()
+		for x in lines:
+			splitted = x.split('=')
+			if splitted[0] == "version":
+			#     YYYY MM DD hh mm
+				#0120 2005 11 29 01 16
+				#0123 4567 89 01 23 45
+				version = splitted[1]
+				year = version[4:8]
+				month = version[8:10]
+				day = version[10:12]
+				date = '-'.join((year, month, day))
+				break;
+		return date
 
 	def getversion(self):
 		try:
@@ -616,44 +635,44 @@ class FactoryTest(Screen):
 			result = 1
 			displayerror = 1
 		try:
-			if fileExists("/media/hdd"):
-				if access("/media/hdd",F_OK|R_OK|W_OK):
-					dummy=open("/media/hdd/dummy03","w")
+			if fileExists("/autofs/sda1"):
+				if access("/autofs/sda1",F_OK|R_OK|W_OK):
+					dummy=open("/autofs/sda1/dummy03","w")
 					dummy.write("complete")
 					dummy.close()
-					dummy=open("/media/hdd/dummy03","r")
+					dummy=open("/autofs/sda1/dummy03","r")
 					if dummy.readline()=="complete":
-						print "/media/hdd - complete"
+						print "/autofs/sda1 - complete"
 					else:
-						print "/media/hdd - readline error"
+						print "/autofs/sda1 - readline error"
 						result += 1
 						displayerror = 1
 					dummy.close()
-					system("rm /media/hdd/dummy03")
+					system("rm /autofs/sda1/dummy03")
 				else:
-					print "/media/hdd - rw access error"
+					print "/autofs/sda1 - rw access error"
 					result += 1
 					displayerror = 1
 			else:
-				print "/media/hdd - file not exist"
+				print "/autofs/sda1 - file not exist"
 				result += 1
 		except:
-			print "/media/hdd - exceptional error"
+			print "/autofs/sda1 - exceptional error"
 			result += 1
 			displayerror = 1
 		
 		if result == 0:
-			self.session.open( MessageBox, _("Sata & extend hdd test pass"), MessageBox.TYPE_INFO)
+			self.session.open( MessageBox, _("Sata & extend hdd test pass\nPress 'OK' button!"), MessageBox.TYPE_INFO)
 			self.rlist[self["testlist"].getCurrent()[1]]="pass"
 		elif result == 1:
 			if displayerror==1:
-				self.session.open( MessageBox, _("One hdd test error"), MessageBox.TYPE_ERROR)
+				self.session.open( MessageBox, _("One hdd test error\nPress 'EXIT' button!"), MessageBox.TYPE_ERROR)
 				self.rlist[self["testlist"].getCurrent()[1]]="fail"
 			else:
 				self.satatimer.start(1100,True)
 		else:
 			if displayerror==1:
-				self.session.open( MessageBox, _("Sata & extend hdd test error"), MessageBox.TYPE_ERROR)
+				self.session.open( MessageBox, _("Sata & extend hdd test error\nPress 'EXIT' button!"), MessageBox.TYPE_ERROR)
 				self.rlist[self["testlist"].getCurrent()[1]]="fail"
 			else:
 				self.satatimer.start(1100,True)
@@ -664,7 +683,7 @@ class FactoryTest(Screen):
 		elif self.model == 1:
 			self.session.openWithCallback(self.displayresult ,FrontTest_solo)
 		elif self.model == 2 or self.model == 3 or self.model == 4:
-			self.session.openWithCallback(self.displayresult ,FrontTest_solo)
+			self.session.openWithCallback(self.displayresult ,FrontTest_uno)
 
 	def displayresult(self):
 		global fronttest
@@ -1070,11 +1089,11 @@ class FactoryTest(Screen):
 		if result < 0 :
 			result = 0
 		elif result == len(devices):
-			self.session.open( MessageBox, _("USB test pass %d devices\nPress OK!"%result), MessageBox.TYPE_INFO)			
+			self.session.open( MessageBox, _("USB test pass %d devices\nPress 'OK' button!"%result), MessageBox.TYPE_INFO)
 			self.rlist[self["testlist"].getCurrent()[1]]="pass"
 		else:
 			if displayerror == 1:
-				self.session.open( MessageBox, _("USB test error : Success-%d"%result+" Fail-%d\nPress EXIT!"%(len(devices)-result)), MessageBox.TYPE_ERROR)
+				self.session.open( MessageBox, _("USB test error : Success-%d"%result+" Fail-%d\nPress 'EXIT' button!"%(len(devices)-result)), MessageBox.TYPE_ERROR)
 				self.rlist[self["testlist"].getCurrent()[1]]="fail"
 			else:
 				self.usbtimer.start(1100,True)
@@ -1439,12 +1458,12 @@ class SmartCardTest(Screen):
 		self["actions"] = ActionMap(["DirectionActions", "OkCancelActions"],
 		{
 			"cancel": self.keyCancel,
-			"ok" : self.keyCancel
+			"ok" : self.keyOk
 		}, -2)
 
 		Screen.__init__(self, session)
 		self["text"]=Label(("Testing Smartcard 1..."))
-		self.step = 0
+		self.testok = 0
 		self.smartcardtimer = eTimer()
 		self.smartcardtimer.callback.append(self.check_smart_card)
 		self.closetimer = eTimer()
@@ -1484,7 +1503,7 @@ class SmartCardTest(Screen):
 				return
 			elif (index==1 or self.model==1):
 				smartcardtest = 1
-				self.step = 1
+				self.testok = 1
 				self["text"].setText(_("Smart Card OK!!"))
 				self.closetimer.start(2000,True)
 				self.smartcardtimer.stop()
@@ -1512,6 +1531,10 @@ class SmartCardTest(Screen):
 				
 	def keyCancel(self):
 		self.close()
+
+	def keyOk(self):
+		if self.testok == 1:
+			self.close()
 
 	
 
@@ -1698,11 +1721,11 @@ class FrontTest_solo(Screen):
 
 	def keyOk(self):
 		global fronttest
-		self.fronttimer.stop()
-		eSctest.getInstance().VFD_Close()
 		if self.step == 6:
 			fronttest = 1
-		self.close()
+			self.fronttimer.stop()
+			eSctest.getInstance().VFD_Close()
+			self.close()
 
 	def FrontAnimate(self):
 		if (self.frontturnonoff==0):
@@ -1713,7 +1736,105 @@ class FrontTest_solo(Screen):
 			eSctest.getInstance().turnoff_VFD()
 		self.fronttimer.start(1000,True)
 
+class FrontTest_uno(Screen):
+	skin = """
+		<screen name="FrontTest_uno" position="center,center" size="300,180" title="Front Test" >
+			<widget name="text" position="10,10" size="280,160" font="Regular;30" />
+		</screen>"""
 
+	def __init__(self, session):
+		self["actions"] = ActionMap(["DirectionActions", "OkCancelActions","GlobalActions"],
+		{
+			"ok": self.keyOk,
+			"cancel": self.keyCancel,
+			"left": self.keyleft,
+			"right": self.keyright,
+			"volumeUp": self.keyvolup,
+			"volumeDown": self.keyvoldown,
+			"power_down": self.keypower,
+		}, -2)
+
+		Screen.__init__(self, session)
+		self["text"]=Label(("Press Front CH -"))
+		self.step = 1
+		self.fronttimer= eTimer()
+		self.fronttimer.callback.append(self.FrontAnimate)
+		self.frontturnonoff = 0
+		eSctest.getInstance().VFD_Open()
+		self.keytimeout = eTimer()
+		self.keytimeout.callback.append(self.KeyTimeOut)
+		self.keytimeout.start(5000,True)
+
+	def KeyTimeOut(self):
+		if self.step == 1:
+			self["text"].setText(("Front CH - ERROR\nPress exit!"))
+		elif self.step == 2:
+			self["text"].setText(("Front CH + ERROR\nPress exit!"))
+		elif self.step == 3 :
+			self["text"].setText(("Front VOL - ERROR\nPress exit!"))
+		elif self.step == 4:
+			self["text"].setText(("Front VOL + ERROR\nPress exit!"))
+		elif self.step == 5:
+			self["text"].setText(("Front STANDBY ERROR\nPress exit!"))
+		self.step = 0
+
+	def keyleft(self):
+		if self.step== 1:
+			self.keytimeout.stop()
+			self.keytimeout.start(5000,True)
+			self.step = 2
+			self["text"].setText(_("Press Front CH +"))
+	def keyright(self):
+		if self.step== 2:
+			self.keytimeout.stop()
+			self.keytimeout.start(5000,True)
+			self.step = 3
+			self["text"].setText(_("Press Front VOL -"))
+
+	def keyvoldown(self):
+		if self.step== 3:
+			self.keytimeout.stop()
+			self.keytimeout.start(5000,True)
+			self.step = 4
+			self["text"].setText(_("Press Front VOL +"))
+
+	def keyvolup(self):
+		if self.step== 4:
+			self.keytimeout.stop()
+			self.keytimeout.start(5000,True)
+			self.step = 5
+			self["text"].setText(_("Press Front STANDBY"))
+
+	def keypower(self):
+		if self.step== 5:
+			self.keytimeout.stop()
+			self.step = 6
+			self.fronttimer.start(1000,True)
+			self["text"].setText(_("Front LED OK?\n\nyes-ok\nno-exit"))
+
+	def keyCancel(self):
+		global fronttest
+		self.fronttimer.stop()
+		eSctest.getInstance().VFD_Close()
+		fronttest = 0
+		self.close()
+
+	def keyOk(self):
+		global fronttest
+		if self.step == 6:
+			fronttest = 1
+			self.fronttimer.stop()
+			eSctest.getInstance().VFD_Close()
+			self.close()
+
+	def FrontAnimate(self):
+		if (self.frontturnonoff==0):
+			eSctest.getInstance().turnon_VFD()
+			self.frontturnonoff = 1
+		else:
+			self.frontturnonoff = 0
+			eSctest.getInstance().turnoff_VFD()
+		self.fronttimer.start(1000,True)
 	
 
 rstest = 0
@@ -1755,6 +1876,8 @@ class RS232Test(Screen):
 		except:
 			print 'error'
 			rstest = 0
+		if rstest == 0:
+			self.session.open( MessageBox, _("RS232 Test Failed!\nPress 'EXIT' button!"), MessageBox.TYPE_ERROR)
 		self.close()
 
 	def keyCancel(self):
