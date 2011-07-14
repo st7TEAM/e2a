@@ -33,7 +33,7 @@ public:
 #endif
 	static eHdmiCEC *getInstance();
 	PSignal2<void, int, int> messageReceived;
-	void sendMessage(unsigned char address, unsigned char length, char *data);
+	void sendMessage(unsigned char address, char *data);
 };
 
 #endif

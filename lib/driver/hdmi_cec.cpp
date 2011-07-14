@@ -42,20 +42,51 @@ void eHdmiCEC::hdmiEvent(int what)
 		{
 			/* there is no simple way to pass the complete message object to python, so we support only single byte commands for now */
 			messageReceived(message.address, message.data[0]);
+			eDebug("[HDMICEC] received from %04x m1 %04x m2 %04x", message.address, message.data[0], message.data[1]);
+	
 		}
 	}
 }
 
-void eHdmiCEC::sendMessage(unsigned char address, unsigned char length, char *data)
+void eHdmiCEC::sendMessage(unsigned char address, char *data)
 {
 	if (hdmiFd >= 0)
 	{
-		struct cec_message message;
-		message.address = address;
-		if (length > sizeof(message.data)) length = sizeof(message.data);
-		message.length = length;
-		memcpy(message.data, data, length);
-		::write(hdmiFd, &message, 2 + length);
+		
+		__u8 *buf =  new __u8[256];
+		unsigned char lenght = 1;
+
+		buf[0] = address;
+		buf[2] = 0;
+		
+		if ( !strcmp((const char*)data, "wake") ) 
+		{
+			buf[2] = 0x85;
+		}
+		else if  ( !strcmp((const char*)data, "active") ) 
+		{
+			buf[2] = 0x04;
+		}
+		else if  ( !strcmp((const char*)data, "sleep") ) 
+		{
+			buf[2] = 0x36;
+		}
+		else if  ( !strcmp((const char*)data, "reportpower") ) 
+		{
+			buf[2] = 0x90;
+			buf[3] = 0x00;
+			lenght = 2;
+		}
+		else if  ( !strcmp((const char*)data, "setname") ) 
+		{
+			buf[2] = 0x47;
+			memcpy(buf+3, "Vu+ Black Hole", 14);
+			lenght = 15;
+		}
+
+		buf[1] = lenght;
+		::write(hdmiFd, buf, 2 + lenght);
+
 	}
 }
 
