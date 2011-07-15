@@ -69,30 +69,32 @@ class DeliteSettings(Screen):
 		elif self.sel == 2:
 			self.session.open(DeliteDevicesPanel)
 		elif self.sel == 3:
-			self.session.open(DeliteKernelModules)
+			self.session.open(BhHdmiCecConf)
 		elif self.sel == 4:
-			self.session.open(DeliteInadyn)
+			self.session.open(DeliteKernelModules)
 		elif self.sel == 5:
-			self.session.open(DeliteSwap)
+			self.session.open(DeliteInadyn)
 		elif self.sel == 6:
-			self.session.open(DeliteHdd)
+			self.session.open(DeliteSwap)
 		elif self.sel == 7:
-			self.session.open(DeliteMountWiz)
+			self.session.open(DeliteHdd)
 		elif self.sel == 8:
-			self.session.open(DeliteOpenvpn)
+			self.session.open(DeliteMountWiz)
 		elif self.sel == 9:
-			self.session.open(DeliteSamba)
+			self.session.open(DeliteOpenvpn)
 		elif self.sel == 10:
-			self.session.open(DeliteNfs)
+			self.session.open(DeliteSamba)
 		elif self.sel == 11:
-			self.session.open(DeliteTelnet)
+			self.session.open(DeliteNfs)
 		elif self.sel == 12:
-			self.session.open(DeliteFtp)
+			self.session.open(DeliteTelnet)
 		elif self.sel == 13:
-			self.session.open(DeliteDtt)
+			self.session.open(DeliteFtp)
 		elif self.sel == 14:
-			self.session.open(BhDjmount)
+			self.session.open(DeliteDtt)
 		elif self.sel == 15:
+			self.session.open(BhDjmount)
+		elif self.sel == 16:
 			self.session.open(BhMediatomb)
 		else:
 			self.noYet()
@@ -128,94 +130,101 @@ class DeliteSettings(Screen):
 		res = (name, png, idx)
 		self.list.append(res)
 		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "Black Hole Hdmi Cec"
+		idx = 3
+		res = (name, png, idx)
+		self.list.append(res)
+		
 		mypixmap = mypath + "icons/infopanel_kmod.png"
 		png = LoadPixmap(mypixmap)
 		name = "Kernel Modules Manager"
-		idx = 3
+		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/inadynsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Inadyn Settings"
-		idx = 4
+		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/swapsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Swap File Settings"
-		idx = 5
+		idx = 6
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/hdsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Hard Disk Settings"
-		idx = 6
+		idx = 7
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/mountwizard.png"
 		png = LoadPixmap(mypixmap)
 		name = "Black Hole Mount Wizard"
-		idx = 7
+		idx = 8
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_vpn.png"
 		png = LoadPixmap(mypixmap)
 		name = "OpenVpn Panel"
-		idx = 8
+		idx = 9
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
 		name = "Samba/Cifs Panel"
-		idx = 9
+		idx = 10
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_nfs.png"
 		png = LoadPixmap(mypixmap)
 		name = "Nfs Server Panel"
-		idx = 10
+		idx = 11
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_telnet.png"
 		png = LoadPixmap(mypixmap)
 		name = "Telnet Panel"
-		idx = 11
+		idx = 12
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_ftp.png"
 		png = LoadPixmap(mypixmap)
 		name = "Ftp Panel"
-		idx = 12
+		idx = 13
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_space.png"
 		png = LoadPixmap(mypixmap)
 		name = "Usb Tuner Panel"
-		idx = 13
-		res = (name, png, idx)
-		self.list.append(res)
-		
-		mypixmap = mypath + "icons/infopanel_samba.png"
-		png = LoadPixmap(mypixmap)
-		name = "UPnP Client Djmount"
 		idx = 14
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "UPnP Server Mediatomb"
+		name = "UPnP Client Djmount"
 		idx = 15
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "UPnP Server Mediatomb"
+		idx = 16
 		res = (name, png, idx)
 		self.list.append(res)
 		
@@ -1609,6 +1618,80 @@ class DeliteDttDriversList(Screen):
 		mybox.setTitle("Info")
 		self.close()
 	
+class BhHdmiCecConf(Screen, ConfigListScreen):
+	skin = """
+	<screen position="center,center" size="900,500" title="Black Hole Hdmi Cec Setup">
+		<widget name="config" position="10,10" size="880,140" scrollbarMode="showOnDemand"/>
+		<widget name="lab1" position="10,150" size="880,300" font="Regular;20" halign="center" valign="center" foregroundColor="green" />
+		<ePixmap pixmap="skin_default/buttons/red.png" position="380,460" size="140,40" alphatest="on"/>
+		<widget name="key_red" position="380,460" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
+	</screen>"""
 	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		self.list = []
+		ConfigListScreen.__init__(self, self.list)
+		
+		labtxt = "Welcome in Black Hole Hdmi Cec\nThe CEC allows HDMI devices to control each other when necessary and allows the user to operate multiple devices with one remote control handset.\nThis function is experimental and require latest generation TV. Not all tv are compatible with the box drivers. The BH Hdmi Cec system works on:\n1. Latest Samsung Tv series Anynet+ (Option 4 not working)\nBe sure to activate in your Tv menu the options about Hdmi Cec. For example in Samsung Tv goto Menu->Application->Anynet+->Setup and set Anynet+ On - Auto turn off Yes.\nPlease report @vuplus-community.net your tests and options working on your tv model."
+		
+		self["key_red"] = Label(_("Save"))
+		self["lab1"] = Label(labtxt)
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"red": self.saveMyosd,
+			"back": self.close
+
+		})
+			
+		self.updateList()
+	
+	
+	def updateList(self):
+		
+		self.tvstandby = NoSave(ConfigYesNo(default="False"))
+		self.tvwakeup = NoSave(ConfigYesNo(default="False"))
+		self.boxstandby = NoSave(ConfigYesNo(default="False"))
+		self.boxwakeup = NoSave(ConfigYesNo(default="False"))
+		
+		self.tvstandby.value = config.hdmicec.tvstandby.value
+		self.tvwakeup.value = config.hdmicec.tvwakeup.value
+		self.boxstandby.value = config.hdmicec.boxstandby.value
+		self.boxwakeup.value = config.hdmicec.boxwakeup.value
+		
+		
+		
+		item = getConfigListEntry(_("1 Tv remote control standby \t->  standby Vu+ box"), self.tvstandby)
+		self.list.append(item)
+		
+		item = getConfigListEntry(_("2 Tv remote control wakeup \t->  wakeup Vu+ box"), self.tvwakeup)
+		self.list.append(item)
+		
+		item = getConfigListEntry(_("3 Vu+ remote control standby \t->  standby Tv"), self.boxstandby)
+		self.list.append(item)
+		
+		item = getConfigListEntry(_("4 Vu+ remote control wakeup \t->  wakeup Tv"), self.boxwakeup)
+		self.list.append(item)
+		
+		self["config"].list = self.list
+		self["config"].l.setList(self.list)
+		
+		
+	def saveMyosd(self):
+		
+		config.hdmicec.tvstandby.value = self.tvstandby.value
+		config.hdmicec.tvwakeup.value = self.tvwakeup.value
+		config.hdmicec.boxstandby.value = self.boxstandby.value
+		config.hdmicec.boxwakeup.value = self.boxwakeup.value 
+		
+		config.hdmicec.tvstandby.save()
+		config.hdmicec.tvwakeup.save()
+		config.hdmicec.boxstandby.save()
+		config.hdmicec.boxwakeup.save()
+		
+		configfile.save()
+		
+		self.close()
 	
 	
