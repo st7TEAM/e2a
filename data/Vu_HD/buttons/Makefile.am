@@ -1,4 +1,4 @@
-installdir = $(pkgdatadir)/skin_default/buttons
+installdir = $(pkgdatadir)/Vu_HD/buttons
 
 dist_install_DATA = \
 	*.png
