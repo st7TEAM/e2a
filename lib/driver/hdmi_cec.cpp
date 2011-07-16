@@ -86,9 +86,9 @@ void eHdmiCEC::sendMessage(unsigned char address, char *data)
 		else if  ( !strcmp((const char*)data, "reportpaddr") ) 
 		{
 			buf[2] = 0x84;
-			buf[3] = 10;
-			buf[4] = 00;
-			buf[5] = 3;
+			buf[3] = 0x10;
+			buf[4] = 0x00;
+			buf[5] = 0x03;
 			lenght = 3;
 		}
 
