@@ -17,9 +17,6 @@ class HdmiCec:
 
 	def sendMessages(self, address, messages):
 		for message in messages.split(','):
-			if message == "active":
-				address = 0x0F
-
 			eHdmiCEC.getInstance().sendMessage(address, message)
 			print "sent cec message %s to %s" % (message, address)
 
@@ -31,6 +28,7 @@ class HdmiCec:
 		from Screens.Standby import inStandby
 		inStandby.onClose.append(self.leaveStandby)
 		if config.hdmicec.boxstandby.value:
+			self.sendMessages(0, "sleep")
 			self.sendMessages(0x0F, "sleep")
 
 	def messageReceived(self, address, message):
@@ -48,5 +46,7 @@ class HdmiCec:
 			self.sendMessages(0, "setname")
 		if message == 0x8F:
 			self.sendMessages(0, "reportpower")
-			
+#		if message == 0x83:
+#			self.sendMessages(0, "reportpaddr")
+					
 hdmi_cec = HdmiCec()
