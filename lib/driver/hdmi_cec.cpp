@@ -80,8 +80,14 @@ void eHdmiCEC::sendMessage(unsigned char address, char *data)
 		else if  ( !strcmp((const char*)data, "setname") ) 
 		{
 			buf[2] = 0x47;
-			memcpy(buf+3, "Vu+ Black Hole", 14);
-			lenght = 15;
+			memcpy(buf+3, "Black Hole", 10);
+			lenght = 11;
+		}
+		else if  ( !strcmp((const char*)data, "reportpaddr") ) 
+		{
+			buf[2] = 0x0A;
+			buf[3] = 0x00;
+			lenght = 2;
 		}
 
 		buf[1] = lenght;
