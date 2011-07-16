@@ -89,7 +89,7 @@ void eHdmiCEC::sendMessage(unsigned char address, char *data)
 			buf[3] = 0x10;
 			buf[4] = 0x00;
 			buf[5] = 0x03;
-			lenght = 3;
+			lenght = 4;
 		}
 
 		buf[1] = lenght;
