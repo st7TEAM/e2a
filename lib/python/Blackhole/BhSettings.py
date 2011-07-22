@@ -1633,7 +1633,7 @@ class BhHdmiCecConf(Screen, ConfigListScreen):
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
 		
-		labtxt = "Welcome in Black Hole Hdmi Cec\nThe CEC allows HDMI devices to control each other when necessary and allows the user to operate multiple devices with one remote control handset.\nThis function is experimental and require latest generation TV. Not all tv are compatible with the box drivers. The BH Hdmi Cec system works on:\n1. Latest Samsung Tv series Anynet+ (Option 4 not working)\nBe sure to activate in your Tv menu the options about Hdmi Cec. For example in Samsung Tv goto Menu->Application->Anynet+->Setup and set Anynet+ On - Auto turn off Yes.\nPlease report @vuplus-community.net your tests and options working on your tv model."
+		labtxt = "Welcome in Black Hole Hdmi Cec.\nThe new Black Hole Hdmi Cec driver allows you to control both your Tv and your Vu+ box with the Tv remote control only. The Bh driver works on latest Samsung Tv series (Anynet+).\nInstructions to connect the box to Samsung Anynet+ system:\n1.) Be sure to configure the right Hdmi connection and to enable Bh Hdmi-Cec.\n2)Open your Tv menu->Application->Anynet+->Device List and click the red button \"refresh\". All Done. You can now control Tv and Box with Tv rc.\nPlease report @vuplus-community.net your tests on other tv models."
 		
 		self["key_red"] = Label(_("Save"))
 		self["lab1"] = Label(labtxt)
@@ -1650,17 +1650,25 @@ class BhHdmiCecConf(Screen, ConfigListScreen):
 	
 	def updateList(self):
 		
+		self.on = NoSave(ConfigYesNo(default="False"))
 		self.tvstandby = NoSave(ConfigYesNo(default="False"))
 		self.tvwakeup = NoSave(ConfigYesNo(default="False"))
 		self.boxstandby = NoSave(ConfigYesNo(default="False"))
-		self.boxwakeup = NoSave(ConfigYesNo(default="False"))
+		self.port = NoSave(ConfigSelection(default = "1", choices = [
+		("1", "Vu+ -> Tv Hdmi-1"), ("2", "Vu+ -> Tv Hdmi-2"), ("3", "Vu+ -> Tv Hdmi-3"), ("4", "Vu+ -> Tv Hdmi-4"),
+		("5", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-1")]))
 		
 		self.tvstandby.value = config.hdmicec.tvstandby.value
 		self.tvwakeup.value = config.hdmicec.tvwakeup.value
 		self.boxstandby.value = config.hdmicec.boxstandby.value
-		self.boxwakeup.value = config.hdmicec.boxwakeup.value
+		self.on.value = config.hdmicec.on.value
+		self.port.value = config.hdmicec.port.value
 		
+		item = getConfigListEntry(_("Enable Black Hole Hdmi-Cec"), self.on)
+		self.list.append(item)
 		
+		item = getConfigListEntry(_("Box connected to port:"), self.port)
+		self.list.append(item)
 		
 		item = getConfigListEntry(_("1 Tv remote control standby \t->  standby Vu+ box"), self.tvstandby)
 		self.list.append(item)
@@ -1671,8 +1679,6 @@ class BhHdmiCecConf(Screen, ConfigListScreen):
 		item = getConfigListEntry(_("3 Vu+ remote control standby \t->  standby Tv"), self.boxstandby)
 		self.list.append(item)
 		
-		item = getConfigListEntry(_("4 Vu+ remote control wakeup \t->  wakeup Tv"), self.boxwakeup)
-		self.list.append(item)
 		
 		self["config"].list = self.list
 		self["config"].l.setList(self.list)
@@ -1683,12 +1689,14 @@ class BhHdmiCecConf(Screen, ConfigListScreen):
 		config.hdmicec.tvstandby.value = self.tvstandby.value
 		config.hdmicec.tvwakeup.value = self.tvwakeup.value
 		config.hdmicec.boxstandby.value = self.boxstandby.value
-		config.hdmicec.boxwakeup.value = self.boxwakeup.value 
+		config.hdmicec.on.value = self.on.value
+		config.hdmicec.port.value = self.port.value
 		
 		config.hdmicec.tvstandby.save()
 		config.hdmicec.tvwakeup.save()
 		config.hdmicec.boxstandby.save()
-		config.hdmicec.boxwakeup.save()
+		config.hdmicec.on.save()
+		config.hdmicec.port.save()
 		
 		configfile.save()
 		
