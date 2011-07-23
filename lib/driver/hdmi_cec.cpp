@@ -74,6 +74,18 @@ void eHdmiCEC::sendMessage(unsigned char address, unsigned char data)
 			case 5:
 				phys = 0x11;
 				break;
+			case 6:
+				phys = 0x21;
+				break;
+			case 7:
+				phys = 0x31;
+				break;	
+			case 8:
+				phys = 0x41;
+				break;
+			case 9:
+				phys = 0x22;
+				break;
 			default:
 				phys = 0x10;
 				break;
@@ -102,7 +114,7 @@ void eHdmiCEC::sendMessage(unsigned char address, unsigned char data)
 				buf[1] = 4;
 				buf[3] = phys;
 				buf[4] = phys2;
-				buf[5] = 1;
+				buf[5] = 3;
 				break; /* reportaddress  */
 			case 0x8E:
 				buf[1] = 2;
@@ -112,7 +124,7 @@ void eHdmiCEC::sendMessage(unsigned char address, unsigned char data)
 		}
 		
 		::write(hdmiFd, buf, 2 + buf[1]);
-		eDebug("[BlackHole-HDMICEC] message sent to %02x: %02x %02x %02x %02x", buf[0], buf[2], buf[3], buf[4], buf[5]);
+//		eDebug("[BlackHole-HDMICEC] message sent to %02x: %02x %02x %02x %02x", buf[0], buf[2], buf[3], buf[4], buf[5]);
 	}
 
 }
@@ -138,7 +150,7 @@ void eHdmiCEC::keyPressed(int)
 		{
 			/* pass message object to python */
 			messageReceived(message.address, message.data[0]);
-			eDebug("[BlackHole-HDMICEC] received from %02x command: %02x %02x %02x %02x", message.address, message.data[0], message.data[1], message.data[2], message.data[3]);
+//			eDebug("[BlackHole-HDMICEC] received from %02x command: %02x %02x %02x %02x", message.address, message.data[0], message.data[1], message.data[2], message.data[3]);
 			
 			if (message.data[0] == 0x44 || message.data[0] == 0x45)
 			{

@@ -1633,7 +1633,7 @@ class BhHdmiCecConf(Screen, ConfigListScreen):
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
 		
-		labtxt = "Welcome in Black Hole Hdmi Cec.\nThe new Black Hole Hdmi Cec driver allows you to control both your Tv and your Vu+ box with the Tv remote control only. Not all Tv models compatible. Bh Hdmi-Cec is tested and working on many latest Samsung and Sony Tv series.\nInstructions to connect the box to your Hdmi-Cec compatible Tv:\n1) Enter in your Tv Menu Options and enable all the Hdmi-Cec options.\n2) Configure in this screen the right Hdmi connection port and enable Bh Hdmi-Cec.\n3) Click Save button and your box will try to connect with your Tv. All Done. If your Tv is compatible you can now control Tv and Box with Tv rc.\nPlease report @vuplus-community.net your tests on your tv model."
+		labtxt = "Welcome in Black Hole Hdmi Cec.\nThe new Black Hole Hdmi Cec driver allows you to control both your Tv and your Vu+ box with the Tv remote control only. Not all Tv models compatible. Bh Hdmi-Cec works on ALL latest Samsung(Anynet+) and many other Tv models.\nInstructions to connect the box to your Hdmi-Cec compatible Tv:\n1) Enter in your Tv Menu Options and enable all the Hdmi-Cec options.\n2) Configure in this screen the right Hdmi connection port and enable Bh Hdmi-Cec.\n3) Click Save button and your box will try to connect with your Tv. All Done. If your Tv is compatible you can now control Tv and Box with Tv rc.\nWarning: You have to select the specific port option if your box is connected to an ampli.\nPlease report @vuplus-community.net your tests on your tv model."
 		
 		self["key_red"] = Label(_("Save"))
 		self["lab1"] = Label(labtxt)
@@ -1656,7 +1656,8 @@ class BhHdmiCecConf(Screen, ConfigListScreen):
 		self.boxstandby = NoSave(ConfigYesNo(default="False"))
 		self.port = NoSave(ConfigSelection(default = "1", choices = [
 		("1", "Vu+ -> Tv Hdmi-1"), ("2", "Vu+ -> Tv Hdmi-2"), ("3", "Vu+ -> Tv Hdmi-3"), ("4", "Vu+ -> Tv Hdmi-4"),
-		("5", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-1")]))
+		("5", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-1"), ("6", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-2"), ("7", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-3"),
+		("8", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-4"), ("9", "Vu+ -> Ampli Hdmi-2 -> Tv Hdmi-2")]))
 		
 		self.tvstandby.value = config.hdmicec.tvstandby.value
 		self.tvwakeup.value = config.hdmicec.tvwakeup.value

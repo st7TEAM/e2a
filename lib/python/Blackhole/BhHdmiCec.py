@@ -10,7 +10,8 @@ class HdmiCec:
 		config.hdmicec.on = ConfigYesNo(default = True)
 		config.hdmicec.port = ConfigSelection(default = "1", choices = [
 		("1", "Vu+ -> Tv Hdmi-1"), ("2", "Vu+ -> Tv Hdmi-2"), ("3", "Vu+ -> Tv Hdmi-3"), ("4", "Vu+ -> Tv Hdmi-4"),
-		("5", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-1")])
+		("5", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-1"), ("6", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-2"), ("7", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-3"),
+		("8", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-4"), ("9", "Vu+ -> Ampli Hdmi-2 -> Tv Hdmi-2")])
 		config.hdmicec.tvstandby = ConfigYesNo(default = False)
 		config.hdmicec.tvwakeup = ConfigYesNo(default = False)
 		config.hdmicec.boxstandby = ConfigYesNo(default = False)
