@@ -1705,6 +1705,7 @@ class BhHdmiCecConf(Screen, ConfigListScreen):
 	def bhHdmiInit(self):
 		from enigma import eHdmiCEC
 		eHdmiCEC.getInstance().sendMessage(0x0F, 0x82)
+		eHdmiCEC.getInstance().sendMessage(0, 0x8E)
 		self.session.openWithCallback(self.bhClose, MessageBox, "Black Hole Hdmi-Cec inizialized.\nYou can now try to use your tv rc to control your Vu+ Box.", MessageBox.TYPE_INFO)
 
 	
