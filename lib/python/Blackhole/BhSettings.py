@@ -1633,7 +1633,7 @@ class BhHdmiCecConf(Screen, ConfigListScreen):
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
 		
-		labtxt = "Welcome in Black Hole Hdmi Cec.\nThe new Black Hole Hdmi Cec driver allows you to control both your Tv and your Vu+ box with the Tv remote control only. The Bh driver works on latest Samsung Tv series (Anynet+).\nInstructions to connect the box to Samsung Anynet+ system:\n1.) Be sure to configure the right Hdmi connection and to enable Bh Hdmi-Cec.\n2)Open your Tv menu->Application->Anynet+->Device List and click the red button \"refresh\". All Done. You can now control Tv and Box with Tv rc.\nPlease report @vuplus-community.net your tests on other tv models."
+		labtxt = "Welcome in Black Hole Hdmi Cec.\nThe new Black Hole Hdmi Cec driver allows you to control both your Tv and your Vu+ box with the Tv remote control only. Not all Tv models compatible. Bh Hdmi-Cec is tested and working on many latest Samsung and Sony Tv series.\nInstructions to connect the box to your Hdmi-Cec compatible Tv:\n1) Enter in your Tv Menu Options and enable all the Hdmi-Cec options.\n2) Configure in this screen the right Hdmi connection port and enable Bh Hdmi-Cec.\n3) Click Save button and your box will try to connect with your Tv. All Done. If your Tv is compatible you can now control Tv and Box with Tv rc.\nPlease report @vuplus-community.net your tests on your tv model."
 		
 		self["key_red"] = Label(_("Save"))
 		self["lab1"] = Label(labtxt)
@@ -1696,10 +1696,16 @@ class BhHdmiCecConf(Screen, ConfigListScreen):
 		config.hdmicec.tvwakeup.save()
 		config.hdmicec.boxstandby.save()
 		config.hdmicec.on.save()
-		config.hdmicec.port.save()
-		
+		config.hdmicec.port.save()		
 		configfile.save()
+				
+		self.bhHdmiInit()
 		
+	def bhHdmiInit(self):
+		from enigma import eHdmiCEC
+		eHdmiCEC.getInstance().sendMessage(0x0F, 0x82)
+		self.session.openWithCallback(self.bhClose, MessageBox, "Black Hole Hdmi-Cec inizialized.\nYou can now try to use your tv rc to control your Vu+ Box.", MessageBox.TYPE_INFO)
+
+	
+	def bhClose(self, answer):
 		self.close()
-	
-	
