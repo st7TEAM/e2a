@@ -21,7 +21,7 @@ public:
 	int oy;
 	unsigned char *pic_buffer;
 	std::string picinfo;
-	int bypp;
+	int test;
 	
 	Cfilepara(const char *mfile, int mid, std::string size)
 	{
@@ -29,7 +29,6 @@ public:
 		id = mid;
 		pic_buffer = NULL;
 		callback = true;
-		bypp = 3;
 		picinfo = mfile;
 		picinfo += + "\n" + size + "\n";
 	}
