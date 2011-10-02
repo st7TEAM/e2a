@@ -1,43 +1,69 @@
-/******************************************************************************
- *                          <<< Hdmi CEC Driver >>>                           *
- *                                                                            *
- *                     (c) 2011 Amedeo de Longis "meo"                        *
- *                          Licensed under the GPL                            *
- *                                                                            *
- ******************************************************************************/
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/ioctl.h>
 #include <string.h>
 
-#include <linux/input.h>
 #include <lib/base/init.h>
 #include <lib/base/init_num.h>
 #include <lib/base/eerror.h>
 #include <lib/base/ebase.h>
 #include <lib/driver/input_fake.h>
-#include <lib/base/nconfig.h>
 #include <lib/driver/hdmi_cec.h>
+#include <lib/driver/avswitch.h>
 
 eHdmiCEC *eHdmiCEC::instance = NULL;
-int last = 0;
 
-eHdmiCEC::eHdmiCEC(): eRCDriver(eRCInput::getInstance())
+DEFINE_REF(eHdmiCEC::eCECMessage);
+
+eHdmiCEC::eCECMessage::eCECMessage(int addr, int cmd, char *data, int length)
+{
+	address = addr;
+	command = cmd;
+	if (length > (int)sizeof(messageData)) length = sizeof(messageData);
+	if (length && data) memcpy(messageData, data, length);
+	dataLength = length;
+}
+
+int eHdmiCEC::eCECMessage::getAddress()
+{
+	return address;
+}
+
+int eHdmiCEC::eCECMessage::getCommand()
+{
+	return command;
+}
+
+int eHdmiCEC::eCECMessage::getData(char *data, int length)
+{
+	if (length > (int)dataLength) length = dataLength;
+	memcpy(data, messageData, length);
+	return length;
+}
+
+eHdmiCEC::eHdmiCEC()
+: eRCDriver(eRCInput::getInstance())
 {
 	ASSERT(!instance);
 	instance = this;
+	fixedAddress = false;
+	physicalAddress[0] = 0x10;
+	physicalAddress[1] = 0x00;
+	logicalAddress = 3;
+	deviceType = 3;
 	hdmiFd = ::open("/dev/hdmi_cec", O_RDWR | O_NONBLOCK);
 	if (hdmiFd >= 0)
 	{
-		messageNotifier = eSocketNotifier::create(eApp, hdmiFd, eSocketNotifier::Read);
-		CONNECT(messageNotifier->activated, eHdmiCEC::keyPressed);
-		
+		::ioctl(hdmiFd, 0); /* flush old messages */
+		getAddressInfo();
+		messageNotifier = eSocketNotifier::create(eApp, hdmiFd, eSocketNotifier::Read | eSocketNotifier::Priority);
+		CONNECT(messageNotifier->activated, eHdmiCEC::hdmiEvent);
 	}
 }
 
 eHdmiCEC::~eHdmiCEC()
 {
- 	if (hdmiFd >= 0) ::close(hdmiFd);
+	if (hdmiFd >= 0) ::close(hdmiFd);
 }
 
 eHdmiCEC *eHdmiCEC::getInstance()
@@ -45,172 +71,136 @@ eHdmiCEC *eHdmiCEC::getInstance()
 	return instance;
 }
 
-void eHdmiCEC::sendMessage(unsigned char address, unsigned char data)
+void eHdmiCEC::reportPhysicalAddress()
+{
+	struct cec_message txmessage;
+	txmessage.address = 0x0f; /* broadcast */
+	txmessage.data[0] = 0x84; /* report address */
+	txmessage.data[1] = physicalAddress[0];
+	txmessage.data[2] = physicalAddress[1];
+	txmessage.data[3] = deviceType;
+	txmessage.length = 4;
+	sendMessage(txmessage);
+}
+
+void eHdmiCEC::getAddressInfo()
 {
 	if (hdmiFd >= 0)
 	{
-		__u8 *buf =  new __u8[256];
-		std::string configvalue;
-		unsigned char phys = 0x10;
-		unsigned char phys2 = 0x00;
-                int port = 0;
-
-		if (!ePythonConfigQuery::getConfigValue("config.hdmicec.port", configvalue))
+		struct
 		{
-			port = atoi(configvalue.c_str());
-		}
-
-		switch (port)
+			unsigned char logical;
+			unsigned char physical[2];
+			unsigned char type;
+		} addressinfo;
+		if (::ioctl(hdmiFd, 1, &addressinfo) >= 0)
 		{
-			case 2:
-				phys = 0x20;
-				break;
-			case 3:
-				phys = 0x30;
-				break;
-			case 4:
-				phys = 0x40;
-				break;
-			case 5:
-				phys = 0x11;
-				break;
-			case 6:
-				phys = 0x21;
-				break;
-			case 7:
-				phys = 0x31;
-				break;	
-			case 8:
-				phys = 0x41;
-				break;
-			case 9:
-				phys = 0x22;
-				break;
-			default:
-				phys = 0x10;
-				break;
-		}
-
-		buf[0] = address;
-		buf[1] = 1;
-		buf[2] = data;
-		
-		switch (data)
-		{
-			case 0x82:
-				buf[1] = 3;
-				buf[3] = phys;
-				buf[4] = phys2;
-				break; /* active  */
-			case 0x90:
-				buf[1] = 2;
-				buf[3] = 0x00;
-				break; /* reportpower  */
-			case 0x47:
-				buf[1] = 11;
-				memcpy(buf+3, "BlackHole", 10);
-				break; /* setname  */
-			case 0x84:
-				buf[1] = 4;
-				buf[3] = phys;
-				buf[4] = phys2;
-				buf[5] = 3;
-				break; /* reportaddress  */
-			case 0x8E:
-				buf[1] = 2;
-				buf[3] = 0;
-				break; /* menuon  */
-
-		}
-		
-		::write(hdmiFd, buf, 2 + buf[1]);
-//		eDebug("[BlackHole-HDMICEC] message sent to %02x: %02x %02x %02x %02x", buf[0], buf[2], buf[3], buf[4], buf[5]);
-	}
-
-}
-
-void eHdmiCEC::keyPressed(int)
-{
-	struct cec_message message;
-	long code;
-	int key;
-	unsigned char address; 
-	unsigned char data;
-
-
-	std::string configvalue;
-	bool hdmion = (ePythonConfigQuery::getConfigValue("config.hdmicec.on", configvalue) >= 0 && configvalue == "True");
-//	eDebug("[BlackHole-HDMICEC] Hdmicec config : %d", hdmion);
-	
-	if (hdmion == true)
-	{ 
-	    if (::read(hdmiFd, &message, 2) == 2)
-	    {
-		if (::read(hdmiFd, &message.data, message.length) == message.length)
-		{
-			/* pass message object to python */
-			messageReceived(message.address, message.data[0]);
-//			eDebug("[BlackHole-HDMICEC] received from %02x command: %02x %02x %02x %02x", message.address, message.data[0], message.data[1], message.data[2], message.data[3]);
-			
-			if (message.data[0] == 0x44 || message.data[0] == 0x45)
+			deviceType = addressinfo.type;
+			logicalAddress = addressinfo.logical;
+			if (!fixedAddress)
 			{
-				last = 1;
-				if (message.data[0] == 0x45)
-					last = 0;
-					
-				key = message.data[1];
-				code = translateKey(key);
-				for (std::list<eRCDevice*>::iterator i(listeners.begin()); i!=listeners.end(); ++i)
+				if (memcmp(physicalAddress, addressinfo.physical, sizeof(physicalAddress)))
 				{
-					(*i)->handleCode(code);
+					eDebug("eHdmiCEC: detected physical address change: %02X%02X --> %02X%02X", physicalAddress[0], physicalAddress[1], addressinfo.physical[0], addressinfo.physical[1]);
+					memcpy(physicalAddress, addressinfo.physical, sizeof(physicalAddress));
+					reportPhysicalAddress();
+					/* emit */ addressChanged((physicalAddress[0] << 8) | physicalAddress[1]);
 				}
-			} else
-			{
-				// We have to reply
-				switch (message.data[0])
-				{
-					case 0x46:
-						address = 0;
-						data = 0x47; /* setname */
-						break;
-					case 0x8f:
-						address = 0;
-						data = 0x90; /* reportpower */
-						break;
-					case 0x83:
-						address = 0x0F;
-						data = 0x84; /* reportaddress */
-						break;
-					case 0x86:
-						address = 0x0F;
-						data = 0x84; /* reportaddress */
-						break;
-					case 0x85:
-						address = 0x0F;
-						data = 0x82; /* active source */
-						break;
-					case 0x8d:
-						address = 0;
-						data = 0x8E; /* menuon */
-						break;
-					default:
-						data = 0;
-						break;
-
-				}
-				if(data != 0)
-					sendMessage(address, data);
-					
 			}
 		}
-	    }
 	}
 }
 
-int eHdmiCEC::translateKey(int kcode)
+int eHdmiCEC::getLogicalAddress()
 {
-	int key = 0;
-	switch (kcode)
+	return logicalAddress;
+}
+
+int eHdmiCEC::getPhysicalAddress()
+{
+	return (physicalAddress[0] << 8) | physicalAddress[1];
+}
+
+void eHdmiCEC::setFixedPhysicalAddress(int address)
+{
+	if (address)
+	{
+		fixedAddress = true;
+		physicalAddress[0] = (address >> 8) & 0xff;
+		physicalAddress[1] = address & 0xff;
+		/* report our (possibly new) address */
+		reportPhysicalAddress();
+	}
+	else
+	{
+		fixedAddress = false;
+		/* get our current address */
+		getAddressInfo();
+	}
+}
+
+int eHdmiCEC::getDeviceType()
+{
+	return deviceType;
+}
+
+bool eHdmiCEC::getActiveStatus()
+{
+	bool active = true;
+	eAVSwitch *avswitch = eAVSwitch::getInstance();
+	if (avswitch) active = avswitch->isActive();
+	return active;
+}
+
+void eHdmiCEC::hdmiEvent(int what)
+{
+	if (what & eSocketNotifier::Priority)
+	{
+		getAddressInfo();
+	}
+	if (what & eSocketNotifier::Read)
+	{
+		struct cec_message rxmessage;
+		if (::read(hdmiFd, &rxmessage, 2) == 2)
+		{
+			if (::read(hdmiFd, &rxmessage.data, rxmessage.length) == rxmessage.length)
+			{
+				bool keypressed = false;
+				static unsigned char pressedkey = 0;
+
+				eDebugNoNewLine("eHdmiCEC: received message");
+				for (int i = 0; i < rxmessage.length; i++)
+				{
+					eDebugNoNewLine(" %02X", rxmessage.data[i]);
+				}
+				eDebug(" ");
+				switch (rxmessage.data[0])
+				{
+					case 0x44: /* key pressed */
+						keypressed = true;
+						pressedkey = rxmessage.data[1];
+					case 0x45: /* key released */
+					{
+						long code = translateKey(pressedkey);
+						if (keypressed) code |= 0x80000000;
+						for (std::list<eRCDevice*>::iterator i(listeners.begin()); i != listeners.end(); ++i)
+						{
+							(*i)->handleCode(code);
+						}
+						break;
+					}
+				}
+				ePtr<iCECMessage> msg = new eCECMessage(rxmessage.address, rxmessage.data[0], (char*)&rxmessage.data[1], rxmessage.length);
+				messageReceived(msg);
+			}
+		}
+	}
+}
+
+long eHdmiCEC::translateKey(unsigned char code)
+{
+	long key = 0;
+	switch (code)
 	{
 		case 0x32:
 			key = 0x8b;
@@ -284,7 +274,6 @@ int eHdmiCEC::translateKey(int kcode)
 		case 0x74:
 			key = 0x190;
 			break;
-
 		default:
 			key = 0x8b;
 			break;
@@ -292,33 +281,51 @@ int eHdmiCEC::translateKey(int kcode)
 	return key;
 }
 
+void eHdmiCEC::sendMessage(struct cec_message &message)
+{
+	if (hdmiFd >= 0)
+	{
+		eDebugNoNewLine("eHdmiCEC: send message");
+		for (int i = 0; i < message.length; i++)
+		{
+			eDebugNoNewLine(" %02X", message.data[i]);
+		}
+		eDebug(" ");
+		::write(hdmiFd, &message, 2 + message.length);
+	}
+}
+
+void eHdmiCEC::sendMessage(unsigned char address, unsigned char cmd, char *data, int length)
+{
+	struct cec_message message;
+	message.address = address;
+	if (length > (int)(sizeof(message.data) - 1)) length = sizeof(message.data) - 1;
+	message.length = length + 1;
+	memcpy(&message.data[1], data, length);
+	message.data[0] = cmd;
+	sendMessage(message);
+}
+
 void eHdmiCECDevice::handleCode(long code)
 {
-	
-	switch (last)
+	if (code & 0x80000000)
 	{
-	case 0:
-		/*emit*/ input->keyPressed(eRCKey(this, code, eRCKey::flagBreak));
-		break;
-	case 1:
-		/*emit*/ input->keyPressed(eRCKey(this, code, 0));
-		break;
-	case 2:
-		/*emit*/ input->keyPressed(eRCKey(this, code, eRCKey::flagRepeat));
-		break;
+		/*emit*/ input->keyPressed(eRCKey(this, code & 0xffff, 0));
 	}
-
+	else
+	{
+		/*emit*/ input->keyPressed(eRCKey(this, code & 0xffff, eRCKey::flagBreak));
+	}
 }
 
 eHdmiCECDevice::eHdmiCECDevice(eRCDriver *driver)
-			: eRCDevice("Hdmi-Cec", driver)
+ : eRCDevice("Hdmi-CEC", driver)
 {
 }
 
-
 const char *eHdmiCECDevice::getDescription() const
 {
-	return "Black Hole Hdmi-Cec";
+	return "Hdmi-CEC device";
 }
 
 class eHdmiCECInit
@@ -332,4 +339,4 @@ public:
 	}
 };
 
-eAutoInitP0<eHdmiCECInit> init_hdmicec(eAutoInitNumbers::rc+1, "Hdmi CEC driver");
+eAutoInitP0<eHdmiCECInit> init_hdmicec(eAutoInitNumbers::rc + 2, "Hdmi CEC driver");

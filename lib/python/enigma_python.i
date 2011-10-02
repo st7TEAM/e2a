@@ -163,6 +163,7 @@ typedef long time_t;
 %immutable eDVBResourceManager::frontendUseMaskChanged;
 %immutable eAVSwitch::vcr_sb_notifier;
 %immutable eHdmiCEC::messageReceived;
+%immutable eHdmiCEC::addressChanged;
 %immutable ePythonMessagePump::recv_msg;
 %immutable eDVBLocalTimeHandler::m_timeUpdated;
 %include <lib/base/message.h>
@@ -259,6 +260,12 @@ public:
 	$1 = $input->get();
 }
 
+%template(PSignal1VoidICECMessage) PSignal1<void,ePtr<iCECMessage>&>;
+
+%typemap(out) PSignal1VoidICECMessage {
+	$1 = $input->get();
+}
+
 template<class R, class P0, class P1> class PSignal2
 {
 public:
@@ -309,6 +316,16 @@ PyObject *New_iRecordableServicePtr(const ePtr<iRecordableService> &ptr)
 #endif
     return SWIG_NewPointerObj((void*)(result), SWIGTYPE_p_ePtrT_iRecordableService_t, 1);
 }
+/*BlackHole */
+PyObject *New_iCECMessagePtr(const ePtr<iCECMessage> &ptr)
+{
+    ePtr<iCECMessage> *result = new ePtr<iCECMessage>(ptr);
+#ifndef SWIGTYPE_p_ePtrT_iCECMessage_t
+#define SWIGTYPE_p_ePtrT_iCECMessage_t SWIGTYPE_p_ePtrTiCECMessage_t
+#endif
+    return SWIG_NewPointerObj((void*)(result), SWIGTYPE_p_ePtrT_iCECMessage_t, 1);
+}
+/* end*/
 %}
 
 /* needed for service groups */

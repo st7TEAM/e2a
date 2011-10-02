@@ -69,7 +69,7 @@ class DeliteSettings(Screen):
 		elif self.sel == 2:
 			self.session.open(DeliteDevicesPanel)
 		elif self.sel == 3:
-			self.session.open(BhHdmiCecConf2)
+			self.session.open(BhHdmiCecConf)
 		elif self.sel == 4:
 			self.session.open(DeliteKernelModules)
 		elif self.sel == 5:
@@ -1618,21 +1618,13 @@ class DeliteDttDriversList(Screen):
 		mybox.setTitle("Info")
 		self.close()
 	
-class BhHdmiCecConf2(Screen, ConfigListScreen):
+class BhHdmiCecConf(Screen, ConfigListScreen):
 	skin = """
-	<screen position="center,center" size="900,600" title="Black Hole Hdmi Cec Setup">
-		<widget name="config" position="10,10" size="880,230" scrollbarMode="showOnDemand"/>
-		<widget name="current_address" position="25,240" size="550,30" zPosition="10" font="Regular;21" foregroundColor="red" halign="left" valign="center" />
-		<widget name="fixed_address" position="25,270" size="550,30" zPosition="10" font="Regular;21" halign="left" valign="center" />
-		<widget name="lab1" position="10,300" size="880,250" font="Regular;20" halign="center" valign="center" foregroundColor="green" />
-		<ePixmap position="68,560" size="150,40" pixmap="skin_default/buttons/red.png" alphatest="on" zPosition="1" />
-		<ePixmap position="276,560" size="150,40" pixmap="skin_default/buttons/green.png" alphatest="on" zPosition="1" />
-		<ePixmap position="484,560" size="150,40" pixmap="skin_default/buttons/yellow.png" alphatest="on" zPosition="1" />
-		<ePixmap position="692,560" size="150,40" pixmap="skin_default/buttons/blue.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="68,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="red" transparent="1" />
-		<widget name="key_green" position="276,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="green" transparent="1" />
-		<widget name="key_yellow" position="484,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
-		<widget name="key_blue" position="692,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
+	<screen position="center,center" size="900,500" title="Black Hole Hdmi Cec Setup">
+		<widget name="config" position="10,10" size="880,140" scrollbarMode="showOnDemand"/>
+		<widget name="lab1" position="10,150" size="880,300" font="Regular;20" halign="center" valign="center" foregroundColor="green" />
+		<ePixmap pixmap="skin_default/buttons/red.png" position="380,460" size="140,40" alphatest="on"/>
+		<widget name="key_red" position="380,460" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
 	</screen>"""
 	
 	def __init__(self, session):
@@ -1641,97 +1633,81 @@ class BhHdmiCecConf2(Screen, ConfigListScreen):
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
 		
-		labtxt = "Welcome in Black Hole Hdmi Cec\nThe CEC allows HDMI devices to control each other when necessary and allows the user to operate multiple devices with one remote control handset.\nNot all tv are compatible with the box drivers.\nBe sure to activate in your Tv menu the options about Hdmi Cec. For example in Samsung Tv goto Menu->Application->Anynet+->Setup and set Anynet+ On - Auto turn off Yes.\nPlease report @vuplus-community.net your tests on your tv model."
+		labtxt = "Welcome in Black Hole Hdmi Cec.\nThe new Black Hole Hdmi Cec driver allows you to control both your Tv and your Vu+ box with the Tv remote control only. Not all Tv models compatible. Bh Hdmi-Cec works on ALL latest Samsung(Anynet+) and many other Tv models.\nInstructions to connect the box to your Hdmi-Cec compatible Tv:\n1) Enter in your Tv Menu Options and enable all the Hdmi-Cec options.\n2) Configure in this screen the right Hdmi connection port and enable Bh Hdmi-Cec.\n3) Click Save button and your box will try to connect with your Tv. All Done. If your Tv is compatible you can now control Tv and Box with Tv rc.\nWarning: You have to select the specific port option if your box is connected to an ampli.\nPlease report @vuplus-community.net your tests on your tv model."
 		
 		self["key_red"] = Label(_("Save"))
-		self["key_green"] = Label(_("Set Fixed"))
-		self["key_yellow"] = Label(_("Clear fixed"))
-		self["key_blue"] = Label(_("Cancel"))
 		self["lab1"] = Label(labtxt)
-		self["current_address"] = Label("")
-		self["fixed_address"] = Label("")
 		
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
 		{
-			"back": self.keyCancel,
-			"red": self.keyGo,
-			"blue": self.keyCancel,
-			"green": self.setFixedAddress,
-			"yellow": self.clearFixedAddress
+			"red": self.saveMyosd,
+			"back": self.close
 
 		})
 			
-
-		self.list.append(getConfigListEntry(_("Enabled"), config.hdmicec.enabled))
-		self.list.append(getConfigListEntry(_("Put TV in standby"), config.hdmicec.control_tv_standby))
-		self.list.append(getConfigListEntry(_("Wakeup TV from standby"), config.hdmicec.control_tv_wakeup))
-		self.list.append(getConfigListEntry(_("Switch TV to correct input"), config.hdmicec.report_active_source))
-		self.list.append(getConfigListEntry(_("Use TV remote control"), config.hdmicec.report_active_menu))
-		self.list.append(getConfigListEntry(_("Handle standby from TV"), config.hdmicec.handle_tv_standby))
-		self.list.append(getConfigListEntry(_("Handle wakeup from TV"), config.hdmicec.handle_tv_wakeup))
-		self.list.append(getConfigListEntry(_("Wakeup signal from TV"), config.hdmicec.tv_wakeup_detection))
-		self.list.append(getConfigListEntry(_("Handle deepstandby events"), config.hdmicec.handle_deepstandby_events))
+		self.updateList()
+	
+	
+	def updateList(self):
+		
+		self.on = NoSave(ConfigYesNo(default="False"))
+		self.tvstandby = NoSave(ConfigYesNo(default="False"))
+		self.tvwakeup = NoSave(ConfigYesNo(default="False"))
+		self.boxstandby = NoSave(ConfigYesNo(default="False"))
+		self.port = NoSave(ConfigSelection(default = "1", choices = [
+		("1", "Vu+ -> Tv Hdmi-1"), ("2", "Vu+ -> Tv Hdmi-2"), ("3", "Vu+ -> Tv Hdmi-3"), ("4", "Vu+ -> Tv Hdmi-4"),
+		("5", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-1"), ("6", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-2"), ("7", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-3"),
+		("8", "Vu+ -> Ampli Hdmi-1 -> Tv Hdmi-4"), ("9", "Vu+ -> Ampli Hdmi-2 -> Tv Hdmi-2")]))
+		
+		self.tvstandby.value = config.hdmicec.tvstandby.value
+		self.tvwakeup.value = config.hdmicec.tvwakeup.value
+		self.boxstandby.value = config.hdmicec.boxstandby.value
+		self.on.value = config.hdmicec.on.value
+		self.port.value = config.hdmicec.port.value
+		
+		item = getConfigListEntry(_("Enable Black Hole Hdmi-Cec"), self.on)
+		self.list.append(item)
+		
+		item = getConfigListEntry(_("Box connected to port:"), self.port)
+		self.list.append(item)
+		
+		item = getConfigListEntry(_("1 Tv remote control standby \t->  standby Vu+ box"), self.tvstandby)
+		self.list.append(item)
+		
+		item = getConfigListEntry(_("2 Tv remote control wakeup \t->  wakeup Vu+ box"), self.tvwakeup)
+		self.list.append(item)
+		
+		item = getConfigListEntry(_("3 Vu+ remote control standby \t->  standby Tv"), self.boxstandby)
+		self.list.append(item)
+		
+		
 		self["config"].list = self.list
 		self["config"].l.setList(self.list)
-	
-		self.updateAddress()
-
-	def keyLeft(self):
-		ConfigListScreen.keyLeft(self)
-
-	def keyRight(self):
-		ConfigListScreen.keyRight(self)
-
-
-	def keyCancel(self):
-		for x in self["config"].list:
-			x[1].cancel()
-		self.close()
-
-	def setFixedAddress(self):
-		import Components.HdmiCec
-		Components.HdmiCec.hdmi_cec.setFixedPhysicalAddress(Components.HdmiCec.hdmi_cec.getPhysicalAddress())
-		self.updateAddress()
-
-	def clearFixedAddress(self):
-		import Components.HdmiCec
-		Components.HdmiCec.hdmi_cec.setFixedPhysicalAddress("0.0.0.0")
-		self.updateAddress()
-
-	def updateAddress(self):
-		import Components.HdmiCec
-		self["current_address"].setText(_("Current CEC address") + ": " + Components.HdmiCec.hdmi_cec.getPhysicalAddress())
-		if config.hdmicec.fixed_physical_address.value == "0.0.0.0":
-			fixedaddresslabel = ""
-		else:
-			fixedaddresslabel = _("Using fixed address") + ": " + config.hdmicec.fixed_physical_address.value
-		self["fixed_address"].setText(fixedaddresslabel)
-	
-	def keyGo(self):
-		for x in self["config"].list:
-			x[1].save()
+		
+		
+	def saveMyosd(self):
+		
+		config.hdmicec.tvstandby.value = self.tvstandby.value
+		config.hdmicec.tvwakeup.value = self.tvwakeup.value
+		config.hdmicec.boxstandby.value = self.boxstandby.value
+		config.hdmicec.on.value = self.on.value
+		config.hdmicec.port.value = self.port.value
+		
+		config.hdmicec.tvstandby.save()
+		config.hdmicec.tvwakeup.save()
+		config.hdmicec.boxstandby.save()
+		config.hdmicec.on.save()
+		config.hdmicec.port.save()		
 		configfile.save()
+				
 		self.bhHdmiInit()
 		
 	def bhHdmiInit(self):
-		if config.hdmicec.enabled.value:
-			import struct
-			from enigma import eHdmiCEC
-			address = 0x0f
-			cmd = 0x82
-			physicaladdress = eHdmiCEC.getInstance().getPhysicalAddress()
-			data = str(struct.pack('BB', int(physicaladdress/256), int(physicaladdress%256)))
-			eHdmiCEC.getInstance().sendMessage(address, cmd, data, len(data))
-			address = 0
-			cmd = 0x8e
-			data = str(struct.pack('B', 0x00))
-			eHdmiCEC.getInstance().sendMessage(address, cmd, data, len(data))
-		
-		
-		self.session.openWithCallback(self.bhClose, MessageBox, "Black Hole Hdmi-Cec inizialized.", MessageBox.TYPE_INFO)
-		
+		from enigma import eHdmiCEC
+		eHdmiCEC.getInstance().sendMessage(0x0F, 0x82)
+		eHdmiCEC.getInstance().sendMessage(0, 0x8E)
+		self.session.openWithCallback(self.bhClose, MessageBox, "Black Hole Hdmi-Cec inizialized.\nYou can now try to use your tv rc to control your Vu+ Box.", MessageBox.TYPE_INFO)
+
+	
 	def bhClose(self, answer):
 		self.close()
-		
-		
-	
