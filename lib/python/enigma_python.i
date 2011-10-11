@@ -101,8 +101,6 @@ is usually caused by not marking PSignals as immutable.
 #include <lib/dvb_ci/dvbci_ui.h>
 #include <lib/python/python.h>
 #include <lib/gdi/picload.h>
-#include <lib/driver/memtest.h>
-#include <lib/driver/sc_test.h>
 %}
 
 %feature("ref")   iObject "$this->AddRef(); /* eDebug(\"AddRef (%s:%d)!\", __FILE__, __LINE__); */ "
@@ -225,8 +223,6 @@ typedef long time_t;
 %include <lib/dvb/db.h>
 %include <lib/python/python.h>
 %include <lib/gdi/picload.h>
-%include <lib/driver/memtest.h>
-%include <lib/driver/sc_test.h>
 /**************  eptr  **************/
 
 /**************  signals  **************/
