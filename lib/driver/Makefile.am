@@ -11,7 +11,6 @@ noinst_LIBRARIES = libenigma_driver.a
 
 libenigma_driver_a_SOURCES = \
 	avswitch.cpp \
-	hdmi_cec.cpp \
 	etimezone.cpp \
 	misc_options.cpp \
 	rc.cpp \
@@ -22,7 +21,6 @@ libenigma_driver_a_SOURCES = \
 driverincludedir = $(pkgincludedir)/lib/driver
 driverinclude_HEADERS = \
 	avswitch.h \
-	hdmi_cec.h \
 	etimezone.h \
 	input_fake.h \
 	misc_options.h \

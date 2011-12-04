@@ -68,8 +68,8 @@ class DeliteSettings(Screen):
 			self.session.open(DeliteSetupOSD2)
 		elif self.sel == 2:
 			self.session.open(DeliteDevicesPanel)
-		elif self.sel == 3:
-			self.session.open(BhHdmiCecConf2)
+#		elif self.sel == 3:
+#			self.session.open(BhHdmiCecConf2)
 		elif self.sel == 4:
 			self.session.open(DeliteKernelModules)
 		elif self.sel == 5:
@@ -130,12 +130,12 @@ class DeliteSettings(Screen):
 		res = (name, png, idx)
 		self.list.append(res)
 		
-		mypixmap = mypath + "icons/infopanel_samba.png"
-		png = LoadPixmap(mypixmap)
-		name = "Black Hole Hdmi Cec"
-		idx = 3
-		res = (name, png, idx)
-		self.list.append(res)
+#		mypixmap = mypath + "icons/infopanel_samba.png"
+#		png = LoadPixmap(mypixmap)
+#		name = "Black Hole Hdmi Cec"
+#		idx = 3
+#		res = (name, png, idx)
+#		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_kmod.png"
 		png = LoadPixmap(mypixmap)
@@ -1618,120 +1618,120 @@ class DeliteDttDriversList(Screen):
 		mybox.setTitle("Info")
 		self.close()
 	
-class BhHdmiCecConf2(Screen, ConfigListScreen):
-	skin = """
-	<screen position="center,center" size="900,600" title="Black Hole Hdmi Cec Setup">
-		<widget name="config" position="10,10" size="880,230" scrollbarMode="showOnDemand"/>
-		<widget name="current_address" position="25,240" size="550,30" zPosition="10" font="Regular;21" foregroundColor="red" halign="left" valign="center" />
-		<widget name="fixed_address" position="25,270" size="550,30" zPosition="10" font="Regular;21" halign="left" valign="center" />
-		<widget name="lab1" position="10,300" size="880,250" font="Regular;20" halign="center" valign="center" foregroundColor="green" />
-		<ePixmap position="68,560" size="150,40" pixmap="skin_default/buttons/red.png" alphatest="on" zPosition="1" />
-		<ePixmap position="276,560" size="150,40" pixmap="skin_default/buttons/green.png" alphatest="on" zPosition="1" />
-		<ePixmap position="484,560" size="150,40" pixmap="skin_default/buttons/yellow.png" alphatest="on" zPosition="1" />
-		<ePixmap position="692,560" size="150,40" pixmap="skin_default/buttons/blue.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="68,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="red" transparent="1" />
-		<widget name="key_green" position="276,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="green" transparent="1" />
-		<widget name="key_yellow" position="484,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
-		<widget name="key_blue" position="692,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
-	</screen>"""
+#class BhHdmiCecConf2(Screen, ConfigListScreen):
+#	skin = """
+#	<screen position="center,center" size="900,600" title="Black Hole Hdmi Cec Setup">
+#		<widget name="config" position="10,10" size="880,230" scrollbarMode="showOnDemand"/>
+#		<widget name="current_address" position="25,240" size="550,30" zPosition="10" font="Regular;21" foregroundColor="red" halign="left" valign="center" />
+#		<widget name="fixed_address" position="25,270" size="550,30" zPosition="10" font="Regular;21" halign="left" valign="center" />
+#		<widget name="lab1" position="10,300" size="880,250" font="Regular;20" halign="center" valign="center" foregroundColor="green" />
+#		<ePixmap position="68,560" size="150,40" pixmap="skin_default/buttons/red.png" alphatest="on" zPosition="1" />
+#		<ePixmap position="276,560" size="150,40" pixmap="skin_default/buttons/green.png" alphatest="on" zPosition="1" />
+#		<ePixmap position="484,560" size="150,40" pixmap="skin_default/buttons/yellow.png" alphatest="on" zPosition="1" />
+#		<ePixmap position="692,560" size="150,40" pixmap="skin_default/buttons/blue.png" alphatest="on" zPosition="1" />
+#		<widget name="key_red" position="68,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="red" transparent="1" />
+#		<widget name="key_green" position="276,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="green" transparent="1" />
+#		<widget name="key_yellow" position="484,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
+#		<widget name="key_blue" position="692,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
+#	</screen>"""
 	
-	def __init__(self, session):
-		Screen.__init__(self, session)
+#	def __init__(self, session):
+#		Screen.__init__(self, session)
 		
-		self.list = []
-		ConfigListScreen.__init__(self, self.list)
+#		self.list = []
+#		ConfigListScreen.__init__(self, self.list)
 		
-		labtxt = "Welcome in Black Hole Hdmi Cec\nThe CEC allows HDMI devices to control each other when necessary and allows the user to operate multiple devices with one remote control handset.\nNot all tv are compatible with the box drivers.\nBe sure to activate in your Tv menu the options about Hdmi Cec. For example in Samsung Tv goto Menu->Application->Anynet+->Setup and set Anynet+ On - Auto turn off Yes.\nPlease report @vuplus-community.net your tests on your tv model."
+#		labtxt = "Welcome in Black Hole Hdmi Cec\nThe CEC allows HDMI devices to control each other when necessary and allows the user to operate multiple devices with one remote control handset.\nNot all tv are compatible with the box drivers.\nBe sure to activate in your Tv menu the options about Hdmi Cec. For example in Samsung Tv goto Menu->Application->Anynet+->Setup and set Anynet+ On - Auto turn off Yes.\nPlease report @vuplus-community.net your tests on your tv model."
 		
-		self["key_red"] = Label(_("Save"))
-		self["key_green"] = Label(_("Set Fixed"))
-		self["key_yellow"] = Label(_("Clear fixed"))
-		self["key_blue"] = Label(_("Cancel"))
-		self["lab1"] = Label(labtxt)
-		self["current_address"] = Label("")
-		self["fixed_address"] = Label("")
+#		self["key_red"] = Label(_("Save"))
+#		self["key_green"] = Label(_("Set Fixed"))
+#		self["key_yellow"] = Label(_("Clear fixed"))
+#		self["key_blue"] = Label(_("Cancel"))
+#		self["lab1"] = Label(labtxt)
+#		self["current_address"] = Label("")
+#		self["fixed_address"] = Label("")
 		
-		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
-		{
-			"back": self.keyCancel,
-			"red": self.keyGo,
-			"blue": self.keyCancel,
-			"green": self.setFixedAddress,
-			"yellow": self.clearFixedAddress
+#		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+#		{
+#			"back": self.keyCancel,
+#			"red": self.keyGo,
+#			"blue": self.keyCancel,
+#			"green": self.setFixedAddress,
+#			"yellow": self.clearFixedAddress
 
-		})
+#		})
 			
 
-		self.list.append(getConfigListEntry(_("Enabled"), config.hdmicec.enabled))
-		self.list.append(getConfigListEntry(_("Put TV in standby"), config.hdmicec.control_tv_standby))
-		self.list.append(getConfigListEntry(_("Wakeup TV from standby"), config.hdmicec.control_tv_wakeup))
-		self.list.append(getConfigListEntry(_("Switch TV to correct input"), config.hdmicec.report_active_source))
-		self.list.append(getConfigListEntry(_("Use TV remote control"), config.hdmicec.report_active_menu))
-		self.list.append(getConfigListEntry(_("Handle standby from TV"), config.hdmicec.handle_tv_standby))
-		self.list.append(getConfigListEntry(_("Handle wakeup from TV"), config.hdmicec.handle_tv_wakeup))
-		self.list.append(getConfigListEntry(_("Wakeup signal from TV"), config.hdmicec.tv_wakeup_detection))
-		self.list.append(getConfigListEntry(_("Handle deepstandby events"), config.hdmicec.handle_deepstandby_events))
-		self["config"].list = self.list
-		self["config"].l.setList(self.list)
+#		self.list.append(getConfigListEntry(_("Enabled"), config.hdmicec.enabled))
+#		self.list.append(getConfigListEntry(_("Put TV in standby"), config.hdmicec.control_tv_standby))
+#		self.list.append(getConfigListEntry(_("Wakeup TV from standby"), config.hdmicec.control_tv_wakeup))
+#		self.list.append(getConfigListEntry(_("Switch TV to correct input"), config.hdmicec.report_active_source))
+#		self.list.append(getConfigListEntry(_("Use TV remote control"), config.hdmicec.report_active_menu))
+#		self.list.append(getConfigListEntry(_("Handle standby from TV"), config.hdmicec.handle_tv_standby))
+#		self.list.append(getConfigListEntry(_("Handle wakeup from TV"), config.hdmicec.handle_tv_wakeup))
+#		self.list.append(getConfigListEntry(_("Wakeup signal from TV"), config.hdmicec.tv_wakeup_detection))
+#		self.list.append(getConfigListEntry(_("Handle deepstandby events"), config.hdmicec.handle_deepstandby_events))
+#		self["config"].list = self.list
+#		self["config"].l.setList(self.list)
 	
-		self.updateAddress()
+#		self.updateAddress()
 
-	def keyLeft(self):
-		ConfigListScreen.keyLeft(self)
+#	def keyLeft(self):
+#		ConfigListScreen.keyLeft(self)
 
-	def keyRight(self):
-		ConfigListScreen.keyRight(self)
+#	def keyRight(self):
+#		ConfigListScreen.keyRight(self)
 
 
-	def keyCancel(self):
-		for x in self["config"].list:
-			x[1].cancel()
-		self.close()
+#	def keyCancel(self):
+#		for x in self["config"].list:
+#			x[1].cancel()
+#		self.close()
 
-	def setFixedAddress(self):
-		import Components.HdmiCec
-		Components.HdmiCec.hdmi_cec.setFixedPhysicalAddress(Components.HdmiCec.hdmi_cec.getPhysicalAddress())
-		self.updateAddress()
+#	def setFixedAddress(self):
+#		import Components.HdmiCec
+#		Components.HdmiCec.hdmi_cec.setFixedPhysicalAddress(Components.HdmiCec.hdmi_cec.getPhysicalAddress())
+#		self.updateAddress()
 
-	def clearFixedAddress(self):
-		import Components.HdmiCec
-		Components.HdmiCec.hdmi_cec.setFixedPhysicalAddress("0.0.0.0")
-		self.updateAddress()
+#	def clearFixedAddress(self):
+#		import Components.HdmiCec
+#		Components.HdmiCec.hdmi_cec.setFixedPhysicalAddress("0.0.0.0")
+#		self.updateAddress()
 
-	def updateAddress(self):
-		import Components.HdmiCec
-		self["current_address"].setText(_("Current CEC address") + ": " + Components.HdmiCec.hdmi_cec.getPhysicalAddress())
-		if config.hdmicec.fixed_physical_address.value == "0.0.0.0":
-			fixedaddresslabel = ""
-		else:
-			fixedaddresslabel = _("Using fixed address") + ": " + config.hdmicec.fixed_physical_address.value
-		self["fixed_address"].setText(fixedaddresslabel)
+#	def updateAddress(self):
+#		import Components.HdmiCec
+#		self["current_address"].setText(_("Current CEC address") + ": " + Components.HdmiCec.hdmi_cec.getPhysicalAddress())
+#		if config.hdmicec.fixed_physical_address.value == "0.0.0.0":
+#			fixedaddresslabel = ""
+#		else:
+#			fixedaddresslabel = _("Using fixed address") + ": " + config.hdmicec.fixed_physical_address.value
+#		self["fixed_address"].setText(fixedaddresslabel)
 	
-	def keyGo(self):
-		for x in self["config"].list:
-			x[1].save()
-		configfile.save()
-		self.bhHdmiInit()
+#	def keyGo(self):
+#		for x in self["config"].list:
+#			x[1].save()
+#		configfile.save()
+#		self.bhHdmiInit()
 		
-	def bhHdmiInit(self):
-		if config.hdmicec.enabled.value:
-			import struct
-			from enigma import eHdmiCEC
-			address = 0x0f
-			cmd = 0x82
-			physicaladdress = eHdmiCEC.getInstance().getPhysicalAddress()
-			data = str(struct.pack('BB', int(physicaladdress/256), int(physicaladdress%256)))
-			eHdmiCEC.getInstance().sendMessage(address, cmd, data, len(data))
-			address = 0
-			cmd = 0x8e
-			data = str(struct.pack('B', 0x00))
-			eHdmiCEC.getInstance().sendMessage(address, cmd, data, len(data))
+#	def bhHdmiInit(self):
+#		if config.hdmicec.enabled.value:
+#			import struct
+#			from enigma import eHdmiCEC
+#			address = 0x0f
+#			cmd = 0x82
+#			physicaladdress = eHdmiCEC.getInstance().getPhysicalAddress()
+#			data = str(struct.pack('BB', int(physicaladdress/256), int(physicaladdress%256)))
+#			eHdmiCEC.getInstance().sendMessage(address, cmd, data, len(data))
+#			address = 0
+#			cmd = 0x8e
+#			data = str(struct.pack('B', 0x00))
+#			eHdmiCEC.getInstance().sendMessage(address, cmd, data, len(data))
 		
 		
-		self.session.openWithCallback(self.bhClose, MessageBox, "Black Hole Hdmi-Cec inizialized.", MessageBox.TYPE_INFO)
+#		self.session.openWithCallback(self.bhClose, MessageBox, "Black Hole Hdmi-Cec inizialized.", MessageBox.TYPE_INFO)
 		
-	def bhClose(self, answer):
-		self.close()
+#	def bhClose(self, answer):
+#		self.close()
 		
 		
 	

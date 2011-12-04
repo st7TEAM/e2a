@@ -91,7 +91,6 @@ is usually caused by not marking PSignals as immutable.
 #include <lib/components/scan.h>
 #include <lib/components/file_eraser.h>
 #include <lib/driver/avswitch.h>
-#include <lib/driver/hdmi_cec.h>
 #include <lib/driver/rfmod.h>
 #include <lib/driver/misc_options.h>
 #include <lib/driver/etimezone.h>
@@ -160,8 +159,6 @@ typedef long time_t;
 %immutable eSocket_UI::socketStateChanged;
 %immutable eDVBResourceManager::frontendUseMaskChanged;
 %immutable eAVSwitch::vcr_sb_notifier;
-%immutable eHdmiCEC::messageReceived;
-%immutable eHdmiCEC::addressChanged;
 %immutable ePythonMessagePump::recv_msg;
 %immutable eDVBLocalTimeHandler::m_timeUpdated;
 %include <lib/base/message.h>
@@ -212,7 +209,6 @@ typedef long time_t;
 %include <lib/components/scan.h>
 %include <lib/components/file_eraser.h>
 %include <lib/driver/avswitch.h>
-%include <lib/driver/hdmi_cec.h>
 %include <lib/driver/rfmod.h>
 %include <lib/driver/misc_options.h>
 %include <lib/driver/etimezone.h>
@@ -256,12 +252,6 @@ public:
 	$1 = $input->get();
 }
 
-%template(PSignal1VoidICECMessage) PSignal1<void,ePtr<iCECMessage>&>;
-
-%typemap(out) PSignal1VoidICECMessage {
-	$1 = $input->get();
-}
-
 template<class R, class P0, class P1> class PSignal2
 {
 public:
@@ -273,14 +263,6 @@ public:
 %typemap(out) PSignal2VoidIRecordableServiceInt {
 	$1 = $input->get();
 }
-
-/*BlackHole */
-%template(PSignal2VII) PSignal2<void,int,int>;
-
-%typemap(out) PSignal2VII {
-       $1 = $input->get();
-}
-/* end*/
 
 %{
 RESULT SwigFromPython(ePtr<gPixmap> &result, PyObject *obj)
@@ -312,16 +294,6 @@ PyObject *New_iRecordableServicePtr(const ePtr<iRecordableService> &ptr)
 #endif
     return SWIG_NewPointerObj((void*)(result), SWIGTYPE_p_ePtrT_iRecordableService_t, 1);
 }
-/*BlackHole */
-PyObject *New_iCECMessagePtr(const ePtr<iCECMessage> &ptr)
-{
-    ePtr<iCECMessage> *result = new ePtr<iCECMessage>(ptr);
-#ifndef SWIGTYPE_p_ePtrT_iCECMessage_t
-#define SWIGTYPE_p_ePtrT_iCECMessage_t SWIGTYPE_p_ePtrTiCECMessage_t
-#endif
-    return SWIG_NewPointerObj((void*)(result), SWIGTYPE_p_ePtrT_iCECMessage_t, 1);
-}
-/* end*/
 %}
 
 /* needed for service groups */
