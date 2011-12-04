@@ -708,14 +708,11 @@ class AdapterSetupConfiguration(Screen, HelpableScreen):
 
 	def queryWirelessDevice(self,iface):
 		try:
-			from pythonwifi.iwlibs import Wireless, getWNICnames
+			from pythonwifi.iwlibs import Wireless
 			import errno
 		except ImportError:
 			return False
 		else:
-			temp_iface=getWNICnames()
-			if temp_iface == []:
-				os_system("ifconfig " + self.iface + " up")
 			try:
 				ifobj = Wireless(iface) # a Wireless NIC Object
 				wlanresponse = ifobj.getAPaddr()
