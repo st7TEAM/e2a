@@ -46,6 +46,25 @@ AC_CHECK_LIB([xmlccwrap], [exit], [LIBXMLCCWRAP_LIBS="-lxmlccwrap"], [AC_MSG_ERR
 AC_SUBST(LIBXMLCCWRAP_LIBS)
 AC_LANG_POP
 
+AC_ARG_WITH(remote-keyboard,
+        AC_HELP_STRING([--with-remote-keyboard], [use remote keyboard on dvbapp, yes or no]),
+        [[withrckbd=$withval]],
+        [[withrckbd=no]]
+)
+if test x"$withrckbd" != xno ; then
+        AC_DEFINE(VUPLUS_USE_RCKBD, 1,[Define when using a rc-keyboard on dvbapp])
+fi
+
+AC_ARG_WITH(set-right-half-vfd-skin,
+        AC_HELP_STRING([--with-set-right-half-vfd-skin], [display right_half_vfd_icons from skin(for ultimo), yes or no]),
+        [[setrighthalfvfdskin=$withval]],
+        [[setrighthalfvfdskin=no]]
+)
+if test x"$setrighthalfvfdskin" != xno ; then
+        AC_DEFINE(SET_RIGHT_HALF_VFD_SKIN, 1,[Define when display right_half_vfd_icons from skin, for ultimo])
+fi
+AM_CONDITIONAL(SET_RIGHT_HALF_VFD_SKIN, test x"$setrighthalfvfdskin" != xno)
+
 AC_ARG_WITH(libsdl,
 	AS_HELP_STRING([--with-libsdl],[use libsdl, yes or no]),
 	[with_libsdl=$withval],[with_libsdl=no])
@@ -222,6 +241,9 @@ lib/python/Plugins/SystemPlugins/UI3DSetup/Makefile
 lib/python/Plugins/SystemPlugins/UI3DSetup/meta/Makefile
 lib/python/Plugins/SystemPlugins/UIPositionSetup/Makefile
 lib/python/Plugins/SystemPlugins/UIPositionSetup/meta/Makefile
+lib/python/Plugins/SystemPlugins/HDMICEC/Makefile
+lib/python/Plugins/SystemPlugins/HDMICEC/components/Makefile
+lib/python/Plugins/SystemPlugins/HDMICEC/meta/Makefile
 lib/python/Tools/Makefile
 lib/python/Blackhole/Makefile
 lib/service/Makefile
