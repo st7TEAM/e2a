@@ -1,4 +1,4 @@
-SUBDIRS = buttons
+SUBDIRS = menu icons buttons buttons
 
 installdir = $(pkgdatadir)/Vu_HD
 
