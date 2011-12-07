@@ -246,6 +246,17 @@ class NetworkWizard(WizardLanguage, Rc):
 						self.InterfaceState = False
 					self.afterAsyncCode()
 
+
+
+	def start_wireless_Plug(self):
+		from Plugins.SystemPlugins.WirelessLanSetup.plugin import WlanSelection
+		self.session.openWithCallback(self.end_wireless_Plug, WlanSelection)
+	
+	def end_wireless_Plug(self):
+		self.currStep = self.getStepWithID("end")
+		self.afterAsyncCode()
+
+
 	def checkNetwork(self):
 		iNetwork.checkNetworkState(self.checkNetworkStateCB)
 		self.checkRef = self.session.openWithCallback(self.checkNetworkCB, MessageBox, _("Please wait while we test your network..."), type = MessageBox.TYPE_INFO, enable_input = False)
@@ -346,12 +357,13 @@ class NetworkWizard(WizardLanguage, Rc):
 		self.currStep = self.getStepWithID(self.NextStep)
 
 	def isWlanPluginInstalled(self):
-		try:
-			from Plugins.SystemPlugins.WirelessLan.Wlan import iWlan
-		except ImportError:
-			self.WlanPluginInstalled = False
-		else:
-			self.WlanPluginInstalled = True
+		self.WlanPluginInstalled = True
+#		try:
+#			from Plugins.SystemPlugins.WirelessLan.Wlan import iWlan
+#		except ImportError:
+#			self.WlanPluginInstalled = False
+#		else:
+#			self.WlanPluginInstalled = True
 
 	def listChoices(self):
 		self.stopScan()

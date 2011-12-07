@@ -669,7 +669,8 @@ class AdapterSetupConfiguration(Screen, HelpableScreen):
 		self.oktext = _("Press OK on your remote control to continue.")
 		self.reboottext = _("Your STB will restart after pressing OK on your remote control.")
 		self.errortext = _("No working wireless network interface found.\n Please verify that you have attached a compatible WLAN device or enable your local network interface.")
-		self.missingwlanplugintxt = _("The wireless LAN plugin is not installed!\nPlease install it.")
+#		self.missingwlanplugintxt = _("The wireless LAN plugin is not installed!\nPlease install it.")
+		self.missingwlanplugintxt = ("To configure wireless LAN please use the Vu+ dedicated wizard:\nMain Menu -> Setup -> System -> Wireless Lan Setup.")
 		
 		self["WizardActions"] = HelpableActionMap(self, "WizardActions",
 			{
@@ -729,15 +730,18 @@ class AdapterSetupConfiguration(Screen, HelpableScreen):
 		self.cleanup()
 		if self["menulist"].getCurrent()[1] == 'edit':
 			if iNetwork.isWirelessInterface(self.iface):
-				try:
-					from Plugins.SystemPlugins.WirelessLan.plugin import WlanScan
-				except ImportError:
-					self.session.open(MessageBox, self.missingwlanplugintxt, type = MessageBox.TYPE_INFO,timeout = 10 )
-				else:
-					if self.queryWirelessDevice(self.iface):
-						self.session.openWithCallback(self.AdapterSetupClosed, AdapterSetup,self.iface)
-					else:
-						self.showErrorMessage()	# Display Wlan not available Message
+				from Plugins.SystemPlugins.WirelessLanSetup.plugin import WlanSelection
+				self.session.openWithCallback(self.AdapterSetupClosed, WlanSelection)
+
+#				try:
+#					from Plugins.SystemPlugins.WirelessLanSetup.plugin import WlanScanAp as WlanScan
+#				except ImportError:
+#					self.session.open(MessageBox, self.missingwlanplugintxt, type = MessageBox.TYPE_INFO,timeout = 10 )
+#				else:
+#					if self.queryWirelessDevice(self.iface):
+#						self.session.openWithCallback(self.AdapterSetupClosed, AdapterSetup,self.iface)
+#					else:
+#						self.showErrorMessage()	# Display Wlan not available Message
 			else:
 				self.session.openWithCallback(self.AdapterSetupClosed, AdapterSetup,self.iface)
 		if self["menulist"].getCurrent()[1] == 'test':
@@ -746,7 +750,7 @@ class AdapterSetupConfiguration(Screen, HelpableScreen):
 			self.session.open(NameserverSetup)
 		if self["menulist"].getCurrent()[1] == 'scanwlan':
 			try:
-				from Plugins.SystemPlugins.WirelessLan.plugin import WlanScan
+				from Plugins.SystemPlugins.WirelessLanSetup.plugin import WlanScanAp as WlanScan
 			except ImportError:
 				self.session.open(MessageBox, self.missingwlanplugintxt, type = MessageBox.TYPE_INFO,timeout = 10 )
 			else:
