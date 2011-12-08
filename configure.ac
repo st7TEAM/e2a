@@ -246,6 +246,8 @@ lib/python/Plugins/SystemPlugins/UIPositionSetup/meta/Makefile
 lib/python/Plugins/SystemPlugins/HDMICEC/Makefile
 lib/python/Plugins/SystemPlugins/HDMICEC/components/Makefile
 lib/python/Plugins/SystemPlugins/HDMICEC/meta/Makefile
+lib/python/Plugins/SystemPlugins/LEDBrightnessSetup/Makefile
+lib/python/Plugins/SystemPlugins/LEDBrightnessSetup/meta/Makefile
 lib/python/Tools/Makefile
 lib/python/Blackhole/Makefile
 lib/service/Makefile
