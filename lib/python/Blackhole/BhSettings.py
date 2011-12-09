@@ -90,8 +90,8 @@ class DeliteSettings(Screen):
 			self.session.open(DeliteTelnet)
 		elif self.sel == 13:
 			self.session.open(DeliteFtp)
-		elif self.sel == 14:
-			self.session.open(DeliteDtt)
+#		elif self.sel == 14:
+#			self.session.open(DeliteDtt)
 		elif self.sel == 15:
 			self.session.open(BhDjmount)
 		elif self.sel == 16:
@@ -207,12 +207,12 @@ class DeliteSettings(Screen):
 		res = (name, png, idx)
 		self.list.append(res)
 		
-		mypixmap = mypath + "icons/infopanel_space.png"
-		png = LoadPixmap(mypixmap)
-		name = "Usb Tuner Panel"
-		idx = 14
-		res = (name, png, idx)
-		self.list.append(res)
+#		mypixmap = mypath + "icons/infopanel_space.png"
+#		png = LoadPixmap(mypixmap)
+#		name = "Usb Tuner Panel"
+#		idx = 14
+#		res = (name, png, idx)
+#		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
