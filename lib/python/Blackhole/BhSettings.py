@@ -286,7 +286,9 @@ class DeliteSetupOSD2(Screen):
 		elif machine == "bm750":
 			lab2txt = "unused in Vu Duo"
 		elif machine == "vusolo":
-			lab2txt = "unused in Vu Solo"	
+			lab2txt = "unused in Vu Solo"
+		elif machine == "vuultimo":
+			lab2txt = "unused in Vu Ultimo"	
 				
 		self["lab2"].setText(lab2txt)
 		
@@ -381,6 +383,8 @@ class DeliteSetupOSDConf2(Screen, ConfigListScreen):
 			lab2txt = "unused in Vu Duo"
 		elif machine == "vusolo":
 			lab2txt = "unused in Vu Solo"
+		elif machine == "vuultimo":
+			lab2txt = "unused in Vu Ultimo"
 		
 		osd_ei = getConfigListEntry(_("Disable Light Skin on Zap"), self.deliteeinfo)
 		self.list.append(osd_ei)
@@ -697,37 +701,63 @@ class DeliteDevicesPanel(Screen):
 	def buildMy_rec(self, device, uid):
 		mypath = DeliteGetSkinPath()
 		device2 = device.replace('1', '')
-		cmd = "udevinfo -a -p /sys/block/" + device2 + " > /tmp/ninfo3.tmp"
-		system(cmd)
+#		cmd = "udevinfo -a -p /sys/block/" + device2 + " > /tmp/ninfo3.tmp"
+#		system(cmd)
 		name = "USB: "
 		mypixmap = mypath + "icons/dev_usb.png"
 		des = ""
-		f = open("/tmp/ninfo3.tmp",'r')
-		for line in f.readlines():
-			line = line.strip()
-			if line.find("/devices/pci") != -1:
+		if fileExists("/sys/block/" + device2 + "/removable"):
+			f = open("/sys/block/" + device2 + "/removable",'r')
+			line = f.readline().strip()
+			f.close()
+			if line == "0":
 				name = "HARD DISK: "
 				mypixmap = mypath + "icons/dev_hdd.png"
-			if line.find("{size}") != -1:
-				cap = line.replace('ATTR{size}==', '')
-				cap = cap[1:-1]
-				cap = int(cap)
-				cap = cap / 1000 * 512 / 1000
-				cap = "%d.%03d GB" % (cap/1000, cap%1000)
-				des = "Size: " + cap
-			if line.find("{model}") != -1:
-				name2 = line.replace('ATTRS{model}==', '')
-				name2 = name2[1:-1]
-				if name2.find("USB CF Reader") != -1:
-					name = "COMPACT FLASH: "
-					mypixmap = mypath + "icons/dev_cf.png"
-				elif name2.find("USB SD Reader") != -1:
-					name = "SD CARD: "
-					mypixmap = mypath + "icons/dev_sd.png"
-				name = name + name2
-				break
+		if fileExists("/sys/block/" + device2 + "/size"):
+			f = open("/sys/block/" + device2 + "/size",'r')
+			line = f.readline().strip()
+			f.close()
+			cap = int(line)
+			cap = cap / 1000 * 512 / 1000
+			cap = "%d.%03d GB" % (cap/1000, cap%1000)
+			des = "Size: " + cap
+		if fileExists("/sys/block/" + device2 + "/device/vendor"):
+			f = open("/sys/block/" + device2 + "/device/vendor",'r')
+			line = f.readline().strip()
+			f.close()
+			name = name + " " + line
+			f = open("/sys/block/" + device2 + "/device/model",'r')
+			line = f.readline().strip()
+			f.close()	
+			name = name + " " + line	
 			
-		f.close()
+#		f = open("/tmp/ninfo3.tmp",'r')
+#		f = popen("udevinfo -a -p /sys/block/" + device2)
+#		for line in f.readlines():
+#			line = line.strip()
+#			if line.find("/devices/pci") != -1:
+#				name = "HARD DISK: "
+#				mypixmap = mypath + "icons/dev_hdd.png"
+#			if line.find("{size}") != -1:
+#				cap = line.replace('ATTR{size}==', '')
+#				cap = cap[1:-1]
+#				cap = int(cap)
+#				cap = cap / 1000 * 512 / 1000
+#				cap = "%d.%03d GB" % (cap/1000, cap%1000)
+#				des = "Size: " + cap
+#			if line.find("{model}") != -1:
+#				name2 = line.replace('ATTRS{model}==', '')
+#				name2 = name2[1:-1]
+#				if name2.find("USB CF Reader") != -1:
+#					name = "COMPACT FLASH: "
+#					mypixmap = mypath + "icons/dev_cf.png"
+#				elif name2.find("USB SD Reader") != -1:
+#					name = "SD CARD: "
+#					mypixmap = mypath + "icons/dev_sd.png"
+#				name = name + name2
+#				break
+			
+#		f.close()
 		d1 = "NOT MAPPED"
 		d2 = device
 		f = open("/proc/mounts",'r')
@@ -898,33 +928,53 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 	def buildMy_rec(self, device, uid):
 		uid = uid.strip()
 		device2 = device.replace('1', '')
-		cmd = "udevinfo -a -p /sys/block/" + device2 + " > /tmp/ninfo3.tmp"
-		system(cmd)
+#		cmd = "udevinfo -a -p /sys/block/" + device2 + " > /tmp/ninfo3.tmp"
+#		system(cmd)
 		name = "USB: "
 		des = ""
-		f = open("/tmp/ninfo3.tmp",'r')
-		for line in f.readlines():
-			line = line.strip()
-			if line.find("/devices/pci") != -1:
+		if fileExists("/sys/block/" + device2 + "/removable"):
+			f = open("/sys/block/" + device2 + "/removable",'r')
+			line = f.readline().strip()
+			f.close()
+			if line == "0":
 				name = "HARD DISK: "
-			if line.find("{size}") != -1:
-				cap = line.replace('ATTR{size}==', '')
-				cap = cap[1:-1]
-				cap = int(cap)
-				cap = cap / 1000 * 512 / 1000
-				cap = "%d.%03d GB" % (cap/1000, cap%1000)
-				des = " " + cap
-			if line.find("{model}") != -1:
-				name2 = line.replace('ATTRS{model}==', '')
-				name2 = name2[1:-1]
-				if name2.find("USB CF Reader") != -1:
-					name = "COMPACT FLASH: "
-				elif name2.find("USB SD Reader") != -1:
-					name = "SD CARD: "
-				name = name + name2.strip()
-				break
-			
-		f.close()
+		if fileExists("/sys/block/" + device2 + "/size"):
+			f = open("/sys/block/" + device2 + "/size",'r')
+			line = f.readline().strip()
+			f.close()
+			cap = int(line)
+			cap = cap / 1000 * 512 / 1000
+			cap = "%d.%03d GB" % (cap/1000, cap%1000)
+			des = " " + cap
+		if fileExists("/sys/block/" + device2 + "/device/model"):
+			f = open("/sys/block/" + device2 + "/device/model",'r')
+			line = f.readline().strip()
+			f.close()	
+			name = name + " " + line		
+		
+#		f = open("/tmp/ninfo3.tmp",'r')
+#		for line in f.readlines():
+#			line = line.strip()
+#			if line.find("/devices/pci") != -1:
+#				name = "HARD DISK: "
+#			if line.find("{size}") != -1:
+#				cap = line.replace('ATTR{size}==', '')
+#				cap = cap[1:-1]
+#				cap = int(cap)
+#				cap = cap / 1000 * 512 / 1000
+#				cap = "%d.%03d GB" % (cap/1000, cap%1000)
+#				des = " " + cap
+#			if line.find("{model}") != -1:
+#				name2 = line.replace('ATTRS{model}==', '')
+#				name2 = name2[1:-1]
+#				if name2.find("USB CF Reader") != -1:
+#					name = "COMPACT FLASH: "
+#				elif name2.find("USB SD Reader") != -1:
+#					name = "SD CARD: "
+#				name = name + name2.strip()
+#				break			
+#		f.close()
+
 		d1 = "Not mapped"
 		checkmb = False
 		f = open("/proc/mounts",'r')
@@ -1033,7 +1083,6 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 	
 	def updateList(self):
 	
-		self.ntfs = NoSave(ConfigYesNo(default=False))
 		self.ftdi_sio = NoSave(ConfigYesNo(default=False))
 		self.pl2303 = NoSave(ConfigYesNo(default=False))
 		self.tun = NoSave(ConfigYesNo(default=False))
@@ -1043,9 +1092,7 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 		if fileExists("/usr/bin/bhextramod"):
 			f = open("/usr/bin/bhextramod",'r')
 			for line in f.readlines():
-				if line.find('ntfs') != -1:
-					self.ntfs.value = True
-				elif line.find('ftdi_sio') != -1:
+				if line.find('ftdi_sio') != -1:
 					self.ftdi_sio.value = True
 				elif line.find('pl2303') != -1:
 					self.pl2303.value = True
@@ -1057,8 +1104,6 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 					self.nfsd.value = True
 			f.close()
 		
-		res = getConfigListEntry(_("Ntfs for Windows filesystems compatibility:"), self.ntfs)
-		self.list.append(res)
 		res = getConfigListEntry(_("Smargo & other Usb card readers chipset ftdi:"), self.ftdi_sio)
 		self.list.append(res)
 		res = getConfigListEntry(_("Other Usb card readers chipset pl2303:"), self.pl2303)
@@ -1078,11 +1123,6 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 		
 	def saveMyconf(self):
 		l1 = ""; l2 = ""; l3 = ""; l4 = ""; l5 = ""; l6 = "";
-		if self.ntfs.value == True:
-			l1 = "modprobe ntfs"
-			system(l1)
-		else:
-			system("rmmod ntfs")
 			
 		if self.ftdi_sio.value == True:
 			l2 = "modprobe ftdi_sio"
