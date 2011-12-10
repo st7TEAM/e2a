@@ -4406,4 +4406,97 @@ MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (80, 80), png = 1),
 <widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget source="key_green" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
 </screen>
+<screen name="WlanSelection" position="0,0" size="1280,720" title="Wireless Network Adapter Selection..." flags="wfNoBorder">
+<widget source="session.VideoPicture" render="Pig" position="640,160" size="640,360" zPosition="3" backgroundColor="#ff000000"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,30" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,633" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,100" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,620" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/scann.png" position="1165,545" size="65,65" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/exit.png" position="1180,45" size="36,25" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/usb.png" position="50,35" size="65,65" alphatest="blend"/>
+<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="dung;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
+<widget name="menulist"  position="60,160" size="540,150" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="skin_default/menu/button540x25.png" transparent="1"/>
+<widget source="description" render="Label" position="60,380" size="540,50" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1" />
+<ePixmap pixmap="skin_default/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/green35x35.png" position="750,650" size="250,35" alphatest="blend"/>
+<widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget source="key_green" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+</screen>
+<screen name="WlanSetup" position="0,0" size="1280,720" title="Wireless Network Setup Menu..." flags="wfNoBorder">
+<widget source="session.VideoPicture" render="Pig" position="640,160" size="640,360" zPosition="3" backgroundColor="#ff000000"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,30" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,633" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,100" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,620" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/scann.png" position="1165,545" size="65,65" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/exit.png" position="1180,45" size="36,25" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/usb.png" position="50,35" size="65,65" alphatest="blend"/>
+<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="dung;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
+<widget name="menulist"  position="60,160" size="540,150" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="skin_default/menu/button540x25.png" transparent="1"/>
+<widget source="description" render="Label" position="70,380" size="530,50" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1" />
+<ePixmap pixmap="skin_default/buttons/red35x35.png" position="460,650" size="250,35" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/green35x35.png" position="750,650" size="250,35" alphatest="blend"/>
+<widget source="key_red" render="Label" position="510,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget source="key_green" render="Label" position="800,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+</screen>
+<screen name="WlanConfig" position="0,0" size="1280,720" title="Wireless Network Configuration..." flags="wfNoBorder">
+<widget source="session.VideoPicture" render="Pig" position="640,160" size="640,360" zPosition="3" backgroundColor="#ff000000"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,30" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,633" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,100" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,620" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/scann.png" position="1165,545" size="65,65" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/exit.png" position="1180,45" size="36,25" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/usb.png" position="50,35" size="65,65" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/arrow1.png" position="60,640" size="32,50" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/ok.png" position="1180,655" size="36,25" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/hd.png" position="606,650" size="67,30" alphatest="blend"/>
+<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="dung;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
+<widget name="config" position="60,160" size="540,275" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="skin_default/menu/button540x25.png" transparent="1"/>
+<eLabel text="IP Address : " position="60,450" size="150,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />
+<widget source="ipaddress" render="Label" position="400,450" halign="right" size="200,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+<eLabel text="NetMask : " position="60,480" size="150,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+<widget source="netmask" render="Label" position="400,480" halign="right" size="200,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+<eLabel text="Gateway : " position="60,510" size="150,30" font="Regular;22" backgroundColor="transpBlack" transparent="1" />		
+<widget source="gateway" render="Label" position="400,510" halign="right" size="200,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+</screen>
+<screen name="WlanScanAp" position="0,0" size="1280,720" title="Wireless Network AP Scan..." flags="wfNoBorder">
+<widget source="session.VideoPicture" render="Pig" position=" 640,160" size="640,360" zPosition="3" backgroundColor="#ff000000"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,30" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,633" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,100" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,620" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/scann.png" position="1165,545" size="65,65" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/exit.png" position="1180,45" size="36,25" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/usb.png" position="50,35" size="65,65" alphatest="blend"/>
+<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="dung;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
+<widget name="menulist" position="60,160" size="540,150" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="transpBlack" selectionPixmap="skin_default/menu/button540x25.png" transparent="1"/>
+<widget source="Address" render="Label" position="60,320" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+<widget source="ESSID" render="Label" position="60,350" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+<widget source="Protocol" render="Label" position="60,380" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+<widget source="Frequency" render="Label" position="60,410" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+<widget source="Encryption key" render="Label" position="60,440" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+<widget source="BitRate" render="Label" position="60,470" size="400,30" font="Regular;20" backgroundColor="transpBlack" transparent="1" />		
+<ePixmap pixmap="skin_default/buttons/red35x35.png" position="320,650" size="250,35" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/green35x35.png" position="590,650" size="250,35" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/blue35x35.png" position="860,650" size="250,35" alphatest="blend"/>
+<widget source="key_red" render="Label" position="370,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget source="key_green" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget source="key_blue" render="Label" position="910,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+</screen>
+<screen name="Wlanstatus" position="0,0" size="1280,720" title="Wireless Network Status..." flags="wfNoBorder">
+<widget source="session.VideoPicture" render="Pig" position="640,160" size="640,360" zPosition="3" backgroundColor="#ff000000"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,30" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/bg1.png" position="0,633" size="1280,35" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,100" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/separator2.png" position="0,620" size="1280,11" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/scann.png" position="1165,545" size="65,65" zPosition="-1" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/exit.png" position="1180,45" size="36,25" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/usb.png" position="50,35" size="65,65" alphatest="blend"/>
+<widget source="Title" render="Label" position="200,40" size="880,50" zPosition="1" halign="center" font="dung;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
+<widget source="status" render="Label" position="60,160" size="540,500" font="Regular;18" halign="left" backgroundColor="transpBlack" transparent="1" />
+<ePixmap pixmap="skin_default/buttons/red35x35.png" position="590,650" size="250,35" alphatest="blend"/>
+<widget source="key_red" render="Label" position="640,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+</screen>
 </skin>  
