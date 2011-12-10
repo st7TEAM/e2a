@@ -12,20 +12,20 @@ if version_info >= (2,6,0):
         import imp
         fp = None
         try:
-            fp, pathname, description = imp.find_module('_ledsetup', [dirname(__file__)])
+            fp, pathname, description = imp.find_module('_fu', [dirname(__file__)])
         except ImportError:
-            import _ledsetup
-            return _ledsetup
+            import _fu
+            return _fu
         if fp is not None:
             try:
-                _mod = imp.load_module('_ledsetup', fp, pathname, description)
+                _mod = imp.load_module('_fu', fp, pathname, description)
             finally:
                 fp.close()
                 return _mod
-    _ledsetup = swig_import_helper()
+    _fu = swig_import_helper()
     del swig_import_helper
 else:
-    import _ledsetup
+    import _fu
 del version_info
 try:
     _swig_property = property
@@ -66,9 +66,27 @@ except AttributeError:
     _newclass = 0
 
 
+class FU(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, FU, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, FU, name)
+    __repr__ = _swig_repr
+    def __init__(self): 
+        this = _fu.new_FU()
+        try: self.this.append(this)
+        except: self.this = this
+    def getStatus(self): return _fu.FU_getStatus(self)
+    def getInterval(self): return _fu.FU_getInterval(self)
+    def checkError(self): return _fu.FU_checkError(self)
+    def getErrorMessage(self, *args): return _fu.FU_getErrorMessage(self, *args)
+    def startUpgrade(self, *args): return _fu.FU_startUpgrade(self, *args)
+    def getDataPath(self): return _fu.FU_getDataPath(self)
+    def getDevicePath(self): return _fu.FU_getDevicePath(self)
+    __swig_destroy__ = _fu.delete_FU
+    __del__ = lambda self : None;
+FU_swigregister = _fu.FU_swigregister
+FU_swigregister(FU)
 
-def LEDUpdate(*args):
-  return _ledsetup.LEDUpdate(*args)
-LEDUpdate = _ledsetup.LEDUpdate
 
 
