@@ -250,6 +250,8 @@ lib/python/Plugins/SystemPlugins/LEDBrightnessSetup/Makefile
 lib/python/Plugins/SystemPlugins/LEDBrightnessSetup/meta/Makefile
 lib/python/Plugins/SystemPlugins/FirmwareUpgrade/Makefile
 lib/python/Plugins/SystemPlugins/FirmwareUpgrade/meta/Makefile
+lib/python/Plugins/SystemPlugins/CrashReport/Makefile
+lib/python/Plugins/SystemPlugins/CrashReport/meta/Makefile
 lib/python/Tools/Makefile
 lib/python/Blackhole/Makefile
 lib/service/Makefile
