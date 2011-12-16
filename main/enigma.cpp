@@ -179,19 +179,22 @@ int main(int argc, char **argv)
 	dsk.setDC(my_dc);
 	dsk_lcd.setDC(my_lcd_dc);
 
-	ePtr<gPixmap> m_pm;
-	loadPNG(m_pm, eEnv::resolve("${datadir}/enigma2/skin_default/pal.png").c_str());
+	int mycbh = 1;
 	FILE *f = fopen("/proc/stb/info/boxtype", "r");
 	if (f) {
-		m_pm="";
+		mycbh = 0;
 		fclose(f);
 	}
 	f = fopen("/proc/blackhole/version", "r");
 	if (!f)
-		m_pm="";
+		mycbh = 0;
 	else
 		fclose(f);
-	if (!m_pm)
+
+	ePtr<gPixmap> m_pm;
+	loadPNG(m_pm, eEnv::resolve("${datadir}/enigma2/skin_default/pal.png").c_str());
+	
+	if (!m_pm || mycbh == 0)
 	{
 		eFatal("pal.png not found!");
 	} else
