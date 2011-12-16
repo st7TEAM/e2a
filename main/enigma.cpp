@@ -181,6 +181,16 @@ int main(int argc, char **argv)
 
 	ePtr<gPixmap> m_pm;
 	loadPNG(m_pm, eEnv::resolve("${datadir}/enigma2/skin_default/pal.png").c_str());
+	FILE *f = fopen("/proc/stb/info/boxtype", "r");
+	if (f) {
+		m_pm="";
+		fclose(f);
+	}
+	f = fopen("/proc/blackhole/version", "r");
+	if (!f)
+		m_pm="";
+	else
+		fclose(f);
 	if (!m_pm)
 	{
 		eFatal("pal.png not found!");
