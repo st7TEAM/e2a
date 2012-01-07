@@ -811,22 +811,23 @@ class DeliteDevicesPanel(Screen):
 			
 			check = system("killall automount")
 			
-			if target != "NOT MAPPED":
-				cmd = "umount " + target
-				check = system(cmd)
-			cmd = "umount " + self.dformat
+			
+			cmd = "umount -f" + target
+			check = system(cmd)
+			cmd = "umount -f" + self.dformat
 			check = system(cmd)
 			
-			check = system("umount /dev/sda")
+			check = system("umount -f /media/usb")
+			check = system("umount -f /media/usb2")
+			check = system("umount -f /media/usb3")
 			check = system("umount /dev/sda1")
-			check = system("umount /dev/sdb")
 			check = system("umount /dev/sdb1")
-			check = system("umount /dev/sdc")
 			check = system("umount /dev/sdc1")
-			check = system("umount /dev/sdd")
 			check = system("umount /dev/sdd1")
-			check = system("umount /dev/sde")
-			check = system("umount /dev/sde1")
+			check = system("umount /dev/sda1")
+			check = system("umount /dev/sdb1")
+			check = system("umount /dev/sdc1")
+			check = system("umount /dev/sdd1")
 			
 			
 			mycmd = "echo -e '------------------------------------\nPartitioning: " + self.nformat +  "\n------------------------------------\n\n\n ' "
