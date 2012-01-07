@@ -831,9 +831,9 @@ class DeliteDevicesPanel(Screen):
 			
 			
 			mycmd = "echo -e '------------------------------------\nPartitioning: " + self.nformat +  "\n------------------------------------\n\n\n ' "
-			mycmd1 = 'dd bs=512 count=3 if=/dev/zero of=' + device + "1"
+#			mycmd1 = 'dd bs=512 count=3 if=/dev/zero of=' + device + "1"
 			mycmd2 = 'printf "0,\n;\n;\n;\ny\n" | sfdisk -f ' + device
-			self.session.open(Console, title="Partitioning...", cmdlist=[mycmd, mycmd1, mycmd2], finishedCallback = self.myFormatDo2)
+			self.session.open(Console, title="Partitioning...", cmdlist=[mycmd, mycmd2], finishedCallback = self.myFormatDo2)
 			
 	def myFormatDo2(self):
 		target = self.mformat
