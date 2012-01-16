@@ -16,7 +16,7 @@ from BhUtils import DeliteGetSkinPath, nab_Detect_Machine, BhU_get_Version
 from BhInadyn import DeliteInadyn
 from BhSwap import DeliteSwap
 from BhHdd import DeliteHdd
-from BhNet import DeliteOpenvpn, DeliteSamba, DeliteTelnet, DeliteFtp, BhDjmount, BhMediatomb
+from BhNet import DeliteOpenvpn, DeliteSamba, DeliteTelnet, DeliteFtp, BhDjmount, BhMediatomb, BhTunerServer
 from BhNfs import DeliteNfs
 from BhMountWiz import DeliteMountWiz
 
@@ -92,6 +92,8 @@ class DeliteSettings(Screen):
 			self.session.open(DeliteFtp)
 #		elif self.sel == 14:
 #			self.session.open(DeliteDtt)
+		elif self.sel == 14:
+			self.session.open(BhTunerServer)
 		elif self.sel == 15:
 			self.session.open(BhDjmount)
 		elif self.sel == 16:
@@ -213,6 +215,13 @@ class DeliteSettings(Screen):
 #		idx = 14
 #		res = (name, png, idx)
 #		self.list.append(res)
+
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "Tuner Server"
+		idx = 14
+		res = (name, png, idx)
+		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
