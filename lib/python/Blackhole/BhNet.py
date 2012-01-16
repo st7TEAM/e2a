@@ -4,10 +4,12 @@ from Screens.MessageBox import MessageBox
 from Components.ActionMap import ActionMap
 from Components.ScrollLabel import ScrollLabel
 from Components.Label import Label
+from Components.Sources.List import List
 from Components.Network import iNetwork
 from Tools.Directories import fileExists
 from os import system, rename as os_rename, remove as os_remove, chdir
 from os.path import isdir
+from Plugins.SystemPlugins.NetworkBrowser.NetworkBrowser import NetworkBrowser
 from enigma import eServiceCenter, eServiceReference, eTimer
 
 
@@ -491,6 +493,102 @@ class DeliteFtp(Screen):
 			self["labrun"].hide()
 			
 
+class BhNfsServer(Screen):
+	skin = """
+	<screen position="center,center" size="420,310" title="Black Hole Nfs Server Panel">
+		<widget name="lab1" position="20,50" size="250,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="labactive" position="270,50" size="150,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="lab2" position="20,100" size="250,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="labstop" position="270,100" size="100,30" font="Regular;20" valign="center"  halign="center" backgroundColor="red"/>
+		<widget name="labrun" position="270,100" size="100,30" zPosition="1" font="Regular;20" valign="center"  halign="center" backgroundColor="green"/>
+		<ePixmap pixmap="skin_default/buttons/red.png" position="0,260" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/green.png" position="140,260" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,260" size="140,40" alphatest="on" />
+		<widget name="key_red" position="0,260" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+		<widget name="key_green" position="140,260" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+		<widget name="key_yellow" position="280,260" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+	</screen>"""
+	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		self["lab1"] = Label(_("Nfs Server Autostart: "))
+		self["labactive"] = Label(_("Disabled"))
+		self["lab2"] = Label(_("Current Status:"))
+		self["labstop"] = Label(_("Stopped"))
+		self["labrun"] = Label(_("Running"))
+		self["key_red"] = Label("Start")
+		self["key_green"] = Label("Stop")
+		self["key_yellow"] = Label("Autostart")
+		self.my_nfs_active = False
+		self.my_nfs_run = False
+				
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"ok": self.close,
+			"back": self.close,
+			"red": self.NfsStart,
+			"green": self.NfsStop,
+			"yellow": self.Nfsset
+		})
+		
+		self.onLayoutFinish.append(self.updateNfs)
+
+
+	def NfsStart(self):
+		if self.my_nfs_run == False:
+			rc = system("/usr/bin/nfs_server_script.sh start")
+			self.updateNfs()
+		
+	def NfsStop(self):
+		if self.my_nfs_run == True:
+			rc = system("/usr/bin/nfs_server_script.sh stop")
+			self.updateNfs()
+		
+	def Nfsset(self):
+		mymess = "Nfs Autostart Enabled."
+		
+		if fileExists("/etc/rc3.d/S20nfsserver"):
+			rc = system("rm -f /etc/rc3.d/S20nfsserver")
+			mymess = "Nfs Autostart Disabled."
+		else:
+			system("ln -s /usr/bin/nfs_server_script.sh /etc/rc3.d/S20nfsserver")
+		
+		mybox = self.session.open(MessageBox, mymess, MessageBox.TYPE_INFO)
+		mybox.setTitle("Info")
+		self.updateNfs()
+
+
+	def updateNfs(self):
+		rc = system("ps > /tmp/nvpn.tmp")
+		self["labrun"].hide()
+		self["labstop"].hide()
+		self["labactive"].setText("Disabled")
+		self.my_nfs_active = False
+		self.my_nfs_run = False
+		
+		
+		if fileExists("/etc/rc3.d/S20nfsserver"):
+			self["labactive"].setText("Enabled")
+			self.my_nfs_active = True
+				
+				
+		if fileExists("/tmp/nvpn.tmp"):
+			f = open("/tmp/nvpn.tmp",'r')
+ 			for line in f.readlines():
+				if line.find('/usr/sbin/rpc.mountd') != -1:
+					self.my_nfs_run = True
+
+			f.close()
+			os_remove("/tmp/nvpn.tmp")
+			
+		if self.my_nfs_run == True:
+			self["labstop"].hide()
+			self["labrun"].show()
+		else:
+			self["labstop"].show()
+			self["labrun"].hide()
+
 class BhDjmount(Screen):
 	skin = """
 	<screen position="center,center" size="602,305" title="Black Hole UPnP Client Panel">
@@ -801,3 +899,47 @@ NOTE: The sever is built, based on your current ip and the current channel list 
 	def delTimer(self):
 		del self.activityTimer
 
+
+class BhNetBrowser(Screen):
+	skin = """
+	<screen position="center,center" size="800,520" title="Select Network Interface">
+		<widget source="list" render="Listbox" position="10,10" size="780,460" scrollbarMode="showOnDemand" >
+			<convert type="StringList" />
+		</widget>
+    		<ePixmap pixmap="skin_default/buttons/red.png" position="200,480" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="440,480" size="140,40" alphatest="on" />
+		<widget name="key_red" position="200,480" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+		<widget name="key_yellow" position="440,480" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+    	</screen>"""
+	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		self["key_red"] = Label(_("Select"))
+		self["key_yellow"] = Label(_("Close"))
+		
+		self.list = []
+		self["list"] = List(self.list)
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"ok": self.selectInte,
+			"back": self.close,
+			"red": self.selectInte,
+			"yellow": self.close
+		})
+		
+		self.list = [ ]
+		self.adapters = [(iNetwork.getFriendlyAdapterName(x),x) for x in iNetwork.getAdapterList()]
+		for x in self.adapters:
+			res = (x[0], x[1])
+			self.list.append(res)
+
+		self["list"].list = self.list
+		
+	def selectInte(self):
+		mysel = self["list"].getCurrent()
+		if mysel:
+			inter = mysel[1]
+			self.session.open(NetworkBrowser, inter, "/usr/lib/enigma2/python/Plugins/SystemPlugins/NetworkBrowser")
+			

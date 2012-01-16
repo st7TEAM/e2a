@@ -16,9 +16,9 @@ from BhUtils import DeliteGetSkinPath, nab_Detect_Machine, BhU_get_Version
 from BhInadyn import DeliteInadyn
 from BhSwap import DeliteSwap
 from BhHdd import DeliteHdd
-from BhNet import DeliteOpenvpn, DeliteSamba, DeliteTelnet, DeliteFtp, BhDjmount, BhMediatomb, BhTunerServer
-from BhNfs import DeliteNfs
-from BhMountWiz import DeliteMountWiz
+from BhNet import DeliteOpenvpn, DeliteSamba, DeliteTelnet, DeliteFtp, BhDjmount, BhMediatomb, BhTunerServer, BhNetBrowser, BhNfsServer
+#from BhNfs import DeliteNfs
+#from BhMountWiz import DeliteMountWiz
 
 from enigma import eTimer
 from Screens.Console import Console
@@ -68,36 +68,32 @@ class DeliteSettings(Screen):
 			self.session.open(DeliteSetupOSD2)
 		elif self.sel == 2:
 			self.session.open(DeliteDevicesPanel)
-#		elif self.sel == 3:
-#			self.session.open(BhHdmiCecConf2)
-		elif self.sel == 4:
+		elif self.sel == 3:
 			self.session.open(DeliteKernelModules)
-		elif self.sel == 5:
+		elif self.sel == 4:
 			self.session.open(DeliteInadyn)
-		elif self.sel == 6:
+		elif self.sel == 5:
 			self.session.open(DeliteSwap)
-		elif self.sel == 7:
+		elif self.sel == 6:
 			self.session.open(DeliteHdd)
-		elif self.sel == 8:
-			self.session.open(DeliteMountWiz)
-		elif self.sel == 9:
+		elif self.sel == 7:
 			self.session.open(DeliteOpenvpn)
-		elif self.sel == 10:
+		elif self.sel == 8:
 			self.session.open(DeliteSamba)
-		elif self.sel == 11:
-			self.session.open(DeliteNfs)
-		elif self.sel == 12:
+		elif self.sel == 9:
+			self.session.open(BhNfsServer)
+		elif self.sel == 10:
 			self.session.open(DeliteTelnet)
-		elif self.sel == 13:
+		elif self.sel == 11:
 			self.session.open(DeliteFtp)
-#		elif self.sel == 14:
-#			self.session.open(DeliteDtt)
+		elif self.sel == 12:
+			self.session.open(BhDjmount)
+		elif self.sel == 13:
+			self.session.open(BhMediatomb)
 		elif self.sel == 14:
 			self.session.open(BhTunerServer)
 		elif self.sel == 15:
-			self.session.open(BhDjmount)
-		elif self.sel == 16:
-			self.session.open(BhMediatomb)
+			self.session.open(BhNetBrowser)
 		else:
 			self.noYet()
 		
@@ -131,91 +127,84 @@ class DeliteSettings(Screen):
 		idx = 2
 		res = (name, png, idx)
 		self.list.append(res)
-		
-#		mypixmap = mypath + "icons/infopanel_samba.png"
-#		png = LoadPixmap(mypixmap)
-#		name = "Black Hole Hdmi Cec"
-#		idx = 3
-#		res = (name, png, idx)
-#		self.list.append(res)
-		
+				
 		mypixmap = mypath + "icons/infopanel_kmod.png"
 		png = LoadPixmap(mypixmap)
 		name = "Kernel Modules Manager"
-		idx = 4
+		idx = 3
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/inadynsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Inadyn Settings"
-		idx = 5
+		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/swapsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Swap File Settings"
-		idx = 6
+		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/hdsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Hard Disk Settings"
-		idx = 7
-		res = (name, png, idx)
-		self.list.append(res)
-		
-		mypixmap = mypath + "icons/mountwizard.png"
-		png = LoadPixmap(mypixmap)
-		name = "Black Hole Mount Wizard"
-		idx = 8
+		idx = 6
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_vpn.png"
 		png = LoadPixmap(mypixmap)
 		name = "OpenVpn Panel"
-		idx = 9
+		idx = 7
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
 		name = "Samba/Cifs Panel"
-		idx = 10
+		idx = 8
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_nfs.png"
 		png = LoadPixmap(mypixmap)
 		name = "Nfs Server Panel"
-		idx = 11
+		idx = 9
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_telnet.png"
 		png = LoadPixmap(mypixmap)
 		name = "Telnet Panel"
-		idx = 12
+		idx = 10
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_ftp.png"
 		png = LoadPixmap(mypixmap)
 		name = "Ftp Panel"
+		idx = 11
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "UPnP Client Djmount"
+		idx = 12
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "UPnP Server Mediatomb"
 		idx = 13
 		res = (name, png, idx)
 		self.list.append(res)
 		
-#		mypixmap = mypath + "icons/infopanel_space.png"
-#		png = LoadPixmap(mypixmap)
-#		name = "Usb Tuner Panel"
-#		idx = 14
-#		res = (name, png, idx)
-#		self.list.append(res)
-
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
 		name = "Tuner Server"
@@ -223,17 +212,10 @@ class DeliteSettings(Screen):
 		res = (name, png, idx)
 		self.list.append(res)
 		
-		mypixmap = mypath + "icons/infopanel_samba.png"
+		mypixmap = mypath + "icons/mountwizard.png"
 		png = LoadPixmap(mypixmap)
-		name = "UPnP Client Djmount"
+		name = "Network Browse & Mountpoints"
 		idx = 15
-		res = (name, png, idx)
-		self.list.append(res)
-		
-		mypixmap = mypath + "icons/infopanel_samba.png"
-		png = LoadPixmap(mypixmap)
-		name = "UPnP Server Mediatomb"
-		idx = 16
 		res = (name, png, idx)
 		self.list.append(res)
 		
@@ -1253,535 +1235,6 @@ class DeliteKernelModShow(Screen):
 			mytext = "Module size: " + size + " bytes\n" + "Module used by: " + used
 			self["statuslab"].setText(mytext)
 			
-class DeliteDtt(Screen):
-	skin = """
-	<screen position="center,center" size="710,340" title="Black Hole External Usb DVB Tuner Panel">
-		<widget name="lab1" position="10,10" size="690,180" font="Regular;24" valign="center" transparent="1"/>
-		<widget name="lab2" position="20,210" size="300,32" font="Regular;24" valign="center" transparent="1"/>
-		<widget name="labstop" position="330,210" size="140,32" font="Regular;24" valign="center"  halign="center" backgroundColor="red"/>
-		<widget name="labrun" position="330,210" size="140,32" zPosition="1" font="Regular;24" valign="center"  halign="center" backgroundColor="green"/>
-		<ePixmap position="73,280" size="250,40" pixmap="skin_default/buttons/red.png" alphatest="on" zPosition="1" />
-		<ePixmap position="285,280" size="250,40" pixmap="skin_default/buttons/green.png" alphatest="on" zPosition="1" />
-		<ePixmap position="497,280" size="250,40" pixmap="skin_default/buttons/yellow.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="73,281" zPosition="2" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="red" transparent="1" />
-		<widget name="key_green" position="285,281" zPosition="2" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="green" transparent="1" />
-		<widget name="key_yellow" position="497,281" zPosition="2" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
-	</screen>"""
-	
-	def __init__(self, session):
-		Screen.__init__(self, session)
-		
-		self.mess = "Usb Tuner Drivers not installed"
-		self["lab1"] = Label(self.mess)
-		self["lab2"] = Label(_("Current Status:"))
-		self["labstop"] = Label("Disabled")
-		self["labrun"] = Label("Working")
-		self["key_red"] = Label("Select driver")
-		self["key_green"] = Label("Enable")
-		self["key_yellow"] = Label("Disable")
-		self.my_dtt_active = False
-				
-		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
-		{
-			"ok": self.close,
-			"back": self.close,
-			"red": self.MeInstall,
-			"green": self.MeStart,
-			"yellow": self.MeStop
-		})
-		
-		self.onLayoutFinish.append(self.updateMe)
-		
-	def MeInstall(self):
-		self.session.openWithCallback(self.updateMe, DeliteDttMainConf)
-		
-	
-	def updateMe(self):
-		self.mess = "Usb Tuner Drivers not installed"
-		if fileExists("/usr/bin/bhusbdvb.sh"):
-			f = open("/usr/bin/bhusbdvb.sh",'r')
-			for line in f.readlines():
-				if line.find("#description:") != -1:
-					parts = line.strip().split(':')
-					self.mess = "Drivers: " + parts[1]
-					break
-			f.close()
-		if fileExists("/etc/bh_usb_dvb.cfg"):
-			f = open("/etc/bh_usb_dvb.cfg",'r')
-			line = f.read()
-			self.mess = "Current Cfg: " + line + "\n" + self.mess
-			f.close()
-		
-		self["lab1"].setText(self.mess)
-		
-		self["labrun"].hide()
-		self["labstop"].hide()
-		self.my_dtt_active = False
-		rc = system("ps > /tmp/nvpn.tmp")
-		f = open("/tmp/nvpn.tmp",'r')
-		for line in f.readlines():
-			if line.find('usbtuner') != -1:
-				self.my_dtt_active = True		
-		f.close()
-			
-		if self.my_dtt_active == True:
-			self["labstop"].hide()
-			self["labrun"].show()
-		else:
-			self["labstop"].show()
-			self["labrun"].hide()
-	
-	def MeStart(self):
-		if self.mess == "Usb Tuner Drivers not installed":
-			nobox = self.session.open(MessageBox, "You have to select a driver before to activate", MessageBox.TYPE_INFO)
-			nobox.setTitle("Info")
-		else:
-			if self.my_dtt_active == False:
-				m = "echo -e '\n\nProbing Usb Tuner.........\n\nPlease wait.........\n'"
-				m1 = "/usr/bin/bhusbdvb.sh"
-				m2 = "sleep 2"
-				self.session.open(Console, title="Dtt", cmdlist=[m,m1,m2], finishedCallback = self.MeStart2)
-			
-	
-	
-	def MeStart2(self):
-		check = False
-		rc = system("ps > /tmp/nvpn.tmp")
-		f = open("/tmp/nvpn.tmp",'r')
-		for line in f.readlines():
-			if line.find('usbtuner') != -1:
-				check = True		
-		f.close()
-		if check == True:
-			out = open("/usr/bin/enigma2sh.tmp", "w")
-			f = open("/usr/bin/enigma2.sh",'r')
-			for line in f.readlines():
-				if line.find("bhusbdvb.sh") != -1:
-					continue
-				if line.find("-d /home/root") != -1:
-					out.write("/usr/bin/bhusbdvb.sh\n")
-				out.write(line)
-			f.close()
-			out.close()
-			os_rename("/usr/bin/enigma2sh.tmp", "/usr/bin/enigma2.sh")
-			system("chmod 0755 /usr/bin/enigma2.sh")
-			message = "Tuner activation need gui restart to take effects.\nRestart Gui now?"
-			ybox = self.session.openWithCallback(self.restEn, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Gui Restart.")
-		else:
-			mybox = self.session.open(MessageBox, "Sorry, No supported device found.", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
-			self.close()
-	
-	def MeStop(self):
-		if self.my_dtt_active == True:
-			out = open("/usr/bin/enigma2sh.tmp", "w")
-			f = open("/usr/bin/enigma2.sh",'r')
-			for line in f.readlines():
-				if line.find("bhusbdvb.sh") != -1:
-					continue
-				out.write(line)
-			f.close()
-			out.close()
-			os_rename("/usr/bin/enigma2sh.tmp", "/usr/bin/enigma2.sh")
-			system("chmod 0755 /usr/bin/enigma2.sh")
-			message = "Tuner deactivation need a reboot to take effects.\nReboot your box now?"
-			ybox = self.session.openWithCallback(self.restBo, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Reboot.")
-	
-	def restEn(self, answer):
-		if answer is True:
-			self.session.open(TryQuitMainloop, 3)
-		else:
-			self.close()
-			
-	def restBo(self, answer):
-		if answer is True:
-			self.session.open(TryQuitMainloop, 2)
-		else:
-			self.close()
-	
-class DeliteDttMainConf(Screen):
-	skin = """
-	<screen position="center,center" size="800,520" title="Black Hole Usb Tuners Config">
-           <widget source="list" render="Listbox" position="20,20" size="760,510" scrollbarMode="showOnDemand" >
-            	<convert type="TemplatedMultiContent">
-                    {"template": [
-                       MultiContentEntryText(pos = (90, 25), size = (690, 80), font=0, text = 0),
-                        MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (80, 80), png = 1),
-                    ],
-                    "fonts": [gFont("Regular", 24),gFont("Regular", 24)],
-                    "itemHeight": 86
-                    }
-                    </convert>
-           </widget>
-         	<ePixmap position="100,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-        	<ePixmap position="450,460" size="250,40" pixmap="skin_default/buttons/yellow25.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="100,468" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_yellow" position="450,468" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-    	</screen>"""
-	
-	def __init__(self, session):
-		Screen.__init__(self, session)
-		
-		self["key_red"] = Label(_("Continue"))
-		self["key_yellow"] = Label(_("Cancel"))
-		
-		self.list = []
-		self["list"] = List(self.list)
-		
-		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
-		{
-			"back": self.close,
-			"ok": self.KeyOk,
-			"red": self.KeyOk,
-			"yellow": self.close
-		})
-		
-		self.updateList()
-		
-	def updateList(self):	
-		self.list = [ ]
-		mypath = DeliteGetSkinPath()
-		
-		mypixmap = mypath + "icons/usbtuner_one_mono.png"
-		png = LoadPixmap(mypixmap)
-		name = "One Usb stick mono-tuner"
-		idx = 0
-		res = (name, png, idx)
-		self.list.append(res)
-		
-		mypixmap = mypath + "icons/usbtuner_one_dual.png"
-		png = LoadPixmap(mypixmap)
-		name = "One Usb stick dual-tuner"
-		idx = 1
-		res = (name, png, idx)
-		self.list.append(res)
-		
-		mypixmap = mypath + "icons/usbtuner_dual_same.png"
-		png = LoadPixmap(mypixmap)
-		name = "Two Usb sticks same model"
-		idx = 2
-		res = (name, png, idx)
-		self.list.append(res)
-		
-		mypixmap = mypath + "icons/usbtuner_dual_different.png"
-		png = LoadPixmap(mypixmap)
-		name = "Two Usb sticks different models"
-		idx = 3
-		res = (name, png, idx)
-		self.list.append(res)
-		self["list"].list = self.list
 
-	def KeyOk(self):
-		self.sel = self["list"].getCurrent()
-		if self.sel:
-			self.sel = self.sel[2]
-			self.session.open(DeliteDttDriversList, self.sel)
-			
-		self.close()
-
-	
-class DeliteDttDriversList(Screen):
-	skin = """
-	<screen position="center,center" size="860,540" title="Usb Tuner Available Drivers">
-		<widget source="list" render="Listbox" position="10,10" size="840,500" scrollbarMode="showOnDemand" >
-			<convert type="StringList" />
-		</widget>
-		<widget name="Linconn" position="10,500" size="840,30" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" />
-	</screen>"""
-	
-	def __init__(self, session, device):
-		Screen.__init__(self, session)
-
-		self.list = []
-		self["list"] = List(self.list)
-		self["Linconn"] = Label("Wait please, connection to server in progress ....")
-		self["actions"] = ActionMap(["WizardActions"],
-		{
-			"ok": self.myinstall,
-			"back": self.close,
-
-		})
-		self.activityTimer = eTimer()
-		self.activityTimer.timeout.get().append(self.Listconn)
-		self.activityTimer.start(1, False)
-		self.onClose.append(self.delTimer)
-		
-		self.progress = 0
-		self.device = device
-		self.mainconf = "One Usb stick mono-tuner"
-		if self.device == 1:
-			self.mainconf = "One Usb stick dual-tuner"
-		elif self.device == 2:
-			self.mainconf = "Two Usb sticks same model"
-		elif self.device == 3:
-			self.mainconf = "Two Usb sticks different models"
-			
-	
-	def delTimer(self):
-		del self.activityTimer
-		
-	def DeliteDtt_geturl(self):
-		machine = nab_Detect_Machine()
-		ver = BhU_get_Version()
-		path = "http://www.vuplus-community.net/driversusb/"
-#		good = ["bm750", "vusolo"]
-#		if machine in good:
-#			path = "http://www.vuplus-community.net/driversusb/"
-		
-		if machine == "bm750":
-			machine = "vuduo"
-		path += ver + "/" + machine
-		return path
-	
-	def Listconn(self):
-		self.activityTimer.stop()
-		url = self.DeliteDtt_geturl()
-		url += "/driverslist.cfg"
-		cmd = "wget -O /tmp/drvlist.tmp " + url
-		rc = system(cmd)
-		strview = ""
-		if fileExists("/tmp/drvlist.tmp"):
-			f = open("/tmp/drvlist.tmp",'r')
- 			for line in f.readlines():
-				if line.find(';') != -1:
-					parts = line.strip().split(';')
-					text = parts[0].strip() + "   by: " + parts[1].strip()
-					file = parts[2].strip()
-					res = (text, file)
-					self.list.append(res)
- 			f.close()
-			os_remove("/tmp/drvlist.tmp")
-			self["list"].list = self.list
-			
-		else:
-			mybox = self.session.open(MessageBox, "Sorry. Connection to BH Server refused.\nCheck that your internet connection is up and running", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
-
-		self["Linconn"].hide()
-	
-	def myinstall(self):
-		self.sel = self["list"].getCurrent()
-		if self.sel:
-			message = "Do you want to install the Driver:\n " + self.sel[0] + " ?"
-			ybox = self.session.openWithCallback(self.installadd2, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Installation Confirm")
-			
-	def installadd2(self, answer):
-		if answer is True:
-			if self.device == 0:
-				self.compose_mono("1")
-			elif self.device == 1:
-				self.compose_mono("2")
-			elif self.device == 2:
-				self.compose_mono("2")
-			elif self.device == 3:
-				if self.progress == 0:
-					self.progress = 1
-					self.compose_mono("3")
-				else:
-					self.compose_dual()
-				
-			#self.session.open(MessageBox, self.device, MessageBox.TYPE_INFO)
-			
-	def write_cfg(self):
-		out = open("/etc/bh_usb_dvb.cfg", "w")
-		out.write(self.mainconf)
-		out.close()
-		
-	def compose_mono(self, answer):
-		system("rm -f /lib/modules/dvbt/*")
-		system("rm -f /usr/bin/bhusbdvb.sh")
-		system("killall -9 usbtuner")
-		url = self.DeliteDtt_geturl()
-		file = self.sel[1]
-		file = file.strip()
-		url = url + "/" + file
-		cmd = "wget -O /tmp/" + file + " " + url
-		rc = system(cmd)
-		dest = "/tmp/" + file
-		mydir = getcwd()
-		chdir("/")
-		cmd = "tar -xzf " + dest
-		rc = system(cmd)
-		chdir(mydir)
-		cmd = "rm -f " + dest
-		rc = system(cmd)
-		system("chmod 0755 /usr/bin/bhusbdvb.sh")
-		if answer == "3":
-			os_rename("/usr/bin/bhusbdvb.sh", "/usr/bin/bhusbdvb.tmp2")
-			mybox = self.session.open(MessageBox, "First tuner drivers installed.\n You can now select drivers for second tuner", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
-		else:
-			self.write_cfg()
-			mybox = self.session.open(MessageBox, "Driver Successfully Installed.\n You can now Enable your Usb tuner", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
-			self.close()
-	
-	def compose_dual(self):
-		newdrivers = ""
-		description = ""
-		system("killall -9 usbtuner")
-		url = self.DeliteDtt_geturl()
-		file = self.sel[1]
-		file = file.strip()
-		url = url + "/" + file
-		cmd = "wget -O /tmp/" + file + " " + url
-		rc = system(cmd)
-		dest = "/tmp/" + file
-		mydir = getcwd()
-		chdir("/")
-		cmd = "tar -xzf " + dest
-		rc = system(cmd)
-		chdir(mydir)
-		cmd = "rm -f " + dest
-		rc = system(cmd)
-		
-		f = open("/usr/bin/bhusbdvb.sh",'r')
-		check = 0
-		for line in f.readlines():
-			if line.find('#description:') != -1:
-				description = line[13:]
-			if line.find('# fine drivers') != -1:
-				break
-			if check == 1:
-				newdrivers = newdrivers + line
-			if line.find('# inizio drivers') != -1:
-				check = 1
-		f.close()
-		
-		out = open("/usr/bin/bhusbdvb.sh", "w")
-		f = open("/usr/bin/bhusbdvb.tmp2",'r')
-		for line in f.readlines():
-			if line.find('#description:') != -1:
-				line = line.strip() + " -" + description + "\n"
-			if line.find("# fine drivers") != -1:
-				out.write(newdrivers)
-			out.write(line)
-		f.close()
-		out.close()
-		system("chmod 0755 /usr/bin/bhusbdvb.sh")
-		system("rm -f /usr/bin/bhusbdvb.tmp2")
-		self.write_cfg()
-		mybox = self.session.open(MessageBox, "Drivers for tuner1 and tuner2 successfully installed.\n You can now Enable your tuners", MessageBox.TYPE_INFO)
-		mybox.setTitle("Info")
-		self.close()
-	
-#class BhHdmiCecConf2(Screen, ConfigListScreen):
-#	skin = """
-#	<screen position="center,center" size="900,600" title="Black Hole Hdmi Cec Setup">
-#		<widget name="config" position="10,10" size="880,230" scrollbarMode="showOnDemand"/>
-#		<widget name="current_address" position="25,240" size="550,30" zPosition="10" font="Regular;21" foregroundColor="red" halign="left" valign="center" />
-#		<widget name="fixed_address" position="25,270" size="550,30" zPosition="10" font="Regular;21" halign="left" valign="center" />
-#		<widget name="lab1" position="10,300" size="880,250" font="Regular;20" halign="center" valign="center" foregroundColor="green" />
-#		<ePixmap position="68,560" size="150,40" pixmap="skin_default/buttons/red.png" alphatest="on" zPosition="1" />
-#		<ePixmap position="276,560" size="150,40" pixmap="skin_default/buttons/green.png" alphatest="on" zPosition="1" />
-#		<ePixmap position="484,560" size="150,40" pixmap="skin_default/buttons/yellow.png" alphatest="on" zPosition="1" />
-#		<ePixmap position="692,560" size="150,40" pixmap="skin_default/buttons/blue.png" alphatest="on" zPosition="1" />
-#		<widget name="key_red" position="68,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="red" transparent="1" />
-#		<widget name="key_green" position="276,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="green" transparent="1" />
-#		<widget name="key_yellow" position="484,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
-#		<widget name="key_blue" position="692,560" zPosition="2" size="150,40" font="Regular;20" halign="center" valign="center" backgroundColor="#18188b" transparent="1" />
-#	</screen>"""
-	
-#	def __init__(self, session):
-#		Screen.__init__(self, session)
-		
-#		self.list = []
-#		ConfigListScreen.__init__(self, self.list)
-		
-#		labtxt = "Welcome in Black Hole Hdmi Cec\nThe CEC allows HDMI devices to control each other when necessary and allows the user to operate multiple devices with one remote control handset.\nNot all tv are compatible with the box drivers.\nBe sure to activate in your Tv menu the options about Hdmi Cec. For example in Samsung Tv goto Menu->Application->Anynet+->Setup and set Anynet+ On - Auto turn off Yes.\nPlease report @vuplus-community.net your tests on your tv model."
-		
-#		self["key_red"] = Label(_("Save"))
-#		self["key_green"] = Label(_("Set Fixed"))
-#		self["key_yellow"] = Label(_("Clear fixed"))
-#		self["key_blue"] = Label(_("Cancel"))
-#		self["lab1"] = Label(labtxt)
-#		self["current_address"] = Label("")
-#		self["fixed_address"] = Label("")
-		
-#		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
-#		{
-#			"back": self.keyCancel,
-#			"red": self.keyGo,
-#			"blue": self.keyCancel,
-#			"green": self.setFixedAddress,
-#			"yellow": self.clearFixedAddress
-
-#		})
-			
-
-#		self.list.append(getConfigListEntry(_("Enabled"), config.hdmicec.enabled))
-#		self.list.append(getConfigListEntry(_("Put TV in standby"), config.hdmicec.control_tv_standby))
-#		self.list.append(getConfigListEntry(_("Wakeup TV from standby"), config.hdmicec.control_tv_wakeup))
-#		self.list.append(getConfigListEntry(_("Switch TV to correct input"), config.hdmicec.report_active_source))
-#		self.list.append(getConfigListEntry(_("Use TV remote control"), config.hdmicec.report_active_menu))
-#		self.list.append(getConfigListEntry(_("Handle standby from TV"), config.hdmicec.handle_tv_standby))
-#		self.list.append(getConfigListEntry(_("Handle wakeup from TV"), config.hdmicec.handle_tv_wakeup))
-#		self.list.append(getConfigListEntry(_("Wakeup signal from TV"), config.hdmicec.tv_wakeup_detection))
-#		self.list.append(getConfigListEntry(_("Handle deepstandby events"), config.hdmicec.handle_deepstandby_events))
-#		self["config"].list = self.list
-#		self["config"].l.setList(self.list)
-	
-#		self.updateAddress()
-
-#	def keyLeft(self):
-#		ConfigListScreen.keyLeft(self)
-
-#	def keyRight(self):
-#		ConfigListScreen.keyRight(self)
-
-
-#	def keyCancel(self):
-#		for x in self["config"].list:
-#			x[1].cancel()
-#		self.close()
-
-#	def setFixedAddress(self):
-#		import Components.HdmiCec
-#		Components.HdmiCec.hdmi_cec.setFixedPhysicalAddress(Components.HdmiCec.hdmi_cec.getPhysicalAddress())
-#		self.updateAddress()
-
-#	def clearFixedAddress(self):
-#		import Components.HdmiCec
-#		Components.HdmiCec.hdmi_cec.setFixedPhysicalAddress("0.0.0.0")
-#		self.updateAddress()
-
-#	def updateAddress(self):
-#		import Components.HdmiCec
-#		self["current_address"].setText(_("Current CEC address") + ": " + Components.HdmiCec.hdmi_cec.getPhysicalAddress())
-#		if config.hdmicec.fixed_physical_address.value == "0.0.0.0":
-#			fixedaddresslabel = ""
-#		else:
-#			fixedaddresslabel = _("Using fixed address") + ": " + config.hdmicec.fixed_physical_address.value
-#		self["fixed_address"].setText(fixedaddresslabel)
-	
-#	def keyGo(self):
-#		for x in self["config"].list:
-#			x[1].save()
-#		configfile.save()
-#		self.bhHdmiInit()
-		
-#	def bhHdmiInit(self):
-#		if config.hdmicec.enabled.value:
-#			import struct
-#			from enigma import eHdmiCEC
-#			address = 0x0f
-#			cmd = 0x82
-#			physicaladdress = eHdmiCEC.getInstance().getPhysicalAddress()
-#			data = str(struct.pack('BB', int(physicaladdress/256), int(physicaladdress%256)))
-#			eHdmiCEC.getInstance().sendMessage(address, cmd, data, len(data))
-#			address = 0
-#			cmd = 0x8e
-#			data = str(struct.pack('B', 0x00))
-#			eHdmiCEC.getInstance().sendMessage(address, cmd, data, len(data))
-		
-		
-#		self.session.openWithCallback(self.bhClose, MessageBox, "Black Hole Hdmi-Cec inizialized.", MessageBox.TYPE_INFO)
-		
-#	def bhClose(self, answer):
-#		self.close()
-		
 		
 	
