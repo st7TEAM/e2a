@@ -1078,8 +1078,6 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 		self.ftdi_sio = NoSave(ConfigYesNo(default=False))
 		self.pl2303 = NoSave(ConfigYesNo(default=False))
 		self.tun = NoSave(ConfigYesNo(default=False))
-		self.exportfs = NoSave(ConfigYesNo(default=False))
-		self.nfsd = NoSave(ConfigYesNo(default=False))
 		
 		if fileExists("/usr/bin/bhextramod"):
 			f = open("/usr/bin/bhextramod",'r')
@@ -1090,10 +1088,6 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 					self.pl2303.value = True
 				elif line.find('tun') != -1:
 					self.tun.value = True
-				elif line.find('exportfs') != -1:
-					self.exportfs.value = True
-				elif line.find('nfsd') != -1:
-					self.nfsd.value = True
 			f.close()
 		
 		res = getConfigListEntry(_("Smargo & other Usb card readers chipset ftdi:"), self.ftdi_sio)
@@ -1102,19 +1096,13 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 		self.list.append(res)
 		res = getConfigListEntry(_("Tun module needed for Openvpn:"), self.tun)
 		self.list.append(res)
-		res = getConfigListEntry(_("Exportfs module needed for Nfs-Server:"), self.exportfs)
-		self.list.append(res)
-		res = getConfigListEntry(_("Nfsd module needed for Nfs-Server:"), self.nfsd)
-		self.list.append(res)
-		
-		
 		
 		self["config"].list = self.list
 		self["config"].l.setList(self.list)
 		
 		
 	def saveMyconf(self):
-		l1 = ""; l2 = ""; l3 = ""; l4 = ""; l5 = ""; l6 = "";
+		l1 = ""; l2 = ""; l3 = ""; l4 = "";
 			
 		if self.ftdi_sio.value == True:
 			l2 = "modprobe ftdi_sio"
@@ -1134,18 +1122,6 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 		else:
 			system("rmmod tun")
 		
-		if self.exportfs.value == True:
-			l5 = "modprobe exportfs"
-			system(l5)
-		else:
-			system("rmmod exportfs")
-			
-		if self.nfsd.value == True:
-			l6 = "modprobe nfsd"
-			system(l6)
-		else:
-			system("rmmod nfsd")
-			system("rmmod exportfs")
 		
 		
 		out = open("/usr/bin/bhextramod",'w')
@@ -1158,10 +1134,6 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 			out.write(l3 + "\n")
 		if l4 != "":
 			out.write(l4 + "\n")
-		if l5 != "":
-			out.write(l5 + "\n")
-		if l6 != "":
-			out.write(l6 + "\n")
 		
 		out.close()
 		system("chmod 0755 /usr/bin/bhextramod")
