@@ -1,6 +1,6 @@
 <skin>
  	<!--
-     ################### Skin_Default_ Army_skin_default_VU_1.7.x_v.1.5_BH ####################
+     ################### Skin_Default_ Army_skin_default_VU_1.7.1x_v.1.0_BH ####################
 
     QUESTA SKIN E' PROTETTA DA COPYRIGHT E PUO' ESSERE USATA SOLO PER
 	LE IMMAGINI  BLACK HOLE. IL CODICE DELLA SKIN PUO' ESSERE MODIFICATO
@@ -13,7 +13,7 @@
 	SKIN CODE AND GRAPHICS TO MAKE A NEW SKIN OR TO ADAPT THIS SKIN FOR
 	DIFFERENT IMAGES.
 
-    ###################  Skin_Default_ Army_skin_default_VU_1.7.x_v.1.5_BH  ####################
+    ###################  Skin_Default_ Army_skin_default_VU_1.7.1x_v.1.0_BH  ####################
     -->
 	<output id="0">
 		<resolution xres="1280" yres="720" bpp="32" />
@@ -668,7 +668,7 @@
 		<widget name="statuslab" position="75,560" size="710,30" font="Regular;24" halign="center" valign="center" foregroundColor="#ffad31" backgroundColor="#9f1313" transparent="1" />
 		<ePixmap position="300,650" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="300,650" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
-        <widget source="list" render="Listbox" position="80,90" size="710,280" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection450x38-fs8.png"  backgroundColorSelected="#10000000" transparent="1">
+        <widget source="list" render="Listbox" position="80,90" size="710,456" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection450x38-fs8.png"  backgroundColorSelected="#10000000" transparent="1">
             <convert type="TemplatedMultiContent">
                 {"template": [
                 MultiContentEntryText(pos = (60, 2), size = (450, 38), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
@@ -1170,40 +1170,7 @@
         <widget name="key_green" position="450,280" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 	</screen>
 	<!-- 57 Delite Nfs ( 3 )-->
-	<screen name="DeliteNfs" position="center,center" size="950,420" title="Black Hole E2 Nfs Server Manager">
-	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="950,420" alphatest="on" />	
-		<widget name="linactive" position="20,20" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32"  alphatest="on" />
-		<widget name="lactive" position="20,20" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32"  alphatest="on" />
-		<widget name="lab1" position="60,20" size="450,32" font="Regular;24" valign="center"  transparent="1"/>
-		<widget name="lab2" position="60,70" size="330,32" font="Regular;24" valign="center" transparent="1"/>
-		<widget name="labclient" position="400,70" size="200,32" font="Regular;24" valign="center" backgroundColor="#11362d"/>
-		<widget name="lab3" position="60,120" size="250,32" font="Regular;24" valign="center" transparent="1"/>
-		<widget name="labnetmask" position="400,120" size="200,32" font="Regular;24" valign="center" backgroundColor="#11362d"/>
-		<widget name="lab4" position="60,170" size="250,32" font="Regular;24" valign="center" transparent="1"/>
-		<widget name="labflags" position="260,170" size="340,32" font="Regular;24" valign="center" backgroundColor="#11362d"/>
-		<widget name="sinactive" position="20,220" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32"  alphatest="on" />
-		<widget name="sactive" position="20,220" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32"  alphatest="on" />
-		<widget name="lab5" position="60,220" size="160,32" font="Regular;24" valign="center" transparent="1"/>
-		<widget name="labport" position="420,220" size="180,32" font="Regular;24" valign="center" backgroundColor="#11362d"/>
-		<widget name="lab6" position="60,270" size="300,32" font="Regular;24" valign="center" transparent="1"/>
-		<widget name="labmdir" position="320,270" size="280,32" font="Regular;24" valign="center" backgroundColor="#11362d"/>
-		<widget name="lab7" position="60,320" size="250,32" font="Regular;24" valign="center" transparent="1"/>
-		<widget name="labstop" position="460,320" size="140,32" font="Regular;24" valign="center"  halign="center" backgroundColor="red"/>
-		<widget name="labrun" position="460,370" size="140,32" zPosition="1" font="Regular;24" valign="center"  halign="center" backgroundColor="green"/>
-	    <ePixmap position="650,130" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="650,190" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="650,250" size="250,40" pixmap="skin_default/buttons/yellow25.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="650,130" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_green" position="650,190" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_yellow" position="650,250" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-	</screen>
-	<!-- 58 Delite Nfs Config ( 1 )-->
-	<screen name="DeliteNfsSetup" position="center,center" size="710,520" title="Black Hole E2 Nfs Server Setup">
-	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="710,520" alphatest="on" />	
-		<widget name="config" position="20,20" size="670,420" scrollbarMode="showOnDemand"   transparent="1"/>
-		<ePixmap position="230,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="230,460" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-	</screen>
+	<!-- 58 Delite Nfs - Setup Config ( 1 )-->
 	<!-- 59 DeliteCronMang ( 2 )-->
 	<screen name="DeliteCronMang" position="center,center" size="710,520" title="Black Hole E2 Cron Manager">
 	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="710,520" alphatest="on" />	
@@ -1225,63 +1192,11 @@
         <eLabel text="Virtual Keyboard" position="70,280" size="250,40" zPosition="2" halign="center" valign="center" font="Regular;24" foregroundColor="white" backgroundColor="background" transparent="1" /> 
     </screen>
 	<!-- 61 Delite Mount Wizard ( 3 )-->
-	<screen name="DeliteMountWiz" position="center,center" size="950,320" title="Black Hole E2 Mountpoints Wizard">
-	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="950,320" alphatest="on" />	
-		<widget name="lab1" position="20,20" size="640,228" font="Regular;18" valign="center" transparent="1"/>
-		<widget name="infotext" position="20,260" size="640,80" font="Regular;20"  transparent="1"/>
-		<ePixmap position="680,70" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="680,130" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="680,190" size="250,40" pixmap="skin_default/buttons/yellow25.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="680,70" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_green" position="680,130" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_yellow" position="680,190" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-	</screen>
 	<!-- 62 Delite Cifs Wizard ( 1 )-->
-	<screen name="DeliteCifsWiz" position="center,center" size="710,520" title="Black Hole E2 Cifs Wizard">
-	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="710,520" alphatest="on" />	
-		<widget name="lab1" position="10,20" size="640,340" font="Regular;18" valign="center" transparent="1"/>
-		<ePixmap position="230,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="230,460" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-	</screen>
 	<!-- 63 Delite Nfs Wizard ( 1 )-->
-	<screen name="DeliteNfsWiz" position="center,center" size="710,520" title="Black Hole E2 Nfs Wizard">
-	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="710,520" alphatest="on" />	
-		<widget name="lab1" position="20,20" size="640,340" font="Regular;18" valign="center" transparent="1"/>
-	    <ePixmap position="230,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="230,460" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-	</screen>
-	<!-- 64Delite New Mount Wizard ( 2 )-->
-	<screen name="NabMountNewNfs" position="center,center" size="710,520" title="Black Hole E2 Mount Point Wizard">
-	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="710,520" alphatest="on" />	
-		<widget name="config" position="20,20" size="670,270" scrollbarMode="showOnDemand"  transparent="1"/>
-		<ePixmap position="70,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="390,460" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="70,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_green" position="390,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-	</screen>
+	<!-- 64 Delite New Mount Wizard ( 2 )-->
 	<!-- 65 Delite Test Mount Wizard ( 1 )-->
-	<screen name="Nab_TestMount" position="center,center" size="710,520" title="Black Hole E2 Mounter Test">
-	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="710,520" alphatest="on" />	
-		<widget name="label1" position="20,20" size="640,230" font="Regular;20" halign="left" valign="left"  transparent="1"/>
-	    <ePixmap position="230,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="230,460" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />	
-	</screen>
 	<!-- 66 Delite Mount Editor ( 4 )-->
-	<screen name="DeliteMountMang" position="center,center" size="1130,520" title="Black Hole E2 Mount manager">
-	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="1130,520" alphatest="on" />	
-		<widget name="lab1" position="20,20" size="640,30" font="Regular;20" valign="center" transparent="1"/>
-		<widget name="infotext" position="20,55" size="640,90" font="Regular;18"  transparent="1"/>
-		<widget name="lab2" position="20,145" size="640,30" font="Regular;20" valign="center" transparent="1"/>
-		<widget name="entries" position="20,180" size="640,200" scrollbarMode="showOnDemand" />
-		<ePixmap position="26,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="302,460" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="578,460" size="250,40" pixmap="skin_default/buttons/yellow25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="854,460" size="250,40" pixmap="skin_default/buttons/blue25.png" alphatest="on" zPosition="1" />
-		<widget name="red" position="26,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="green" position="302,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="yellow" position="578,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="blue" position="854,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
-	</screen>
 	<!-- 67 DeliteProcInfo -->
 	<screen name="NabProcInfo" position="center,center" size="600,340" title="Black Hole E2 Process Info">
 	  <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="600,340" alphatest="on" />	
@@ -2466,14 +2381,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!--  121 Nim Selection -->
 	<screen name="NimSelection" position="center,center" size="900,560" title="Choose Tuner">
 	 <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="900,560" alphatest="on" />	
-		<widget source="nimlist" render="Listbox" position="20,20" size="860,450" transparent="1" >
+		<widget source="nimlist" render="Listbox" position="20,20" size="860,480" transparent="1" >
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryText(pos = (10, 5), size = (860, 50), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
-						MultiContentEntryText(pos = (50, 37), size = (820, 50), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+						MultiContentEntryText(pos = (10, 5), size = (860, 70), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+						MultiContentEntryText(pos = (50, 37), size = (820, 70), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
 					],
 				 "fonts": [gFont("Regular", 22), gFont("Regular", 18)],
-				 "itemHeight": 110
+				 "itemHeight": 120
 				}
 			</convert>
 		</widget>
@@ -2490,7 +2405,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="number" position="20,65" size="400,84" zPosition="1" halign="center" valign="center" font="Regular;80" transparent="1" foregroundColor="grey" backgroundColor="black"/>
 	</screen>
 	<!-- 124 Numerical Text Input Help Dialog -->
-	<screen name="NumericalTextInputHelpDialog" position="590,430" size="604,124" zPosition="10" flags="wfNoBorder">
+<screen name="NumericalTextInputHelpDialog" position="590,430" size="604,124" zPosition="10" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="604,124" pixmap="skin_default/604_124.png"/>
 		<widget name="key1" position="2,2" 	size="200,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1"/>
 		<widget name="key2" position="202,2" size="200,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1"/>
@@ -2502,8 +2417,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget name="key8" position="202,82" size="200,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1"/>
 		<widget name="key9" position="402,82" size="200,40" font="Console;21" halign="center" valign="center" backgroundColor="darkgrey" transparent="1"/>
 	</screen>
-      <!-- 125 CrashlogReportConfiguration  ( 2 )-->
-		<screen name="CrashlogReportConfiguration" position="center,center" size="1130,520" title="CrashlogReport Setting" >
+      <!-- 125 CrashlogReportSetting  ( 2 )-->
+	<screen name="CrashlogReportConfiguration" position="center,center" size="1130,520" title="CrashlogReport Setting" >
 		 <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="1130,520" alphatest="on" />	
 		<widget name="config" position="20,20" zPosition="1" size="1090,300" scrollbarMode="showOnDemand" transparent="1" />
 		<widget source="status" render="Label" position="495,270" size="290,26" zPosition="10" font="Regular;24" halign="center" valign="center" backgroundColor="#25062748" transparent="1"/>
@@ -2539,15 +2454,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<widget source="introduction" render="Label" position="15,140" size="680,25" zPosition="10" font="Regular;22" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
 		</screen>
 	 <!-- 128 CleanupWizardConfiguration ( 2 )-->		
-		<screen name="CleanupWizardConfiguration" position="center,center" size="710,340" title="CleanupWizard settings" >
-		 <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="710,340" alphatest="on" />	
-			<ePixmap position="70,280" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-            <ePixmap position="390,280" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
-			<widget source="key_red" render="Label" position="70,280" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-			<widget source="key_green" render="Label" position="390,280" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-			<widget name="config" position="20,20" size="670,80" scrollbarMode="showOnDemand" transparent="1" />
-			<widget source="status" render="Label" position="30,240" size="650,25" zPosition="10" font="Regular;22" halign="center" valign="center" backgroundColor="#25062748" transparent="1"/>
-		</screen>
 	<!--  129 Parental Control Change Pin -->
 	<screen name="ParentalControlChangePin" position="center,center" size="600,340" title="Change pin code">
 	 <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="600,340" alphatest="on" />	
@@ -4125,19 +4031,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<widget source="introduction" render="Label" position="175,310" size="780,28" zPosition="10" font="Regular;24" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
 			</screen>	
 		<!--234 DeliteDtt  ( 3 )-->
-	<screen name="DeliteDtt" position="center,center" size="900,340" title="Black Hole External Usb Tuner Panel">
-	<ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="900,340" alphatest="on" />	
-			<widget name="lab1" position="10,10" size="690,180" font="Regular;24" backgroundColor="transpBlack" valign="center" transparent="1"/>
-			<widget name="lab2" position="20,210" size="300,32" font="Regular;24" backgroundColor="transpBlack" valign="center" transparent="1"/>
-			<widget name="labstop" position="380,210" size="140,32" font="Regular;24" valign="center"  halign="center" backgroundColor="red"/>
-			<widget name="labrun" position="380,210" size="140,32" zPosition="1" font="Regular;24" valign="center"  halign="center" backgroundColor="green"/>
-			<ePixmap position="38,280" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-			<ePixmap position="325,280" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
-			<ePixmap position="613,280" size="250,40" pixmap="skin_default/buttons/yellow25.png" alphatest="on" zPosition="1" />
-			<widget name="key_red" position="38,280" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-			<widget name="key_green" position="325,280" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-			<widget name="key_yellow" position="613,280" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
-			</screen>
+	
 		<!--235 TempFanControl  ( 4 )-->	
 	<screen name="TempFanControl" position="center,center" size="950,280" title="Fan Control" >
 	<ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="950,280" alphatest="on" />	
@@ -4224,7 +4118,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<widget source="key_green" render="Label" position="383,240" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 			<widget name="config" zPosition="2" position="20,30" size="660,200" scrollbarMode="showOnDemand" transparent="1" />
 			</screen>
-				<!--237 BhMediatomb  ( 2 )-->		
+		<!--237 BhMediatomb  ( 2 )-->		
 	<screen name="BhMediatomb" position="center,center" size="700,400" title="Black Hole UPnP Server Panel">
 	 <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="700,400" alphatest="on" />
 			<widget name="lab1" position="20,10" size="680,260" font="Regular;22" valign="center" backgroundColor="transpBlack" transparent="1"/>
@@ -4249,23 +4143,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 			<widget name="key_green" position="383,240" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 			</screen>
 		<!--239 DeliteDttMainConf ( 2 )-->		
-		<screen name="DeliteDttMainConf" position="center,center" size="800,520" title="Black Hole Usb Tuners Config">
-           <widget source="list" render="Listbox" position="20,20" size="760,510" scrollbarMode="showOnDemand" >
-                <convert type="TemplatedMultiContent">
-                    {"template": [
-                       MultiContentEntryText(pos = (90, 25), size = (690, 80), font=0, text = 0),
-                        MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (80, 80), png = 1),
-                    ],
-                    "fonts": [gFont("Regular", 24),gFont("Regular", 24)],
-                    "itemHeight": 86
-                    }
-                    </convert>
-           </widget>
-             <ePixmap position="100,460" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
-            <ePixmap position="450,460" size="250,40" pixmap="skin_default/buttons/yellow25.png" alphatest="on" zPosition="1" />
-        <widget name="key_red" position="100,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-        <widget name="key_yellow" position="450,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-        </screen>
            <!--240 HDMI-CEC Plugin ( 4 )-->		
 		<screen name="HdmiCecPlugin" position="0,0" size="1280,7200" title="HDMI-CEC Plugin" >
 			<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
@@ -4481,18 +4358,27 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="310,650" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget position="310,650" size="250,40" name="key_red" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" zPosition="3" />
 	</screen>
-	<!--254 GenuineVuplus (2)-->
-	<screen name="GenuineVuplus" position="center,center" size="900,420" title="Genuine Vuplus" >
-		<ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="900,420" alphatest="on" />	
-		<widget name="config" position="20,20" size="860,100" zPosition="2" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"/>
-		<widget name="text1" position="50,200" size="800,34" font="Regular;30" halign="center" foregroundColor="green" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="text2" position="50,250" size="800,120" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
-		<ePixmap pixmap="skin_default/buttons/red25.png" position="133,360" size="250,40" alphatest="on" />
-		<ePixmap pixmap="skin_default/buttons/green25.png" position="517,360" size="250,40" alphatest="on" />
-		<widget source="key_red" render="Label" position="133,360" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" transparent="1" />
-		<widget source="key_green" render="Label" position="517,360" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" transparent="1" />
-		</screen>
-	<!--255 RemoteControlCode (2)-->	
+	<!--254 VuplusAuthenticity - Return the Love Event  (2)-->
+		<screen name="VuplusAuthenticity" position="center,center" size="900,420" title="Return the Love Event (only for genuine box)">
+			<ePixmap pixmap="skin_default/buttons/red25.png" position="133,360" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/green25.png" position="517,360" size="250,40" alphatest="on" />
+			<widget source="key_red" render="Label" position="133,360" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" transparent="1" />
+			<widget source="key_green" render="Label" position="517,360" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" transparent="1" />
+			<widget name="config" zPosition="2" position="20,20" size="860,80" scrollbarMode="showOnDemand" transparent="1" />
+			<widget name="text1" position="20,150" size="860,110" font="Regular;32" halign="center" valign="center"/>
+			<widget name="text2" position="20,200" size="860,140" font="Regular;24" halign="center" valign="center"/>
+			</screen>
+        <!--255 VuplusAuthenticity - Genuine Vuplus  (2)-->
+		<screen name="VuplusAuthenticity" position="center,center" size="900,420" title="Genuine Vuplus">
+			<ePixmap pixmap="skin_default/buttons/red25.png" position="133,360" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/green25.png" position="517,360" size="250,240" alphatest="on" />
+			<widget source="key_red" render="Label" position="133,360" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" transparent="1" />
+			<widget source="key_green" render="Label" position="517,360" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" transparent="1" />
+			<widget name="config" zPosition="2" position="20,20" size="580,80" scrollbarMode="showOnDemand" transparent="1" />
+			<widget name="text1" position="20,150" size="860,70" font="Regular;32" halign="center" valign="center"/>
+			<widget name="text2" position="20,200" size="860,140" font="Regular;18" halign="center" valign="center"/>
+			</screen>
+	<!--256 RemoteControlCode (2)-->	
 	<screen name="RemoteControlCode" position="center,center" size="700,320" title="Remote Control System Code Setting" >
 	<ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="700,320" alphatest="on" />
 		<ePixmap pixmap="skin_default/buttons/red25.png" position="66,260" size="250,40" alphatest="on" />
@@ -4500,7 +4386,46 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_red" render="Label" position="66,260" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" transparent="1" />
 		<widget source="key_green" render="Label" position="383,260" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" transparent="1" />
 		<widget name="config" zPosition="2" position="20,50" size="660,200" scrollbarMode="showOnDemand" transparent="1" />
-		</screen>	
+		</screen>
+		<!--257 BhNfsServer (3)-->	
+		<screen name="BhNfsServer" position="center,center" size="950,320" title="Black Hole Nfs Server Panel">
+		<ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="950,320" alphatest="on" />
+        <widget name="lab1" position="20,50" size="250,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="labactive" position="270,50" size="150,30" font="Regular;20" valign="center" transparent="1"/>
+        <widget name="lab2" position="20,100" size="250,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="labstop" position="270,100" size="100,30" font="Regular;20" valign="center"  halign="center" backgroundColor="red"/>
+        <widget name="labrun" position="270,100" size="100,30" zPosition="1" font="Regular;20" valign="center"  halign="center" backgroundColor="green"/>
+        <ePixmap pixmap="skin_default/buttons/red25.png" position="50,260" size="250,40" alphatest="on" />
+        <ePixmap pixmap="skin_default/buttons/green25.png" position="350,260" size="250,40" alphatest="on" />
+        <ePixmap pixmap="skin_default/buttons/yellow25.png" position="650,260" size="250,40" alphatest="on" />
+        <widget name="key_red" position="50,260" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+        <widget name="key_green" position="350,260" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+        <widget name="key_yellow" position="650,260" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+    </screen>
+       <!--258 BhTunerServer (3)--> 
+    <screen name="BhTunerServer" position="center,center" size="950,520" title="Black Hole Tuner Server Panel">
+    <ePixmap pixmap="skin_default/frame_box-fs8.png" zPosition="-1" position="0,0" size="950,320" alphatest="on" />
+        <widget name="lab1" position="20,4" size="910,400" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="lab2" position="20,400" size="910,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="labstop" position="345,400" size="260,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
+        <widget name="labrun" position="345,400" size="260,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
+        <ePixmap pixmap="skin_default/buttons/red25.png" position="50,460" size="250,40" alphatest="on"/>
+        <ePixmap pixmap="skin_default/buttons/green25.png" position="350,460" size="250,40" alphatest="on"/>
+        <ePixmap pixmap="skin_default/buttons/yellow25.png" position="650,460" size="250,40" alphatest="on" />
+        <widget name="key_red" position="50,460" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="key_green" position="350,460" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="key_yellow" position="650,460" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+    </screen>	
+    <!--259 BhNetBrowserr (2 )--> 
+    <screen name="BhNetBrowser" position="center,center" size="800,520" title="Select Network Interface">
+        <widget source="list" render="Listbox" position="20,20" size="760,460" scrollbarMode="showOnDemand" >
+            <convert type="StringList" />
+        </widget>
+            <ePixmap pixmap="skin_default/buttons/red25.png" position="100,460" size="250,40" alphatest="on" />
+        <ePixmap pixmap="skin_default/buttons/yellow25.png" position="450,460" size="250,40" alphatest="on" />
+        <widget name="key_red" position="100,460" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+        <widget name="key_yellow" position="450,460" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+        </screen>
 	</skin> 
 
 			
