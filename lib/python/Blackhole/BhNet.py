@@ -765,7 +765,7 @@ class BhTunerServer(Screen):
 		Screen.__init__(self, session)
 		
 		mytext = """
-This feature will allow you to share the tuners of this box with another Vu+ box, a PC and / or a compatable UPnP device in your home network.
+This feature will allow you to share the tuners of this box with another Vu+ box, a PC, a Ps3 and/or a compatible UPnP device in your home network.
 The server will build a virtual channels list in the folder /media/hdd/tuner on this box.
 You can access the tuner(s) of this box from clients on your internal lan using nfs, cifs, UPnP or any other network mountpoint.
 The tuner of the server (this box) has to be avaliable. This means that if you have ony one tuner in your box you can only stream the channel you are viewing (or any channel you choose if your box is in standby).
@@ -826,13 +826,12 @@ NOTE: The sever is built, based on your current ip and the current channel list 
 		chdir("/home/root")
 		mytext = """
 Server avaliable on ip %s
-To access this box's tuners you can connect via lan or UPnP
+To access this box's tuners you can connect via lan or UPnP.
 
 1) To connect via lan you have to mount the /media/hdd folder of this box in the client /media/hdd folder. Then you can access the tuners server channel list from the client Media player -> Harddisk -> tuner.
+2) To connect via UPnP you have to start Mediatomb on this box and then start Djmount on the client. Then you can access the tuners server channel list for the client Media Player -> DLNA -> MediaTomb -> playlists.
 
-2) To connect via UPnP (hdd not needed) you have to start Mediatomb on this box and then start Djmount on the client. Then you can access the tuners server channel list for the client Media Player -> DLNA -> MediaTomb -> PC Directory -> media -> hdd - > tuner.
-
-NOTE: The sever is built, based on your current ip and the current channel list of this box. If you change your ip or your channel list is updated, you will need to rebuild the server database.
+NOTE about UPnP: Because UPnP requires alot of memory, you should only use it if you need to access your box from a PS3 or other device that cannot be mounted via Lan. Also, After the server has been built we strongly suggest you delete the Bouquets directory that are not really needed BEFORE you start Mediatomb. This will save alot of memory and resources.
 		""" % (self.ip)
 		self["lab1"].setText(mytext)
 		self.session.open(MessageBox, "Build Complete.", MessageBox.TYPE_INFO)
