@@ -1046,17 +1046,14 @@ class InfoBarSeek:
 	def seekFwd(self):
 		seek = self.getSeek()
 		if seek and not (seek.isCurrentlySeekable() & 2):
-			media = 1
-		else:
-			media = 0
-#			if not self.fast_winding_hint_message_showed and (seek.isCurrentlySeekable() & 1):
-#				self.session.open(MessageBox, _("No fast winding possible yet.. but you can use the number buttons to skip forward/backward!"), MessageBox.TYPE_INFO, timeout=10)
-#				self.fast_winding_hint_message_showed = True
-#				return
-#			return 0 # trade as unhandled action
+			if not self.fast_winding_hint_message_showed and (seek.isCurrentlySeekable() & 1):
+				self.session.open(MessageBox, _("No fast winding possible yet.. but you can use the number buttons to skip forward/backward!"), MessageBox.TYPE_INFO, timeout=10)
+				self.fast_winding_hint_message_showed = True
+				return
+			return 0 # trade as unhandled action
 		if self.seekstate == self.SEEK_STATE_PLAY:
 			self.setSeekState(self.makeStateForward(int(config.seek.enter_forward.value)))
-		elif self.seekstate == self.SEEK_STATE_PAUSE and media==0:
+		elif self.seekstate == self.SEEK_STATE_PAUSE:
 			if len(config.seek.speeds_slowmotion.value):
 				self.setSeekState(self.makeStateSlowMotion(config.seek.speeds_slowmotion.value[-1]))
 			else:
@@ -1067,11 +1064,7 @@ class InfoBarSeek:
 			speed = self.seekstate[1]
 			if self.seekstate[2]:
 				speed /= self.seekstate[2]
-			if media==1 and speed == 8:
-				speed = 8
-				return 0 # trade as unhandled action
-			else:
-				speed = self.getHigher(speed, config.seek.speeds_forward.value) or config.seek.speeds_forward.value[-1]
+			speed = self.getHigher(speed, config.seek.speeds_forward.value) or config.seek.speeds_forward.value[-1]
 			self.setSeekState(self.makeStateForward(speed))
 		elif self.isStateBackward(self.seekstate):
 			speed = -self.seekstate[1]
@@ -1089,27 +1082,18 @@ class InfoBarSeek:
 	def seekBack(self):
 		seek = self.getSeek()
 		if seek and not (seek.isCurrentlySeekable() & 2):
-			media = 1
-		else:
-			media = 0
-#			if not self.fast_winding_hint_message_showed and (seek.isCurrentlySeekable() & 1):
-#				self.session.open(MessageBox, _("No fast winding possible yet.. but you can use the number buttons to skip forward/backward!"), MessageBox.TYPE_INFO, timeout=10)
-#				self.fast_winding_hint_message_showed = True
-#				return
-#			return 0 # trade as unhandled action
-		seekstate = self.seekstate
-		if seekstate == self.SEEK_STATE_PLAY and media==0:
-			self.setSeekState(self.makeStateBackward(int(config.seek.enter_backward.value)))
-		elif seekstate == self.SEEK_STATE_PLAY and media ==1:
-			if not self.fast_winding_hint_message_showed:
-				self.session.open(MessageBox, _("No rewinding possible yet.. but you can use the number buttons to skip forward/backward!"), MessageBox.TYPE_INFO, timeout=10)
+			if not self.fast_winding_hint_message_showed and (seek.isCurrentlySeekable() & 1):
+				self.session.open(MessageBox, _("No fast winding possible yet.. but you can use the number buttons to skip forward/backward!"), MessageBox.TYPE_INFO, timeout=10)
 				self.fast_winding_hint_message_showed = True
 				return
 			return 0 # trade as unhandled action
+		seekstate = self.seekstate
+		if seekstate == self.SEEK_STATE_PLAY:
+			self.setSeekState(self.makeStateBackward(int(config.seek.enter_backward.value)))
 		elif seekstate == self.SEEK_STATE_EOF:
 			self.setSeekState(self.makeStateBackward(int(config.seek.enter_backward.value)))
 			self.doSeekRelative(-6)
-		elif seekstate == self.SEEK_STATE_PAUSE and media==0:
+		elif seekstate == self.SEEK_STATE_PAUSE:
 			self.doSeekRelative(-1)
 		elif self.isStateForward(seekstate):
 			speed = seekstate[1]
