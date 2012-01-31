@@ -4,7 +4,7 @@ from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
 from Screens.ChoiceBox import ChoiceBox
 from Screens.HelpMenu import HelpableScreen
-from Screens.InfoBarGenerics import InfoBarSeek, InfoBarPVRState, InfoBarCueSheetSupport, InfoBarShowHide, InfoBarNotifications, InfoBar_Nab, InfoBarAudioSelection, InfoBarSubtitleSupport
+from Screens.InfoBarGenerics import InfoBarSeek, InfoBarPVRState, InfoBarCueSheetSupport, InfoBarShowHide, InfoBarNotifications, InfoBarAudioSelection, InfoBarSubtitleSupport
 from Components.ActionMap import ActionMap, NumberActionMap, HelpableActionMap
 from Components.Label import Label
 from Components.Sources.StaticText import StaticText
@@ -195,7 +195,7 @@ class ChapterZap(Screen):
 		self.Timer.callback.append(self.keyOK)
 		self.Timer.start(3000, True)
 
-class DVDPlayer(Screen, InfoBarBase, InfoBarNotifications, InfoBarSeek, InfoBarPVRState, InfoBarShowHide, HelpableScreen, InfoBarCueSheetSupport, InfoBar_Nab, InfoBarAudioSelection, InfoBarSubtitleSupport):
+class DVDPlayer(Screen, InfoBarBase, InfoBarNotifications, InfoBarSeek, InfoBarPVRState, InfoBarShowHide, HelpableScreen, InfoBarCueSheetSupport, InfoBarAudioSelection, InfoBarSubtitleSupport):
 	ALLOW_SUSPEND = Screen.SUSPEND_PAUSES
 	ENABLE_RESUME_SUPPORT = True
 	
@@ -268,8 +268,6 @@ class DVDPlayer(Screen, InfoBarBase, InfoBarNotifications, InfoBarSeek, InfoBarP
 		InfoBarBase.__init__(self)
 		InfoBarNotifications.__init__(self)
 		InfoBarCueSheetSupport.__init__(self, actionmap = "MediaPlayerCueSheetActions")
-#BlackHole		
-		InfoBar_Nab.__init__(self)
 		InfoBarShowHide.__init__(self)
 		InfoBarAudioSelection.__init__(self)
 		InfoBarSubtitleSupport.__init__(self)

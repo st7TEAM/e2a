@@ -9,7 +9,7 @@ profile("LOAD:enigma")
 from enigma import iPlayableService
 
 profile("LOAD:InfoBarGenerics")
-from Screens.InfoBarGenerics import InfoBarShowHide, InfoBar_Nab, \
+from Screens.InfoBarGenerics import InfoBarShowHide, \
 	InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarRdsDecoder, \
 	InfoBarEPG, InfoBarSeek, InfoBarInstantRecord, \
 	InfoBarAudioSelection, InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarUnhandledKey, \
@@ -29,7 +29,7 @@ from Screens.HelpMenu import HelpableScreen
 from Blackhole.BhBlue import DeliteBp
 from Blackhole.BhGreen import DeliteGp
 
-class InfoBar(InfoBarBase, InfoBarShowHide, InfoBar_Nab,
+class InfoBar(InfoBarBase, InfoBarShowHide,
 	InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp,
 	InfoBarInstantRecord, InfoBarAudioSelection, 
 	HelpableScreen, InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarUnhandledKey,
@@ -55,7 +55,7 @@ class InfoBar(InfoBarBase, InfoBarShowHide, InfoBar_Nab,
 		self.allowPiP = True
 		
 		for x in HelpableScreen, \
-				InfoBarBase, InfoBarShowHide, InfoBar_Nab, \
+				InfoBarBase, InfoBarShowHide, \
 				InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp, \
 				InfoBarInstantRecord, InfoBarAudioSelection, InfoBarUnhandledKey, \
 				InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarSubserviceSelection, \
@@ -133,7 +133,7 @@ class InfoBar(InfoBarBase, InfoBarShowHide, InfoBar_Nab,
 		from Screens.Subtitles import Subtitles
 		self.session.open(Subtitles)
 
-class MoviePlayer(InfoBarBase, InfoBarShowHide, InfoBar_Nab, \
+class MoviePlayer(InfoBarBase, InfoBarShowHide, \
 		InfoBarMenu, \
 		InfoBarSeek, InfoBarShowMovies, InfoBarAudioSelection, HelpableScreen, InfoBarNotifications,
 		InfoBarServiceNotifications, InfoBarPVRState, InfoBarCueSheetSupport, InfoBarSimpleEventView,
@@ -155,7 +155,7 @@ class MoviePlayer(InfoBarBase, InfoBarShowHide, InfoBar_Nab, \
 		
 		self.allowPiP = False
 		
-		for x in HelpableScreen, InfoBarShowHide, InfoBarMenu, InfoBar_Nab, \
+		for x in HelpableScreen, InfoBarShowHide, InfoBarMenu, \
 				InfoBarBase, InfoBarSeek, InfoBarShowMovies, \
 				InfoBarAudioSelection, InfoBarNotifications, InfoBarSimpleEventView, \
 				InfoBarServiceNotifications, InfoBarPVRState, InfoBarCueSheetSupport, \
