@@ -323,7 +323,7 @@ class DeliteInfo(Screen):
 					else:
 						temperature = "N/A"
 				f.close()			
-			os_remove("/tmp/ninfo.tmp")
+				os_remove("/tmp/ninfo.tmp")
 			
 		self["hddtempg"].setValue(temperc + 64)
 		self.smallmontxt += "HDD temp: " + temperature + " C"
