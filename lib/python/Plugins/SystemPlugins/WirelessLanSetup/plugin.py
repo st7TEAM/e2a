@@ -709,14 +709,16 @@ class WlanConfig(Screen, ConfigListScreen, HelpableScreen):
 				contents += "eapol_version=1\n"
 				contents += "fast_reauth=1\n"
 
-				contents += "ap_scan=1\n"
+				if wlanconfig.essid.value == 'Input hidden ESSID':
+					contents += "ap_scan=2\n"
+				else :
+					contents += "ap_scan=1\n"
 				contents += "network={\n"
 				if wlanconfig.essid.value == 'Input hidden ESSID':
 					contents += "\tssid=\""+wlanconfig.hiddenessid.value+"\"\n"
-					contents += "\tscan_ssid=1\n"
 				else :
 					contents += "\tssid=\""+wlanconfig.essid.value+"\"\n"
-					contents += "\tscan_ssid=0\n"
+				contents += "\tscan_ssid=0\n"
 				if wlanconfig.encrypt.value == "on":
 					if wlanconfig.method.value =="wep":
 						contents += "\tkey_mgmt=NONE\n"
@@ -780,8 +782,6 @@ class WlanConfig(Screen, ConfigListScreen, HelpableScreen):
 			iNetwork.setAdapterAttribute(self.iface, "up", False)
 			iNetwork.deactivateInterface(self.iface)
 		contents = "\tpre-up wpa_supplicant -i"+self.iface+" -c/etc/wpa_supplicant.conf -B -D"+iNetwork.detectWlanModule(self.iface)+"\n"
-		if wlanconfig.essid.value == 'Input hidden ESSID':
-			contents += "\tpre-up iwconfig " + self.iface + " essid \"" + wlanconfig.hiddenessid.value + "\" || true\n"
 		contents += "\tpost-down wpa_cli terminate\n\n"
 		iNetwork.setAdapterAttribute(self.iface, "configStrings", contents)
 		iNetwork.writeNetworkConfig()
