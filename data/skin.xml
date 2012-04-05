@@ -129,7 +129,8 @@
         <eLabel text="x" zPosition="4" position="874,146" size="15,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999" />
         <widget source="session.CurrentService" render="Label" zPosition="4" position="890,146" size="55,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
             <convert type="ServiceInfo">VideoHeight</convert>	
-		</widget>	
+		</widget>
+	    <widget source="session.CurrentService" render="ChannelNumber" position="375,40" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
 	    <widget source="session.CurrentService" render="Label" position="375,40" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 		<convert type="ServiceName">Name</convert>
 		</widget>
@@ -218,6 +219,7 @@
 		<widget source="global.CurrentTime" render="Label" position="1032,91" 	size="70,26" zPosition="2"	font="LCD;24" valign="top" halign="right" foregroundColor="#f23d21"	backgroundColor="#333333" transparent="1">
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
+		<widget source="session.CurrentService" render="ChannelNumber" position="375,522" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
 		<widget source="session.CurrentService" render="Label" position="375,522" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 			<convert type="ServiceName">Name</convert>
 		</widget>
