@@ -258,8 +258,16 @@ class Nab_ExtraInfobar(Screen):
 						
 						nmsg += " decode: " + x1
 					
+					
 					elif x[0] == "address":
 						netinfo += "Address:" + x1
+					elif x[0] == "from:":
+						netinfo += "Address:" + x1
+						pos = x1.find('.')
+						if pos > 1:
+							self["button_spider"].show()
+						else:
+							self["button_card"].show()
 					elif x[0] == "hops":
 						netinfo += "   Hops:" + x1
 					elif x[0] == "ecm time":
