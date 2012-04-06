@@ -1,8 +1,9 @@
 from Screens.Screen import Screen
 
 from Screens.MessageBox import MessageBox
+from Screens.Standby import TryQuitMainloop
 from Screens.Console import Console
-from enigma import eTimer, loadPic
+from enigma import eTimer, loadPic, eDVBDB
 from Components.ActionMap import ActionMap
 from Components.Label import Label
 from Components.ScrollLabel import ScrollLabel
@@ -513,7 +514,10 @@ class Nab_ShowDownFile(Screen):
 				
 
 	def hrestEn(self, answer):
-		rc = system("killall -9 enigma2")
+		self.eDVBDB = eDVBDB.getInstance()
+		self.eDVBDB.reloadServicelist()
+		self.eDVBDB.reloadBouquets()
+		self.session.open(TryQuitMainloop, 3)
 
 class Nab_downPanel(Screen):
 	skin = """
@@ -572,7 +576,10 @@ class Nab_downPanel(Screen):
 				self.close()
 
 	def hrestEn(self, answer):
-		rc = system("killall -9 enigma2")
+		self.eDVBDB = eDVBDB.getInstance()
+		self.eDVBDB.reloadServicelist()
+		self.eDVBDB.reloadBouquets()
+		self.session.open(TryQuitMainloop, 3)
 
 
 class Nab_downPanelIPK(Screen):
