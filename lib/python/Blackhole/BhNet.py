@@ -704,7 +704,7 @@ class BhMediatomb(Screen):
 		self.onLayoutFinish.append(self.updateServ)
 
 	def ServStart(self):
-		rc = system("ln -s ../init.d/ushare /etc/rc3.d/S20mediatomb")
+		rc = system("ln -s ../init.d/mediatomb /etc/rc3.d/S20mediatomb")
 		rc = system("/etc/init.d/mediatomb start")		
 		mybox = self.session.open(MessageBox, "UPnP Server Enabled.", MessageBox.TYPE_INFO)
 		mybox.setTitle("Info")
