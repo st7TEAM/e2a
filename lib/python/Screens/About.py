@@ -11,23 +11,20 @@ class About(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 
-		self["EnigmaVersion"] = StaticText("version: " + about.getEnigmaVersionString())
-#		self["ImageVersion"] = StaticText("Image: " + about.getImageVersionString())
-		bhVer = "Blackhole"
+		bhVer = "Black Hole"
 		f = open("/etc/bhversion",'r')
 		bhVer = f.readline().strip()
 		f.close()
-		self["ImageVersion"] = StaticText("Image: " + bhVer)
+
+		self["EnigmaVersion"] = StaticText("Firmware: " + bhVer)
+#		self["ImageVersion"] = StaticText("Image: " + about.getImageVersionString())
+		
+		self["ImageVersion"] = StaticText("Build: " + about.getEnigmaVersionString())
+		
+		self["FPVersion"] = StaticText("Team Homesite: vuplus-community.net")
 		
 		self["TunerHeader"] = StaticText(_("Detected NIMs:"))
 
-		fp_version = getFPVersion()
-		if fp_version is None:
-			fp_version = ""
-		else:
-			fp_version = _("Frontprocessor version: %d") % fp_version
-
-		self["FPVersion"] = StaticText(fp_version)
 
 		nims = nimmanager.nimList()
 		for count in (0, 1, 2, 3):
