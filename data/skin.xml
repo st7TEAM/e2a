@@ -400,7 +400,7 @@
 	    <widget name="orbital_pos" position="925,55" size="200,26" halign="right" font="Regular;20"  zPosition="3" foregroundColor="white" transparent="1" backgroundColor="transpBlack"/>	
 		<widget name="nfreq_info" position="60,55" size="320,26" halign="left" font="Regular;20" zPosition="3" transparent="1" foregroundColor="white" backgroundColor="transpBlack"/>
 	 	<eLabel text="Fps:" zPosition="4" position="800,86" size="70,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
-	 	<eLabel text="Date:" zPosition="4" position="961,86" size="80,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
+	 	<eLabel text="Date:" zPosition="4" position="954,86" size="80,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
 	 	<eLabel text="Rsv:" zPosition="4" position="1040,670" size="70,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
 	 	<eLabel text="Snr:" zPosition="3" position="360,55" size="70,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
 		<widget source="session.FrontendStatus" render="Label" position="412,55" zPosition="3" size="70,24" halign="center" font="Regular;20" foregroundColor="white" transparent="1" backgroundColor="transpBlack">
