@@ -8,7 +8,7 @@ import os
 def InitUsageConfig():
 	config.usage = ConfigSubsection();
 	config.usage.showdish = ConfigYesNo(default = True)
-	config.usage.multibouquet = ConfigYesNo(default = False)
+	config.usage.multibouquet = ConfigYesNo(default = True)
 	config.usage.multiepg_ask_bouquet = ConfigYesNo(default = False)
 
 	config.usage.quickzap_bouquet_change = ConfigYesNo(default = False)
@@ -70,7 +70,7 @@ def InitUsageConfig():
 		("4", "DVB-T/-C/-S"),
 		("5", "DVB-T/-S/-C") ])
 
-	config.usage.show_event_progress_in_servicelist = ConfigYesNo(default = False)
+	config.usage.show_event_progress_in_servicelist = ConfigYesNo(default = True)
 
 	config.usage.blinking_display_clock_during_recording = ConfigYesNo(default = False)
 
