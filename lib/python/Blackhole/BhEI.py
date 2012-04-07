@@ -261,7 +261,7 @@ class Nab_ExtraInfobar(Screen):
 					
 					elif x[0] == "address":
 						netinfo += "Address:" + x1
-					elif x[0] == "from:":
+					elif x[0] == "from":
 						netinfo += "Address:" + x1
 						pos = x1.find('.')
 						if pos > 1:
