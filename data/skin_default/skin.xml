@@ -1,6 +1,6 @@
 <skin>
  	<!--
-     ################### Army_NexGenGradient-HD_VU_BH1.7.2.x_v.1.0_BH ####################
+     ################### Army_NexGenGradient-HD_VU_BH1.7.2.x_v.1.1_BH ####################
 
     QUESTA SKIN E' PROTETTA DA COPYRIGHT E PUO' ESSERE USATA SOLO PER
 	LE IMMAGINI  BLACK HOLE. IL CODICE DELLA SKIN PUO' ESSERE MODIFICATO
@@ -13,7 +13,7 @@
 	SKIN CODE AND GRAPHICS TO MAKE A NEW SKIN OR TO ADAPT THIS SKIN FOR
 	DIFFERENT IMAGES.
 
-    ###################  Army_NexGenGradient-HD_VU_BH1.7.2.x_v.1.0_BH  ####################
+    ###################  Army_NexGenGradient-HD_VU_BH1.7.2.x_v.1.1_BH  ####################
     -->
     <!-- LEGENDA -->
     <!-- AA100 COLORS-FONTS-SUBTITLES-BORDER -->
@@ -161,6 +161,7 @@
         <widget source="session.CurrentService" render="Label" zPosition="4" position="890,148" size="55,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
             <convert type="ServiceInfo">VideoHeight</convert>	
 		</widget>	
+			<widget source="session.CurrentService" render="ChannelNumber" position="340,40" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
 	    <widget source="session.CurrentService" render="Label" position="375,40" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 		<convert type="ServiceName">Name</convert>
 		</widget>
@@ -195,28 +196,28 @@
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>	
-			<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_dolby.png" position="515,145" zPosition="4" size="70,30" alphatest="on" >
+			<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_dolby.png" position="525,145" zPosition="4" size="70,30" alphatest="on" >
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_format.png" position="585,144" zPosition="4" size="44,30" alphatest="on" >
+		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_format.png" position="595,144" zPosition="4" size="44,30" alphatest="on" >
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-	    <widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_txt.png" position="673,144" zPosition="4" size="44,30" alphatest="on" >
+	    <widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_txt.png" position="683,144" zPosition="4" size="44,30" alphatest="on" >
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_crypt.png" position="473,144" zPosition="4" size="44,30" alphatest="on" >
+		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_crypt.png" position="483,144" zPosition="4" size="44,30" alphatest="on" >
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_sd.png" position="631,144" size="44,30" zPosition="4" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_sd.png" position="641,144" size="44,30" zPosition="4" alphatest="on">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">0,720</convert>
 			<convert type="ConditionalShowHide" />
     	</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_hd.png" position="631,144" size="44,30" zPosition="4" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_hd.png" position="641,144" size="44,30" zPosition="4" alphatest="on">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">721,1980</convert>
 			<convert type="ConditionalShowHide" />
@@ -224,7 +225,7 @@
 		<widget source="session.RecordState" render="Pixmap" pixmap="NexGenGradient/buttons/button_red.png" position="230,85" zPosition="3" size="15,16" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert> 
 		</widget> 
-		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_sub.png" position="715,144" zPosition="4" size="44,30" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="NexGenGradient/icons/icon_sub.png" position="725,144" zPosition="4" size="44,30" alphatest="on">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -249,6 +250,7 @@
 		 <widget source="global.CurrentTime" render="Label" position="1153,87" 	size="80,28" zPosition="2"	font="LCD;24" valign="top" halign="center" foregroundColor="grey"	backgroundColor="#333333" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
+			<widget source="session.CurrentService" render="ChannelNumber" position="340,560" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
 		<widget source="session.CurrentService" render="Label" position="375,560" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -392,13 +394,13 @@
 		    </widget>
 		<!--  ATTENZIONE: QUESTI WIDGET NON POSSONO ESSERE SPOSTATI O RIMOSSI DALLA EXTRA INFOBAR  -->
 		<!--  WARNING: THESE WIDGETS CANNOT BE MOVED OR REMOVED FROM EXTRA INFOBAR SCREEN  -->	
-    	<widget name="cam_info" zPosition="6" position="240,84" size="240,24" halign="left" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack"/>
+    	<widget name="cam_info" zPosition="6" position="310,84" size="240,24" halign="left" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack"/>
 		<widget name="ecm_info" position="586,32" size="540,20" halign="right" font="Display;15" zPosition="4" foregroundColor="grey" transparent="1" backgroundColor="transpBlack"/>
 		<widget name="netcard_info" position="60,32" size="590,20" halign="left" font="Display;15" zPosition="4" foregroundColor="grey" transparent="1" backgroundColor="transpBlack"/>
 	    <widget name="orbital_pos" position="925,55" size="200,26" halign="right" font="Regular;20"  zPosition="3" foregroundColor="white" transparent="1" backgroundColor="transpBlack"/>	
 		<widget name="nfreq_info" position="60,55" size="320,26" halign="left" font="Regular;20" zPosition="3" transparent="1" foregroundColor="white" backgroundColor="transpBlack"/>
 	 	<eLabel text="Fps:" zPosition="4" position="800,86" size="70,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
-	 	<eLabel text="Date:" zPosition="4" position="961,86" size="80,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
+	 	<eLabel text="Date:" zPosition="4" position="952,86" size="80,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
 	 	<eLabel text="Rsv:" zPosition="4" position="1040,670" size="70,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
 	 	<eLabel text="Snr:" zPosition="3" position="360,55" size="70,24" halign="center" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
 		<widget source="session.FrontendStatus" render="Label" position="412,55" zPosition="3" size="70,24" halign="center" font="Regular;20" foregroundColor="white" transparent="1" backgroundColor="transpBlack">
@@ -418,34 +420,34 @@
 		<widget source="session.FrontendStatus" render="Label" 	position="907,55" zPosition="3" size="70,24" font="Regular;20" foregroundColor="white" backgroundColor="transpBlack" transparent="1" >
 		   <convert type="FrontendInfo">BER</convert> 
 		</widget> 	
-	    <widget position="60,88" size="18,18" halign="center" text="B" font="Regular;16" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="beta_no" valign="center" zPosition="3" transparent="1" />
-		<widget position="60,88" size="18,18" halign="center" text="B" font="Regular;16" backgroundColor="#f23d21" foregroundColor="#f23d21" name="beta_emm" valign="center" zPosition="4" transparent="1" />
-		<widget position="60,88" size="18,18" halign="center" text="B" font="Regular;16" backgroundColor="background" foregroundColor="#56C856" name="beta_ecm" valign="center" zPosition="5" transparent="1" />
-        <widget position="74,88" size="18,18" halign="center" text="I" font="Regular;16" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="irdeto_no" valign="center" zPosition="3" transparent="1" />
-		<widget position="74,88" size="18,18" halign="center" text="I" font="Regular;16" backgroundColor="#f23d21" foregroundColor="#f23d21" name="irdeto_emm" valign="center" zPosition="4" transparent="1" />
-		<widget position="74,88" size="18,18" halign="center" text="I" font="Regular;16" backgroundColor="background" foregroundColor="#56C856" name="irdeto_ecm" valign="center" zPosition="5" transparent="1" />
-        <widget position="88,88" size="18,18" halign="center" text="S" font="Regular;16" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="seca_no" valign="center" zPosition="3" transparent="1" />
-		<widget position="88,88" size="18,18" halign="center" text="S" font="Regular;16" backgroundColor="#f23d21" foregroundColor="#f23d21" name="seca_emm" valign="center" zPosition="4" transparent="1" />
-		<widget position="88,88" size="18,18" halign="center" text="S" font="Regular;16" backgroundColor="background" foregroundColor="#56C856" name="seca_ecm" valign="center" zPosition="5" transparent="1" />
-        <widget position="102,88" size="18,18" halign="center" text="V" font="Regular;16" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="via_no" valign="center" zPosition="3" transparent="1" />
-		<widget position="102,88" size="18,18" halign="center" text="V" font="Regular;16" backgroundColor="#f23d21" foregroundColor="#f23d21" name="via_emm" valign="center" zPosition="4" transparent="1" />
-		<widget position="102,88" size="18,18" halign="center" text="V" font="Regular;16" backgroundColor="background" foregroundColor="#56C856" name="via_ecm" valign="center" zPosition="5" transparent="1" />
-        <widget position="116,88" size="18,18" halign="center" text="N" font="Regular;16" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="nagra_no" valign="center" zPosition="3" transparent="1" />
-		<widget position="116,88" size="18,18" halign="center" text="N" font="Regular;16" backgroundColor="#f23d21" foregroundColor="#f23d21" name="nagra_emm" valign="center" zPosition="4" transparent="1" />
-		<widget position="116,88" size="18,18" halign="center" text="N" font="Regular;16" backgroundColor="background" foregroundColor="#56C856" name="nagra_ecm" valign="center" zPosition="5" transparent="1" />
-        <widget position="130,88" size="36,18" halign="center" text="CW" font="Regular;16" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="cw_no" valign="center" zPosition="3" transparent="1" />
-		<widget position="130,88" size="36,18" halign="center" text="CW" font="Regular;16" backgroundColor="#f23d21" foregroundColor="#f23d21" name="cw_emm" valign="center" zPosition="4" transparent="1" />
-        <widget position="130,88" size="36,18" halign="center" text="CW" font="Regular;16" backgroundColor="background" foregroundColor="#56C856" name="cw_ecm" valign="center" zPosition="5" transparent="1" /> 
-        <widget position="158,88" size="36,18" halign="center" text="ND" font="Regular;16" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="nds_no" valign="center" zPosition="3" transparent="1" />
-		<widget position="158,88" size="36,18" halign="center" text="ND" font="Regular;16" backgroundColor="#f23d21" foregroundColor="#f23d21" name="nds_emm" valign="center" zPosition="4" transparent="1" />
-		<widget position="158,88" size="36,18" halign="center" text="ND" font="Regular;16" backgroundColor="#56C856" foregroundColor="#56C856" name="nds_ecm" valign="center" zPosition="5" transparent="1" />
-        <widget position="186,88" size="36,18" halign="center" text="CO" font="Regular;16" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="conax_no" valign="center" zPosition="3" transparent="1" />
-		<widget position="186,88" size="36,18" halign="center" text="CO" font="Regular;16" backgroundColor="#f23d21" foregroundColor="#f23d21" name="conax_emm" valign="center" zPosition="4" transparent="1" />
-		<widget position="186,88" size="36,18" halign="center" text="CO" font="Regular;16" backgroundColor="background" foregroundColor="#56C856" name="conax_ecm" valign="center" zPosition="5" transparent="1" />
-		<widget name="button_fta" text="Free to Air" backgroundColor="background"  transparent="1" position="560,86" size="220,24" halign="left" font="OLED;22" foregroundColor="#aaaaaa" zPosition="10" />
-		<widget name="button_card" text="Card" backgroundColor="background" transparent="1" position="560,86" size="220,24" halign="left" font="OLED;24" foregroundColor="#56C856" zPosition="11" />
-		<widget name="button_emu" text="Emulator" backgroundColor="background"  transparent="1" position="560,86" size="220,24" halign="left" font="OLED;24" foregroundColor="#fcc000" zPosition="12" />
-		<widget name="button_spider" text="Network" backgroundColor="background"  transparent="1" position="560,86" size="220,24" halign="left" font="OLED;24" foregroundColor="#f23d21" zPosition="13" />
+	    <widget position="60,86" size="20,22" halign="center" text="B" font="Regular;20" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="beta_no" valign="center" zPosition="3" transparent="1" />
+		<widget position="60,86" size="20,22" halign="center" text="B" font="Regular;20" backgroundColor="#f23d21" foregroundColor="#f23d21" name="beta_emm" valign="center" zPosition="4" transparent="1" />
+		<widget position="60,86" size="20,22" halign="center" text="B" font="Regular;20" backgroundColor="background" foregroundColor="#56C856" name="beta_ecm" valign="center" zPosition="5" transparent="1" />
+        <widget position="83,86" size="20,22" halign="center" text="I" font="Regular;20" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="irdeto_no" valign="center" zPosition="3" transparent="1" />
+		<widget position="83,86" size="20,22" halign="center" text="I" font="Regular;20" backgroundColor="#f23d21" foregroundColor="#f23d21" name="irdeto_emm" valign="center" zPosition="4" transparent="1" />
+		<widget position="83,86" size="20,22" halign="center" text="I" font="Regular;20" backgroundColor="background" foregroundColor="#56C856" name="irdeto_ecm" valign="center" zPosition="5" transparent="1" />
+        <widget position="106,86" size="20,22" halign="center" text="S" font="Regular;20" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="seca_no" valign="center" zPosition="3" transparent="1" />
+		<widget position="106,86" size="20,22" halign="center" text="S" font="Regular;20" backgroundColor="#f23d21" foregroundColor="#f23d21" name="seca_emm" valign="center" zPosition="4" transparent="1" />
+		<widget position="106,86" size="20,22" halign="center" text="S" font="Regular;20" backgroundColor="background" foregroundColor="#56C856" name="seca_ecm" valign="center" zPosition="5" transparent="1" />
+        <widget position="129,86" size="20,22" halign="center" text="V" font="Regular;20" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="via_no" valign="center" zPosition="3" transparent="1" />
+		<widget position="129,86" size="20,22" halign="center" text="V" font="Regular;20" backgroundColor="#f23d21" foregroundColor="#f23d21" name="via_emm" valign="center" zPosition="4" transparent="1" />
+		<widget position="129,86" size="20,22" halign="center" text="V" font="Regular;20" backgroundColor="background" foregroundColor="#56C856" name="via_ecm" valign="center" zPosition="5" transparent="1" />
+        <widget position="152,86" size="20,22" halign="center" text="N" font="Regular;20" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="nagra_no" valign="center" zPosition="3" transparent="1" />
+		<widget position="152,86" size="20,22" halign="center" text="N" font="Regular;20" backgroundColor="#f23d21" foregroundColor="#f23d21" name="nagra_emm" valign="center" zPosition="4" transparent="1" />
+		<widget position="152,86" size="20,22" halign="center" text="N" font="Regular;20" backgroundColor="background" foregroundColor="#56C856" name="nagra_ecm" valign="center" zPosition="5" transparent="1" />
+        <widget position="175,86" size="38,22" halign="center" text="CW" font="Regular;20" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="cw_no" valign="center" zPosition="3" transparent="1" />
+		<widget position="175,86" size="38,22" halign="center" text="CW" font="Regular;20" backgroundColor="#f23d21" foregroundColor="#f23d21" name="cw_emm" valign="center" zPosition="4" transparent="1" />
+        <widget position="175,86" size="38,22" halign="center" text="CW" font="Regular;20" backgroundColor="background" foregroundColor="#56C856" name="cw_ecm" valign="center" zPosition="5" transparent="1" /> 
+        <widget position="216,86" size="38,22" halign="center" text="ND" font="Regular;20" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="nds_no" valign="center" zPosition="3" transparent="1" />
+		<widget position="216,86" size="38,22" halign="center" text="ND" font="Regular;20" backgroundColor="#f23d21" foregroundColor="#f23d21" name="nds_emm" valign="center" zPosition="4" transparent="1" />
+		<widget position="216,86" size="38,22" halign="center" text="ND" font="Regular;20" backgroundColor="#56C856" foregroundColor="#56C856" name="nds_ecm" valign="center" zPosition="5" transparent="1" />
+        <widget position="257,86" size="38,22" halign="center" text="CO" font="Regular;20" backgroundColor="#FFFFFF" foregroundColor="#FFFFFF" name="conax_no" valign="center" zPosition="3" transparent="1" />
+		<widget position="257,86" size="38,22" halign="center" text="CO" font="Regular;20" backgroundColor="#f23d21" foregroundColor="#f23d21" name="conax_emm" valign="center" zPosition="4" transparent="1" />
+		<widget position="257,86" size="38,22" halign="center" text="CO" font="Regular;20" backgroundColor="background" foregroundColor="#56C856" name="conax_ecm" valign="center" zPosition="5" transparent="1" />
+		<widget name="button_fta" text="Free to Air" backgroundColor="background"  transparent="1" position="590,86" size="220,24" halign="left" font="OLED;22" foregroundColor="#aaaaaa" zPosition="10" />
+		<widget name="button_card" text="Card" backgroundColor="background" transparent="1" position="590,86" size="220,24" halign="left" font="OLED;24" foregroundColor="#56C856" zPosition="11" />
+		<widget name="button_emu" text="Emulator" backgroundColor="background"  transparent="1" position="590,86" size="220,24" halign="left" font="OLED;24" foregroundColor="#fcc000" zPosition="12" />
+		<widget name="button_spider" text="Network" backgroundColor="background"  transparent="1" position="590,86" size="220,24" halign="left" font="OLED;24" foregroundColor="#f23d21" zPosition="13" />
 	</screen> 
 	<!--  FINE WIDGETS OBBLIGATORI NELLA EXTRA INFOBAR  -->
 		<!--  END OF FIXED WIDGETS  -->
@@ -1199,7 +1201,7 @@
                 }
             </convert>
         </widget>
-        <widget name="statuslab" position="105,550" size="580,70" font="Regular;22" valign="center" backgroundColor="#333f3f3f" foregroundColor="#ffad31" shadowOffset="-3,-3" shadowColor="black" transparent="1" />
+        <widget name="statuslab" position="105,500" size="580,70" font="Regular;22" valign="center" backgroundColor="#333f3f3f" foregroundColor="#ffad31" shadowOffset="-3,-3" shadowColor="black" transparent="1" />
         		 <widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 		<convert type="ServiceName">Name</convert>
 		</widget>
@@ -1974,7 +1976,7 @@
 	      <ePixmap position="970,470" zPosition="-1" size="120,120" pixmap="NexGenGradient/menu/timer.png" alphatest="on" />
 	     <eLabel text="BH Timer Entry" position="80,30" zPosition="2" size="500,32" font="RegularAA;40" halign="left" transparent="1" foregroundColor="#58bcff" backgroundColor="transpBlack" /> 
       	 <widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
-		<widget name="config" position="80,90" size="710,350" scrollbarMode="showOnDemand" selectionPixmap="NexGenGradient/icons/listselection710x25-fs8.png" transparent="1"  />  
+		<widget name="config" position="80,90" size="700,350" scrollbarMode="showOnDemand" selectionPixmap="NexGenGradient/icons/listselection710x25-fs8.png" transparent="1"  />  
 		<ePixmap position="90,650" size="250,40" pixmap="NexGenGradient/buttons/red25.png" alphatest="on" zPosition="1" />
         <ePixmap position="510,650" size="250,40" pixmap="NexGenGradient/buttons/green25.png" alphatest="on" zPosition="1" />
 		<widget name="canceltext" position=" 90,658" size="250,40" font="Regular;24" halign="center" valign="center" foregroundColor="white" zPosition="2" transparent="1" />
@@ -4443,7 +4445,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<ePixmap position="870,304" zPosition="-1" size="300,14" pixmap="NexGenGradient/chan_p1_bar.png" alphatest="on" />
 		<widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
 		<eLabel text="BH Audio" position="80,30" size="800,44" font="RegularAA;40" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="config" position="120,90" size="670,125" scrollbarMode="showOnDemand" selectionPixmap="NexGenGradient/icons/listselection710x25-fs8.png" transparent="1"  />
+		<widget name="config" position="120,90" size="660,125" scrollbarMode="showOnDemand" selectionPixmap="NexGenGradient/icons/listselection710x25-fs8.png" transparent="1"  />
 		<widget source="key_red" render="Pixmap" pixmap="NexGenGradient/buttons/key_red.png" position="80,90" size="35,25" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -4456,27 +4458,27 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		<widget source="key_blue" render="Pixmap" pixmap="NexGenGradient/buttons/key_blue.png" position="80,165" size="35,25" alphatest="on">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="streams" render="Listbox" position="80,300" size="710,200" zPosition="3" scrollbarMode="showOnDemand"  selectionPixmap="NexGenGradient/icons/listselection710x25-fs8.png"  transparent="1">
+		<widget source="streams" render="Listbox" position="40,300" size="710,200" zPosition="3" scrollbarMode="showOnDemand"  selectionPixmap="NexGenGradient/icons/listselection710x25-fs8.png"  transparent="1">
 			<convert type="TemplatedMultiContent">
-				{"templates":
+								{"templates":
 					{"default": (25, [ 
-						MultiContentEntryText(pos = (10, 0),   size = (50, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
-						MultiContentEntryText(pos = (90, 0),  size = (70, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
-						MultiContentEntryText(pos = (190, 0), size = (160, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
-						MultiContentEntryText(pos = (350, 0), size = (160, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
-						MultiContentEntryText(pos = (430, 0), size = (160, 25),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+					MultiContentEntryText(pos = (0, 0),   size = (35, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
+					MultiContentEntryText(pos = (50, 0),  size = (55, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
+					MultiContentEntryText(pos = (95, 0), size = (240, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
+					MultiContentEntryText(pos = (305, 0), size = (240, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
+					MultiContentEntryText(pos = (555, 0), size = (125, 25),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
 					], True, "showNever"),
 					"notselected": (25, [ 
-						MultiContentEntryText(pos = (10, 0),   size = (50, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
-						MultiContentEntryText(pos = (90, 0),  size = (70, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
-						MultiContentEntryText(pos = (190, 0), size = (160, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
-						MultiContentEntryText(pos = (350, 0), size = (160, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
-						MultiContentEntryText(pos = (430, 0), size = (160, 25),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+					MultiContentEntryText(pos = (0, 0),   size = (35, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
+					MultiContentEntryText(pos = (50, 0),  size = (55, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
+					MultiContentEntryText(pos = (95, 0), size = (240, 25),  font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
+					MultiContentEntryText(pos = (305, 0), size = (240, 25), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
+					MultiContentEntryText(pos = (555, 0), size = (125, 25),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
 					], False, "showNever")
 					},
-				"fonts": [gFont("Regular", 20), gFont("Regular", 20)],
-				"itemHeight": 25
-				}
+					"fonts": [gFont("Regular", 20), gFont("Regular", 20)],
+					"itemHeight": 25
+					}
 			</convert>
 		    </widget>
           <widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
@@ -4587,16 +4589,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 	<!-- AP126 Simple Channel Selection ( 4 )-->
 	<screen name="SimpleChannelSelection" position="center,center" size="1130,520" title="BH Channel Selection" >
 	 <ePixmap pixmap="NexGenGradient/frame_box-fs8.png" zPosition="-1" position="0,0" size="1130,520" alphatest="on" />
-	 	<ePixmap position="684,15" zPosition="2" size="26,410" pixmap="NexGenGradient/scroll.png" alphatest="blend" transparent="1" />		
-		<widget name="list" position="20,20" size="1090,475" scrollbarMode="showOnDemand" transparent="1" />
-		<ePixmap position="26,460" size="250,40" pixmap="NexGenGradient/buttons/red25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="302,460" size="250,40" pixmap="NexGenGradient/buttons/green25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="578,460" size="250,40" pixmap="NexGenGradient/buttons/yellow25.png" alphatest="on" zPosition="1" />
-        <ePixmap position="854,460" size="250,40" pixmap="NexGenGradient/buttons/blue25.png" alphatest="on" zPosition="1" />
-		<widget name="key_red" position="26,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_green" position="302,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_yellow" position="578,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-		<widget name="key_blue" position="854,460" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
+	 	<ePixmap position="1084,15" zPosition="2" size="26,455" pixmap="NexGenGradient/scroll.png" alphatest="blend" transparent="1" />		
+		<widget name="list" position="20,20" size="1090,450" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap position="26,480" size="250,40" pixmap="NexGenGradient/buttons/red25.png" alphatest="on" zPosition="1" />
+        <ePixmap position="302,480" size="250,40" pixmap="NexGenGradient/buttons/green25.png" alphatest="on" zPosition="1" />
+        <ePixmap position="578,480" size="250,40" pixmap="NexGenGradient/buttons/yellow25.png" alphatest="on" zPosition="1" />
+        <ePixmap position="854,480" size="250,40" pixmap="NexGenGradient/buttons/blue25.png" alphatest="on" zPosition="1" />
+		<widget name="key_red" position="26,485" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_green" position="302,485" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_yellow" position="578,485" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget name="key_blue" position="854,485" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
 	</screen>
 	<!--AP127 Standby -->
 	<screen name="Standby" 	position="0,0" size="1280,720" title="Standby" flags="wfNoBorder" />
