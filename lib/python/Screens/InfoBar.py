@@ -26,11 +26,13 @@ from Components.ServiceEventTracker import ServiceEventTracker, InfoBarBase
 profile("LOAD:HelpableScreen")
 from Screens.HelpMenu import HelpableScreen
 
+from Components.Label import Label
 from Blackhole.BhBlue import DeliteBp
 from Blackhole.BhGreen import DeliteGp
+from Blackhole.BhRed import BhRedp
 
 class InfoBar(InfoBarBase, InfoBarShowHide,
-	InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp,
+	InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp, BhRedp,
 	InfoBarInstantRecord, InfoBarAudioSelection, 
 	HelpableScreen, InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarUnhandledKey,
 	InfoBarSubserviceSelection, InfoBarTimeshift, InfoBarSeek,
@@ -43,6 +45,7 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
+		self["Universe"] = Label(self.whereIAm())
 		self["actions"] = HelpableActionMap(self, "InfobarActions",
 			{
 				"showMovies": (self.showMovies, _("Play recorded movies...")),
@@ -56,7 +59,7 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 		
 		for x in HelpableScreen, \
 				InfoBarBase, InfoBarShowHide, \
-				InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp, \
+				InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp, BhRedp, \
 				InfoBarInstantRecord, InfoBarAudioSelection, InfoBarUnhandledKey, \
 				InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarSubserviceSelection, \
 				InfoBarTimeshift, InfoBarSeek, InfoBarSummarySupport, InfoBarTimeshiftState, \
@@ -75,6 +78,19 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 		self.current_begin_time=0
 		assert InfoBar.instance is None, "class InfoBar is a singleton class and just one instance of this class is allowed!"
 		InfoBar.instance = self
+
+	def whereIAm(self):
+		ret = "Black Hole"
+		all = ["Avalon", "Chaos", "Ghost"]
+		f = open("/proc/mounts",'r')
+		for line in f.readlines():
+			if line.find('/usr ') != -1:
+				for a in all:
+					if line.find(a) != -1:
+						ret = a
+				break
+		f.close()
+		return "In %s universe" % (ret)
 
 	def __onClose(self):
 		InfoBar.instance = None

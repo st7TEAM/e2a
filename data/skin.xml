@@ -161,8 +161,9 @@
         <widget source="session.CurrentService" render="Label" zPosition="4" position="890,148" size="55,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
             <convert type="ServiceInfo">VideoHeight</convert>	
 		</widget>	
-			<widget source="session.CurrentService" render="ChannelNumber" position="340,40" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
-	    <widget source="session.CurrentService" render="Label" position="375,40" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+		<widget source="session.CurrentService" render="ChannelNumber" position="340,40" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
+		<widget name="Universe" position="930,40" size="300,32" halign="center" zPosition="2" font="Regular;20" foregroundColor="red" />
+		<widget source="session.CurrentService" render="Label" position="375,40" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 		<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="250,148" 	size="250,22" zPosition="2"	font="Regular;18" backgroundColor="transpBlack" halign="left" foregroundColor="white" transparent="1" >
