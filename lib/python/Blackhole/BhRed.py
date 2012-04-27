@@ -379,15 +379,6 @@ class BhRedp:
 		mounted = False
 		bh_ver = BhU_check_proc_version()
 		un_ver = bh_ver
-		if fileExists("/universe/.buildv"):
-			f = open("/universe/.buildv",'r')
-			un_ver = f.readline().strip()
-			f.close()
-		else:
-			out = open("/universe/.buildv",'w')
-			out.write(bh_ver)
-			out.close()
-			system("chmod a-w /universe/.buildv")
 		
 		f = open("/proc/mounts",'r')
 		for line in f.readlines():
@@ -396,14 +387,25 @@ class BhRedp:
 					mounted = True
 					break
 		f.close()
-		if mounted == False:
-			self.session.openWithCallback(self.callBhAction, BhRedDisabled)
-		else:
+		
+		if mounted == True:
+			if fileExists("/universe/.buildv"):
+				f = open("/universe/.buildv",'r')
+				un_ver = f.readline().strip()
+				f.close()
+			else:
+				out = open("/universe/.buildv",'w')
+				out.write(bh_ver)
+				out.close()
+				system("chmod a-w /universe/.buildv")
+		
 			if un_ver == bh_ver:
 				self.session.openWithCallback(self.callBhAction, BhRedPanel)
 			else:
 				self.session.openWithCallback(self.callBhAction, BhRedWrong)
 		
+		else:
+			self.session.openWithCallback(self.callBhAction, BhRedDisabled)
 		
 
 	def callBhAction(self, *args):
