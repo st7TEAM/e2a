@@ -6,8 +6,6 @@ datarootdir=@datarootdir@
 
 if [ -e /bin/bh_jump ]; then
 	/usr/bin/showiframe /bin/jump_screen.mvi
-	sleep 1
-	/usr/bin/showiframe /bin/jump_screen.mvi
 	rm /bin/bh_jump
 else
 	/usr/bin/showiframe /usr/share/backdrop.mvi

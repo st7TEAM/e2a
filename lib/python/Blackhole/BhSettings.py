@@ -652,6 +652,10 @@ class DeliteDevicesPanel(Screen):
 		
 		self.activityTimer = eTimer()
 		self.activityTimer.timeout.get().append(self.updateList2)
+		
+		if not pathExists("/universe"):
+			createDir("/universe")
+		
 		self.updateList()
 	
 	def updateList(self):
@@ -887,46 +891,33 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 				continue
 			c = "/media/" + f
 			choices.append((c,c))
+		
+		choices.append(("/universe", "/universe"))
 		return choices		
 			
 	def saveMypoints(self):
-		mycheck = False
 		
-		out = open("/etc/fstab.tmp", "w")
 		f = open("/etc/fstab",'r')
+		out = open("/etc/fstab.tmp", "w")
 		for line in f.readlines():
+			if line.find("by-uuid") != -1 or len(line) < 6:
+				continue
 			if line.find("/dev/sda1") != -1:
-				if line.find("#") == -1:
-					line = "#" + line
+				continue
 			out.write(line)
+		for x in self["config"].list:
+			if x[1].value == "Not mapped" or x[1].value == "/media/meoboot":
+				continue
+			line = "/dev/disk/by-uuid/%s    %s    auto   defaults    0  0\n" % (x[2], x[1].value)
+			out.write(line)
+
+		out.write("\n")
 		f.close()
 		out.close()
-		
-		mycheck = False
-		out = open("/usr/bin/bhmount.tmp",'w')
-		for x in self["config"].list:
-			uid = x[2]
-			mountp = x[1].value
-			if mountp == "/media/meoboot":
-				continue
-			line = "mount /dev/disk/by-uuid/" + uid + " " + mountp + "\n"
-			out.write(line)
-			if mountp == "Not mapped":
-				mycheck = True
-		
-		out.write('exit 0\n')
-		out.close()
-		
-		if mycheck == True:
-			nobox = self.session.open(MessageBox, "Error: You have to set Mountpoins for all your devices.", MessageBox.TYPE_INFO)
-			nobox.setTitle(_("Error"))
-		else:
-			os_rename("/etc/fstab.tmp", "/etc/fstab")
-			os_rename("/usr/bin/bhmount.tmp", "/usr/bin/bhmount")
-			system("chmod 0755 /usr/bin/bhmount")
-			message = "Devices changes need a system restart to take effects.\nRestart your Box now?"
-			ybox = self.session.openWithCallback(self.restBo, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Restart box.")
+		os_rename("/etc/fstab.tmp", "/etc/fstab")
+		message = "Devices changes need a system restart to take effects.\nRestart your Box now?"
+		self.session.openWithCallback(self.restBo, MessageBox, message, MessageBox.TYPE_YESNO)
+
 			
 	def restBo(self, answer):
 		if answer is True:
