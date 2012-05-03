@@ -233,6 +233,7 @@ class BhRedPanel(Screen):
 	def prEjumP(self, answer):
 		if answer == True:
 			rc = system("/usr/bin/StartBhCam stop")
+			rc = system("killall -9 oscam")
 			mvi = "/usr/share/" + self.destination + ".mvi"
 			mvi = mvi.replace(' ', '_')
 			cmd = "cp %s /bin/jump_screen.mvi" % (mvi)
@@ -267,7 +268,7 @@ class BhRedPanel(Screen):
 			system("chmod 0755 /bin/bh_parallel_mount")
 # build jump file				
 		out = open("/bin/bh_jump",'w')
-		line = "#!/bin/sh\n\ninit 4\nsleep1\numount -l /etc 2>/dev/null \numount -l /usr 2>/dev/null \n"
+		line = "#!/bin/sh\n\ninit 4\numount -l /etc 2>/dev/null \numount -l /usr 2>/dev/null \n"
 		out.write(line)
 		if self.destination != "Black Hole":
 			line = "sleep 1\n\nmount -t unionfs -o dirs=%s:/etc=ro none /etc 2>/dev/null \n" % (path1)
