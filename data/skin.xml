@@ -1,6 +1,6 @@
 <skin>
  	<!--
-     ################### Skin_Default_Army_skin_default-HD_VU_BH1.7.4.x_v.1.0_BH ####################
+     ################### Skin_Default_Army_skin_default-HD_VU_BH1.7.4.x_v.1.1_BH ####################
 
     QUESTA SKIN E' PROTETTA DA COPYRIGHT E PUO' ESSERE USATA SOLO PER
 	LE IMMAGINI  BLACK HOLE. IL CODICE DELLA SKIN PUO' ESSERE MODIFICATO
@@ -14,9 +14,9 @@
 	DIFFERENT IMAGES.
 	
 	black hole version: 1.7.4
-	skin author: Army
+    skin author: Army
 
-    ###################  Skin_Default_Army_skin_default-HD_VU_BH1.7.4.x_v.1.0_BH  ####################
+    ###################  Skin_Default_Army_skin_default-HD_VU_BH1.7.4.x_v.1.1_BH  ####################
     -->
     <!-- LEGENDA -->
     <!-- AA100 COLORS-FONTS-SUBTITLES-BORDER -->
@@ -137,100 +137,100 @@
 	</windowstyle>
 <!--##### AB100 MAIN PANELS INFOBAR #####-->
 	<!-- AB101 Main infobar -->
-       <screen name="InfoBar" flags="wfNoBorder" position="0,520" size="1280,720" title="InfoBar" backgroundColor="transparent">
-		<ePixmap position="0,0" zPosition="1" size="1280,200" pixmap="skin_default/infobar_light-fs8.png" /> 
-    	<ePixmap position="230,85" zPosition="2" size="15,16" pixmap="skin_default/buttons/button_blue.png" alphatest="on" />
-    	<ePixmap position="338,102" zPosition="2" size="620,14" pixmap="skin_default/po_bar.png" alphatest="blend" transparent="1" />
-    	<eLabel text="Date:" zPosition="8" position="940,146" size="80,24" halign="right" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
-    	<eLabel text="Rsv:" zPosition="4" position="750,146" size="70,24" halign="right" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
-	    <widget source="global.CurrentTime" render="Bhclock" position="1169,90" zPosition="4" size="40,40" transparent="1" >
+       <screen name="InfoBar" flags="wfNoBorder" position="0,480" size="1280,720" title="InfoBar" backgroundColor="transparent">
+		<ePixmap position="0,0" zPosition="1" size="1280,240" pixmap="skin_default/infobar_light-fs8.png" />
+    	<ePixmap position="230,125" zPosition="2" size="15,16" pixmap="skin_default/buttons/button_blue.png" alphatest="on" />
+    	<ePixmap position="338,142" zPosition="2" size="620,14" pixmap="skin_default/po_bar.png" alphatest="blend" transparent="1" />
+    	<eLabel text="Date:" zPosition="8" position="940,186" size="80,24" halign="right" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
+    	<eLabel text="Rsv:" zPosition="4" position="750,186" size="70,24" halign="right" font="Regular;20" foregroundColor="grey" transparent="1" backgroundColor="transpBlack" />
+	    <widget source="global.CurrentTime" render="Bhclock" position="1169,130" zPosition="4" size="40,40" transparent="1" >
 			<convert type="BhAnalogic">Hours</convert>	
 		</widget>
-		<widget source="global.CurrentTime" render="Bhclock" position="1159,80" zPosition="5" size="60,60" transparent="1" >
+		<widget source="global.CurrentTime" render="Bhclock" position="1159,120" zPosition="5" size="60,60" transparent="1" >
 			<convert type="BhAnalogic">Minutes</convert>	
 		</widget>
-		<widget source="global.CurrentTime" render="Bhclock" position="1154,75" borderColor="#f23d21" zPosition="6" size="70,70" transparent="1" >
+		<widget source="global.CurrentTime" render="Bhclock" position="1154,115" borderColor="#f23d21" zPosition="6" size="70,70" transparent="1" >
 			<convert type="BhAnalogic">Seconds</convert>
 		</widget>
-		 <widget source="global.CurrentTime" render="Label" position="1149,145" 	size="80,28" zPosition="2"	font="LCD;24" valign="top" halign="center" foregroundColor="grey"	backgroundColor="#333333" transparent="1">
+		 <widget source="global.CurrentTime" render="Label" position="1149,185" 	size="80,28" zPosition="2"	font="LCD;24" valign="top" halign="center" foregroundColor="grey"	backgroundColor="#333333" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		 	<widget source="global.CurrentTime" render="Label" position="826,148" 	size="300,22" zPosition="2"	font="Regular;18" halign="right" backgroundColor="transpBlack" foregroundColor="white" transparent="1" >
+		 	<widget source="global.CurrentTime" render="Label" position="826,188" 	size="300,22" zPosition="2"	font="Regular;18" halign="right" backgroundColor="transpBlack" foregroundColor="white" transparent="1" >
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" zPosition="4" position="813,148" size="55,22" halign="right" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
+		<widget source="session.CurrentService" render="Label" zPosition="4" position="813,188" size="55,22" halign="right" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
             <convert type="ServiceInfo">VideoWidth</convert>
         </widget>
-        <eLabel text="x" zPosition="4" position="874,148" size="15,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999" />
-        <widget source="session.CurrentService" render="Label" zPosition="4" position="890,148" size="55,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
+        <eLabel text="x" zPosition="4" position="874,188" size="15,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999" />
+        <widget source="session.CurrentService" render="Label" zPosition="4" position="890,188" size="55,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
             <convert type="ServiceInfo">VideoHeight</convert>	
 		</widget>	
-			<widget source="session.CurrentService" render="ChannelNumber" position="340,40" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
-			<widget name="Universe" position="930,40" size="300,32" halign="center" zPosition="2" font="Regular;20" foregroundColor="red" />			
-	    <widget source="session.CurrentService" render="Label" position="375,40" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+			<widget source="session.CurrentService" render="ChannelNumber" position="340,80" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
+			<widget name="Universe" position="950,38" size="300,28" halign="center" zPosition="5" font="Regular;24" foregroundColor="grey"  backgroundColor="background" transparent="1" />			
+	    <widget source="session.CurrentService" render="Label" position="375,80" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 		<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="250,148" 	size="250,22" zPosition="2"	font="Regular;18" backgroundColor="transpBlack" halign="left" foregroundColor="white" transparent="1" >
+		<widget source="session.CurrentService" render="Label" position="250,188" 	size="250,22" zPosition="2"	font="Regular;18" backgroundColor="transpBlack" halign="left" foregroundColor="white" transparent="1" >
 			<convert type="ServiceName">Provider</convert>
 		</widget>
-			<widget source="session.CurrentService" render="Picon" position="60,74" size="130,80" zPosition="10" transparent="1" alphatest="on">
+			<widget source="session.CurrentService" render="Picon" position="60,114" size="130,80" zPosition="10" transparent="1" alphatest="on">
 			<convert type="ServiceName">Reference</convert>	
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="252,76" size="90,30" zPosition="2" halign="left"  font="Regular;26" foregroundColor="white" backgroundColor="background" transparent="1" >
+		<widget source="session.Event_Now" render="Label" position="252,116" size="90,30" zPosition="2" halign="left"  font="Regular;26" foregroundColor="white" backgroundColor="background" transparent="1" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 			</widget>		
-		<widget source="session.Event_Now" render="Label" position="340,76" size="660,30" zPosition="2" halign="left" font="Regular;26"  foregroundColor="white" backgroundColor="background" transparent="1" noWrap="1">
+		<widget source="session.Event_Now" render="Label" position="340,116" size="660,30" zPosition="2" halign="left" font="Regular;26"  foregroundColor="white" backgroundColor="background" transparent="1" noWrap="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="990,76" size="135,30" zPosition="2" halign="right"  font="Regular;26" foregroundColor="white" backgroundColor="background" transparent="1" >
+		<widget source="session.Event_Now" render="Label" position="990,116" size="135,30" zPosition="2" halign="right"  font="Regular;26" foregroundColor="white" backgroundColor="background" transparent="1" >
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-        <widget source="session.Event_Now" render="Progress" pixmap="skin_default/p_bar.png" position="338,102" size="620,14" zPosition="7" transparent="1" > 
+        <widget source="session.Event_Now" render="Progress" pixmap="skin_default/p_bar.png" position="338,142" size="620,14" zPosition="7" transparent="1" > 
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="252,110" size="90,30" zPosition="2" halign="left"  font="Regular;26" foregroundColor="grey" backgroundColor="background" transparent="1" >
+		<widget source="session.Event_Next" render="Label" position="252,150" size="90,30" zPosition="2" halign="left"  font="Regular;26" foregroundColor="grey" backgroundColor="background" transparent="1" >
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="340,110" size="660,30" zPosition="21" halign="left" font="Regular;26" foregroundColor="grey" backgroundColor="background" transparent="1" noWrap="1">
+		<widget source="session.Event_Next" render="Label" position="340,150" size="660,30" zPosition="21" halign="left" font="Regular;26" foregroundColor="grey" backgroundColor="background" transparent="1" noWrap="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="990,110" size="135,30" zPosition="2" halign="right"  font="Regular;26" foregroundColor="grey" backgroundColor="background" transparent="1" >
+		<widget source="session.Event_Next" render="Label" position="990,150" size="135,30" zPosition="2" halign="right"  font="Regular;26" foregroundColor="grey" backgroundColor="background" transparent="1" >
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>	
-			<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_dolby.png" position="525,145" zPosition="4" size="70,30" alphatest="on" >
+			<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_dolby.png" position="525,185" zPosition="4" size="70,30" alphatest="on" >
 			<convert type="ServiceInfo">IsMultichannel</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_format.png" position="595,144" zPosition="4" size="44,30" alphatest="on" >
+		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_format.png" position="595,184" zPosition="4" size="44,30" alphatest="on" >
 			<convert type="ServiceInfo">IsWidescreen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-	    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_txt.png" position="683,144" zPosition="4" size="44,30" alphatest="on" >
+	    <widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_txt.png" position="683,184" zPosition="4" size="44,30" alphatest="on" >
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_crypt.png" position="483,144" zPosition="4" size="44,30" alphatest="on" >
+		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_crypt.png" position="483,184" zPosition="4" size="44,30" alphatest="on" >
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_sd.png" position="641,144" size="44,30" zPosition="4" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_sd.png" position="641,184" size="44,30" zPosition="4" alphatest="on">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">0,720</convert>
 			<convert type="ConditionalShowHide" />
     	</widget>
-		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_hd.png" position="641,144" size="44,30" zPosition="4" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_hd.png" position="641,184" size="44,30" zPosition="4" alphatest="on">
 			<convert type="ServiceInfo">VideoWidth</convert>
 			<convert type="ValueRange">721,1980</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="skin_default/buttons/button_red.png" position="230,85" zPosition="3" size="15,16" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="skin_default/buttons/button_red.png" position="230,125" zPosition="3" size="15,16" alphatest="on">
 			<convert type="ConditionalShowHide">Blink</convert> 
 		</widget> 
-		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_sub.png" position="725,144" zPosition="4" size="44,30" alphatest="on">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="skin_default/icons/icon_sub.png" position="725,184" zPosition="4" size="44,30" alphatest="on">
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
