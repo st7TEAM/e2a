@@ -31,10 +31,13 @@ class BhRedDisabled(Screen):
 		<widget name="lab1" position="20,20" size="660,260" font="Regular;20" />
 	</screen>"""
 
-	def __init__(self, session):
+	def __init__(self, session, reason):
 		Screen.__init__(self, session)
 		
 		msg = "Sorry no space available to expand your Universe.\n\nTo enable Parallel dimensions you need a dedicated Usb stick.\n\nInstructions:\n1) Format your Usb stick \n -click on blue -> blue -> Usb Format Wizard\n\n2) Map the newly formatted stick to \"universe\"\n -click on blue -> blue -> Devices Manager."
+		if reason == "flash":
+			msg = "Sorry you can only access Parallel Universes from the image installed in flash."
+			
 		self["lab1"] = Label(msg)
 		self["actions"] = ActionMap(["WizardActions"],
 		{
@@ -264,7 +267,7 @@ class BhRedPanel(Screen):
 			system("chmod 0755 /bin/bh_parallel_mount")
 # build jump file				
 		out = open("/bin/bh_jump",'w')
-		line = "#!/bin/sh\n\ninit 4\numount -l /etc 2>/dev/null \numount -l /usr 2>/dev/null \n"
+		line = "#!/bin/sh\n\ninit 4\nsleep1\numount -l /etc 2>/dev/null \numount -l /usr 2>/dev/null \n"
 		out.write(line)
 		if self.destination != "Black Hole":
 			line = "sleep 1\n\nmount -t unionfs -o dirs=%s:/etc=ro none /etc 2>/dev/null \n" % (path1)
@@ -315,7 +318,7 @@ class BhBigBang(Screen):
 		
 		self["lab1"] = Label("Please Wait, the Big Bang is in progress")
 		self["lab2"] = Label()
-		self["actions"] = ActionMap(["WizardActions"],
+		self["actions"] = ActionMap(["OkCancelActions"],
 		{
 			"back": self.close
 		})
@@ -331,6 +334,7 @@ class BhBigBang(Screen):
 		self.activityTimer.start(10)
 		
 	def updatepiX(self):
+		running = True
 		self.activityTimer.stop()
 		if self.count == 0:
 			self["lab2"].setText("3")
@@ -349,11 +353,12 @@ class BhBigBang(Screen):
 			rc = system("chmod a+w /universe/.buildv")
 			rc = system(" rm -f /universe/.buildv")
 		else:
+			running = False
 			self.session.openWithCallback(self.bigEnd, MessageBox, "Your Universes have been re-inizialized. You can now start to rebuild your worlds.", MessageBox.TYPE_INFO)
 		
-			
-		self.activityTimer.start(1500)
-		self.count += 1
+		if running == True:
+			self.activityTimer.start(1500)
+			self.count += 1
 		
 		
 	def bigEnd(self, answer):
@@ -370,14 +375,10 @@ class BhRedp:
 			{
 				"BhRedpshow": (self.showBhRedp),
 			})
-			
-		
-			
-			
-			
+					
 
 	def showBhRedp(self):
-		
+		flash = False
 		mounted = False
 		bh_ver = BhU_check_proc_version()
 		un_ver = bh_ver
@@ -387,28 +388,30 @@ class BhRedp:
 			if line.find('/universe') != -1:
 				if line.find('ext') != -1:
 					mounted = True
-					break
+			elif line.find('/boot j') != -1:
+				flash = True
 		f.close()
+		if flash == True:
+			if mounted == True:
+				if fileExists("/universe/.buildv"):
+					f = open("/universe/.buildv",'r')
+					un_ver = f.readline().strip()
+					f.close()
+				else:
+					out = open("/universe/.buildv",'w')
+					out.write(bh_ver)
+					out.close()
+					system("chmod a-w /universe/.buildv")
 		
-		if mounted == True:
-			if fileExists("/universe/.buildv"):
-				f = open("/universe/.buildv",'r')
-				un_ver = f.readline().strip()
-				f.close()
+				if un_ver == bh_ver:
+					self.session.openWithCallback(self.callBhAction, BhRedPanel)
+				else:
+					self.session.openWithCallback(self.callBhAction, BhRedWrong)
+		
 			else:
-				out = open("/universe/.buildv",'w')
-				out.write(bh_ver)
-				out.close()
-				system("chmod a-w /universe/.buildv")
-		
-			if un_ver == bh_ver:
-				self.session.openWithCallback(self.callBhAction, BhRedPanel)
-			else:
-				self.session.openWithCallback(self.callBhAction, BhRedWrong)
-		
+				self.session.openWithCallback(self.callBhAction, BhRedDisabled, "0")
 		else:
-			self.session.openWithCallback(self.callBhAction, BhRedDisabled)
-		
+			self.session.openWithCallback(self.callBhAction, BhRedDisabled, "flash")
 
 	def callBhAction(self, *args):
 		if len(args):

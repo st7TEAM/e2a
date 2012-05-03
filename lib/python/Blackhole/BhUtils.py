@@ -162,6 +162,36 @@ def BhU_check_proc_version():
 		f.close()
 	return ver
 	
+	
+def BhU_checkSkinVersion(skinfile):
+	version = "1.7.4"
+	authors = ["Army", "Matrix10","capa"]
+	ret = "Sorry this skin is not compatible with the current Black Hole image version."
+	curversion = int(version.replace('.',''))
+	fullfile = "/usr/share/enigma2/" + skinfile
+	checkver = False
+	checkauth = False
+	if fileExists(fullfile):
+		f = open(fullfile)
+		for line in f.readlines():
+			if line.find('black hole version:') != -1:
+				parts = line.strip().split(':')
+				ver = int(parts[1].strip().replace('.',''))
+				if ver >= curversion:
+					checkver = True
+			elif line.find('skin author:') != -1:
+				parts = line.strip().split(':')
+				auth = parts[1].strip()
+				for a in authors:
+					if a == auth:
+						checkauth = True
+		f.close()
+	if checkver == True:
+		if checkauth == True:
+			ret = "passed"
+				
+	return ret
+	
 #def make_Delite_cipher():
 #	key = 'AGA6A3A2ACA1A8A5A6A9A9A4A'
 #	key += '6AGA3AFA3A6AEA1AEA2A7AC'

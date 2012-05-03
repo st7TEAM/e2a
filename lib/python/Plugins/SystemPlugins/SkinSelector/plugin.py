@@ -10,7 +10,8 @@ from Components.Sources.StaticText import StaticText
 from Components.MenuList import MenuList
 from Plugins.Plugin import PluginDescriptor
 from Components.config import config
-from Tools.Directories import resolveFilename, SCOPE_PLUGINS
+from Tools.Directories import resolveFilename, SCOPE_PLUGINS, fileExists
+from Blackhole.BhUtils import BhU_checkSkinVersion
 from os import path, walk
 from enigma import eEnv
 
@@ -92,16 +93,23 @@ class SkinSelector(Screen):
 					self.skinlist.append(subdir)
 
 	def ok(self):
+		compat = ""
 		if self["SkinList"].getCurrent() == "Default Skin":
 			skinfile = "skin.xml"
+			compat = "passed"
 		else:
 			skinfile = self["SkinList"].getCurrent()+"/skin.xml"
+			compat = BhU_checkSkinVersion(skinfile)
 
-		print "Skinselector: Selected Skin: "+self.root+skinfile
-		config.skin.primary_skin.value = skinfile
-		config.skin.primary_skin.save()
-		restartbox = self.session.openWithCallback(self.restartGUI,MessageBox,_("GUI needs a restart to apply a new skin\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
-		restartbox.setTitle(_("Restart GUI now?"))
+		if compat == "passed":
+			print "Skinselector: Selected Skin: "+self.root+skinfile
+			config.skin.primary_skin.value = skinfile
+			config.skin.primary_skin.save()
+			restartbox = self.session.openWithCallback(self.restartGUI,MessageBox,_("GUI needs a restart to apply a new skin\nDo you want to Restart the GUI now?"), MessageBox.TYPE_YESNO)
+			restartbox.setTitle(_("Restart GUI now?"))
+		else:
+			self.session.open(MessageBox, compat, MessageBox.TYPE_INFO)
+		
 
 	def loadPreview(self):
 		if self["SkinList"].getCurrent() == "Default Skin":
