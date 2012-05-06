@@ -233,7 +233,6 @@ class BhRedPanel(Screen):
 	def prEjumP(self, answer):
 		if answer == True:
 			rc = system("/usr/bin/StartBhCam stop")
-			rc = system("killall -9 oscam")
 			mvi = "/usr/share/" + self.destination + ".mvi"
 			mvi = mvi.replace(' ', '_')
 			cmd = "cp %s /bin/jump_screen.mvi" % (mvi)
@@ -247,41 +246,72 @@ class BhRedPanel(Screen):
 		path = "/universe/" + self.destination
 		path1 = path + "/etc"
 		path2 = path + "/usr"
+		pathspinorig = "/usr/share/spinners/"  + self.destination + "/*"
+		pathspindest = path2 + "/share/enigma2/skin_default/spinner/"
 		if self.destination != "Black Hole":
 			if not pathExists(path):
 				createDir(path)
 			if not pathExists(path1):
 				createDir(path1)
+				cmd = "cp -r /etc %s" % (path)
+				system(cmd)
 			if not pathExists(path2):
 				createDir(path2)
+				pathtmp = path2 + "/share"
+				createDir(pathtmp)
+				pathtmp = pathtmp + "/enigma2"
+				createDir(pathtmp)
+				pathtmp = pathtmp + "/skin_default"
+				createDir(pathtmp)
+				pathtmp = pathtmp + "/spinner"
+				createDir(pathtmp)
+				cmd = "cp -f %s %s" % (pathspinorig, pathspindest)
+				system(cmd)
 # build bootup file
 		if self.destination == "Black Hole":
 			if fileExists("/bin/bh_parallel_mount"):
 				os_remove("/bin/bh_parallel_mount")
 		else:
 			out = open("/bin/bh_parallel_mount",'w')
-			line = "#!/bin/sh\n\n\nmount -t unionfs -o dirs=%s:/etc=ro none /etc 2>/dev/null \n" % (path1)
+#			line = "#!/bin/sh\n\n\nmount -t unionfs -o dirs=%s:/etc=ro none /etc 2>/dev/null \n" % (path1)
+			line = "mount -o bind %s /etc > /tmp/jump.tmp\n" % (path1)
 			out.write(line)
-			line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr 2>/dev/null \n\nexit 0\n" % (path2)
+			line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr > /tmp/jump.tmp\n" % (path2)
 			out.write(line)
+			out.write("exit 0\n\n")
 			out.close()
 			system("chmod 0755 /bin/bh_parallel_mount")
 # build jump file				
 		out = open("/bin/bh_jump",'w')
-		line = "#!/bin/sh\n\ninit 4\numount -l /etc 2>/dev/null \numount -l /usr 2>/dev/null \n"
-		out.write(line)
+		out.write("#!/bin/sh\n\n")
+		out.write("telinit 4\n")
+		if self.current_universe != "Black Hole":
+			out.write("fuser -km /etc > /tmp/jump.tmp\n")
+			out.write("umount -l /etc > /tmp/jump.tmp\n")
+			out.write("umount -l /usr > /tmp/jump.tmp\n")
+			
+#		out.write("/etc/init.d/avahi-daemon stop\n")
+#		out.write("/etc/init.d/networking stop\n")
+#		out.write("killall -9 udhcpc\n")
+#		out.write("rm /var/run/udhcpc* \n")
 		if self.destination != "Black Hole":
-			line = "sleep 1\n\nmount -t unionfs -o dirs=%s:/etc=ro none /etc 2>/dev/null \n" % (path1)
+			out.write("sleep 1\n")
+#			line = "sleep 1\n\nmount -t unionfs -o dirs=%s:/etc=ro none /etc 2>/dev/null \n" % (path1)
+			line = "mount -o bind %s /etc > /tmp/jump.tmp\n" % (path1)
 			out.write(line)
-			line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr 2>/dev/null \n" % (path2)
+			line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr > /tmp/jump.tmp\n" % (path2)
 			out.write(line)
-		line = "\ninit 3\nexit 0\n"
-		out.write(line)
+		out.write("sleep 1\n")
+#		out.write("/etc/init.d/networking start\n")
+#		out.write("/etc/init.d/avahi-daemon start\n")
+		out.write("telinit 3\n\n")
+		out.write("exit 0\n\n")
+		
 		out.close()
 		rc = system("chmod 0755 /bin/bh_jump")
 # jump.. bye bye
-		configfile.save()
 		self.jump_on_close = True
+		configfile.save()
 		self.close()
 		
 			
@@ -303,6 +333,10 @@ class BhRedPanel(Screen):
 		if self.jump_on_close == True:
 			self.session.nav.stopService()
 			self.session.nav.shutdown()
+#			if self.current_universe != "Black Hole":
+#				rc = system("fuser -km /etc")
+#				rc = system("umount -l /etc")
+#				rc = system("umount -l /usr")
 			Console().ePopen("/bin/bh_jump")
 			
 			
