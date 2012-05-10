@@ -1,6 +1,7 @@
 from Screens.Screen import Screen
 
-from enigma import eTimer
+from Screens.ChoiceBox import ChoiceBox
+from Screens.InputBox import InputBox
 from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop
 from Components.ActionMap import ActionMap
@@ -664,96 +665,79 @@ class DeliteDevicesPanel(Screen):
 	def updateList2(self):
 		self.activityTimer.stop()
 		self.list = [ ]
-		list2 = [ ]
-		system("df > /tmp/ninfo.tmp")
+		self.conflist = [ ]
 		system ("ls -l /dev/disk/by-uuid/ > /tmp/ninfo2")
 		f = open("/tmp/ninfo2",'r')
 		for line in f.readlines():
 			parts = line.strip().split()
-			uid = parts[8]
+			uuid = parts[8]
 			device = parts[10]
-			device = device.strip().replace('../../', '')
-			if device in list2:
+			partition = device.strip().replace('../../', '')
+			if len(partition) != 4:
 				continue
-			if device.find("1") == -1:
-				continue
-			self.buildMy_rec(device, uid)
-			list2.append(device)
+			device = partition[0:-1]
+			dtype = self.get_Dtype(device)
+			name = dtype[0]
+			model = self.get_Dmodel(device)
+			png = LoadPixmap(dtype[1])
+			name = name + " " + model
+			cap = self.get_Dsize(device, partition)
+			des = "Size: " + cap
+			mountpoint = self.get_Dpoint(uuid)
+			des += "\tMount: " + mountpoint + "\nDevice: " + "/dev/" + partition
+			res = (name, des, png)
+			self.list.append(res)
+			description = "%s  %s  %s" % (name, cap, partition)
+			self.conflist.append((description, uuid))
+			
 		f.close()
-				
-#If not part1		
-		f = open("/tmp/ninfo2",'r')
-		for line in f.readlines():
-			parts = line.strip().split()
-			uid = parts[8]
-			device = parts[10]
-			device = device.strip().replace('../../', '')
-			if device.find("1") == -1:
-				tempdevice = device + "1"
-				if tempdevice in list2:
-					continue
-				if device in list2:
-					continue
-				self.buildMy_rec(device, uid)
-				list2.append(device)
-		f.close()	
-	
 	
 		self["list"].list = self.list
 		self["lab1"].hide()
 		
-	def buildMy_rec(self, device, uid):
+	def get_Dtype(self, device):
 		mypath = DeliteGetSkinPath()
-		device2 = device.replace('1', '')
-
-		name = "USB: "
-		mypixmap = mypath + "icons/dev_usb.png"
-		des = ""
-		if fileExists("/sys/block/" + device2 + "/removable"):
-			f = open("/sys/block/" + device2 + "/removable",'r')
-			line = f.readline().strip()
-			f.close()
-			if line == "0":
-				name = "HARD DISK: "
-				mypixmap = mypath + "icons/dev_hdd.png"
-		if fileExists("/sys/block/" + device2 + "/size"):
-			f = open("/sys/block/" + device2 + "/size",'r')
-			line = f.readline().strip()
-			f.close()
-			cap = int(line)
-			cap = cap / 1000 * 512 / 1000
-			cap = "%d.%03d GB" % (cap/1000, cap%1000)
-			des = "Size: " + cap
-		if fileExists("/sys/block/" + device2 + "/device/vendor"):
-			f = open("/sys/block/" + device2 + "/device/vendor",'r')
-			line = f.readline().strip()
-			f.close()
-			name = name + " " + line
-			f = open("/sys/block/" + device2 + "/device/model",'r')
-			line = f.readline().strip()
-			f.close()	
-			name = name + " " + line	
-			
-
-		d1 = "NOT MAPPED"
-		d2 = device
+		name = "USB"
+		pix =  mypath + "icons/dev_usb.png"
+		filename = "/sys/block/%s/removable" % (device)
+		if fileExists(filename):
+			if file(filename).read().strip() == "0":
+				name = "HARD DISK"
+				pix =  mypath + "icons/dev_hdd.png"
+		return name, pix	
+	
+	def get_Dsize(self, device, partition):
+		size = "0"
+		filename = "/sys/block/%s/%s/size" % (device, partition)
+		if fileExists(filename):
+			size = int(file(filename).read().strip())
+			cap = size / 1000 * 512 / 1000
+			size = "%d.%03d GB" % (cap/1000, cap%1000)
+		return size
+	
+	def get_Dmodel(self, device):
+		model = "Generic"
+		filename = "/sys/block/%s/device/vendor" % (device)
+		if fileExists(filename):
+			vendor = file(filename).read().strip()
+			filename = "/sys/block/%s/device/model" % (device)
+			mod = file(filename).read().strip()
+			model = "%s %s" % (vendor, mod)
+		return model
+		
+	def get_Dpoint(self, uid):
+		point = "NOT MAPPED"
 		f = open("/proc/mounts",'r')
 		for line in f.readlines():
 			if line.find(uid) != -1:
 				parts = line.strip().split()
-				d1 = parts[1]
+				point = parts[1]
 				break
 		f.close()
+		return point	
 		
-		if des != "":
-			des += "\tMount: " + d1 + "\nDevice: " + "/dev/" + device
-			png = LoadPixmap(mypixmap)
-			res = (name, des, png)
-			self.list.append(res)
-		
-
 	def mountUmount(self):
-		self.session.openWithCallback(self.updateList, DeliteSetupDevicePanelConf)
+		self.session.openWithCallback(self.updateList, DeliteSetupDevicePanelConf, self.conflist)
 					
 
 
@@ -769,7 +753,7 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 	</screen>"""
 
 
-	def __init__(self, session):
+	def __init__(self, session, devices):
 		Screen.__init__(self, session)
 		
 		self.list = []
@@ -785,103 +769,39 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 			"back": self.close
 
 		})
-			
+		self.devices = devices	
 		self.updateList()
 	
 	
 	def updateList(self):
 		self.list = []
-		list2 = [ ]
-		system("df > /tmp/ninfo.tmp")
-		system ("ls -l /dev/disk/by-uuid/ > /tmp/ninfo2")
-		f = open("/tmp/ninfo2",'r')
-		for line in f.readlines():
-			parts = line.strip().split()
-			uid = parts[8]
-			device = parts[10]
-			device = device.strip().replace('../../', '')
-			if device in list2:
-				continue
-			if device.find("1") == -1:
-				continue
-			self.buildMy_rec(device, uid)
-			list2.append(device)
-		f.close()
-		
-#If not part1		
-		f = open("/tmp/ninfo2",'r')
-		for line in f.readlines():
-			parts = line.strip().split()
-			uid = parts[8]
-			device = parts[10]
-			device = device.strip().replace('../../', '')
-			if device.find("1") == -1:
-				tempdevice = device + "1"
-				if tempdevice in list2:
-					continue
-				if device in list2:
-					continue
-				self.buildMy_rec(device, uid)
-				list2.append(device)
-		f.close()
-		
-		
+		for device in self.devices:
+			uid = device[1]
+			d1 = "Not mapped"
+			checkmb = False
+			f = open("/proc/mounts",'r')
+			for line in f.readlines():
+				if line.find(uid) != -1:
+					parts = line.strip().split()
+					d1 = parts[1]
+					break
+				if line.find("/media/meoboot") != -1:
+					d1 = "/media/meoboot"
+					break
+			f.close()
+			item = NoSave(ConfigSelection(default = "Not mapped", choices = self.get_Choices()))
+			if d1 == "/media/meoboot":
+				item = NoSave(ConfigSelection(default = "/media/meoboot", choices = [("/media/meoboot", "/media/meoboot")]))
+			item.value = d1.strip()
+			text =  device[0]
+			res = getConfigListEntry(text, item, uid)
+			self.list.append(res)
 		
 		self["config"].list = self.list
 		self["config"].l.setList(self.list)
 		self["Linconn"].hide()
-			
-			
-	def buildMy_rec(self, device, uid):
-		uid = uid.strip()
-		device2 = device.replace('1', '')
-
-		name = "USB: "
-		des = ""
-		if fileExists("/sys/block/" + device2 + "/removable"):
-			f = open("/sys/block/" + device2 + "/removable",'r')
-			line = f.readline().strip()
-			f.close()
-			if line == "0":
-				name = "HARD DISK: "
-		if fileExists("/sys/block/" + device2 + "/size"):
-			f = open("/sys/block/" + device2 + "/size",'r')
-			line = f.readline().strip()
-			f.close()
-			cap = int(line)
-			cap = cap / 1000 * 512 / 1000
-			cap = "%d.%03d GB" % (cap/1000, cap%1000)
-			des = " " + cap
-		if fileExists("/sys/block/" + device2 + "/device/model"):
-			f = open("/sys/block/" + device2 + "/device/model",'r')
-			line = f.readline().strip()
-			f.close()	
-			name = name + " " + line
-
-		d1 = "Not mapped"
-		checkmb = False
-		f = open("/proc/mounts",'r')
-		for line in f.readlines():
-			if line.find(uid) != -1:
-				parts = line.strip().split()
-				d1 = parts[1]
-				break
-			if line.find(device) != -1:
-				if line.find("/media/meoboot") != -1:
-					d1 = "/media/meoboot"
-					break
-		f.close()
-		
-		item = NoSave(ConfigSelection(default = "Not mapped", choices = self.get_Choices()))
-		
-		if d1 == "/media/meoboot":
-			item = NoSave(ConfigSelection(default = "/media/meoboot", choices = [("/media/meoboot", "/media/meoboot")]))
-		
-		item.value = d1.strip()
-		text = name + " " + des + " /dev/" + device
-		res = getConfigListEntry(text, item, uid)
-		if des != "":
-			self.list.append(res)
+	
+	
 			
 	def get_Choices(self):
 		choices = [("Not mapped", "Not mapped")]
@@ -896,7 +816,6 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 		return choices		
 			
 	def saveMypoints(self):
-		
 		f = open("/etc/fstab",'r')
 		out = open("/etc/fstab.tmp", "w")
 		for line in f.readlines():
@@ -939,7 +858,7 @@ class Bp_UsbFormat(Screen):
 		Screen.__init__(self, session)
 		
 		msg = """This wizard will help you to format Usb mass storages for Linux.
-Please be sure that your usb drive is not connected to your Vu+ box before to continue.
+Please be sure that your usb drive is NOT CONNECTED to your Vu+ box before to continue.
 If your usb drive is connected and mounted you have to poweroff your box, remove the usb device and reboot.
 Push red button to continue when you are ready and your usb is disconnected.
 """
@@ -956,12 +875,19 @@ Push red button to continue when you are ready and your usb is disconnected.
 		self.step = 1
 		self.devices = []
 		self.device = None
+		self.totalpartitions = 1
+		self.totalsize = self.p1size = self.p2size = self.p3size = self.p4size = "0"
 	
 	
 	def stepOne(self):
 		msg = """Connect your usb storage to your Vu+ box
 Press red button to continue when ready.
+
+Warning: If your usb is already connected 
+to the box you have to unplug it, click 
+the green button and restart the wizard.
 """
+		rc = system("/etc/init.d/autofs stop")
 		self.devices = self.get_Devicelist()
 		self["lab1"].setText(msg)
 		self.step = 2
@@ -982,34 +908,128 @@ Press red button to continue.
 			self.wizClose("Sorry, no new usb storage detected.\nBe sure to follow wizard instructions.")
 		else:
 			msg = self.get_Deviceinfo(self.device)
-			msg +="\nWarning: all the data will be lost.\nAre you sure you want to format this device?\n"
 			self["lab1"].setText(msg)
 			self.step = 4
 			
 	def stepFour(self):
-		device = "/dev/" + self.device
-		partition = device + "1"
-		cmd = "umount %s" % (partition)
-		rc = system(cmd)
-		cmd = "umount %s" % (device)
-		rc = system(cmd)
-		if fileExists(partition):
-			self.do_Format()
+		myoptions = [['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']]
+		self.session.openWithCallback(self.partSize1,ChoiceBox, title="Select number of partitions:", list=myoptions)
+		
+	def partSize1(self, total):
+		self.totalpartitions = int(total[1])
+		if self.totalpartitions > 1:
+			self.session.openWithCallback(self.partSize2,InputBox, title="Enter the size in Megabyte of the first partition:", windowTitle = "Partition size", text="1", useableChars = "1234567890" )
 		else:
-			self.do_Part()
-					
+			self.writePartFile()
+			
+	def partSize2(self, psize):
+		if psize is None:
+			psize = "100"
+		self.p1size = psize
+		if self.totalpartitions > 2:
+			self.session.openWithCallback(self.partSize3,InputBox, title="Enter the size in Megabyte of the second partition:", windowTitle = "Partition size", text="1", useableChars = "1234567890" )
+		else:
+			self.writePartFile()
+			
+	def partSize3(self, psize):
+		if psize is None:
+			psize = "100"
+		self.p2size = psize
+		if self.totalpartitions > 3:
+			self.session.openWithCallback(self.partSize4,InputBox, title="Enter the size in Megabyte of the third partition:", windowTitle = "Partition size", text="1", useableChars = "1234567890" )
+		else:
+			self.writePartFile()
+		
+	def partSize4(self, psize):
+		if psize is None:
+			psize = "100"
+		self.p3size = psize
+		self.writePartFile()
+		
+	def writePartFile(self):
+		p1 = p2 = p3 = p4 = "0"
+		device = "/dev/" + self.device
+		out0 = "#!/bin/sh\n\nsfdisk %s -uM << EOF\n" % (device)
+		
+		msg = "Total Megabyte Available: \t" + str(self.totalsize)
+		msg += "\nPartition scheme:\n"
+		p1 = self.p1size
+		out1 = ",%s\n" % (self.p1size)
+		if self.totalpartitions == 1:
+			p1 = str(self.totalsize)
+			out1 = ";\n"
+		msg += "%s1 \t size:%s M\n" % (device, p1)
+		if self.totalpartitions > 1:
+			p2 = self.p2size
+			out2 = ",%s\n" % (self.p2size)
+			if self.totalpartitions == 2:
+				p2 = self.totalsize - int(self.p1size)
+				out2 = ";\n"
+			msg += "%s2 \t size:%s M\n" % (device, p2)
+		if self.totalpartitions > 2:
+			p3 = self.p3size
+			out3 = ",%s\n" % (self.p3size)
+			if self.totalpartitions == 3:
+				p3 = self.totalsize - (int(self.p1size) + int(self.p2size))
+				out3 = ";\n"
+			msg += "%s3 \t size:%s M\n" % (device, p3)
+		if self.totalpartitions > 3:
+			p4 = self.totalsize - (int(self.p1size) + int(self.p2size) + int(self.p3size))
+			out4 = ";\n"
+			msg += "%s4 \t size:%s M\n" % (device, p4)
+		msg +="\nWarning: all the data will be lost.\nAre you sure you want to format this device?\n"
+		
+		
+		out = open("/tmp/sfdisk.tmp",'w')
+		out.write(out0)
+		out.write(out1)
+		if self.totalpartitions > 1:
+			out.write(out2)
+		if self.totalpartitions > 2:
+			out.write(out3)
+		if self.totalpartitions > 3:
+			out.write(out4)
+		out.write("EOF\n")
+		out.close()
+		system("chmod 0755 /tmp/sfdisk.tmp")
+		self["lab1"].setText(msg)
+		
+		if int(self.p1size) + int(self.p2size) + int(self.p3size) + int(self.p4size) > self.totalsize:
+			self.wizClose("Sorry, your partitions sizes are bigger than total device size.")
+		else:
+			self.step = 5
 
 	def do_Part(self):
 		device = "/dev/%s" % (self.device)
 		cmd = "echo -e 'Partitioning: %s \n\n'" % (device)
-		cmd2 = 'printf "0,\n;\n;\n;\ny\n" | sfdisk -f %s' % (device)
-		self.session.open(Console, title="Partitioning...", cmdlist=[cmd, cmd2], finishedCallback = self.do_Format)
+		cmd2 = "/tmp/sfdisk.tmp"
+		self.session.open(Console, title="Partitioning...", cmdlist=[cmd, cmd2], finishedCallback = self.partDone)
+		
+	def partDone(self):
+		msg = "The device has been partitioned.\nPartitions will be now formatted."
+		self["lab1"].setText(msg)
+		self.step = 6
 		
 	def do_Format(self):
+		os_remove("/tmp/sfdisk.tmp")
+		cmds = ["sleep 1"]
 		device = "/dev/%s1" % (self.device)
-		cmd = "echo -e 'Formatting: %s \n\n'" % (device)
-		cmd2 = "/sbin/mkfs.ext4 %s" % (device)
-		self.session.open(Console, title="Formatting...", cmdlist=[cmd, cmd2], finishedCallback = self.succesS)
+		cmd = "/sbin/mkfs.ext4 %s" % (device)
+		cmds.append(cmd)
+		if self.totalpartitions > 1:
+			device = "/dev/%s2" % (self.device)
+			cmd = "/sbin/mkfs.ext4 %s" % (device)
+			cmds.append(cmd)
+		if self.totalpartitions > 2:
+			device = "/dev/%s3" % (self.device)
+			cmd = "/sbin/mkfs.ext4 %s" % (device)
+			cmds.append(cmd)
+		if self.totalpartitions > 3:
+			device = "/dev/%s4" % (self.device)
+			cmd = "/sbin/mkfs.ext4 %s" % (device)
+			cmds.append(cmd)
+		
+		self.session.open(Console, title="Formatting...", cmdlist=cmds, finishedCallback = self.succesS)
 	
 	def step_Bump(self):
 		if self.step == 1:
@@ -1020,6 +1040,10 @@ Press red button to continue.
 			self.stepThree()
 		elif self.step == 4:
 			self.stepFour()
+		elif self.step == 5:
+			self.do_Part()
+		elif self.step == 6:
+			self.do_Format()
 			
 	def get_Devicelist(self):
 		devices = []
@@ -1038,8 +1062,9 @@ Press red button to continue.
 			model = file(filename).read().strip()
 			filename = "/sys/block/%s/size" % (device)
 			size = int(file(filename).read().strip())
-			cap = size / 1000 * 512 / 1000
+			cap = size / 1000 * 512 / 1024
 			size = "%d.%03d GB" % (cap/1000, cap%1000)
+			self.totalsize = cap
 		info = "Model: %s %s\nSize: %s\nDevice: /dev/%s" % (vendor, model, size, device)
 		return info
 	

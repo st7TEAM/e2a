@@ -125,6 +125,7 @@ class BhRedPanel(Screen):
 		self.onShow.append(self.updateList)
 		
 	def updateList(self):
+		self.list = []
 		mypath = DeliteGetSkinPath()
 		rc = system("df -h > /tmp/syinfo.tmp")
 		
