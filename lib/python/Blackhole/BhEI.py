@@ -7,6 +7,7 @@ import re
 import socket
 
 from Tools.Directories import fileExists
+from Tools.Transponder import ConvertToHumanReadable
 
 class Nab_ExtraInfobar(Screen):
 	
@@ -127,10 +128,12 @@ class Nab_ExtraInfobar(Screen):
 			if frontendData is not None:
 				ttype = frontendData.get("tuner_type", "UNKNOWN")
 				if ttype == "DVB-S":
+					fedata = ConvertToHumanReadable(frontendData)
 					sr = str(int(frontendData.get("symbol_rate", 0) / 1000))
 					freq = str(int(frontendData.get("frequency", 0) / 1000))
 					pol = {0: "H", 1: "V", 2: "CL", 3: "CR", 4: None}[frontendData.get("polarization", "HORIZONTAL")]
-					fec = {0: "Auto", 1: "1/2", 2: "2/3", 3: "3/4", 4: "4/5", 5: "5/6", 6: "7/8", 7: "8/9", 8: "9/10", 9: "None"} [frontendData.get("fec_inner", "FEC_AUTO")]
+					fec = fedata.get("fec_inner", "")					
+#					fec = {0: "Auto", 1: "1/2", 2: "2/3", 3: "3/4", 4: "4/5", 5: "5/6", 6: "7/8", 7: "8/9", 8: "9/10", 9: "None"} [frontendData.get("fec_inner", "FEC_AUTO")]
 					self["nfreq_info"].setText( "Freq: " + freq + " " + pol + " Sr: " + sr + " " + fec )		
 		
 					orbital = int(frontendData["orbital_position"])
