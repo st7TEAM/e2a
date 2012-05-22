@@ -670,7 +670,7 @@ class BhDjmount(Screen):
 			
 class BhMediatomb(Screen):
 	skin = """
-	<screen position="center,center" size="602,405" title="Black Hole UPnP Server Panel">
+	<screen position="center,center" size="602,405" title="Black Hole UPnP Mediatomb Server Panel">
 		<widget name="lab1" position="20,20" size="580,260" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="lab2" position="20,300" size="300,30" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="labstop" position="320,300" size="150,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
@@ -704,11 +704,24 @@ class BhMediatomb(Screen):
 		self.onLayoutFinish.append(self.updateServ)
 
 	def ServStart(self):
-		rc = system("ln -s ../init.d/mediatomb /etc/rc3.d/S20mediatomb")
-		rc = system("/etc/init.d/mediatomb start")		
-		mybox = self.session.open(MessageBox, "UPnP Server Enabled.", MessageBox.TYPE_INFO)
-		mybox.setTitle("Info")
-		self.updateServ()
+		rc = system("ps > /tmp/nvpn.tmp")
+		minidlna_active = False
+		f = open("/tmp/nvpn.tmp",'r')
+ 		for line in f.readlines():
+			if line.find('minidlna') != -1:
+				minidlna_active = True
+		f.close()
+		os_remove("/tmp/nvpn.tmp")
+		if self.my_serv_active == True:
+			self.session.open(MessageBox, "Mediatomb already up and running.", MessageBox.TYPE_INFO)
+		elif minidlna_active == True:	
+			self.session.open(MessageBox, "Sorry you cannot run two UpnP Servers togheter. Please disable minidlna before to run Mediatomb.", MessageBox.TYPE_INFO)
+		else:
+			rc = system("ln -s ../init.d/mediatomb /etc/rc3.d/S20mediatomb")
+			rc = system("/etc/init.d/mediatomb start")		
+			mybox = self.session.open(MessageBox, "Mediatomb Server Enabled.", MessageBox.TYPE_INFO)
+			mybox.setTitle("Info")
+			self.updateServ()
 			
 		
 	def ServStop(self):
@@ -717,7 +730,7 @@ class BhMediatomb(Screen):
 			if fileExists("/etc/rc3.d/S20mediatomb"):
 				os_remove("/etc/rc3.d/S20mediatomb")
 				
-			mybox = self.session.open(MessageBox, "UPnP Server Disabled.", MessageBox.TYPE_INFO)
+			mybox = self.session.open(MessageBox, "Mediatomb Server Disabled.", MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
 			rc = system("sleep 1")
 			self.updateServ()
@@ -733,6 +746,96 @@ class BhMediatomb(Screen):
 			f = open("/tmp/nvpn.tmp",'r')
  			for line in f.readlines():
 				if line.find('mediatomb') != -1:
+					self.my_serv_active = True
+			f.close()
+			os_remove("/tmp/nvpn.tmp")
+		
+			
+		if self.my_serv_active == True:
+			self["labstop"].hide()
+			self["labrun"].show()
+		else:
+			self["labstop"].show()
+			self["labrun"].hide()
+			
+class BhMinidlna(Screen):
+	skin = """
+	<screen position="center,center" size="602,405" title="Black Hole UPnP Minidlna Server Panel">
+		<widget name="lab1" position="20,20" size="580,260" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="lab2" position="20,300" size="300,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="labstop" position="320,300" size="150,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
+		<widget name="labrun" position="320,300" size="150,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
+		<ePixmap pixmap="skin_default/buttons/red.png" position="125,360" size="150,30" alphatest="on"/>
+		<ePixmap pixmap="skin_default/buttons/green.png" position="325,360" size="150,30" alphatest="on"/>
+		<widget name="key_red" position="125,362" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="key_green" position="325,362" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+	</screen>"""
+	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		mytext = "Minidlna: UPnP media server Black Hole version.\nMinidlna is fully configured for your box and ready to work. Just enable it and play.\nMinidlna include little web interface.\n\nMinidlna webif url: http://ip_box:8200\nMinidlna config: /etc/minidlna.conf\nMinidlna home site: http://sourceforge.net/projects/minidlna/"
+		self["lab1"] = Label(mytext)
+		self["lab2"] = Label(_("Current Status:"))
+		self["labstop"] = Label(_("Stopped"))
+		self["labrun"] = Label(_("Running"))
+		self["key_red"] = Label("Enable")
+		self["key_green"] = Label("Disable")
+		self.my_serv_active = False
+				
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"ok": self.close,
+			"back": self.close,
+			"red": self.ServStart,
+			"green": self.ServStop
+		})
+		
+		self.onLayoutFinish.append(self.updateServ)
+
+	def ServStart(self):
+		rc = system("ps > /tmp/nvpn.tmp")
+		mediatomb_active = False
+		f = open("/tmp/nvpn.tmp",'r')
+ 		for line in f.readlines():
+			if line.find('mediatomb') != -1:
+				mediatomb_active = True
+		f.close()
+		os_remove("/tmp/nvpn.tmp")
+		if self.my_serv_active == True:
+			self.session.open(MessageBox, "Minidlna already up and running.", MessageBox.TYPE_INFO)
+		elif mediatomb_active == True:	
+			self.session.open(MessageBox, "Sorry you cannot run two UpnP Servers togheter. Please disable Mediatomb before to run minidlna.", MessageBox.TYPE_INFO)
+		else:
+			rc = system("ln -s ../init.d/minidlna /etc/rc3.d/S90minidlna")
+			rc = system("/etc/init.d/minidlna start")		
+			mybox = self.session.open(MessageBox, "Minidlna Server Enabled.", MessageBox.TYPE_INFO)
+			mybox.setTitle("Info")
+			self.updateServ()
+			
+		
+	def ServStop(self):
+		if self.my_serv_active == True:
+			rc = system("/etc/init.d/minidlna stop")
+			if fileExists("/etc/rc3.d/S90minidlna"):
+				os_remove("/etc/rc3.d/S90minidlna")
+				
+			mybox = self.session.open(MessageBox, "Minidlna Server Disabled.", MessageBox.TYPE_INFO)
+			mybox.setTitle("Info")
+			rc = system("sleep 1")
+			self.updateServ()
+		
+
+	def updateServ(self):
+		self["labrun"].hide()
+		self["labstop"].hide()
+		rc = system("ps > /tmp/nvpn.tmp")
+		self.my_serv_active = False
+		
+		if fileExists("/tmp/nvpn.tmp"):
+			f = open("/tmp/nvpn.tmp",'r')
+ 			for line in f.readlines():
+				if line.find('minidlna') != -1:
 					self.my_serv_active = True
 			f.close()
 			os_remove("/tmp/nvpn.tmp")

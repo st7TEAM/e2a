@@ -14,10 +14,10 @@ from Tools.LoadPixmap import LoadPixmap
 from Tools.Directories import fileExists, pathExists, createDir, resolveFilename, SCOPE_SKIN_IMAGE
 from os import system, listdir, remove as os_remove, rename as os_rename, popen, getcwd, chdir
 from BhUtils import DeliteGetSkinPath, nab_Detect_Machine, BhU_get_Version
-from BhInadyn import DeliteInadyn
-from BhSwap import DeliteSwap
-from BhHdd import DeliteHdd
-from BhNet import DeliteOpenvpn, DeliteSamba, DeliteTelnet, DeliteFtp, BhDjmount, BhMediatomb, BhTunerServer, BhNetBrowser, BhNfsServer
+#from BhInadyn import DeliteInadyn
+#from BhSwap import DeliteSwap
+# from BhHdd import DeliteHdd
+#from BhNet import DeliteOpenvpn, DeliteSamba, DeliteTelnet, DeliteFtp, BhDjmount, BhMediatomb, BhTunerServer, BhNetBrowser, BhNfsServer
 #from BhNfs import DeliteNfs
 #from BhMountWiz import DeliteMountWiz
 
@@ -74,28 +74,43 @@ class DeliteSettings(Screen):
 		elif self.sel == 4:
 			self.session.open(DeliteKernelModules)
 		elif self.sel == 5:
+			from BhInadyn import DeliteInadyn
 			self.session.open(DeliteInadyn)
 		elif self.sel == 6:
+			from BhSwap import DeliteSwap
 			self.session.open(DeliteSwap)
 		elif self.sel == 7:
+			from BhHdd import DeliteHdd
 			self.session.open(DeliteHdd)
 		elif self.sel == 8:
+			from BhNet import DeliteOpenvpn
 			self.session.open(DeliteOpenvpn)
 		elif self.sel == 9:
+			from BhNet import DeliteSamba
 			self.session.open(DeliteSamba)
 		elif self.sel == 10:
+			from BhNet import BhNfsServer
 			self.session.open(BhNfsServer)
 		elif self.sel == 11:
+			from BhNet import DeliteTelnet
 			self.session.open(DeliteTelnet)
 		elif self.sel == 12:
+			from BhNet import DeliteFtp
 			self.session.open(DeliteFtp)
 		elif self.sel == 13:
+			from BhNet import BhDjmount
 			self.session.open(BhDjmount)
 		elif self.sel == 14:
+			from BhNet import BhMediatomb
 			self.session.open(BhMediatomb)
 		elif self.sel == 15:
-			self.session.open(BhTunerServer)
+			from BhNet import BhMinidlna
+			self.session.open(BhMinidlna)
 		elif self.sel == 16:
+			from BhNet import BhTunerServer
+			self.session.open(BhTunerServer)
+		elif self.sel == 17:
+			from BhNet import BhNetBrowser
 			self.session.open(BhNetBrowser)
 		else:
 			self.noYet()
@@ -217,15 +232,22 @@ class DeliteSettings(Screen):
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "Tuner Server"
+		name = "UPnP Server Minidlna"
 		idx = 15
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "Tuner Server"
+		idx = 16
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/mountwizard.png"
 		png = LoadPixmap(mypixmap)
 		name = "Network Browse & Mountpoints"
-		idx = 16
+		idx = 17
 		res = (name, png, idx)
 		self.list.append(res)
 		
