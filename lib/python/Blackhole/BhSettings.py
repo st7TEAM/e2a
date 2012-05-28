@@ -890,15 +890,16 @@ Push red button to continue when you are ready and your usb is disconnected.
 
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
 		{
-			"back": self.close,
+			"back": self.checkClose,
 			"red": self.step_Bump,
-			"green": self.close
+			"green": self.checkClose
 		})
 		self.step = 1
 		self.devices = []
 		self.device = None
 		self.totalpartitions = 1
 		self.totalsize = self.p1size = self.p2size = self.p3size = self.p4size = "0"
+		self.canclose = True
 	
 	
 	def stepOne(self):
@@ -1022,6 +1023,9 @@ Press red button to continue.
 			self.step = 5
 
 	def do_Part(self):
+		self.canclose = False
+		self["key_green"].hide()
+		
 		device = "/dev/%s" % (self.device)
 		cmd = "echo -e 'Partitioning: %s \n\n'" % (device)
 		cmd2 = "/tmp/sfdisk.tmp"
@@ -1090,7 +1094,11 @@ Press red button to continue.
 		info = "Model: %s %s\nSize: %s\nDevice: /dev/%s" % (vendor, model, size, device)
 		return info
 	
-
+	
+	def checkClose(self):
+		if self.canclose == True:
+			self.close()
+			
 	def wizClose(self, msg):
 		self.session.openWithCallback(self.close, MessageBox, msg, MessageBox.TYPE_INFO)
 
