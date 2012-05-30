@@ -1,8 +1,10 @@
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
+from Screens.InputBox import InputBox
 from Components.ActionMap import ActionMap
 from Components.Label import Label
-from Components.config import config, configfile
+from Components.ConfigList import ConfigListScreen
+from Components.config import config, configfile, getConfigListEntry, ConfigYesNo, ConfigSubsection, ConfigInteger, NoSave
 from Components.Console import Console
 from Components.MenuList import MenuList
 from Components.MultiContent import MultiContentEntryText, MultiContentEntryPixmapAlphaTest
@@ -12,9 +14,22 @@ from os import system, remove as os_remove
 from BhUtils import DeliteGetSkinPath, BhU_check_proc_version
 from enigma import eListboxPythonMultiContent, gFont, eTimer
 
-# from Screens.Standby import TryQuitMainloop
-#from Components.Sources.List import List
-#from enigma import eDVBDB
+
+def Bh_read_Universe_Cfg(universe):
+		fname = "/universe/.%s.cfg" % (universe)
+		data = ["False", "0", "False"]
+		if fileExists(fname):
+			all = open(fname, 'rb').readlines()
+			info = {}
+			for line in all:
+				d = line.split(':', 1)
+				if len(d) > 1:
+					info[d[0].strip()] = d[1].strip()
+			
+			data[0] = info.get('universe_lock', 'False')
+			data[1] = info.get('universe_pin', '0')
+			data[2] = info.get('universe_force_reboot', 'False')
+		return data
 
 
 class UniverseList(MenuList):
@@ -105,7 +120,7 @@ class BhRedPanel(Screen):
 		self["key_yellow"] = Label("Exit")
 		self["lab1"] = Label()
 		self["lab2"] = Label()
-		self.current_universe = self.destination = ""
+		self.current_universe = self.destination = self.destination_lock = self.destination_pin = self.destination_force_reboot = ""
 		self.jump_on_close = False
 		
 		self.list = []
@@ -114,7 +129,7 @@ class BhRedPanel(Screen):
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
 		{
 			"back": self.close,
-			"ok": self.checkdesT,
+			"ok": self.confiG,
 			"red": self.checkdesT,
 			"green": self.check_origin,
 			"yellow": self.close
@@ -216,6 +231,27 @@ class BhRedPanel(Screen):
 		f.close()
 		return ret
 		
+	def confiG(self):
+		sel = self["list"].getCurrent()
+		if sel[0] != "Black Hole":
+			data = Bh_read_Universe_Cfg(sel[0])
+			self.config_univ = sel[0]
+			self.config_pin = data[1]
+			if data[0] == "True":
+				msg = "Enter the pin for %s universe" % (sel[0])
+				self.session.openWithCallback(self.confiG2, InputBox, title=msg, windowTitle = "Insert Pin", text="0000", useableChars = "1234567890" )
+			else:
+				self.session.open(BhUniverseConfig, sel[0])
+			
+	def confiG2(self, pin):
+		if pin is None:
+			pin = "0"
+		if int(pin) == int(self.config_pin):
+			self.session.open(BhUniverseConfig, self.config_univ)
+		else:
+			self.session.open(MessageBox, "Sorry, wrong pin.", MessageBox.TYPE_ERROR)
+		
+	
 	def checkdesT(self):
 		sel = self["list"].getCurrent()
 		self.destination = sel[0]
@@ -223,8 +259,24 @@ class BhRedPanel(Screen):
 		if self.current_universe == self.destination:
 			msg = "You are already in %s universe." % (self.destination)
 			self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
-		else :
+		else:
+			data = Bh_read_Universe_Cfg(self.destination)
+			self.destination_lock = data[0]
+			self.destination_pin = data[1]
+			self.destination_force_reboot =  data[2]
+			if data[0] == "True":
+				msg = "Enter the pin for %s universe" % (self.destination)
+				self.session.openWithCallback(self.checkdesTPin, InputBox, title=msg, windowTitle = "Insert Pin", text="0000", useableChars = "1234567890" )
+			else:
+				self.askjumpConfirm()
+
+	def checkdesTPin(self, pin):
+		if pin is None:
+			pin = "0"
+		if int(pin) == int(self.destination_pin):
 			self.askjumpConfirm()
+		else:
+			self.session.open(MessageBox, "Sorry, wrong pin.", MessageBox.TYPE_ERROR)
 
 	def askjumpConfirm(self):
 		msg = "We are going to jump into %s Universe.\nPlease remember that anything you do in this Universe, such as install sofware, skins or plugins will have no effect on the other Universes.\nAre you sure you want to jump?" % (self.destination)
@@ -273,15 +325,15 @@ class BhRedPanel(Screen):
 			if fileExists("/bin/bh_parallel_mount"):
 				os_remove("/bin/bh_parallel_mount")
 		else:
-			out = open("/bin/bh_parallel_mount",'w')
-#			line = "#!/bin/sh\n\n\nmount -t unionfs -o dirs=%s:/etc=ro none /etc 2>/dev/null \n" % (path1)
-			line = "mount -o bind %s /etc > /tmp/jump.tmp\n" % (path1)
-			out.write(line)
-			line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr > /tmp/jump.tmp\n" % (path2)
-			out.write(line)
-			out.write("exit 0\n\n")
-			out.close()
-			system("chmod 0755 /bin/bh_parallel_mount")
+			if self.destination_force_reboot == "False":
+				out = open("/bin/bh_parallel_mount",'w')
+				line = "mount -o bind %s /etc > /tmp/jump.tmp\n" % (path1)
+				out.write(line)
+				line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr > /tmp/jump.tmp\n" % (path2)
+				out.write(line)
+				out.write("exit 0\n\n")
+				out.close()
+				system("chmod 0755 /bin/bh_parallel_mount")
 # build jump file				
 		out = open("/bin/bh_jump",'w')
 		out.write("#!/bin/sh\n\n")
@@ -342,6 +394,105 @@ class BhRedPanel(Screen):
 			
 			
 			
+class BhUniverseConfig(Screen, ConfigListScreen):
+	skin = """
+	<screen position="center,center" size="700,340" title="Parallel Universe Setup">
+		<widget name="lab1" position="10,30" halign="center" size="680,60" zPosition="1" font="Regular;24" valign="top" transparent="1" />
+		<widget name="config" position="10,100" size="680,110" scrollbarMode="showOnDemand" />
+		<ePixmap pixmap="skin_default/buttons/red.png" position="140,270" size="140,40" alphatest="on" />
+		<widget name="key_red" position="140,270" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="red" transparent="1" />
+		<ePixmap position="420,270" size="140,40" pixmap="skin_default/buttons/green.png" alphatest="on" zPosition="1" />
+		<widget name="key_green" position="420,270" zPosition="2" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="green" transparent="1" />
+	</screen>"""
+	
+	def __init__(self, session, universe):
+		Screen.__init__(self, session)
+		
+		self.list = []
+		ConfigListScreen.__init__(self, self.list)
+		self["key_red"] = Label(_("Cancel"))
+		self["key_green"] = Label(_("Save"))
+		msg = "Setup %s Universe" % (universe)
+		self["lab1"] = Label(msg)
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"red": self.keyCancel,
+			"back": self.keyCancel,
+			"green": self.keySave,
+
+		}, -2)
+		
+		self.universe = universe
+		self.updateList()
+	
+	def updateList(self):
+		self.universe_lock = NoSave(ConfigYesNo(default=False))
+		self.universe_pin = NoSave(ConfigInteger(limits = (0, 9999), default = 0))
+		self.universe_force_reboot = NoSave(ConfigYesNo(default=False))
+		
+		data = Bh_read_Universe_Cfg(self.universe)
+		if data[0] == "True":
+			self.universe_lock.value = True
+		self.universe_pin.value = int(data[1])
+		if data[2] == "True":
+			self.universe_force_reboot.value = True
+		
+		item = getConfigListEntry("Universe access protected", self.universe_lock)
+		self.list.append(item)
+		item = getConfigListEntry("Universe access pin", self.universe_pin)
+		self.list.append(item)
+		item = getConfigListEntry("Force reboot in Black Hole", self.universe_force_reboot)
+		self.list.append(item)	
+		
+		self["config"].list = self.list
+		self["config"].l.setList(self.list)
+
+	def whereIAm(self):
+		ret = "Black Hole"
+		all = ["Avalon", "Chaos", "Ghost"]
+		f = open("/proc/mounts",'r')
+		for line in f.readlines():
+			if line.find('/usr ') != -1:
+				for a in all:
+					if line.find(a) != -1:
+						ret = a
+				break
+		f.close()
+		return ret
+
+	def keySave(self):
+		fname = "/universe/.%s.cfg" % (self.universe)
+		out = open(fname, "w")
+		line = "universe_lock:" + str(self.universe_lock.value) + "\nuniverse_pin:" + str(self.universe_pin.value) + "\nuniverse_force_reboot:" + str(self.universe_force_reboot.value) + "\n"
+		out.write(line)
+		out.close()
+		
+		current_universe = self.whereIAm()
+		if current_universe == self.universe:
+			if self.universe_force_reboot.value == True:
+				if fileExists("/bin/bh_parallel_mount"):
+					os_remove("/bin/bh_parallel_mount")
+			else:
+				if not fileExists("/bin/bh_parallel_mount"):
+					path = "/universe/" + self.universe
+					path1 = path + "/etc"
+					path2 = path + "/usr"
+					out = open("/bin/bh_parallel_mount",'w')
+					line = "mount -o bind %s /etc > /tmp/jump.tmp\n" % (path1)
+					out.write(line)
+					line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr > /tmp/jump.tmp\n" % (path2)
+					out.write(line)
+					out.write("exit 0\n\n")
+					out.close()
+					system("chmod 0755 /bin/bh_parallel_mount")
+			
+		self.close()
+
+
+	def keyCancel(self):
+		self.close()
+
 class BhBigBang(Screen):
 	skin = """
 	<screen position="center,center" size="1270,720" title="Big Bang" backgroundColor="#000000"  flags="wfNoBorder" >
@@ -388,6 +539,7 @@ class BhBigBang(Screen):
 			self["lab2"].setText("0")
 			rc = system("chmod a+w /universe/.buildv")
 			rc = system(" rm -f /universe/.buildv")
+			rc = system(" rm -f /universe/.*.cfg")
 		else:
 			running = False
 			self.session.openWithCallback(self.bigEnd, MessageBox, "Your Universes have been re-inizialized. You can now start to rebuild your worlds.", MessageBox.TYPE_INFO)
@@ -402,7 +554,6 @@ class BhBigBang(Screen):
 		
 	def delTimer(self):
 		del self.activityTimer
-
 
 
 class BhRedp:
