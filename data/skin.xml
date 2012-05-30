@@ -1,6 +1,6 @@
 <skin>
  	<!--
-     ################### Skin_Default_Army_skin_default-HD_VU_BH1.7.4.x_v.1.1_BH ####################
+     ################### Skin_Default_Army_skin_default-HD_VU_BH1.7.5.x_v.1.0_BH ####################
 
     QUESTA SKIN E' PROTETTA DA COPYRIGHT E PUO' ESSERE USATA SOLO PER
 	LE IMMAGINI  BLACK HOLE. IL CODICE DELLA SKIN PUO' ESSERE MODIFICATO
@@ -13,10 +13,10 @@
 	SKIN CODE AND GRAPHICS TO MAKE A NEW SKIN OR TO ADAPT THIS SKIN FOR
 	DIFFERENT IMAGES.
 	
-	black hole version: 1.7.4
+	black hole version: 1.7.5
     skin author: Army
 
-    ###################  Skin_Default_Army_skin_default-HD_VU_BH1.7.4.x_v.1.1_BH  ####################
+    ###################  Skin_Default_Army_skin_default-HD_VU_BH1.7.5.x_v.1.0_BH  ####################
     -->
     <!-- LEGENDA -->
     <!-- AA100 COLORS-FONTS-SUBTITLES-BORDER -->
@@ -882,25 +882,25 @@
 		<!--AC119 OpenWebifConfig ( 2 )-->	
 		<screen name="OpenWebifConfig" position="0,0" size="1280,720" title=" BH OpenWebif Configuration" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
-	<eLabel text="BH OpenWebif Configuration " position="80,30" zPosition="2" size="800,44" font="RegularAA;40" halign="left" transparent="1" foregroundColor="#58bcff" backgroundColor="#0b67a2" />   
-			 <ePixmap position="870,304" zPosition="-1" size="300,14" pixmap="skin_default/chan_p1_bar.png" alphatest="on" />
-			<ePixmap position="920,460" zPosition="-1" size="220,180" pixmap="skin_default/menu/web.png" alphatest="on" />
-	       <widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
+	    <eLabel text="BH OpenWebif Configuration " position="80,30" zPosition="2" size="800,44" font="RegularAA;40" halign="left" transparent="1" foregroundColor="#58bcff" backgroundColor="#0b67a2" />   
+		<ePixmap position="870,304" zPosition="-1" size="300,14" pixmap="skin_default/chan_p1_bar.png" alphatest="on" />
+		<ePixmap position="920,460" zPosition="-1" size="220,180" pixmap="skin_default/menu/web.png" alphatest="on" />
+	    <widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
 		<widget name="lab1" position="55,110" halign="center" size="680,60" zPosition="1" font="Regular;24" valign="top" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="config" position="80,160" size="680,160" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection710x25-fs8.png" transparent="1"  /> 
 		<ePixmap position="90,650" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="510,650" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="90,658" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_green"  position="510,658" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
-			 <widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+		<widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 		<convert type="ServiceName">Name</convert>
 		</widget>
-			<widget source="session.Event_Now" render="Label" position="850,380" size="350,100" zPosition="2" halign="center" font="Regular;24" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1" >
+		<widget source="session.Event_Now" render="Label" position="850,380" size="350,100" zPosition="2" halign="center" font="Regular;24" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1" >
 			<convert type="EventName">Name</convert>
-					</widget>		
+		</widget>		
 		<widget source="session.Event_Now" render="Progress" pixmap="skin_default/chan_p_bar.png" size="300,14" position="870,304" zPosition="1"  backgroundColor="darkgrey" transparent="1">
 			<convert type="EventTime">Progress</convert>
-            </widget>
+        </widget>
 	</screen>
 		<!--AC120 FPGAUpgrade( 3 )-->	
 		<screen name="FPGAUpgrade" position="center,center" size="950,460" title="FPGA Upgrade" >
@@ -923,6 +923,152 @@
 			<widget name="config" zPosition="2" position="20,20" itemHeight="36" size="710,40" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection710x36-fs8.png" transparent="1"  />   
 			<widget source="status" render="Label" position="105,50" zPosition="1" size="540,75" font="Regular;20" halign="center" valign="center" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1" />
                 </screen>
+             <!--AC122 StreamTVList ) -->	 
+		<screen name="StreamTVList" position="0,0" size="1280,720" title="StreamTV List" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+		<eLabel text="BH StreamTV List" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		<ePixmap position="870,304" zPosition="-1" size="300,14" pixmap="skin_default/chan_p1_bar.png" alphatest="on" />
+		<ePixmap position="764,92" zPosition="10" size="26,483" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
+		<ePixmap position="920,460" zPosition="-1" size="220,180" pixmap="skin_default/menu/video_enh.png" alphatest="on" />	
+		 <widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
+		<widget name="streamlist" position="80,94" size="710,481"  zPosition="10" scrollbarMode="showOnDemand"  selectionPixmap="skin_default/icons/listselection710x36-fs8.png" transparent="1"  /> 
+		<widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+		<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="850,380" size="350,100" zPosition="2" halign="center" font="Regular;24" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1" >
+			<convert type="EventName">Name</convert>
+		</widget>		
+		<widget source="session.Event_Now" render="Progress" pixmap="skin_default/chan_p_bar.png" size="300,14" position="870,304" zPosition="1"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+        </widget>
+	        </screen>
+	       <!--AC123 StreamTVPlayer ) -->	
+		<screen name="StreamTVPlayer" position="0,520" size="1280,200" title="StreamTV Player"  flags="wfNoBorder" >
+	        <ePixmap position="0,0" zPosition="-1" size="1280,200" pixmap="skin_default/moviebar-fs8.png" />
+			<widget name="channel_icon" position="130,93" zPosition="10" size="35,35" backgroundColor="transpBlack" transparent="1"/> 
+			<widget name="channel_name" position="315,42" size="650,40" font="Regular;30" halign="center" valign="center" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/> 
+			<widget name="channel_uri" position="280,95" size="950,60" font="Regular;22" halign="left" valign="top" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/> 
+			<widget source="session.CurrentService" render="Label" position="914,92" size="300,40" font="Regular;28" halign="right" valign="center" foregroundColor="white" backgroundColor="transpBlack" transparent="1" >
+			<convert type="ServicePosition">Position</convert>
+			</widget>
+		</screen>
+	<!--AC124 ModemManager (4) ) -->	
+		<screen name="ModemManager" position="0,0" size="1280,720" title="3G Modem Manager" flags="wfNoBorder" >
+		    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+		    <eLabel text="BH 3G Modem Manager" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		    <ePixmap position="870,304" zPosition="-1" size="300,14" pixmap="skin_default/chan_p1_bar.png" alphatest="on" />
+		     <ePixmap position="920,460" zPosition="-1" size="220,180" pixmap="skin_default/menu/modem.png" alphatest="on" />	
+		    <widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
+			<widget name="menulist" position="80,110" size="300,150" backgroundColor="#000000" zPosition="10" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection300x25-fs8.png"  transparent="1" />
+			<widget name="usbinfo" position="400,110" size="350,150" font="Regular;18" halign="left" transparent="1" />
+			<widget name="statusTitle" position="80,280" size="600,120" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget name="statusInfo" position="80,305" size="600,120" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1" />
+		    <ePixmap pixmap="skin_default/buttons/red25.png" position="56,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/green25.png" position="362,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/yellow25.png" position="668,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/blue25.png" position="974,650" size="250,40" alphatest="on" />
+			<widget source="key_red" render="Label" position="56,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_green" render="Label" position="362,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_yellow" render="Label" position="668,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_blue" render="Label" position="974,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+				<widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+		<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="850,380" size="350,100" zPosition="2" halign="center" font="Regular;24" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1" >
+			<convert type="EventName">Name</convert>
+		</widget>		
+		<widget source="session.Event_Now" render="Progress" pixmap="skin_default/chan_p_bar.png" size="300,14" position="870,304" zPosition="1"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+        </widget>
+		</screen>
+   <!--AC125 ModemManual (4) ) -->	
+	<screen name="ModemManual" position="0,0" size="1280,720" title="3G Modem Manager Config" flags="wfNoBorder" >
+		    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+	        <eLabel text="BH 3G Modem Manager Config" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+	         <ePixmap position="870,304" zPosition="-1" size="300,14" pixmap="skin_default/chan_p1_bar.png" alphatest="on" />
+	          <ePixmap position="920,460" zPosition="-1" size="220,180" pixmap="skin_default/menu/modem.png" alphatest="on" />	
+		    <widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
+			<widget name="menulist" position="80,110" size="300,150" backgroundColor="black" zPosition="1" scrollbarMode="showOnDemand"  selectionPixmap="skin_default/icons/listselection300x25-fs8.png"  transparent="1" />
+			<widget name="apnInfo" position="400,110" size="350,150" font="Regular;22" halign="left" foregroundColor="white" backgroundColor="transpBlack" transparent="1"/> 
+	        <ePixmap pixmap="skin_default/buttons/red25.png" position="56,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/green25.png" position="362,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/yellow25.png" position="668,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/blue25.png" position="974,650" size="250,40" alphatest="on" />
+			<widget source="key_red" render="Label" position="56,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_green" render="Label" position="362,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_yellow" render="Label" position="668,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_blue" render="Label" position="974,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+				<widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+		<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="850,380" size="350,100" zPosition="2" halign="center" font="Regular;24" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1" >
+			<convert type="EventName">Name</convert>
+		</widget>		
+		<widget source="session.Event_Now" render="Progress" pixmap="skin_default/chan_p_bar.png" size="300,14" position="870,304" zPosition="1"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+        </widget>
+	</screen>
+	<!--AC126 EditModemManual (4/3) ) -->		
+		<screen name="EditModemManual" position="0,0" size="1280,720" title="3G Modem Manager Config Edit" flags="wfNoBorder" >
+		    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+		    <eLabel text="BH 3G Modem Manager Config Edit" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+		     <ePixmap position="870,304" zPosition="-1" size="300,14" pixmap="skin_default/chan_p1_bar.png" alphatest="on" />
+		     <ePixmap position="920,460" zPosition="-1" size="220,180" pixmap="skin_default/menu/modem.png" alphatest="on" />	
+		    <widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
+			<widget name="config" zPosition="2" position="80,110" size="710,300" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection710x25-fs8.png"  transparent="1" />
+			<ePixmap pixmap="skin_default/buttons/red25.png" position="56,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/green25.png" position="362,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/yellow25.png" position="668,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/blue25.png" position="974,650" size="250,40" alphatest="on" />
+			<widget source="key_red" render="Label" position="56,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_green" render="Label" position="362,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_blue" render="Label" position="974,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		    <widget name="VKeyIcon" pixmap="skin_default/buttons/key_text.png" position="600,450" zPosition="10" size="60,48" transparent="1" alphatest="on"/>
+		    <widget name="HelpWindow" position="130,450" zPosition="1" size="1,1" transparent="1" />
+		    	<widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+		<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="850,380" size="350,100" zPosition="2" halign="center" font="Regular;24" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1" >
+			<convert type="EventName">Name</convert>
+		</widget>		
+		<widget source="session.Event_Now" render="Progress" pixmap="skin_default/chan_p_bar.png" size="300,14" position="870,304" zPosition="1"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+        </widget>
+		</screen>
+	  <!--AC127 WirelessAccessPointl (4) ) -->	
+		<screen name="WirelessAccessPoint" position="0,0" size="1280,720" title="Wireless Access Point" flags="wfNoBorder" >
+		    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+	        <eLabel text="BH Wireless Access Point" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
+	        <ePixmap position="870,304" zPosition="-1" size="300,14" pixmap="skin_default/chan_p1_bar.png" alphatest="on" />
+		<ePixmap position="764,88" zPosition="10" size="26,272" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
+		<ePixmap position="920,460" zPosition="-1" size="220,180" pixmap="skin_default/menu/web.png" alphatest="on" />	
+		<widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
+		    <ePixmap pixmap="skin_default/buttons/red25.png" position="56,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/green25.png" position="362,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/yellow25.png" position="668,650" size="250,40" alphatest="on" />
+			<ePixmap pixmap="skin_default/buttons/blue25.png" position="974,650" size="250,40" alphatest="on" />
+			<widget source="key_red" render="Label" position="56,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_green" render="Label" position="362,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_yellow" render="Label" position="668,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_blue" render="Label" position="974,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget name="config" zPosition="2" position="80,90" size="710,270" scrollbarMode="showOnDemand" selectionPixmap="skin_default/icons/listselection710x25-fs8.png"  transparent="1" />
+			<widget source="current_settings" render="Label" position="140,440" size="570,24" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="IPAddress_text" render="Label" position="260,470" size="190,24" font="Regular;20" transparent="1" />
+			<widget source="Netmask_text" render="Label" position="260,495" size="190,24" font="Regular;20" transparent="1" />
+			<widget source="Gateway_text" render="Label" position="260,520" size="190,24" font="Regular;20" transparent="1" />
+			<widget source="IPAddress" render="Label" position="470,470" size="240,24" font="Regular;20" transparent="1" />
+			<widget source="Netmask" render="Label" position="470,495" size="240,24" font="Regular;20" transparent="1" />
+			<widget source="Gateway" render="Label" position="470,520" size="240,24" font="Regular;20" transparent="1" />
+				<widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+		<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="850,380" size="350,100" zPosition="2" halign="center" font="Regular;24" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1" >
+			<convert type="EventName">Name</convert>
+		</widget>		
+		<widget source="session.Event_Now" render="Progress" pixmap="skin_default/chan_p_bar.png" size="300,14" position="870,304" zPosition="1"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+        </widget>
+		</screen>         
 	<!--##### AD100 MAIN BLUE PANEL  #####-->	
 	<!-- AD101 Black Hole BluePanel ( 4S )-->
 	<screen name="DeliteBluePanel" position="0,0" size="1280,720"  title="BH Blue Panel" backgroundColor="transparent" flags="wfNoBorder">
@@ -937,7 +1083,7 @@
         <ePixmap position="80,212" zPosition="4" size="710,5" pixmap="skin_default/separator.png" alphatest="blend" transparent="1" />
 		<widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
         <eLabel text="BH Blue Panel" position="80,30" size="800,44" font="RegularAA;40" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
-         <widget name="list" position="80,90" size="710,38" zPosition="2" selectionPixmap="skin_default/icons/listselection450x38_S-fs8.png"  transparent="1"/> 
+        <widget name="list" position="80,90" size="710,38" zPosition="2" selectionPixmap="skin_default/icons/listselection450x38_S-fs8.png"  transparent="1"/> 
         <widget name="lab1" position="80,134" size="230,25" font="Regular;24" zPosition="2"  foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
         <widget name="lab2" position="532,138" size="190,24" font="Regular;24" halign="center" valign="center" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
     	<widget name="lab3" position="80,180" size="120,28" font="Regular;24" halign="left" zPosition="2" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
@@ -1711,6 +1857,33 @@
 		<widget source="session.Event_Now" render="Progress" pixmap="skin_default/chan_p_bar.png" size="300,14" position="870,304" zPosition="1"  backgroundColor="darkgrey" transparent="1">
 			<convert type="EventTime">Progress</convert>
             </widget>
+    </screen>
+       <!--AE126 BhMinidlna (2 )-->   
+    <screen name="BhMinidlna" position="0,0" size="1280,720" title="BH UPnP Minidlna Server Panel" flags="wfNoBorder">
+        <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+        <eLabel text="BH UPnP Minidlna Server Panel" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+        <ePixmap position="870,304" zPosition="-1" size="300,14" pixmap="skin_default/chan_p1_bar.png" alphatest="on" />
+		<ePixmap position="920,460" zPosition="-1" size="220,180" pixmap="skin_default/menu/upnp.png" alphatest="on" />	
+		<widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
+        <widget name="lab1" position="80,90" size="580,260" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="lab2" position="80,435" size="300,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="labstop" position="350,400" size="300,28" zPosition="2" font="Regular;22" valign="left" halign="left" foregroundColor="red" transparent="1" />
+		<widget name="labrun" position="350,470" size="300,28" zPosition="2" font="Regular;22" valign="left" halign="left" foregroundColor="green" transparent="1" />
+		<ePixmap position="290,400" zPosition="1" size="250,30" pixmap="skin_default/buttons/b_off.png" alphatest="on" />
+		<ePixmap position="290,470" zPosition="1" size="250,30" pixmap="skin_default/buttons/b_on.png" alphatest="on" />
+        <ePixmap pixmap="skin_default/buttons/red25.png" position="90,650" size="250,40" alphatest="on" />
+        <ePixmap pixmap="skin_default/buttons/green25.png" position="510,650" size="250,40" alphatest="on" />
+        <widget name="key_red" position="90,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="key_green" position="510,658" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        			<widget source="session.CurrentService" render="Label" position="815,330" size="420,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
+		<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="850,380" size="350,100" zPosition="2" halign="center" font="Regular;24" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1" >
+			<convert type="EventName">Name</convert>
+		</widget>		
+		<widget source="session.Event_Now" render="Progress" pixmap="skin_default/chan_p_bar.png" size="300,14" position="870,304" zPosition="1"  backgroundColor="darkgrey" transparent="1">
+			<convert type="EventTime">Progress</convert>
+        </widget>
     </screen>
 	<!--##### AF100 MENU MAIN MENU  #####-->
 	<!-- AF101 Main menu infobar -->
@@ -2531,7 +2704,7 @@
 	 <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
 	 <ePixmap position="328,624" zPosition="2" size="620,14" pixmap="skin_default/po_bar.png" alphatest="on" />
 	  <ePixmap position="80,540" zPosition="2" size="652,12" pixmap="skin_default/buttons4.png" alphatest="on" />
-	  <ePixmap position="76,592" zPosition="3" size="1140,78" pixmap="skin_default/r1130x78.png" alphatest="on" />
+	  <ePixmap position="76,592" zPosition="1" size="1140,78" pixmap="skin_default/r1130x78.png" alphatest="on" />
 		<ePixmap position="764,85" zPosition="6" size="26,425" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
 	<ePixmap position="970,460" zPosition="-1" size="120,120" pixmap="skin_default/menu/radio.png" alphatest="on" />
 		<widget source="session.VideoPicture" render="Pig" position=" 836,89" size="370,208" zPosition="3" backgroundColor="#ff000000"/>
