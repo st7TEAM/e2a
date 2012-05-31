@@ -321,10 +321,10 @@ class BhRedPanel(Screen):
 				cmd = "cp -f %s %s" % (pathspinorig, pathspindest)
 				system(cmd)
 # build bootup file
-		if self.destination == "Black Hole":
-			if fileExists("/bin/bh_parallel_mount"):
-				os_remove("/bin/bh_parallel_mount")
-		else:
+		if fileExists("/bin/bh_parallel_mount"):
+			os_remove("/bin/bh_parallel_mount")
+		
+		if self.destination != "Black Hole":
 			if self.destination_force_reboot == "False":
 				out = open("/bin/bh_parallel_mount",'w')
 				line = "mount -o bind %s /etc > /tmp/jump.tmp\n" % (path1)
