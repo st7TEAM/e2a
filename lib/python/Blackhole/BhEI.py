@@ -2,12 +2,12 @@ from Screens.Screen import Screen
 from Components.Label import Label
 from Components.ServiceEventTracker import ServiceEventTracker
 from os import system, rename as os_rename
-from enigma import eTimer, iServiceInformation, iPlayableService
+from enigma import eTimer, iServiceInformation, iPlayableService, eDVBFrontendParametersSatellite
 import re
 import socket
 
 from Tools.Directories import fileExists
-from Tools.Transponder import ConvertToHumanReadable
+#from Tools.Transponder import ConvertToHumanReadable
 
 class Nab_ExtraInfobar(Screen):
 	
@@ -128,13 +128,25 @@ class Nab_ExtraInfobar(Screen):
 			if frontendData is not None:
 				ttype = frontendData.get("tuner_type", "UNKNOWN")
 				if ttype == "DVB-S":
-					fedata = ConvertToHumanReadable(frontendData)
+#					fedata = ConvertToHumanReadable(frontendData)
 					sr = str(int(frontendData.get("symbol_rate", 0) / 1000))
 					freq = str(int(frontendData.get("frequency", 0) / 1000))
 					pol = {0: "H", 1: "V", 2: "CL", 3: "CR", 4: None}[frontendData.get("polarization", "HORIZONTAL")]
-					fec = fedata.get("fec_inner", "")					
+#					fec = fedata.get("fec_inner", "")
+					fec = {
+						eDVBFrontendParametersSatellite.FEC_None : "None",
+						eDVBFrontendParametersSatellite.FEC_Auto :"Auto",
+						eDVBFrontendParametersSatellite.FEC_1_2 : "1/2",
+						eDVBFrontendParametersSatellite.FEC_2_3 : "2/3",
+						eDVBFrontendParametersSatellite.FEC_3_4 : "3/4",
+						eDVBFrontendParametersSatellite.FEC_5_6 : "5/6",
+						eDVBFrontendParametersSatellite.FEC_7_8 : "7/8",
+						eDVBFrontendParametersSatellite.FEC_3_5 : "3/5",
+						eDVBFrontendParametersSatellite.FEC_4_5 : "4/5",
+						eDVBFrontendParametersSatellite.FEC_8_9 : "8/9",
+						eDVBFrontendParametersSatellite.FEC_9_10 : "9/10"}[frontendData.get("fec_inner")]
 #					fec = {0: "Auto", 1: "1/2", 2: "2/3", 3: "3/4", 4: "4/5", 5: "5/6", 6: "7/8", 7: "8/9", 8: "9/10", 9: "None"} [frontendData.get("fec_inner", "FEC_AUTO")]
-					self["nfreq_info"].setText( "Freq: " + freq + " " + pol + " Sr: " + sr + " " + fec )		
+					self["nfreq_info"].setText( "Freq: " + freq + " " + pol + " Sr: " + sr + " " + fec )
 		
 					orbital = int(frontendData["orbital_position"])
 					if orbital > 1800:
@@ -242,7 +254,7 @@ class Nab_ExtraInfobar(Screen):
 					elif x[0] == "using" or x[0] == "source":
 						if x1 == "emu":
 							self["button_emu"].show()
-						elif x1 == "sci":
+						elif x1 == "sci" or x1 == "smartreader+":
 							self["button_card"].show()
 						elif x1 == "fta":
 							self["button_fta"].show()
