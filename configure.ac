@@ -267,6 +267,8 @@ lib/python/Plugins/SystemPlugins/3GModemManager/meta/Makefile
 lib/python/Plugins/SystemPlugins/3GModemManager/script/Makefile
 lib/python/Plugins/SystemPlugins/WirelessAccessPoint/Makefile
 lib/python/Plugins/SystemPlugins/WirelessAccessPoint/meta/Makefile
+lib/python/Plugins/SystemPlugins/ZappingModeSelection/Makefile
+lib/python/Plugins/SystemPlugins/ZappingModeSelection/meta/Makefile
 lib/python/Tools/Makefile
 lib/python/Blackhole/Makefile
 lib/service/Makefile
