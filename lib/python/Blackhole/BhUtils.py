@@ -164,7 +164,7 @@ def BhU_check_proc_version():
 	
 	
 def BhU_checkSkinVersion(skinfile):
-	version = "1.7.4"
+	version = "1.7.6"
 	authors = ["Army", "Matrix10","capa"]
 	ret = "Sorry this skin is not compatible with the current Black Hole image version."
 	curversion = int(version.replace('.',''))
