@@ -1,6 +1,6 @@
 <skin>
  	<!--
-     ################### Army_skin_default-Transparency-HD_VU_BH1.7.5.x_v.1.0_BH ####################
+     ################### Army_skin_default-Transparency-HD_VU_BH1.7.6.x_v.1.0_BH ####################
 
     QUESTA SKIN E' PROTETTA DA COPYRIGHT E PUO' ESSERE USATA SOLO PER
 	LE IMMAGINI  BLACK HOLE. IL CODICE DELLA SKIN PUO' ESSERE MODIFICATO
@@ -16,7 +16,7 @@
 	black hole version: 1.7.6
     skin author: Army
 
-    ###################  Army_skin_default-Transparency-HD_VU_BH1.7.5.x_v.1.0_BH  ####################
+    ###################  Army_skin_default-Transparency-HD_VU_BH1.7.6.x_v.1.0_BH  ####################
     -->
     <!-- LEGENDA -->
     <!-- AA100 COLORS-FONTS-SUBTITLES-BORDER -->
@@ -837,6 +837,61 @@
 			<widget source="IPAddress" render="Label" position="470,470" size="240,24" font="Regular;20" transparent="1" />
 			<widget source="Netmask" render="Label" position="470,495" size="240,24" font="Regular;20" transparent="1" />
 			<widget source="Gateway" render="Label" position="470,520" size="240,24" font="Regular;20" transparent="1" />
+		</screen>
+	 <!--AC128 BhSetupGreen -->	
+	<screen name="BhSetupGreen" position="0,0" size="1280,720" title="BH Green Panel Setup" flags="wfNoBorder">
+		 <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+		 <eLabel text="BH Green Panel Setup" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+         <widget source="list" render="Listbox" position="60,120" size="758,300" scrollbarMode="showOnDemand" transparent="1" >
+            <convert type="TemplatedMultiContent">
+                    {"template": [
+                        MultiContentEntryText(pos = (50, 1), size = (320, 36), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                    MultiContentEntryPixmapAlphaTest(pos = (4, 2), size = (36, 36), png = 1),
+                        ],
+                        "fonts": [gFont("Regular", 22)],
+                        "itemHeight": 36
+                    }
+                    </convert>
+        </widget>
+    </screen>
+     <!--AC129 BhGreenPluginsSetup (2) -->
+	<screen name="BhGreenPluginsSetup" position="0,0" size="1280,720" title="BH Reorder Plugin List" flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+		<ePixmap position="796,118" zPosition="2" size="22,452" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
+		<eLabel text="BH Reorder Plugin List" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="config" position="60,120" size="758,450" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap pixmap="skin_default/buttons/red25.png" position="90,650" size="250,40" alphatest="on"/>
+		<ePixmap pixmap="skin_default/buttons/green25.png" position="510,650" size="250,40" alphatest="on"/>
+		<widget name="key_red" position="90,658" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="key_green" position="510,658" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
+		</screen>
+		 <!--AC130 LiveStreamingLinksHeader -->
+	<screen name="LiveStreamingLinksHeader" position="0,0" size="1280,720" title="" flags="wfNoBorder">
+	    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+	    <eLabel text="BH Live Streaming Links Header" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="menu" position="60,120" size="760,190" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+     <!--AC131 LiveStreamingLinks (2) -->
+	<screen name="LiveStreamingLinks" position="0,0" size="1280,720" title="" flags="wfNoBorder">
+	    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+	    <ePixmap position="798,118" zPosition="2" size="22,282" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
+	    <eLabel text="BH Live Streaming Links" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="menu" position="60,120" size="760,280" scrollbarMode="showOnDemand" transparent="1" />
+		<widget source="statusbar" render="Label" position="200,520" zPosition="10" size="480,40" halign="center" valign="center" font="Regular;22" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+		<ePixmap pixmap="skin_default/buttons/red25.png" position="90,650" size="250,40" alphatest="blend" />
+		<ePixmap pixmap="skin_default/buttons/green25.png" position="510,650" size="250,40" alphatest="blend" />
+		<widget source="key_red" render="Label" position="90,658" zPosition="1" size="250,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+		<widget source="key_green" render="Label" position="510,658" zPosition="1" size="250,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+	</screen>
+	 <!--AC132 ZappingModeSelection (2) -->
+		<screen name="ZappingModeSelection" position="0,0" size="1280,720" title="Zapping Mode Selection" flags="wfNoBorder">
+		    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+		    <eLabel text="BH Zapping Mode Selection" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+			<ePixmap pixmap="skin_default/buttons/red25.png" position="90,650" size="250,40" alphatest="blend" />
+			<ePixmap pixmap="skin_default/buttons/green25.png" position="510,650" size="250,40" alphatest="blend" />
+			<widget source="key_red" render="Label" position="90,658" zPosition="1" size="250,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget source="key_green" render="Label" position="510,658" zPosition="1" size="250,40" font="Regular;20" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
+			<widget name="config" zPosition="2" position="60,120" size="760,200" scrollbarMode="showOnDemand" transparent="1" />
 		</screen>
 	<!--##### AD100 MAIN BLUE PANEL  #####-->	
 	<!-- AD101 Black Hole BluePanel ( 4S )-->
