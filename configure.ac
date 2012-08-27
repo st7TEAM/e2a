@@ -197,6 +197,8 @@ lib/python/Plugins/Extensions/DLNAServer/Makefile
 lib/python/Plugins/Extensions/DLNAServer/meta/Makefile
 lib/python/Plugins/Extensions/DLNABrowser/Makefile
 lib/python/Plugins/Extensions/DLNABrowser/meta/Makefile
+lib/python/Plugins/Extensions/HbbTV/Makefile
+lib/python/Plugins/Extensions/HbbTV/meta/Makefile
 lib/python/Plugins/SystemPlugins/CleanupWizard/Makefile
 lib/python/Plugins/SystemPlugins/CleanupWizard/meta/Makefile
 lib/python/Plugins/SystemPlugins/CommonInterfaceAssignment/Makefile
@@ -269,6 +271,9 @@ lib/python/Plugins/SystemPlugins/WirelessAccessPoint/Makefile
 lib/python/Plugins/SystemPlugins/WirelessAccessPoint/meta/Makefile
 lib/python/Plugins/SystemPlugins/ZappingModeSelection/Makefile
 lib/python/Plugins/SystemPlugins/ZappingModeSelection/meta/Makefile
+lib/python/Plugins/SystemPlugins/DeviceManager/Makefile
+lib/python/Plugins/SystemPlugins/DeviceManager/meta/Makefile
+lib/python/Plugins/SystemPlugins/DeviceManager/locale/Makefile
 lib/python/Tools/Makefile
 lib/python/Blackhole/Makefile
 lib/service/Makefile

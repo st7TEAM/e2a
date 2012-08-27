@@ -11,7 +11,7 @@ from enigma import iPlayableService
 profile("LOAD:InfoBarGenerics")
 from Screens.InfoBarGenerics import InfoBarShowHide, \
 	InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarRdsDecoder, \
-	InfoBarEPG, InfoBarSeek, InfoBarInstantRecord, \
+	InfoBarEPG, InfoBarSeek, InfoBarInstantRecord, InfoBarRedButton, \
 	InfoBarAudioSelection, InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarUnhandledKey, \
 	InfoBarSubserviceSelection, InfoBarShowMovies, InfoBarTimeshift,  \
 	InfoBarServiceNotifications, InfoBarPVRState, InfoBarCueSheetSupport, InfoBarSimpleEventView, \
@@ -33,7 +33,7 @@ from Blackhole.BhRed import BhRedp
 
 class InfoBar(InfoBarBase, InfoBarShowHide,
 	InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp, BhRedp,
-	InfoBarInstantRecord, InfoBarAudioSelection, 
+	InfoBarInstantRecord, InfoBarAudioSelection, InfoBarRedButton,
 	HelpableScreen, InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarUnhandledKey,
 	InfoBarSubserviceSelection, InfoBarTimeshift, InfoBarSeek,
 	InfoBarSummarySupport, InfoBarTimeshiftState, InfoBarTeletextPlugin, InfoBarExtensions,
@@ -60,7 +60,7 @@ class InfoBar(InfoBarBase, InfoBarShowHide,
 		for x in HelpableScreen, \
 				InfoBarBase, InfoBarShowHide, \
 				InfoBarNumberZap, InfoBarChannelSelection, InfoBarMenu, InfoBarEPG, InfoBarRdsDecoder, DeliteBp, DeliteGp, BhRedp, \
-				InfoBarInstantRecord, InfoBarAudioSelection, InfoBarUnhandledKey, \
+				InfoBarInstantRecord, InfoBarAudioSelection, InfoBarRedButton, InfoBarUnhandledKey, \
 				InfoBarAdditionalInfo, InfoBarNotifications, InfoBarDish, InfoBarSubserviceSelection, \
 				InfoBarTimeshift, InfoBarSeek, InfoBarSummarySupport, InfoBarTimeshiftState, \
 				InfoBarTeletextPlugin, InfoBarExtensions, InfoBarPiP, InfoBarSubtitleSupport, InfoBarJobman, \
