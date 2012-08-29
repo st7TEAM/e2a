@@ -1,6 +1,6 @@
 <skin>
  	<!--
-     ################### Army_skin_default-Transparency-HD_VU_BH1.7.6.x_v.1.0_BH ####################
+     ################### Army_skin_default-Transparency-HD_VU_BH1.7.7.x_v.1.0_BH ####################
 
     QUESTA SKIN E' PROTETTA DA COPYRIGHT E PUO' ESSERE USATA SOLO PER
 	LE IMMAGINI  BLACK HOLE. IL CODICE DELLA SKIN PUO' ESSERE MODIFICATO
@@ -13,10 +13,10 @@
 	SKIN CODE AND GRAPHICS TO MAKE A NEW SKIN OR TO ADAPT THIS SKIN FOR
 	DIFFERENT IMAGES.
 	
-	black hole version: 1.7.6
+	black hole version: 1.7.7
     skin author: Army
 
-    ###################  Army_skin_default-Transparency-HD_VU_BH1.7.6.x_v.1.0_BH  ####################
+    ###################  Army_skin_default-Transparency-HD_VU_BH1.7.7.x_v.1.0_BH  ####################
     -->
     <!-- LEGENDA -->
     <!-- AA100 COLORS-FONTS-SUBTITLES-BORDER -->
@@ -160,12 +160,14 @@
         <eLabel text="x" zPosition="4" position="874,188" size="15,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999" />
         <widget source="session.CurrentService" render="Label" zPosition="4" position="890,188" size="55,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
             <convert type="ServiceInfo">VideoHeight</convert>	
-		</widget>	
-			<widget source="session.CurrentService" render="ChannelNumber" position="252,76" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
+		</widget>
+			
+			<widget source="session.CurrentService" render="ChannelNumber" position="280,76" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
 			<widget name="Universe" position="920,86" size="300,28" halign="center" zPosition="5" font="OLED;18" foregroundColor="#f23d21"  backgroundColor="background" transparent="1" />			
 	    <widget source="session.CurrentService" render="Label" position="375,76" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 		<convert type="ServiceName">Name</convert>
 		</widget>
+		
 		<widget source="session.CurrentService" render="Label" position="70,188" 	size="250,22" zPosition="2"	font="Regular;18" backgroundColor="transpBlack" halign="left" foregroundColor="white" transparent="1" >
 			<convert type="ServiceName">Provider</convert>
 		</widget>
@@ -230,6 +232,13 @@
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+	    <ePixmap position="70,76" zPosition="1" size="62,22" pixmap="skin_default/icons/icon_hbbtv_off.png" alphatest="blend" transparent="1" />
+        <widget source="HbbtvApplication" render="Pixmap" pixmap="skin_default/icons/icon_hbbtv_on.png" position="70,76" zPosition="2" size="62,22" alphatest="on">
+            <convert type="ConditionalShowHide" />
+        </widget>
+        <widget source="HbbtvApplication" render="Label" position="148,78" zPosition="2" size="130,24" font="Regular;20" foregroundColor="white" backgroundColor="transpBlack" transparent="1">
+            <convert type="HbbtvApplicationInfo">Name</convert>
+        </widget>
 		</screen>
 	<!-- AB102 Black Hole Extra Infobar  -->
       <screen name="Nab_ExtraInfobar" flags="wfNoBorder" position="0,0" size="1280,720" title="Black Hole" backgroundColor="transparent"  >
