@@ -1,5 +1,7 @@
 from Screens.Screen import Screen
 
+from Screens.ChoiceBox import ChoiceBox
+from Screens.InputBox import InputBox
 from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop
 from Components.ActionMap import ActionMap
@@ -9,9 +11,15 @@ from Components.ConfigList import ConfigListScreen
 from Components.config import getConfigListEntry, config, ConfigYesNo, ConfigText, ConfigSelection, ConfigClock, NoSave, configfile
 from Components.Sources.List import List
 from Tools.LoadPixmap import LoadPixmap
-from Tools.Directories import fileExists
-from os import system, remove as os_remove
+from Tools.Directories import fileExists, pathExists, createDir, resolveFilename, SCOPE_SKIN_IMAGE
+from os import system, listdir, remove as os_remove, rename as os_rename, popen, getcwd, chdir
 from BhUtils import DeliteGetSkinPath, nab_Detect_Machine, BhU_get_Version
+#from BhInadyn import DeliteInadyn
+#from BhSwap import DeliteSwap
+# from BhHdd import DeliteHdd
+#from BhNet import DeliteOpenvpn, DeliteSamba, DeliteTelnet, DeliteFtp, BhDjmount, BhMediatomb, BhTunerServer, BhNetBrowser, BhNfsServer
+#from BhNfs import DeliteNfs
+#from BhMountWiz import DeliteMountWiz
 
 from enigma import eTimer
 from Screens.Console import Console
@@ -60,11 +68,9 @@ class DeliteSettings(Screen):
 		elif self.sel == 1:
 			self.session.open(DeliteSetupOSD2)
 		elif self.sel == 2:
-#			self.session.open(DeliteDevicesPanel)
-			from Plugins.SystemPlugins.DeviceManager.plugin import DeviceManager
-			self.session.open(DeviceManager)
-#		elif self.sel == 3:
-#			self.session.open(Bp_UsbFormat)
+			self.session.open(DeliteDevicesPanel)
+		elif self.sel == 3:
+			self.session.open(Bp_UsbFormat)
 		elif self.sel == 4:
 			self.session.open(DeliteKernelModules)
 		elif self.sel == 5:
@@ -140,12 +146,12 @@ class DeliteSettings(Screen):
 		res = (name, png, idx)
 		self.list.append(res)
 		
-#		mypixmap = mypath + "icons/swapsettings.png"
-#		png = LoadPixmap(mypixmap)
-#		name = "Usb Format Wizard"
-#		idx = 3
-#		res = (name, png, idx)
-#		self.list.append(res)
+		mypixmap = mypath + "icons/swapsettings.png"
+		png = LoadPixmap(mypixmap)
+		name = "Usb Format Wizard"
+		idx = 3
+		res = (name, png, idx)
+		self.list.append(res)
 				
 		mypixmap = mypath + "icons/infopanel_kmod.png"
 		png = LoadPixmap(mypixmap)
@@ -628,7 +634,503 @@ class DeliteSetupCronConf(Screen, ConfigListScreen):
 		self.close()
 		
 		
+class DeliteDevicesPanel(Screen):
+	skin = """
+	<screen position="240,100" size="800,560" title="Black Hole Devices Manager">
+		<widget source="list" render="Listbox" position="10,0" size="780,510" scrollbarMode="showOnDemand" >
+			<convert type="TemplatedMultiContent">
+                	{"template": [
+              		 MultiContentEntryText(pos = (90, 0), size = (690, 30), font=0, text = 0),
+               		 MultiContentEntryText(pos = (110, 30), size = (670, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+               		 MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (80, 80), png = 2),
+                	],
+                	"fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+                	"itemHeight": 85
+                	}
+            		</convert>
+		</widget>
+		<widget name="lab1" zPosition="2" position="50,40" size="700,40" font="Regular;24" halign="center" transparent="1"/>
+    		<ePixmap pixmap="skin_default/buttons/red.png" position="200,524" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="440,524" size="140,40" alphatest="on" />
+		<widget name="key_red" position="200,520" zPosition="1" size="200,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+		<widget name="key_yellow" position="440,520" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1" />
+    	</screen>"""
+	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		self["key_red"] = Label(_("Mountpoints"))
+		self["key_yellow"] = Label(_("Cancel"))
+		self["lab1"] = Label("Wait please while scanning your devices...")
+		
+		self.list = []
+		self["list"] = List(self.list)
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"back": self.close,
+			"red": self.mountUmount,
+			"yellow": self.close
+		})
+		
+		self.activityTimer = eTimer()
+		self.activityTimer.timeout.get().append(self.updateList2)
+		
+		if not pathExists("/universe"):
+			createDir("/universe")
+		
+		self.updateList()
+	
+	def updateList(self):
+		self.activityTimer.start(10)
+		
+	def updateList2(self):
+		self.activityTimer.stop()
+		self.list = [ ]
+		self.conflist = [ ]
+		system ("ls -l /dev/disk/by-uuid/ > /tmp/ninfo2")
+		f = open("/tmp/ninfo2",'r')
+		for line in f.readlines():
+			parts = line.strip().split()
+			uuid = parts[8]
+			device = parts[10]
+			partition = device.strip().replace('../../', '')
+			if len(partition) != 4:
+				continue
+			device = partition[0:-1]
+			dtype = self.get_Dtype(device)
+			name = dtype[0]
+			model = self.get_Dmodel(device)
+			png = LoadPixmap(dtype[1])
+			name = name + " " + model
+			cap = self.get_Dsize(device, partition)
+			des = "Size: " + cap
+			mountpoint = self.get_Dpoint(uuid)
+			des += "\tMount: " + mountpoint + "\nDevice: " + "/dev/" + partition
+			res = (name, des, png)
+			self.list.append(res)
+			description = "%s  %s  %s" % (name, cap, partition)
+			self.conflist.append((description, uuid))
+			
+		f.close()
+	
+		self["list"].list = self.list
+		self["lab1"].hide()
+		
+	def get_Dtype(self, device):
+		mypath = DeliteGetSkinPath()
+		name = "USB"
+		pix =  mypath + "icons/dev_usb.png"
+		filename = "/sys/block/%s/removable" % (device)
+		if fileExists(filename):
+			if file(filename).read().strip() == "0":
+				name = "HARD DISK"
+				pix =  mypath + "icons/dev_hdd.png"
+		return name, pix	
+	
+	def get_Dsize(self, device, partition):
+		size = "0"
+		filename = "/sys/block/%s/%s/size" % (device, partition)
+		if fileExists(filename):
+			size = int(file(filename).read().strip())
+			cap = size / 1000 * 512 / 1000
+			size = "%d.%03d GB" % (cap/1000, cap%1000)
+		return size
+	
+	def get_Dmodel(self, device):
+		model = "Generic"
+		filename = "/sys/block/%s/device/vendor" % (device)
+		if fileExists(filename):
+			vendor = file(filename).read().strip()
+			filename = "/sys/block/%s/device/model" % (device)
+			mod = file(filename).read().strip()
+			model = "%s %s" % (vendor, mod)
+		return model
+		
+	def get_Dpoint(self, uid):
+		point = "NOT MAPPED"
+		f = open("/proc/mounts",'r')
+		for line in f.readlines():
+			if line.find(uid) != -1:
+				parts = line.strip().split()
+				point = parts[1]
+				break
+		f.close()
+		return point	
+		
+	def mountUmount(self):
+		self.session.openWithCallback(self.updateList, DeliteSetupDevicePanelConf, self.conflist)
+					
 
+
+class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
+	skin = """
+	<screen position="center,center" size="902,340" title="Black Hole Devices Mountpoints Setup">
+		<widget name="config" position="30,10" size="840,275" scrollbarMode="showOnDemand"/>
+		<widget name="Linconn" position="30,285" size="840,20" font="Regular;18" halign="center" valign="center" backgroundColor="#9f1313"/>
+		<ePixmap pixmap="skin_default/buttons/red.png" position="200,300" size="140,40" alphatest="on"/>
+		<ePixmap pixmap="skin_default/buttons/green.png" position="550,300" size="140,40" alphatest="on"/>
+		<widget name="key_red" position="200,300" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="key_green" position="550,300" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
+	</screen>"""
+
+
+	def __init__(self, session, devices):
+		Screen.__init__(self, session)
+		
+		self.list = []
+		ConfigListScreen.__init__(self, self.list)
+		self["key_red"] = Label(_("Save"))
+		self["key_green"] = Label(_("Cancel"))
+		self["Linconn"] = Label("Wait please while scanning your box devices...")
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"red": self.saveMypoints,
+			"green": self.close,
+			"back": self.close
+
+		})
+		self.devices = devices	
+		self.updateList()
+	
+	
+	def updateList(self):
+		self.list = []
+		for device in self.devices:
+			uid = device[1]
+			d1 = "Not mapped"
+			checkmb = False
+			f = open("/proc/mounts",'r')
+			for line in f.readlines():
+				if line.find(uid) != -1:
+					parts = line.strip().split()
+					d1 = parts[1]
+					break
+				if line.find("/media/meoboot") != -1:
+					d1 = "/media/meoboot"
+					break
+			f.close()
+			item = NoSave(ConfigSelection(default = "Not mapped", choices = self.get_Choices()))
+			if d1 == "/media/meoboot":
+				item = NoSave(ConfigSelection(default = "/media/meoboot", choices = [("/media/meoboot", "/media/meoboot")]))
+			item.value = d1.strip()
+			text =  device[0]
+			res = getConfigListEntry(text, item, uid)
+			self.list.append(res)
+		
+		self["config"].list = self.list
+		self["config"].l.setList(self.list)
+		self["Linconn"].hide()
+	
+	
+			
+	def get_Choices(self):
+		choices = [("Not mapped", "Not mapped")]
+		folders = listdir("/media")
+		for f in folders:
+			if f == "net" or f == "ram" or f == "realroot" or f == "union":
+				continue
+			c = "/media/" + f
+			choices.append((c,c))
+		
+		choices.append(("/universe", "/universe"))
+		return choices		
+			
+	def saveMypoints(self):
+		f = open("/etc/fstab",'r')
+		out = open("/etc/fstab.tmp", "w")
+		for line in f.readlines():
+			if line.find("by-uuid") != -1 or len(line) < 6:
+				continue
+			if line.find("/dev/sda1") != -1:
+				continue
+			out.write(line)
+		for x in self["config"].list:
+			if x[1].value == "Not mapped" or x[1].value == "/media/meoboot":
+				continue
+			line = "/dev/disk/by-uuid/%s    %s    auto   defaults    0  0\n" % (x[2], x[1].value)
+			out.write(line)
+
+		out.write("\n")
+		f.close()
+		out.close()
+		os_rename("/etc/fstab.tmp", "/etc/fstab")
+		message = "Devices changes need a system restart to take effects.\nRestart your Box now?"
+		self.session.openWithCallback(self.restBo, MessageBox, message, MessageBox.TYPE_YESNO)
+
+			
+	def restBo(self, answer):
+		if answer is True:
+			self.session.open(TryQuitMainloop, 2)
+		else:
+			self.close()
+
+
+class Bp_UsbFormat(Screen):
+	skin = """
+	<screen position="center,center" size="580,350" title="Black Hole Usb Format Wizard">
+		<widget name="lab1" position="10,10" size="560,280" font="Regular;20" valign="top" transparent="1"/>
+		<ePixmap pixmap="skin_default/buttons/red.png" position="100,300" size="140,40" alphatest="on" />
+		<ePixmap pixmap="skin_default/buttons/green.png" position="340,300" size="140,40" alphatest="on" />
+		<widget name="key_red" position="100,300" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+		<widget name="key_green" position="340,300" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+	</screen>"""
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		msg = """This wizard will help you to format Usb mass storages for Linux.
+Please be sure that your usb drive is NOT CONNECTED to your Vu+ box before to continue.
+If your usb drive is connected and mounted you have to poweroff your box, remove the usb device and reboot.
+Push red button to continue when you are ready and your usb is disconnected.
+"""
+		self["key_red"] = Label(_("Continue ->"))
+		self["key_green"] = Label(_("Cancel"))
+		self["lab1"] = Label(msg)
+
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"back": self.checkClose,
+			"red": self.step_Bump,
+			"green": self.checkClose
+		})
+		self.step = 1
+		self.devices = []
+		self.device = None
+		self.totalpartitions = 1
+		self.totalsize = self.p1size = self.p2size = self.p3size = self.p4size = "0"
+		self.canclose = True
+	
+	
+	def stepOne(self):
+		msg = """Connect your usb storage to your Vu+ box
+Press red button to continue when ready.
+
+Warning: If your usb is already connected 
+to the box you have to unplug it, click 
+the green button and restart the wizard.
+"""
+		rc = system("/etc/init.d/autofs stop")
+		self.devices = self.get_Devicelist()
+		self["lab1"].setText(msg)
+		self.step = 2
+		
+	def stepTwo(self):
+		msg = """The wizard will now try to identify your connected usb storage.
+Press red button to continue.
+"""				
+		self["lab1"].setText(msg)
+		self.step = 3
+	
+	def stepThree(self):
+		newdevices = self.get_Devicelist()
+		for d in newdevices:
+			if d not in self.devices:
+				self.device = d
+		if self.device is None:
+			self.wizClose("Sorry, no new usb storage detected.\nBe sure to follow wizard instructions.")
+		else:
+			msg = self.get_Deviceinfo(self.device)
+			self["lab1"].setText(msg)
+			self.step = 4
+			
+	def stepFour(self):
+		myoptions = [['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']]
+		self.session.openWithCallback(self.partSize1,ChoiceBox, title="Select number of partitions:", list=myoptions)
+		
+	def partSize1(self, total):
+		self.totalpartitions = int(total[1])
+		if self.totalpartitions > 1:
+			self.session.openWithCallback(self.partSize2,InputBox, title="Enter the size in Megabyte of the first partition:", windowTitle = "Partition size", text="1", useableChars = "1234567890" )
+		else:
+			self.writePartFile()
+			
+	def partSize2(self, psize):
+		if psize is None:
+			psize = "100"
+		self.p1size = psize
+		if self.totalpartitions > 2:
+			self.session.openWithCallback(self.partSize3,InputBox, title="Enter the size in Megabyte of the second partition:", windowTitle = "Partition size", text="1", useableChars = "1234567890" )
+		else:
+			self.writePartFile()
+			
+	def partSize3(self, psize):
+		if psize is None:
+			psize = "100"
+		self.p2size = psize
+		if self.totalpartitions > 3:
+			self.session.openWithCallback(self.partSize4,InputBox, title="Enter the size in Megabyte of the third partition:", windowTitle = "Partition size", text="1", useableChars = "1234567890" )
+		else:
+			self.writePartFile()
+		
+	def partSize4(self, psize):
+		if psize is None:
+			psize = "100"
+		self.p3size = psize
+		self.writePartFile()
+		
+	def writePartFile(self):
+		p1 = p2 = p3 = p4 = "0"
+		device = "/dev/" + self.device
+		out0 = "#!/bin/sh\n\nsfdisk %s -uM << EOF\n" % (device)
+		
+		msg = "Total Megabyte Available: \t" + str(self.totalsize)
+		msg += "\nPartition scheme:\n"
+		p1 = self.p1size
+		out1 = ",%s\n" % (self.p1size)
+		if self.totalpartitions == 1:
+			p1 = str(self.totalsize)
+			out1 = ";\n"
+		msg += "%s1 \t size:%s M\n" % (device, p1)
+		if self.totalpartitions > 1:
+			p2 = self.p2size
+			out2 = ",%s\n" % (self.p2size)
+			if self.totalpartitions == 2:
+				p2 = self.totalsize - int(self.p1size)
+				out2 = ";\n"
+			msg += "%s2 \t size:%s M\n" % (device, p2)
+		if self.totalpartitions > 2:
+			p3 = self.p3size
+			out3 = ",%s\n" % (self.p3size)
+			if self.totalpartitions == 3:
+				p3 = self.totalsize - (int(self.p1size) + int(self.p2size))
+				out3 = ";\n"
+			msg += "%s3 \t size:%s M\n" % (device, p3)
+		if self.totalpartitions > 3:
+			p4 = self.totalsize - (int(self.p1size) + int(self.p2size) + int(self.p3size))
+			out4 = ";\n"
+			msg += "%s4 \t size:%s M\n" % (device, p4)
+		msg +="\nWarning: all the data will be lost.\nAre you sure you want to format this device?\n"
+		
+		
+		out = open("/tmp/sfdisk.tmp",'w')
+		out.write(out0)
+		out.write(out1)
+		if self.totalpartitions > 1:
+			out.write(out2)
+		if self.totalpartitions > 2:
+			out.write(out3)
+		if self.totalpartitions > 3:
+			out.write(out4)
+		out.write("EOF\n")
+		out.close()
+		system("chmod 0755 /tmp/sfdisk.tmp")
+		self["lab1"].setText(msg)
+		
+		if int(self.p1size) + int(self.p2size) + int(self.p3size) + int(self.p4size) > self.totalsize:
+			self.wizClose("Sorry, your partitions sizes are bigger than total device size.")
+		else:
+			self.step = 5
+
+	def do_Part(self):
+		self.canclose = False
+		self["key_green"].hide()
+		
+		device = "/dev/%s" % (self.device)
+		cmd = "echo -e 'Partitioning: %s \n\n'" % (device)
+		cmd2 = "/tmp/sfdisk.tmp"
+		self.session.open(Console, title="Partitioning...", cmdlist=[cmd, cmd2], finishedCallback = self.partDone)
+		
+	def partDone(self):
+		msg = "The device has been partitioned.\nPartitions will be now formatted."
+		self["lab1"].setText(msg)
+		self.step = 6
+		
+	def choiceBoxFstype(self):
+		menu = []
+		menu.append((_("ext2 - recommended for USB flash memory"), "ext2"))
+		menu.append((_("ext3 - recommended for harddisks"), "ext3"))
+		menu.append((_("ext4 - experimental"), "ext4"))
+		menu.append((_("vfat - for USB flash memory"), "vfat"))
+		self.session.openWithCallback(self.choiceBoxFstypeCB, ChoiceBox, title=_("Choice filesystem."), list=menu)
+
+	def choiceBoxFstypeCB(self, choice):
+		if choice is None:
+			return
+		else:
+			newfstype = choice[1]
+			if newfstype == "ext4":
+				self.formatcmd = "/sbin/mkfs.ext4 -F -O extent,flex_bg,large_file,uninit_bg -m1"
+			elif newfstype == "ext3":
+				self.formatcmd = "/sbin/mkfs.ext3 -F -m0"
+			elif newfstype == "ext2":
+				self.formatcmd = "/sbin/mkfs.ext2 -F -m0"
+			elif newfstype == "vfat":
+				self.formatcmd = "/usr/sbin/mkfs.vfat -I"
+				
+			self.do_Format()
+		
+	def do_Format(self):
+		os_remove("/tmp/sfdisk.tmp")
+		cmds = ["sleep 1"]
+		device = "/dev/%s1" % (self.device)
+		cmd = "%s %s" % (self.formatcmd, device)
+		cmds.append(cmd)
+		if self.totalpartitions > 1:
+			device = "/dev/%s2" % (self.device)
+			cmd = "%s %s" % (self.formatcmd, device)
+			cmds.append(cmd)
+		if self.totalpartitions > 2:
+			device = "/dev/%s3" % (self.device)
+			cmd = "%s %s" % (self.formatcmd, device)
+			cmds.append(cmd)
+		if self.totalpartitions > 3:
+			device = "/dev/%s4" % (self.device)
+			cmd = "%s %s" % (self.formatcmd, device)
+			cmds.append(cmd)
+		
+		self.session.open(Console, title="Formatting...", cmdlist=cmds, finishedCallback = self.succesS)
+	
+	def step_Bump(self):
+		if self.step == 1:
+			self.stepOne()
+		elif self.step == 2:
+			self.stepTwo()
+		elif self.step == 3:
+			self.stepThree()
+		elif self.step == 4:
+			self.stepFour()
+		elif self.step == 5:
+			self.do_Part()
+		elif self.step == 6:
+			self.choiceBoxFstype()
+			
+	def get_Devicelist(self):
+		devices = []
+		folder = listdir("/sys/block")
+		for f in folder:
+			if f.find('sd') != -1:
+				devices.append(f)
+		return devices
+			
+	def get_Deviceinfo(self, device):
+		info = vendor = model = size = ""
+		filename = "/sys/block/%s/device/vendor" % (device)
+		if fileExists(filename):
+			vendor = file(filename).read().strip()
+			filename = "/sys/block/%s/device/model" % (device)
+			model = file(filename).read().strip()
+			filename = "/sys/block/%s/size" % (device)
+			size = int(file(filename).read().strip())
+			cap = size / 1000 * 512 / 1024
+			size = "%d.%03d GB" % (cap/1000, cap%1000)
+			self.totalsize = cap
+		info = "Model: %s %s\nSize: %s\nDevice: /dev/%s" % (vendor, model, size, device)
+		return info
+	
+	
+	def checkClose(self):
+		if self.canclose == True:
+			self.close()
+			
+	def wizClose(self, msg):
+		self.session.openWithCallback(self.close, MessageBox, msg, MessageBox.TYPE_INFO)
+
+	def succesS(self):
+		mybox = self.session.openWithCallback(self.hreBoot, MessageBox, "The Box will be now restarted to generate new device UID.\nDon't forget to remap your device after the reboot.\nPress ok to continue", MessageBox.TYPE_INFO)	
+			
+	def hreBoot(self, answer):
+		self.session.open(TryQuitMainloop, 2)
 
 
 

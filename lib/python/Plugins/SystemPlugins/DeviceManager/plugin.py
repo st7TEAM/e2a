@@ -291,10 +291,18 @@ class DeviceManager(Screen):
 		defaultMountPointEntry = (self.icon_button_green, _("Set up Default Mount Point"), _("Mount Point : %s ->%s")%(currentMountPoint, defaultMountPoint), "default", defaultMountPoint, self.divpng)
 		autoMountPointEntry = (self.icon_button_green, _("Automatically set up a Mount Point"), _("Mount Point : %s -> %s")%(currentMountPoint, autoMountPoint), "auto", autoMountPoint, self.divpng)
 		manuallyMountPointEntry = (self.icon_button_green, _("User manually Set up a Mount Point"), _("Mount Point : click ok button on here."), "manual", "", self.divpng)
+#BlackHole
+		if not pathExists("/universe"):
+			makedirs("/universe")
+		universeMountPointEntry = (self.icon_button_green, _("Mount Universe"), _("Mount Point : /universe"), "universe", "/universe", self.divpng)		
+#end		
 		if not path.ismount(defaultMountPoint):
 			self.mountPointList.append(defaultMountPointEntry)
 		self.mountPointList.append(autoMountPointEntry)
 		self.mountPointList.append(manuallyMountPointEntry)
+#BlackHole
+		self.mountPointList.append(universeMountPointEntry)
+#end
 		self.currList = "mountpoint"
 		self["menu"].style = "mountpoint"
 		self["menu"].setList(self.mountPointList)
@@ -332,6 +340,11 @@ class DeviceManager(Screen):
 			elif currEntry == "auto":
 #				print "Setup mountpoint automatically!"
 				self.doMount(self.currPartition, self["menu"].getCurrent()[4])
+#BlackHole			
+			elif currEntry == "universe":
+#				print "Setup mountpoint universe"
+				self.doMount(self.currPartition, "/universe")
+#end
 			else:
 #				print "Setup mountpoint manually!"
 				self.session.openWithCallback(self.MountpointBrowserCB, MountpointBrowser)
@@ -1351,7 +1364,8 @@ def checkMounts(session):
 
 		if not_mounted == True:
 			print "Umounted partitions found."
-			InfoText = _("umounted partitions found.!\nDo you want to open DeviceManager and set mount point?\n\n(Open 'Menu->Setup->System -> Harddisk -> DeviceManager'\n and press MENU button to deactivate this check.)")
+#BlackHole			
+			InfoText = _("umounted partitions found.!\nDo you want to open DeviceManager and set mount point?\n\n(Push 'Blue->Blue->Devices Manager'\n and press MENU button to deactivate this check.)")
 			AddNotificationWithCallback(
 							boundFunction(callBackforDeviceManager, session), 
 							MessageBox, InfoText, timeout = 60, default = False
