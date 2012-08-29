@@ -7,7 +7,7 @@ import re
 import socket
 
 from Tools.Directories import fileExists
-#from Tools.Transponder import ConvertToHumanReadable
+from Tools.Transponder import ConvertToHumanReadable
 
 class Nab_ExtraInfobar(Screen):
 	
@@ -121,14 +121,14 @@ class Nab_ExtraInfobar(Screen):
 		if myinfo is not None:
 			isCrypt = myinfo.getInfo(iServiceInformation.sIsCrypted) == 1
 
-			orbital = 0
-			orbital2 = ""	
+#			orbital = 0
+#			orbital2 = ""	
 			feinfo = service.frontendInfo()
 			frontendData = feinfo and feinfo.getAll(True)
 			if frontendData is not None:
 				ttype = frontendData.get("tuner_type", "UNKNOWN")
 				if ttype == "DVB-S":
-#					fedata = ConvertToHumanReadable(frontendData)
+					fedata = ConvertToHumanReadable(frontendData)
 					sr = str(int(frontendData.get("symbol_rate", 0) / 1000))
 					freq = str(int(frontendData.get("frequency", 0) / 1000))
 					pol = {0: "H", 1: "V", 2: "CL", 3: "CR", 4: None}[frontendData.get("polarization", "HORIZONTAL")]
@@ -145,18 +145,22 @@ class Nab_ExtraInfobar(Screen):
 						eDVBFrontendParametersSatellite.FEC_4_5 : "4/5",
 						eDVBFrontendParametersSatellite.FEC_8_9 : "8/9",
 						eDVBFrontendParametersSatellite.FEC_9_10 : "9/10"}[frontendData.get("fec_inner")]
-#					fec = {0: "Auto", 1: "1/2", 2: "2/3", 3: "3/4", 4: "4/5", 5: "5/6", 6: "7/8", 7: "8/9", 8: "9/10", 9: "None"} [frontendData.get("fec_inner", "FEC_AUTO")]
+
+
 					self["nfreq_info"].setText( "Freq: " + freq + " " + pol + " Sr: " + sr + " " + fec )
 		
-					orbital = int(frontendData["orbital_position"])
-					if orbital > 1800:
-						orbital2 = str((float(3600 - orbital))/10.0) + "W"
-					elif orbital > 0:
-						orbital2 = str((float(orbital))/10.0) + "E"
+#					orbital = int(frontendData["orbital_position"])
+#					if orbital > 1800:
+#						orbital2 = str((float(3600 - orbital))/10.0) + "W"
+#					elif orbital > 0:
+#						orbital2 = str((float(orbital))/10.0) + "E"
 					
-					orbital3 = self.parse_sats(orbital2)
-					orbital3 = orbital3 + orbital2
-					self["orbital_pos"].setText(orbital3)
+#					orbital3 = self.parse_sats(orbital2)
+#					orbital3 = orbital3 + orbital2
+#					self["orbital_pos"].setText(orbital3)
+
+					orbital = fedata["orbital_position"]
+					self["orbital_pos"].setText(orbital)
 
 
 		if isCrypt == True:
@@ -180,19 +184,19 @@ class Nab_ExtraInfobar(Screen):
 		return ret
 	
 	
-	def parse_sats(self, orb):
-		ret = "Orbital: "
-		sats = {'60.0E': 'Intelsat', '57.0E': 'NSS 703', '56.0E': 'Bonum 1', '55.0E': 'Insat 3E', '53.0E': 'Express AM22',
-			'49.0E': 'Yamal 202', '45.0E': 'Intelsat 12', '42.0E': 'Turksat 2A', '40.0E': 'Express AM1', '39.0E': 'Hellas Sat 2',
-			'38.0E': 'Paksat 1', '36.0E': 'Eutelsat Sesat', '33.5E': 'Astra 1M', '33.0E': 'Eurobird 3', '32.8E': 'Galaxy 11',
-			'31.5E': 'Astra 5A', '31.0E': 'Turksat', '30.5E': 'Arabsat', '30.5E': 'Badr 3', '28.2E': 'Eurobird/Astra',
-			'26.0E': 'Badr 4', '25.5E': 'Eurobird 2', '23.5E': 'Astra 1E', '21.6E': 'Eutelsat W6','21.0E': 'AfriStar 1',
-			'19.2E': 'Astra 1F', '16.0E': 'Eutelsat W2', '13.0E': 'Hot Bird 6', '10.0E': 'Eutelsat W1', '9.0E': 'Eurobird 9',
-			'7.0E': 'Eutelsat W3A', '4.8E': 'Thor/Sirius', '4.0E': 'Eurobird 4', '3.0E': 'Telecom 2', '2.0E': 'Astra 1C' }
+#	def parse_sats(self, orb):
+#		ret = "Orbital: "
+#		sats = {'60.0E': 'Intelsat', '57.0E': 'NSS 703', '56.0E': 'Bonum 1', '55.0E': 'Insat 3E', '53.0E': 'Express AM22',
+#			'49.0E': 'Yamal 202', '45.0E': 'Intelsat 12', '42.0E': 'Turksat 2A', '40.0E': 'Express AM1', '39.0E': 'Hellas Sat 2',
+#			'38.0E': 'Paksat 1', '36.0E': 'Eutelsat Sesat', '33.5E': 'Astra 1M', '33.0E': 'Eurobird 3', '32.8E': 'Galaxy 11',
+#			'31.5E': 'Astra 5A', '31.0E': 'Turksat', '30.5E': 'Arabsat', '30.5E': 'Badr 3', '28.2E': 'Eurobird/Astra',
+#			'26.0E': 'Badr 4', '25.5E': 'Eurobird 2', '23.5E': 'Astra 1E', '21.6E': 'Eutelsat W6','21.0E': 'AfriStar 1',
+#			'19.2E': 'Astra 1F', '16.0E': 'Eutelsat W2', '13.0E': 'Hot Bird 6', '10.0E': 'Eutelsat W1', '9.0E': 'Eurobird 9',
+#			'7.0E': 'Eutelsat W3A', '4.8E': 'Thor/Sirius', '4.0E': 'Eurobird 4', '3.0E': 'Telecom 2', '2.0E': 'Astra 1C' }
 		
-		if sats.has_key(orb):
-			ret = sats[orb] + " "
-		return ret
+#		if sats.has_key(orb):
+#			ret = sats[orb] + " "
+#		return ret
 	
 	def show_emm(self, caidname):
 		if caidname == "Seca":
