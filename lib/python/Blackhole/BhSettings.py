@@ -1041,7 +1041,7 @@ Press red button to continue.
 		menu.append((_("ext2 - recommended for USB flash memory"), "ext2"))
 		menu.append((_("ext3 - recommended for harddisks"), "ext3"))
 		menu.append((_("ext4 - experimental"), "ext4"))
-		menu.append((_("vfat - for USB flash memory"), "vfat"))
+		menu.append((_("vfat - use only for media-files"), "vfat"))
 		self.session.openWithCallback(self.choiceBoxFstypeCB, ChoiceBox, title=_("Choice filesystem."), list=menu)
 
 	def choiceBoxFstypeCB(self, choice):
@@ -1056,7 +1056,7 @@ Press red button to continue.
 			elif newfstype == "ext2":
 				self.formatcmd = "/sbin/mkfs.ext2 -F -m0"
 			elif newfstype == "vfat":
-				self.formatcmd = "/usr/sbin/mkfs.vfat -I"
+				self.formatcmd = "/usr/sbin/mkfs.vfat"
 				
 			self.do_Format()
 		

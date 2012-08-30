@@ -161,13 +161,11 @@
         <widget source="session.CurrentService" render="Label" zPosition="4" position="890,188" size="55,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
             <convert type="ServiceInfo">VideoHeight</convert>	
 		</widget>
-			
 			<widget source="session.CurrentService" render="ChannelNumber" position="280,76" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
 			<widget name="Universe" position="920,86" size="300,28" halign="center" zPosition="5" font="OLED;18" foregroundColor="#f23d21"  backgroundColor="background" transparent="1" />			
 	    <widget source="session.CurrentService" render="Label" position="375,76" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 		<convert type="ServiceName">Name</convert>
 		</widget>
-		
 		<widget source="session.CurrentService" render="Label" position="70,188" 	size="250,22" zPosition="2"	font="Regular;18" backgroundColor="transpBlack" halign="left" foregroundColor="white" transparent="1" >
 			<convert type="ServiceName">Provider</convert>
 		</widget>
@@ -269,8 +267,8 @@
         <widget source="session.CurrentService" render="Label" zPosition="4" position="890,668" size="55,22" halign="left" font="Regular;18" foregroundColor="white" transparent="1" backgroundColor="#999999">
             <convert type="ServiceInfo">VideoHeight</convert>	
 		</widget>	
-			<widget source="session.CurrentService" render="ChannelNumber" position="252,556" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
-		
+			<widget source="session.CurrentService" render="ChannelNumber" position="280,556" size="100,32" zPosition="2" font="Regular;28" halign="left" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background" />
+			<widget name="Universe" position="920,566" size="300,28" halign="center" zPosition="5" font="OLED;18" foregroundColor="#f23d21"  backgroundColor="background" transparent="1" />		
 	    <widget source="session.CurrentService" render="Label" position="375,556" size="530,32" zPosition="2" font="Regular;28" halign="center" noWrap="1" transparent="1" foregroundColor="white" backgroundColor="background">
 		<convert type="ServiceName">Name</convert>
 		</widget>
@@ -338,9 +336,8 @@
 			<convert type="ServiceInfo">SubservicesAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		
 		<widget source="session.CurrentService" render="Label" zPosition="4" position="918,86" size="55,24" halign="right" font="Regular;20" foregroundColor="white" transparent="1" backgroundColor="#999999">
-            <convert type="ServiceInfo">Framerate</convert>	
+            <convert type="ServiceInfo">Framerate</convert>
     	</widget>
 		<!-- AB103 Turner Status (Nim) A-B-C-D -->
 		<eLabel text="A" position="395,668" zPosition="1" size="20,22" font="Regular;20" halign="center" foregroundColor="grey" backgroundColor="background" transparent="1"/>

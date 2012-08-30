@@ -49,6 +49,7 @@ class Nab_ExtraInfobar(Screen):
 		self["button_spider"] = Label()
 		self["nfreq_info"] = Label()
 		self["orbital_pos"] = Label()
+		self["Universe"] = Label()
 		
 		#self.MyState = 0
 		
@@ -112,6 +113,18 @@ class Nab_ExtraInfobar(Screen):
 					self.currentCam = line
  			f.close()
 		self["cam_info"].setText(self.currentCam)
+		
+		ret = "Black Hole"
+		all = ["Avalon", "Chaos", "Ghost"]
+		f = open("/proc/mounts",'r')
+		for line in f.readlines():
+			if line.find('/usr ') != -1:
+				for a in all:
+					if line.find(a) != -1:
+						ret = a
+				break
+		f.close()
+		self["Universe"].setText("In %s universe" % (ret))
 		
 		self.VideoSize = " "
 		isCrypt = False
