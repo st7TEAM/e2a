@@ -99,7 +99,7 @@
 	<map context="InfobarExtensions">
 		<key id="KEY_BLUE" mapto="DeliteBpshow" flags="b" />
 		<key id="KEY_BLUE" mapto="extensions" flags="l" />
-		<key id="KEY_RED" mapto="BhRedpshow" flags="b" />
+		<key id="KEY_RED" mapto="BhRedpshow" flags="l" />
 	</map>
 	
 	<map context="SatlistShortcutAction">
@@ -230,7 +230,7 @@
 
 	<map context="InfobarRedButtonActions">
 		<device name="dreambox advanced remote control (native)">
-			<key id="KEY_RED" mapto="activateRedButton" flags="l" />
+			<key id="KEY_RED" mapto="activateRedButton" flags="b" />
 		</device>
 	</map>
 
