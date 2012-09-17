@@ -92,7 +92,7 @@ bool eServiceEvent::loadLanguage(Event *evt, std::string lang, int tsidonid)
 					m_short_description = convertDVBUTF8(sed->getText(), table, tsidonid);
 //Delite
 					int mypos;
-					mypos = m_event_name.find("digit.");
+					mypos = m_event_name.find("visibile gratis.");
 					if(mypos!=std::string::npos)
 						m_event_name=m_short_description;
 //End
