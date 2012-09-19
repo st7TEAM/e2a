@@ -107,9 +107,12 @@ class DeliteSettings(Screen):
 			from BhNet import BhMinidlna
 			self.session.open(BhMinidlna)
 		elif self.sel == 16:
+			from BhNet import BhPcsc
+			self.session.open(BhPcsc)
+		elif self.sel == 17:
 			from BhNet import BhTunerServer
 			self.session.open(BhTunerServer)
-		elif self.sel == 17:
+		elif self.sel == 18:
 			from BhNet import BhNetBrowser
 			self.session.open(BhNetBrowser)
 		else:
@@ -239,15 +242,22 @@ class DeliteSettings(Screen):
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "Tuner Server"
+		name = "Pcsc Panel"
 		idx = 16
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "Tuner Server"
+		idx = 17
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/mountwizard.png"
 		png = LoadPixmap(mypixmap)
 		name = "Network Browse & Mountpoints"
-		idx = 17
+		idx = 18
 		res = (name, png, idx)
 		self.list.append(res)
 		

@@ -1045,3 +1045,83 @@ class BhNetBrowser(Screen):
 			inter = mysel[1]
 			self.session.open(NetworkBrowser, inter, "/usr/lib/enigma2/python/Plugins/SystemPlugins/NetworkBrowser")
 			
+
+class BhPcsc(Screen):
+	skin = """
+	<screen position="center,center" size="602,305" title="Black Hole Pcsc Panel">
+		<widget name="lab1" position="20,30" size="580,60" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="lab2" position="20,150" size="300,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="labstop" position="320,150" size="150,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
+		<widget name="labrun" position="320,150" size="150,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
+		<ePixmap pixmap="skin_default/buttons/red.png" position="125,260" size="150,30" alphatest="on"/>
+		<ePixmap pixmap="skin_default/buttons/green.png" position="325,260" size="150,30" alphatest="on"/>
+		<widget name="key_red" position="125,262" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="key_green" position="325,262" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+	</screen>"""
+	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		self["lab1"] = Label(_("Pcsc service for Usb readers."))
+		self["lab2"] = Label(_("Current Status:"))
+		self["labstop"] = Label(_("Stopped"))
+		self["labrun"] = Label(_("Running"))
+		self["key_red"] = Label("Enable")
+		self["key_green"] = Label("Disable")
+		self.my_serv_active = False
+				
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"ok": self.close,
+			"back": self.close,
+			"red": self.ServStart,
+			"green": self.ServStop
+		})
+		
+		self.onLayoutFinish.append(self.updateServ)
+
+
+	def ServStart(self):
+		if self.my_serv_active == False:
+			rc = system("ln -s ../init.d/pcscd /etc/rc3.d/S20pcscd")
+			rc = system("/etc/init.d/pcscd start")
+				
+			mybox = self.session.open(MessageBox, "Pcsc Enabled.", MessageBox.TYPE_INFO)
+			mybox.setTitle("Info")
+			self.updateServ()
+			
+		
+	def ServStop(self):
+		if self.my_serv_active == True:
+			rc = system("/etc/init.d/pcscd stop")
+			if fileExists("/etc/rc3.d/S20pcscd"):
+				os_remove("/etc/rc3.d/S20pcscd")
+			
+			mybox = self.session.open(MessageBox, "Pcsc Client Disabled.", MessageBox.TYPE_INFO)
+			mybox.setTitle("Info")
+			rc = system("sleep 1")
+			self.updateServ()
+		
+
+	def updateServ(self):
+		self["labrun"].hide()
+		self["labstop"].hide()
+		rc = system("ps > /tmp/nvpn.tmp")
+		self.my_serv_active = False
+		
+		if fileExists("/tmp/nvpn.tmp"):
+			f = open("/tmp/nvpn.tmp",'r')
+ 			for line in f.readlines():
+				if line.find('pcscd') != -1:
+					self.my_serv_active = True
+			f.close()
+			os_remove("/tmp/nvpn.tmp")
+		
+			
+		if self.my_serv_active == True:
+			self["labstop"].hide()
+			self["labrun"].show()
+		else:
+			self["labstop"].show()
+			self["labrun"].hide()
+			
