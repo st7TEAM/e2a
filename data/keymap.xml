@@ -395,7 +395,7 @@
 
 	<map context="InfobarTimeshiftActivateActions">
 		<device name="dreambox remote control (native)">
-<!--	Black Hole remove red key for red panel		<key id="KEY_RED" mapto="timeshiftActivateEnd" flags="b" /> -->
+			<key id="KEY_RED" mapto="timeshiftActivateEnd" flags="b" />
 			<key id="KEY_YELLOW" mapto="timeshiftActivateEndAndPause" flags="b" />
 <!--	ikseong insert KEY_PAUSE, KEY_PLAY, KEY_REWIND	-->
 			<key id="KEY_PLAY" mapto="timeshiftActivateEndAndPause" flags="m" />
