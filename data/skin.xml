@@ -905,17 +905,18 @@
         <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
         <ePixmap position="40,650" zPosition="1" size="790,40" pixmap="skin_default/buttons_bp.png" alphatest="blend" transparent="1" />
         <ePixmap position="480,170" zPosition="-1" size="253,25" pixmap="skin_default/buttons_cam.png" alphatest="blend" transparent="1" />
+        <ePixmap position="478,380" zPosition="3" size="22,190" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />         	 
         <eLabel text="BH Blue Panel" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
         <widget name="list" position="60,120" size="758,38" zPosition="2" selectionPixmap="skin_default/icons/listselection450x38_S-fs8.png"  transparent="1"/> 
         <widget name="lab1" position="60,170" size="230,25" font="Regular;24" zPosition="2"  foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
         <widget name="lab2" position="512,170" size="190,24" font="Regular;24" halign="center" valign="center" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
     	<widget name="lab3" position="60,210" size="120,28" font="Regular;24" halign="left" zPosition="2" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
         <widget name="activecam" position="160,210" size="350,28" font="Regular;24" halign="left" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
-        <widget name="Ilab1" position="60,245" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-        <widget name="Ilab2" position="60,270" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-        <widget name="Ilab3" position="60,295" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-        <widget name="Ilab4" position="60,320" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-        <widget name="Ecmtext" position="60,350" size="440,300" font="Regular;20" zPosition="2" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="Ilab1" position="60,250" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="Ilab2" position="60,275" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="Ilab3" position="60,300" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="Ilab4" position="60,325" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="Ecmtext" position="60,380" size="440,200" font="Regular;20" zPosition="2" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
         <applet type="onLayoutFinish">
 		self[&quot;list&quot;].instance.setItemHeight(38)
 		        </applet>
@@ -1362,8 +1363,9 @@
     <!--AE127 BhPcsc (2 )-->     
      <screen name="BhPcsc" position="0,0" size="1280,720" title="BH Pcsc Panel" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
+        <eLabel text="BH Pcsc Panel" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
         <widget name="lab1" position="60,120" size="580,60" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
-        <widget name="lab2" position="60,240" size="300,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="lab2" position="60,200" size="300,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
         <widget name="labstop" position="380,395" size="300,28" zPosition="2" font="Regular;22" valign="left" halign="left" foregroundColor="red" transparent="1" />
 		<widget name="labrun" position="380,445" size="300,28" zPosition="2" font="Regular;22" valign="left" halign="left" foregroundColor="green" transparent="1" />
 		<ePixmap position="270,390" zPosition="1" size="100,40" pixmap="skin_default/buttons/b_off.png" alphatest="on" />
@@ -1378,7 +1380,8 @@
 	<screen name="menu_mainmenu" position="0,0" size="1280,720" title="BH Main menu"  flags="wfNoBorder">
 		 <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
       	 <eLabel text="BH Main Menu" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
-         <widget source="menu" render="Listbox" position="60,120" size="760,494" scrollbarMode="showOnDemand"  selectionPixmap="skin_default/icons/listselection450x38-fs8.png"  backgroundPixmap="skin_default/icons/butselection.png" transparent="1">
+      	 <ePixmap position="798,118" zPosition="2" size="22,458" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
+         <widget source="menu" render="Listbox" position="60,120" size="760,456" scrollbarMode="showOnDemand"  selectionPixmap="skin_default/icons/listselection450x38-fs8.png"  backgroundPixmap="skin_default/icons/butselection.png" transparent="1">
         	<convert type="TemplatedMultiContent">
 			{"template": [ MultiContentEntryText(pos = (60, 2), size = (450, 38), flags = RT_HALIGN_LEFT, text = 0) ],
 			"fonts": [gFont("Regular", 26)],
