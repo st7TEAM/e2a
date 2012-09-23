@@ -71,7 +71,9 @@ int loadPNG(ePtr<gPixmap> &result, const char *filename)
 	
 	png_get_IHDR(png_ptr, info_ptr, &width, &height, &bit_depth, &color_type, 0, 0, 0);
 	
-	if (color_type == PNG_COLOR_TYPE_GRAY || color_type & PNG_COLOR_MASK_PALETTE)
+//Blackhole
+//	if (color_type == PNG_COLOR_TYPE_GRAY || color_type & PNG_COLOR_MASK_PALETTE)
+	if (color_type == PNG_COLOR_TYPE_GRAY || color_type)
 	{
 		result=new gPixmap(eSize(width, height), bit_depth);
 		gSurface *surface = result->surface;
