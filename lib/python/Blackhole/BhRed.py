@@ -565,7 +565,7 @@ class BhRedp:
 					
 
 	def showBhRedp(self):
-		flash = False
+		flash = True
 		mounted = False
 		bh_ver = BhU_check_proc_version()
 		un_ver = bh_ver
@@ -575,9 +575,11 @@ class BhRedp:
 			if line.find('/universe') != -1:
 				if line.find('ext') != -1:
 					mounted = True
-			elif line.find('/boot j') != -1:
-				flash = True
 		f.close()
+		
+		if fileExists("/.meoinfo"):
+			flash = False
+		
 		if flash == True:
 			if mounted == True:
 				if fileExists("/universe/.buildv"):
