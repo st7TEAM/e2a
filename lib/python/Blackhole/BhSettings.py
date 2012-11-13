@@ -64,55 +64,57 @@ class DeliteSettings(Screen):
 		self.sel = self.sel[2]
 		
 		if self.sel == 0:
-			self.session.open(DeliteCronMang)
+			self.session.open(BhSpeedUp)
 		elif self.sel == 1:
-			self.session.open(DeliteSetupOSD2)
+			self.session.open(DeliteCronMang)
 		elif self.sel == 2:
-			self.session.open(DeliteDevicesPanel)
+			self.session.open(DeliteSetupOSD2)
 		elif self.sel == 3:
-			self.session.open(Bp_UsbFormat)
+			self.session.open(DeliteDevicesPanel)
 		elif self.sel == 4:
-			self.session.open(DeliteKernelModules)
+			self.session.open(Bp_UsbFormat)
 		elif self.sel == 5:
+			self.session.open(DeliteKernelModules)
+		elif self.sel == 6:
 			from BhInadyn import DeliteInadyn
 			self.session.open(DeliteInadyn)
-		elif self.sel == 6:
+		elif self.sel == 7:
 			from BhSwap import DeliteSwap
 			self.session.open(DeliteSwap)
-		elif self.sel == 7:
+		elif self.sel == 8:
 			from BhHdd import DeliteHdd
 			self.session.open(DeliteHdd)
-		elif self.sel == 8:
+		elif self.sel == 9:
 			from BhNet import DeliteOpenvpn
 			self.session.open(DeliteOpenvpn)
-		elif self.sel == 9:
+		elif self.sel == 10:
 			from BhNet import DeliteSamba
 			self.session.open(DeliteSamba)
-		elif self.sel == 10:
+		elif self.sel == 11:
 			from BhNet import BhNfsServer
 			self.session.open(BhNfsServer)
-		elif self.sel == 11:
+		elif self.sel == 12:
 			from BhNet import DeliteTelnet
 			self.session.open(DeliteTelnet)
-		elif self.sel == 12:
+		elif self.sel == 13:
 			from BhNet import DeliteFtp
 			self.session.open(DeliteFtp)
-		elif self.sel == 13:
+		elif self.sel == 14:
 			from BhNet import BhDjmount
 			self.session.open(BhDjmount)
-		elif self.sel == 14:
+		elif self.sel == 15:
 			from BhNet import BhMediatomb
 			self.session.open(BhMediatomb)
-		elif self.sel == 15:
+		elif self.sel == 16:
 			from BhNet import BhMinidlna
 			self.session.open(BhMinidlna)
-		elif self.sel == 16:
+		elif self.sel == 17:
 			from BhNet import BhPcsc
 			self.session.open(BhPcsc)
-		elif self.sel == 17:
+		elif self.sel == 18:
 			from BhNet import BhTunerServer
 			self.session.open(BhTunerServer)
-		elif self.sel == 18:
+		elif self.sel == 19:
 			from BhNet import BhNetBrowser
 			self.session.open(BhNetBrowser)
 		else:
@@ -127,10 +129,17 @@ class DeliteSettings(Screen):
 		self.list = [ ]
 		mypath = DeliteGetSkinPath()
 		
+		mypixmap = mypath + "icons/infopanel_osd.png"
+		png = LoadPixmap(mypixmap)
+		name = "Black Hole Speed Up"
+		idx = 0
+		res = (name, png, idx)
+		self.list.append(res)
+		
 		mypixmap = mypath + "icons/infopanel_cron.png"
 		png = LoadPixmap(mypixmap)
 		name = "Black Hole Cron Manager"
-		idx = 0
+		idx = 1
 		res = (name, png, idx)
 		self.list.append(res)
 		
@@ -138,126 +147,126 @@ class DeliteSettings(Screen):
 		mypixmap = mypath + "icons/infopanel_osd.png"
 		png = LoadPixmap(mypixmap)
 		name = "Osd Settings"
-		idx = 1
+		idx = 2
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_space.png"
 		png = LoadPixmap(mypixmap)
 		name = "Devices Manager"
-		idx = 2
+		idx = 3
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/swapsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Usb Format Wizard"
-		idx = 3
+		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
 				
 		mypixmap = mypath + "icons/infopanel_kmod.png"
 		png = LoadPixmap(mypixmap)
 		name = "Kernel Modules Manager"
-		idx = 4
+		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/inadynsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Inadyn Settings"
-		idx = 5
+		idx = 6
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/swapsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Swap File Settings"
-		idx = 6
+		idx = 7
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/hdsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Hard Disk Settings"
-		idx = 7
+		idx = 8
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_vpn.png"
 		png = LoadPixmap(mypixmap)
 		name = "OpenVpn Panel"
-		idx = 8
+		idx = 9
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
 		name = "Samba/Cifs Panel"
-		idx = 9
+		idx = 10
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_nfs.png"
 		png = LoadPixmap(mypixmap)
 		name = "Nfs Server Panel"
-		idx = 10
+		idx = 11
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_telnet.png"
 		png = LoadPixmap(mypixmap)
 		name = "Telnet Panel"
-		idx = 11
+		idx = 12
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_ftp.png"
 		png = LoadPixmap(mypixmap)
 		name = "Ftp Panel"
-		idx = 12
-		res = (name, png, idx)
-		self.list.append(res)
-		
-		mypixmap = mypath + "icons/infopanel_samba.png"
-		png = LoadPixmap(mypixmap)
-		name = "UPnP Client Djmount"
 		idx = 13
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "UPnP Server Mediatomb"
+		name = "UPnP Client Djmount"
 		idx = 14
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "UPnP Server Minidlna"
+		name = "UPnP Server Mediatomb"
 		idx = 15
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "Pcsc Panel"
+		name = "UPnP Server Minidlna"
 		idx = 16
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "Tuner Server"
+		name = "Pcsc Panel"
 		idx = 17
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = "Tuner Server"
+		idx = 18
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/mountwizard.png"
 		png = LoadPixmap(mypixmap)
 		name = "Network Browse & Mountpoints"
-		idx = 18
+		idx = 19
 		res = (name, png, idx)
 		self.list.append(res)
 		
@@ -1314,5 +1323,122 @@ class DeliteKernelModShow(Screen):
 			self["statuslab"].setText(mytext)
 			
 
+
+class BhSpeedUp(Screen, ConfigListScreen):
+	skin = """
+	<screen position="center,center" size="902,570" title="Black Hole Speed up">
+		<widget name="lab1" position="10,10" size="882,60" font="Regular;20" valign="top" transparent="1"/>
+		<widget name="config" position="30,70" size="840,450" scrollbarMode="showOnDemand"/>
+		<ePixmap pixmap="skin_default/buttons/red.png" position="200,530" size="140,40" alphatest="on"/>
+		<ePixmap pixmap="skin_default/buttons/green.png" position="550,530" size="140,40" alphatest="on"/>
+		<widget name="key_red" position="200,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="key_green" position="550,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
+	</screen>"""
+
+
+	def __init__(self, session):
+		Screen.__init__(self, session)
 		
+		self.list = []
+		ConfigListScreen.__init__(self, self.list)
+		self["lab1"] = Label("Please disable ALL the plugins you don't need to use.\nThis will speed up Image Boot and Performance.")
+		self["key_red"] = Label(_("Save"))
+		self["key_green"] = Label(_("Cancel"))
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"red": self.saveMypoints,
+			"green": self.close,
+			"back": self.close
+
+		})
+		self.pluglist = [
+		["MeoBoot", "/usr/lib/enigma2/python/Plugins/Extensions/MeoBoot"],
+		["BhWeather", "/usr/lib/enigma2/python/Plugins/Extensions/BhWeather"],
+		["BhFullBackup", "/usr/lib/enigma2/python/Plugins/Extensions/BhFullBackup"],
+		["BhPersonalBackup", "/usr/lib/enigma2/python/Plugins/Extensions/BhPersonalBackup"],
+		["BhEpgBackup", "/usr/lib/enigma2/python/Plugins/Extensions/BhEpgBackup"],
+		["3GModemManager", "/usr/lib/enigma2/python/Plugins/SystemPlugins/3GModemManager"],
+		["AutoResolution", "/usr/lib/enigma2/python/Plugins/SystemPlugins/AutoResolution"],
+		["CommonInterfaceAssignment", "/usr/lib/enigma2/python/Plugins/SystemPlugins/CommonInterfaceAssignment"],
+		["RemoteControlCode", "/usr/lib/enigma2/python/Plugins/SystemPlugins/RemoteControlCode"],
+		["UI3DSetup", "/usr/lib/enigma2/python/Plugins/SystemPlugins/UI3DSetup"],
+		["UIPositionSetup", "/usr/lib/enigma2/python/Plugins/SystemPlugins/UIPositionSetup"],
+		["WirelessAccessPoint", "/usr/lib/enigma2/python/Plugins/SystemPlugins/WirelessAccessPoint"],
+		["ZappingModeSelection", "/usr/lib/enigma2/python/Plugins/SystemPlugins/ZappingModeSelection"],
+		["AddStreamUrl", "/usr/lib/enigma2/python/Plugins/Extensions/AddStreamUrl"],
+		["DVDPlayer", "/usr/lib/enigma2/python/Plugins/Extensions/DVDPlayer"],
+		["PicturePlayer", "/usr/lib/enigma2/python/Plugins/Extensions/PicturePlayer"],
+		["RemoteChannelStreamConverter", "/usr/lib/enigma2/python/Plugins/Extensions/RemoteChannelStreamConverter"],
+		["SocketMMI", "/usr/lib/enigma2/python/Plugins/Extensions/SocketMMI"],
+		["StreamTV", "/usr/lib/enigma2/python/Plugins/Extensions/StreamTV"],
+		["VuplusEvent", "/usr/lib/enigma2/python/Plugins/Extensions/VuplusEvent"],
+		["MyTube", "/usr/lib/enigma2/python/Plugins/Extensions/MyTube"],
+		["HbbTV", "/usr/lib/enigma2/python/Plugins/Extensions/HbbTV"]
+		]
+		
+		if not pathExists("/usr/share/blackhole"):
+			createDir("/usr/share/blackhole")
+		if not pathExists("/usr/share/blackhole/disabledPlugins"):
+			createDir("/usr/share/blackhole/disabledPlugins")
+		if not pathExists("/usr/share/blackhole/disabledPlugins/Extensions"):
+			createDir("/usr/share/blackhole/disabledPlugins/Extensions")
+		if not pathExists("/usr/share/blackhole/disabledPlugins/SystemPlugins"):
+			createDir("/usr/share/blackhole/disabledPlugins/SystemPlugins")
+		self.updateList()
 	
+	
+	def updateList(self):
+		self.list = []
+		for plug in self.pluglist:
+			item = NoSave(ConfigSelection(default = "Enabled", choices = [("Enabled", "Enabled"), ("Disabled", "Disabled")]))
+			if pathExists(plug[1]):
+				item.value = "Enabled"
+			else:
+				item.value = "Disabled"
+			
+			res = getConfigListEntry(plug[0], item)
+			self.list.append(res)
+		
+		self["config"].list = self.list
+		self["config"].l.setList(self.list)
+		
+	def saveMypoints(self):
+		for x in self["config"].list:
+			if x[1].value == "Enabled":
+				self.enablePlug(x[0])
+			else:
+				self.disablePlug(x[0])
+		self.allDone()
+		
+	def enablePlug(self, name):
+		for plug in self.pluglist:
+			if plug[0] == name:
+				if not pathExists(plug[1]):
+					ppath = plug[1].replace('/usr/lib/enigma2/python/Plugins', '/usr/share/blackhole/disabledPlugins')
+					cmd = "mv %s %s" % (ppath, plug[1])
+					ret = system(cmd)
+				break
+				
+				
+		
+		
+	def disablePlug(self, name):
+		for plug in self.pluglist:
+			if plug[0] == name:
+				ppath = plug[1].replace('/usr/lib/enigma2/python/Plugins', '/usr/share/blackhole/disabledPlugins')
+				if pathExists(ppath) and pathExists(plug[1]):
+					cmd = "rm - r %s" % (ppath)
+					ret = system(cmd)
+				if not pathExists(ppath):
+					cmd = "mv %s %s" % (plug[1], ppath)
+					ret = system(cmd)
+				break
+		
+	def allDone(self):
+		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Enigma2 will be now restarted for the cahnges to take effect.\nPress ok to continue", MessageBox.TYPE_INFO)
+		mybox.setTitle("Info")
+	
+	def hrestEn(self, answer):
+		self.session.open(TryQuitMainloop, 3)
+		
