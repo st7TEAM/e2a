@@ -1341,7 +1341,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
-		self["lab1"] = Label("Please disable ALL the plugins you don't need to use.\nThis will speed up Image Boot and Performance.")
+		self["lab1"] = Label("Please disable ALL the plugins you don't need to use.\nThis will speed up Image Performance.")
 		self["key_red"] = Label(_("Save"))
 		self["key_green"] = Label(_("Cancel"))
 		
