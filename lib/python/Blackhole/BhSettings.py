@@ -1377,6 +1377,10 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		["HbbTV", "/usr/lib/enigma2/python/Plugins/Extensions/HbbTV"]
 		]
 		
+		if pathExists("/usr/lib/enigma2/python/Plugins/SystemPlugins/ADSM") or pathExists("/usr/share/blackhole/disabledPlugins/SystemPlugins/ADSM"):
+			self.pluglist.append(["Deep-Standby-Manager-Setting", "/usr/lib/enigma2/python/Plugins/SystemPlugins/ADSM"])
+		
+		
 		if not pathExists("/usr/share/blackhole"):
 			createDir("/usr/share/blackhole")
 		if not pathExists("/usr/share/blackhole/disabledPlugins"):
