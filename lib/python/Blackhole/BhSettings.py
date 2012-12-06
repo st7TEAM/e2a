@@ -1440,7 +1440,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 				break
 		
 	def allDone(self):
-		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Enigma2 will be now restarted for the cahnges to take effect.\nPress ok to continue", MessageBox.TYPE_INFO)
+		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Enigma2 will be now restarted for the changes to take effect.\nPress ok to continue", MessageBox.TYPE_INFO)
 		mybox.setTitle("Info")
 	
 	def hrestEn(self, answer):
