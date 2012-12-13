@@ -87,6 +87,7 @@ class DeliteInfo(Screen):
 			"3": self.KeyThree
 
 		})
+		self.extendedFlash = False
 		self.activityTimer = eTimer()
 		self.activityTimer.timeout.get().append(self.updateList)
 		self.moni_state = 0
@@ -195,6 +196,13 @@ class DeliteInfo(Screen):
 				parts = line.strip().split()
 				totsp = (len(parts) -1)
 				if parts[totsp] == "/":
+					strview = parts[totsp -1].replace('%', '')
+					if strview.isdigit():
+						flperc = int(parts[totsp -1].replace('%', ''))
+						fltot = int(parts[totsp -4])
+						flused = int(parts[totsp -3])
+				if parts[totsp] == "/usr":
+					self.extendedFlash = True
 					strview = parts[totsp -1].replace('%', '')
 					if strview.isdigit():
 						flperc = int(parts[totsp -1].replace('%', ''))
@@ -390,6 +398,10 @@ class DeliteInfo(Screen):
 		hdtot = 0
 		hdperc = 0
 		
+		mountflash = "/"
+		if self.extendedFlash == True:
+			mountflash = "/usr"
+		
 		if fileExists("/tmp/ninfo.tmp"):
 			f = open("/tmp/ninfo.tmp",'r')
  			for line in f.readlines():
@@ -397,7 +409,7 @@ class DeliteInfo(Screen):
 				line = line.replace('part1', ' ')
 				parts = line.strip().split()
 				totsp = (len(parts) -1)
-				if parts[totsp] == "/":
+				if parts[totsp] == mountflash:
 					if flused:
 						continue
 					flused = parts[totsp -1]
@@ -411,6 +423,7 @@ class DeliteInfo(Screen):
 					mytext += "Total: " + parts[totsp -4] + "   Used: " + parts[totsp -3] + "   Free: " + parts[totsp -2]  + "\n\n"
 					fltot = int(parts[totsp -4])
 					flused = int(parts[totsp -3])
+				
 				
 				if parts[totsp] == "/media/cf":
 					if cfused:
@@ -461,8 +474,8 @@ class DeliteInfo(Screen):
 			os_remove("/tmp/ninfo.tmp")
 			
 			meas = "M"
-			ftot = cftot + ustot + hdtot
-			fused = int(cfused) + int(usused) + int(hdused)
+			ftot = fltot + cftot + ustot + hdtot
+			fused = int(flused) + int(cfused) + int(usused) + int(hdused)
 			ffree = (ftot - fused)
 			fperc = 0
 			if ftot > 100:
@@ -544,6 +557,7 @@ class DeliteInfo(Screen):
 	
 
 	def delTimer(self):
+		system("hdparm -y /dev/sda1")
 		del self.activityTimer
 		del self.moniTimer
 
