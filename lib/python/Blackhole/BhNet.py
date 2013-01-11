@@ -576,7 +576,7 @@ class BhNfsServer(Screen):
 		if fileExists("/tmp/nvpn.tmp"):
 			f = open("/tmp/nvpn.tmp",'r')
  			for line in f.readlines():
-				if line.find('/usr/sbin/rpc.mountd') != -1:
+				if line.find('rpc.mountd') != -1:
 					self.my_nfs_run = True
 
 			f.close()
