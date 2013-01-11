@@ -266,11 +266,11 @@ class DeliteInfo(Screen):
 		if fileExists("/tmp/nvpn.tmp"):
 			f = open("/tmp/nvpn.tmp",'r')
  			for line in f.readlines():
-				if line.find('/usr/sbin/openvpn') != -1:
+				if line.find('openvpn') != -1:
 					avpn = True
 				if line.find('smbd') != -1:
 					asamba = True
-				if line.find('/usr/sbin/rpc.mountd') != -1:
+				if line.find('rpc.mountd') != -1:
 					anfs = True
 			f.close()
 			os_remove("/tmp/nvpn.tmp")	
