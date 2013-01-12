@@ -13,7 +13,7 @@ from Tools.LoadPixmap import LoadPixmap
 from Tools.Directories import fileExists, pathExists, createDir
 from os import system, listdir, chdir, getcwd, remove as os_remove
 from urllib2 import Request, urlopen, URLError, HTTPError
-from BhUtils import nab_strip_html, DeliteGetSkinPath, nab_Detect_Machine
+from BhUtils import nab_strip_html, DeliteGetSkinPath, nab_Detect_Machine, BhU_get_Version
 
 
 class DeliteAddons(Screen):
@@ -239,6 +239,15 @@ class Nab_downArea(Screen):
 		
 		
 	def KeyOk(self):
+		
+		bh_version = BhU_get_Version()
+		bh_version = int(bh_version.replace('.', ''))
+		pluginver = "Plugins"
+		catver = "outcat10_2"
+		if bh_version > 199:
+			pluginver = "Plugins2"
+			catver = "outcat10_3"
+		
 		self.sel = self["list"].getCurrent()
 		if self.sel:
 			self.sel = self.sel[2]
@@ -249,7 +258,7 @@ class Nab_downArea(Screen):
 		self.title = "Buuuuu"
 		
 		if self.sel == 1:
-			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Plugins"
+			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=" + pluginver
 			self.title = "Black Hole Plugins"
 		elif  self.sel == 2:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Skins"
@@ -270,7 +279,7 @@ class Nab_downArea(Screen):
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Picons"
 			self.title = "Black Hole Picons Packages"
 		elif  self.sel == 7:
-			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat10_2"
+			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=" + catver
 			self.title = "Latest 10 Uploads"	
 			
 			
