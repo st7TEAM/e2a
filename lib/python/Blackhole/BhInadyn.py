@@ -142,7 +142,7 @@ class DeliteInadyn(Screen):
 		if fileExists("/tmp/ninadyn.tmp"):
 			f = open("/tmp/ninadyn.tmp",'r')
  			for line in f.readlines():
-				if line.find('/inadyn -u') != -1:
+				if line.find('inadyn') != -1:
 					check = True
 
 			f.close()
