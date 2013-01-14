@@ -164,6 +164,10 @@ class TryQuitMainloop(MessageBox):
 		if value:
 			if self.retval ==1:
 				config.misc.DeepStandbyOn.value=True
+# WARNING HACK !! Black Hole bad hack
+			if self.retval == 1 or self.retval == 2:
+				system("umount -a -f -t nfs,smbfs,cifs,ncpfs")
+#end
 			quitMainloop(self.retval)
 		else:
 			MessageBox.close(self, True)
