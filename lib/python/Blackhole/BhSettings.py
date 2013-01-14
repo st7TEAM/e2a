@@ -1370,7 +1370,6 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		["DVDPlayer", "/usr/lib/enigma2/python/Plugins/Extensions/DVDPlayer"],
 		["PicturePlayer", "/usr/lib/enigma2/python/Plugins/Extensions/PicturePlayer"],
 		["RemoteChannelStreamConverter", "/usr/lib/enigma2/python/Plugins/Extensions/RemoteChannelStreamConverter"],
-		["SocketMMI", "/usr/lib/enigma2/python/Plugins/Extensions/SocketMMI"],
 		["StreamTV", "/usr/lib/enigma2/python/Plugins/Extensions/StreamTV"],
 		["VuplusEvent", "/usr/lib/enigma2/python/Plugins/Extensions/VuplusEvent"],
 		["MyTube", "/usr/lib/enigma2/python/Plugins/Extensions/MyTube"],
