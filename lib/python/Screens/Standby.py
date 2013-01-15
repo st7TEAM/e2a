@@ -184,7 +184,8 @@ class TryQuitMainloop(MessageBox):
 from os import system
 class DeliteReboot(Screen):
 	def __init__(self, session):
-		system("/etc/init.d/umountnfs.sh")
+		system("/etc/init.d/umountfs")
+		system("umount -a -f -t nfs,smbfs,cifs,ncpfs")
 		system("reboot")
 
 
