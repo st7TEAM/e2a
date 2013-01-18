@@ -137,7 +137,7 @@ class DeliteOpenvpn(Screen):
 		if fileExists("/tmp/nvpn.tmp"):
 			f = open("/tmp/nvpn.tmp",'r')
  			for line in f.readlines():
-				if line.find('/usr/sbin/openvpn') != -1:
+				if line.find('openvpn') != -1:
 					self.my_vpn_run = True
 
 			f.close()
