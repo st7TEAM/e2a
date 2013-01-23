@@ -513,7 +513,7 @@ class Nab_ShowDownFile(Screen):
 				dest = "/tmp/" + self.fileN
 				mydir = getcwd()
 				chdir("/")
-				cmd = "ipkg install " + dest
+				cmd = "opkg install " + dest
 				cmd2 = "rm -f " + dest
 				#rc = system(cmd)
 				self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd2])
@@ -635,7 +635,7 @@ class Nab_downPanelIPK(Screen):
 			dest = "/tmp/" + self.sel
 			mydir = getcwd()
 			chdir("/")
-			cmd = "ipkg install " + dest
+			cmd = "opkg install " + dest
 			#rc = system(cmd)
 			cmd2 = "rm -f " + dest
 			self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd2])
