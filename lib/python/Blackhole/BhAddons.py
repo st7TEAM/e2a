@@ -502,7 +502,7 @@ class Nab_ShowDownFile(Screen):
 				rc = system(cmd)
 				if fileExists("/usr/sbin/nab_e2_restart.sh"):
 					rc = system("rm -f /usr/sbin/nab_e2_restart.sh")
-					mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now hard restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
+					mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
 					mybox.setTitle("Info")
 				else:
 					mybox = self.session.open(MessageBox, "Addon Succesfully Installed.", MessageBox.TYPE_INFO)
@@ -513,13 +513,20 @@ class Nab_ShowDownFile(Screen):
 				dest = "/tmp/" + self.fileN
 				mydir = getcwd()
 				chdir("/")
-				cmd = "opkg install " + dest
+				cmd = "opkg update"
+				if fileExists("/var/lib/opkg/official-all"):
+					cmd = "echo -e 'Installing: %s '" % (dest)
+				cmd1 = "opkg install --force-overwrite " + dest
 				cmd2 = "rm -f " + dest
-				#rc = system(cmd)
-				self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd2])
+				self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd1, cmd2], finishedCallback = self.installipkDone)
 				chdir(mydir)
 				#cmd = "rm -f " + dest
 				#rc = system(cmd)
+				
+	
+	def installipkDone(self):
+		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
+		mybox.setTitle("Info")
 				
 
 	def hrestEn(self, answer):
@@ -635,10 +642,12 @@ class Nab_downPanelIPK(Screen):
 			dest = "/tmp/" + self.sel
 			mydir = getcwd()
 			chdir("/")
-			cmd = "opkg install " + dest
-			#rc = system(cmd)
+			cmd = "opkg update"
+			if fileExists("/var/lib/opkg/official-all"):
+				cmd = "echo -e 'Installing: %s '" % (dest)
+			cmd1 = "opkg install --force-overwrite " + dest
 			cmd2 = "rm -f " + dest
-			self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd2])
+			self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd1, cmd2])
 			chdir(mydir)
 			#cmd = "rm -f " + dest
 			#rc = system(cmd)
