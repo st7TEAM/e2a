@@ -59,32 +59,39 @@ class DeliteAddons(Screen):
 		idx = 0
 		res = (name, png, idx)
 		self.list.append(res)
+		
+		mypixmap = mypath + "icons/nabpackpanel.png"
+		png = LoadPixmap(mypixmap)
+		name = "Online Black Hole image update"
+		idx = 1
+		res = (name, png, idx)
+		self.list.append(res)
 
 		mypixmap = mypath + "icons/nabpackpanel.png"
 		png = LoadPixmap(mypixmap)
 		name = "Manual Install Bh packges"
-		idx = 1
+		idx = 2
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/ipkpackpanel.png"
 		png = LoadPixmap(mypixmap)
 		name = "Manual Install Ipk packges"
-		idx = 2
+		idx = 3
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/uninstpanel.png"
 		png = LoadPixmap(mypixmap)
 		name = "Addons Uninstall Panel"
-		idx = 3
+		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/statpanel.png"
 		png = LoadPixmap(mypixmap)
 		name = "Black Hole Statistics"
-		idx = 4
+		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
@@ -99,12 +106,14 @@ class DeliteAddons(Screen):
 		if self.sel == 0:
 			self.session.open(Nab_downArea)
 		elif self.sel == 1:
-			self.checkPanel()
+			self.session.openWithCallback(self.runUpgrade, MessageBox, _("Do you want to update Black Hole image?")+"\n"+_("\nAfter pressing OK, please wait!"))
 		elif self.sel == 2:
-			self.checkPanel2()
+			self.checkPanel()
 		elif self.sel == 3:
-			self.session.open(Nab_uninstPanel)
+			self.checkPanel2()
 		elif self.sel == 4:
+			self.session.open(Nab_uninstPanel)
+		elif self.sel == 5:
 			staturl = "http://www.vuplus-community.net/bhaddons/index.php?op=outmestats2"
 			downfile = "/tmp/cpanel.tmp"
 			if fileExists(downfile):
@@ -120,6 +129,11 @@ class DeliteAddons(Screen):
 			self.session.open(Nab_Stats)
 		else:
 			nobox = self.session.open(MessageBox, "Sorry, Connection Failed.", MessageBox.TYPE_INFO)
+			
+	def runUpgrade(self, result):
+		if result:
+			from Plugins.SystemPlugins.SoftwareManager.plugin import UpdatePlugin
+			self.session.open(UpdatePlugin, "/usr/lib/enigma2/python/Plugins/SystemPlugins/SoftwareManager")
 	
 	def checkPanel(self):
 		check = 0
