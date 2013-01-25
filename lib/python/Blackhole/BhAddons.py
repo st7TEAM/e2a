@@ -529,16 +529,29 @@ class Nab_ShowDownFile(Screen):
 				chdir("/")
 				cmd = "opkg update"
 				if fileExists("/var/lib/opkg/official-all"):
-					cmd = "echo -e 'Installing: %s '" % (dest)
+					cmd = "echo -e 'Testing: %s '" % (dest)
+				cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 				cmd1 = "opkg install --force-overwrite " + dest
 				cmd2 = "rm -f " + dest
-				self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd1, cmd2], finishedCallback = self.installipkDone)
+				self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd0, cmd1, cmd2], finishedCallback = self.installipkDone)
 				chdir(mydir)
-				#cmd = "rm -f " + dest
-				#rc = system(cmd)
 				
 	
 	def installipkDone(self):
+		if fileExists("/tmp/package.info"):
+			f = open("/tmp/package.info",'r')
+			for line in f.readlines():
+				if line.find('Installing') != -1:
+					parts = line.strip().split()
+					pname = "/usr/uninstall/" + parts[1] + ".del"
+					out = open(pname,'w')
+					line = "#!/bin/sh\n\nopkg remove --force-depends --force-remove %s\nrm -f %s\n\nexit 0\n" % (parts[1], pname)
+					out.write(line)
+					out.close()
+					cmd = "chmod 0755 " + pname
+					rc = system(cmd)
+			f.close()
+			rc = system("rm -f /tmp/package.info")
 		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
 		mybox.setTitle("Info")
 				
@@ -658,17 +671,37 @@ class Nab_downPanelIPK(Screen):
 			chdir("/")
 			cmd = "opkg update"
 			if fileExists("/var/lib/opkg/official-all"):
-				cmd = "echo -e 'Installing: %s '" % (dest)
+				cmd = "echo -e 'Testing: %s '" % (dest)
+			cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 			cmd1 = "opkg install --force-overwrite " + dest
 			cmd2 = "rm -f " + dest
-			self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd1, cmd2])
+			self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd0, cmd1, cmd2], finishedCallback = self.installipkDone)
 			chdir(mydir)
-			#cmd = "rm -f " + dest
-			#rc = system(cmd)
-			#mybox = self.session.open(MessageBox, "Addon Succesfully Installed.", MessageBox.TYPE_INFO)
-			#mybox.setTitle("Info")
-			#self.close()
+			
+	def installipkDone(self):
+		if fileExists("/tmp/package.info"):
+			f = open("/tmp/package.info",'r')
+			for line in f.readlines():
+				if line.find('Installing') != -1:
+					parts = line.strip().split()
+					pname = "/usr/uninstall/" + parts[1] + ".del"
+					out = open(pname,'w')
+					line = "#!/bin/sh\n\nopkg remove --force-depends --force-remove %s\nrm -f %s\n\nexit 0\n" % (parts[1], pname)
+					out.write(line)
+					out.close()
+					cmd = "chmod 0755 " + pname
+					rc = system(cmd)
+			f.close()
+			rc = system("rm -f /tmp/package.info")
+		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
+		mybox.setTitle("Info")
+				
 
+	def hrestEn(self, answer):
+		self.eDVBDB = eDVBDB.getInstance()
+		self.eDVBDB.reloadServicelist()
+		self.eDVBDB.reloadBouquets()
+		self.session.open(TryQuitMainloop, 3)
 
 class Nab_uninstPanel(Screen):
 	skin = """
@@ -713,9 +746,11 @@ class Nab_uninstPanel(Screen):
 			orig = "/usr/uninstall/" + self.sel
 			cmd = "sh " + orig
 			rc = system(cmd)
-			mybox = self.session.open(MessageBox, "Addon Succesfully Removed.", MessageBox.TYPE_INFO)
+			mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Addon Succesfully Removed. Gui will be now restarted for the changes to take effect.\nPress ok to continue", MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
-			self.close()
+			
+	def hrestEn(self, answer):
+		self.session.open(TryQuitMainloop, 3)
 			
 		
 class Nab_Stats(Screen):
