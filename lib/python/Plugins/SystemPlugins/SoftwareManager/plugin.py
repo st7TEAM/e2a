@@ -1467,6 +1467,7 @@ class UpdatePlugin(Screen):
 
 	def exitAnswer(self, result):
 		if result is not None and result:
+			rc = os_system("umount -a -f -t nfs,smbfs,cifs,ncpfs")
 			quitMainloop(2)
 		self.close()
 
