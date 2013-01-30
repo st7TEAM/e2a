@@ -15,7 +15,6 @@ from os import system, listdir, chdir, getcwd, remove as os_remove
 from urllib2 import Request, urlopen, URLError, HTTPError
 from BhUtils import nab_strip_html, DeliteGetSkinPath, nab_Detect_Machine, BhU_get_Version
 
-
 class DeliteAddons(Screen):
 	skin = """
 	<screen position="160,115" size="390,330" title="Black Hole E2 Addons Manager">
@@ -201,50 +200,57 @@ class Nab_downArea(Screen):
 		
 		mypixmap = mypath + "icons/nabplugins.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Image Plugins"
+		name = "Black Hole Addons Plugins"
 		idx = 1
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/nabplugins.png"
+		png = LoadPixmap(mypixmap)
+		name = "Black Hole Feeds Plugins"
+		idx = 2
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabskins.png"
 		png = LoadPixmap(mypixmap)
 		name = "Black Hole Image Skins"
-		idx = 2
+		idx = 3
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabscript.png"
 		png = LoadPixmap(mypixmap)
 		name = "Black Hole Image Script"
-		idx = 3
+		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nablangs.png"
 		png = LoadPixmap(mypixmap)
 		name = "Black Hole Image Boot Logo"
-		idx = 4
+		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = "Settings"
-		idx = 5
+		idx = 6
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabpicons.png"
 		png = LoadPixmap(mypixmap)
 		name = "Picons Packages"
-		idx = 6
+		idx = 7
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabuploads.png"
 		png = LoadPixmap(mypixmap)
 		name = "Latest 10 Uploads"
-		idx = 7
+		idx = 8
 		res = (name, png, idx)
 		self.list.append(res)
 		
@@ -273,26 +279,29 @@ class Nab_downArea(Screen):
 		
 		if self.sel == 1:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=" + pluginver
-			self.title = "Black Hole Plugins"
+			self.title = "Black Hole Addons Plugins"
 		elif  self.sel == 2:
+			self.url = "feeds"
+			self.title = "Black Hole Feeds Plugins"
+		elif  self.sel == 3:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Skins"
 			self.title = "Black Hole Skins"
 			if box.find('dm') != -1:
 				self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Dreambox-Skins"
 				self.title = "Black Hole Dreambox Skins"
-		elif  self.sel == 3:
+		elif  self.sel == 4:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Scripts"
 			self.title = "Black Hole Scripts"
-		elif  self.sel == 4:
+		elif  self.sel == 5:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Logos"
 			self.title = "Black Hole Boot Logo"
-		elif  self.sel == 5:
+		elif  self.sel == 6:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Settings"
 			self.title = "Black Hole Settings"
-		elif  self.sel == 6:
+		elif  self.sel == 7:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=outcat&cat=Picons"
 			self.title = "Black Hole Picons Packages"
-		elif  self.sel == 7:
+		elif  self.sel == 8:
 			self.url = "http://www.vuplus-community.net/bhaddons/index.php?op=" + catver
 			self.title = "Latest 10 Uploads"	
 			
@@ -300,7 +309,11 @@ class Nab_downArea(Screen):
 		downfile = "/tmp/cpanel.tmp"	
 		if fileExists(downfile):
 			os_remove(downfile)
-		self.session.openWithCallback(self.connectionDone, Nab_ConnectPop, self.url, downfile)
+		
+		if self.url == "feeds":
+			self.session.open(Nab_downFeedCat)
+		else:
+			self.session.openWithCallback(self.connectionDone, Nab_ConnectPop, self.url, downfile)
 			
 			
 	def connectionDone(self):
@@ -310,6 +323,125 @@ class Nab_downArea(Screen):
 		else:
 			nobox = self.session.open(MessageBox, "Sorry, Connection Failed.", MessageBox.TYPE_INFO)
 		
+
+class Nab_downFeedCat(Screen):
+	skin = """
+	<screen position="center,center" size="880,490" title="Black Hole Feeds Plugins">
+		<widget source="list" render="Listbox" position="10,10" size="860,470" zPosition="1" scrollbarMode="showOnDemand"  transparent="1">
+            	<convert type="TemplatedMultiContent">
+                {"template": [
+                MultiContentEntryText(pos = (4, 2), size = (840, 36), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                ],
+                "fonts": [gFont("Regular", 26)],
+                "itemHeight": 36
+                }
+            	</convert>
+             </widget>
+	</screen>"""
+	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		self["list"] = ""
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"ok": self.KeyOk,
+			"back": self.close
+
+		})
+		
+		mlist = [ ]
+		if fileExists("/usr/share/dict/pfeeds.uk"):
+			f = open("/usr/share/dict/pfeeds.uk",'r')
+ 			for line in f.readlines():
+				if len(line) > 4:
+					parts = line.strip().split("|")
+					res = (parts[0], parts[1], parts[2])
+					mlist.append(res)
+ 			f.close()
+		
+		self["list"] = List(mlist)
+
+
+	def KeyOk(self):
+		self.sel = self["list"].getCurrent()
+		if self.sel:
+			self.session.open(Nab_ShowFeedFile, self.sel[1], self.sel[2])
+
+class Nab_ShowFeedFile(Screen):
+	skin = """
+	<screen position="center,center" size="800,405" title="Black Hole E2 Package Details">
+		<widget name="infotext" position="20,15" size="760,315" font="Regular;24" />
+		<ePixmap pixmap="skin_default/buttons/green.png" position="173,365" size="140,40" alphatest="on" />
+		<widget name="key_green" position="173,365" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="486,365" size="140,40" alphatest="on" />
+		<widget name="key_yellow" position="486,365" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1" />
+	</screen>"""
+	
+	def __init__(self, session, myidf, desc):
+		Screen.__init__(self, session)
+
+		self["key_green"] = Label("Install")
+		self["key_yellow"] = Label("Cancel")
+		self["infotext"] = ScrollLabel(desc)
+		self.fileN = myidf
+	
+		self["actions"] = ActionMap(["WizardActions", "ColorActions", "DirectionActions"],
+		{
+			"ok": self.KeyGreend,
+			"back": self.close,
+			"green": self.KeyGreend,
+			"yellow": self.close,
+			"up": self["infotext"].pageUp,
+			"down": self["infotext"].pageDown
+
+		})
+			
+	def KeyGreend(self):
+		message = "Do you want to install the Addon:\n " + self.fileN + " ?"
+		ybox = self.session.openWithCallback(self.installadd, MessageBox, message, MessageBox.TYPE_YESNO)
+		ybox.setTitle("Install")
+		
+	def installadd(self, answer):
+		if answer is True:
+			dest = self.fileN
+			mydir = getcwd()
+			chdir("/")
+			cmd = "opkg update"
+			if fileExists("/var/lib/opkg/official-all"):
+				cmd = "echo -e 'Testing: %s '" % (dest)
+			cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
+			cmd1 = "opkg install --force-overwrite " + dest
+			cmd2 = "rm -f " + dest
+			self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd0, cmd1, cmd2, "sleep 5"], finishedCallback = self.installipkDone)
+			chdir(mydir)	
+	
+	def installipkDone(self):
+		if fileExists("/tmp/package.info"):
+			f = open("/tmp/package.info",'r')
+			for line in f.readlines():
+				if line.find('Installing') != -1:
+					parts = line.strip().split()
+					pname = "/usr/uninstall/" + parts[1] + ".del"
+					out = open(pname,'w')
+					line = "#!/bin/sh\n\nopkg remove --force-depends --force-remove %s\nrm -f %s\n\nexit 0\n" % (parts[1], pname)
+					out.write(line)
+					out.close()
+					cmd = "chmod 0755 " + pname
+					rc = system(cmd)
+			f.close()
+			rc = system("rm -f /tmp/package.info")
+		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
+		mybox.setTitle("Info")
+				
+
+	def hrestEn(self, answer):
+		self.eDVBDB = eDVBDB.getInstance()
+		self.eDVBDB.reloadServicelist()
+		self.eDVBDB.reloadBouquets()
+		self.session.open(TryQuitMainloop, 3)
+
 
 class Nab_downCat(Screen):
 	skin = """
@@ -533,7 +665,7 @@ class Nab_ShowDownFile(Screen):
 				cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 				cmd1 = "opkg install --force-overwrite " + dest
 				cmd2 = "rm -f " + dest
-				self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd0, cmd1, cmd2], finishedCallback = self.installipkDone)
+				self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd0, cmd1, cmd2, "sleep 5"], finishedCallback = self.installipkDone)
 				chdir(mydir)
 				
 	
@@ -675,7 +807,7 @@ class Nab_downPanelIPK(Screen):
 			cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 			cmd1 = "opkg install --force-overwrite " + dest
 			cmd2 = "rm -f " + dest
-			self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd0, cmd1, cmd2], finishedCallback = self.installipkDone)
+			self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd0, cmd1, cmd2, "sleep 5"], finishedCallback = self.installipkDone)
 			chdir(mydir)
 			
 	def installipkDone(self):
