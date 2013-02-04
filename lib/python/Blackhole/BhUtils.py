@@ -193,6 +193,7 @@ def BhU_checkSkinVersion(skinfile):
 	return ret
 	
 def BhU_fake_transl():
+	Black_Hole_Shutdown = _("Black Hole Shutdown")
 	Restart_Gui = _("Restart Gui")
 	Hard_Reset = _("Hard Reset")
 	Standby = _("Standby")
