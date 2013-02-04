@@ -403,7 +403,7 @@ class FUFilebrowser(Screen):
 		#print "[FirmwareUpgrade] - Verify : file[%s], md5[%s]"%(md5sum_A,md5sum_B)
 
 		if md5sum_A != md5sum_B:
-			self.session.open(MessageBox, _("Fail to verify data file. \nfile[%s]\nmd5[%s]") % (md5sum_A,md5sum_B), MessageBox.TYPE_INFO, timeout = 10)
+			self.session.open(MessageBox, "Fail to verify data file. \nfile[%s]\nmd5[%s]" % (md5sum_A,md5sum_B), MessageBox.TYPE_INFO, timeout = 10)
 			return 
 
 		if self.callback is not None:
