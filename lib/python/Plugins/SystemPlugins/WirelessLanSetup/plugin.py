@@ -1062,7 +1062,7 @@ class WlanScanAp(Screen,HelpableScreen):
 	def emptyListMsg(self):
 		self.session.open(MessageBox, _("No AP detected."), type = MessageBox.TYPE_INFO, timeout = 10)
 		self["Address"].setText(_("No AP detected."))
-		self["ESSID"].setText(_(""))
+		self["ESSID"].setText("")
 
 	def restartScanAP(self):
 		self.getAplistTimer.start(100,True)
