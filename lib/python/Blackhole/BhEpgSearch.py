@@ -116,7 +116,7 @@ class Nab_EpgSearch(Screen):
 
 	def SearchNot(self):
 		self.menTimer.stop()
-		self.session.open(MessageBox, "Sorry no events found matching to the search criteria.", MessageBox.TYPE_INFO)		
+		self.session.open(MessageBox, _("Sorry no events found matching to the search criteria."), MessageBox.TYPE_INFO)		
 		
 	def delTimer(self):
 		del self.menTimer

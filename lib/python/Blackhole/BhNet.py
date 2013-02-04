@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from Screens.Screen import Screen
 
 from Screens.MessageBox import MessageBox
@@ -43,10 +45,10 @@ class DeliteOpenvpn(Screen):
 		self["lab3"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Stopped"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Start")
-		self["key_green"] = Label("Stop")
-		self["key_yellow"] = Label("Set Active")
-		self["key_blue"] = Label("Show Log")
+		self["key_red"] = Label(_("Start"))
+		self["key_green"] = Label(_("Stop"))
+		self["key_yellow"] = Label(_("Set Active"))
+		self["key_blue"] = Label(_("Show Log"))
 		self.my_vpn_active = False
 		self.my_vpn_run = False
 				
@@ -66,10 +68,10 @@ class DeliteOpenvpn(Screen):
 	def activateVpn(self):
 		
 		myline = 'AUTOSTART="all"'
-		mymess = "OpenVpn Enabled. Autostart activated."
+		mymess = _("OpenVpn Enabled. Autostart activated.")
 		if self.my_vpn_active == True:
 			myline = 'AUTOSTART="none"'
-			mymess = "OpenVpn disabled."
+			mymess = _("OpenVpn disabled.")
 			
 		if fileExists("/usr/bin/openvpn_script.sh"):
 			inme = open("/usr/bin/openvpn_script.sh",'r')
@@ -92,7 +94,7 @@ class DeliteOpenvpn(Screen):
 		
 	def restartVpn(self):
 		if self.my_vpn_active == False:
-			mybox = self.session.open(MessageBox, "You have to Activate OpenVpn before to start", MessageBox.TYPE_INFO)
+			mybox = self.session.open(MessageBox, _("You have to Activate OpenVpn before to start"), MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
 		elif self.my_vpn_active == True and self.my_vpn_run == False:
 			rc = system("/usr/bin/openvpn_script.sh start")
@@ -127,8 +129,8 @@ class DeliteOpenvpn(Screen):
 			f = open("/usr/bin/openvpn_script.sh",'r')
  			for line in f.readlines():
 				if line.find('AUTOSTART="all"') != -1:
-					self["labactive"].setText("Active/Autostart enabled")
-					self["key_yellow"].setText("Deactivate")
+					self["labactive"].setText(_("Active/Autostart enabled"))
+					self["key_yellow"].setText(_("Deactivate"))
 					self.my_vpn_active = True
 								
 			f.close()
@@ -211,9 +213,9 @@ class DeliteSamba(Screen):
 		self["lab2"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Stopped"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Start")
-		self["key_green"] = Label("Stop")
-		self["key_yellow"] = Label("Autostart")
+		self["key_red"] = Label(_("Start"))
+		self["key_green"] = Label(_("Stop"))
+		self["key_yellow"] = Label(_("Autostart"))
 		self.my_samba_active = False
 		self.my_samba_run = False
 				
@@ -242,12 +244,12 @@ class DeliteSamba(Screen):
 			self.updateSamb()
 		
 	def NSambaset(self):
-		mymess = "Samba Autostart Enabled."
+		mymess = _("Samba Autostart Enabled.")
 		
 		if fileExists("/etc/network/if-up.d/01samba-start"):
 			rc = system("rm -f /etc/network/if-up.d/01samba-start")
 			rc = system("rm -f /etc/network/if-down.d/01samba-kill")
-			mymess = "Samba Autostart Disabled."
+			mymess = _("Samba Autostart Disabled.")
 		else:
 			out = open("/etc/network/if-up.d/01samba-start", "w")
 			strview = "#!/bin/sh\nsmbd -D\nnmbd -D\n"
@@ -262,7 +264,7 @@ class DeliteSamba(Screen):
 			system("chmod 0755 /etc/network/if-down.d/01samba-kill")
 		
 		mybox = self.session.open(MessageBox, mymess, MessageBox.TYPE_INFO)
-		mybox.setTitle("Info")
+		mybox.setTitle(_("Info"))
 		self.updateSamb()
 
 
@@ -276,7 +278,7 @@ class DeliteSamba(Screen):
 		
 		
 		if fileExists("/etc/network/if-up.d/01samba-start"):
-			self["labactive"].setText("Enabled")
+			self["labactive"].setText(_("Enabled"))
 			self.my_samba_active = True
 				
 				
@@ -316,8 +318,8 @@ class DeliteTelnet(Screen):
 		self["lab2"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Stopped"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Enable")
-		self["key_green"] = Label("Disable")
+		self["key_red"] = Label(_("Enable"))
+		self["key_green"] = Label(_("Disable"))
 		self.my_telnet_active = False
 				
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -347,7 +349,7 @@ class DeliteTelnet(Screen):
 				system("mv -f  /etc/inetd.tmp /etc/inetd.conf")
 				rc = system("killall -HUP inetd")
 				rc = system("ps")
-				mybox = self.session.open(MessageBox, "Telnet service Enabled.", MessageBox.TYPE_INFO)
+				mybox = self.session.open(MessageBox, _("Telnet service Enabled."), MessageBox.TYPE_INFO)
 				mybox.setTitle("Info")
 				self.updateTeln()
 			
@@ -368,7 +370,7 @@ class DeliteTelnet(Screen):
 				system("mv -f  /etc/inetd.tmp /etc/inetd.conf")
 				rc = system("killall -HUP inetd")
 				rc = system("ps")
-				mybox = self.session.open(MessageBox, "Telnet service Disabled.", MessageBox.TYPE_INFO)
+				mybox = self.session.open(MessageBox, _("Telnet service Disabled."), MessageBox.TYPE_INFO)
 				mybox.setTitle("Info")
 				self.updateTeln()
 		
@@ -414,8 +416,8 @@ class DeliteFtp(Screen):
 		self["lab2"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Stopped"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Enable")
-		self["key_green"] = Label("Disable")
+		self["key_red"] = Label(_("Enable"))
+		self["key_green"] = Label(_("Disable"))
 		self.my_ftp_active = False
 				
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -445,8 +447,8 @@ class DeliteFtp(Screen):
 				system("mv -f  /etc/inetd.tmp /etc/inetd.conf")
 				rc = system("killall -HUP inetd")
 				rc = system("ps")
-				mybox = self.session.open(MessageBox, "Ftp service Enabled.", MessageBox.TYPE_INFO)
-				mybox.setTitle("Info")
+				mybox = self.session.open(MessageBox, _("Ftp service Enabled."), MessageBox.TYPE_INFO)
+				mybox.setTitle(_("Info"))
 				self.updateFtp()
 			
 		
@@ -466,8 +468,8 @@ class DeliteFtp(Screen):
 				system("mv -f  /etc/inetd.tmp /etc/inetd.conf")
 				rc = system("killall -HUP inetd")
 				rc = system("ps")
-				mybox = self.session.open(MessageBox, "Ftp service Disabled.", MessageBox.TYPE_INFO)
-				mybox.setTitle("Info")
+				mybox = self.session.open(MessageBox, _("Ftp service Disabled."), MessageBox.TYPE_INFO)
+				mybox.setTitle(_("Info"))
 				self.updateFtp()
 		
 
@@ -517,9 +519,9 @@ class BhNfsServer(Screen):
 		self["lab2"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Stopped"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Start")
-		self["key_green"] = Label("Stop")
-		self["key_yellow"] = Label("Autostart")
+		self["key_red"] = Label(_("Start"))
+		self["key_green"] = Label(_("Stop"))
+		self["key_yellow"] = Label(_("Autostart"))
 		self.my_nfs_active = False
 		self.my_nfs_run = False
 				
@@ -546,11 +548,11 @@ class BhNfsServer(Screen):
 			self.updateNfs()
 		
 	def Nfsset(self):
-		mymess = "Nfs Autostart Enabled."
+		mymess = _("Nfs Autostart Enabled.")
 		
 		if fileExists("/etc/rc3.d/S20nfsserver"):
 			rc = system("rm -f /etc/rc3.d/S20nfsserver")
-			mymess = "Nfs Autostart Disabled."
+			mymess = _("Nfs Autostart Disabled.")
 		else:
 			system("ln -s /usr/bin/nfs_server_script.sh /etc/rc3.d/S20nfsserver")
 		
@@ -563,13 +565,13 @@ class BhNfsServer(Screen):
 		rc = system("ps > /tmp/nvpn.tmp")
 		self["labrun"].hide()
 		self["labstop"].hide()
-		self["labactive"].setText("Disabled")
+		self["labactive"].setText(_("Disabled"))
 		self.my_nfs_active = False
 		self.my_nfs_run = False
 		
 		
 		if fileExists("/etc/rc3.d/S20nfsserver"):
-			self["labactive"].setText("Enabled")
+			self["labactive"].setText(_("Enabled"))
 			self.my_nfs_active = True
 				
 				
@@ -609,8 +611,8 @@ class BhDjmount(Screen):
 		self["lab2"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Stopped"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Enable")
-		self["key_green"] = Label("Disable")
+		self["key_red"] = Label(_("Enable"))
+		self["key_green"] = Label(_("Disable"))
 		self.my_serv_active = False
 				
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -629,7 +631,7 @@ class BhDjmount(Screen):
 			rc = system("ln -s ../init.d/djmount /etc/rc3.d/S20djmount")
 			rc = system("/etc/init.d/djmount start")
 				
-			mybox = self.session.open(MessageBox, "UPnP Client Enabled.", MessageBox.TYPE_INFO)
+			mybox = self.session.open(MessageBox, _("UPnP Client Enabled."), MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
 			self.updateServ()
 			
@@ -640,8 +642,8 @@ class BhDjmount(Screen):
 			if fileExists("/etc/rc3.d/S20djmount"):
 				os_remove("/etc/rc3.d/S20djmount")
 			
-			mybox = self.session.open(MessageBox, "UPnP Client Disabled.", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("UPnP Client Disabled."), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 			rc = system("sleep 1")
 			self.updateServ()
 		
@@ -684,13 +686,13 @@ class BhMediatomb(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
-		mytext = "Mediatomb: UPnP media server Black Hole version.\nMediatomb is fully configured for your box and ready to work. Just enable it and play.\nMediatomb include a nice web interface url to manage your media.\n\nMediatomb webif url: http://ip_box:49152\nMediatomb configs: /.mediatomb/config.xml\nMediatomb docs & howto: http://mediatomb.cc/"
+		mytext = _("Mediatomb: UPnP media server Black Hole version.\nMediatomb is fully configured for your box and ready to work. Just enable it and play.\nMediatomb include a nice web interface url to manage your media.\n\nMediatomb webif url: http://ip_box:49152\nMediatomb configs: /.mediatomb/config.xml\nMediatomb docs & howto: http://mediatomb.cc/")
 		self["lab1"] = Label(mytext)
 		self["lab2"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Stopped"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Enable")
-		self["key_green"] = Label("Disable")
+		self["key_red"] = Label(_("Enable"))
+		self["key_green"] = Label(_("Disable"))
 		self.my_serv_active = False
 				
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -713,14 +715,14 @@ class BhMediatomb(Screen):
 		f.close()
 		os_remove("/tmp/nvpn.tmp")
 		if self.my_serv_active == True:
-			self.session.open(MessageBox, "Mediatomb already up and running.", MessageBox.TYPE_INFO)
+			self.session.open(MessageBox, _("Mediatomb already up and running."), MessageBox.TYPE_INFO)
 		elif minidlna_active == True:	
-			self.session.open(MessageBox, "Sorry you cannot run two UpnP Servers togheter. Please disable minidlna before to run Mediatomb.", MessageBox.TYPE_INFO)
+			self.session.open(MessageBox, _("Sorry you cannot run two UpnP Servers togheter. Please disable minidlna before to run Mediatomb."), MessageBox.TYPE_INFO)
 		else:
 			rc = system("ln -s ../init.d/mediatomb /etc/rc3.d/S20mediatomb")
 			rc = system("/etc/init.d/mediatomb start")		
-			mybox = self.session.open(MessageBox, "Mediatomb Server Enabled.", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("Mediatomb Server Enabled."), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 			self.updateServ()
 			
 		
@@ -730,7 +732,7 @@ class BhMediatomb(Screen):
 			if fileExists("/etc/rc3.d/S20mediatomb"):
 				os_remove("/etc/rc3.d/S20mediatomb")
 				
-			mybox = self.session.open(MessageBox, "Mediatomb Server Disabled.", MessageBox.TYPE_INFO)
+			mybox = self.session.open(MessageBox, _("Mediatomb Server Disabled."), MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
 			rc = system("sleep 1")
 			self.updateServ()
@@ -774,13 +776,13 @@ class BhMinidlna(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
-		mytext = "Minidlna: UPnP media server Black Hole version.\nMinidlna is fully configured for your box and ready to work. Just enable it and play.\nMinidlna include little web interface.\n\nMinidlna webif url: http://ip_box:8200\nMinidlna config: /etc/minidlna.conf\nMinidlna home site: http://sourceforge.net/projects/minidlna/"
+		mytext = _("Minidlna: UPnP media server Black Hole version.\nMinidlna is fully configured for your box and ready to work. Just enable it and play.\nMinidlna include little web interface.\n\nMinidlna webif url: http://ip_box:8200\nMinidlna config: /etc/minidlna.conf\nMinidlna home site: http://sourceforge.net/projects/minidlna/")
 		self["lab1"] = Label(mytext)
 		self["lab2"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Stopped"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Enable")
-		self["key_green"] = Label("Disable")
+		self["key_red"] = Label(_("Enable"))
+		self["key_green"] = Label(_("Disable"))
 		self.my_serv_active = False
 				
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -803,14 +805,14 @@ class BhMinidlna(Screen):
 		f.close()
 		os_remove("/tmp/nvpn.tmp")
 		if self.my_serv_active == True:
-			self.session.open(MessageBox, "Minidlna already up and running.", MessageBox.TYPE_INFO)
+			self.session.open(MessageBox, _("Minidlna already up and running."), MessageBox.TYPE_INFO)
 		elif mediatomb_active == True:	
-			self.session.open(MessageBox, "Sorry you cannot run two UpnP Servers togheter. Please disable Mediatomb before to run minidlna.", MessageBox.TYPE_INFO)
+			self.session.open(MessageBox, _("Sorry you cannot run two UpnP Servers togheter. Please disable Mediatomb before to run minidlna."), MessageBox.TYPE_INFO)
 		else:
 			rc = system("ln -s ../init.d/minidlna /etc/rc3.d/S90minidlna")
 			rc = system("/etc/init.d/minidlna start")		
-			mybox = self.session.open(MessageBox, "Minidlna Server Enabled.", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("Minidlna Server Enabled."), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 			self.updateServ()
 			
 		
@@ -820,8 +822,8 @@ class BhMinidlna(Screen):
 			if fileExists("/etc/rc3.d/S90minidlna"):
 				os_remove("/etc/rc3.d/S90minidlna")
 				
-			mybox = self.session.open(MessageBox, "Minidlna Server Disabled.", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("Minidlna Server Disabled."), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 			rc = system("sleep 1")
 			self.updateServ()
 		
@@ -867,22 +869,21 @@ class BhTunerServer(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
-		mytext = """
-This feature will allow you to share the tuners of this box with another Vu+ box, a PC, a Ps3 and/or a compatible UPnP device in your home network.
-The server will build a virtual channels list in the folder /media/hdd/tuner on this box.
-You can access the tuner(s) of this box from clients on your internal lan using nfs, cifs, UPnP or any other network mountpoint.
-The tuner of the server (this box) has to be avaliable. This means that if you have ony one tuner in your box you can only stream the channel you are viewing (or any channel you choose if your box is in standby).
-Remember to select the correct Audio track in the audio menu if there is no audio or the wrong language is streaming.
-NOTE: The sever is built, based on your current ip and the current channel list of this box. If you change your ip or your channel list is updated, you will need to rebuild the server database.
-
-		"""
+		mytext = _("This feature will allow you to share the tuners of this box with another Vu+ box, a PC, a Ps3 and/or a compatible UPnP device in your home network.\n")
+		mytext += _("The server will build a virtual channels list in the folder /media/hdd/tuner on this box.\n")
+		mytext += _("You can access the tuner(s) of this box from clients on your internal lan using nfs, cifs, UPnP or any other network mountpoint.\n")
+		mytext += _("The tuner of the server (this box) has to be avaliable.")
+		mytext += _("This means that if you have ony one tuner in your box you can only stream the channel you are viewing (or any channel you choose if your box is in standby).\n")
+		mytext += _("Remember to select the correct Audio track in the audio menu if there is no audio or the wrong language is streaming.\n")
+		mytext += _("NOTE: The sever is built, based on your current ip and the current channel list of this box. If you change your ip or your channel list is updated, you will need to rebuild the server database.")
+		
 		self["lab1"] = Label(mytext)
 		self["lab2"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Server Disabled"))
 		self["labrun"] = Label(_("Server Enabled"))
-		self["key_red"] = Label("Build Server")
-		self["key_green"] = Label("Disable Server")
-		self["key_yellow"] = Label("Close")
+		self["key_red"] = Label(_("Build Server"))
+		self["key_green"] = Label(_("Disable Server"))
+		self["key_yellow"] = Label(_("Close"))
 		self.my_serv_active = False
 		self.ip = "0.0.0.0"
 				
@@ -902,7 +903,7 @@ NOTE: The sever is built, based on your current ip and the current channel list 
 		
 		
 	def ServStart(self):
-		self["lab1"].setText("Server building in progress\nPlease wait ...")
+		self["lab1"].setText(_("Server building in progress\nPlease wait ..."))
 		self.activityTimer.start(10)
 		
 	def doServStart(self):
@@ -927,17 +928,14 @@ NOTE: The sever is built, based on your current ip and the current channel list 
 			count += 1
 			
 		chdir("/home/root")
-		mytext = """
-Server avaliable on ip %s
-To access this box's tuners you can connect via lan or UPnP.
-
-1) To connect via lan you have to mount the /media/hdd folder of this box in the client /media/hdd folder. Then you can access the tuners server channel list from the client Media player -> Harddisk -> tuner.
-2) To connect via UPnP you have to start Mediatomb on this box and then start Djmount on the client. Then you can access the tuners server channel list for the client Media Player -> DLNA -> MediaTomb -> playlists.
-
-NOTE about UPnP: Because UPnP requires alot of memory, you should only use it if you need to access your box from a PS3 or other device that cannot be mounted via Lan. Also, After the server has been built we strongly suggest you delete the Bouquets directory that are not really needed BEFORE you start Mediatomb. This will save alot of memory and resources.
-		""" % (self.ip)
+		mytext = _("Server avaliable on ip " + self.ip + " \n\n")
+		mytext += _("To access this box's tuners you can connect via lan or UPnP.\n\n")
+		mytext += _("1) To connect via lan you have to mount the /media/hdd folder of this box in the client /media/hdd folder. Then you can access the tuners server channel list from the client Media player -> Harddisk -> tuner.\n")
+		mytext += _("2) To connect via UPnP you have to start Mediatomb on this box and then start Djmount on the client. Then you can access the tuners server channel list for the client Media Player -> DLNA -> MediaTomb -> playlists.\n\n")
+		mytext += _("NOTE about UPnP: Because UPnP requires alot of memory, you should only use it if you need to access your box from a PS3 or other device that cannot be mounted via Lan. Also, After the server has been built we strongly suggest you delete the Bouquets directory that are not really needed BEFORE you start Mediatomb. This will save alot of memory and resources.")
+		
 		self["lab1"].setText(mytext)
-		self.session.open(MessageBox, "Build Complete.", MessageBox.TYPE_INFO)
+		self.session.open(MessageBox, _("Build Complete."), MessageBox.TYPE_INFO)
 		self.updateServ()
 			
 	def poPulate(self, bouquet, count):
@@ -979,8 +977,8 @@ NOTE about UPnP: Because UPnP requires alot of memory, you should only use it if
 	def ServStop(self):
 		if self.my_serv_active == True:	
 			ret = system("rm -rf /media/hdd/tuner")
-			mybox = self.session.open(MessageBox, "Tuner Server disabled.", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("Tuner Server disabled."), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 			rc = system("sleep 1")
 			self.updateServ()
 		
@@ -1066,8 +1064,8 @@ class BhPcsc(Screen):
 		self["lab2"] = Label(_("Current Status:"))
 		self["labstop"] = Label(_("Stopped"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Enable")
-		self["key_green"] = Label("Disable")
+		self["key_red"] = Label(_("Enable"))
+		self["key_green"] = Label(_("Disable"))
 		self.my_serv_active = False
 				
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -1086,8 +1084,8 @@ class BhPcsc(Screen):
 			rc = system("ln -s ../init.d/pcscd /etc/rc3.d/S20pcscd")
 			rc = system("/etc/init.d/pcscd start")
 				
-			mybox = self.session.open(MessageBox, "Pcsc Enabled.", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("Pcsc Enabled."), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 			self.updateServ()
 			
 		
@@ -1097,8 +1095,8 @@ class BhPcsc(Screen):
 			if fileExists("/etc/rc3.d/S20pcscd"):
 				os_remove("/etc/rc3.d/S20pcscd")
 			
-			mybox = self.session.open(MessageBox, "Pcsc Client Disabled.", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("Pcsc Client Disabled."), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 			rc = system("sleep 1")
 			self.updateServ()
 		

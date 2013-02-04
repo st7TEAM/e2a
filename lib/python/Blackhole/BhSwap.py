@@ -142,7 +142,7 @@ class DeliteSwap(Screen):
 				rc = system(cmd)
 				self.updateSwap()
 			else:
-				mybox = self.session.open(MessageBox, "Swap File not found. You have to create the file before to activate.", MessageBox.TYPE_INFO)
+				mybox = self.session.open(MessageBox, _("Swap File not found. You have to create the file before to activate."), MessageBox.TYPE_INFO)
 				mybox.setTitle(_("Info"))
 	
 	def createDel(self):
@@ -154,7 +154,7 @@ class DeliteSwap(Screen):
 			cmd = "rm -f " + self.swap_place
 			rc = system(cmd)
 			system("rm -f /usr/bin/.Bhautoswap")
-			mybox = self.session.open(MessageBox, "Swap File Deleted and Autostart Deactivated.", MessageBox.TYPE_INFO)
+			mybox = self.session.open(MessageBox, _("Swap File Deleted and Autostart Deactivated."), MessageBox.TYPE_INFO)
 			mybox.setTitle(_("Info"))
 			self.updateSwap()
 		else:
@@ -193,14 +193,14 @@ class DeliteSwap(Screen):
 		if (myhdd):
 			myoptions.append(['HARD DISK', myhdd])
 			
-		self.session.openWithCallback(self.doCSplace,ChoiceBox, title="Select the Swap File Place:", list=myoptions)
+		self.session.openWithCallback(self.doCSplace,ChoiceBox, title=_("Select the Swap File Place:"), list=myoptions)
 		
 		
 	def doCSplace(self, name):
 		if name:
 			self.new_place = name[1]
 			myoptions = [['8 Mega', '8192'], ['16 Mega', '16384'], ['32 Mega', '32768'], ['64 Mega', '65536'], ['128 Mega', '131072'], ['256 Mega', '262144']]	
-			self.session.openWithCallback(self.doCSsize,ChoiceBox, title="Select the Swap File Size:", list=myoptions)
+			self.session.openWithCallback(self.doCSsize,ChoiceBox, title=_("Select the Swap File Size:"), list=myoptions)
 			
 		
 	def doCSsize(self, size):
@@ -210,29 +210,29 @@ class DeliteSwap(Screen):
 			cmd = "dd if=/dev/zero of=" + myfile + " bs=1024 count=" + size + " 2>/dev/null"
 			rc = system(cmd)
 			if rc == 0:
-				mybox = self.session.open(MessageBox, "Swap File successfully created.", MessageBox.TYPE_INFO)
+				mybox = self.session.open(MessageBox, _("Swap File successfully created."), MessageBox.TYPE_INFO)
 				mybox.setTitle("Info")
 				self.updateSwap()
 			else:
-				mybox = self.session.open(MessageBox, "Swap File creation Failed. Check for Available space.", MessageBox.TYPE_INFO)
-				mybox.setTitle("Info")
+				mybox = self.session.open(MessageBox, _("Swap File creation Failed. Check for Available space."), MessageBox.TYPE_INFO)
+				mybox.setTitle(_("Info"))
 			
 			
 	def autoSsWap(self):
 		if fileExists("/usr/bin/.Bhautoswap"):
 			system("rm -f /usr/bin/.Bhautoswap")
-			mybox = self.session.open(MessageBox, "Swap file Automatic Startup Disabled", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("Swap file Automatic Startup Disabled"), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 		elif (self.swap_place):
 			strview = "#!/bin/sh\nmkswap " + self.swap_place + "\nswapon " + self.swap_place + "\n"
 			out = open("/usr/bin/.Bhautoswap", "w")
 			out.write(strview)
 			out.close()
 			system("chmod 0755 /usr/bin/.Bhautoswap")
-			mybox = self.session.open(MessageBox, "Swap file Automatic Startup Enabled", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("Swap file Automatic Startup Enabled"), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 		else:
-			mybox = self.session.open(MessageBox, "You have to create a Swap File before to activate the autostart.", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("You have to create a Swap File before to activate the autostart."), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 		self.updateSwap()
 	

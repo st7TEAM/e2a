@@ -188,11 +188,11 @@ class DeliteEpgPanel(Screen):
 		if self.sel:
 			etype = self.sel[1]
 			if etype != "ext_dat":
-				self.session.open(MessageBox, "Sorry you are allowed to remove external epg.dat servers only.", MessageBox.TYPE_ERROR)
+				self.session.open(MessageBox, _("Sorry you are allowed to remove external epg.dat servers only."), MessageBox.TYPE_ERROR)
 			else:
-				message = "Are you sure you want to Remove Server:\n " + self.sel[0] + "?"
+				message = _("Are you sure you want to Remove Server:\n ") + self.sel[0] + _("?")
 				ybox = self.session.openWithCallback(self.dodelProvider, MessageBox, message, MessageBox.TYPE_YESNO)
-				ybox.setTitle("Remove Confirmation")	
+				ybox.setTitle(_("Remove Confirmation"))
 		
 	def dodelProvider(self, answer):
 		if answer is True:
@@ -257,7 +257,7 @@ class DeliteEpgAddProvider(Screen, ConfigListScreen):
 		
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
-		self["lab1"] = Label("You can add here servers to download external epg.dat files.\nWarning: file format allowed are gzip and bzip2 epg.dat (.dat.gz .dat.bz2).\nExample: http://example.com/uk_epg.dat.gz")
+		self["lab1"] = Label(_("You can add here servers to download external epg.dat files.\nWarning: file format allowed are gzip and bzip2 epg.dat (.dat.gz .dat.bz2).\nExample: http://example.com/uk_epg.dat.gz"))
 		self["key_red"] = Label(_("Virtual Keyb."))
 		self["key_green"] = Label(_("Save"))
 		
@@ -277,9 +277,9 @@ class DeliteEpgAddProvider(Screen, ConfigListScreen):
 		self.provider.value = "None"
 		self.url.value = "http://"
 		
-		res = getConfigListEntry("Server Name", self.provider)
+		res = getConfigListEntry(_("Server Name"), self.provider)
 		self.list.append(res)
-		res = getConfigListEntry("Epg.dat Url", self.url)
+		res = getConfigListEntry(_("Epg.dat Url"), self.url)
 		self.list.append(res)
 		
 		self["config"].list = self.list
@@ -289,11 +289,12 @@ class DeliteEpgAddProvider(Screen, ConfigListScreen):
 	def vkeyb(self):
 		sel = self["config"].getCurrent()
 		if sel:
+			self.vki = self["config"].getCurrentIndex()
 			self.vkvar = sel[0]
 			value = "xmeo"
-			if self.vkvar == "Server Name":
+			if self.vki == 0:
 				value = self.provider.value
-			elif self.vkvar == "Epg.dat Url":
+			elif self.vki == 1:
 				value = self.url.value
 			
 			if value == "None":
@@ -307,14 +308,14 @@ class DeliteEpgAddProvider(Screen, ConfigListScreen):
 		if newt is None:
 			newt = ""
 		if newt.strip() != "":
-			if self.vkvar == "Server Name":
+			if self.vki == 0:
 				self.provider.value = newt
-			elif self.vkvar == "Epg.dat Url":
+			elif self.vki == 1:
 				self.url.value = newt
 			
-			res = getConfigListEntry("Server Name", self.provider)
+			res = getConfigListEntry(_("Server Name"), self.provider)
 			self.list.append(res)
-			res = getConfigListEntry("Epg.dat Url", self.url)
+			res = getConfigListEntry(_("Epg.dat Url"), self.url)
 			self.list.append(res)
 		
 			self["config"].list = self.list
@@ -327,16 +328,16 @@ class DeliteEpgAddProvider(Screen, ConfigListScreen):
 		if self.url.value.strip() == "http://":
 			self.url.value = ""
 		if self.provider.value.strip() == "" or self.url.value.strip() == "":
-			msg = "You have to provide both Server Name and Epg.dat Url"
+			msg = _("You have to provide both Server Name and Epg.dat Url")
 
 		if self.url.value.find('.dat.gz') == -1 and self.url.value.find('.dat.bz2') == -1:
-			msg = "Wrong file format.\n  Only epg.dat gzip and bzip2 files are allowed (.dat.gz .dat.bz2)."
+			msg = _("Wrong file format.\n  Only epg.dat gzip and bzip2 files are allowed (.dat.gz .dat.bz2).")
 
 		f = open("/etc/Bhepgproviders.cfg",'r')
  		for line in f.readlines():
 			parts = line.strip().split(",")
 			if parts[0] == self.provider.value:
-				msg = "Error. This Provider name already exists in the list."
+				msg = _("Error. This Provider name already exists in the list.")
 		f.close()
 
 
@@ -542,7 +543,7 @@ class DeliteOpenepgProv(Screen):
 		if myfile:
 			self.session.open(DeliteEpgChannels, self.provider)
 		else:
-			self.session.open(MessageBox, "Sorry, Channel List not available for this Provider.", MessageBox.TYPE_INFO)
+			self.session.open(MessageBox, _("Sorry, Channel List not available for this Provider."), MessageBox.TYPE_INFO)
 		
 class DeliteOepgSetup(Screen, ConfigListScreen):
 	skin = """
@@ -579,7 +580,7 @@ class DeliteOepgSetup(Screen, ConfigListScreen):
 		self.epgautodown = NoSave(ConfigYesNo(default=False))
 		self.timerentry_starttime = NoSave(ConfigClock(default=0))
 		self.delitepostcom = NoSave(ConfigSelection(default = "nothing", choices = [
-		("nothing", "nothing"), ("standby", "standby"), ("deepstandby", "deepstandby")]))
+		("nothing", _("nothing")), ("standby", _("standby")), ("deepstandby", _("deepstandby"))]))
 		
 		strview = ""
 		mytmpt = [23,10]
@@ -665,8 +666,8 @@ class DeliteOepgSetup(Screen, ConfigListScreen):
 		os_rename("/etc/enigma2/timers.tmp", "/etc/enigma2/timers.xml")
 		
 		
-		ybox = self.session.openWithCallback(self.restEn, MessageBox, "Click Ok to restart gui and activate changes.", MessageBox.TYPE_INFO)
-		ybox.setTitle("Gui Restart.")
+		ybox = self.session.openWithCallback(self.restEn, MessageBox, _("Click Ok to restart gui and activate changes."), MessageBox.TYPE_INFO)
+		ybox.setTitle(_("Gui Restart."))
 					
 	def restEn(self, answer):
 #Warning E2 brutal kill is needed to make safe the new timers.xml file.
@@ -830,7 +831,7 @@ class DeliteExtdatSetup(Screen, ConfigListScreen):
 		
 	def saveMyprov(self):
 		if self.url.value.find('.dat.gz') == -1 and self.url.value.find('.dat.bz2') == -1:
-			msg = "Wrong file format.\n  Only epg.dat gzip and bzip2 files are allowed (.dat.gz .dat.bz2)."
+			msg = _("Wrong file format.\n  Only epg.dat gzip and bzip2 files are allowed (.dat.gz .dat.bz2).")
 			self.session.open(MessageBox, msg, MessageBox.TYPE_ERROR)
 			return
 		
@@ -903,9 +904,9 @@ class DeliteXmltepgProv(Screen):
 		self["labtype"] = Label("")
 		self["lab2"] = Label(_("Url:"))
 		self["laburl"] = Label("")
-		self["lab3"] = Label("Lanugage:")
+		self["lab3"] = Label(_("Language:"))
 		self["lablang"] = Label("")
-		self["lab4"] = Label("Max days to download:")
+		self["lab4"] = Label(_("Max days to download:"))
 		self["labmaxd"] = Label("")
 		self["lsinactive"] = Pixmap()
 		self["lsactive"] = Pixmap()
@@ -969,7 +970,7 @@ class DeliteXmltepgProv(Screen):
 		if myfile:
 			self.session.open(DeliteEpgChannels, self.provider)
 		else:
-			self.session.open(MessageBox, "Sorry, Channel List not available for this Provider.", MessageBox.TYPE_INFO)
+			self.session.open(MessageBox, _("Sorry, Channel List not available for this Provider."), MessageBox.TYPE_INFO)
 		
 		
 class DeliteXepgSetup(Screen, ConfigListScreen):
@@ -1102,7 +1103,7 @@ class DeliteEpgChannels(Screen, ConfigListScreen):
 		ConfigListScreen.__init__(self, self.list)
 		self["key_red"] = Label(_("Save"))
 		self["key_green"] = Label(_("Update List"))
-		self["Linconn"] = Label("Wait please download in progress ...")
+		self["Linconn"] = Label(_("Wait please download in progress ..."))
 		self["Linconn"].hide()
 		
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -1176,7 +1177,7 @@ class DeliteEpgChannels(Screen, ConfigListScreen):
 		if myfile in availablechans:
 			self.session.openWithCallback(self.updateList, DeliteDownChannels, self.provider)
 		else:
-			self.session.open(MessageBox, "Sorry, function not available for this provider.", MessageBox.TYPE_INFO)
+			self.session.open(MessageBox, _("Sorry, function not available for this provider."), MessageBox.TYPE_INFO)
 
 class DeliteDownChannels(Screen):
 	skin = """
@@ -1190,7 +1191,7 @@ class DeliteDownChannels(Screen):
 		Screen.__init__(self, session)
 		
 		self.provider = provider
-		msg = "Wait please," + provider + " Channels list download in progress..."
+		msg = "Wait please," + provider + _(" Channels list download in progress...")
 		self["lab1"] = Label(msg)
 		self["key_red"] = Label(_("Close"))
 		
@@ -1228,7 +1229,7 @@ class DeliteDownChannels(Screen):
 			cmd = "/usr/bin/getepgchannels -l uk"
 		rc = system(cmd)
 #Endo Todo
-		self["lab1"].setText("Channels List Successfully Updated.")
+		self["lab1"].setText(_("Channels List Successfully Updated."))
 		
 
 	def __onClose(self):
@@ -1254,7 +1255,7 @@ class DeliteDownEpgNow(Screen):
 		Screen.__init__(self, session)
 		
 		self.provider = provider
-		msg = "Wait please for the Epg to complete, and press the red button to exit"
+		msg = _("Wait please for the Epg to complete, and press the red button to exit")
 		self["lab1"] = Label(msg)
 		self["key_red"] = Label(_("Close"))
 		
@@ -1282,13 +1283,13 @@ class DeliteDownEpgNow(Screen):
 		parts = nab_Get_EpgProvider(self.provider)
 		
 		if parts[1] == "xmltv":
-			self["lab1"].setText("Wait Please... Epg Download in progress....")
+			self["lab1"].setText(_("Wait Please... Epg Download in progress...."))
 			provider = parts[2]
 			maxdays = parts[3]
 			language = parts[4]
 			epgcache = eEPGCache.getInstance()
 			ret = epgcache.readXmltv(('P',provider,maxdays,language));
-			self["lab1"].setText("Epg Download complete. Press the red button to exit")
+			self["lab1"].setText(_("Epg Download complete. Press the red button to exit"))
 		elif parts[1] == "ext_dat":
 			myurl = parts[2]
 			myext = ""
@@ -1297,11 +1298,11 @@ class DeliteDownEpgNow(Screen):
 			elif myurl.find('.dat.bz2') != -1:
 				myext = ".bz2"
 			else:
-				self.session.open(MessageBox, "Wrong file format. Only bz2 and gzip files are allowed (.dat.gz .dat.bz2).", MessageBox.TYPE_ERROR)
+				self.session.open(MessageBox, _("Wrong file format. Only bz2 and gzip files are allowed (.dat.gz .dat.bz2)."), MessageBox.TYPE_ERROR)
 				self.close()
 			
 			self["lab1"].hide()
-			self["lab1"].setText("Wait Please... epg.dat file download in progress....")
+			self["lab1"].setText(_("Wait Please... epg.dat file download in progress...."))
 			self["lab1"].show()
 			myepgpath = config.misc.epgcache_filename.value
 			myepgfile = myepgpath + myext
@@ -1337,10 +1338,10 @@ class DeliteDownEpgNow(Screen):
 				epgcache = eEPGCache.getInstance()
 				epgcache.load()
 				self["lab1"].hide()
-				self["lab1"].setText("Saving epg.dat....")
+				self["lab1"].setText(_("Saving epg.dat...."))
 				self["lab1"].show()
 				epgcache.save()
-				self["lab1"].setText("Epg Download complete. Press the red button to exit")
+				self["lab1"].setText(_("Epg Download complete. Press the red button to exit"))
 				
 		else:
 			self.oldchanref = self.session.nav.getCurrentlyPlayingServiceReference()

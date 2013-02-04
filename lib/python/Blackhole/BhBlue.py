@@ -42,7 +42,7 @@ class DeliteBluePanel(Screen):
 		self.populate_List()
 		self["list"] = MenuList(self.emlist)
 		totcam = str(len(self.emlist))
-		self["lab1"].setText(totcam + "   CAMs Installed")
+		self["lab1"].setText(totcam + "   " + _("CAMs Installed"))
 		
 		self.onShow.append(self.updateBP)
 		#self.onClose.append(self.delTimer)
@@ -122,10 +122,10 @@ class DeliteBluePanel(Screen):
 				if width != -1 and height != -1:
 					videosize = "%dx%d" %(width, height)
 		
-		self["Ilab1"].setText("Name: " + name)
-		self["Ilab2"].setText("Provider: " + provider)
-		self["Ilab3"].setText("Aspect Ratio: " + aspect)
-		self["Ilab4"].setText("Videosize: " + videosize)
+		self["Ilab1"].setText(_("Name: ") + name)
+		self["Ilab2"].setText(_("Provider: ") + provider)
+		self["Ilab3"].setText(_("Aspect Ratio: ") + aspect)
+		self["Ilab4"].setText(_("Videosize: ") + videosize)
 		
 		self.currentcam = "/usr/camscript/Ncam_Ci.sh"
 		self.defaultcam = "/usr/camscript/Ncam_Ci.sh"
@@ -164,7 +164,7 @@ class DeliteBluePanel(Screen):
 					mytext = mytext + line + "\n"
  			f.close()
 		if len(mytext) < 5:
-			mytext = "\n\n    Ecm Info not available."
+			mytext = "\n\n    " + _("Ecm Info not available.")
 		
 		#mytext = "Current Cam: " + curCamname + "\n" + mytext
 		
@@ -230,7 +230,7 @@ class DeliteBluePanel(Screen):
 		if deversion == BhU_check_proc_version():
 			mycheck = 1
 		else:
-			nobox = self.session.open(MessageBox, "Sorry: Wrong image in flash found. You have to install in flash Black Hole image v.  " + deversion, MessageBox.TYPE_INFO)
+			nobox = self.session.open(MessageBox, _("Sorry: Wrong image in flash found. You have to install in flash Black Hole image v.  ") + deversion, MessageBox.TYPE_INFO)
 			nobox.setTitle(_("Info"))
 			self.myclose()
 		return mycheck
@@ -251,7 +251,7 @@ class Nab_DoStartCam(Screen):
 	def __init__(self, session, title):
 		Screen.__init__(self, session)
 		
-		msg = "Please wait while starting\n" + title + "..."
+		msg = _("Please wait while starting\n") + title + "..."
 		self["connect"] = MultiPixmap()
 		self["lab1"] = Label(msg)
 
@@ -308,7 +308,7 @@ class DeliteAutocamMan(Screen):
 		
 		self["key_red"] = Label(_("Add"))
 		self["key_yellow"] = Label(_("Delete"))
-		self["defaultcam"] = Label("Default Cam:")
+		self["defaultcam"] = Label(_("Default Cam:"))
 		self.emlist = []
 		self.camnames = {}
 		

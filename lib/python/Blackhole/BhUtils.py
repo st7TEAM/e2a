@@ -192,6 +192,14 @@ def BhU_checkSkinVersion(skinfile):
 				
 	return ret
 	
+def BhU_fake_transl():
+	Restart_Gui = _("Restart Gui")
+	Hard_Reset = _("Hard Reset")
+	Standby = _("Standby")
+	Set_Sleeptimer = _("Set Sleeptimer")
+	
+	
+
 #def make_Delite_cipher():
 #	key = 'AGA6A3A2ACA1A8A5A6A9A9A4A'
 #	key += '6AGA3AFA3A6AEA1AEA2A7AC'

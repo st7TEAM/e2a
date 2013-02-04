@@ -35,8 +35,8 @@ class DeliteHdd(Screen):
 		self["labstop"] = Label(_("Standby"))
 		self["labrun"] = Label(_("Running"))
 		self["key_red"] = Label("Standby Now")
-		self["key_green"] = Label("Set Acoustic")
-		self["key_yellow"] = Label("Set Standby")
+		self["key_green"] = Label(_("Set Acoustic"))
+		self["key_yellow"] = Label(_("Set Standby"))
 		
 		self.cur_state = False
 		
@@ -69,8 +69,8 @@ class DeliteHdd(Screen):
 	def myclose(self):
 		self.activityTimer.stop()
 		del self.activityTimer
-		mybox = self.session.openWithCallback(self.domyclose, MessageBox, "Sorry, Hard Disk not Found.", type=MessageBox.TYPE_INFO)
-		mybox.setTitle("Info")
+		mybox = self.session.openWithCallback(self.domyclose, MessageBox, _("Sorry, Hard Disk not Found."), type=MessageBox.TYPE_INFO)
+		mybox.setTitle(_("Info"))
 		
 	def domyclose(self, ret):
 		self.close()
@@ -97,7 +97,7 @@ class DeliteHdd(Screen):
 				f = open(myfile,'r')
 				line = f.readline()
 				f.close()
-				strview += "HARD DISK MODEL: \t" + line	
+				strview += _("HARD DISK MODEL:") + " \t" + line	
 			
 			myfile = procf + "capacity"	
 			if fileExists(myfile):
@@ -107,12 +107,12 @@ class DeliteHdd(Screen):
 				cap = int(line)
 				cap = cap / 1000 * 512 / 1000
 				cap = "%d.%03d GB" % (cap/1024, cap%1024)
-				strview += "Disk Size: \t\t" + cap + "\n"
+				strview += _("Disk Size:") + " \t\t" + cap + "\n"
 				
 			stat = statvfs('/media/hdd')
 			free = stat.f_bfree/1000 * stat.f_bsize/1000
 			free = "%d.%03d GB" % (free/1024, free%1024)
-			strview += "Available Space: \t\t" + free + "\n"
+			strview += _("Available Space:") + " \t\t" + free + "\n"
 			
 			mysett = self.getHconf()
 			cvalue1 = config.usage.hdd_standby.value
@@ -121,7 +121,7 @@ class DeliteHdd(Screen):
 			cvalue = int(cvalue1) / 60
 			#cvalue = (int(mysett[0]) *5) / 60
 			mystand = str(cvalue)
-			strview += "Standby:\t\t" + mystand + " min\n"
+			strview += _("Standby:") + "\t\t" + mystand + _(" min.\n")
 			strview += "_______________________________________________\n"
 			
 			myfile = procf + "settings"
@@ -166,14 +166,14 @@ class DeliteHdd(Screen):
 			rc = system(cmd)
 			self.updateHdd()
 		else:
-			mybox = self.session.open(MessageBox, "Hard Disk is already sleeping", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.open(MessageBox, _("Hard Disk is already sleeping"), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 	
 	
 	def setAcu(self):
 		mysett = self.getHconf()
 		curvalue = mysett[1]
-		self.session.openWithCallback(self.SaveAcu,InputBox, title="Enter here the value for Hdd Acoustic:", windowTitle = "Hard Disk Setup", text=curvalue, type=2)
+		self.session.openWithCallback(self.SaveAcu,InputBox, title=_("Enter here the value for Hdd Acoustic:"), windowTitle = _("Hard Disk Setup"), text=curvalue, type=2)
 	
 	def SaveAcu(self, noise):
 		if noise:
@@ -208,7 +208,7 @@ class DeliteHdd(Screen):
 		rc = system(cmd)
 		cmd = "hdparm -M" + noise +" " + self.hddloc
 		rc = system(cmd)
-		mybox = self.session.open(MessageBox, "New Settings Activated.", MessageBox.TYPE_INFO)
+		mybox = self.session.open(MessageBox, _("New Settings Activated."), MessageBox.TYPE_INFO)
 		mybox.setTitle("Info")
 		self.updateHdd()
 		

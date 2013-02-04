@@ -24,7 +24,7 @@ class DeliteScript(Screen):
 		Screen.__init__(self, session)
 		
 		self["statuslab"] = Label("N/A")
-		self["key_red"] = Label("Execute")
+		self["key_red"] = Label(_("Execute"))
 		self.mlist = []
 		self.populateSL()
 		self["list"] = List(self.mlist)

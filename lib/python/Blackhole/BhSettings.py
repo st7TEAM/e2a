@@ -131,14 +131,14 @@ class DeliteSettings(Screen):
 		
 		mypixmap = mypath + "icons/infopanel_osd.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Speed Up"
+		name = _("Black Hole Speed Up")
 		idx = 0
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_cron.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Cron Manager"
+		name = _("Black Hole Cron Manager")
 		idx = 1
 		res = (name, png, idx)
 		self.list.append(res)
@@ -146,126 +146,126 @@ class DeliteSettings(Screen):
 		
 		mypixmap = mypath + "icons/infopanel_osd.png"
 		png = LoadPixmap(mypixmap)
-		name = "Osd Settings"
+		name = _("Osd Settings")
 		idx = 2
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_space.png"
 		png = LoadPixmap(mypixmap)
-		name = "Devices Manager"
+		name = _("Devices Manager")
 		idx = 3
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/swapsettings.png"
 		png = LoadPixmap(mypixmap)
-		name = "Usb Format Wizard"
+		name = _("Usb Format Wizard")
 		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
 				
 		mypixmap = mypath + "icons/infopanel_kmod.png"
 		png = LoadPixmap(mypixmap)
-		name = "Kernel Modules Manager"
+		name = _("Kernel Modules Manager")
 		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/inadynsettings.png"
 		png = LoadPixmap(mypixmap)
-		name = "Inadyn Settings"
+		name = _("Inadyn Settings")
 		idx = 6
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/swapsettings.png"
 		png = LoadPixmap(mypixmap)
-		name = "Swap File Settings"
+		name = _("Swap File Settings")
 		idx = 7
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/hdsettings.png"
 		png = LoadPixmap(mypixmap)
-		name = "Hard Disk Settings"
+		name = _("Hard Disk Settings")
 		idx = 8
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_vpn.png"
 		png = LoadPixmap(mypixmap)
-		name = "OpenVpn Panel"
+		name = _("OpenVpn Panel")
 		idx = 9
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "Samba/Cifs Panel"
+		name = _("Samba/Cifs Panel")
 		idx = 10
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_nfs.png"
 		png = LoadPixmap(mypixmap)
-		name = "Nfs Server Panel"
+		name = _("Nfs Server Panel")
 		idx = 11
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_telnet.png"
 		png = LoadPixmap(mypixmap)
-		name = "Telnet Panel"
+		name = _("Telnet Panel")
 		idx = 12
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_ftp.png"
 		png = LoadPixmap(mypixmap)
-		name = "Ftp Panel"
+		name = _("Ftp Panel")
 		idx = 13
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "UPnP Client Djmount"
+		name = _("UPnP Client Djmount")
 		idx = 14
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "UPnP Server Mediatomb"
+		name = _("UPnP Server Mediatomb")
 		idx = 15
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "UPnP Server Minidlna"
+		name = _("UPnP Server Minidlna")
 		idx = 16
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "Pcsc Panel"
+		name = _("Pcsc Panel")
 		idx = 17
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = "Tuner Server"
+		name = _("Tuner Server")
 		idx = 18
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/mountwizard.png"
 		png = LoadPixmap(mypixmap)
-		name = "Network Browse & Mountpoints"
+		name = _("Network Browse & Mountpoints")
 		idx = 19
 		res = (name, png, idx)
 		self.list.append(res)
@@ -319,18 +319,18 @@ class DeliteSetupOSD2(Screen):
 			"red": self.setupmyosd
 		})
 		
-		lab2txt = "Enable LCD Picons"
+		lab2txt = _("Enable LCD Picons")
 		machine = nab_Detect_Machine()
 		if machine == "et9000":
 			lab2txt = "unused in " + machine
 		elif machine == "dm500hd":
 			lab2txt = "unused in " + machine
 		elif machine == "bm750":
-			lab2txt = "unused in Vu Duo"
+			lab2txt = _("unused in Vu Duo")
 		elif machine == "vusolo":
-			lab2txt = "unused in Vu Solo"
+			lab2txt = _("unused in Vu Solo")
 		elif machine == "vuultimo":
-			lab2txt = "unused in Vu Ultimo"	
+			lab2txt = _("unused in Vu Ultimo")
 				
 		self["lab2"].setText(lab2txt)
 		
@@ -415,18 +415,18 @@ class DeliteSetupOSDConf2(Screen, ConfigListScreen):
 		self.delitepiconlcd.value = config.misc.delitepiconlcd.value
 		self.infobar_timeout.value = config.usage.infobar_timeout.value
 		
-		lab2txt = "Enable LCD Picons"
+		lab2txt = _("Enable LCD Picons")
 		machine = nab_Detect_Machine()
 		if machine == "et9000":
 			lab2txt = "unused in " + machine
 		elif machine == "dm500hd":
 			lab2txt = "unused in " + machine
 		elif machine == "bm750":
-			lab2txt = "unused in Vu Duo"
+			lab2txt = _("unused in Vu Duo")
 		elif machine == "vusolo":
-			lab2txt = "unused in Vu Solo"
+			lab2txt = _("unused in Vu Solo")
 		elif machine == "vuultimo":
-			lab2txt = "unused in Vu Ultimo"
+			lab2txt = _("unused in Vu Ultimo")
 		
 		osd_ei = getConfigListEntry(_("Disable Light Skin on Zap"), self.deliteeinfo)
 		self.list.append(osd_ei)
@@ -462,9 +462,9 @@ class DeliteSetupOSDConf2(Screen, ConfigListScreen):
 		config.usage.infobar_timeout.save()
 		
 		if self.plcd_original != self.delitepiconlcd.value:
-			message = "Picons LCD changes need gui restart to take effects.\nRestart Gui now?"
+			message = _("Picons LCD changes need gui restart to take effects.\nRestart Gui now?")
 			ybox = self.session.openWithCallback(self.restEn, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Gui Restart.")
+			ybox.setTitle(_("Gui Restart."))
 		else:
 			self.close()
 			
@@ -567,18 +567,18 @@ class DeliteSetupCronConf(Screen, ConfigListScreen):
 	
 		self.cmdtime = NoSave(ConfigClock(default=0))
 		self.default_command = NoSave(ConfigSelection(default = "None", choices = [
-		("None", "None"), ("/usr/bin/Blackholecmd standby", "standby"), ("/usr/bin/Blackholecmd shutdown", "shutdown"), ("/usr/bin/Blackholecmd reboot", "reboot"),
-		("/usr/bin/Blackholecmd restartenigma2", "restartgui"), ("/usr/bin/Blackholecmd restartemu", "restartemu")]))
+		("None", _("None")), ("/usr/bin/Blackholecmd standby", _("standby")), ("/usr/bin/Blackholecmd shutdown", _("shutdown")), ("/usr/bin/Blackholecmd reboot", _("reboot")),
+		("/usr/bin/Blackholecmd restartenigma2", _("restartgui")), ("/usr/bin/Blackholecmd restartemu", _("restartemu"))]))
 		self.user_command = NoSave(ConfigText(fixed_size = False))
 		self.cmdtime.value = mytmpt = [0,0]
 		self.default_command.value = "None"
 		self.user_command.value = "None"
 		
-		res = getConfigListEntry("Time to execute command or script", self.cmdtime)
+		res = getConfigListEntry(_("Time to execute command or script"), self.cmdtime)
 		self.list.append(res)
-		res = getConfigListEntry("Predefined Command to execute", self.default_command)
+		res = getConfigListEntry(_("Predefined Command to execute"), self.default_command)
 		self.list.append(res)
-		res = getConfigListEntry("Custom Command", self.user_command)
+		res = getConfigListEntry(_("Custom Command"), self.user_command)
 		self.list.append(res)
 		
 		self["config"].list = self.list
@@ -589,8 +589,9 @@ class DeliteSetupCronConf(Screen, ConfigListScreen):
 		sel = self["config"].getCurrent()
 		if sel:
 			self.vkvar = sel[0]
+			self.vki = self["config"].getCurrentIndex()
 			value = "xmeo"
-			if self.vkvar == "Custom Command":
+			if self.vki == 2:
 				value = self.user_command.value
 				if value == "None":
 					value = ""
@@ -606,11 +607,11 @@ class DeliteSetupCronConf(Screen, ConfigListScreen):
 			newt = "None"
 		self.user_command.value = newt
 		
-		res = getConfigListEntry("Time to execute command or script", self.cmdtime)
+		res = getConfigListEntry(_("Time to execute command or script"), self.cmdtime)
 		self.list.append(res)
-		res = getConfigListEntry("Predefined Command to execute", self.default_command)
+		res = getConfigListEntry(_("Predefined Command to execute"), self.default_command)
 		self.list.append(res)
-		res = getConfigListEntry("Custom Command", self.user_command)
+		res = getConfigListEntry(_("Custom Command"), self.user_command)
 		self.list.append(res)
 		
 		self["config"].list = self.list
@@ -623,9 +624,9 @@ class DeliteSetupCronConf(Screen, ConfigListScreen):
 		if self.user_command.value == "None":
 			self.user_command.value = ""
 		if self.default_command.value == "None" and self.user_command.value == "":
-			msg = "You must set at least one Command"
+			msg = _("You must set at least one Command")
 		if self.default_command.value != "None" and self.user_command.value != "":
-			msg = "Entering a Custom command you have to set Predefined command: None "
+			msg = _("Entering a Custom command you have to set Predefined command: None ")
 
 		if msg:
 			self.session.open(MessageBox, msg, MessageBox.TYPE_ERROR)
@@ -680,7 +681,7 @@ class DeliteDevicesPanel(Screen):
 		
 		self["key_red"] = Label(_("Mountpoints"))
 		self["key_yellow"] = Label(_("Cancel"))
-		self["lab1"] = Label("Wait please while scanning your devices...")
+		self["lab1"] = Label(_("Wait please while scanning your devices..."))
 		
 		self.list = []
 		self["list"] = List(self.list)
@@ -723,9 +724,9 @@ class DeliteDevicesPanel(Screen):
 			png = LoadPixmap(dtype[1])
 			name = name + " " + model
 			cap = self.get_Dsize(device, partition)
-			des = "Size: " + cap
+			des = _("Size: ") + cap
 			mountpoint = self.get_Dpoint(uuid)
-			des += "\tMount: " + mountpoint + "\nDevice: " + "/dev/" + partition
+			des += _("\tMount: ") + mountpoint + _("\nDevice: ") + "/dev/" + partition
 			res = (name, des, png)
 			self.list.append(res)
 			description = "%s  %s  %s" % (name, cap, partition)
@@ -767,7 +768,7 @@ class DeliteDevicesPanel(Screen):
 		return model
 		
 	def get_Dpoint(self, uid):
-		point = "NOT MAPPED"
+		point = _("NOT MAPPED")
 		f = open("/proc/mounts",'r')
 		for line in f.readlines():
 			if line.find(uid) != -1:
@@ -818,7 +819,7 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 		self.list = []
 		for device in self.devices:
 			uid = device[1]
-			d1 = "Not mapped"
+			d1 = _("Not mapped")
 			checkmb = False
 			f = open("/proc/mounts",'r')
 			for line in f.readlines():
@@ -845,7 +846,7 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 	
 			
 	def get_Choices(self):
-		choices = [("Not mapped", "Not mapped")]
+		choices = [("Not mapped", _("Not mapped"))]
 		folders = listdir("/media")
 		for f in folders:
 			if f == "net" or f == "ram" or f == "realroot" or f == "union":
@@ -875,7 +876,7 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 		f.close()
 		out.close()
 		os_rename("/etc/fstab.tmp", "/etc/fstab")
-		message = "Devices changes need a system restart to take effects.\nRestart your Box now?"
+		message = _("Devices changes need a system restart to take effects.\nRestart your Box now?")
 		self.session.openWithCallback(self.restBo, MessageBox, message, MessageBox.TYPE_YESNO)
 
 			
@@ -898,11 +899,11 @@ class Bp_UsbFormat(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
-		msg = """This wizard will help you to format Usb mass storages for Linux.
-Please be sure that your usb drive is NOT CONNECTED to your Vu+ box before to continue.
-If your usb drive is connected and mounted you have to poweroff your box, remove the usb device and reboot.
-Push red button to continue when you are ready and your usb is disconnected.
-"""
+		msg = _("This wizard will help you to format Usb mass storages for Linux.\n")
+		msg += _("Please be sure that your usb drive is NOT CONNECTED to your Vu+ box before to continue.\n")
+		msg += _("If your usb drive is connected and mounted you have to poweroff your box, remove the usb device and reboot.\n")
+		msg += _("Push red button to continue when you are ready and your usb is disconnected.\n")
+
 		self["key_red"] = Label(_("Continue ->"))
 		self["key_green"] = Label(_("Cancel"))
 		self["lab1"] = Label(msg)
@@ -922,22 +923,21 @@ Push red button to continue when you are ready and your usb is disconnected.
 	
 	
 	def stepOne(self):
-		msg = """Connect your usb storage to your Vu+ box
-Press red button to continue when ready.
+		msg = _("Connect your usb storage to your Vu+ box\n")
+		msg += _("Press red button to continue when ready.\n\n")
+		msg += _("Warning: If your usb is already connected\n")
+		msg += _("to the box you have to unplug it, click\n")
+		msg += _("the green button and restart the wizard.\n")
 
-Warning: If your usb is already connected 
-to the box you have to unplug it, click 
-the green button and restart the wizard.
-"""
 		rc = system("/etc/init.d/autofs stop")
 		self.devices = self.get_Devicelist()
 		self["lab1"].setText(msg)
 		self.step = 2
 		
 	def stepTwo(self):
-		msg = """The wizard will now try to identify your connected usb storage.
-Press red button to continue.
-"""				
+		msg = _("The wizard will now try to identify your connected usb storage.")
+		msg += _("Press red button to continue.")
+				
 		self["lab1"].setText(msg)
 		self.step = 3
 	
@@ -947,7 +947,7 @@ Press red button to continue.
 			if d not in self.devices:
 				self.device = d
 		if self.device is None:
-			self.wizClose("Sorry, no new usb storage detected.\nBe sure to follow wizard instructions.")
+			self.wizClose(_("Sorry, no new usb storage detected.\nBe sure to follow wizard instructions."))
 		else:
 			msg = self.get_Deviceinfo(self.device)
 			self["lab1"].setText(msg)
@@ -955,12 +955,12 @@ Press red button to continue.
 			
 	def stepFour(self):
 		myoptions = [['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']]
-		self.session.openWithCallback(self.partSize1,ChoiceBox, title="Select number of partitions:", list=myoptions)
+		self.session.openWithCallback(self.partSize1,ChoiceBox, title=_("Select number of partitions:"), list=myoptions)
 		
 	def partSize1(self, total):
 		self.totalpartitions = int(total[1])
 		if self.totalpartitions > 1:
-			self.session.openWithCallback(self.partSize2,InputBox, title="Enter the size in Megabyte of the first partition:", windowTitle = "Partition size", text="1", useableChars = "1234567890" )
+			self.session.openWithCallback(self.partSize2,InputBox, title=_("Enter the size in Megabyte of the first partition:"), windowTitle = _("Partition size"), text="1", useableChars = "1234567890" )
 		else:
 			self.writePartFile()
 			
@@ -969,7 +969,7 @@ Press red button to continue.
 			psize = "100"
 		self.p1size = psize
 		if self.totalpartitions > 2:
-			self.session.openWithCallback(self.partSize3,InputBox, title="Enter the size in Megabyte of the second partition:", windowTitle = "Partition size", text="1", useableChars = "1234567890" )
+			self.session.openWithCallback(self.partSize3,InputBox, title=_("Enter the size in Megabyte of the second partition:"), windowTitle = _("Partition size"), text="1", useableChars = "1234567890" )
 		else:
 			self.writePartFile()
 			
@@ -978,7 +978,7 @@ Press red button to continue.
 			psize = "100"
 		self.p2size = psize
 		if self.totalpartitions > 3:
-			self.session.openWithCallback(self.partSize4,InputBox, title="Enter the size in Megabyte of the third partition:", windowTitle = "Partition size", text="1", useableChars = "1234567890" )
+			self.session.openWithCallback(self.partSize4,InputBox, title=_("Enter the size in Megabyte of the third partition:"), windowTitle = _("Partition size"), text="1", useableChars = "1234567890" )
 		else:
 			self.writePartFile()
 		
@@ -993,8 +993,8 @@ Press red button to continue.
 		device = "/dev/" + self.device
 		out0 = "#!/bin/sh\n\nsfdisk %s -uM << EOF\n" % (device)
 		
-		msg = "Total Megabyte Available: \t" + str(self.totalsize)
-		msg += "\nPartition scheme:\n"
+		msg = _("Total Megabyte Available: \t") + str(self.totalsize)
+		msg += _("\nPartition scheme:\n")
 		p1 = self.p1size
 		out1 = ",%s\n" % (self.p1size)
 		if self.totalpartitions == 1:
@@ -1019,7 +1019,7 @@ Press red button to continue.
 			p4 = self.totalsize - (int(self.p1size) + int(self.p2size) + int(self.p3size))
 			out4 = ";\n"
 			msg += "%s4 \t size:%s M\n" % (device, p4)
-		msg +="\nWarning: all the data will be lost.\nAre you sure you want to format this device?\n"
+		msg +=_("\nWarning: all the data will be lost.\nAre you sure you want to format this device?\n")
 		
 		
 		out = open("/tmp/sfdisk.tmp",'w')
@@ -1037,7 +1037,7 @@ Press red button to continue.
 		self["lab1"].setText(msg)
 		
 		if int(self.p1size) + int(self.p2size) + int(self.p3size) + int(self.p4size) > self.totalsize:
-			self.wizClose("Sorry, your partitions sizes are bigger than total device size.")
+			self.wizClose(_("Sorry, your partitions sizes are bigger than total device size."))
 		else:
 			self.step = 5
 
@@ -1048,10 +1048,10 @@ Press red button to continue.
 		device = "/dev/%s" % (self.device)
 		cmd = "echo -e 'Partitioning: %s \n\n'" % (device)
 		cmd2 = "/tmp/sfdisk.tmp"
-		self.session.open(Console, title="Partitioning...", cmdlist=[cmd, cmd2], finishedCallback = self.partDone)
+		self.session.open(Console, title=_("Partitioning..."), cmdlist=[cmd, cmd2], finishedCallback = self.partDone)
 		
 	def partDone(self):
-		msg = "The device has been partitioned.\nPartitions will be now formatted."
+		msg = _("The device has been partitioned.\nPartitions will be now formatted.")
 		self["lab1"].setText(msg)
 		self.step = 6
 		
@@ -1098,7 +1098,7 @@ Press red button to continue.
 			cmd = "%s %s" % (self.formatcmd, device)
 			cmds.append(cmd)
 		
-		self.session.open(Console, title="Formatting...", cmdlist=cmds, finishedCallback = self.succesS)
+		self.session.open(Console, title=_("Formatting..."), cmdlist=cmds, finishedCallback = self.succesS)
 	
 	def step_Bump(self):
 		if self.step == 1:
@@ -1134,7 +1134,7 @@ Press red button to continue.
 			cap = size / 1000 * 512 / 1024
 			size = "%d.%03d GB" % (cap/1000, cap%1000)
 			self.totalsize = cap
-		info = "Model: %s %s\nSize: %s\nDevice: /dev/%s" % (vendor, model, size, device)
+		info = _("Model: ") + vendor + " " + model +  "\n" + _("Size: ") + size + "\n" + _("Device: ") + "/dev/" + device
 		return info
 	
 	
@@ -1146,7 +1146,7 @@ Press red button to continue.
 		self.session.openWithCallback(self.close, MessageBox, msg, MessageBox.TYPE_INFO)
 
 	def succesS(self):
-		mybox = self.session.openWithCallback(self.hreBoot, MessageBox, "The Box will be now restarted to generate new device UID.\nDon't forget to remap your device after the reboot.\nPress ok to continue", MessageBox.TYPE_INFO)	
+		mybox = self.session.openWithCallback(self.hreBoot, MessageBox, _("The Box will be now restarted to generate new device UID.\nDon't forget to remap your device after the reboot.\nPress ok to continue"), MessageBox.TYPE_INFO)	
 			
 	def hreBoot(self, answer):
 		self.session.open(TryQuitMainloop, 2)
@@ -1171,8 +1171,8 @@ class DeliteKernelModules(Screen, ConfigListScreen):
 		
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
-		self["key_red"] = Label("Save")
-		self["key_yellow"] = Label("Active Modules")
+		self["key_red"] = Label(_("Save"))
+		self["key_yellow"] = Label(_("Active Modules"))
 		
 		
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -1319,7 +1319,7 @@ class DeliteKernelModShow(Screen):
 			pos = len(parts[0]) + len(parts[1])
 			used = mytext[pos:]
 		
-			mytext = "Module size: " + size + " bytes\n" + "Module used by: " + used
+			mytext = _("Module size: ") + size + _(" bytes\n") + _("Module used by: ") + used
 			self["statuslab"].setText(mytext)
 			
 
@@ -1341,7 +1341,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
-		self["lab1"] = Label("Please disable ALL the plugins you don't need to use.\nThis will speed up Image Performance.")
+		self["lab1"] = Label(_("Please disable ALL the plugins you don't need to use.\nThis will speed up Image Performance."))
 		self["key_red"] = Label(_("Save"))
 		self["key_green"] = Label(_("Cancel"))
 		
@@ -1394,7 +1394,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 	def updateList(self):
 		self.list = []
 		for plug in self.pluglist:
-			item = NoSave(ConfigSelection(default = "Enabled", choices = [("Enabled", "Enabled"), ("Disabled", "Disabled")]))
+			item = NoSave(ConfigSelection(default = "Enabled", choices = [("Enabled", _("Enabled")), ("Disabled", _("Disabled"))]))
 			if pathExists(plug[1]):
 				item.value = "Enabled"
 			else:
@@ -1439,8 +1439,8 @@ class BhSpeedUp(Screen, ConfigListScreen):
 				break
 		
 	def allDone(self):
-		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Enigma2 will be now restarted for the changes to take effect.\nPress ok to continue", MessageBox.TYPE_INFO)
-		mybox.setTitle("Info")
+		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Enigma2 will be now restarted for the changes to take effect.\nPress ok to continue"), MessageBox.TYPE_INFO)
+		mybox.setTitle(_("Info"))
 	
 	def hrestEn(self, answer):
 		self.session.open(TryQuitMainloop, 3)

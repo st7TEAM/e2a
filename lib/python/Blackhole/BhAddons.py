@@ -54,42 +54,42 @@ class DeliteAddons(Screen):
 		
 		mypixmap = mypath + "icons/addons_manager.png"
 		png = LoadPixmap(mypixmap)
-		name = "Addons Download Manager"
+		name = _("Addons Download Manager")
 		idx = 0
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabpackpanel.png"
 		png = LoadPixmap(mypixmap)
-		name = "Online Black Hole image update"
+		name = _("Online Black Hole image update")
 		idx = 1
 		res = (name, png, idx)
 		self.list.append(res)
 
 		mypixmap = mypath + "icons/nabpackpanel.png"
 		png = LoadPixmap(mypixmap)
-		name = "Manual Install Bh packges"
+		name = _("Manual Install Bh packges")
 		idx = 2
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/ipkpackpanel.png"
 		png = LoadPixmap(mypixmap)
-		name = "Manual Install Ipk packges"
+		name = _("Manual Install Ipk packges")
 		idx = 3
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/uninstpanel.png"
 		png = LoadPixmap(mypixmap)
-		name = "Addons Uninstall Panel"
+		name = _("Addons Uninstall Panel")
 		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/statpanel.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Statistics"
+		name = _("Black Hole Statistics")
 		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
@@ -127,7 +127,7 @@ class DeliteAddons(Screen):
 		if fileExists(downfile):
 			self.session.open(Nab_Stats)
 		else:
-			nobox = self.session.open(MessageBox, "Sorry, Connection Failed.", MessageBox.TYPE_INFO)
+			nobox = self.session.open(MessageBox, _("Sorry, Connection Failed."), MessageBox.TYPE_INFO)
 			
 	def runUpgrade(self, result):
 		if result:
@@ -143,7 +143,7 @@ class DeliteAddons(Screen):
 		if check == 1:
 			self.session.open(Nab_downPanel)
 		else:
-			mybox = self.session.open(MessageBox, "Nothing to install.\nYou have to Upload a bh.tgz package in the /tmp directory before to install Addons", MessageBox.TYPE_INFO)
+			mybox = self.session.open(MessageBox, _("Nothing to install.\nYou have to Upload a bh.tgz package in the /tmp directory before to install Addons"), MessageBox.TYPE_INFO)
 			mybox.setTitle(_("Info"))
 			
 	def checkPanel2(self):
@@ -155,7 +155,7 @@ class DeliteAddons(Screen):
 		if check == 1:
 			self.session.open(Nab_downPanelIPK)
 		else:
-			mybox = self.session.open(MessageBox, "Nothing to install.\nYou have to Upload an ipk package in the /tmp directory before to install Addons", MessageBox.TYPE_INFO)
+			mybox = self.session.open(MessageBox, _("Nothing to install.\nYou have to Upload an ipk package in the /tmp directory before to install Addons"), MessageBox.TYPE_INFO)
 			mybox.setTitle(_("Info"))
 		
 class Nab_downArea(Screen):
@@ -200,56 +200,56 @@ class Nab_downArea(Screen):
 		
 		mypixmap = mypath + "icons/nabplugins.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Addons Plugins"
+		name = _("Black Hole Addons Plugins")
 		idx = 1
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabplugins.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Feeds Plugins"
+		name = _("Black Hole Feeds Plugins")
 		idx = 2
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabskins.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Image Skins"
+		name = _("Black Hole Image Skins")
 		idx = 3
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabscript.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Image Script"
+		name = _("Black Hole Image Script")
 		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nablangs.png"
 		png = LoadPixmap(mypixmap)
-		name = "Black Hole Image Boot Logo"
+		name = _("Black Hole Image Boot Logo")
 		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabsettings.png"
 		png = LoadPixmap(mypixmap)
-		name = "Settings"
+		name = _("Black Hole Settings")
 		idx = 6
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabpicons.png"
 		png = LoadPixmap(mypixmap)
-		name = "Picons Packages"
+		name = _("Picons Packages")
 		idx = 7
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/nabuploads.png"
 		png = LoadPixmap(mypixmap)
-		name = "Latest 10 Uploads"
+		name = _("Latest 10 Uploads")
 		idx = 8
 		res = (name, png, idx)
 		self.list.append(res)
@@ -321,7 +321,7 @@ class Nab_downArea(Screen):
 		if fileExists(downfile):
 			self.session.open(Nab_downCat, self.title)
 		else:
-			nobox = self.session.open(MessageBox, "Sorry, Connection Failed.", MessageBox.TYPE_INFO)
+			nobox = self.session.open(MessageBox, _("Sorry, Connection Failed."), MessageBox.TYPE_INFO)
 		
 
 class Nab_downFeedCat(Screen):
@@ -382,8 +382,8 @@ class Nab_ShowFeedFile(Screen):
 	def __init__(self, session, myidf, desc):
 		Screen.__init__(self, session)
 
-		self["key_green"] = Label("Install")
-		self["key_yellow"] = Label("Cancel")
+		self["key_green"] = Label(_("Install"))
+		self["key_yellow"] = Label(_("Cancel"))
 		self["infotext"] = ScrollLabel(desc)
 		self.fileN = myidf
 	
@@ -399,9 +399,9 @@ class Nab_ShowFeedFile(Screen):
 		})
 			
 	def KeyGreend(self):
-		message = "Do you want to install the Addon:\n " + self.fileN + " ?"
+		message = _("Do you want to install the Addon:\n ") + self.fileN + _(" ?")
 		ybox = self.session.openWithCallback(self.installadd, MessageBox, message, MessageBox.TYPE_YESNO)
-		ybox.setTitle("Install")
+		ybox.setTitle(_("Install"))
 		
 	def installadd(self, answer):
 		if answer is True:
@@ -414,7 +414,7 @@ class Nab_ShowFeedFile(Screen):
 			cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 			cmd1 = "opkg install --force-overwrite " + dest
 			cmd2 = "rm -f " + dest
-			self.session.open(Console, title="Ipk Package Installation", cmdlist=[cmd, cmd0, cmd1, cmd2, "sleep 5"], finishedCallback = self.installipkDone)
+			self.session.open(Console, title=_("Ipk Package Installation"), cmdlist=[cmd, cmd0, cmd1, cmd2, "sleep 5"], finishedCallback = self.installipkDone)
 			chdir(mydir)	
 	
 	def installipkDone(self):
@@ -432,8 +432,8 @@ class Nab_ShowFeedFile(Screen):
 					rc = system(cmd)
 			f.close()
 			rc = system("rm -f /tmp/package.info")
-		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
-		mybox.setTitle("Info")
+		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Gui will be now restarted to complete package installation.\nPress ok to continue"), MessageBox.TYPE_INFO)
+		mybox.setTitle(_("Info"))
 				
 
 	def hrestEn(self, answer):
@@ -505,7 +505,7 @@ class Nab_downCat(Screen):
 		if fileExists(downfile):
 			self.session.open(Nab_ShowDownFile, self.myidf)
 		else:
-			nobox = self.session.open(MessageBox, "Sorry, Connection Failed.", MessageBox.TYPE_INFO)
+			nobox = self.session.open(MessageBox, _("Sorry, Connection Failed."), MessageBox.TYPE_INFO)
 
 
 
@@ -520,7 +520,7 @@ class Nab_ShowPreviewFile(Screen):
 		Screen.__init__(self, session)
 
 		self["lab1"] = Pixmap()
-		self["lab2"] = Label("Black Hole Preview: click ok to exit")
+		self["lab2"] = Label(_("Black Hole Preview: click ok to exit"))
 		self["actions"] = ActionMap(["WizardActions"],
 		{
 			"ok": self.close,
@@ -611,7 +611,7 @@ class Nab_ShowDownFile(Screen):
 		
 	def KeyYellowd(self):
 		if (self.tcat != "Skins" and self.tcat != "Logos"):
-			nobox = self.session.open(MessageBox, "Sorry, the preview is available only for Skins and Bootlogo.", MessageBox.TYPE_INFO)
+			nobox = self.session.open(MessageBox, _("Sorry, the preview is available only for Skins and Bootlogo."), MessageBox.TYPE_INFO)
 		else:
 			self.fileP = self.fileN.replace('.tgz', '.jpg')
 			self.url = '"http://www.vuplus-community.net/bhaddons/files/' + self.fileP + '"'
@@ -627,9 +627,9 @@ class Nab_ShowDownFile(Screen):
 		self.session.openWithCallback(self.addonsconn, Nab_ConnectPop, cmd, "N/A")
 		
 	def addonsconn(self):
-		message = "Do you want to install the Addon:\n " + self.fileN + " ?"
+		message = _("Do you want to install the Addon:\n ") + self.fileN + _(" ?")
 		ybox = self.session.openWithCallback(self.installadd, MessageBox, message, MessageBox.TYPE_YESNO)
-		ybox.setTitle("Download Complete")
+		ybox.setTitle(_("Download Complete"))
 		
 	def installadd(self, answer):
 		if answer is True:
@@ -648,11 +648,11 @@ class Nab_ShowDownFile(Screen):
 				rc = system(cmd)
 				if fileExists("/usr/sbin/nab_e2_restart.sh"):
 					rc = system("rm -f /usr/sbin/nab_e2_restart.sh")
-					mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
-					mybox.setTitle("Info")
+					mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Gui will be now restarted to complete package installation.\nPress ok to continue"), MessageBox.TYPE_INFO)
+					mybox.setTitle(_("Info"))
 				else:
-					mybox = self.session.open(MessageBox, "Addon Succesfully Installed.", MessageBox.TYPE_INFO)
-					mybox.setTitle("Info")
+					mybox = self.session.open(MessageBox, _("Addon Succesfully Installed."), MessageBox.TYPE_INFO)
+					mybox.setTitle(_("Info"))
 					self.close()
 			
 			elif mytype == 2:
@@ -684,8 +684,8 @@ class Nab_ShowDownFile(Screen):
 					rc = system(cmd)
 			f.close()
 			rc = system("rm -f /tmp/package.info")
-		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
-		mybox.setTitle("Info")
+		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Gui will be now restarted to complete package installation.\nPress ok to continue"), MessageBox.TYPE_INFO)
+		mybox.setTitle(_("Info"))
 				
 
 	def hrestEn(self, answer):
@@ -727,9 +727,9 @@ class Nab_downPanel(Screen):
 		self.sel = self["list"].getCurrent()
 		if self.sel:
 			self.sel = self.sel[0]
-			message = "Do you want to install the Addon:\n " + self.sel + " ?"
+			message = _("Do you want to install the Addon:\n ") + self.sel + _(" ?")
 			ybox = self.session.openWithCallback(self.installadd2, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Installation Confirm")
+			ybox.setTitle(_("Installation Confirm"))
 
 	def installadd2(self, answer):
 		if answer is True:
@@ -744,10 +744,10 @@ class Nab_downPanel(Screen):
 			if fileExists("/usr/sbin/nab_e2_restart.sh"):
 				rc = system("rm -f /usr/sbin/nab_e2_restart.sh")
 				mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now hard restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
-				mybox.setTitle("Info")
+				mybox.setTitle(_("Info"))
 			else:
 				mybox = self.session.open(MessageBox, "Addon Succesfully Installed.", MessageBox.TYPE_INFO)
-				mybox.setTitle("Info")
+				mybox.setTitle(_("Info"))
 				self.close()
 
 	def hrestEn(self, answer):
@@ -778,7 +778,7 @@ class Nab_downPanelIPK(Screen):
 				self.flist.append(res)
 				idx = idx + 1
 		
-		self["warntext"] = Label("Here you can install any kind of ipk packages.")
+		self["warntext"] = Label(_("Here you can install any kind of ipk packages."))
 		self["list"] = List(self.flist)
 		
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -792,9 +792,9 @@ class Nab_downPanelIPK(Screen):
 		self.sel = self["list"].getCurrent()
 		if self.sel:
 			self.sel = self.sel[0]
-			message = "Do you want to install the Addon:\n " + self.sel + " ?"
+			message = _("Do you want to install the Addon:\n ") + self.sel + _(" ?")
 			ybox = self.session.openWithCallback(self.installadd2, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Installation Confirm")
+			ybox.setTitle(_("Installation Confirm"))
 
 	def installadd2(self, answer):
 		if answer is True:
@@ -825,8 +825,8 @@ class Nab_downPanelIPK(Screen):
 					rc = system(cmd)
 			f.close()
 			rc = system("rm -f /tmp/package.info")
-		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
-		mybox.setTitle("Info")
+		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Gui will be now restarted to complete package installation.\nPress ok to continue"), MessageBox.TYPE_INFO)
+		mybox.setTitle(_("Info"))
 				
 
 	def hrestEn(self, answer):
@@ -868,9 +868,9 @@ class Nab_uninstPanel(Screen):
 		self.sel = self["list"].getCurrent()
 		if self.sel:
 			self.sel = self.sel[0]
-			message = "Are you sure you want to Remove Package:\n " + self.sel + "?"
+			message = _("Are you sure you want to Remove Package:\n ") + self.sel + _("?")
 			ybox = self.session.openWithCallback(self.uninstPack, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle("Uninstall Confirmation")
+			ybox.setTitle(_("Uninstall Confirmation"))
 		
 	
 	def uninstPack(self, answer):
@@ -878,8 +878,8 @@ class Nab_uninstPanel(Screen):
 			orig = "/usr/uninstall/" + self.sel
 			cmd = "sh " + orig
 			rc = system(cmd)
-			mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Addon Succesfully Removed. Gui will be now restarted for the changes to take effect.\nPress ok to continue", MessageBox.TYPE_INFO)
-			mybox.setTitle("Info")
+			mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Addon Succesfully Removed. Gui will be now restarted for the changes to take effect.\nPress ok to continue"), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 			
 	def hrestEn(self, answer):
 		self.session.open(TryQuitMainloop, 3)
@@ -907,22 +907,22 @@ class Nab_Stats(Screen):
 		
 	def statshow(self):
 		if fileExists("/tmp/cpanel.tmp"):
-			strview = "Black Hole Image Statistics:\n\n_____________________________________\n"
+			strview = _("Black Hole Image Statistics:\n\n_____________________________________\n")
 			step = 0
 			f = open("/tmp/cpanel.tmp",'r')
 		
  			for line in f.readlines():
 				if step == 0:
-					strview += "Total Connections:   \t"
+					strview += _("Total Connections:   \t")
 				elif step == 1:
-					strview += "Today Connections:   \t"
+					strview += _("Today Connections:   \t")
 				elif step == 2:
-					strview += "Available Forums:   \t"
+					strview += _("Available Forums:   \t")
 				elif step == 3:
 					step = step + 1
 					continue
 				elif step == 4:
-					strview += "Shouts sent by users:\t"
+					strview += _("Shouts sent by users:\t")
 				elif step == 5:
 					step = step + 1
 					continue
@@ -930,9 +930,9 @@ class Nab_Stats(Screen):
 					step = step + 1
 					continue
 				elif step == 7:
-					strview += "Top downloaded File:\t"
+					strview += _("Top downloaded File:\t")
 				elif step == 8:
-					strview += "Total Downloads:     \t"
+					strview += _("Total Downloads:     \t")
 					
 				strview += line
 				step = step + 1
@@ -952,7 +952,7 @@ class Nab_ConnectPop(Screen):
 		
 		self["connect"] = MultiPixmap()
 		self["connect"].setPixmapNum(0)
-		self["lab1"] = Label("Wait please connection in progress ...")
+		self["lab1"] = Label(_("Wait please connection in progress ..."))
 		self.myurl = myurl
 		self.downfile = downfile
 		self.activityTimer = eTimer()
@@ -975,7 +975,7 @@ class Nab_ConnectPop(Screen):
 			self.curpix = 0	
 		if self.count > 8:
 			self.curpix = 4
-			self["lab1"].setText("Wait please, download in progress...")
+			self["lab1"].setText(_("Wait please, download in progress..."))
 		self["connect"].setPixmapNum(self.curpix)
 		if self.count == 10:
 			rc = system(self.myurl)
@@ -1002,7 +1002,7 @@ class Nab_ConnectPop(Screen):
 			except URLError, e:
     				self.close()
 			else:
-				self["lab1"].setText("Connection Established")
+				self["lab1"].setText(_("Connection Established"))
 				html = response.read()
 				out = open(self.downfile, "w")
 				out.write(html)

@@ -49,9 +49,13 @@ class BhRedDisabled(Screen):
 	def __init__(self, session, reason):
 		Screen.__init__(self, session)
 		
-		msg = "Sorry no space available to expand your Universe.\n\nTo enable Parallel dimensions you need a dedicated Usb stick.\n\nInstructions:\n1) Format your Usb stick \n -click on blue -> blue -> Usb Format Wizard\n\n2) Map the newly formatted stick to \"universe\"\n -click on blue -> blue -> Devices Manager."
+		msg = _("Sorry no space available to expand your Universe.\n\n")
+		msg += _("To enable Parallel dimensions you need a dedicated Usb stick.\n\nInstructions:\n")
+		msg += _("1) Format your Usb stick \n -click on blue -> blue -> Usb Format Wizard\n\n")
+		msg += _("2) Map the newly formatted stick to \"universe\"\n -click on blue -> blue -> Devices Manager.")
+		
 		if reason == "flash":
-			msg = "Sorry you can only access Parallel Universes from the image installed in flash."
+			msg = _("Sorry you can only access Parallel Universes from the image installed in flash.")
 			
 		self["lab1"] = Label(msg)
 		self["actions"] = ActionMap(["WizardActions"],
@@ -73,9 +77,9 @@ class BhRedWrong(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
-		self["key_red"] = Label("Big Bang")
-		self["key_green"] = Label("Exit")
-		msg = "Sorry your Parallel Universes are older than your Black Hole world.\nYou need to re-inizialize the system, reformat your Usb stick or generate a Bing Bang.\n"
+		self["key_red"] = Label(_("Big Bang"))
+		self["key_green"] = Label(_("Exit"))
+		msg = _("Sorry your Parallel Universes are older than your Black Hole world.\nYou need to re-inizialize the system, reformat your Usb stick or generate a Bing Bang.\n")
 		self["lab1"] = Label(msg)
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
 		{
@@ -85,7 +89,7 @@ class BhRedWrong(Screen):
 		})
 		
 	def gotobingBang(self):
-		msg = "The Big Bang will collapse all of the Parallel Universes into the original Black Hole matrix.\nThis means that all of your Parallel Universes will be destroyed and turned back into Black Hole timespace.\nWarning, all of the data stored in your Parallel Universes will be lost.\nAre you sure you want to start the Bing Bang?"
+		msg = _("The Big Bang will collapse all of the Parallel Universes into the original Black Hole matrix.\nThis means that all of your Parallel Universes will be destroyed and turned back into Black Hole timespace.\nWarning, all of the data stored in your Parallel Universes will be lost.\nAre you sure you want to start the Bing Bang?")
 		self.session.openWithCallback(self.startbigBang, MessageBox, msg, MessageBox.TYPE_YESNO)
 		
 	def startbigBang(self, answer):
@@ -115,9 +119,9 @@ class BhRedPanel(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
-		self["key_red"] = Label("Jump to...")
-		self["key_green"] = Label("Big Bang")
-		self["key_yellow"] = Label("Exit")
+		self["key_red"] = Label(_("Jump to..."))
+		self["key_green"] = Label(_("Big Bang"))
+		self["key_yellow"] = Label(_("Exit"))
 		self["lab1"] = Label()
 		self["lab2"] = Label()
 		self.current_universe = self.destination = self.destination_lock = self.destination_pin = self.destination_force_reboot = ""
@@ -177,7 +181,7 @@ class BhRedPanel(Screen):
 		
 		self.current_universe = self.whereIAm()
 		
-		txt = "You are in %s universe." % (self.current_universe)
+		txt = _("You are in %s universe.") % (self.current_universe)
 		self["lab1"].setText(txt)
 		
 		btot = buse = bempty = utot = uuse = uempty = ""
@@ -197,15 +201,15 @@ class BhRedPanel(Screen):
 		f.close()
 		os_remove("/tmp/syinfo.tmp")
 		
-		text = "Black Hole details:\nBlack Hole is the original matrix of all Parallel Universes and resides in its own phisycal space.\n"
-		text += "Estimated size: %s \n" % (btot)
-		text += "Occupied space: %s \n" % (buse)
-		text += "Empty space: %s \n\n" % (bempty)
+		text = _("Black Hole details:\nBlack Hole is the original matrix of all Parallel Universes and resides in its own phisycal space.\n")
+		text += _("Estimated size: %s \n") % (btot)
+		text += _("Occupied space: %s \n") % (buse)
+		text += _("Empty space: %s \n\n") % (bempty)
 
-		text += "Parallel Universes details:\nParallel Universes share the same space because they are all together in the same place, but in different dimensions.\n"
-		text += "Estimated size: %s \n" % (utot)
-		text += "Occupied space: %s \n" % (uuse)
-		text += "Empty space: %s \n\n" % (uempty)
+		text += _("Parallel Universes details:\nParallel Universes share the same space because they are all together in the same place, but in different dimensions.\n")
+		text += _("Estimated size: %s \n") % (utot)
+		text += _("Occupied space: %s \n") % (uuse)
+		text += _("Empty space: %s \n\n") % (uempty)
 
 		self["lab2"].setText(text)
 		
@@ -238,8 +242,8 @@ class BhRedPanel(Screen):
 			self.config_univ = sel[0]
 			self.config_pin = data[1]
 			if data[0] == "True":
-				msg = "Enter the pin for %s universe" % (sel[0])
-				self.session.openWithCallback(self.confiG2, InputBox, title=msg, windowTitle = "Insert Pin", text="0000", useableChars = "1234567890" )
+				msg = _("Enter the pin for %s universe") % (sel[0])
+				self.session.openWithCallback(self.confiG2, InputBox, title=msg, windowTitle = _("Insert Pin"), text="0000", useableChars = "1234567890" )
 			else:
 				self.session.open(BhUniverseConfig, sel[0])
 			
@@ -249,7 +253,7 @@ class BhRedPanel(Screen):
 		if int(pin) == int(self.config_pin):
 			self.session.open(BhUniverseConfig, self.config_univ)
 		else:
-			self.session.open(MessageBox, "Sorry, wrong pin.", MessageBox.TYPE_ERROR)
+			self.session.open(MessageBox, _("Sorry, wrong pin."), MessageBox.TYPE_ERROR)
 		
 	
 	def checkdesT(self):
@@ -257,7 +261,7 @@ class BhRedPanel(Screen):
 		self.destination = sel[0]
 		
 		if self.current_universe == self.destination:
-			msg = "You are already in %s universe." % (self.destination)
+			msg = _("You are already in %s universe.") % (self.destination)
 			self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
 		else:
 			data = Bh_read_Universe_Cfg(self.destination)
@@ -265,8 +269,8 @@ class BhRedPanel(Screen):
 			self.destination_pin = data[1]
 			self.destination_force_reboot =  data[2]
 			if data[0] == "True":
-				msg = "Enter the pin for %s universe" % (self.destination)
-				self.session.openWithCallback(self.checkdesTPin, InputBox, title=msg, windowTitle = "Insert Pin", text="0000", useableChars = "1234567890" )
+				msg = _("Enter the pin for %s universe") % (self.destination)
+				self.session.openWithCallback(self.checkdesTPin, InputBox, title=msg, windowTitle = _("Insert Pin"), text="0000", useableChars = "1234567890" )
 			else:
 				self.askjumpConfirm()
 
@@ -276,10 +280,10 @@ class BhRedPanel(Screen):
 		if int(pin) == int(self.destination_pin):
 			self.askjumpConfirm()
 		else:
-			self.session.open(MessageBox, "Sorry, wrong pin.", MessageBox.TYPE_ERROR)
+			self.session.open(MessageBox, _("Sorry, wrong pin."), MessageBox.TYPE_ERROR)
 
 	def askjumpConfirm(self):
-		msg = "We are going to jump into %s Universe.\nPlease remember that anything you do in this Universe, such as install sofware, skins or plugins will have no effect on the other Universes.\nAre you sure you want to jump?" % (self.destination)
+		msg = _("We are going to jump into %s Universe.\nPlease remember that anything you do in this Universe, such as install sofware, skins or plugins will have no effect on the other Universes.\nAre you sure you want to jump?") % (self.destination)
 		self.session.openWithCallback(self.prEjumP, MessageBox, msg, MessageBox.TYPE_YESNO)
 		
 	
@@ -371,10 +375,12 @@ class BhRedPanel(Screen):
 	def check_origin(self):
 		origin = self.whereIAm()
 		if origin != "Black Hole":
-			msg = "The Big Bang will collapse all of the Parallel Universes into the original Black Hole matrix.\nThis means that all of your Parallel Universes will be destroyed and turned back into Black Hole timespace.\nFor this reason you have to save yourself by jumping back into Black Hole Universe before you start the Big Bang."
+			msg = _("The Big Bang will collapse all of the Parallel Universes into the original Black Hole matrix.\nThis means that all of your Parallel Universes will be destroyed and turned back into Black Hole timespace.\n")
+			msg += _("For this reason you have to save yourself by jumping back into Black Hole Universe before you start the Big Bang.")
 			self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
 		else :
-			msg = "The Big Bang will collapse all of the Parallel Universes into the original Black Hole matrix.\nThis means that all of your Parallel Universes will be destroyed and turned back into Black Hole timespace.\nWarning, all of the data stored in your Parallel Universes will be lost.\nAre you sure you want to start the Bing Bang?"
+			msg = _("The Big Bang will collapse all of the Parallel Universes into the original Black Hole matrix.\nThis means that all of your Parallel Universes will be destroyed and turned back into Black Hole timespace.\n")
+			msg += _("Warning, all of the data stored in your Parallel Universes will be lost.\nAre you sure you want to start the Bing Bang?")
 			self.session.openWithCallback(self.startbigBang, MessageBox, msg, MessageBox.TYPE_YESNO)
 			
 	def startbigBang(self, answer):
@@ -412,7 +418,7 @@ class BhUniverseConfig(Screen, ConfigListScreen):
 		ConfigListScreen.__init__(self, self.list)
 		self["key_red"] = Label(_("Cancel"))
 		self["key_green"] = Label(_("Save"))
-		msg = "Setup %s Universe" % (universe)
+		msg = _("Setup %s Universe") % (universe)
 		self["lab1"] = Label(msg)
 		
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
@@ -438,11 +444,11 @@ class BhUniverseConfig(Screen, ConfigListScreen):
 		if data[2] == "True":
 			self.universe_force_reboot.value = True
 		
-		item = getConfigListEntry("Universe access protected", self.universe_lock)
+		item = getConfigListEntry(_("Universe access protected"), self.universe_lock)
 		self.list.append(item)
-		item = getConfigListEntry("Universe access pin", self.universe_pin)
+		item = getConfigListEntry(_("Universe access pin"), self.universe_pin)
 		self.list.append(item)
-		item = getConfigListEntry("Force reboot in Black Hole", self.universe_force_reboot)
+		item = getConfigListEntry(_("Force reboot in Black Hole"), self.universe_force_reboot)
 		self.list.append(item)	
 		
 		self["config"].list = self.list
@@ -503,14 +509,14 @@ class BhBigBang(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
-		self["lab1"] = Label("Please Wait, the Big Bang is in progress")
+		self["lab1"] = Label(_("Please Wait, the Big Bang is in progress"))
 		self["lab2"] = Label()
 		self["actions"] = ActionMap(["OkCancelActions"],
 		{
 			"back": self.close
 		})
 	
-		self.labtext = "Please Wait, the Big Bang is in progress"
+		self.labtext = _("Please Wait, the Big Bang is in progress")
 		self.activityTimer = eTimer()
 		self.activityTimer.timeout.get().append(self.updatepiX)
 		self.onShow.append(self.startShow)
@@ -542,7 +548,7 @@ class BhBigBang(Screen):
 			rc = system(" rm -f /universe/.*.cfg")
 		else:
 			running = False
-			self.session.openWithCallback(self.bigEnd, MessageBox, "Your Universes have been re-inizialized. You can now start to rebuild your worlds.", MessageBox.TYPE_INFO)
+			self.session.openWithCallback(self.bigEnd, MessageBox, _("Your Universes have been re-inizialized. You can now start to rebuild your worlds."), MessageBox.TYPE_INFO)
 		
 		if running == True:
 			self.activityTimer.start(1500)

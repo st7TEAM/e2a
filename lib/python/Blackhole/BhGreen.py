@@ -103,7 +103,7 @@ class DeliteGreenPanel(Screen):
 		if check == True:
 			runplug(session=self.session)
 		else:
-			mybox = self.session.open(MessageBox, "Fast Plugin not found. You have to setup Fast Plugin before to use this shortcut.", MessageBox.TYPE_INFO)
+			mybox = self.session.open(MessageBox, _("Fast Plugin not found. You have to setup Fast Plugin before to use this shortcut."), MessageBox.TYPE_INFO)
 			mybox.setTitle(_("Info"))		
 
 
@@ -149,14 +149,14 @@ class BhSetupGreen(Screen):
 		
 		mypixmap = mypath + "icons/plugin_list_setup.png"
 		png = LoadPixmap(mypixmap)
-		name = "Reorder plugins list"
+		name = _("Reorder plugins list")
 		idx = 0
 		res = (name, png, idx)
 		self.list.append(res)
 
 		mypixmap = mypath + "icons/fast_plugin_setup.png"
 		png = LoadPixmap(mypixmap)
-		name = "Fast Plugin Setup"
+		name = _("Fast Plugin Setup")
 		idx = 1
 		res = (name, png, idx)
 		self.list.append(res)
@@ -246,7 +246,7 @@ class BhGreenPluginsSetup(Screen, ConfigListScreen):
 			line = "%s:%d\n" % (x[0], x[1])
 			out.write(line)	
 		out.close()
-		self.session.open(MessageBox, "Plugins list positions saved.", MessageBox.TYPE_INFO)
+		self.session.open(MessageBox, _("Plugins list positions saved."), MessageBox.TYPE_INFO)
 		self.close()
 
 
@@ -295,7 +295,7 @@ class DeliteSetupFp(Screen):
 		mysel = self["list"].getCurrent()
 		if mysel:
 			mysel = mysel[0]
-			message = "Fast plugin set to: " + mysel + "\nKey: 2x Green"
+			message = _("Fast plugin set to: ") + mysel + "\n" + _("Key: 2x Green")
 			mybox = self.session.openWithCallback(self.close, MessageBox, message, MessageBox.TYPE_INFO)
 			mybox.setTitle(_("Configuration Saved"))
 			config.delite.fp.value = mysel

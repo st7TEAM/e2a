@@ -83,7 +83,7 @@ class DeliteInadyn(Screen):
 		
 	def restartIna(self):
 		if self.my_nabina_state == False:
-			mybox = self.session.open(MessageBox, "You have to Activate Inadyn before to start", MessageBox.TYPE_INFO)
+			mybox = self.session.open(MessageBox, _("You have to Activate Inadyn before to start"), MessageBox.TYPE_INFO)
 			mybox.setTitle("Info")
 		else:
 			rc = system("/usr/bin/inadyn_script.sh stop")
@@ -217,28 +217,28 @@ class DeliteInaSetup(Screen, ConfigListScreen):
 						self.ina_active.value = True
 					else:
 						self.ina_active.value = False
-					ina_active1 = getConfigListEntry("Activate Inadyn", self.ina_active)
+					ina_active1 = getConfigListEntry(_("Activate Inadyn"), self.ina_active)
 					self.list.append(ina_active1)
 				elif line.find('INADYN_USERNAME=') != -1:
 					line = line[16:]
 					self.ina_user.value = line
-					ina_user1 = getConfigListEntry("Username", self.ina_user)
+					ina_user1 = getConfigListEntry(_("Username"), self.ina_user)
 					self.list.append(ina_user1)
 				elif line.find('INADYN_PASSWORD=') != -1:
 					line = line[16:]
 					self.ina_pass.value = line
-					ina_pass1 = getConfigListEntry("Password", self.ina_pass)
+					ina_pass1 = getConfigListEntry(_("Password"), self.ina_pass)
 					self.list.append(ina_pass1)
 				elif line.find('INADYN_ALIAS=') != -1:
 					line = line[13:]
 					self.ina_alias.value = line
-					ina_alias1 = getConfigListEntry("Alias", self.ina_alias)
+					ina_alias1 = getConfigListEntry(_("Alias"), self.ina_alias)
 					self.list.append(ina_alias1)
 				elif line.find('UPDATE_PERIOD=') != -1:
 					line = int(line[14:])
 					line = ((line/1000) / 60)
 					self.ina_period.value = line
-					ina_period1 = getConfigListEntry("Time Update in Minutes", self.ina_period)
+					ina_period1 = getConfigListEntry(_("Time Update in Minutes"), self.ina_period)
 					self.list.append(ina_period1)
 				elif line.find('DYN_SYSTEM_ON=') != -1:
 					line = line[14:]
@@ -246,12 +246,12 @@ class DeliteInaSetup(Screen, ConfigListScreen):
 						self.ina_sysactive.value = True
 					else:
 						self.ina_sysactive.value = False
-					ina_sysactive1 = getConfigListEntry("Set System", self.ina_sysactive)
+					ina_sysactive1 = getConfigListEntry(_("Set System"), self.ina_sysactive)
 					self.list.append(ina_sysactive1)
 				elif line.find('DYN_SYSTEM=') != -1:
 					line = line[11:]
 					self.ina_system.value = line
-					ina_system1 = getConfigListEntry("System", self.ina_system)
+					ina_system1 = getConfigListEntry(_("System"), self.ina_system)
 					self.list.append(ina_system1)
 					
  			f.close()
@@ -264,48 +264,49 @@ class DeliteInaSetup(Screen, ConfigListScreen):
 		sel = self["config"].getCurrent()
 		if sel:
 			self.vkvar = sel[0]
+			self.vki = self["config"].getCurrentIndex()
 			value = "xmeo"
-			if self.vkvar == "Username":
+			if self.vki == 1:
 				value = self.ina_user.value
-			elif self.vkvar == "Password":
+			elif self.vki == 2:
 				value = self.ina_pass.value
-			elif self.vkvar == "Alias":
+			elif self.vki == 3:
 				value = self.ina_alias.value
-			elif self.vkvar == "System":
+			elif self.vki == 6:
 				value = self.ina_system.value
 			
 			if value != "xmeo":
 				self.session.openWithCallback(self.UpdateAgain, VirtualKeyBoard, title=self.vkvar, text=value)
 			else:
-				self.session.open(MessageBox, "Please use Virtual Keyboard for text rows only:\n-Username\n-Password\n-Alias\n-System", MessageBox.TYPE_INFO)
+				self.session.open(MessageBox, _("Please use Virtual Keyboard for text rows only:\n-Username\n-Password\n-Alias\n-System"), MessageBox.TYPE_INFO)
 	
 	def UpdateAgain(self, newt):
 		self.list = [ ]
 		if newt is None:
 			newt = ""
 		if newt.strip() != "":
-			if self.vkvar == "Username":
+			if self.vki == 1:
 				self.ina_user.value = newt
-			elif self.vkvar == "Password":
+			elif self.vki == 2:
 				self.ina_pass.value = newt
-			elif self.vkvar == "Alias":
+			elif self.vki == 3:
 				self.ina_alias.value = newt
-			elif self.vkvar == "System":
+			elif self.vki == 6:
 				self.ina_system.value = newt
 		
-			ina_active1 = getConfigListEntry("Activate Inadyn", self.ina_active)
+			ina_active1 = getConfigListEntry(_("Activate Inadyn"), self.ina_active)
 			self.list.append(ina_active1)
-			ina_user1 = getConfigListEntry("Username", self.ina_user)
+			ina_user1 = getConfigListEntry(_("Username"), self.ina_user)
 			self.list.append(ina_user1)
-			ina_pass1 = getConfigListEntry("Password", self.ina_pass)
+			ina_pass1 = getConfigListEntry(_("Password"), self.ina_pass)
 			self.list.append(ina_pass1)
-			ina_alias1 = getConfigListEntry("Alias", self.ina_alias)
+			ina_alias1 = getConfigListEntry(_("Alias"), self.ina_alias)
 			self.list.append(ina_alias1)
-			ina_period1 = getConfigListEntry("Time Update in Minutes", self.ina_period)
+			ina_period1 = getConfigListEntry(_("Time Update in Minutes"), self.ina_period)
 			self.list.append(ina_period1)
-			ina_sysactive1 = getConfigListEntry("Set System", self.ina_sysactive)
+			ina_sysactive1 = getConfigListEntry(_("Set System"), self.ina_sysactive)
 			self.list.append(ina_sysactive1)
-			ina_system1 = getConfigListEntry("System", self.ina_system)
+			ina_system1 = getConfigListEntry(_("System"), self.ina_system)
 			self.list.append(ina_system1)
 		
 			self["config"].list = self.list
@@ -354,7 +355,7 @@ class DeliteInaSetup(Screen, ConfigListScreen):
 			inme.close()
 		
 		else :
-			self.session.open(MessageBox, "Sorry Inadyn Script is Missing", MessageBox.TYPE_INFO)
+			self.session.open(MessageBox, _("Sorry Inadyn Script is Missing"), MessageBox.TYPE_INFO)
 			self.close()
 			
 		if fileExists("/usr/bin/inadyn_script.tmp"):

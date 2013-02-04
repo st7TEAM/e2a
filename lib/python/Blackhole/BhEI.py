@@ -124,7 +124,7 @@ class Nab_ExtraInfobar(Screen):
 						ret = a
 				break
 		f.close()
-		self["Universe"].setText("In %s universe" % (ret))
+		self["Universe"].setText(_("In %s universe") % (ret))
 		
 		self.VideoSize = " "
 		isCrypt = False

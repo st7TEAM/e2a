@@ -165,8 +165,8 @@ class DeliteInfo(Screen):
 			f.close()
 			os_remove("/tmp/ninfo.tmp")
 			
-		self.smallmontxt += "Ram in use: " + str(ramused) + " %\n"
-		self.smallmontxt += "Swap in use: " + str(swapused) + " %\n"
+		self.smallmontxt += _("Ram in use: ") + str(ramused) + " %\n"
+		self.smallmontxt += _("Swap in use: ") + str(swapused) + " %\n"
 		
 		self["ramg"].setValue(int(((ramused *100) /120) + 50))
 		self["swapg"].setValue(int(((swapused *100) /120) + 50))
@@ -234,10 +234,10 @@ class DeliteInfo(Screen):
 				fperc = (fused  * 100) /ftot
 			
 			
-		self.smallmontxt += "Flash in use: " + str(flperc) + " %\n"
-		self.smallmontxt += "Cf in use: " + str(cfperc) + " %\n"
-		self.smallmontxt += "Usb in use: " + str(usperc) + " %\n"
-		self.smallmontxt += "Hdd in use: " + str(hdperc) + " %\n"
+		self.smallmontxt += _("Flash in use: ") + str(flperc) + " %\n"
+		self.smallmontxt += _("Cf in use: ") + str(cfperc) + " %\n"
+		self.smallmontxt += _("Usb in use: ") + str(usperc) + " %\n"
+		self.smallmontxt += _("Hdd in use: ") + str(hdperc) + " %\n"
 		
 		self["spacetg"].setValue(int(((fperc *100) /120) + 50))
 		self["cffg"].setValue(int(((cfperc *100) /120) + 50))
@@ -354,17 +354,17 @@ class DeliteInfo(Screen):
 				parts = line.strip().split()
 				if parts[0] == "Mem:":
 					ramused = int(( int(parts[2]) * 100) / int(parts[1]))
-					mytext += "Ram in use: " + str(ramused) + " % \n"
-					mytext += "Total: " + parts[1] + "\tUsed: " + parts[2] + "\tFree: " + parts[3] + "\n"
+					mytext += _("Ram in use: ") + str(ramused) + " % \n"
+					mytext += _("Total: ") + parts[1] + "\t" + _("Used: ") + parts[2] + "\t" + _("Free: ") + parts[3] + "\n"
 				elif parts[0] == "Swap:":
 					swapused = 0
 					if int(parts[1]) > 1:
 						swapused = int(( int(parts[2]) * 100) / int(parts[1]))
-					mytext += "Swap in use: " + str(swapused) + " % \n"
-					mytext += "Total: " + parts[1] + "\tUsed: " + parts[2] + "\tFree: " + parts[3] + "\n"
+					mytext += _("Swap in use: ") + str(swapused) + " % \n"
+					mytext += _("Total: ") + parts[1] + "\t" + _("Used: ") + parts[2] + "\t" + _("Free: ") + parts[3] + "\n"
 				elif parts[0] == "Total:":
 					totused = int(( int(parts[2]) * 100) / int(parts[1]))
-					mytext += "Total in use: " + str(totused) + " % \n"
+					mytext += _("Total in use: ") + str(totused) + " % \n"
 				
 			f.close()
 			os_remove("/tmp/ninfo.tmp")
@@ -419,8 +419,8 @@ class DeliteInfo(Screen):
 						fltot = fltot / 1000
 						meas = "Gb"
 					capacity = "%d.%03d " % (fltot/1000, fltot%1000)
-					mytext +=  "FLASH: " + capacity + meas +"   in use: " + flused + "\n"
-					mytext += "Total: " + parts[totsp -4] + "   Used: " + parts[totsp -3] + "   Free: " + parts[totsp -2]  + "\n\n"
+					mytext +=  _("FLASH: ") + capacity + meas + _("   in use: ") + flused + "\n"
+					mytext += _("Total: ") + parts[totsp -4] + _("   Used: ") + parts[totsp -3] + _("   Free: ") + parts[totsp -2]  + "\n\n"
 					fltot = int(parts[totsp -4])
 					flused = int(parts[totsp -3])
 				
@@ -435,8 +435,8 @@ class DeliteInfo(Screen):
 						cftot = cftot / 1000
 						meas = "Gb"
 					capacity = "%d.%03d " % (cftot/1000, cftot%1000)
-					mytext +=  "CF: " + capacity + meas +"   in use: " + cfused + "\n"
-					mytext += "Total: " + parts[totsp -4] + "   Used: " + parts[totsp -3] + "   Free: " + parts[totsp -2]  + "\n\n"
+					mytext += ("CF: ") + capacity + meas + _("   in use: ") + cfused + "\n"
+					mytext += _("Total: ") + parts[totsp -4] + _("   Used: ") + parts[totsp -3] + _("   Free: ") + parts[totsp -2]  + "\n\n"
 					cftot = int(parts[totsp -4])
 					cfused = int(parts[totsp -3])
 				if parts[totsp] == "/media/usb":
@@ -449,8 +449,8 @@ class DeliteInfo(Screen):
 						ustot = ustot / 1000
 						meas = "Gb"
 					capacity = "%d.%03d " % (ustot/1000, ustot%1000)
-					mytext += "USB: " + capacity + meas + "   in use: " + usused + "\n"
-					mytext += "Total: " + parts[totsp -4] + "   Used: " + parts[totsp -3] + "   Free: " + parts[totsp -2] + "\n\n"
+					mytext += _("USB: ") + capacity + meas + _("   in use: ") + usused + "\n"
+					mytext += _("Total: ") + parts[totsp -4] + _("   Used: ") + parts[totsp -3] + _("   Free: ") + parts[totsp -2] + "\n\n"
 					ustot = int(parts[totsp -4])
 					usused = int(parts[totsp -3])
 				if parts[totsp] == "/media/hdd":
@@ -465,8 +465,8 @@ class DeliteInfo(Screen):
 							hdtot = hdtot / 1000
 							meas = "Gb"
 						capacity = "%d.%03d " % (hdtot/1000, hdtot%1000)
-						mytext += "HDD: " + capacity + meas + "   in use: " + hdused + "\n"
-						mytext += "Total: " + parts[totsp -4] + "   Used: " + parts[totsp -3] + "   Free: " + parts[totsp -2] + "\n\n"
+						mytext += _("HDD: ") + capacity + meas + _("   in use: ") + hdused + "\n"
+						mytext += _("Total: ") + parts[totsp -4] + _("   Used: ") + parts[totsp -3] + _("   Free: ") + parts[totsp -2] + "\n\n"
 						hdtot = int(parts[totsp -4])
 						hdused = int(parts[totsp -3])
 				
@@ -509,8 +509,8 @@ class DeliteInfo(Screen):
 			ffree = "%d.%03d " % (ffree/1000, ffree%1000)	
 			ffree += meas
 			
-			mytext += "Total Space: " + ftot + "    in use: " + str(fperc) + "% \n"
-			mytext += "Total: " + ftot + " Used: " + fused + " Free: " + ffree
+			mytext += _("Total Space: ") + ftot + _("    in use: ") + str(fperc) + "% \n"
+			mytext += _("Total: ") + ftot + _(" Used: ") + fused + _(" Free: ") + ffree
 			
 		self["moni2"].setText(mytext)
 
