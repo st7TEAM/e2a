@@ -10630,18 +10630,6 @@ msgid ""
 "again."
 msgstr ""
 
-msgid "Add a new NFS or CIFS mount point to your Dreambox."
-msgstr ""
-
-msgid "View, edit or delete mountpoints on your Dreambox."
-msgstr ""
-
-msgid "Change the hostname of your Dreambox."
-msgstr ""
-
-msgid "Enter new hostname for your Dreambox"
-msgstr ""
-
 msgid "width"
 msgstr ""
 
@@ -10914,13 +10902,6 @@ msgid "No information..."
 msgstr ""
 
 msgid "Wireless LAN Setup"
-msgstr ""
-
-msgid ""
-"Your Dreambox is now ready to use.\n"
-"\n"
-"Your internet connection is working now.\n"
-"\n"
 msgstr ""
 
 msgid "Dolby Digital default"
