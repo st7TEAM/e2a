@@ -10407,6 +10407,1978 @@ msgstr "zappejar"
 msgid "zapped"
 msgstr "zappejat"
 
+msgid "OpenWebInterface Enabled"
+msgstr ""
+
+msgid "Http port"
+msgstr ""
+
+msgid "Enable Http Authentication"
+msgstr ""
+
+msgid "Streaming port"
+msgstr ""
+
+msgid "Enable Https"
+msgstr ""
+
+msgid "Https port"
+msgstr ""
+
+msgid "Smart services renaming for XBMC"
+msgstr ""
+
+msgid "MSA"
+msgstr ""
+
+msgid "MA"
+msgstr ""
+
+msgid "MB"
+msgstr ""
+
+msgid "MC"
+msgstr ""
+
+msgid "MD"
+msgstr ""
+
+msgid "ME"
+msgstr ""
+
+msgid "MF"
+msgstr ""
+
+msgid "MG"
+msgstr ""
+
+msgid "MH"
+msgstr ""
+
+msgid "For use this plugin, you must update the kernel version to 3.1 or later"
+msgstr ""
+
+msgid "1-1. Serial Number (The first two or three letters of SN)"
+msgstr ""
+
+msgid "1-2. Serial Number (The remaining numbers of SN)"
+msgstr ""
+
+msgid "2. Contact"
+msgstr ""
+
+msgid "Agree"
+msgstr ""
+
+msgid "Return the Love Event"
+msgstr ""
+
+msgid "Epg Backup: not found."
+msgstr ""
+
+msgid "Automatic Epg Backup:"
+msgstr ""
+
+msgid "Epg Backup found: "
+msgstr ""
+
+msgid "Sorry no device found to store backup."
+msgstr ""
+
+msgid "Epg backup successfully restored."
+msgstr ""
+
+msgid "Sorry Epg Backup not found. Please download epg before to restore."
+msgstr ""
+
+msgid "You have to activate Backup before to Restore."
+msgstr ""
+
+msgid "Enable Automatic Epg Backup"
+msgstr ""
+
+msgid "Path to save Backup Epg File"
+msgstr ""
+
+msgid "Sorry this plugin is for Black Hole images only"
+msgstr ""
+
+msgid "plugin to Backup/Restore Epg"
+msgstr ""
+
+msgid "Select URL type"
+msgstr ""
+
+msgid "Ok"
+msgstr ""
+
+msgid "Select a bouquet to add a channel to"
+msgstr ""
+
+msgid "Add stream URL"
+msgstr ""
+
+msgid "Enter name"
+msgstr ""
+
+msgid "Enter URL"
+msgstr ""
+
+msgid "Add a streaming url to your channellist"
+msgstr ""
+
+msgid "Stop playing this stream?"
+msgstr ""
+
+msgid "StreamTVPlayer"
+msgstr ""
+
+#, python-format
+msgid "This STB can't decode %s streams!"
+msgstr ""
+
+msgid "Retrieving data ..."
+msgstr ""
+
+msgid "Sorry, wrong WOEID"
+msgstr ""
+
+msgid "Change city"
+msgstr ""
+
+msgid "Enter the city name:"
+msgstr ""
+
+msgid "Sorry no matches found"
+msgstr ""
+
+msgid "Press ok to confirm"
+msgstr ""
+
+msgid "World Weather Forecast"
+msgstr ""
+
+msgid "Personal Backup: not found."
+msgstr ""
+
+msgid "Sorry. Personal Backup found but it is not compatible with the new OE 2"
+msgstr ""
+
+msgid "Personal Backup found: "
+msgstr ""
+
+msgid ""
+"Do you really want to restore the Backup:\n"
+" "
+msgstr ""
+
+msgid "Sorry Personal Backup not found."
+msgstr ""
+
+msgid "You have to setup backup location."
+msgstr ""
+
+msgid ""
+"Files extraction in progress...\n"
+"\n"
+msgstr ""
+
+msgid "Archive Extraction\t\t\t"
+msgstr ""
+
+msgid "Merge directory "
+msgstr ""
+
+msgid "Restore "
+msgstr ""
+
+msgid "Merge "
+msgstr ""
+
+msgid "Path to save Personal Backup"
+msgstr ""
+
+msgid "Backup complete !"
+msgstr ""
+
+msgid "Black Hole personal backup"
+msgstr ""
+
+msgid "Side by Side"
+msgstr ""
+
+msgid "Top and Bottom"
+msgstr ""
+
+msgid "Mode 1"
+msgstr ""
+
+msgid "Mode 2"
+msgstr ""
+
+msgid "Setup mode"
+msgstr ""
+
+msgid "3d mode"
+msgstr ""
+
+msgid "Depth"
+msgstr ""
+
+msgid "Adjust 3D settings"
+msgstr ""
+
+msgid ""
+"\n"
+"Manage extensions or plugins for your STB"
+msgstr ""
+
+msgid ""
+"\n"
+"Online update of your STB software."
+msgstr ""
+
+msgid ""
+"\n"
+"Restore your STB with a new firmware."
+msgstr ""
+
+msgid ""
+"\n"
+"Backup your STB settings."
+msgstr ""
+
+msgid ""
+"\n"
+"Restore your STB settings."
+msgstr ""
+
+msgid "Do you want to update your STB?"
+msgstr ""
+
+msgid "Do you want to reboot your STB?"
+msgstr ""
+
+msgid "STB software because updates are available."
+msgstr ""
+
+msgid "Upgrading STB... Please wait"
+msgstr ""
+
+msgid ""
+"your STB might be unusable now. Please consult the manual for further "
+"assistance before rebooting your STB."
+msgstr ""
+
+msgid ""
+"Your STB isn't connected to the internet properly. Please check it and try "
+"again."
+msgstr ""
+
+msgid "width"
+msgstr ""
+
+msgid "top"
+msgstr ""
+
+msgid "height"
+msgstr ""
+
+msgid "Name :"
+msgstr ""
+
+msgid "User :"
+msgstr ""
+
+msgid "Password :"
+msgstr ""
+
+msgid "APN :"
+msgstr ""
+
+msgid "PIN :"
+msgstr ""
+
+msgid "Phone :"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "Modem Manager"
+msgstr ""
+
+msgid "WPA/WPA2"
+msgstr ""
+
+msgid "Enable 64 bit (Input 10 hex keys)"
+msgstr ""
+
+msgid "Enable 128 bit (Input 26 hex keys)"
+msgstr ""
+
+msgid "not set"
+msgstr ""
+
+msgid "Current settings (interface : br0)"
+msgstr ""
+
+msgid "Wireless Lan Device is not detected."
+msgstr ""
+
+msgid "Use AP Mode"
+msgstr ""
+
+msgid "AP Device"
+msgstr ""
+
+msgid "AP Mode"
+msgstr ""
+
+msgid "Channel (1~13)"
+msgstr ""
+
+msgid "SSID (1~32 Characters)"
+msgstr ""
+
+msgid "Beacon (15~65535)"
+msgstr ""
+
+msgid "RTS Threshold (0~2347)"
+msgstr ""
+
+msgid "FRAGM Threshold (256~2346)"
+msgstr ""
+
+msgid "Preamble"
+msgstr ""
+
+msgid "Ignore Broadcast SSID"
+msgstr ""
+
+msgid "Encrypt"
+msgstr ""
+
+msgid "Method"
+msgstr ""
+
+msgid "KeyType"
+msgstr ""
+
+msgid "WEP Key (HEX)"
+msgstr ""
+
+msgid "KEY (8~63 Characters)"
+msgstr ""
+
+msgid "Group Rekey Interval"
+msgstr ""
+
+msgid "NetMask"
+msgstr ""
+
+msgid ""
+"Are you sure you want to setup your AP?\n"
+"\n"
+msgstr ""
+
+msgid "Please wait for AP Configuration....\n"
+msgstr ""
+
+msgid ""
+"Invalid WEP key\n"
+"\n"
+msgstr ""
+
+msgid ""
+"Invalid WPA key\n"
+"\n"
+msgstr ""
+
+msgid "Invalid SSID\n"
+msgstr ""
+
+msgid "Invalid channel\n"
+msgstr ""
+
+msgid "Invalid beacon\n"
+msgstr ""
+
+msgid "Invalid RTS Threshold\n"
+msgstr ""
+
+msgid "Invalid Fragm Threshold\n"
+msgstr ""
+
+msgid "Invalid wpagrouprekey\n"
+msgstr ""
+
+msgid "Configuration your AP is finished"
+msgstr ""
+
+msgid "Invalid model or Image."
+msgstr ""
+
+msgid "Realtek"
+msgstr ""
+
+msgid "WLAN adapter."
+msgstr ""
+
+msgid "Atheros"
+msgstr ""
+
+msgid "Zydas"
+msgstr ""
+
+msgid "Ralink"
+msgstr ""
+
+msgid "WLAN adapter"
+msgstr ""
+
+msgid "Unknown network adapter"
+msgstr ""
+
+msgid "Wireless Access Point"
+msgstr ""
+
+msgid "Select Wireless Lan module. \n"
+msgstr ""
+
+msgid "Can not find any WirelessLan Module\n"
+msgstr ""
+
+msgid "Invalid WirelessLan Module.\n"
+msgstr ""
+
+msgid "Can not setup WirelessLan Module in 'AP Mode'\n"
+msgstr ""
+
+msgid "Edit the network configuration of your STB.\n"
+msgstr ""
+
+msgid "Edit the Nameserver configuration of your STB.\n"
+msgstr ""
+
+msgid "Test the network configuration of your STB.\n"
+msgstr ""
+
+msgid "Scan Wireless AP"
+msgstr ""
+
+msgid "ASCII"
+msgstr ""
+
+msgid "HEX"
+msgstr ""
+
+msgid "[ N/A ]"
+msgstr ""
+
+msgid "Use Device"
+msgstr ""
+
+msgid "ESSID"
+msgstr ""
+
+msgid "Input Hidden ESSID"
+msgstr ""
+
+msgid "Key Type"
+msgstr ""
+
+msgid "KEY"
+msgstr ""
+
+msgid "IP"
+msgstr ""
+
+msgid "Use Gateway"
+msgstr ""
+
+msgid "Please wait for scanning AP..."
+msgstr ""
+
+msgid "No AP detected."
+msgstr ""
+
+msgid "Are you sure you want to restart your network interfaces?\n"
+msgstr ""
+
+msgid ""
+"Network configuration is not changed....\n"
+"\n"
+"Are you sure you want to restart your network interfaces?\n"
+msgstr ""
+
+msgid "wpa_supplicant.conf open error."
+msgstr ""
+
+msgid "Can NOT generate passphrase"
+msgstr ""
+
+msgid "exit"
+msgstr ""
+
+msgid "EditSetting"
+msgstr ""
+
+msgid "Scanning AP List.."
+msgstr ""
+
+msgid "Wait a moment"
+msgstr ""
+
+msgid "This test detects your configured Wireless LAN-Adapter."
+msgstr ""
+
+msgid ""
+"This test checks whether a network cable is connected to your Wireless LAN-"
+"Adapter."
+msgstr ""
+
+msgid ""
+"This test checks whether your Wireless LAN Adapter is set up for automatic "
+"IP Address configuration with DHCP.\n"
+"If you get a \"disabled\" message:\n"
+" - then your Wireless LAN Adapter is configured for manual IP Setup\n"
+"- verify thay you have entered correct IP informations in the AdapterSetup "
+"dialog.\n"
+"If you get an \"enabeld\" message:\n"
+"-verify that you have a configured and working DHCP Server in your network."
+msgstr ""
+
+msgid "Wait a moment..."
+msgstr ""
+
+msgid "No information..."
+msgstr ""
+
+msgid "Wireless LAN Setup"
+msgstr ""
+
+msgid "Dolby Digital default"
+msgstr ""
+
+msgid "Dolby Digital downmix"
+msgstr ""
+
+msgid "General Dolby Digital Delay"
+msgstr ""
+
+msgid "FPGA"
+msgstr ""
+
+msgid "Front Processor"
+msgstr ""
+
+msgid "Can't cancel during upgrade!!"
+msgstr ""
+
+msgid "Status : 0%"
+msgstr ""
+
+msgid "Fail to upgrade!! Retry!!"
+msgstr ""
+
+#, python-format
+msgid "%d / 100"
+msgstr ""
+
+msgid "Success. Press OK to exit."
+msgstr ""
+
+msgid "Do you want to remove binary data?"
+msgstr ""
+
+msgid "Can't found binary file."
+msgstr ""
+
+msgid "Can't found MD5 file."
+msgstr ""
+
+msgid "You chose the incorrect file."
+msgstr ""
+
+msgid "Can't find /usr/bin/md5sum"
+msgstr ""
+
+msgid "Firmware does not exist."
+msgstr ""
+
+msgid "Can't found model name."
+msgstr ""
+
+msgid "This plugin is supported only the Ultimo/Uno."
+msgstr ""
+
+msgid "Upgrade"
+msgstr ""
+
+msgid "Firmware"
+msgstr ""
+
+msgid "No selected binary data!!"
+msgstr ""
+
+msgid "Can't found device file!!"
+msgstr ""
+
+msgid "Firmware Upgrade"
+msgstr ""
+
+msgid "This Plugin doesn't support on SOLO/DUO"
+msgstr ""
+
+msgid "Remote Control System Code"
+msgstr ""
+
+msgid "Reply timeout"
+msgstr ""
+
+msgid "FILE NOT EXIST : /proc/stb/fp/remote_code"
+msgstr ""
+
+msgid "GUI restart now, press 'OK' button."
+msgstr ""
+
+msgid "Keep"
+msgstr ""
+
+msgid "RemoteControlCode"
+msgstr ""
+
+msgid "HDMI CEC enabled:"
+msgstr ""
+
+msgid "Active Source Reply On:"
+msgstr ""
+
+msgid "VU standby => TV activity:"
+msgstr ""
+
+msgid "VU deepstandby => TV activity:"
+msgstr ""
+
+msgid "VU on => TV activity:"
+msgstr ""
+
+msgid "TV standby => VU+ activity:"
+msgstr ""
+
+msgid "TV on => VU+ activity:"
+msgstr ""
+
+msgid "Choose TV HDMI input:"
+msgstr ""
+
+msgid "Choose A/V-Receiver HDMI input:"
+msgstr ""
+
+msgid "A/V-Receiver volume up:"
+msgstr ""
+
+msgid "A/V-Receiver volume down:"
+msgstr ""
+
+msgid "A/V-Receiver toggle mute:"
+msgstr ""
+
+msgid "A/V-Receiver power on:"
+msgstr ""
+
+msgid "A/V-Receiver power off:"
+msgstr ""
+
+msgid "TV power on:"
+msgstr ""
+
+msgid "TV power off:"
+msgstr ""
+
+msgid "Use TV remotecontrol:"
+msgstr ""
+
+msgid "Set VU device name:"
+msgstr ""
+
+msgid "Address (0~FF):"
+msgstr ""
+
+msgid "HDMI-CEC"
+msgstr ""
+
+msgid "MUTE"
+msgstr ""
+
+msgid "HOLD"
+msgstr ""
+
+msgid "Zapping Mode"
+msgstr ""
+
+msgid ""
+"SET FAILED!\n"
+"Please update to the latest driver"
+msgstr ""
+
+msgid "ZappingModeSelection"
+msgstr ""
+
+#, python-format
+msgid ""
+"Autoresolution Plugin Testmode:\n"
+"Is %s ok?"
+msgstr ""
+
+msgid "Can not open 'fan_pwm'"
+msgstr ""
+
+msgid "FanOFF InStanby"
+msgstr ""
+
+msgid "PWM value"
+msgstr ""
+
+msgid "Status Check Period"
+msgstr ""
+
+msgid "Manual Fan control"
+msgstr ""
+
+msgid "Activate Inadyn"
+msgstr ""
+
+msgid "Time Update in Minutes:"
+msgstr ""
+
+msgid "Username:"
+msgstr ""
+
+msgid "Password:"
+msgstr ""
+
+msgid "Alias:"
+msgstr ""
+
+msgid "System:"
+msgstr ""
+
+msgid "Status:"
+msgstr ""
+
+msgid "Stopped"
+msgstr ""
+
+msgid "Running !"
+msgstr ""
+
+msgid "Show Log"
+msgstr ""
+
+msgid "You have to Activate Inadyn before to start"
+msgstr ""
+
+msgid "Alias"
+msgstr ""
+
+msgid "Time Update in Minutes"
+msgstr ""
+
+msgid "Set System"
+msgstr ""
+
+msgid ""
+"Please use Virtual Keyboard for text rows only:\n"
+"-Username\n"
+"-Password\n"
+"-Alias\n"
+"-System"
+msgstr ""
+
+msgid "Sorry Inadyn Script is Missing"
+msgstr ""
+
+msgid "Sorry no events found matching to the search criteria."
+msgstr ""
+
+msgid "Clear History"
+msgstr ""
+
+msgid "Ram in use: "
+msgstr ""
+
+msgid "Swap in use: "
+msgstr ""
+
+msgid "Flash in use: "
+msgstr ""
+
+msgid "Cf in use: "
+msgstr ""
+
+msgid "Usb in use: "
+msgstr ""
+
+msgid "Hdd in use: "
+msgstr ""
+
+msgid "Total: "
+msgstr ""
+
+msgid "Used: "
+msgstr ""
+
+msgid "Free: "
+msgstr ""
+
+msgid "Total in use: "
+msgstr ""
+
+msgid "FLASH: "
+msgstr ""
+
+msgid "   in use: "
+msgstr ""
+
+msgid "   Used: "
+msgstr ""
+
+msgid "   Free: "
+msgstr ""
+
+msgid "USB: "
+msgstr ""
+
+msgid "HDD: "
+msgstr ""
+
+msgid "Total Space: "
+msgstr ""
+
+msgid "    in use: "
+msgstr ""
+
+msgid " Used: "
+msgstr ""
+
+msgid " Free: "
+msgstr ""
+
+msgid "Enable Swap at startup"
+msgstr ""
+
+msgid "Swap Place:"
+msgstr ""
+
+msgid "Swap Size:"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Activate"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Autostart"
+msgstr ""
+
+msgid "Deactivate"
+msgstr ""
+
+msgid "Swap File not found. You have to create the file before to activate."
+msgstr ""
+
+msgid "Swap File Deleted and Autostart Deactivated."
+msgstr ""
+
+msgid "Select the Swap File Place:"
+msgstr ""
+
+msgid "Select the Swap File Size:"
+msgstr ""
+
+msgid "Swap File successfully created."
+msgstr ""
+
+msgid "Swap File creation Failed. Check for Available space."
+msgstr ""
+
+msgid "Swap file Automatic Startup Disabled"
+msgstr ""
+
+msgid "Swap file Automatic Startup Enabled"
+msgstr ""
+
+msgid "You have to create a Swap File before to activate the autostart."
+msgstr ""
+
+msgid "Execute"
+msgstr ""
+
+msgid "Black Hole Shutdown"
+msgstr ""
+
+msgid "Restart Gui"
+msgstr ""
+
+msgid "Hard Reset"
+msgstr ""
+
+msgid "Set Sleeptimer"
+msgstr ""
+
+msgid ""
+"Sorry no space available to expand your Universe.\n"
+"\n"
+msgstr ""
+
+msgid ""
+"To enable Parallel dimensions you need a dedicated Usb stick.\n"
+"\n"
+"Instructions:\n"
+msgstr ""
+
+msgid ""
+"1) Format your Usb stick \n"
+" -click on blue -> blue -> Usb Format Wizard\n"
+"\n"
+msgstr ""
+
+msgid ""
+"2) Map the newly formatted stick to \"universe\"\n"
+" -click on blue -> blue -> Devices Manager."
+msgstr ""
+
+msgid ""
+"Sorry you can only access Parallel Universes from the image installed in "
+"flash."
+msgstr ""
+
+msgid "Big Bang"
+msgstr ""
+
+msgid ""
+"Sorry your Parallel Universes are older than your Black Hole world.\n"
+"You need to re-inizialize the system, reformat your Usb stick or generate a "
+"Bing Bang.\n"
+msgstr ""
+
+msgid ""
+"The Big Bang will collapse all of the Parallel Universes into the original "
+"Black Hole matrix.\n"
+"This means that all of your Parallel Universes will be destroyed and turned "
+"back into Black Hole timespace.\n"
+"Warning, all of the data stored in your Parallel Universes will be lost.\n"
+"Are you sure you want to start the Bing Bang?"
+msgstr ""
+
+msgid "Jump to..."
+msgstr ""
+
+#, python-format
+msgid "You are in %s universe."
+msgstr ""
+
+msgid ""
+"Black Hole details:\n"
+"Black Hole is the original matrix of all Parallel Universes and resides in "
+"its own phisycal space.\n"
+msgstr ""
+
+#, python-format
+msgid "Estimated size: %s \n"
+msgstr ""
+
+#, python-format
+msgid "Occupied space: %s \n"
+msgstr ""
+
+#, python-format
+msgid ""
+"Empty space: %s \n"
+"\n"
+msgstr ""
+
+msgid ""
+"Parallel Universes details:\n"
+"Parallel Universes share the same space because they are all together in the "
+"same place, but in different dimensions.\n"
+msgstr ""
+
+#, python-format
+msgid "Enter the pin for %s universe"
+msgstr ""
+
+msgid "Insert Pin"
+msgstr ""
+
+msgid "Sorry, wrong pin."
+msgstr ""
+
+#, python-format
+msgid "You are already in %s universe."
+msgstr ""
+
+#, python-format
+msgid ""
+"We are going to jump into %s Universe.\n"
+"Please remember that anything you do in this Universe, such as install "
+"sofware, skins or plugins will have no effect on the other Universes.\n"
+"Are you sure you want to jump?"
+msgstr ""
+
+msgid ""
+"The Big Bang will collapse all of the Parallel Universes into the original "
+"Black Hole matrix.\n"
+"This means that all of your Parallel Universes will be destroyed and turned "
+"back into Black Hole timespace.\n"
+msgstr ""
+
+msgid ""
+"For this reason you have to save yourself by jumping back into Black Hole "
+"Universe before you start the Big Bang."
+msgstr ""
+
+msgid ""
+"Warning, all of the data stored in your Parallel Universes will be lost.\n"
+"Are you sure you want to start the Bing Bang?"
+msgstr ""
+
+#, python-format
+msgid "Setup %s Universe"
+msgstr ""
+
+msgid "Universe access protected"
+msgstr ""
+
+msgid "Universe access pin"
+msgstr ""
+
+msgid "Force reboot in Black Hole"
+msgstr ""
+
+msgid "Please Wait, the Big Bang is in progress"
+msgstr ""
+
+msgid ""
+"Your Universes have been re-inizialized. You can now start to rebuild your "
+"worlds."
+msgstr ""
+
+msgid "Black Hole Speed Up"
+msgstr ""
+
+msgid "Black Hole Cron Manager"
+msgstr ""
+
+msgid "Osd Settings"
+msgstr ""
+
+msgid "Devices Manager"
+msgstr ""
+
+msgid "Usb Format Wizard"
+msgstr ""
+
+msgid "Kernel Modules Manager"
+msgstr ""
+
+msgid "Inadyn Settings"
+msgstr ""
+
+msgid "Swap File Settings"
+msgstr ""
+
+msgid "Hard Disk Settings"
+msgstr ""
+
+msgid "OpenVpn Panel"
+msgstr ""
+
+msgid "Samba/Cifs Panel"
+msgstr ""
+
+msgid "Nfs Server Panel"
+msgstr ""
+
+msgid "Telnet Panel"
+msgstr ""
+
+msgid "Ftp Panel"
+msgstr ""
+
+msgid "UPnP Client Djmount"
+msgstr ""
+
+msgid "UPnP Server Mediatomb"
+msgstr ""
+
+msgid "UPnP Server Minidlna"
+msgstr ""
+
+msgid "Pcsc Panel"
+msgstr ""
+
+msgid "Tuner Server"
+msgstr ""
+
+msgid "Network Browse & Mountpoints"
+msgstr ""
+
+msgid "Disable Light Skin on Zap"
+msgstr ""
+
+msgid "Enable Panic button 0 (zap to 1 & clear zap history)"
+msgstr ""
+
+msgid "Enable LCD Picons"
+msgstr ""
+
+msgid "Hide Infobar Timeout in sec.:"
+msgstr ""
+
+msgid "unused in Vu Duo"
+msgstr ""
+
+msgid "unused in Vu Solo"
+msgstr ""
+
+msgid "unused in Vu Ultimo"
+msgstr ""
+
+msgid "Enable Panic button 0"
+msgstr ""
+
+msgid "Hide Infobar Timeout in sec."
+msgstr ""
+
+msgid ""
+"Picons LCD changes need gui restart to take effects.\n"
+"Restart Gui now?"
+msgstr ""
+
+msgid "Gui Restart."
+msgstr ""
+
+msgid "reboot"
+msgstr ""
+
+msgid "restartgui"
+msgstr ""
+
+msgid "restartemu"
+msgstr ""
+
+msgid "Time to execute command or script"
+msgstr ""
+
+msgid "Predefined Command to execute"
+msgstr ""
+
+msgid "Custom Command"
+msgstr ""
+
+msgid "You must set at least one Command"
+msgstr ""
+
+msgid "Entering a Custom command you have to set Predefined command: None "
+msgstr ""
+
+msgid "Mountpoints"
+msgstr ""
+
+msgid "Wait please while scanning your devices..."
+msgstr ""
+
+msgid "Size: "
+msgstr ""
+
+msgid "\tMount: "
+msgstr ""
+
+msgid ""
+"\n"
+"Device: "
+msgstr ""
+
+msgid "NOT MAPPED"
+msgstr ""
+
+msgid "Not mapped"
+msgstr ""
+
+msgid ""
+"Devices changes need a system restart to take effects.\n"
+"Restart your Box now?"
+msgstr ""
+
+msgid "This wizard will help you to format Usb mass storages for Linux.\n"
+msgstr ""
+
+msgid ""
+"Please be sure that your usb drive is NOT CONNECTED to your Vu+ box before "
+"to continue.\n"
+msgstr ""
+
+msgid ""
+"If your usb drive is connected and mounted you have to poweroff your box, "
+"remove the usb device and reboot.\n"
+msgstr ""
+
+msgid ""
+"Push red button to continue when you are ready and your usb is "
+"disconnected.\n"
+msgstr ""
+
+msgid "Continue ->"
+msgstr ""
+
+msgid "Connect your usb storage to your Vu+ box\n"
+msgstr ""
+
+msgid ""
+"Press red button to continue when ready.\n"
+"\n"
+msgstr ""
+
+msgid "Warning: If your usb is already connected\n"
+msgstr ""
+
+msgid "to the box you have to unplug it, click\n"
+msgstr ""
+
+msgid "the green button and restart the wizard.\n"
+msgstr ""
+
+msgid "The wizard will now try to identify your connected usb storage."
+msgstr ""
+
+msgid "Press red button to continue."
+msgstr ""
+
+msgid ""
+"Sorry, no new usb storage detected.\n"
+"Be sure to follow wizard instructions."
+msgstr ""
+
+msgid "Select number of partitions:"
+msgstr ""
+
+msgid "Enter the size in Megabyte of the first partition:"
+msgstr ""
+
+msgid "Partition size"
+msgstr ""
+
+msgid "Enter the size in Megabyte of the second partition:"
+msgstr ""
+
+msgid "Enter the size in Megabyte of the third partition:"
+msgstr ""
+
+msgid "Total Megabyte Available: \t"
+msgstr ""
+
+msgid ""
+"\n"
+"Partition scheme:\n"
+msgstr ""
+
+msgid ""
+"\n"
+"Warning: all the data will be lost.\n"
+"Are you sure you want to format this device?\n"
+msgstr ""
+
+msgid "Sorry, your partitions sizes are bigger than total device size."
+msgstr ""
+
+msgid "Partitioning..."
+msgstr ""
+
+msgid ""
+"The device has been partitioned.\n"
+"Partitions will be now formatted."
+msgstr ""
+
+msgid "ext2 - recommended for USB flash memory"
+msgstr ""
+
+msgid "ext3 - recommended for harddisks"
+msgstr ""
+
+msgid "ext4 - experimental"
+msgstr ""
+
+msgid "vfat - use only for media-files"
+msgstr ""
+
+msgid "Choice filesystem."
+msgstr ""
+
+msgid "Formatting..."
+msgstr ""
+
+msgid "Device: "
+msgstr ""
+
+msgid ""
+"The Box will be now restarted to generate new device UID.\n"
+"Don't forget to remap your device after the reboot.\n"
+"Press ok to continue"
+msgstr ""
+
+msgid "Active Modules"
+msgstr ""
+
+msgid "Smargo & other Usb card readers chipset ftdi:"
+msgstr ""
+
+msgid "Other Usb card readers chipset pl2303:"
+msgstr ""
+
+msgid "Tun module needed for Openvpn:"
+msgstr ""
+
+msgid "Module size: "
+msgstr ""
+
+msgid " bytes\n"
+msgstr ""
+
+msgid "Module used by: "
+msgstr ""
+
+msgid ""
+"Please disable ALL the plugins you don't need to use.\n"
+"This will speed up Image Performance."
+msgstr ""
+
+msgid ""
+"Enigma2 will be now restarted for the changes to take effect.\n"
+"Press ok to continue"
+msgstr ""
+
+msgid "Enable OpenTv Epg Loader"
+msgstr ""
+
+msgid "Enable Epg Popup Notifications"
+msgstr ""
+
+msgid "Enable Epg Buttons in Channel list"
+msgstr ""
+
+msgid "Path to save Epg File:"
+msgstr ""
+
+msgid "Available Providers:"
+msgstr ""
+
+msgid "Global Settings"
+msgstr ""
+
+msgid "Provider Settings"
+msgstr ""
+
+msgid "Sorry you are allowed to remove external epg.dat servers only."
+msgstr ""
+
+msgid ""
+"Are you sure you want to Remove Server:\n"
+" "
+msgstr ""
+
+msgid "?"
+msgstr ""
+
+msgid "Remove Confirmation"
+msgstr ""
+
+msgid ""
+"You can add here servers to download external epg.dat files.\n"
+"Warning: file format allowed are gzip and bzip2 epg.dat (.dat.gz .dat.bz2).\n"
+"Example: http://example.com/uk_epg.dat.gz"
+msgstr ""
+
+msgid "Virtual Keyb."
+msgstr ""
+
+msgid "Server Name"
+msgstr ""
+
+msgid "Epg.dat Url"
+msgstr ""
+
+msgid "You have to provide both Server Name and Epg.dat Url"
+msgstr ""
+
+msgid ""
+"Wrong file format.\n"
+"  Only epg.dat gzip and bzip2 files are allowed (.dat.gz .dat.bz2)."
+msgstr ""
+
+msgid "Error. This Provider name already exists in the list."
+msgstr ""
+
+msgid "Path to save Epg File"
+msgstr ""
+
+msgid "Provider Name:"
+msgstr ""
+
+msgid "Epg Type:"
+msgstr ""
+
+msgid "Epg stream channel:"
+msgstr ""
+
+msgid "Enable Automatic EPG Refresh"
+msgstr ""
+
+msgid "Refresh EPG every day at time:"
+msgstr ""
+
+msgid "Command to execute after EPG Refresh:"
+msgstr ""
+
+msgid "Download now"
+msgstr ""
+
+msgid "Sorry, Channel List not available for this Provider."
+msgstr ""
+
+msgid "nothing"
+msgstr ""
+
+msgid "deepstandby"
+msgstr ""
+
+msgid "Refresh EPG every day at time"
+msgstr ""
+
+msgid "Command to execute after EPG Refresh"
+msgstr ""
+
+msgid "Click Ok to restart gui and activate changes."
+msgstr ""
+
+msgid "Server Name:"
+msgstr ""
+
+msgid "Url:"
+msgstr ""
+
+msgid "Language:"
+msgstr ""
+
+msgid "Max days to download:"
+msgstr ""
+
+msgid "Max days to download"
+msgstr ""
+
+msgid "Update List"
+msgstr ""
+
+msgid "Wait please download in progress ..."
+msgstr ""
+
+msgid "Sorry, function not available for this provider."
+msgstr ""
+
+msgid " Channels list download in progress..."
+msgstr ""
+
+msgid "Channels List Successfully Updated."
+msgstr ""
+
+msgid "Wait please for the Epg to complete, and press the red button to exit"
+msgstr ""
+
+msgid "Wait Please... Epg Download in progress...."
+msgstr ""
+
+msgid "Epg Download complete. Press the red button to exit"
+msgstr ""
+
+msgid ""
+"Wrong file format. Only bz2 and gzip files are allowed (.dat.gz .dat.bz2)."
+msgstr ""
+
+msgid "Wait Please... epg.dat file download in progress...."
+msgstr ""
+
+msgid "Saving epg.dat...."
+msgstr ""
+
+#, python-format
+msgid "In %s universe"
+msgstr ""
+
+msgid "Addons Download Manager"
+msgstr ""
+
+msgid "Online Black Hole image update"
+msgstr ""
+
+msgid "Manual Install Bh packges"
+msgstr ""
+
+msgid "Manual Install Ipk packges"
+msgstr ""
+
+msgid "Addons Uninstall Panel"
+msgstr ""
+
+msgid "Black Hole Statistics"
+msgstr ""
+
+msgid "Do you want to update Black Hole image?"
+msgstr ""
+
+msgid "Sorry, Connection Failed."
+msgstr ""
+
+msgid ""
+"Nothing to install.\n"
+"You have to Upload a bh.tgz package in the /tmp directory before to install "
+"Addons"
+msgstr ""
+
+msgid ""
+"Nothing to install.\n"
+"You have to Upload an ipk package in the /tmp directory before to install "
+"Addons"
+msgstr ""
+
+msgid "Black Hole Addons Plugins"
+msgstr ""
+
+msgid "Black Hole Feeds Plugins"
+msgstr ""
+
+msgid "Black Hole Image Skins"
+msgstr ""
+
+msgid "Black Hole Image Script"
+msgstr ""
+
+msgid "Black Hole Image Boot Logo"
+msgstr ""
+
+msgid "Black Hole Settings"
+msgstr ""
+
+msgid "Picons Packages"
+msgstr ""
+
+msgid "Latest 10 Uploads"
+msgstr ""
+
+msgid ""
+"Do you want to install the Addon:\n"
+" "
+msgstr ""
+
+msgid " ?"
+msgstr ""
+
+msgid "Ipk Package Installation"
+msgstr ""
+
+msgid ""
+"Gui will be now restarted to complete package installation.\n"
+"Press ok to continue"
+msgstr ""
+
+msgid "Black Hole Preview: click ok to exit"
+msgstr ""
+
+msgid "Sorry, the preview is available only for Skins and Bootlogo."
+msgstr ""
+
+msgid "Download Complete"
+msgstr ""
+
+msgid "Addon Succesfully Installed."
+msgstr ""
+
+msgid "Installation Confirm"
+msgstr ""
+
+msgid "Here you can install any kind of ipk packages."
+msgstr ""
+
+msgid ""
+"Are you sure you want to Remove Package:\n"
+" "
+msgstr ""
+
+msgid "Uninstall Confirmation"
+msgstr ""
+
+msgid ""
+"Addon Succesfully Removed. Gui will be now restarted for the changes to take "
+"effect.\n"
+"Press ok to continue"
+msgstr ""
+
+msgid ""
+"Black Hole Image Statistics:\n"
+"\n"
+"_____________________________________\n"
+msgstr ""
+
+msgid "Total Connections:   \t"
+msgstr ""
+
+msgid "Today Connections:   \t"
+msgstr ""
+
+msgid "Available Forums:   \t"
+msgstr ""
+
+msgid "Shouts sent by users:\t"
+msgstr ""
+
+msgid "Top downloaded File:\t"
+msgstr ""
+
+msgid "Total Downloads:     \t"
+msgstr ""
+
+msgid "Wait please connection in progress ..."
+msgstr ""
+
+msgid "Wait please, download in progress..."
+msgstr ""
+
+msgid "Connection Established"
+msgstr ""
+
+msgid ""
+"Fast Plugin not found. You have to setup Fast Plugin before to use this "
+"shortcut."
+msgstr ""
+
+msgid "Reorder plugins list"
+msgstr ""
+
+msgid "Fast Plugin Setup"
+msgstr ""
+
+msgid "Plugins list positions saved."
+msgstr ""
+
+msgid "Set Favourite"
+msgstr ""
+
+msgid "Fast plugin set to: "
+msgstr ""
+
+msgid "Key: 2x Green"
+msgstr ""
+
+msgid "Configuration Saved"
+msgstr ""
+
+msgid "Vpn Version: "
+msgstr ""
+
+msgid "OpenVPN Panel - by Black Hole Team."
+msgstr ""
+
+msgid "Startup Module:"
+msgstr ""
+
+msgid "Current Status:"
+msgstr ""
+
+msgid "Set Active"
+msgstr ""
+
+msgid "OpenVpn Enabled. Autostart activated."
+msgstr ""
+
+msgid "OpenVpn disabled."
+msgstr ""
+
+msgid "You have to Activate OpenVpn before to start"
+msgstr ""
+
+msgid "Active/Autostart enabled"
+msgstr ""
+
+msgid "Samba Autostart: "
+msgstr ""
+
+msgid "Samba Autostart Enabled."
+msgstr ""
+
+msgid "Samba Autostart Disabled."
+msgstr ""
+
+msgid "You can disable Telnet Server and use ssh to login to your box."
+msgstr ""
+
+msgid "Telnet service Enabled."
+msgstr ""
+
+msgid "Telnet service Disabled."
+msgstr ""
+
+msgid "Ftpd service type: Vsftpd server (Very Secure FTP Daemon)"
+msgstr ""
+
+msgid "Ftp service Enabled."
+msgstr ""
+
+msgid "Ftp service Disabled."
+msgstr ""
+
+msgid "Nfs Server Autostart: "
+msgstr ""
+
+msgid "Nfs Autostart Enabled."
+msgstr ""
+
+msgid "Nfs Autostart Disabled."
+msgstr ""
+
+msgid "djmount: mount server in /media/upnp"
+msgstr ""
+
+msgid "UPnP Client Enabled."
+msgstr ""
+
+msgid "UPnP Client Disabled."
+msgstr ""
+
+msgid ""
+"Mediatomb: UPnP media server Black Hole version.\n"
+"Mediatomb is fully configured for your box and ready to work. Just enable it "
+"and play.\n"
+"Mediatomb include a nice web interface url to manage your media.\n"
+"\n"
+"Mediatomb webif url: http://ip_box:49152\n"
+"Mediatomb configs: /.mediatomb/config.xml\n"
+"Mediatomb docs & howto: http://mediatomb.cc/"
+msgstr ""
+
+msgid "Mediatomb already up and running."
+msgstr ""
+
+msgid ""
+"Sorry you cannot run two UpnP Servers togheter. Please disable minidlna "
+"before to run Mediatomb."
+msgstr ""
+
+msgid "Mediatomb Server Enabled."
+msgstr ""
+
+msgid "Mediatomb Server Disabled."
+msgstr ""
+
+msgid ""
+"Minidlna: UPnP media server Black Hole version.\n"
+"Minidlna is fully configured for your box and ready to work. Just enable it "
+"and play.\n"
+"Minidlna include little web interface.\n"
+"\n"
+"Minidlna webif url: http://ip_box:8200\n"
+"Minidlna config: /etc/minidlna.conf\n"
+"Minidlna home site: http://sourceforge.net/projects/minidlna/"
+msgstr ""
+
+msgid "Minidlna already up and running."
+msgstr ""
+
+msgid ""
+"Sorry you cannot run two UpnP Servers togheter. Please disable Mediatomb "
+"before to run minidlna."
+msgstr ""
+
+msgid "Minidlna Server Enabled."
+msgstr ""
+
+msgid "Minidlna Server Disabled."
+msgstr ""
+
+msgid ""
+"This feature will allow you to share the tuners of this box with another Vu+ "
+"box, a PC, a Ps3 and/or a compatible UPnP device in your home network.\n"
+msgstr ""
+
+msgid ""
+"The server will build a virtual channels list in the folder /media/hdd/tuner "
+"on this box.\n"
+msgstr ""
+
+msgid ""
+"You can access the tuner(s) of this box from clients on your internal lan "
+"using nfs, cifs, UPnP or any other network mountpoint.\n"
+msgstr ""
+
+msgid "The tuner of the server (this box) has to be avaliable."
+msgstr ""
+
+msgid ""
+"This means that if you have ony one tuner in your box you can only stream "
+"the channel you are viewing (or any channel you choose if your box is in "
+"standby).\n"
+msgstr ""
+
+msgid ""
+"Remember to select the correct Audio track in the audio menu if there is no "
+"audio or the wrong language is streaming.\n"
+msgstr ""
+
+msgid ""
+"NOTE: The sever is built, based on your current ip and the current channel "
+"list of this box. If you change your ip or your channel list is updated, you "
+"will need to rebuild the server database."
+msgstr ""
+
+msgid "Server Disabled"
+msgstr ""
+
+msgid "Server Enabled"
+msgstr ""
+
+msgid "Build Server"
+msgstr ""
+
+msgid "Disable Server"
+msgstr ""
+
+msgid ""
+"Server building in progress\n"
+"Please wait ..."
+msgstr ""
+
+msgid "Server avaliable on ip "
+msgstr ""
+
+msgid ""
+"To access this box's tuners you can connect via lan or UPnP.\n"
+"\n"
+msgstr ""
+
+msgid ""
+"1) To connect via lan you have to mount the /media/hdd folder of this box in "
+"the client /media/hdd folder. Then you can access the tuners server channel "
+"list from the client Media player -> Harddisk -> tuner.\n"
+msgstr ""
+
+msgid ""
+"2) To connect via UPnP you have to start Mediatomb on this box and then "
+"start Djmount on the client. Then you can access the tuners server channel "
+"list for the client Media Player -> DLNA -> MediaTomb -> playlists.\n"
+"\n"
+msgstr ""
+
+msgid ""
+"NOTE about UPnP: Because UPnP requires alot of memory, you should only use "
+"it if you need to access your box from a PS3 or other device that cannot be "
+"mounted via Lan. Also, After the server has been built we strongly suggest "
+"you delete the Bouquets directory that are not really needed BEFORE you "
+"start Mediatomb. This will save alot of memory and resources."
+msgstr ""
+
+msgid "Build Complete."
+msgstr ""
+
+msgid "Tuner Server disabled."
+msgstr ""
+
+msgid "Pcsc service for Usb readers."
+msgstr ""
+
+msgid "Pcsc Enabled."
+msgstr ""
+
+msgid "Pcsc Client Disabled."
+msgstr ""
+
+msgid "Set Acoustic"
+msgstr ""
+
+msgid "Set Standby"
+msgstr ""
+
+msgid "Sorry, Hard Disk not Found."
+msgstr ""
+
+msgid "HARD DISK MODEL:"
+msgstr ""
+
+msgid "Disk Size:"
+msgstr ""
+
+msgid "Available Space:"
+msgstr ""
+
+msgid "Standby:"
+msgstr ""
+
+msgid " min.\n"
+msgstr ""
+
+msgid "Hard Disk is already sleeping"
+msgstr ""
+
+msgid "Enter here the value for Hdd Acoustic:"
+msgstr ""
+
+msgid "Hard Disk Setup"
+msgstr ""
+
+msgid "New Settings Activated."
+msgstr ""
+
+msgid "xx CAMs Installed"
+msgstr ""
+
+msgid "Set Default CAM"
+msgstr ""
+
+msgid "Active CAM"
+msgstr ""
+
+msgid "CAMs Installed"
+msgstr ""
+
+msgid "Name: "
+msgstr ""
+
+msgid "Provider: "
+msgstr ""
+
+msgid "Aspect Ratio: "
+msgstr ""
+
+msgid "Videosize: "
+msgstr ""
+
+msgid "Ecm Info not available."
+msgstr ""
+
+msgid ""
+"Sorry: Wrong image in flash found. You have to install in flash Black Hole "
+"image v.  "
+msgstr ""
+
+msgid "Please wait while starting\n"
+msgstr ""
+
+msgid "Default Cam:"
+msgstr ""
+
 #
 #~ msgid ""
 #~ "\n"
