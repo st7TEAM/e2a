@@ -36,10 +36,10 @@ msgstr ""
 #
 msgid ""
 "\n"
-"Backup your Dreambox settings."
+"Backup your STB settings."
 msgstr ""
 "\n"
-"Backup av din Dreamboxs inställningar."
+"Backup av din STBs inställningar."
 
 #
 msgid ""
@@ -51,18 +51,18 @@ msgstr ""
 
 msgid ""
 "\n"
-"Manage extensions or plugins for your Dreambox"
+"Manage extensions or plugins for your STB"
 msgstr ""
 "\n"
-"Hantera utökningar eller plugins för din Dreambox"
+"Hantera utökningar eller plugins för din STB"
 
 #
 msgid ""
 "\n"
-"Online update of your Dreambox software."
+"Online update of your STB software."
 msgstr ""
 "\n"
-"Online uppdatering av din Dreamboxs mjukvara."
+"Online uppdatering av din STBs mjukvara."
 
 #
 msgid ""
@@ -75,15 +75,15 @@ msgstr ""
 #
 msgid ""
 "\n"
-"Restore your Dreambox settings."
+"Restore your STB settings."
 msgstr ""
 "\n"
-"Återskapa din Dreamboxs inställningar."
+"Återskapa din STBs inställningar."
 
 #
 msgid ""
 "\n"
-"Restore your Dreambox with a new firmware."
+"Restore your STB with a new firmware."
 msgstr ""
 "\n"
 "Återskapa din reambox med en ny firmware."
@@ -429,18 +429,18 @@ msgstr "En dreambox simulering av SG-Atlantis skärmar."
 #
 msgid ""
 "A finished record timer wants to set your\n"
-"Dreambox to standby. Do that now?"
+"STB to standby. Do that now?"
 msgstr ""
 "En utförd inspelningstimer vill försätta din\n"
-"Dreambox i standby. Utföra det nu?"
+"STB i standby. Utföra det nu?"
 
 #
 msgid ""
 "A finished record timer wants to shut down\n"
-"your Dreambox. Shutdown now?"
+"your STB. Shutdown now?"
 msgstr ""
 "En utförd inspelningstimer vill stänga av\n"
-"din Dreambox. Stänga av nu?"
+"din STB. Stänga av nu?"
 
 #
 msgid "A graphical EPG for all services of an specific bouquet"
@@ -532,18 +532,18 @@ msgstr "En enkel nedladdnings applikation för andra plugins"
 #
 msgid ""
 "A sleep timer wants to set your\n"
-"Dreambox to standby. Do that now?"
+"STB to standby. Do that now?"
 msgstr ""
 "En sovtimer vill försätta din\n"
-"Dreambox i standby. Utföra det?"
+"STB i standby. Utföra det?"
 
 #
 msgid ""
 "A sleep timer wants to shut down\n"
-"your Dreambox. Shutdown now?"
+"your STB. Shutdown now?"
 msgstr ""
 "En sovtimer vill stänga av\n"
-"din Dreambox. Stänga av nu?"
+"din STB. Stänga av nu?"
 
 #
 msgid "A small overview of the available icon states and actions."
@@ -661,8 +661,8 @@ msgid "Add a mark"
 msgstr "Lägg till markör"
 
 #
-msgid "Add a new NFS or CIFS mount point to your Dreambox."
-msgstr "Lägg till ny NFS eller CIFS monteringspunkt i din Dreambox."
+msgid "Add a new NFS or CIFS mount point to your STB."
+msgstr "Lägg till ny NFS eller CIFS monteringspunkt i din STB."
 
 #
 msgid "Add a new title"
@@ -775,11 +775,11 @@ msgid "Advanced restore"
 msgstr "Avancerad återskapning"
 
 msgid ""
-"After a reboot or power outage, StartupToStandby will bring your Dreambox to "
+"After a reboot or power outage, StartupToStandby will bring your STB to "
 "standby-mode."
 msgstr ""
 "Efter en omstart eller strömbortfall, StartupToStandby kommer då ställa din "
-"Dreambox i standbyläge."
+"STB i standbyläge."
 
 #
 msgid "After event"
@@ -791,7 +791,7 @@ msgid ""
 "Refer to your dreambox's manual on how to do that."
 msgstr ""
 "Efter att startguiden är avslutad, behöver du skydda enskilda kanaler. Läs i "
-"din manual för Dreambox om hur du utför det."
+"din manual för STB om hur du utför det."
 
 msgid "Ai.HD skin-style control plugin"
 msgstr "Ai.HD skin-stil kontrollplugin"
@@ -1132,8 +1132,8 @@ msgstr "BA"
 msgid "BASIC-HD Skin by Ismail Demir"
 msgstr "BASIC-HD Skin av Ismail Demir"
 
-msgid "BASIC-HD Skin for Dreambox Images created from Ismail Demir"
-msgstr "BASIC-HD Skin för Dreambox Images skapat av Ismail Demir"
+msgid "BASIC-HD Skin for STB Images created from Ismail Demir"
+msgstr "BASIC-HD Skin för STB Images skapat av Ismail Demir"
 
 #
 msgid "BB"
@@ -1417,8 +1417,8 @@ msgid "Change step size"
 msgstr "Ändra stegstorlek"
 
 #
-msgid "Change the hostname of your Dreambox."
-msgstr "Byt hostnamn på din Dreambox."
+msgid "Change the hostname of your STB."
+msgstr "Byt hostnamn på din STB."
 
 msgid "Changelog"
 msgstr "Ändringslog"
@@ -1727,11 +1727,11 @@ msgstr "Kontrast"
 msgid "Control recording completely by service"
 msgstr ""
 
-msgid "Control your Dreambox with your Web browser."
-msgstr "Kontrollera din Dreambox med din Webläsare."
+msgid "Control your STB with your Web browser."
+msgstr "Kontrollera din STB med din Webläsare."
 
-msgid "Control your Dreambox with your browser"
-msgstr "Kontrollera din Dreambox med din webläsare"
+msgid "Control your STB with your browser"
+msgstr "Kontrollera din STB med din webläsare"
 
 msgid "Control your dreambox with only the MUTE button"
 msgstr "Kontrollera din dreambox enbart med MUTE knappen"
@@ -1748,12 +1748,12 @@ msgstr "Kontrollera dina barns tv användade"
 msgid "Control your system fan"
 msgstr "Kontrollera din systemfläkt"
 
-msgid "Copy, rename, delete, move local files on your Dreambox."
-msgstr "Kopiera, döp om, ta bort, flytta lokala filer på din Dreambox."
+msgid "Copy, rename, delete, move local files on your STB."
+msgstr "Kopiera, döp om, ta bort, flytta lokala filer på din STB."
 
 #
-msgid "Could not connect to Dreambox .NFI Image Feed Server:"
-msgstr "Kunde inte ansluta till Dreambox .NFI image feed Server:"
+msgid "Could not connect to STB .NFI Image Feed Server:"
+msgstr "Kunde inte ansluta till STB .NFI image feed Server:"
 
 #
 msgid "Could not load Medium! No disc inserted?"
@@ -1801,7 +1801,7 @@ msgid "Create DVD-ISO"
 msgstr "Skapa DVD-ISO"
 
 msgid "Create a backup of your Video DVD on your DreamBox hard drive."
-msgstr "Skapa en backup av din Video DVD på din Dreamboxs hårddisk."
+msgstr "Skapa en backup av din Video DVD på din STBs hårddisk."
 
 msgid "Create a backup of your Video-DVD"
 msgstr "Skapa en backup av din Video-DVD"
@@ -1826,8 +1826,8 @@ msgstr "Skapa förhandsbilder av dina Filmer"
 msgid "Create remote timers"
 msgstr "Skapa fjärrtimers"
 
-msgid "Create timers on remote Dreamboxes."
-msgstr "Skapa timers på andra Dreamboxar."
+msgid "Create timers on remote STBes."
+msgstr "Skapa timers på andra STBar."
 
 #
 #, python-format
@@ -1969,13 +1969,13 @@ msgstr "DVD Titellista"
 msgid "DVD media toolbox"
 msgstr "DVD media verktyg"
 
-msgid "DVDPlayer plays your DVDs on your Dreambox"
-msgstr "DVDPlayer spelar upp dina DVDs på din Dreambox"
+msgid "DVDPlayer plays your DVDs on your STB"
+msgstr "DVDPlayer spelar upp dina DVDs på din STB"
 
 msgid ""
-"DVDPlayer plays your DVDs on your Dreambox.\n"
-"With the DVDPlayer you can play your DVDs on your Dreambox from a DVD or "
-"even from an iso file or video_ts folder on your harddisc or network."
+"DVDPlayer plays your DVDs on your STB.\n"
+"With the DVDPlayer you can play your DVDs on your STB from a DVD or even "
+"from an iso file or video_ts folder on your harddisc or network."
 msgstr ""
 
 #
@@ -2033,8 +2033,8 @@ msgstr "Grund"
 msgid "Define a startup service"
 msgstr "Definera en startkanal"
 
-msgid "Define a startup service for your Dreambox."
-msgstr "Definera en startkanal för din Dreambox."
+msgid "Define a startup service for your STB."
+msgstr "Definera en startkanal för din STB."
 
 msgid "Deinterlacer mode for interlaced content"
 msgstr "Deinterlaced lägen för interlaced innehåll"
@@ -2321,8 +2321,8 @@ msgid "Do you want to preview this DVD before burning?"
 msgstr "Vill du förhandsvisa denna DVD innan bränning?"
 
 #
-msgid "Do you want to reboot your Dreambox?"
-msgstr "Vill du starta om din Dreambox?"
+msgid "Do you want to reboot your STB?"
+msgstr "Vill du starta om din STB?"
 
 #
 msgid "Do you want to remove the package:\n"
@@ -2348,15 +2348,15 @@ msgstr ""
 "Vill du skicka med din epost och namn så vi kan kontakta dig om så behövs?"
 
 #
-msgid "Do you want to update your Dreambox?"
-msgstr "Vill du uppdatera din Dreambox?"
+msgid "Do you want to update your STB?"
+msgstr "Vill du uppdatera din STB?"
 
 #
 msgid ""
-"Do you want to update your Dreambox?\n"
+"Do you want to update your STB?\n"
 "After pressing OK, please wait!"
 msgstr ""
-"Vill du uppdatera din Dreambox?\n"
+"Vill du uppdatera din STB?\n"
 "Tryck OK och vänligen vänta!"
 
 #
@@ -2434,12 +2434,12 @@ msgid "Downloading screenshots. Please wait..."
 msgstr "Laddar ner förhandsvisningsbilder. Vänligen vänta..."
 
 #
-msgid "Dreambox format data DVD (HDTV compatible)"
-msgstr "Dreambox formaterad data DVD (HDTV kompatibel)"
+msgid "STB format data DVD (HDTV compatible)"
+msgstr "STB formaterad data DVD (HDTV kompatibel)"
 
 #
-msgid "Dreambox software because updates are available."
-msgstr "Dreambox mjukvara på grund av uppdateringar är tillgängliga."
+msgid "STB software because updates are available."
+msgstr "STB mjukvara på grund av uppdateringar är tillgängliga."
 
 msgid "Driver for Ralink RT8070/RT3070/RT3370 based wireless-n USB devices."
 msgstr "Drivrutin för Ralink RT8070/RT3070/RT3370 baserad trådlösa-n USB kort."
@@ -2546,12 +2546,12 @@ msgid "Edit tags of recorded movies."
 msgstr "Ändra märkning i inspelade filmer."
 
 #
-msgid "Edit the Nameserver configuration of your Dreambox.\n"
-msgstr "Ändra Namnserver konfiguration för din Dreambox.\n"
+msgid "Edit the Nameserver configuration of your STB.\n"
+msgstr "Ändra Namnserver konfiguration för din STB.\n"
 
 #
-msgid "Edit the network configuration of your Dreambox.\n"
-msgstr "Ändra nätverks konfiguration för din Dreambox.\n"
+msgid "Edit the network configuration of your STB.\n"
+msgstr "Ändra nätverks konfiguration för din STB.\n"
 
 #
 msgid "Edit title"
@@ -2579,8 +2579,8 @@ msgstr "Utbildning"
 msgid "Electronic Program Guide"
 msgstr "Elektronisk Program Guide"
 
-msgid "Emailclient is an IMAP4 e-mail viewer for the Dreambox."
-msgstr "Epostklient är en IMAP4 e-postvisare för Dreambox."
+msgid "Emailclient is an IMAP4 e-mail viewer for the STB."
+msgstr "Epostklient är en IMAP4 e-postvisare för STB."
 
 #
 msgid "Enable"
@@ -2712,8 +2712,8 @@ msgid "English"
 msgstr "Engelska"
 
 msgid ""
-"Enigma2 Plugin to play AVI/DIVX/WMV/etc. videos from PC on your Dreambox. "
-"Needs a running VLC from www.videolan.org on your pc."
+"Enigma2 Plugin to play AVI/DIVX/WMV/etc. videos from PC on your STB. Needs a "
+"running VLC from www.videolan.org on your pc."
 msgstr ""
 
 #
@@ -2741,8 +2741,8 @@ msgid "Enter main menu..."
 msgstr "Gå till huvudmeny..."
 
 #
-msgid "Enter new hostname for your Dreambox"
-msgstr "Ange nytt hostnamn för din Dreambox"
+msgid "Enter new hostname for your STB"
+msgstr "Ange nytt hostnamn för din STB"
 
 #
 msgid "Enter options:"
@@ -2904,8 +2904,8 @@ msgid "FEC"
 msgstr "FEC"
 
 msgid ""
-"FTPBrowser allows uploading and downloading files between your Dreambox and "
-"a server using the file transfer protocol."
+"FTPBrowser allows uploading and downloading files between your STB and a "
+"server using the file transfer protocol."
 msgstr ""
 
 #
@@ -3082,8 +3082,8 @@ msgstr "Fredag"
 msgid "Frisian"
 msgstr "Frisiska"
 
-msgid "FritzCall shows incoming calls to your Fritz!Box on your Dreambox."
-msgstr "Fritz!Call visar inkommande samtal till din Fritz!Box på din Dreambox"
+msgid "FritzCall shows incoming calls to your Fritz!Box on your STB."
+msgstr "Fritz!Call visar inkommande samtal till din Fritz!Box på din STB"
 
 msgid "Front USB Slot"
 msgstr "Fram USB kontakt"
@@ -3111,10 +3111,8 @@ msgstr ""
 msgid "GUI that allows user to change the ftp- / telnet password."
 msgstr "GUI som tillåter användare att ändra ftp- / telnet lösenord."
 
-msgid ""
-"GUI that allows user to change the ftp-/telnet-password of the Dreambox."
-msgstr ""
-"GUI som tillåter användare att ändra ftp- / telnet-lösenord på Dreambox."
+msgid "GUI that allows user to change the ftp-/telnet-password of the STB."
+msgstr "GUI som tillåter användare att ändra ftp- / telnet-lösenord på STB."
 
 msgid "GUI to change the ftp and telnet-password"
 msgstr "GUI för att ändra ftp- / telnet-lösenord"
@@ -3151,14 +3149,14 @@ msgid "Genre"
 msgstr "Genre"
 
 #
-msgid "Genuine Dreambox"
-msgstr "Äkta Dreambox"
+msgid "Genuine STB"
+msgstr "Äkta STB"
 
-msgid "Genuine Dreambox validation failed!"
-msgstr "Äkta Dreambox validering misslyckades!"
+msgid "Genuine STB validation failed!"
+msgstr "Äkta STB validering misslyckades!"
 
-msgid "Genuine Dreambox verification"
-msgstr "Äkta Dreambox verifiering"
+msgid "Genuine STB verification"
+msgstr "Äkta STB verifiering"
 
 #
 msgid "German"
@@ -3224,8 +3222,8 @@ msgid "Green boost"
 msgstr "Grön förstärkning"
 
 msgid ""
-"Growlee allows your Dreambox to forward notifications like 'Record started' "
-"to a PC running a growl, snarl or syslog compatible client or directly to an "
+"Growlee allows your STB to forward notifications like 'Record started' to a "
+"PC running a growl, snarl or syslog compatible client or directly to an "
 "iPhone using prowl."
 msgstr ""
 
@@ -3321,7 +3319,7 @@ msgstr "Färgton"
 msgid "Hungarian"
 msgstr "Ungerska"
 
-msgid "IMAP4 e-mail viewer for the Dreambox"
+msgid "IMAP4 e-mail viewer for the STB"
 msgstr ""
 
 #
@@ -3638,10 +3636,10 @@ msgstr ""
 msgid "Italian"
 msgstr "Italienska"
 
-msgid "Italian Weather forecast on Dreambox"
+msgid "Italian Weather forecast on STB"
 msgstr ""
 
-msgid "Italian Weather forecast on Dreambox from www.google.it."
+msgid "Italian Weather forecast on STB from www.google.it."
 msgstr ""
 
 #
@@ -3839,7 +3837,7 @@ msgstr ""
 msgid "List of Storage Devices"
 msgstr "Lista på lagringsenheter"
 
-msgid "Listen and record Shoutcast Internet Radio on your Dreambox."
+msgid "Listen and record Shoutcast Internet Radio on your STB."
 msgstr ""
 
 #
@@ -4309,7 +4307,7 @@ msgstr "N/A"
 
 msgid ""
 "NCID Client shows incoming voice calls promoted by any NCID server (e.g. "
-"Vodafone Easybox) on your Dreambox."
+"Vodafone Easybox) on your STB."
 msgstr ""
 
 msgid "NEXT"
@@ -4364,98 +4362,98 @@ msgstr ""
 msgid "Nemesis BlackBox Skin"
 msgstr "Nemesis BlackBox Skin"
 
-msgid "Nemesis BlackBox Skin for the Dreambox"
-msgstr "Nemesis BlackBox Skin för Dreamboxen"
+msgid "Nemesis BlackBox Skin for the STB"
+msgstr "Nemesis BlackBox Skin för STBen"
 
 msgid "Nemesis Blueline Single Skin"
 msgstr "Nemesis Blueline Single Skin"
 
-msgid "Nemesis Blueline Single Skin for the Dreambox"
-msgstr "Nemesis Blueline Single Skin för Dreamboxen"
+msgid "Nemesis Blueline Single Skin for the STB"
+msgstr "Nemesis Blueline Single Skin för STBen"
 
 msgid "Nemesis Blueline Skin"
 msgstr "Nemesis Blueline Skin"
 
-msgid "Nemesis Blueline Skin for the Dreambox"
-msgstr "Nemesis Blueline Skin för Dreamboxen"
+msgid "Nemesis Blueline Skin for the STB"
+msgstr "Nemesis Blueline Skin för STBen"
 
 msgid "Nemesis Blueline.Extended Skin"
 msgstr "Nemesis Blueline.Extended Skin"
 
-msgid "Nemesis Blueline.Extended Skin for the Dreambox"
-msgstr "Nemesis Blueline.Extended Skin för Dreamboxen"
+msgid "Nemesis Blueline.Extended Skin for the STB"
+msgstr "Nemesis Blueline.Extended Skin för STBen"
 
 msgid "Nemesis ChromeLine Cobolt Skin"
 msgstr "Nemesis ChromeLine Cobolt Skin"
 
-msgid "Nemesis ChromeLine Cobolt Skin for the Dreambox"
-msgstr "Nemesis ChromeLine Cobolt Skin för Dreamboxen"
+msgid "Nemesis ChromeLine Cobolt Skin for the STB"
+msgstr "Nemesis ChromeLine Cobolt Skin för STBen"
 
 msgid "Nemesis ChromeLine Skin"
 msgstr "Nemesis ChromeLine Skin"
 
-msgid "Nemesis ChromeLine Skin for the Dreambox"
-msgstr "Nemesis ChromeLine Skin för Dreamboxen"
+msgid "Nemesis ChromeLine Skin for the STB"
+msgstr "Nemesis ChromeLine Skin för STBen"
 
 msgid "Nemesis Flatline Blue Skin"
 msgstr "Nemesis Flatline Blue Skin"
 
-msgid "Nemesis Flatline Blue Skin for the Dreambox"
-msgstr "Nemesis Flatline Blue Skin för Dreamboxen"
+msgid "Nemesis Flatline Blue Skin for the STB"
+msgstr "Nemesis Flatline Blue Skin för STBen"
 
 msgid "Nemesis Flatline Skin"
 msgstr "Nemesis Flatline Skin"
 
-msgid "Nemesis Flatline Skin for the Dreambox"
-msgstr "Nemesis Flatline Skin för Dreamboxen"
+msgid "Nemesis Flatline Skin for the STB"
+msgstr "Nemesis Flatline Skin för STBen"
 
 msgid "Nemesis GlassLine Skin"
 msgstr "Nemesis GlassLine Skin"
 
-msgid "Nemesis GlassLine Skin for the Dreambox"
-msgstr "Nemesis GlassLine Skin för Dreamboxen"
+msgid "Nemesis GlassLine Skin for the STB"
+msgstr "Nemesis GlassLine Skin för STBen"
 
 msgid "Nemesis Greenline Extended Skin"
 msgstr "Nemesis Greenline Extended Skin"
 
-msgid "Nemesis Greenline Extended Skin for the Dreambox"
-msgstr "Nemesis Greenline Extended Skin för Dreamboxen"
+msgid "Nemesis Greenline Extended Skin for the STB"
+msgstr "Nemesis Greenline Extended Skin för STBen"
 
 msgid "Nemesis Greenline Single Skin"
 msgstr "Nemesis Greenline Single Skin"
 
-msgid "Nemesis Greenline Single Skin for the Dreambox"
-msgstr "Nemesis Greenline Single Skin för Dreamboxen"
+msgid "Nemesis Greenline Single Skin for the STB"
+msgstr "Nemesis Greenline Single Skin för STBen"
 
 msgid "Nemesis Greenline Skin"
 msgstr "Nemesis Greenline Skin"
 
-msgid "Nemesis Greenline Skin for the Dreambox"
-msgstr "Nemesis Greenline Skin för Dreamboxen"
+msgid "Nemesis Greenline Skin for the STB"
+msgstr "Nemesis Greenline Skin för STBen"
 
 msgid "Nemesis Greyline Extended Skin"
 msgstr "Nemesis Greyline Extended Skin"
 
-msgid "Nemesis Greyline Extended Skin for the Dreambox"
-msgstr "Nemesis Greyline Extended Skin för Dreamboxen"
+msgid "Nemesis Greyline Extended Skin for the STB"
+msgstr "Nemesis Greyline Extended Skin för STBen"
 
 msgid "Nemesis Greyline Single Skin"
 msgstr "Nemesis Greyline Single Skin"
 
-msgid "Nemesis Greyline Single Skin for the Dreambox"
-msgstr "Nemesis Greyline Single Skin för Dreamboxen"
+msgid "Nemesis Greyline Single Skin for the STB"
+msgstr "Nemesis Greyline Single Skin för STBen"
 
 msgid "Nemesis Greyline Skin"
 msgstr "Nemesis Greyline Skin"
 
-msgid "Nemesis Greyline Skin for the Dreambox"
-msgstr "Nemesis Greyline Skin för Dreamboxen"
+msgid "Nemesis Greyline Skin for the STB"
+msgstr "Nemesis Greyline Skin för STBen"
 
 msgid "Nemesis ShadowLine Skin"
 msgstr "Nemesis ShadowLine Skin"
 
-msgid "Nemesis ShadowLine Skin for the Dreambox"
-msgstr "Nemesis ShadowLine Skin för Dreamboxen"
+msgid "Nemesis ShadowLine Skin for the STB"
+msgstr "Nemesis ShadowLine Skin för STBen"
 
 #
 msgid "Netmask"
@@ -4986,8 +4984,8 @@ msgid "Parental control type"
 msgstr "Föräldrakontroll typ"
 
 msgid ""
-"Partnerbox allows editing a remote Dreambox's record timers and stream its "
-"TV  program."
+"Partnerbox allows editing a remote STB's record timers and stream its TV  "
+"program."
 msgstr ""
 
 #
@@ -5073,7 +5071,7 @@ msgstr "Spela inspelade filmer..."
 msgid "Play video again"
 msgstr "Spela video igen"
 
-msgid "Play videos from PC on your Dreambox"
+msgid "Play videos from PC on your STB"
 msgstr ""
 
 msgid "Playback of Youtube through a PC"
@@ -5379,7 +5377,7 @@ msgstr "Plugin: %(plugin)s , Version: %(version)s"
 msgid "Plugins"
 msgstr "Plugins"
 
-msgid "PodCast streams podcasts to your Dreambox."
+msgid "PodCast streams podcasts to your STB."
 msgstr ""
 
 #
@@ -5977,7 +5975,7 @@ msgstr "Återskapning pågår"
 msgid "Restore system settings"
 msgstr "Återskapa systeminställningar"
 
-msgid "Restore your Dreambox with a USB stick"
+msgid "Restore your STB with a USB stick"
 msgstr ""
 
 #
@@ -6763,10 +6761,10 @@ msgid "Shutdown"
 msgstr "Stäng av"
 
 #
-msgid "Shutdown Dreambox after"
-msgstr "Stäng av Dreambox efter"
+msgid "Shutdown STB after"
+msgstr "Stäng av STB efter"
 
-msgid "Shuts down your Dreambox into Deep Standby (Power Save Mode)"
+msgid "Shuts down your STB into Deep Standby (Power Save Mode)"
 msgstr ""
 
 #
@@ -6795,7 +6793,7 @@ msgstr ""
 msgid "Simple titleset (compatibility for legacy players)"
 msgstr "Enkelt titelset (kompabilitet för äldre spelare)"
 
-msgid "SimpleRSS allows reading RSS newsfeeds on your Dreambox."
+msgid "SimpleRSS allows reading RSS newsfeeds on your STB."
 msgstr ""
 
 #
@@ -6881,7 +6879,7 @@ msgstr "Mjukvaruåterskapa"
 msgid "Software update"
 msgstr "Mjukvaruuppdatera"
 
-msgid "SoftwareManager manages your Dreambox software"
+msgid "SoftwareManager manages your STB software"
 msgstr ""
 
 msgid "Softwaremanager information"
@@ -7234,8 +7232,8 @@ msgid "Test mode"
 msgstr "Testläge"
 
 #
-msgid "Test the network configuration of your Dreambox.\n"
-msgstr "Testa nätverkskonfigurationen för din Dreambox.\n"
+msgid "Test the network configuration of your STB.\n"
+msgstr "Testa nätverkskonfigurationen för din STB.\n"
 
 msgid "Test your DiSEqC equipment"
 msgstr ""
@@ -7255,10 +7253,10 @@ msgstr ""
 #
 msgid ""
 "Thank you for using the wizard. Your box is now ready to use.\n"
-"Please press OK to start using your Dreambox."
+"Please press OK to start using your STB."
 msgstr ""
 "Tack för att du använde guiden. Din box är nu konfigurerad.\n"
-"Tryck OK för att börja använda din Dreambox."
+"Tryck OK för att börja använda din STB."
 
 #
 msgid ""
@@ -7277,12 +7275,11 @@ msgstr ""
 
 msgid ""
 "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to "
-"create a Dreambox format data DVD (which will not play in stand-alone DVD "
+"create a STB format data DVD (which will not play in stand-alone DVD "
 "players) instead?"
 msgstr ""
-"DVD standarden stödjer inte H.264 (HDTV) videoströmmar. Vill du skapa en "
-"Dreambox format data DVD (kommer ej kunnas spelas i vanlig DVD spelare) "
-"istället?"
+"DVD standarden stödjer inte H.264 (HDTV) videoströmmar. Vill du skapa en STB "
+"format data DVD (kommer ej kunnas spelas i vanlig DVD spelare) istället?"
 
 msgid ""
 "The Elektro Power Save Plugin puts the box from Standby to sleep mode (Deep "
@@ -7323,11 +7320,11 @@ msgstr ""
 
 msgid ""
 "The SkinSelector shows a menu with selectable skins.\n"
-"It's now easy to change the look and feel of your Dreambox."
+"It's now easy to change the look and feel of your STB."
 msgstr ""
 
 msgid ""
-"The SoftwareManager manages your Dreambox software.\n"
+"The SoftwareManager manages your STB software.\n"
 "It's easy to update your receiver's software, install or remove plugins or "
 "even backup and restore your system settings."
 msgstr ""
@@ -7446,10 +7443,10 @@ msgstr "Installationen av grundservicelistan är klar."
 #
 msgid ""
 "The installation of the default settings is finished. You can now continue "
-"configuring your Dreambox by pressing the OK button on the remote control."
+"configuring your STB by pressing the OK button on the remote control."
 msgstr ""
 "Installationen av grundinställningar är nu klar. Du kan nu slutföra din "
-"konfiguration av Dreambox med att trycka på OK knappen på din fjärrkontroll."
+"konfiguration av STB med att trycka på OK knappen på din fjärrkontroll."
 
 msgid "The match attribute is mandatory."
 msgstr "Match attributet är ett krav."
@@ -7578,8 +7575,8 @@ msgid ""
 "There's a certificate update available for your dreambox. Would you like to "
 "apply this update now?"
 msgstr ""
-"Det finne en uppdatering till ditt certifikat för din Dreambox. Vill du "
-"uppdatera nu?"
+"Det finne en uppdatering till ditt certifikat för din STB. Vill du uppdatera "
+"nu?"
 
 #
 msgid ""
@@ -7591,7 +7588,7 @@ msgstr ""
 
 #
 #, python-format
-msgid "This Dreambox can't decode %s streams!"
+msgid "This STB can't decode %s streams!"
 msgstr "Den här dreamboxen kan in avkoda %s strömmar!"
 
 #
@@ -7643,7 +7640,7 @@ msgstr ""
 
 msgid ""
 "This plugin creates a USB stick which can be used to update the firmware of "
-"your Dreambox without the need for a network or WLAN connection.\n"
+"your STB without the need for a network or WLAN connection.\n"
 "First, a USB stick needs to be prepared so that it becomes bootable.\n"
 "In the next step, an NFI image file can be downloaded from the update server "
 "and saved on the USB stick.\n"
@@ -7651,7 +7648,7 @@ msgid ""
 "Otherwise plug in a USB stick with a minimum size of 64 MB!"
 msgstr ""
 "Den här pluginen skapar en USB-sticka som kan användas för att uppdatera "
-"firmware i din Dreambox utan behovet av nätverks- eller WLAN anslutning.\n"
+"firmware i din STB utan behovet av nätverks- eller WLAN anslutning.\n"
 " Först, en USB sticka måste förberedas så att den blir bootbar.\n"
 "Nästa steg, en NFI image fil ska laddas ner från uppdateringsservern och "
 "sparas till USB stickan.\n"
@@ -7888,14 +7885,14 @@ msgid "To be used as simple downloading application by other Plugins."
 msgstr ""
 
 msgid ""
-"To update your Dreambox firmware, please follow these steps:\n"
+"To update your STB firmware, please follow these steps:\n"
 "1) Turn off your box with the rear power switch and make sure the bootable "
 "USB stick is plugged in.\n"
 "2) Turn mains back on and hold the DOWN button on the front panel pressed "
 "for 10 seconds.\n"
 "3) Wait for bootup and follow instructions of the wizard."
 msgstr ""
-"För att uppdatera din Dreambox, vänligen följ dessa anvisningar:\n"
+"För att uppdatera din STB, vänligen följ dessa anvisningar:\n"
 "1) Stäng av din box med strömbrytaren på baksidan och säkerställ att bootbar "
 "USB-sticka är ansluten.\n"
 "2) Slå på strömmen och håll NER knappen på framsidan intryckt i cirka 10 "
@@ -8185,8 +8182,8 @@ msgid "Upgrading"
 msgstr "Uppgradering"
 
 #
-msgid "Upgrading Dreambox... Please wait"
-msgstr "Uppgraderar Dreambox... Vänligen vänta"
+msgid "Upgrading STB... Please wait"
+msgstr "Uppgraderar STB... Vänligen vänta"
 
 msgid "Upper bound of timespan."
 msgstr "Övre spannet av tidsintervall."
@@ -8222,7 +8219,7 @@ msgstr "Använd egen placering"
 msgid "Use a gateway"
 msgstr "Använd en gateway"
 
-msgid "Use and control multiple Dreamboxes with different RCs."
+msgid "Use and control multiple STBes with different RCs."
 msgstr ""
 
 #
@@ -8318,9 +8315,8 @@ msgstr "Vali.HD.nano skin"
 msgid "Vali.HD.warp skin"
 msgstr ""
 
-msgid ""
-"Verify your Dreambox authenticity by running the genuine dreambox plugin!"
-msgstr "Kontrollera din Dreamboxs äkthet genom att köra Äkta Dreambox plugin!"
+msgid "Verify your STB authenticity by running the genuine dreambox plugin!"
+msgstr "Kontrollera din STBs äkthet genom att köra Äkta STB plugin!"
 
 msgid "Verifying your internet connection..."
 msgstr ""
@@ -8414,7 +8410,7 @@ msgstr "Visa antal"
 msgid "View Google maps"
 msgstr ""
 
-msgid "View Google maps with your Dreambox."
+msgid "View Google maps with your STB."
 msgstr ""
 
 #
@@ -8506,8 +8502,8 @@ msgid "View teletext..."
 msgstr "Visa teletext..."
 
 #
-msgid "View, edit or delete mountpoints on your Dreambox."
-msgstr "Visa, ändra eller ta bort monteringspunkter på din Dreambox."
+msgid "View, edit or delete mountpoints on your STB."
+msgstr "Visa, ändra eller ta bort monteringspunkter på din STB."
 
 #
 msgid "View, edit or delete usernames and passwords for your network."
@@ -8579,10 +8575,10 @@ msgstr "Varna om tillgängligt utrymme understiger (kB):"
 msgid "Watch streams from ZDF Mediathek"
 msgstr ""
 
-msgid "WeatherPlugin shows weatherforecasts on your Dreambox."
+msgid "WeatherPlugin shows weatherforecasts on your STB."
 msgstr ""
 
-msgid "Weatherforecast on your Dreambox"
+msgid "Weatherforecast on your STB"
 msgstr ""
 
 msgid "Web-Bouquet-Editor for PC"
@@ -8638,11 +8634,11 @@ msgstr ""
 
 msgid ""
 "Welcome to the Image upgrade wizard. The wizard will assist you in upgrading "
-"the firmware of your Dreambox by providing a backup facility for your "
-"current settings and a short explanation of how to upgrade your firmware."
+"the firmware of your STB by providing a backup facility for your current "
+"settings and a short explanation of how to upgrade your firmware."
 msgstr ""
 "Välkommen till uppgraderingsguiden för image. Guiden hjälper dig med "
-"uppgraderingen av mjukvaran i din Dreambox genom att tillgodose en "
+"uppgraderingen av mjukvaran i din STB genom att tillgodose en "
 "backupmöjlighet av dina aktuella inställningar och en kort förklaring hur du "
 "uppgraderar mjukvaran."
 
@@ -8699,7 +8695,7 @@ msgid ""
 "Welcome to the cleanup wizard.\n"
 "\n"
 "We have detected that your available internal memory has dropped below 2MB.\n"
-"To ensure stable operation of your Dreambox, the internal memory should be "
+"To ensure stable operation of your STB, the internal memory should be "
 "cleaned up.\n"
 "You can use this wizard to remove some extensions.\n"
 msgstr ""
@@ -8707,21 +8703,21 @@ msgstr ""
 "\n"
 "Det har upptäckts att tillgängligt utrymme på interna minnet understiger "
 "2MB.\n"
-"För att uppnå en stabil Dreambox bör interna minnet rensas upp.\n"
+"För att uppnå en stabil STB bör interna minnet rensas upp.\n"
 "Du kan använda den här guiden för att ta bort vissa utökningar.\n"
 
 msgid ""
 "Welcome.\n"
 "\n"
-"If you want to connect your Dreambox to the Internet, this wizard will guide "
-"you through the basic network setup of your Dreambox.\n"
+"If you want to connect your STB to the Internet, this wizard will guide you "
+"through the basic network setup of your STB.\n"
 "\n"
 "Press OK to start configuring your network"
 msgstr ""
 "Välkommen.\n"
 "\n"
-"Om du vill ansluta din Dreambox till Internet, då kommer den här guiden "
-"hjälpa dig genom grundläggande konfiguration av din Dreambox.\n"
+"Om du vill ansluta din STB till Internet, då kommer den här guiden hjälpa "
+"dig genom grundläggande konfiguration av din STB.\n"
 "\n"
 "Tryck OK för att starta konfigurationen av ditt nätverk"
 
@@ -8741,12 +8737,12 @@ msgstr ""
 msgid ""
 "Welcome.\n"
 "\n"
-"This start wizard will guide you through the basic setup of your Dreambox.\n"
+"This start wizard will guide you through the basic setup of your STB.\n"
 "Press the OK button on your remote control to move to the next step."
 msgstr ""
 "Välkommen.\n"
 "\n"
-"Den här guiden hjälper dig med grundinställningarna av din Dreambox.\n"
+"Den här guiden hjälper dig med grundinställningarna av din STB.\n"
 "Tryck OK på din fjärrkontroll för att komma till nästa steg."
 
 #
@@ -8824,8 +8820,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"With DVDBurn you can make compilations of records from your Dreambox hard "
-"drive.\n"
+"With DVDBurn you can make compilations of records from your STB hard drive.\n"
 "Optionally you can add customizable menus. You can record the compilation to "
 "a standard-compliant DVD that can be played on conventinal DVD players.\n"
 "HDTV recordings can only be burned in proprietary dreambox format."
@@ -8834,7 +8829,7 @@ msgstr ""
 msgid "With EPGSearch you can search through the EPG and create timers."
 msgstr ""
 
-msgid "With Genuine Dreambox you can verify the authenticity of your Dreambox."
+msgid "With Genuine STB you can verify the authenticity of your STB."
 msgstr ""
 
 msgid ""
@@ -8864,14 +8859,14 @@ msgid ""
 msgstr ""
 
 msgid ""
-"With YouTubePlayer you can watch YouTube-Videos on the Dreambox.\n"
+"With YouTubePlayer you can watch YouTube-Videos on the STB.\n"
 "This plugin requires a PC with the VLC program running."
 msgstr ""
 
 msgid ""
 "With the CommonInterfaceAssignment plugin it is possible to use differentCI "
-"modules in your Dreambox and assign dedicated providers/services or caids to "
-"each of them.\n"
+"modules in your STB and assign dedicated providers/services or caids to each "
+"of them.\n"
 "This allows watching a scrambled service while recording another one."
 msgstr ""
 
@@ -8891,9 +8886,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"With the NFIFlash plugin it is possible to prepare a USB stick with an "
-"Dreambox image.\n"
-"It is then possible to flash your Dreambox with the image on that stick."
+"With the NFIFlash plugin it is possible to prepare a USB stick with an STB "
+"image.\n"
+"It is then possible to flash your STB with the image on that stick."
 msgstr ""
 
 msgid ""
@@ -9035,8 +9030,8 @@ msgid "You can install this plugin."
 msgstr "Du kan installera den pluginen."
 
 #
-msgid "You can only burn Dreambox recordings!"
-msgstr "Du kan bara bränna Dreambox inspelningar!"
+msgid "You can only burn STB recordings!"
+msgstr "Du kan bara bränna STB inspelningar!"
 
 #
 msgid "You can remove this plugin."
@@ -9147,7 +9142,7 @@ msgid ""
 "instructions from the website, your new firmware will ask you to restore "
 "your settings."
 msgstr ""
-"Du behöver ha en PC kopplad till din Dreambox. Behöver du ytterligare "
+"Du behöver ha en PC kopplad till din STB. Behöver du ytterligare "
 "instruktioner vänligen gå till websidan http://www.dm7025.de.\n"
 "Din dreambox kommer nu att stoppas. När du har genomfört uppdateringen "
 "enligt instruktionerna från websidan, kommer din nya mjukvara kommer att "
@@ -9180,33 +9175,33 @@ msgstr ""
 
 #
 msgid ""
-"Your Dreambox is now ready to use.\n"
+"Your STB is now ready to use.\n"
 "\n"
 "Your internet connection is working now.\n"
 "\n"
 msgstr ""
-"Din Dreambox är nu klar för att användas.\n"
+"Din STB är nu klar för att användas.\n"
 "\n"
 "Din Internet anslutning fungerar.\n"
 "\n"
 
 #
 msgid ""
-"Your Dreambox is now ready to use.\n"
+"Your STB is now ready to use.\n"
 "\n"
 "Your internet connection is working now.\n"
 "\n"
 "Please press OK to continue."
 msgstr ""
-"Din Dreambox är nu klar för användning.\n"
+"Din STB är nu klar för användning.\n"
 "\n"
 "Din Internet anslutning fungerar nu.\n"
 "\n"
 "Vänligen tryck OK för att forsätta."
 
 #
-msgid "Your Dreambox will restart after pressing OK on your remote control."
-msgstr "Din Dreambox kommer starta vid tryck på OK på din fjärrkontroll."
+msgid "Your STB will restart after pressing OK on your remote control."
+msgstr "Din STB kommer starta vid tryck på OK på din fjärrkontroll."
 
 #
 msgid ""
@@ -9239,7 +9234,7 @@ msgstr "Din nuvarande samling kommer försvinna!"
 
 #
 msgid "Your dreambox is shutting down. Please stand by..."
-msgstr "Din Dreambox håller på att stängas av. Vänligen vänta..."
+msgstr "Din STB håller på att stängas av. Vänligen vänta..."
 
 #
 msgid ""
@@ -9626,8 +9621,8 @@ msgstr "ansluten"
 msgid "continue"
 msgstr "fortsätt"
 
-msgid "control multiple Dreamboxes with different RCs"
-msgstr "styr flera Dreamboxar med olika fjärrkontrollers"
+msgid "control multiple STBes with different RCs"
+msgstr "styr flera STBar med olika fjärrkontrollers"
 
 #
 msgid "copy to bouquets"
@@ -10556,11 +10551,11 @@ msgstr "tills standby/omstart"
 msgid "use as HDD replacement"
 msgstr "använd som HDD ersättning"
 
-msgid "use your Dreambox as Web proxy"
-msgstr "använd din Dreambox som en webproxy"
+msgid "use your STB as Web proxy"
+msgstr "använd din STB som en webproxy"
 
-msgid "use your Dreambox as Web proxy."
-msgstr "använd din Dreambox som en webproxy."
+msgid "use your STB as Web proxy."
+msgstr "använd din STB som en webproxy."
 
 #
 msgid "user defined"
@@ -10769,10 +10764,6 @@ msgstr ""
 msgid "StreamTVPlayer"
 msgstr ""
 
-#, python-format
-msgid "This STB can't decode %s streams!"
-msgstr ""
-
 msgid "Retrieving data ..."
 msgstr ""
 
@@ -10868,43 +10859,6 @@ msgid "Adjust 3D settings"
 msgstr ""
 
 msgid ""
-"\n"
-"Manage extensions or plugins for your STB"
-msgstr ""
-
-msgid ""
-"\n"
-"Online update of your STB software."
-msgstr ""
-
-msgid ""
-"\n"
-"Restore your STB with a new firmware."
-msgstr ""
-
-msgid ""
-"\n"
-"Backup your STB settings."
-msgstr ""
-
-msgid ""
-"\n"
-"Restore your STB settings."
-msgstr ""
-
-msgid "Do you want to update your STB?"
-msgstr ""
-
-msgid "Do you want to reboot your STB?"
-msgstr ""
-
-msgid "STB software because updates are available."
-msgstr ""
-
-msgid "Upgrading STB... Please wait"
-msgstr ""
-
-msgid ""
 "your STB might be unusable now. Please consult the manual for further "
 "assistance before rebooting your STB."
 msgstr ""
@@ -10912,6 +10866,18 @@ msgstr ""
 msgid ""
 "Your STB isn't connected to the internet properly. Please check it and try "
 "again."
+msgstr ""
+
+msgid "Add a new NFS or CIFS mount point to your Dreambox."
+msgstr ""
+
+msgid "View, edit or delete mountpoints on your Dreambox."
+msgstr ""
+
+msgid "Change the hostname of your Dreambox."
+msgstr ""
+
+msgid "Enter new hostname for your Dreambox"
 msgstr ""
 
 msgid "width"
@@ -11082,15 +11048,6 @@ msgstr ""
 msgid "Can not setup WirelessLan Module in 'AP Mode'\n"
 msgstr ""
 
-msgid "Edit the network configuration of your STB.\n"
-msgstr ""
-
-msgid "Edit the Nameserver configuration of your STB.\n"
-msgstr ""
-
-msgid "Test the network configuration of your STB.\n"
-msgstr ""
-
 msgid "Scan Wireless AP"
 msgstr ""
 
@@ -11183,6 +11140,13 @@ msgid "No information..."
 msgstr ""
 
 msgid "Wireless LAN Setup"
+msgstr ""
+
+msgid ""
+"Your Dreambox is now ready to use.\n"
+"\n"
+"Your internet connection is working now.\n"
+"\n"
 msgstr ""
 
 msgid "Dolby Digital default"

@@ -33,7 +33,7 @@ msgstr ""
 
 msgid ""
 "\n"
-"Backup your Dreambox settings."
+"Backup your STB settings."
 msgstr ""
 "\n"
 "A készülék beállításainak mentése."
@@ -47,14 +47,14 @@ msgstr ""
 
 msgid ""
 "\n"
-"Manage extensions or plugins for your Dreambox"
+"Manage extensions or plugins for your STB"
 msgstr ""
 "\n"
 "Pluginek és bővítmények kezelése"
 
 msgid ""
 "\n"
-"Online update of your Dreambox software."
+"Online update of your STB software."
 msgstr ""
 "\n"
 "Online szoftverfrissítés."
@@ -68,14 +68,14 @@ msgstr ""
 
 msgid ""
 "\n"
-"Restore your Dreambox settings."
+"Restore your STB settings."
 msgstr ""
 "\n"
 "A készülék beállításainak visszaállítása."
 
 msgid ""
 "\n"
-"Restore your Dreambox with a new firmware."
+"Restore your STB with a new firmware."
 msgstr ""
 "\n"
 "A készülék visszaállítása egy új firmware-el."
@@ -427,7 +427,7 @@ msgstr ""
 #
 msgid ""
 "A finished record timer wants to set your\n"
-"Dreambox to standby. Do that now?"
+"STB to standby. Do that now?"
 msgstr ""
 "Egy befejezett időzítés le akarja kapcsolni\n"
 "a készüléket készenléti módba. Engedélyezi?"
@@ -435,7 +435,7 @@ msgstr ""
 #
 msgid ""
 "A finished record timer wants to shut down\n"
-"your Dreambox. Shutdown now?"
+"your STB. Shutdown now?"
 msgstr ""
 "Egy befejezett időzítés ki akarja kapcsolni\n"
 "a készüléket. Engedélyezi?"
@@ -529,7 +529,7 @@ msgstr "Egy egyszerű plugin-letöltő alkalmazás"
 #
 msgid ""
 "A sleep timer wants to set your\n"
-"Dreambox to standby. Do that now?"
+"STB to standby. Do that now?"
 msgstr ""
 "Az elalvásidőzítő le akarja kapcsolni\n"
 "a készüléket készenléti módba. Engedélyezi?"
@@ -537,7 +537,7 @@ msgstr ""
 #
 msgid ""
 "A sleep timer wants to shut down\n"
-"your Dreambox. Shutdown now?"
+"your STB. Shutdown now?"
 msgstr ""
 "Az elalvásidőzítő ki akarja kapcsolni\n"
 "a készüléket. Engedélyezi?"
@@ -658,7 +658,7 @@ msgid "Add a mark"
 msgstr "Jelző hozzáadása"
 
 #
-msgid "Add a new NFS or CIFS mount point to your Dreambox."
+msgid "Add a new NFS or CIFS mount point to your STB."
 msgstr "Egy új hálózati megosztás csatolása."
 
 #
@@ -773,7 +773,7 @@ msgid "Advanced restore"
 msgstr "Haladó visszaállítás"
 
 msgid ""
-"After a reboot or power outage, StartupToStandby will bring your Dreambox to "
+"After a reboot or power outage, StartupToStandby will bring your STB to "
 "standby-mode."
 msgstr ""
 "Egy újraindítás, vagy áramkimaradás után, a StartupToStandby készenléti "
@@ -1129,7 +1129,7 @@ msgstr "BA"
 msgid "BASIC-HD Skin by Ismail Demir"
 msgstr ""
 
-msgid "BASIC-HD Skin for Dreambox Images created from Ismail Demir"
+msgid "BASIC-HD Skin for STB Images created from Ismail Demir"
 msgstr ""
 
 #
@@ -1416,7 +1416,7 @@ msgid "Change step size"
 msgstr "Lépték módosítása"
 
 #
-msgid "Change the hostname of your Dreambox."
+msgid "Change the hostname of your STB."
 msgstr "A készülék hálózati gépnevének megváltoztatása."
 
 msgid "Changelog"
@@ -1727,10 +1727,10 @@ msgstr "Kontraszt"
 msgid "Control recording completely by service"
 msgstr ""
 
-msgid "Control your Dreambox with your Web browser."
+msgid "Control your STB with your Web browser."
 msgstr "A készülék vezérlése webes felületről"
 
-msgid "Control your Dreambox with your browser"
+msgid "Control your STB with your browser"
 msgstr "A készülék vezérlése webes felületről"
 
 msgid "Control your dreambox with only the MUTE button"
@@ -1748,11 +1748,11 @@ msgstr "Gyermekzár beállítása"
 msgid "Control your system fan"
 msgstr "A belső ventilátor vezérlése"
 
-msgid "Copy, rename, delete, move local files on your Dreambox."
+msgid "Copy, rename, delete, move local files on your STB."
 msgstr "Helyben lévő fájlok másolása, átnevezése, törlése, áthelyezése."
 
 #
-msgid "Could not connect to Dreambox .NFI Image Feed Server:"
+msgid "Could not connect to STB .NFI Image Feed Server:"
 msgstr "Nem lehet csatlakozni az .NFI Image feed szerverhez: "
 
 #
@@ -1827,7 +1827,7 @@ msgstr "Előnézeti képek keészítése a felvételekről"
 msgid "Create remote timers"
 msgstr "Távoli időzítők létrehozása"
 
-msgid "Create timers on remote Dreamboxes."
+msgid "Create timers on remote STBes."
 msgstr "Időzítések létrehozása távoli készülékekben"
 
 #
@@ -1971,13 +1971,13 @@ msgstr "DVD Címlista"
 msgid "DVD media toolbox"
 msgstr "DVD media toolbox"
 
-msgid "DVDPlayer plays your DVDs on your Dreambox"
+msgid "DVDPlayer plays your DVDs on your STB"
 msgstr "DVD lejátszóként is használhatja a készüléket"
 
 msgid ""
-"DVDPlayer plays your DVDs on your Dreambox.\n"
-"With the DVDPlayer you can play your DVDs on your Dreambox from a DVD or "
-"even from an iso file or video_ts folder on your harddisc or network."
+"DVDPlayer plays your DVDs on your STB.\n"
+"With the DVDPlayer you can play your DVDs on your STB from a DVD or even "
+"from an iso file or video_ts folder on your harddisc or network."
 msgstr ""
 
 #
@@ -2036,7 +2036,7 @@ msgstr "Alapbeállítások"
 msgid "Define a startup service"
 msgstr "Indítási csatorna definiálása"
 
-msgid "Define a startup service for your Dreambox."
+msgid "Define a startup service for your STB."
 msgstr ""
 "Beállít egy csatornát úgy, hogy a készülék bekapcsolásakor az automatikusan "
 "induljon el."
@@ -2330,7 +2330,7 @@ msgid "Do you want to preview this DVD before burning?"
 msgstr "Kiírás előtt meg szeretné tekinteni a DVD tartalmat?"
 
 #
-msgid "Do you want to reboot your Dreambox?"
+msgid "Do you want to reboot your STB?"
 msgstr "Újra szeretné indítani a készüléket?"
 
 #
@@ -2358,12 +2358,12 @@ msgstr ""
 "kapcsolatot?"
 
 #
-msgid "Do you want to update your Dreambox?"
+msgid "Do you want to update your STB?"
 msgstr "Szeretné frissíteni a készülék szoftverét?"
 
 #
 msgid ""
-"Do you want to update your Dreambox?\n"
+"Do you want to update your STB?\n"
 "After pressing OK, please wait!"
 msgstr ""
 "Szeretné frissíteni a készülék szoftverét?\n"
@@ -2445,11 +2445,11 @@ msgid "Downloading screenshots. Please wait..."
 msgstr "Képernyőképek letöltése. Kérem, várjon..."
 
 #
-msgid "Dreambox format data DVD (HDTV compatible)"
-msgstr "Dreambox formátumú adat DVD (HDTV kompatibilis)"
+msgid "STB format data DVD (HDTV compatible)"
+msgstr "STB formátumú adat DVD (HDTV kompatibilis)"
 
 #
-msgid "Dreambox software because updates are available."
+msgid "STB software because updates are available."
 msgstr "(a készülék szoftverének frissítése)"
 
 msgid "Driver for Ralink RT8070/RT3070/RT3370 based wireless-n USB devices."
@@ -2559,11 +2559,11 @@ msgid "Edit tags of recorded movies."
 msgstr "Felvett műsorok metaadatainak szerkesztése."
 
 #
-msgid "Edit the Nameserver configuration of your Dreambox.\n"
+msgid "Edit the Nameserver configuration of your STB.\n"
 msgstr "A készülék névszerver beállításainak módosítása.\n"
 
 #
-msgid "Edit the network configuration of your Dreambox.\n"
+msgid "Edit the network configuration of your STB.\n"
 msgstr "A készülék hálózati beállításainak módosítása.\n"
 
 #
@@ -2593,7 +2593,7 @@ msgstr "Oktatás"
 msgid "Electronic Program Guide"
 msgstr "Elektronikus Műsorújság"
 
-msgid "Emailclient is an IMAP4 e-mail viewer for the Dreambox."
+msgid "Emailclient is an IMAP4 e-mail viewer for the STB."
 msgstr ""
 
 #
@@ -2724,8 +2724,8 @@ msgid "English"
 msgstr "Angol"
 
 msgid ""
-"Enigma2 Plugin to play AVI/DIVX/WMV/etc. videos from PC on your Dreambox. "
-"Needs a running VLC from www.videolan.org on your pc."
+"Enigma2 Plugin to play AVI/DIVX/WMV/etc. videos from PC on your STB. Needs a "
+"running VLC from www.videolan.org on your pc."
 msgstr ""
 "Enigma2 Plugin amivel az AVI/DIVX/WMV/stb. videófájlok lejátszása "
 "lehetséges. Szükséges hozzá PC-n a VLC program, a www.videolan.org "
@@ -2750,7 +2750,7 @@ msgid "Enter main menu..."
 msgstr "Belépés a főmenübe..."
 
 #
-msgid "Enter new hostname for your Dreambox"
+msgid "Enter new hostname for your STB"
 msgstr "Adja meg a készülék új hosztnevét"
 
 #
@@ -2920,8 +2920,8 @@ msgid "FEC"
 msgstr "FEC"
 
 msgid ""
-"FTPBrowser allows uploading and downloading files between your Dreambox and "
-"a server using the file transfer protocol."
+"FTPBrowser allows uploading and downloading files between your STB and a "
+"server using the file transfer protocol."
 msgstr ""
 
 #
@@ -3093,7 +3093,7 @@ msgstr "Péntek"
 msgid "Frisian"
 msgstr "Fríz"
 
-msgid "FritzCall shows incoming calls to your Fritz!Box on your Dreambox."
+msgid "FritzCall shows incoming calls to your Fritz!Box on your STB."
 msgstr ""
 
 msgid "Front USB Slot"
@@ -3122,8 +3122,7 @@ msgstr ""
 msgid "GUI that allows user to change the ftp- / telnet password."
 msgstr ""
 
-msgid ""
-"GUI that allows user to change the ftp-/telnet-password of the Dreambox."
+msgid "GUI that allows user to change the ftp-/telnet-password of the STB."
 msgstr ""
 
 msgid "GUI to change the ftp and telnet-password"
@@ -3161,13 +3160,13 @@ msgid "Genre"
 msgstr "Zsáner"
 
 #
-msgid "Genuine Dreambox"
-msgstr "Eredeti Dreambox"
+msgid "Genuine STB"
+msgstr "Eredeti STB"
 
-msgid "Genuine Dreambox validation failed!"
+msgid "Genuine STB validation failed!"
 msgstr ""
 
-msgid "Genuine Dreambox verification"
+msgid "Genuine STB verification"
 msgstr ""
 
 #
@@ -3234,8 +3233,8 @@ msgid "Green boost"
 msgstr "Zöld erősítés"
 
 msgid ""
-"Growlee allows your Dreambox to forward notifications like 'Record started' "
-"to a PC running a growl, snarl or syslog compatible client or directly to an "
+"Growlee allows your STB to forward notifications like 'Record started' to a "
+"PC running a growl, snarl or syslog compatible client or directly to an "
 "iPhone using prowl."
 msgstr ""
 
@@ -3332,7 +3331,7 @@ msgstr "Színárnyalat"
 msgid "Hungarian"
 msgstr "Magyar"
 
-msgid "IMAP4 e-mail viewer for the Dreambox"
+msgid "IMAP4 e-mail viewer for the STB"
 msgstr ""
 
 #
@@ -3649,10 +3648,10 @@ msgstr ""
 msgid "Italian"
 msgstr "Olasz"
 
-msgid "Italian Weather forecast on Dreambox"
+msgid "Italian Weather forecast on STB"
 msgstr ""
 
-msgid "Italian Weather forecast on Dreambox from www.google.it."
+msgid "Italian Weather forecast on STB from www.google.it."
 msgstr ""
 
 #
@@ -3850,7 +3849,7 @@ msgstr ""
 msgid "List of Storage Devices"
 msgstr "Tárolóeszközök listája"
 
-msgid "Listen and record Shoutcast Internet Radio on your Dreambox."
+msgid "Listen and record Shoutcast Internet Radio on your STB."
 msgstr ""
 
 #
@@ -4329,7 +4328,7 @@ msgstr "N/A"
 
 msgid ""
 "NCID Client shows incoming voice calls promoted by any NCID server (e.g. "
-"Vodafone Easybox) on your Dreambox."
+"Vodafone Easybox) on your STB."
 msgstr ""
 
 #
@@ -4388,97 +4387,97 @@ msgstr ""
 msgid "Nemesis BlackBox Skin"
 msgstr ""
 
-msgid "Nemesis BlackBox Skin for the Dreambox"
+msgid "Nemesis BlackBox Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Blueline Single Skin"
 msgstr ""
 
-msgid "Nemesis Blueline Single Skin for the Dreambox"
+msgid "Nemesis Blueline Single Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Blueline Skin"
 msgstr ""
 
-msgid "Nemesis Blueline Skin for the Dreambox"
+msgid "Nemesis Blueline Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Blueline.Extended Skin"
 msgstr ""
 
-msgid "Nemesis Blueline.Extended Skin for the Dreambox"
+msgid "Nemesis Blueline.Extended Skin for the STB"
 msgstr ""
 
 msgid "Nemesis ChromeLine Cobolt Skin"
 msgstr ""
 
-msgid "Nemesis ChromeLine Cobolt Skin for the Dreambox"
+msgid "Nemesis ChromeLine Cobolt Skin for the STB"
 msgstr ""
 
 msgid "Nemesis ChromeLine Skin"
 msgstr ""
 
-msgid "Nemesis ChromeLine Skin for the Dreambox"
+msgid "Nemesis ChromeLine Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Flatline Blue Skin"
 msgstr ""
 
-msgid "Nemesis Flatline Blue Skin for the Dreambox"
+msgid "Nemesis Flatline Blue Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Flatline Skin"
 msgstr ""
 
-msgid "Nemesis Flatline Skin for the Dreambox"
+msgid "Nemesis Flatline Skin for the STB"
 msgstr ""
 
 msgid "Nemesis GlassLine Skin"
 msgstr ""
 
-msgid "Nemesis GlassLine Skin for the Dreambox"
+msgid "Nemesis GlassLine Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Greenline Extended Skin"
 msgstr ""
 
-msgid "Nemesis Greenline Extended Skin for the Dreambox"
+msgid "Nemesis Greenline Extended Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Greenline Single Skin"
 msgstr ""
 
-msgid "Nemesis Greenline Single Skin for the Dreambox"
+msgid "Nemesis Greenline Single Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Greenline Skin"
 msgstr ""
 
-msgid "Nemesis Greenline Skin for the Dreambox"
+msgid "Nemesis Greenline Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Greyline Extended Skin"
 msgstr ""
 
-msgid "Nemesis Greyline Extended Skin for the Dreambox"
+msgid "Nemesis Greyline Extended Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Greyline Single Skin"
 msgstr ""
 
-msgid "Nemesis Greyline Single Skin for the Dreambox"
+msgid "Nemesis Greyline Single Skin for the STB"
 msgstr ""
 
 msgid "Nemesis Greyline Skin"
 msgstr ""
 
-msgid "Nemesis Greyline Skin for the Dreambox"
+msgid "Nemesis Greyline Skin for the STB"
 msgstr ""
 
 msgid "Nemesis ShadowLine Skin"
 msgstr ""
 
-msgid "Nemesis ShadowLine Skin for the Dreambox"
+msgid "Nemesis ShadowLine Skin for the STB"
 msgstr ""
 
 #
@@ -5017,8 +5016,8 @@ msgid "Parental control type"
 msgstr "Gyermekzár típusa"
 
 msgid ""
-"Partnerbox allows editing a remote Dreambox's record timers and stream its "
-"TV  program."
+"Partnerbox allows editing a remote STB's record timers and stream its TV  "
+"program."
 msgstr ""
 
 #
@@ -5106,7 +5105,7 @@ msgstr "Felvett filmek lejátszása..."
 msgid "Play video again"
 msgstr "Videó újrajátszása"
 
-msgid "Play videos from PC on your Dreambox"
+msgid "Play videos from PC on your STB"
 msgstr ""
 
 msgid "Playback of Youtube through a PC"
@@ -5420,7 +5419,7 @@ msgstr "Plugin: %(plugin)s , Verzió: %(version)s"
 msgid "Plugins"
 msgstr "Pluginek"
 
-msgid "PodCast streams podcasts to your Dreambox."
+msgid "PodCast streams podcasts to your STB."
 msgstr ""
 
 #
@@ -6020,7 +6019,7 @@ msgstr "Visszaállítás folyamatban"
 msgid "Restore system settings"
 msgstr "Rendszerbeállítás visszaállítása"
 
-msgid "Restore your Dreambox with a USB stick"
+msgid "Restore your STB with a USB stick"
 msgstr ""
 
 #
@@ -6810,10 +6809,10 @@ msgid "Shutdown"
 msgstr "Kikapcsolás"
 
 #
-msgid "Shutdown Dreambox after"
+msgid "Shutdown STB after"
 msgstr "Kapcsolja le a készüléket miután"
 
-msgid "Shuts down your Dreambox into Deep Standby (Power Save Mode)"
+msgid "Shuts down your STB into Deep Standby (Power Save Mode)"
 msgstr ""
 
 #
@@ -6843,7 +6842,7 @@ msgstr ""
 msgid "Simple titleset (compatibility for legacy players)"
 msgstr "Egyszerű tétellista (kompatibilis régebbi lejátszókal)"
 
-msgid "SimpleRSS allows reading RSS newsfeeds on your Dreambox."
+msgid "SimpleRSS allows reading RSS newsfeeds on your STB."
 msgstr ""
 
 #
@@ -6929,7 +6928,7 @@ msgstr "Szoftver visszaállítás"
 msgid "Software update"
 msgstr "Szoftver frissítés"
 
-msgid "SoftwareManager manages your Dreambox software"
+msgid "SoftwareManager manages your STB software"
 msgstr ""
 "A Szoftverkezeléssel a készülék szoftveres környezetét szabhatja testre"
 
@@ -7290,7 +7289,7 @@ msgid "Test mode"
 msgstr "Teszt mód"
 
 #
-msgid "Test the network configuration of your Dreambox.\n"
+msgid "Test the network configuration of your STB.\n"
 msgstr "A készülék hálózati konfigurációjának ellenőrzése.\n"
 
 msgid "Test your DiSEqC equipment"
@@ -7310,7 +7309,7 @@ msgstr ""
 
 msgid ""
 "Thank you for using the wizard. Your box is now ready to use.\n"
-"Please press OK to start using your Dreambox."
+"Please press OK to start using your STB."
 msgstr ""
 "Köszönöm hogy használta a varázslót. A készüléke most már be van állítva.\n"
 "Az OK gomb megnyomása után máris használatba veheti a készüléket."
@@ -7331,12 +7330,12 @@ msgstr ""
 #
 msgid ""
 "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to "
-"create a Dreambox format data DVD (which will not play in stand-alone DVD "
+"create a STB format data DVD (which will not play in stand-alone DVD "
 "players) instead?"
 msgstr ""
 "A DVD szabvány nem támogatja a H.264 (HDTV) videó streamet. Szeretne "
-"ehelyett létrehozni egy Dreambox formátumó adat DVD-t (mely azonban nem "
-"játszható le a hagyományos lejátszókban)?"
+"ehelyett létrehozni egy STB formátumó adat DVD-t (mely azonban nem játszható "
+"le a hagyományos lejátszókban)?"
 
 msgid ""
 "The Elektro Power Save Plugin puts the box from Standby to sleep mode (Deep "
@@ -7375,11 +7374,11 @@ msgstr ""
 
 msgid ""
 "The SkinSelector shows a menu with selectable skins.\n"
-"It's now easy to change the look and feel of your Dreambox."
+"It's now easy to change the look and feel of your STB."
 msgstr ""
 
 msgid ""
-"The SoftwareManager manages your Dreambox software.\n"
+"The SoftwareManager manages your STB software.\n"
 "It's easy to update your receiver's software, install or remove plugins or "
 "even backup and restore your system settings."
 msgstr ""
@@ -7486,7 +7485,7 @@ msgstr "A csatornalisták telepítése elkészült."
 #
 msgid ""
 "The installation of the default settings is finished. You can now continue "
-"configuring your Dreambox by pressing the OK button on the remote control."
+"configuring your STB by pressing the OK button on the remote control."
 msgstr ""
 "A beállítások telepítése elkészült. Az OK gomb megnyomásával folytathatja a  "
 "készülék további beállítását."
@@ -7628,7 +7627,7 @@ msgstr ""
 
 #
 #, python-format
-msgid "This Dreambox can't decode %s streams!"
+msgid "This STB can't decode %s streams!"
 msgstr ""
 
 #
@@ -7673,7 +7672,7 @@ msgstr ""
 
 msgid ""
 "This plugin creates a USB stick which can be used to update the firmware of "
-"your Dreambox without the need for a network or WLAN connection.\n"
+"your STB without the need for a network or WLAN connection.\n"
 "First, a USB stick needs to be prepared so that it becomes bootable.\n"
 "In the next step, an NFI image file can be downloaded from the update server "
 "and saved on the USB stick.\n"
@@ -7907,7 +7906,7 @@ msgid "To be used as simple downloading application by other Plugins."
 msgstr ""
 
 msgid ""
-"To update your Dreambox firmware, please follow these steps:\n"
+"To update your STB firmware, please follow these steps:\n"
 "1) Turn off your box with the rear power switch and make sure the bootable "
 "USB stick is plugged in.\n"
 "2) Turn mains back on and hold the DOWN button on the front panel pressed "
@@ -8202,7 +8201,7 @@ msgid "Upgrading"
 msgstr "Frissítés"
 
 #
-msgid "Upgrading Dreambox... Please wait"
+msgid "Upgrading STB... Please wait"
 msgstr "Készülék frissítése... Kérem, várjon"
 
 #
@@ -8239,7 +8238,7 @@ msgstr "Egyedi hely használata"
 msgid "Use a gateway"
 msgstr "Átjáró használata"
 
-msgid "Use and control multiple Dreamboxes with different RCs."
+msgid "Use and control multiple STBes with different RCs."
 msgstr ""
 
 #
@@ -8337,8 +8336,7 @@ msgstr ""
 msgid "Vali.HD.warp skin"
 msgstr ""
 
-msgid ""
-"Verify your Dreambox authenticity by running the genuine dreambox plugin!"
+msgid "Verify your STB authenticity by running the genuine dreambox plugin!"
 msgstr ""
 
 msgid "Verifying your internet connection..."
@@ -8433,7 +8431,7 @@ msgstr "Megtekintések száma"
 msgid "View Google maps"
 msgstr ""
 
-msgid "View Google maps with your Dreambox."
+msgid "View Google maps with your STB."
 msgstr ""
 
 #
@@ -8525,7 +8523,7 @@ msgid "View teletext..."
 msgstr "Teletext megtekintése..."
 
 #
-msgid "View, edit or delete mountpoints on your Dreambox."
+msgid "View, edit or delete mountpoints on your STB."
 msgstr ""
 "Csatlakoztatott hálózati megosztások megtekintése, szerkesztése vagy törlése."
 
@@ -8601,10 +8599,10 @@ msgstr ""
 msgid "Watch streams from ZDF Mediathek"
 msgstr ""
 
-msgid "WeatherPlugin shows weatherforecasts on your Dreambox."
+msgid "WeatherPlugin shows weatherforecasts on your STB."
 msgstr ""
 
-msgid "Weatherforecast on your Dreambox"
+msgid "Weatherforecast on your STB"
 msgstr ""
 
 msgid "Web-Bouquet-Editor for PC"
@@ -8662,8 +8660,8 @@ msgstr ""
 #
 msgid ""
 "Welcome to the Image upgrade wizard. The wizard will assist you in upgrading "
-"the firmware of your Dreambox by providing a backup facility for your "
-"current settings and a short explanation of how to upgrade your firmware."
+"the firmware of your STB by providing a backup facility for your current "
+"settings and a short explanation of how to upgrade your firmware."
 msgstr ""
 "Üdvözlöm az Image frissítés varázslójában. A varázsló segít Önnek a "
 "készülékének firmware frissítésében. Ismerteti a mentési tulajdonságokat, "
@@ -8704,7 +8702,7 @@ msgid ""
 "Welcome to the cleanup wizard.\n"
 "\n"
 "We have detected that your available internal memory has dropped below 2MB.\n"
-"To ensure stable operation of your Dreambox, the internal memory should be "
+"To ensure stable operation of your STB, the internal memory should be "
 "cleaned up.\n"
 "You can use this wizard to remove some extensions.\n"
 msgstr ""
@@ -8720,8 +8718,8 @@ msgstr ""
 msgid ""
 "Welcome.\n"
 "\n"
-"If you want to connect your Dreambox to the Internet, this wizard will guide "
-"you through the basic network setup of your Dreambox.\n"
+"If you want to connect your STB to the Internet, this wizard will guide you "
+"through the basic network setup of your STB.\n"
 "\n"
 "Press OK to start configuring your network"
 msgstr ""
@@ -8744,7 +8742,7 @@ msgstr ""
 msgid ""
 "Welcome.\n"
 "\n"
-"This start wizard will guide you through the basic setup of your Dreambox.\n"
+"This start wizard will guide you through the basic setup of your STB.\n"
 "Press the OK button on your remote control to move to the next step."
 msgstr ""
 "Üdvözlöm.\n"
@@ -8828,8 +8826,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"With DVDBurn you can make compilations of records from your Dreambox hard "
-"drive.\n"
+"With DVDBurn you can make compilations of records from your STB hard drive.\n"
 "Optionally you can add customizable menus. You can record the compilation to "
 "a standard-compliant DVD that can be played on conventinal DVD players.\n"
 "HDTV recordings can only be burned in proprietary dreambox format."
@@ -8838,7 +8835,7 @@ msgstr ""
 msgid "With EPGSearch you can search through the EPG and create timers."
 msgstr ""
 
-msgid "With Genuine Dreambox you can verify the authenticity of your Dreambox."
+msgid "With Genuine STB you can verify the authenticity of your STB."
 msgstr ""
 
 msgid ""
@@ -8868,14 +8865,14 @@ msgid ""
 msgstr ""
 
 msgid ""
-"With YouTubePlayer you can watch YouTube-Videos on the Dreambox.\n"
+"With YouTubePlayer you can watch YouTube-Videos on the STB.\n"
 "This plugin requires a PC with the VLC program running."
 msgstr ""
 
 msgid ""
 "With the CommonInterfaceAssignment plugin it is possible to use differentCI "
-"modules in your Dreambox and assign dedicated providers/services or caids to "
-"each of them.\n"
+"modules in your STB and assign dedicated providers/services or caids to each "
+"of them.\n"
 "This allows watching a scrambled service while recording another one."
 msgstr ""
 
@@ -8895,9 +8892,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"With the NFIFlash plugin it is possible to prepare a USB stick with an "
-"Dreambox image.\n"
-"It is then possible to flash your Dreambox with the image on that stick."
+"With the NFIFlash plugin it is possible to prepare a USB stick with an STB "
+"image.\n"
+"It is then possible to flash your STB with the image on that stick."
 msgstr ""
 
 msgid ""
@@ -9038,7 +9035,7 @@ msgid "You can install this plugin."
 msgstr "Ez a plugin telepíthető."
 
 #
-msgid "You can only burn Dreambox recordings!"
+msgid "You can only burn STB recordings!"
 msgstr "Csak ezzel a készülékkel felvett anyagokat lehet kiírni!"
 
 #
@@ -9173,7 +9170,7 @@ msgstr ""
 
 #
 msgid ""
-"Your Dreambox is now ready to use.\n"
+"Your STB is now ready to use.\n"
 "\n"
 "Your internet connection is working now.\n"
 "\n"
@@ -9185,7 +9182,7 @@ msgstr ""
 
 #
 msgid ""
-"Your Dreambox is now ready to use.\n"
+"Your STB is now ready to use.\n"
 "\n"
 "Your internet connection is working now.\n"
 "\n"
@@ -9198,7 +9195,7 @@ msgstr ""
 "Nyomja le az OK gombot a folytatáshoz."
 
 #
-msgid "Your Dreambox will restart after pressing OK on your remote control."
+msgid "Your STB will restart after pressing OK on your remote control."
 msgstr "Az OK gomb megnyomása után a készülék újra fog indulni."
 
 #
@@ -9617,7 +9614,7 @@ msgstr "csatlakoztatva"
 msgid "continue"
 msgstr "Folytatás"
 
-msgid "control multiple Dreamboxes with different RCs"
+msgid "control multiple STBes with different RCs"
 msgstr ""
 
 #
@@ -10552,10 +10549,10 @@ msgstr "kikapcsolásig/újraindításig"
 msgid "use as HDD replacement"
 msgstr "Használat merevlemez helyett"
 
-msgid "use your Dreambox as Web proxy"
+msgid "use your STB as Web proxy"
 msgstr "A készülék web-proxy-ként történő használata"
 
-msgid "use your Dreambox as Web proxy."
+msgid "use your STB as Web proxy."
 msgstr "A készülék web-proxy-ként történő használata."
 
 #
@@ -10765,10 +10762,6 @@ msgstr ""
 msgid "StreamTVPlayer"
 msgstr ""
 
-#, python-format
-msgid "This STB can't decode %s streams!"
-msgstr ""
-
 msgid "Retrieving data ..."
 msgstr ""
 
@@ -10864,43 +10857,6 @@ msgid "Adjust 3D settings"
 msgstr ""
 
 msgid ""
-"\n"
-"Manage extensions or plugins for your STB"
-msgstr ""
-
-msgid ""
-"\n"
-"Online update of your STB software."
-msgstr ""
-
-msgid ""
-"\n"
-"Restore your STB with a new firmware."
-msgstr ""
-
-msgid ""
-"\n"
-"Backup your STB settings."
-msgstr ""
-
-msgid ""
-"\n"
-"Restore your STB settings."
-msgstr ""
-
-msgid "Do you want to update your STB?"
-msgstr ""
-
-msgid "Do you want to reboot your STB?"
-msgstr ""
-
-msgid "STB software because updates are available."
-msgstr ""
-
-msgid "Upgrading STB... Please wait"
-msgstr ""
-
-msgid ""
 "your STB might be unusable now. Please consult the manual for further "
 "assistance before rebooting your STB."
 msgstr ""
@@ -10908,6 +10864,18 @@ msgstr ""
 msgid ""
 "Your STB isn't connected to the internet properly. Please check it and try "
 "again."
+msgstr ""
+
+msgid "Add a new NFS or CIFS mount point to your Dreambox."
+msgstr ""
+
+msgid "View, edit or delete mountpoints on your Dreambox."
+msgstr ""
+
+msgid "Change the hostname of your Dreambox."
+msgstr ""
+
+msgid "Enter new hostname for your Dreambox"
 msgstr ""
 
 msgid "width"
@@ -11084,15 +11052,6 @@ msgstr ""
 msgid "Can not setup WirelessLan Module in 'AP Mode'\n"
 msgstr ""
 
-msgid "Edit the network configuration of your STB.\n"
-msgstr ""
-
-msgid "Edit the Nameserver configuration of your STB.\n"
-msgstr ""
-
-msgid "Test the network configuration of your STB.\n"
-msgstr ""
-
 msgid "Scan Wireless AP"
 msgstr ""
 
@@ -11185,6 +11144,13 @@ msgid "No information..."
 msgstr ""
 
 msgid "Wireless LAN Setup"
+msgstr ""
+
+msgid ""
+"Your Dreambox is now ready to use.\n"
+"\n"
+"Your internet connection is working now.\n"
+"\n"
 msgstr ""
 
 msgid "Dolby Digital default"
@@ -12636,7 +12602,7 @@ msgstr ""
 #~ msgid "Listen and record internet radio"
 #~ msgstr "Internet-rádió hallgatás és felvétel"
 
-#~ msgid "Listen and record shoutcast internet radio on your Dreambox."
+#~ msgid "Listen and record shoutcast internet radio on your STB."
 #~ msgstr ""
 #~ "Shoutcast Internet-rádió hallgatás és felvétel a készülékkel közvetlenűl."
 
@@ -12660,7 +12626,7 @@ msgstr ""
 #~ msgid "No wireless networks found! Please refresh."
 #~ msgstr "Nem észlelhető vezeték nélküli hálózat! Kérem, frissítsen."
 
-#~ msgid "Sets your Dreambox into Deep-Standby"
+#~ msgid "Sets your STB into Deep-Standby"
 #~ msgstr "A készülék mély-készenlétbe helyezése"
 
 #~ msgid "Unknown network adapter."

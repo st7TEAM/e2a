@@ -38,7 +38,7 @@ msgstr ""
 #
 msgid ""
 "\n"
-"Backup your Dreambox settings."
+"Backup your STB settings."
 msgstr ""
 "\n"
 "Snimi svoje Drimbox postavke"
@@ -54,7 +54,7 @@ msgstr ""
 #
 msgid ""
 "\n"
-"Manage extensions or plugins for your Dreambox"
+"Manage extensions or plugins for your STB"
 msgstr ""
 "\n"
 "Izvrši proširenja i dodatke za vaš drimboks"
@@ -62,7 +62,7 @@ msgstr ""
 #
 msgid ""
 "\n"
-"Online update of your Dreambox software."
+"Online update of your STB software."
 msgstr ""
 "\n"
 "Onlajn ažuriranje Drimbox softvera"
@@ -78,7 +78,7 @@ msgstr ""
 #
 msgid ""
 "\n"
-"Restore your Dreambox settings."
+"Restore your STB settings."
 msgstr ""
 "\n"
 "Vrati svoje Drimbox postavke"
@@ -86,7 +86,7 @@ msgstr ""
 #
 msgid ""
 "\n"
-"Restore your Dreambox with a new firmware."
+"Restore your STB with a new firmware."
 msgstr ""
 "\n"
 "Vrati svoje Drimbox postavke sa novim firmverom"
@@ -445,7 +445,7 @@ msgstr "Drimboks simulacija od SG-Atlantis displeja"
 #
 msgid ""
 "A finished record timer wants to set your\n"
-"Dreambox to standby. Do that now?"
+"STB to standby. Do that now?"
 msgstr ""
 "Tajmer snimanja je završen i želi postaviti vaš\n"
 "Drimbox u stanje pripravnosti. Uradite sada?"
@@ -453,7 +453,7 @@ msgstr ""
 #
 msgid ""
 "A finished record timer wants to shut down\n"
-"your Dreambox. Shutdown now?"
+"your STB. Shutdown now?"
 msgstr ""
 "Tajmer snimanja je završio i želi isključiti vaš\n"
 "Drimbox sada. Isključiti sada?"
@@ -549,7 +549,7 @@ msgstr "Jednostavna aplikacija za skidanje drugih dodataka"
 #
 msgid ""
 "A sleep timer wants to set your\n"
-"Dreambox to standby. Do that now?"
+"STB to standby. Do that now?"
 msgstr ""
 "Tajmer spavanja želi postaviti vaš\n"
 "Drimbox u stanje pripravnosti. Uraditi sada?"
@@ -557,7 +557,7 @@ msgstr ""
 #
 msgid ""
 "A sleep timer wants to shut down\n"
-"your Dreambox. Shutdown now?"
+"your STB. Shutdown now?"
 msgstr ""
 "Tajmer spavanja želi isključiti vaš\n"
 "Drimbox. Isključiti sada?"
@@ -679,7 +679,7 @@ msgid "Add a mark"
 msgstr "Dodaj oznaku"
 
 #
-msgid "Add a new NFS or CIFS mount point to your Dreambox."
+msgid "Add a new NFS or CIFS mount point to your STB."
 msgstr "Dodaj novu CIFS ili  NFS maunt tačku tvom drimboksu."
 
 #
@@ -795,7 +795,7 @@ msgid "Advanced restore"
 msgstr "Napredno vraćanje"
 
 msgid ""
-"After a reboot or power outage, StartupToStandby will bring your Dreambox to "
+"After a reboot or power outage, StartupToStandby will bring your STB to "
 "standby-mode."
 msgstr ""
 "Posle restarta ili prekida napajanja, StartupToStandby će dovesti vaš "
@@ -1155,7 +1155,7 @@ msgstr "BA"
 msgid "BASIC-HD Skin by Ismail Demir"
 msgstr "Osnovna HD maska Ismail Demira"
 
-msgid "BASIC-HD Skin for Dreambox Images created from Ismail Demir"
+msgid "BASIC-HD Skin for STB Images created from Ismail Demir"
 msgstr "Osnovna HD maska za drimboks kreirana od Ismail Demira"
 
 #
@@ -1447,7 +1447,7 @@ msgid "Change step size"
 msgstr "Promeni veličinu koraka"
 
 #
-msgid "Change the hostname of your Dreambox."
+msgid "Change the hostname of your STB."
 msgstr "Promeni ime hosta svog drimboksa."
 
 msgid "Changelog"
@@ -1757,10 +1757,10 @@ msgstr "Kontrast"
 msgid "Control recording completely by service"
 msgstr ""
 
-msgid "Control your Dreambox with your Web browser."
+msgid "Control your STB with your Web browser."
 msgstr "Kontroliši svoj drimboks svojim veb pretraživašem."
 
-msgid "Control your Dreambox with your browser"
+msgid "Control your STB with your browser"
 msgstr "Kontroliši svoj drimboks svojim pretraživašem."
 
 msgid "Control your dreambox with only the MUTE button"
@@ -1778,11 +1778,11 @@ msgstr "Kontroliši dešiju upotrebu TV-a"
 msgid "Control your system fan"
 msgstr "Kontroliši svoj sist. ventilator"
 
-msgid "Copy, rename, delete, move local files on your Dreambox."
+msgid "Copy, rename, delete, move local files on your STB."
 msgstr "Kopiraj,preimenuj,obriši,premesti lokalne datoteke na drimboksu."
 
 #
-msgid "Could not connect to Dreambox .NFI Image Feed Server:"
+msgid "Could not connect to STB .NFI Image Feed Server:"
 msgstr "Ne može se povezati na drimbox.NFI Imidž Feed Server"
 
 #
@@ -1858,7 +1858,7 @@ msgstr "Kreiraj prikaz slike svojih filmova"
 msgid "Create remote timers"
 msgstr "Kreiraj udaljene tajmere"
 
-msgid "Create timers on remote Dreamboxes."
+msgid "Create timers on remote STBes."
 msgstr "Kreiraj tajmere na udaljenim drimboksovima."
 
 #
@@ -2006,13 +2006,13 @@ msgstr "DVD lista naslova"
 msgid "DVD media toolbox"
 msgstr "DVD medij alati"
 
-msgid "DVDPlayer plays your DVDs on your Dreambox"
+msgid "DVDPlayer plays your DVDs on your STB"
 msgstr "DVD plejer pušta vaše DVD na vašem drimboksu"
 
 msgid ""
-"DVDPlayer plays your DVDs on your Dreambox.\n"
-"With the DVDPlayer you can play your DVDs on your Dreambox from a DVD or "
-"even from an iso file or video_ts folder on your harddisc or network."
+"DVDPlayer plays your DVDs on your STB.\n"
+"With the DVDPlayer you can play your DVDs on your STB from a DVD or even "
+"from an iso file or video_ts folder on your harddisc or network."
 msgstr ""
 "DVD plejer pušta vaše DVD na vašem drimboksu.\n"
 "Sa DVD plejerom možete puštati vaše DVD na drimboksu sa DVD'a ili čak iz iso "
@@ -2073,7 +2073,7 @@ msgstr "Standardni"
 msgid "Define a startup service"
 msgstr "Definiši početni kanal"
 
-msgid "Define a startup service for your Dreambox."
+msgid "Define a startup service for your STB."
 msgstr "Definiši početni kanal za svoj drimboks."
 
 msgid "Deinterlacer mode for interlaced content"
@@ -2364,7 +2364,7 @@ msgid "Do you want to preview this DVD before burning?"
 msgstr "Da li želite da pregledate ovaj DVD pre rezanja?"
 
 #
-msgid "Do you want to reboot your Dreambox?"
+msgid "Do you want to reboot your STB?"
 msgstr "Da li želite da restartujete vaš drimbox?"
 
 #
@@ -2392,12 +2392,12 @@ msgstr ""
 "slučaju potrebe?"
 
 #
-msgid "Do you want to update your Dreambox?"
+msgid "Do you want to update your STB?"
 msgstr "Da li želite da ažurirate vaš drimbox?"
 
 #
 msgid ""
-"Do you want to update your Dreambox?\n"
+"Do you want to update your STB?\n"
 "After pressing OK, please wait!"
 msgstr ""
 "Želite li nadograditi vaš drimbox?\n"
@@ -2477,11 +2477,11 @@ msgid "Downloading screenshots. Please wait..."
 msgstr "Preuzimam snimke ekrana. Molim sačekajte..."
 
 #
-msgid "Dreambox format data DVD (HDTV compatible)"
+msgid "STB format data DVD (HDTV compatible)"
 msgstr "Drimbox oblik podataka DVD (HDTV kompatibilan)"
 
 #
-msgid "Dreambox software because updates are available."
+msgid "STB software because updates are available."
 msgstr "Drimboks softver zato što su ažuriranja dostupna."
 
 msgid "Driver for Ralink RT8070/RT3070/RT3370 based wireless-n USB devices."
@@ -2591,11 +2591,11 @@ msgid "Edit tags of recorded movies."
 msgstr "Uredi etikete snimljenih filmova."
 
 #
-msgid "Edit the Nameserver configuration of your Dreambox.\n"
+msgid "Edit the Nameserver configuration of your STB.\n"
 msgstr "Urediti konfiguraciju nejmservera vašeg Drimboxa.\n"
 
 #
-msgid "Edit the network configuration of your Dreambox.\n"
+msgid "Edit the network configuration of your STB.\n"
 msgstr "Urediti mrežnu konfiguraciju vašeg Drimboxa.\n"
 
 #
@@ -2625,7 +2625,7 @@ msgstr "Obrazovanje"
 msgid "Electronic Program Guide"
 msgstr "Elektronski Programski Vodič"
 
-msgid "Emailclient is an IMAP4 e-mail viewer for the Dreambox."
+msgid "Emailclient is an IMAP4 e-mail viewer for the STB."
 msgstr "Imejl klijent je IMAP4 preglednik e-pošte za drimboks."
 
 #
@@ -2759,8 +2759,8 @@ msgid "English"
 msgstr "Engleski"
 
 msgid ""
-"Enigma2 Plugin to play AVI/DIVX/WMV/etc. videos from PC on your Dreambox. "
-"Needs a running VLC from www.videolan.org on your pc."
+"Enigma2 Plugin to play AVI/DIVX/WMV/etc. videos from PC on your STB. Needs a "
+"running VLC from www.videolan.org on your pc."
 msgstr ""
 "Enigma2 dodatak za puštanje AVI/DIVX/WMV/itd. videa sa PC-ija na vašem "
 "drimboksu.Potreban uključen VLC sa www.videolan.org na vašem PC-iju."
@@ -2790,7 +2790,7 @@ msgid "Enter main menu..."
 msgstr "Uđi u glavni meni"
 
 #
-msgid "Enter new hostname for your Dreambox"
+msgid "Enter new hostname for your STB"
 msgstr "Unesi novo ime hosta za svoj drimboks"
 
 #
@@ -2961,8 +2961,8 @@ msgid "FEC"
 msgstr "FEC"
 
 msgid ""
-"FTPBrowser allows uploading and downloading files between your Dreambox and "
-"a server using the file transfer protocol."
+"FTPBrowser allows uploading and downloading files between your STB and a "
+"server using the file transfer protocol."
 msgstr ""
 "FTP pretraživač dozvoljava podizanje i skidanje datoteka između vašeg "
 "drimboksa i servera koristeći protokol transfera datoteka."
@@ -3142,7 +3142,7 @@ msgstr "Petak"
 msgid "Frisian"
 msgstr "Frizijski"
 
-msgid "FritzCall shows incoming calls to your Fritz!Box on your Dreambox."
+msgid "FritzCall shows incoming calls to your Fritz!Box on your STB."
 msgstr "FritzCal pokazuje dolazne pozive vašem  Fritz!Box-u na drimboksu."
 
 msgid "Front USB Slot"
@@ -3171,8 +3171,7 @@ msgstr ""
 msgid "GUI that allows user to change the ftp- / telnet password."
 msgstr "GUI koji dozvoljava korisniku da promeni ftp- / telnet lozinku."
 
-msgid ""
-"GUI that allows user to change the ftp-/telnet-password of the Dreambox."
+msgid "GUI that allows user to change the ftp-/telnet-password of the STB."
 msgstr ""
 "GUI koji dozvoljava korisniku da promeni ftp- / telnet lozinku drimboksa."
 
@@ -3213,13 +3212,13 @@ msgid "Genre"
 msgstr "Žanrovi"
 
 #
-msgid "Genuine Dreambox"
+msgid "Genuine STB"
 msgstr "Originalni drimboks"
 
-msgid "Genuine Dreambox validation failed!"
+msgid "Genuine STB validation failed!"
 msgstr "Provera originalnosti drimboksa neuspela!"
 
-msgid "Genuine Dreambox verification"
+msgid "Genuine STB verification"
 msgstr "Verifikacija originalnog drimboksa"
 
 #
@@ -3288,8 +3287,8 @@ msgid "Green boost"
 msgstr "Zeleno pojačanje"
 
 msgid ""
-"Growlee allows your Dreambox to forward notifications like 'Record started' "
-"to a PC running a growl, snarl or syslog compatible client or directly to an "
+"Growlee allows your STB to forward notifications like 'Record started' to a "
+"PC running a growl, snarl or syslog compatible client or directly to an "
 "iPhone using prowl."
 msgstr ""
 "Growlee omogućuje vašem drimboksu da prosledi obaveštenje kao 'Snimanje "
@@ -3389,7 +3388,7 @@ msgstr "Nijansa"
 msgid "Hungarian"
 msgstr "Mađarski"
 
-msgid "IMAP4 e-mail viewer for the Dreambox"
+msgid "IMAP4 e-mail viewer for the STB"
 msgstr "IMAP4 preglednik e-pošte za drimboks"
 
 #
@@ -3709,10 +3708,10 @@ msgstr ""
 msgid "Italian"
 msgstr "Italijanski"
 
-msgid "Italian Weather forecast on Dreambox"
+msgid "Italian Weather forecast on STB"
 msgstr "Italijanska vremenska prognoza za drimboks"
 
-msgid "Italian Weather forecast on Dreambox from www.google.it."
+msgid "Italian Weather forecast on STB from www.google.it."
 msgstr "Italijanska vremenska prognoza za drimboks sa www.google.it."
 
 #
@@ -3913,7 +3912,7 @@ msgstr ""
 msgid "List of Storage Devices"
 msgstr "Lista uređaja za odlaganje"
 
-msgid "Listen and record Shoutcast Internet Radio on your Dreambox."
+msgid "Listen and record Shoutcast Internet Radio on your STB."
 msgstr ""
 
 #
@@ -4403,7 +4402,7 @@ msgstr "N/A"
 
 msgid ""
 "NCID Client shows incoming voice calls promoted by any NCID server (e.g. "
-"Vodafone Easybox) on your Dreambox."
+"Vodafone Easybox) on your STB."
 msgstr ""
 "NCID klijent pokazuje dolazne pozive promovisane od bilo kog NCID servera "
 "(npr.Vodafone Easybox) na vašem drimboksu."
@@ -4462,97 +4461,97 @@ msgstr "Prostor za ime"
 msgid "Nemesis BlackBox Skin"
 msgstr "Nemesis BlackBox maska"
 
-msgid "Nemesis BlackBox Skin for the Dreambox"
+msgid "Nemesis BlackBox Skin for the STB"
 msgstr "Nemesis BlackBox maska za drimboks"
 
 msgid "Nemesis Blueline Single Skin"
 msgstr "Nemesis Blueline Single maska"
 
-msgid "Nemesis Blueline Single Skin for the Dreambox"
+msgid "Nemesis Blueline Single Skin for the STB"
 msgstr "Nemesis Blueline Single maska za drimboks"
 
 msgid "Nemesis Blueline Skin"
 msgstr "Nemesis Blueline maska"
 
-msgid "Nemesis Blueline Skin for the Dreambox"
+msgid "Nemesis Blueline Skin for the STB"
 msgstr "Nemesis Blueline maska za drimboks"
 
 msgid "Nemesis Blueline.Extended Skin"
 msgstr "Nemesis Blueline.Extended maska"
 
-msgid "Nemesis Blueline.Extended Skin for the Dreambox"
+msgid "Nemesis Blueline.Extended Skin for the STB"
 msgstr "Nemesis Blueline.Extended maska za drimboks"
 
 msgid "Nemesis ChromeLine Cobolt Skin"
 msgstr "Nemesis ChromeLine Cobolt maska"
 
-msgid "Nemesis ChromeLine Cobolt Skin for the Dreambox"
+msgid "Nemesis ChromeLine Cobolt Skin for the STB"
 msgstr "Nemesis ChromeLine Cobolt maska za drimboks"
 
 msgid "Nemesis ChromeLine Skin"
 msgstr "Nemesis ChromeLine maska"
 
-msgid "Nemesis ChromeLine Skin for the Dreambox"
+msgid "Nemesis ChromeLine Skin for the STB"
 msgstr "Nemesis ChromeLine maska za drimboks"
 
 msgid "Nemesis Flatline Blue Skin"
 msgstr "Nemesis Flatline Blue maska"
 
-msgid "Nemesis Flatline Blue Skin for the Dreambox"
+msgid "Nemesis Flatline Blue Skin for the STB"
 msgstr "Nemesis Flatline Blue maska za drimboks"
 
 msgid "Nemesis Flatline Skin"
 msgstr "Nemesis Flatline maska"
 
-msgid "Nemesis Flatline Skin for the Dreambox"
+msgid "Nemesis Flatline Skin for the STB"
 msgstr "Nemesis Flatline maska za drimboks"
 
 msgid "Nemesis GlassLine Skin"
 msgstr "Nemesis GlassLine maska"
 
-msgid "Nemesis GlassLine Skin for the Dreambox"
+msgid "Nemesis GlassLine Skin for the STB"
 msgstr "Nemesis GlassLine maska za drimboks"
 
 msgid "Nemesis Greenline Extended Skin"
 msgstr "Nemesis Greenline Extended maska"
 
-msgid "Nemesis Greenline Extended Skin for the Dreambox"
+msgid "Nemesis Greenline Extended Skin for the STB"
 msgstr "Nemesis Greenline Extended maska za drimboks"
 
 msgid "Nemesis Greenline Single Skin"
 msgstr "Nemesis Greenline Single maska"
 
-msgid "Nemesis Greenline Single Skin for the Dreambox"
+msgid "Nemesis Greenline Single Skin for the STB"
 msgstr "Nemesis Greenline Single maska za drimboks"
 
 msgid "Nemesis Greenline Skin"
 msgstr "Nemesis Greenline maska"
 
-msgid "Nemesis Greenline Skin for the Dreambox"
+msgid "Nemesis Greenline Skin for the STB"
 msgstr "Nemesis Greenline maska za drimboks"
 
 msgid "Nemesis Greyline Extended Skin"
 msgstr "Nemesis Greyline Extended maska"
 
-msgid "Nemesis Greyline Extended Skin for the Dreambox"
+msgid "Nemesis Greyline Extended Skin for the STB"
 msgstr "Nemesis Greyline Extended maska za drimboks"
 
 msgid "Nemesis Greyline Single Skin"
 msgstr "Nemesis Greyline Single maska"
 
-msgid "Nemesis Greyline Single Skin for the Dreambox"
+msgid "Nemesis Greyline Single Skin for the STB"
 msgstr "Nemesis Greyline Single maska za drimboks"
 
 msgid "Nemesis Greyline Skin"
 msgstr "Nemesis Greyline maska"
 
-msgid "Nemesis Greyline Skin for the Dreambox"
+msgid "Nemesis Greyline Skin for the STB"
 msgstr "Nemesis Greyline maska za drimboks"
 
 msgid "Nemesis ShadowLine Skin"
 msgstr "Nemesis ShadowLine maska"
 
-msgid "Nemesis ShadowLine Skin for the Dreambox"
+msgid "Nemesis ShadowLine Skin for the STB"
 msgstr "Nemesis ShadowLine maska za drimboks"
 
 #
@@ -5091,8 +5090,8 @@ msgid "Parental control type"
 msgstr "Tip roditeljske zaštite"
 
 msgid ""
-"Partnerbox allows editing a remote Dreambox's record timers and stream its "
-"TV  program."
+"Partnerbox allows editing a remote STB's record timers and stream its TV  "
+"program."
 msgstr ""
 "Partnerbox dozvoljava uređivanje udaljenih drimboks tajmera snimanja i strim "
 "njihovih programa."
@@ -5182,7 +5181,7 @@ msgstr "Pokreni snimljene filmove..."
 msgid "Play video again"
 msgstr "Reprodukuj video ponovo"
 
-msgid "Play videos from PC on your Dreambox"
+msgid "Play videos from PC on your STB"
 msgstr "Pusti video sa PC-ja na svom drimboksu"
 
 msgid "Playback of Youtube through a PC"
@@ -5494,7 +5493,7 @@ msgstr "Dodatak: %(plugin)s , Verzija: %(version)s"
 msgid "Plugins"
 msgstr "Dodaci"
 
-msgid "PodCast streams podcasts to your Dreambox."
+msgid "PodCast streams podcasts to your STB."
 msgstr "PodCast strimuje podkasts na vaš drimboks."
 
 #
@@ -6092,7 +6091,7 @@ msgstr "Vraćanje u toku"
 msgid "Restore system settings"
 msgstr "Vratite sistemske postavke"
 
-msgid "Restore your Dreambox with a USB stick"
+msgid "Restore your STB with a USB stick"
 msgstr "Vrati svoj drimboks u prethodno stanje sa USB stikom"
 
 msgid "Restrict \"after event\" to a certain timespan?"
@@ -6899,10 +6898,10 @@ msgid "Shutdown"
 msgstr "Isključivanje"
 
 #
-msgid "Shutdown Dreambox after"
+msgid "Shutdown STB after"
 msgstr "Isključi drimbox posle"
 
-msgid "Shuts down your Dreambox into Deep Standby (Power Save Mode)"
+msgid "Shuts down your STB into Deep Standby (Power Save Mode)"
 msgstr ""
 
 #
@@ -6932,7 +6931,7 @@ msgstr "Jednostavni IRC grupni čet klijent za e2 #dm8000-vip kanal"
 msgid "Simple titleset (compatibility for legacy players)"
 msgstr "Jednostavne postavke naslova (kompatibilnost za legacy plejere)"
 
-msgid "SimpleRSS allows reading RSS newsfeeds on your Dreambox."
+msgid "SimpleRSS allows reading RSS newsfeeds on your STB."
 msgstr "Jednostavni RSS omogućava čitanje vesti sa fida na vašem drimboksu."
 
 #
@@ -7018,7 +7017,7 @@ msgstr "Vraćanje softvera"
 msgid "Software update"
 msgstr "Nadogradnja softvera"
 
-msgid "SoftwareManager manages your Dreambox software"
+msgid "SoftwareManager manages your STB software"
 msgstr "Upravljač softvera upravlja vašim drimboks softverom"
 
 msgid "Softwaremanager information"
@@ -7376,7 +7375,7 @@ msgid "Test mode"
 msgstr "Test način"
 
 #
-msgid "Test the network configuration of your Dreambox.\n"
+msgid "Test the network configuration of your STB.\n"
 msgstr "Testirajte mrežnu konfiguraciju vašeg drimboxa.\n"
 
 msgid "Test your DiSEqC equipment"
@@ -7397,7 +7396,7 @@ msgstr ""
 #
 msgid ""
 "Thank you for using the wizard. Your box is now ready to use.\n"
-"Please press OK to start using your Dreambox."
+"Please press OK to start using your STB."
 msgstr ""
 "Hvala vam na korišćenju čarobnjaka. Vaš prijemnik je sada spreman za "
 "korišćenje.\n"
@@ -7424,7 +7423,7 @@ msgstr ""
 #
 msgid ""
 "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to "
-"create a Dreambox format data DVD (which will not play in stand-alone DVD "
+"create a STB format data DVD (which will not play in stand-alone DVD "
 "players) instead?"
 msgstr ""
 "DVD standard ne podržava H.264 (HDTV) video strimove.Da li želite umesto "
@@ -7476,13 +7475,13 @@ msgstr ""
 
 msgid ""
 "The SkinSelector shows a menu with selectable skins.\n"
-"It's now easy to change the look and feel of your Dreambox."
+"It's now easy to change the look and feel of your STB."
 msgstr ""
 "SkinSelector vam pokazuje meni sa izabranim maskama.\n"
 "Sada je lako da promenite izgled i osećaj vašeg drimboksa."
 
 msgid ""
-"The SoftwareManager manages your Dreambox software.\n"
+"The SoftwareManager manages your STB software.\n"
 "It's easy to update your receiver's software, install or remove plugins or "
 "even backup and restore your system settings."
 msgstr ""
@@ -7611,7 +7610,7 @@ msgstr "Instalacija osnovne liste kanala je završena."
 #
 msgid ""
 "The installation of the default settings is finished. You can now continue "
-"configuring your Dreambox by pressing the OK button on the remote control."
+"configuring your STB by pressing the OK button on the remote control."
 msgstr ""
 "Instalacija osnovnih postavki je završena.Sada možete nastaviti "
 "konfiguraciju vašeg drimboxa pritiskajući OK tipku na daljinskom upravljaču."
@@ -7758,7 +7757,7 @@ msgstr ""
 
 #
 #, python-format
-msgid "This Dreambox can't decode %s streams!"
+msgid "This STB can't decode %s streams!"
 msgstr "Drimbox ne može dekodirati %s strimove!"
 
 #
@@ -7810,7 +7809,7 @@ msgstr ""
 
 msgid ""
 "This plugin creates a USB stick which can be used to update the firmware of "
-"your Dreambox without the need for a network or WLAN connection.\n"
+"your STB without the need for a network or WLAN connection.\n"
 "First, a USB stick needs to be prepared so that it becomes bootable.\n"
 "In the next step, an NFI image file can be downloaded from the update server "
 "and saved on the USB stick.\n"
@@ -8057,7 +8056,7 @@ msgstr ""
 "Da se koristi kao jednostavna aplikacija za skidanje od drugih dodataka."
 
 msgid ""
-"To update your Dreambox firmware, please follow these steps:\n"
+"To update your STB firmware, please follow these steps:\n"
 "1) Turn off your box with the rear power switch and make sure the bootable "
 "USB stick is plugged in.\n"
 "2) Turn mains back on and hold the DOWN button on the front panel pressed "
@@ -8362,7 +8361,7 @@ msgid "Upgrading"
 msgstr "Nadograđujem"
 
 #
-msgid "Upgrading Dreambox... Please wait"
+msgid "Upgrading STB... Please wait"
 msgstr "Nadograđujem drimbox... Molim čekajte"
 
 #
@@ -8401,7 +8400,7 @@ msgstr "Koristi prilagođenu lokaciju"
 msgid "Use a gateway"
 msgstr "Koristi prolaz"
 
-msgid "Use and control multiple Dreamboxes with different RCs."
+msgid "Use and control multiple STBes with different RCs."
 msgstr "koristi i kontroliši više drimboksova sa različitim daljinskim."
 
 #
@@ -8499,8 +8498,7 @@ msgstr "Vali-XD.nano maska"
 msgid "Vali.HD.warp skin"
 msgstr "Vali.HD.warp maska"
 
-msgid ""
-"Verify your Dreambox authenticity by running the genuine dreambox plugin!"
+msgid "Verify your STB authenticity by running the genuine dreambox plugin!"
 msgstr ""
 "Proveri autentičnost svog drimboksa pokrećući genuine dreambox  dodatak!"
 
@@ -8597,7 +8595,7 @@ msgstr "Vidi brojač"
 msgid "View Google maps"
 msgstr "Vidi Gugl mape"
 
-msgid "View Google maps with your Dreambox."
+msgid "View Google maps with your STB."
 msgstr "Vidi Gugl mape sa svojim drimboksom."
 
 #
@@ -8689,7 +8687,7 @@ msgid "View teletext..."
 msgstr "Pregled teleteksta..."
 
 #
-msgid "View, edit or delete mountpoints on your Dreambox."
+msgid "View, edit or delete mountpoints on your STB."
 msgstr "Vidi, uredi ili obriši maunt tačke na svom drimboksu."
 
 #
@@ -8764,10 +8762,10 @@ msgstr "Upozorii ako slobodan prostor padne ispod (kB):"
 msgid "Watch streams from ZDF Mediathek"
 msgstr "Gledaj strimove iz ZDF Mediateke"
 
-msgid "WeatherPlugin shows weatherforecasts on your Dreambox."
+msgid "WeatherPlugin shows weatherforecasts on your STB."
 msgstr "WeatherPlugin pokazuje vremensku prognozu na vašem drimboksu."
 
-msgid "Weatherforecast on your Dreambox"
+msgid "Weatherforecast on your STB"
 msgstr "Vremenska prognoza na vašem drimboksu"
 
 msgid "Web-Bouquet-Editor for PC"
@@ -8824,8 +8822,8 @@ msgstr ""
 #
 msgid ""
 "Welcome to the Image upgrade wizard. The wizard will assist you in upgrading "
-"the firmware of your Dreambox by providing a backup facility for your "
-"current settings and a short explanation of how to upgrade your firmware."
+"the firmware of your STB by providing a backup facility for your current "
+"settings and a short explanation of how to upgrade your firmware."
 msgstr ""
 "Dobro došli u čarobnjaka za nadogradnju softvera. Čarobnjak će vam pomoći "
 "tokom nadogradnje firmvera na vašem drimboxu s pružanjem mogućnosti "
@@ -8887,7 +8885,7 @@ msgid ""
 "Welcome to the cleanup wizard.\n"
 "\n"
 "We have detected that your available internal memory has dropped below 2MB.\n"
-"To ensure stable operation of your Dreambox, the internal memory should be "
+"To ensure stable operation of your STB, the internal memory should be "
 "cleaned up.\n"
 "You can use this wizard to remove some extensions.\n"
 msgstr ""
@@ -8902,8 +8900,8 @@ msgstr ""
 msgid ""
 "Welcome.\n"
 "\n"
-"If you want to connect your Dreambox to the Internet, this wizard will guide "
-"you through the basic network setup of your Dreambox.\n"
+"If you want to connect your STB to the Internet, this wizard will guide you "
+"through the basic network setup of your STB.\n"
 "\n"
 "Press OK to start configuring your network"
 msgstr ""
@@ -8930,7 +8928,7 @@ msgstr ""
 msgid ""
 "Welcome.\n"
 "\n"
-"This start wizard will guide you through the basic setup of your Dreambox.\n"
+"This start wizard will guide you through the basic setup of your STB.\n"
 "Press the OK button on your remote control to move to the next step."
 msgstr ""
 "Dobro došli.\n"
@@ -9019,8 +9017,7 @@ msgstr ""
 "kanalima vesti)."
 
 msgid ""
-"With DVDBurn you can make compilations of records from your Dreambox hard "
-"drive.\n"
+"With DVDBurn you can make compilations of records from your STB hard drive.\n"
 "Optionally you can add customizable menus. You can record the compilation to "
 "a standard-compliant DVD that can be played on conventinal DVD players.\n"
 "HDTV recordings can only be burned in proprietary dreambox format."
@@ -9035,8 +9032,8 @@ msgstr ""
 msgid "With EPGSearch you can search through the EPG and create timers."
 msgstr "Sa EPGSearch vi možete pretraživati kroz EPG i kreirati tajmere."
 
-msgid "With Genuine Dreambox you can verify the authenticity of your Dreambox."
-msgstr "Sa Genuine Dreambox možete verifikovati autentičnost vašeg drimboksa."
+msgid "With Genuine STB you can verify the authenticity of your STB."
+msgstr "Sa Genuine STB možete verifikovati autentičnost vašeg drimboksa."
 
 msgid ""
 "With IMDb you can display downloaded movie information (rating, poster, "
@@ -9069,7 +9066,7 @@ msgstr ""
 "kanal posle izvršenja."
 
 msgid ""
-"With YouTubePlayer you can watch YouTube-Videos on the Dreambox.\n"
+"With YouTubePlayer you can watch YouTube-Videos on the STB.\n"
 "This plugin requires a PC with the VLC program running."
 msgstr ""
 "Sa YouTubePlayer-om možete gledati YouTube video na vašem drimboksu.\n"
@@ -9077,8 +9074,8 @@ msgstr ""
 
 msgid ""
 "With the CommonInterfaceAssignment plugin it is possible to use differentCI "
-"modules in your Dreambox and assign dedicated providers/services or caids to "
-"each of them.\n"
+"modules in your STB and assign dedicated providers/services or caids to each "
+"of them.\n"
 "This allows watching a scrambled service while recording another one."
 msgstr ""
 "Sa CommonInterfaceAssignment dodatkom moguće je sa drimboksom koristiti "
@@ -9108,9 +9105,9 @@ msgstr ""
 "kompatibilnost i greške."
 
 msgid ""
-"With the NFIFlash plugin it is possible to prepare a USB stick with an "
-"Dreambox image.\n"
-"It is then possible to flash your Dreambox with the image on that stick."
+"With the NFIFlash plugin it is possible to prepare a USB stick with an STB "
+"image.\n"
+"It is then possible to flash your STB with the image on that stick."
 msgstr ""
 "Sa NFIFlash dodatkom je moguće pripremiti USB stik sa nekim drimboks "
 "imidžem.\n"
@@ -9261,7 +9258,7 @@ msgid "You can install this plugin."
 msgstr "Možete instalirati ovaj dodatak."
 
 #
-msgid "You can only burn Dreambox recordings!"
+msgid "You can only burn STB recordings!"
 msgstr "Možeš pržiti samo drimboks snimke!"
 
 #
@@ -9413,7 +9410,7 @@ msgstr ""
 
 #
 msgid ""
-"Your Dreambox is now ready to use.\n"
+"Your STB is now ready to use.\n"
 "\n"
 "Your internet connection is working now.\n"
 "\n"
@@ -9425,7 +9422,7 @@ msgstr ""
 
 #
 msgid ""
-"Your Dreambox is now ready to use.\n"
+"Your STB is now ready to use.\n"
 "\n"
 "Your internet connection is working now.\n"
 "\n"
@@ -9438,7 +9435,7 @@ msgstr ""
 "Molim pritisnite OK da nastavite."
 
 #
-msgid "Your Dreambox will restart after pressing OK on your remote control."
+msgid "Your STB will restart after pressing OK on your remote control."
 msgstr ""
 "Vaš drimbox će ponovo startovati posle pritiskanja OK na vašem daljinskom "
 "upravljaču."
@@ -9860,7 +9857,7 @@ msgstr "Povezano"
 msgid "continue"
 msgstr "nastavi"
 
-msgid "control multiple Dreamboxes with different RCs"
+msgid "control multiple STBes with different RCs"
 msgstr "kontroliši više drimboksova sa različitim daljinskim"
 
 #
@@ -10794,10 +10791,10 @@ msgstr "do spreman/restart"
 msgid "use as HDD replacement"
 msgstr "koristi kao zamenu za hard disk"
 
-msgid "use your Dreambox as Web proxy"
+msgid "use your STB as Web proxy"
 msgstr "koristi svoj drimboks kao veb proksi"
 
-msgid "use your Dreambox as Web proxy."
+msgid "use your STB as Web proxy."
 msgstr "koristi svoj drimboks kao veb proksi."
 
 #
@@ -11001,10 +10998,6 @@ msgstr ""
 msgid "StreamTVPlayer"
 msgstr ""
 
-#, python-format
-msgid "This STB can't decode %s streams!"
-msgstr ""
-
 msgid "Retrieving data ..."
 msgstr ""
 
@@ -11097,43 +11090,6 @@ msgid "Adjust 3D settings"
 msgstr ""
 
 msgid ""
-"\n"
-"Manage extensions or plugins for your STB"
-msgstr ""
-
-msgid ""
-"\n"
-"Online update of your STB software."
-msgstr ""
-
-msgid ""
-"\n"
-"Restore your STB with a new firmware."
-msgstr ""
-
-msgid ""
-"\n"
-"Backup your STB settings."
-msgstr ""
-
-msgid ""
-"\n"
-"Restore your STB settings."
-msgstr ""
-
-msgid "Do you want to update your STB?"
-msgstr ""
-
-msgid "Do you want to reboot your STB?"
-msgstr ""
-
-msgid "STB software because updates are available."
-msgstr ""
-
-msgid "Upgrading STB... Please wait"
-msgstr ""
-
-msgid ""
 "your STB might be unusable now. Please consult the manual for further "
 "assistance before rebooting your STB."
 msgstr ""
@@ -11141,6 +11097,18 @@ msgstr ""
 msgid ""
 "Your STB isn't connected to the internet properly. Please check it and try "
 "again."
+msgstr ""
+
+msgid "Add a new NFS or CIFS mount point to your Dreambox."
+msgstr ""
+
+msgid "View, edit or delete mountpoints on your Dreambox."
+msgstr ""
+
+msgid "Change the hostname of your Dreambox."
+msgstr ""
+
+msgid "Enter new hostname for your Dreambox"
 msgstr ""
 
 msgid "width"
@@ -11311,15 +11279,6 @@ msgstr ""
 msgid "Can not setup WirelessLan Module in 'AP Mode'\n"
 msgstr ""
 
-msgid "Edit the network configuration of your STB.\n"
-msgstr ""
-
-msgid "Edit the Nameserver configuration of your STB.\n"
-msgstr ""
-
-msgid "Test the network configuration of your STB.\n"
-msgstr ""
-
 msgid "Scan Wireless AP"
 msgstr ""
 
@@ -11412,6 +11371,13 @@ msgid "No information..."
 msgstr ""
 
 msgid "Wireless LAN Setup"
+msgstr ""
+
+msgid ""
+"Your Dreambox is now ready to use.\n"
+"\n"
+"Your internet connection is working now.\n"
+"\n"
 msgstr ""
 
 msgid "Dolby Digital default"
@@ -12902,18 +12868,18 @@ msgstr ""
 #
 #~ msgid ""
 #~ "A sleep timer want's to set your\n"
-#~ "Dreambox to standby. Do that now?"
+#~ "STB to standby. Do that now?"
 #~ msgstr ""
 #~ "Tajmer spavanja želi postaviti vaš\n"
-#~ "Dreambox u stanj.pripav. Učiniti sada?"
+#~ "STB u stanj.pripav. Učiniti sada?"
 
 #
 #~ msgid ""
 #~ "A sleep timer want's to shut down\n"
-#~ "your Dreambox. Shutdown now?"
+#~ "your STB. Shutdown now?"
 #~ msgstr ""
 #~ "Tajmer spavanja želi isključiti\n"
-#~ "vaš Dreambox. Isključiti sada?"
+#~ "vaš STB. Isključiti sada?"
 
 #
 #
@@ -13396,8 +13362,7 @@ msgstr ""
 #~ msgstr "Opšte PCM kašnjenje"
 
 #~ msgid ""
-#~ "Growlee allows your Dreambox to send short messages using the growl "
-#~ "protocol\n"
+#~ "Growlee allows your STB to send short messages using the growl protocol\n"
 #~ "like Recording started notifications to a PC running a growl client"
 #~ msgstr ""
 #~ "Growlee dozvoljava vašem drimboksu da šalje kratke poruke koristeći growl "
@@ -13526,13 +13491,13 @@ msgstr ""
 #~ msgstr "Jezik..."
 
 #
-#~ msgid "Lets you view/edit files in your Dreambox"
+#~ msgid "Lets you view/edit files in your STB"
 #~ msgstr "Omogućava vam videti/urediti datoteke vašeg drimboxa"
 
 #~ msgid "Listen and record internet radio"
 #~ msgstr "Slušaj i snimaj Internet radio"
 
-#~ msgid "Listen and record shoutcast internet radio on your Dreambox."
+#~ msgid "Listen and record shoutcast internet radio on your STB."
 #~ msgstr "Slušaj i snimaj šautkast Internet radio na svom drimboksu."
 
 #
@@ -13732,7 +13697,7 @@ msgstr ""
 
 #
 #~ msgid ""
-#~ "Please disconnect all USB devices from your Dreambox and (re-)attach the "
+#~ "Please disconnect all USB devices from your STB and (re-)attach the "
 #~ "target USB stick (minimum size is 64 MB) now!"
 #~ msgstr ""
 #~ "Molimo odspojite sve USB uređaje sa vašeg drimboxa i sada (opet)dodajte "
@@ -14046,7 +14011,7 @@ msgstr ""
 #~ msgid "Set delay"
 #~ msgstr "Verzögerung setzen"
 
-#~ msgid "Sets your Dreambox into Deep-Standby"
+#~ msgid "Sets your STB into Deep-Standby"
 #~ msgstr "Postavi svoj drimboks u duboku pripravnost"
 
 #
@@ -14251,7 +14216,7 @@ msgstr ""
 #~ "imidža u fleš memoriju?"
 
 #
-#~ msgid "This Dreambox can't decode %s video streams!"
+#~ msgid "This STB can't decode %s video streams!"
 #~ msgstr "Drimbox ne može dekodirati %s video strimove!"
 
 #
@@ -14283,7 +14248,7 @@ msgstr ""
 
 #
 #~ msgid ""
-#~ "To update your Dreambox firmware, please follow these steps:\n"
+#~ "To update your STB firmware, please follow these steps:\n"
 #~ "1) Turn off your box with the rear power switch and plug in the bootable "
 #~ "USB stick.\n"
 #~ "2) Turn mains back on and hold the DOWN button on the front panel pressed "
@@ -14375,7 +14340,7 @@ msgstr ""
 #~ msgstr "Nadogradi"
 
 #
-#~ msgid "Upgrade finished. Do you want to reboot your Dreambox?"
+#~ msgid "Upgrade finished. Do you want to reboot your STB?"
 #~ msgstr "Nadogradnja završena. Želite li sada restartovati vaš drimbox?"
 
 #
@@ -14502,7 +14467,7 @@ msgstr ""
 
 #
 #~ msgid ""
-#~ "You do not seem to have a harddisk in your Dreambox. So backing up to a "
+#~ "You do not seem to have a harddisk in your STB. So backing up to a "
 #~ "harddisk is not an option for you."
 #~ msgstr ""
 #~ "Izgleda da vi nemate instalirani hard disk u vašem drimboxu.Zbog toga "
