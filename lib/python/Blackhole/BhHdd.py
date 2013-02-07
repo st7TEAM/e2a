@@ -92,27 +92,26 @@ class DeliteHdd(Screen):
 			if self.hddloc.find('host1') != -1:
 				procf = "/proc/ide/hdc/"
 				
-			myfile = procf + "model"	
-			if fileExists(myfile):
-				f = open(myfile,'r')
-				line = f.readline()
-				f.close()
-				strview += _("HARD DISK MODEL:") + " \t" + line	
 			
-			myfile = procf + "capacity"	
-			if fileExists(myfile):
-				f = open(myfile,'r')
-				line = f.readline()
-				f.close()
-				cap = int(line)
+			model = "Generic"
+			filename = "/sys/block/sda/device/model"
+			if fileExists(filename):
+				model = file(filename).read().strip()
+				strview += _("HARD DISK MODEL:") + " \t" + model + "\n"
+			
+			
+			size = "0"
+			filename = "/sys/block/sda/size"
+			if fileExists(filename):
+				cap = int(file(filename).read().strip())
 				cap = cap / 1000 * 512 / 1000
 				cap = "%d.%03d GB" % (cap/1024, cap%1024)
-				strview += _("Disk Size:") + " \t\t" + cap + "\n"
+				strview += _("Disk Size:") + "     \t" + cap + "\n"
 				
 			stat = statvfs('/media/hdd')
 			free = stat.f_bfree/1000 * stat.f_bsize/1000
 			free = "%d.%03d GB" % (free/1024, free%1024)
-			strview += _("Available Space:") + " \t\t" + free + "\n"
+			strview += _("Available Space:") + "\t" + free + "\n"
 			
 			mysett = self.getHconf()
 			cvalue1 = config.usage.hdd_standby.value

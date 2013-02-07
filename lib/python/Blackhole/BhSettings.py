@@ -572,7 +572,7 @@ class DeliteSetupCronConf(Screen, ConfigListScreen):
 		self.user_command = NoSave(ConfigText(fixed_size = False))
 		self.cmdtime.value = mytmpt = [0,0]
 		self.default_command.value = "None"
-		self.user_command.value = "None"
+		self.user_command.value = ""
 		
 		res = getConfigListEntry(_("Time to execute command or script"), self.cmdtime)
 		self.list.append(res)
@@ -726,7 +726,7 @@ class DeliteDevicesPanel(Screen):
 			cap = self.get_Dsize(device, partition)
 			des = _("Size: ") + cap
 			mountpoint = self.get_Dpoint(uuid)
-			des += _("\tMount: ") + mountpoint + _("\nDevice: ") + "/dev/" + partition
+			des += _("   Mount: ") + mountpoint + _("\nDevice: ") + "/dev/" + partition
 			res = (name, des, png)
 			self.list.append(res)
 			description = "%s  %s  %s" % (name, cap, partition)

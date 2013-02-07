@@ -727,10 +727,6 @@ class DVDPlayer(Screen, InfoBarBase, InfoBarNotifications, InfoBarSeek, InfoBarP
 def main(session, **kwargs):
 	session.open(DVDPlayer)
 
-def menu(menuid, **kwargs):
-	if menuid == "mainmenu":
-		return [(_("DVD Player"), main, "dvd_player", 46)]
-	return []
 
 from Plugins.Plugin import PluginDescriptor
 
@@ -775,5 +771,5 @@ def filescan(**kwargs):
 		)]		
 
 def Plugins(**kwargs):
-	return [PluginDescriptor(name = "DVDPlayer", description = "Play DVDs", where = PluginDescriptor.WHERE_MENU, needsRestart = True, fnc = menu),
+	return [PluginDescriptor(name = "DVDPlayer", description = "Play DVDs", where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = True, fnc = main),
 		 	PluginDescriptor(where = PluginDescriptor.WHERE_FILESCAN, needsRestart = True, fnc = filescan)]

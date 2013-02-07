@@ -17,17 +17,7 @@
 		<item text="Network setup" entryID="network_setup">self.openSetup("network")</item>-->
 		<!--<item text="CI"><screen module="Ci" screen="CiSelection" /></item>-->
 		<!--<item text="Radio"><code>print "radio mode"</code></item>-->
-		<item level="0" text="Timer" entryID="timer_edit"><screen module="TimerEdit" screen="TimerEditList" /></item>
-		<item level="1" text="VCR scart" entryID="scart_switch" requires="ScartSwitch"><code>self.session.scart.VCRSbChanged(3)</code></item>
-
-		<menu level="0" text="Information" entryID="info_screen">
-			<id val="information" />
-			<item level="1" text="Service" entryID="service_info_screen"><screen module="ServiceInfo" screen="ServiceInfo"/></item>
-			<item level="0" text="About" entryID="about_screen"><screen module="About" /></item>
-		</menu>
-
-		<item level="1" text="Plugins" entryID="plugin_selection"><screen module="PluginBrowser" screen="PluginBrowser" /></item>
-		<menu level="0" text="Setup" flushConfigOnClose="1" entryID="setup_selection" >
+		<menu level="0" weight="0" text="Setup" flushConfigOnClose="1" entryID="setup_selection" >
 			<id val="setup" />
 			<!--<menu text="Service Organising">
 				<item text="New Bouquets"></item>
@@ -76,22 +66,37 @@
 			<item weight="15" level="0" text="Parental control" entryID="parental_setup"><screen module="ParentalControlSetup" screen="ParentalControlSetup" /></item>
 			<!--item level="0" text="Startwizard" entryID="startwizzard"><screen module="StartWizard" screen="StartWizard" /></item-->
 			<item weight="25" level="0" text="Factory reset" entryID="factory_reset">
-				<code>
-from Screens.FactoryReset import FactoryReset
-def msgClosed(ret):
-	if ret:
-		from os import system, _exit
-		system("rm -R /etc/enigma2")
-		system("cp -R /usr/share/enigma2/defaults /etc/enigma2")
-		system("/usr/bin/showiframe /boot/backdrop.mvi")
-		_exit(0)
-self.session.openWithCallback(msgClosed, FactoryReset)
-</code>
+			<code>
+				from Screens.FactoryReset import FactoryReset
+				def msgClosed(ret):
+				if ret:
+				from os import system, _exit
+				system("rm -R /etc/enigma2")
+				system("cp -R /usr/share/enigma2/defaults /etc/enigma2")
+				system("/usr/bin/showiframe /boot/backdrop.mvi")
+				_exit(0)
+				self.session.openWithCallback(msgClosed, FactoryReset)
+			</code>
 			</item>
-			<!--<item text="Parental Control"><setup id="parental" /></item>-->
-			<!--<item text="Expert -disabled-"><setup id="expert" /></item>-->
+		<!--<item text="Parental Control"><setup id="parental" /></item>-->
+		<!--<item text="Expert -disabled-"><setup id="expert" /></item>-->
 		</menu>
+		<item level="0" weight="1" text="Teleportation" entryID="blackhole_red"><screen module="BhRed" screen="BhRedp_main" /></item>
+		<item level="0" weight="2" text="Black Hole apps" entryID="blackhole_extra"><screen module="BhSettings" screen="DeliteSettings" /></item>
+		<item level="0" weight="3" text="Plugins" entryID="plugin_selection"><screen module="PluginBrowser" screen="PluginBrowser" /></item>
+		<item level="0" weight="4" text="Epg Panel" entryID="epg_panel"><screen module="BhEpgPanel" screen="DeliteEpgPanel" /></item>
+		<menu level="0" weight="5" text="Backup Menu" entryID="backup_screen">
+			<id val="bhbackup" />
+		</menu>
+		<item level="0" text="Timer" entryID="timer_edit"><screen module="TimerEdit" screen="TimerEditList" /></item>
+		
+		<menu level="0" text="Information" entryID="info_screen">
+			<id val="information" />
+			<item level="0" text="Service" entryID="service_info_screen"><screen module="ServiceInfo" screen="ServiceInfo"/></item>
+			<item level="0" text="About" entryID="about_screen"><screen module="About" /></item>
+		</menu>	
 		<!--<item text="Unser Setup">self.openSetup("Blaselfasel")</item>-->
+		<item level="1" text="VCR scart" entryID="scart_switch" requires="ScartSwitch"><code>self.session.scart.VCRSbChanged(3)</code></item>
 		<menu text="Black Hole Shutdown" entryID="standby_restart_list">
 			<id val="shutdown" />
 			<!--<item text="Standby"><code>quitMainloop(0)</code></item>-->

@@ -119,8 +119,8 @@ class DeliteOpenvpn(Screen):
 		rc = system("ps > /tmp/nvpn.tmp")
 		self["labrun"].hide()
 		self["labstop"].hide()
-		self["labactive"].setText("Inactive")
-		self["key_yellow"].setText("Set Active")
+		self["labactive"].setText(_("Inactive"))
+		self["key_yellow"].setText(_("Set Active"))
 		self.my_vpn_active = False
 		self.my_vpn_run = False
 		
