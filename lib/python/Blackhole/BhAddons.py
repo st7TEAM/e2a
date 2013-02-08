@@ -352,8 +352,8 @@ class Nab_downFeedCat(Screen):
 		})
 		
 		mlist = [ ]
-		if fileExists("/usr/share/dict/pfeeds.uk"):
-			f = open("/usr/share/dict/pfeeds.uk",'r')
+		if fileExists("/usr/share/dict/pfeeds.en"):
+			f = open("/usr/share/dict/pfeeds.en",'r')
  			for line in f.readlines():
 				if len(line) > 4:
 					parts = line.strip().split("|")
