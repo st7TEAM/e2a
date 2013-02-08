@@ -221,7 +221,7 @@ def main(session, **kwargs):
 	session.open(TranscodingSetup)
 
 def Plugins(**kwargs):
-	return [PluginDescriptor(name=_("TranscodingSetup"), description="Transcoding Setup", where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = False, fnc=main)]
+	return [PluginDescriptor(name=_("TranscodingSetup"), description=_("Transcoding Setup"), where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = False, fnc=main)]
 
 transcodingsetupinit = TranscodingSetupInit()
 

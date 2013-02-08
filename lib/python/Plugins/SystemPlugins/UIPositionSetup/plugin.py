@@ -162,6 +162,6 @@ def main(session, **kwargs):
 
 def Plugins(**kwargs):
 	if fileExists("/proc/stb/fb/dst_left"):
-		return [PluginDescriptor(name = "UI position setup", description = "Adjust screen position", where = PluginDescriptor.WHERE_PLUGINMENU, fnc = main)]
+		return [PluginDescriptor(name = "UI position setup", description = _("Adjust screen position"), where = PluginDescriptor.WHERE_PLUGINMENU, fnc = main)]
 	return []
 

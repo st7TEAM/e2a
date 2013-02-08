@@ -353,7 +353,7 @@ class StreamTVList(Screen):
 		self.doConsoleStop()
 		if self.currentService is not None and not self.playerStoped:
 			self.serviceDoCommand('bypass_exit')
-			message = "The connection was terminated from the stream server."
+			message = _("The connection was terminated from the stream server.")
 			self.session.open(MessageBox, message, type=MessageBox.TYPE_INFO)
 			self.currentService.close()
 			self.currentService = None
@@ -401,6 +401,6 @@ def main(session, **kwargs):
 	session.open(StreamTVList)
                                                            
 def Plugins(**kwargs):
-	return PluginDescriptor(name=_("StreamTVPlayer"), description="Watching IPTV implemented by RTSP/RTMP protocol.", where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main)
+	return PluginDescriptor(name=_("StreamTVPlayer"), description=_("Watching IPTV implemented by RTSP/RTMP protocol."), where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main)
 
 

@@ -13,7 +13,7 @@ import os
 import socket
 import urllib2
 
-default_email_address = "Please input your E-mail address"
+default_email_address = _("Please input your E-mail address")
 config.plugins.vuplusauthenticity = ConfigSubsection()
 config.plugins.vuplusauthenticity.sn_a = NoSave(ConfigSelection(default = "MSA", choices = [ ("MSA", _("MSA")), ("MA", _("MA")), ("MB", _("MB")), ("MC", _("MC")), ("MD", _("MD")), ("ME", _("ME")), ("MF", _("MF")), ("MG", _("MG")), ("MH", _("MH"))] ))
 config.plugins.vuplusauthenticity.sn_b = NoSave(ConfigInteger(default = 0,  limits = (1, 999999999)))
@@ -59,8 +59,8 @@ class VuplusAuthenticity(Screen, ConfigListScreen):
 		ConfigListScreen.__init__(self, self.list, session = self.session)
 		self["key_red"] = StaticText(_("Exit"))
 		self["key_green"] = StaticText(_("Start"))
-		self["text1"]=Label("Press green button to start")
-		self["text2"]=Label("With this plugin you can verify the authenticity of your Vu+.\nFor more information, please visit our website \nhttp://vuplus.com")
+		self["text1"]=Label(_("Press green button to start"))
+		self["text2"]=Label(_("With this plugin you can verify the authenticity of your Vu+.\nFor more information, please visit our website \nhttp://vuplus.com"))
 		self.createSetup()
 		self.onLayoutFinish.append(self.checkKernelVer)
 		self.checkTimer = eTimer()
@@ -120,14 +120,14 @@ class VuplusAuthenticity(Screen, ConfigListScreen):
 
 	def Start(self):
 		self["text1"].setText("WAITING......")
-		msg = "Please note that you agree to send software information of the box by applying the event.\nThe collected data will be used in a form that does not personally identify you."
+		msg = _("Please note that you agree to send software information of the box by applying the event.\nThe collected data will be used in a form that does not personally identify you.")
 		self.session.openWithCallback(self.userConfirmCallback, MessageBoxGenuine, _(msg), MessageBox.TYPE_YESNO)
 
 	def userConfirmCallback(self,ret):
 		if ret:
 			self.requestauth_timer.start(0,True)
 		else:
-			self["text1"].setText("Press green button to start")
+			self["text1"].setText(_("Press green button to start"))
 
 	def getModel(self):
 		if fileExists("/proc/stb/info/vumodel"):
@@ -226,5 +226,5 @@ def main(session, **kwargs):
 	session.open(VuplusAuthenticity)
 
 def Plugins(**kwargs):
-	return [PluginDescriptor(name=_("Return the Love Event"), description="Don't lose the chance to get the gift.", where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = False, fnc=main)]
+	return [PluginDescriptor(name=_("Return the Love Event"), description=_("Don't lose the chance to get the gift."), where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = False, fnc=main)]
 

@@ -195,6 +195,6 @@ def main(session, **kwargs):
 	session.open(RemoteControlCode)
 
 def Plugins(**kwargs):
-	return [PluginDescriptor(name=_("RemoteControlCode"), description="setup Remote Control System Code Type", where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = True, fnc=main)]
+	return [PluginDescriptor(name=_("RemoteControlCode"), description=_("setup Remote Control System Code Type"), where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = True, fnc=main)]
 
 remotecontrolcodeinit = RemoteControlCodeInit()

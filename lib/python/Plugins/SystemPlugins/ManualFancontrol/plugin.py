@@ -139,4 +139,4 @@ def main(session, **kwargs):
 	session.open(ManualFancontrol)
 
 def Plugins(**kwargs):
-	return [PluginDescriptor(name=_("Manual Fan control"), description="setup Fancontol inStandby mode", where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = True, fnc=main)]
+	return [PluginDescriptor(name=_("Manual Fan control"), description=_("setup Fancontol inStandby mode"), where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = True, fnc=main)]

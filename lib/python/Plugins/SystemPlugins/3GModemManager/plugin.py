@@ -995,5 +995,5 @@ def main(session, **kwargs):
 	session.open(ModemManager)
                                                            
 def Plugins(**kwargs):            
-	return PluginDescriptor(name=_("Modem Manager"), description="management 3g modem", where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main)
+	return PluginDescriptor(name=_("Modem Manager"), description=_("management 3g modem"), where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main)
 

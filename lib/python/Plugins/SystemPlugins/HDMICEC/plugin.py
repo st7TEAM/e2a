@@ -312,7 +312,7 @@ def autostart(reason, **kwargs):
 		eHdmiCEC.getInstance().messageReceivedKey.get().append(messageReceivedKey)
 
 def Plugins(**kwargs):
-	return [PluginDescriptor(name=_("HDMI-CEC"), description="HDMI-CEC Configuration", where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = True, fnc=openconfig),
+	return [PluginDescriptor(name=_("HDMI-CEC"), description=_("HDMI-CEC Configuration"), where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = True, fnc=openconfig),
 		PluginDescriptor(where = [PluginDescriptor.WHERE_SESSIONSTART, PluginDescriptor.WHERE_AUTOSTART], fnc = autostart)]
 		
 def messageReceived(address, message):

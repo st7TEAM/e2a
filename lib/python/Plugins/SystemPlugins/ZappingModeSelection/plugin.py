@@ -75,6 +75,6 @@ def main(session, **kwargs):
 	session.open(ZappingModeSelection)
 
 def Plugins(**kwargs):
-	return [PluginDescriptor(name=_("ZappingModeSelection"), description="Zapping Mode Selection", where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = False, fnc=main)]
+	return [PluginDescriptor(name=_("ZappingModeSelection"), description=_("Zapping Mode Selection"), where = PluginDescriptor.WHERE_PLUGINMENU, needsRestart = False, fnc=main)]
 
 zappingmodeselectioninit = ZappingModeSelectionInit()

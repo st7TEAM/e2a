@@ -20,6 +20,11 @@ class DeliteGreenPanel(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
+		self["key_red"] = Label(_("Panel Setup"))
+		self["key_green"] = Label(_("Fast Plug"))
+		self["key_yellow"] = Label(_("Addons"))
+		self["key_blue"] = Label(_("Scripts"))
+		
 		self.list = []
 		self["list"] = List(self.list)
 		self.updateList()

@@ -511,7 +511,7 @@
 	<screen name="DeliteGreenPanel" position="0,0" size="1280,720" title="BH Green Panel"  flags="wfNoBorder">
 	    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  /> 
 		<ePixmap position="1198,118" zPosition="2" size="22,452" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
-		<ePixmap position="0,650" zPosition="1" size="1280,40" pixmap="skin_default/buttons_gp.png" alphatest="blend" transparent="1" />
+		<ePixmap position="0,650" zPosition="1" size="1280,40" pixmap="skin_default/buttons4.png" alphatest="blend" transparent="1" />
 		<eLabel text="BH Green Panel" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
 		<widget source="list" render="Listbox" position="60,120" zPosition="1" size="1160,450" scrollbarMode="showOnDemand"  transparent="1">
              <convert type="TemplatedMultiContent">
@@ -525,6 +525,10 @@
                  }
              </convert>
              </widget>
+	     <widget name="key_red" position="90,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+	     <widget name="key_green" position="400,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+	     <widget name="key_yellow" position="700,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+	     <widget name="key_blue" position="1010,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
 	</screen>
 	<!-- AC102 Black Hole Fast Plugin ( 1 )-->
 	<screen name="DeliteSetupFp" position="0,0" size="1280,720" title="BH Fast Plugin Setup">
@@ -891,7 +895,7 @@
 	<!--##### AD100 MAIN BLUE PANEL  #####-->	
 	<screen name="DeliteBluePanel" position="0,0" size="1280,720"  title="BH Blue Panel" backgroundColor="transparent" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
-        <ePixmap position="0,650" zPosition="1" size="1280,40" pixmap="skin_default/buttons_bp.png" alphatest="blend" transparent="1" />
+        <ePixmap position="0,650" zPosition="1" size="1280,40" pixmap="skin_default/buttons4.png" alphatest="blend" transparent="1" />
         <ePixmap position="514,170" zPosition="-1" size="253,25" pixmap="skin_default/buttons_cam.png" alphatest="blend" transparent="1" />
         <ePixmap position="1198,380" zPosition="3" size="22,190" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />         	 
         <eLabel text="BH Blue Panel" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/> 
@@ -905,7 +909,11 @@
         <widget name="Ilab3" position="60,300" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
         <widget name="Ilab4" position="60,325" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
         <widget name="Ecmtext" position="60,380" size="1160,200" font="Regular;20" zPosition="2" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
-        <applet type="onLayoutFinish">
+	<widget name="key_red" position="90,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+	<widget name="key_green" position="400,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+	<widget name="key_yellow" position="700,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+	<widget name="key_blue" position="1000,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+	<applet type="onLayoutFinish">
 		self[&quot;list&quot;].instance.setItemHeight(38)
 		        </applet>
     </screen>
