@@ -195,7 +195,7 @@ def BhU_checkSkinVersion(skinfile):
 def BhU_fake_transl():
 	Teleportation = _("Teleportation")
 	Bh_apps = _("Black Hole apps")
-	Epg Panel = _("Epg Panel")
+	Epg_Panel = _("Epg Panel")
 	Backup_menu = _("Backup Menu")
 	Bh_Shutdown = _("Black Hole Shutdown")
 	Restart_Gui = _("Restart Gui")
