@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-02-08 18:58+0100\n"
+"PO-Revision-Date: 2013-02-08 23:26+0100\n"
 "Last-Translator: meo <lupomeo@hotmail.com>\n"
 "Language-Team: Black Hole <info@vuplus-community.net>\n"
 "MIME-Version: 1.0\n"
@@ -13287,22 +13287,22 @@ msgid "setup Fancontol inStandby mode"
 msgstr "Configura la ventola in quando il box è in standby"
 
 msgid "Panel Setup"
-msgstr ""
+msgstr "Config Pannello"
 
 msgid "Fast Plug"
-msgstr ""
+msgstr "Plugin Veloce"
 
 msgid "Addons"
-msgstr ""
+msgstr "Addons"
 
 msgid "Scripts"
-msgstr ""
+msgstr "Scripts"
 
 msgid "Autocam"
-msgstr ""
+msgstr "Autocam"
 
 msgid "Sys Info"
-msgstr ""
+msgstr "Info sistema"
 
 msgid "Extra Settings"
-msgstr ""
+msgstr "Bh apps"
