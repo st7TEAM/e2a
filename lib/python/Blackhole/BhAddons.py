@@ -409,7 +409,7 @@ class Nab_ShowFeedFile(Screen):
 			mydir = getcwd()
 			chdir("/")
 			cmd = "opkg update"
-			if fileExists("/var/lib/opkg/official-all"):
+			if fileExists("/var/volatile/tmp/official-all"):
 				cmd = "echo -e 'Testing: %s '" % (dest)
 			cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 			cmd1 = "opkg install --force-overwrite " + dest
@@ -660,7 +660,7 @@ class Nab_ShowDownFile(Screen):
 				mydir = getcwd()
 				chdir("/")
 				cmd = "opkg update"
-				if fileExists("/var/lib/opkg/official-all"):
+				if fileExists("/var/volatile/tmp/official-all"):
 					cmd = "echo -e 'Testing: %s '" % (dest)
 				cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 				cmd1 = "opkg install --force-overwrite " + dest
@@ -802,7 +802,7 @@ class Nab_downPanelIPK(Screen):
 			mydir = getcwd()
 			chdir("/")
 			cmd = "opkg update"
-			if fileExists("/var/lib/opkg/official-all"):
+			if fileExists("/var/volatile/tmp/official-all"):
 				cmd = "echo -e 'Testing: %s '" % (dest)
 			cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 			cmd1 = "opkg install --force-overwrite " + dest
