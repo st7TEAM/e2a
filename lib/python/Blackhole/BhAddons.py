@@ -105,6 +105,8 @@ class DeliteAddons(Screen):
 		if self.sel == 0:
 			self.session.open(Nab_downArea)
 		elif self.sel == 1:
+			self.checkPanel()
+		elif self.sel == 2:
 			self.session.openWithCallback(self.runUpgrade, MessageBox, _("Do you want to update Black Hole image?")+"\n"+_("\nAfter pressing OK, please wait!"))
 		elif self.sel == 2:
 			self.checkPanel()

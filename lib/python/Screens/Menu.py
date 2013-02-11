@@ -98,6 +98,9 @@ class Menu(Screen):
 		
 		elif module == "Blackhole.BhEpgPanel":
 			self.session.openWithCallback(self.menuClosed, DeliteEpgPanel)
+			
+		elif module == "Blackhole.BhAddons":
+			self.session.openWithCallback(self.menuClosed, DeliteAddons)
 		
 		elif module == "Blackhole.BhRed":
 			exec "from Blackhole.BhUtils import BhU_check_proc_version"

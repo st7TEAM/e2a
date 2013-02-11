@@ -84,8 +84,9 @@
 		<item level="0" weight="1" text="Teleportation" entryID="blackhole_red"><screen module="BhRed" screen="BhRedp_main" /></item>
 		<item level="0" weight="2" text="Black Hole apps" entryID="blackhole_extra"><screen module="BhSettings" screen="DeliteSettings" /></item>
 		<item level="0" weight="3" text="Plugins" entryID="plugin_selection"><screen module="PluginBrowser" screen="PluginBrowser" /></item>
-		<item level="0" weight="4" text="Epg Panel" entryID="epg_panel"><screen module="BhEpgPanel" screen="DeliteEpgPanel" /></item>
-		<menu level="0" weight="5" text="Backup Menu" entryID="backup_screen">
+		<item level="0" weight="4" text="Addons" entryID="bh_addons"><screen module="BhAddons" screen="DeliteAddons" /></item>
+		<item level="0" weight="5" text="Epg Panel" entryID="epg_panel"><screen module="BhEpgPanel" screen="DeliteEpgPanel" /></item>
+		<menu level="0" weight="6" text="Backup Menu" entryID="backup_screen">
 			<id val="bhbackup" />
 		</menu>
 		<item level="0" text="Timer" entryID="timer_edit"><screen module="TimerEdit" screen="TimerEditList" /></item>
