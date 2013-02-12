@@ -1009,19 +1009,30 @@ void eDVBServicePlay::serviceEvent(int event)
 	{
 	case eDVBServicePMTHandler::eventTuned:
 	{
-		ePtr<iDVBDemux> m_demux;
-		if (!m_service_handler.getDataDemux(m_demux))
+
+//Blackhole
+		std::string show_eit_nownext;
+		/* default behaviour is to start an eit reader, and wait for now/next info, unless this is disabled */
+		if (ePythonConfigQuery::getConfigValue("config.usage.show_eit_nownext", show_eit_nownext) < 0
+			|| show_eit_nownext != "False")
 		{
-			eServiceReferenceDVB &ref = (eServiceReferenceDVB&) m_reference;
-			int sid = ref.getParentServiceID().get();
-			if (!sid)
-				sid = ref.getServiceID().get();
-			if ( ref.getParentTransportStreamID().get() &&
-				ref.getParentTransportStreamID() != ref.getTransportStreamID() )
-				m_event_handler.startOther(m_demux, sid);
-			else
-				m_event_handler.start(m_demux, sid);
+//end
+			ePtr<iDVBDemux> m_demux;
+			if (!m_service_handler.getDataDemux(m_demux))
+			{
+				eServiceReferenceDVB &ref = (eServiceReferenceDVB&) m_reference;
+				int sid = ref.getParentServiceID().get();
+				if (!sid)
+					sid = ref.getServiceID().get();
+				if ( ref.getParentTransportStreamID().get() &&
+					ref.getParentTransportStreamID() != ref.getTransportStreamID() )
+					m_event_handler.startOther(m_demux, sid);
+				else
+					m_event_handler.start(m_demux, sid);
+			}
+//BlackHole
 		}
+//end
 		m_event((iPlayableService*)this, evTunedIn);
 		break;
 	}
