@@ -2408,29 +2408,30 @@ class InfoBarServiceErrorPopupSupport:
 		Notifications.RemovePopup(id = "ZapError")
 
 	def __tuneFailed(self):
-		service = self.session.nav.getCurrentService()
-		info = service and service.info()
-		error = info and info.getInfo(iServiceInformation.sDVBState)
+		if not config.usage.hide_zap_errors.value:
+			service = self.session.nav.getCurrentService()
+			info = service and service.info()
+			error = info and info.getInfo(iServiceInformation.sDVBState)
 
-		if error == self.last_error:
-			error = None
-		else:
-			self.last_error = error
+			if error == self.last_error:
+				error = None
+			else:
+				self.last_error = error
 
-		error = {
-			eDVBServicePMTHandler.eventNoResources: _("No free tuner!"),
-			eDVBServicePMTHandler.eventTuneFailed: _("Tune failed!"),
-			eDVBServicePMTHandler.eventNoPAT: _("No data on transponder!\n(Timeout reading PAT)"),
-			eDVBServicePMTHandler.eventNoPATEntry: _("Service not found!\n(SID not found in PAT)"),
-			eDVBServicePMTHandler.eventNoPMT: _("Service invalid!\n(Timeout reading PMT)"),
-			eDVBServicePMTHandler.eventNewProgramInfo: None,
-			eDVBServicePMTHandler.eventTuned: None,
-			eDVBServicePMTHandler.eventSOF: None,
-			eDVBServicePMTHandler.eventEOF: None,
-			eDVBServicePMTHandler.eventMisconfiguration: _("Service unavailable!\nCheck tuner configuration!"),
-		}.get(error) #this returns None when the key not exist in the dict
+			error = {
+				eDVBServicePMTHandler.eventNoResources: _("No free tuner!"),
+				eDVBServicePMTHandler.eventTuneFailed: _("Tune failed!"),
+				eDVBServicePMTHandler.eventNoPAT: _("No data on transponder!\n(Timeout reading PAT)"),
+				eDVBServicePMTHandler.eventNoPATEntry: _("Service not found!\n(SID not found in PAT)"),
+				eDVBServicePMTHandler.eventNoPMT: _("Service invalid!\n(Timeout reading PMT)"),
+				eDVBServicePMTHandler.eventNewProgramInfo: None,
+				eDVBServicePMTHandler.eventTuned: None,
+				eDVBServicePMTHandler.eventSOF: None,
+				eDVBServicePMTHandler.eventEOF: None,
+				eDVBServicePMTHandler.eventMisconfiguration: _("Service unavailable!\nCheck tuner configuration!"),
+			}.get(error) #this returns None when the key not exist in the dict
 
-		if error is not None:
-			Notifications.AddPopup(text = error, type = MessageBox.TYPE_ERROR, timeout = 5, id = "ZapError")
-		else:
-			Notifications.RemovePopup(id = "ZapError")
+			if error is not None:
+				Notifications.AddPopup(text = error, type = MessageBox.TYPE_ERROR, timeout = 5, id = "ZapError")
+			else:
+				Notifications.RemovePopup(id = "ZapError")

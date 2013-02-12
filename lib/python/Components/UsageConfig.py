@@ -21,6 +21,8 @@ def InitUsageConfig():
 	config.usage.show_infobar_on_skip = ConfigYesNo(default = True)
 	config.usage.show_infobar_on_event_change = ConfigYesNo(default = True)
 	config.usage.show_eit_nownext = ConfigYesNo(default = True)
+	config.usage.hide_zap_errors = ConfigYesNo(default = False)
+	config.usage.hide_ci_messages = ConfigYesNo(default = False)
 	config.usage.hdd_standby = ConfigSelection(default = "600", choices = [
 		("0", _("no standby")), ("10", "10 " + _("seconds")), ("30", "30 " + _("seconds")),
 		("60", "1 " + _("minute")), ("120", "2 " + _("minutes")),
