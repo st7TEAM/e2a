@@ -69,35 +69,35 @@ class DeliteAddons(Screen):
 		mypixmap = mypath + "icons/nabpackpanel.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Online Black Hole image update")
-		idx = 1
+		idx = 2
 		res = (name, png, idx)
 		self.list.append(res)
 
 		mypixmap = mypath + "icons/nabpackpanel.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Manual Install Bh packges")
-		idx = 2
+		idx = 3
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/ipkpackpanel.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Manual Install Ipk packges")
-		idx = 3
+		idx = 4
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/uninstpanel.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Addons Uninstall Panel")
-		idx = 4
+		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/statpanel.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Black Hole Statistics")
-		idx = 5
+		idx = 6
 		res = (name, png, idx)
 		self.list.append(res)
 		
