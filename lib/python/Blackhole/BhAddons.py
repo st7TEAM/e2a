@@ -61,6 +61,13 @@ class DeliteAddons(Screen):
 		
 		mypixmap = mypath + "icons/nabpackpanel.png"
 		png = LoadPixmap(mypixmap)
+		name = _("Online Feeds Settings update")
+		idx = 1
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/nabpackpanel.png"
+		png = LoadPixmap(mypixmap)
 		name = _("Online Black Hole image update")
 		idx = 1
 		res = (name, png, idx)
@@ -105,16 +112,16 @@ class DeliteAddons(Screen):
 		if self.sel == 0:
 			self.session.open(Nab_downArea)
 		elif self.sel == 1:
-			self.checkPanel()
+			self.session.open(Bh_Feed_Settings)
 		elif self.sel == 2:
 			self.session.openWithCallback(self.runUpgrade, MessageBox, _("Do you want to update Black Hole image?")+"\n"+_("\nAfter pressing OK, please wait!"))
-		elif self.sel == 2:
-			self.checkPanel()
 		elif self.sel == 3:
-			self.checkPanel2()
+			self.checkPanel()
 		elif self.sel == 4:
-			self.session.open(Nab_uninstPanel)
+			self.checkPanel2()
 		elif self.sel == 5:
+			self.session.open(Nab_uninstPanel)
+		elif self.sel == 6:
 			staturl = "http://www.vuplus-community.net/bhaddons/index.php?op=outmestats2"
 			downfile = "/tmp/cpanel.tmp"
 			if fileExists(downfile):
@@ -131,6 +138,7 @@ class DeliteAddons(Screen):
 		else:
 			nobox = self.session.open(MessageBox, _("Sorry, Connection Failed."), MessageBox.TYPE_INFO)
 			
+	
 	def runUpgrade(self, result):
 		if result:
 			from Plugins.SystemPlugins.SoftwareManager.plugin import UpdatePlugin
@@ -1022,3 +1030,162 @@ class Nab_ConnectPop(Screen):
 	def delTimer(self):
 		del self.activityTimer
 
+class Bh_Feed_Settings(Screen):
+	skin = """
+	<screen position="center,center" size="902,570" title="BH Feeds Settings">
+		<widget name="lab1" position="50,260" size="800,40" zPosition="2" halign="center" font="Regular;24" />
+		<widget name="lab2" position="10,10" size="882,60" font="Regular;20" valign="top" transparent="1"/>
+		<widget source="list" render="Listbox" position="30,70" size="840,430" scrollbarMode="showOnDemand" transparent="1">
+            	<convert type="TemplatedMultiContent">
+                    {"template": [
+                       MultiContentEntryText(pos = (10, 5), size = (690, 25), font=0, text = 0),
+                       MultiContentEntryText(pos = (20, 30), size = (670, 20), font=1, flags = RT_VALIGN_TOP, text = 1),
+                    ],
+                    "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+                    "itemHeight": 60
+                    }
+                   </convert>
+        	</widget>
+		<ePixmap pixmap="skin_default/buttons/red.png" position="200,530" size="140,40" alphatest="on"/>
+		<ePixmap pixmap="skin_default/buttons/green.png" position="550,530" size="140,40" alphatest="on"/>
+		<widget name="key_red" position="200,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="key_green" position="550,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
+	</screen>"""
+	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		self["key_red"] = Label(_("Install"))
+		self["key_green"] = Label(_("Remove"))
+		self["lab1"] = Label(_("Wait please checking for available updates..."))
+		self["lab2"] = Label("")
+		
+		self.list = []
+		self["list"] = List(self.list)
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"back": self.close,
+			"ok": self.install_Pack,
+			"red": self.install_Pack,
+			"green": self.remove_Pack
+		})
+		
+		self.eDVBDB = eDVBDB.getInstance()
+		self.activityTimer = eTimer()
+		self.activityTimer.timeout.get().append(self.updateList2)
+		self.checkupgrade = False
+		
+		self.updateList()
+	
+	def updateList(self):
+		self.activityTimer.start(3)
+		
+	def updateList2(self):
+		self.activityTimer.stop()
+		self.installed = ""
+		self.list = []
+		self.installed = ""
+		ret = system("opkg update")
+		ret = system("opkg info enigma2-settings* > /tmp/cpanel.tmp")
+		packname = ""
+		packver = ""
+		step = 0
+		if fileExists("/tmp/cpanel.tmp"):
+			f = open("/tmp/cpanel.tmp",'r')
+ 			for line in f.readlines():
+     				if line.find("Package: enigma2-settings-vhannibal-common") != -1:
+					step = 0
+					continue
+				elif line.find("Package:") != -1:
+					parts = line.strip().split()
+					packname = parts[1]
+					step = 1
+				if step == 1:
+					if line.find("Version:") != -1:
+						parts = line.strip().split()
+						packver = _("version:") + " " + parts[1]
+						res = (packname, packver)
+						self.list.append(res)
+					elif line.find("Status:") != -1:
+						if line.find("not-installed") == -1:
+							self.installed = packname
+							step = 0
+						
+ 			f.close()
+			os_remove("/tmp/cpanel.tmp")
+	
+		self["list"].list = self.list
+		self["lab1"].hide()
+		lab2_text = _("Settings installed:") + " " + self.installed
+		self["lab2"].setText(lab2_text)
+		
+		if self.checkupgrade == False:
+			self.checkUpgrade()
+		
+	def checkUpgrade(self):
+		self.checkupgrade = True
+		foundupgrade = False
+		ret = system("opkg list-upgradable  > /tmp/cpanel.tmp")
+		if fileExists("/tmp/cpanel.tmp"):
+			f = open("/tmp/cpanel.tmp",'r')
+ 			for line in f.readlines():
+				parts = line.strip().split()
+				if parts[0] == self.installed:
+					foundupgrade = True
+					break
+ 			f.close()
+			os_remove("/tmp/cpanel.tmp")
+			
+		if foundupgrade == True:
+			self.askUpgrade()
+		
+	
+	def askUpgrade(self):
+		message = _("Upgrade found.\nDo you want to upgrade the settings package:\n ") + self.installed + _(" ?")
+		self.session.openWithCallback(self.upgradePack, MessageBox, message, MessageBox.TYPE_YESNO)
+		
+	def upgradePack(self, answer):
+		if answer is True:
+			self.done_message = _("Package %s upgraded.") % (self.installed)
+			cmd1 = "opkg upgrade " + self.installed
+			self.session.open(Console, title=_("New Settings Package Installation"), cmdlist=[cmd1], finishedCallback = self.ipkDone, closeOnSuccess = True)
+		
+	
+	def install_Pack(self):
+		if self.installed != "":
+			text = _("You have to remove the installed %s before to install a new settings pack.") % (self.installed)
+			self.session.open(MessageBox, text, MessageBox.TYPE_INFO)
+		else:
+			self.sel = self["list"].getCurrent()
+			if self.sel:
+				self.newpack = self.sel[0]
+				message = _("Do you want to install the Package:\n ") + self.newpack + _(" ?")
+				self.session.openWithCallback(self.do_install_Pack, MessageBox, message, MessageBox.TYPE_YESNO)
+			
+	def do_install_Pack(self, answer):
+		if answer is True:
+			self.done_message = _("Package installed.")
+			cmd1 = "opkg install " + self.newpack
+			self.session.open(Console, title=_("New Settings Package Installation"), cmdlist=[cmd1], finishedCallback = self.ipkDone, closeOnSuccess = True)
+		
+	
+	def remove_Pack(self):
+		if self.installed == "":
+			text = _("No package installed. Nothing to remove.")
+			self.session.open(MessageBox, text, MessageBox.TYPE_INFO)
+		else:
+			message = _("Are you sure you want to remove the Package:\n ") + self.installed + _(" ?")
+			self.session.openWithCallback(self.do_remove_Pack, MessageBox, message, MessageBox.TYPE_YESNO)
+	
+	def do_remove_Pack(self, answer):
+		if answer is True:
+			self.done_message = _("Package %s removed.") % (self.installed)
+			cmd1 = "opkg remove " + self.installed
+			self.session.open(Console, title=_("Removing package"), cmdlist=[cmd1,], finishedCallback = self.ipkDone, closeOnSuccess = True)
+		
+	def ipkDone(self):
+		self.eDVBDB.reloadServicelist()
+		self.eDVBDB.reloadBouquets()
+		self.session.open(MessageBox, self.done_message, MessageBox.TYPE_INFO)
+		self.updateList2()
