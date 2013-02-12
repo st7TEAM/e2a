@@ -1379,23 +1379,32 @@ void eEPGCache::channel_data::startEPG()
 	mask.pid = 0x12;
 	mask.flags = eDVBSectionFilterMask::rfCRC;
 
-	mask.data[0] = 0x4E;
-	mask.mask[0] = 0xFE;
-	m_NowNextReader->connectRead(slot(*this, &eEPGCache::channel_data::readData), m_NowNextConn);
-	m_NowNextReader->start(mask);
-	isRunning |= NOWNEXT;
+//BlackHole
+FILE *fei = fopen ( "/etc/eiepglock", "r" );
+	if ( fei == NULL )
+	{
+//end
+		mask.data[0] = 0x4E;
+		mask.mask[0] = 0xFE;
+		m_NowNextReader->connectRead(slot(*this, &eEPGCache::channel_data::readData), m_NowNextConn);
+		m_NowNextReader->start(mask);
+		isRunning |= NOWNEXT;
 
-	mask.data[0] = 0x50;
-	mask.mask[0] = 0xF0;
-	m_ScheduleReader->connectRead(slot(*this, &eEPGCache::channel_data::readData), m_ScheduleConn);
-	m_ScheduleReader->start(mask);
-	isRunning |= SCHEDULE;
+		mask.data[0] = 0x50;
+		mask.mask[0] = 0xF0;
+		m_ScheduleReader->connectRead(slot(*this, &eEPGCache::channel_data::readData), m_ScheduleConn);
+		m_ScheduleReader->start(mask);
+		isRunning |= SCHEDULE;
 
-	mask.data[0] = 0x60;
-	m_ScheduleOtherReader->connectRead(slot(*this, &eEPGCache::channel_data::readData), m_ScheduleOtherConn);
-	m_ScheduleOtherReader->start(mask);
-	isRunning |= SCHEDULE_OTHER;
-
+		mask.data[0] = 0x60;
+		m_ScheduleOtherReader->connectRead(slot(*this, &eEPGCache::channel_data::readData), m_ScheduleOtherConn);
+		m_ScheduleOtherReader->start(mask);
+		isRunning |= SCHEDULE_OTHER;
+//BlackHole
+	}
+	else
+		fclose(fei);
+//end
 	mask.pid = 0x39;
 
 	mask.data[0] = 0x40;

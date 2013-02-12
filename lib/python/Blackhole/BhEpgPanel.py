@@ -46,7 +46,10 @@ class DeliteEpgPanel(Screen):
 	<screen position="339,100" size="602,510" title="Black Hole E2 EPG Settings">
 		<widget name="lsinactive" position="20,10" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
 		<widget name="lsactive" position="20,10" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-		<widget name="lab1" position="60,10" size="400,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="lab1" position="60,10" size="300,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="leinactive" position="320,10" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+		<widget name="leactive" position="320,10" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+		<widget name="lab1a" position="360,10" size="280,30" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="luinactive" position="20,50" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
 		<widget name="luactive" position="20,50" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
 		<widget name="lab2" position="50,50" size="400,30" font="Regular;20" valign="center" transparent="1"/>
@@ -71,6 +74,11 @@ class DeliteEpgPanel(Screen):
 		self["lsinactive"] = Pixmap()
 		self["lsactive"] = Pixmap()
 		self["lab1"] = Label(_("Enable OpenTv Epg Loader"))
+		
+		self["leinactive"] = Pixmap()
+		self["leactive"] = Pixmap()
+		self["lab1a"] = Label(_("Enable EIT Epg"))
+		
 		self["luinactive"] = Pixmap()
 		self["luactive"] = Pixmap()
 		self["lab2"] = Label(_("Enable Epg Popup Notifications"))
@@ -142,6 +150,8 @@ class DeliteEpgPanel(Screen):
 	def updatemyinfo(self):
 		self["lsinactive"].hide()
 		self["lsactive"].hide()
+		self["leinactive"].hide()
+		self["leactive"].hide()
 		self["luinactive"].hide()
 		self["luactive"].hide()
 		self["lpinactive"].hide()
@@ -153,6 +163,11 @@ class DeliteEpgPanel(Screen):
 			self["lsinactive"].show()
 		else:
 			self["lsactive"].show()
+			
+		if fileExists("/etc/eiepglock"):
+			self["leinactive"].show()
+		else:
+			self["leactive"].show()
 		
 		if config.misc.deliteepgpop.value == True:
 			self["luactive"].show()
@@ -381,6 +396,7 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 		
 	def updateList(self):
 		self.deliteepgdisabled = NoSave(ConfigYesNo(default=True))
+		self.deliteepgeidisabled = NoSave(ConfigYesNo(default=True))
 		self.delitepopdisabled = NoSave(ConfigYesNo(default=True))
 		self.deliteepgbuttons = NoSave(ConfigYesNo(default=True))
 		
@@ -393,6 +409,11 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 			self.deliteepgdisabled.value = False
 		else:
 			self.deliteepgdisabled.value = True
+			
+		if fileExists("/etc/eiepglock"):
+			self.deliteepgeidisabled.value = False
+		else:
+			self.deliteepgeidisabled.value = True
 		
 		self.delitepopdisabled.value = config.misc.deliteepgpop.value
 		self.deliteepgbuttons.value = config.misc.deliteepgbuttons.value
@@ -401,6 +422,9 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 		
 		epg_disabled = getConfigListEntry(_("Enable OpenTv Epg Loader"), self.deliteepgdisabled)
 		self.list.append(epg_disabled)
+		
+		epgei_disabled = getConfigListEntry(_("Enable EIT Epg"), self.deliteepgeidisabled)
+		self.list.append(epgei_disabled)
 		
 		pop_disabled = getConfigListEntry(_("Enable Epg Popup Notifications"), self.delitepopdisabled)
 		self.list.append(pop_disabled)
@@ -430,6 +454,15 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 		else:
 			if self.deliteepgdisabled.value == False:
 				out = open("/etc/skyitepglock", "w")
+				out.write("Black Hole is the Best")
+				out.close()
+				
+		if fileExists("/etc/eiepglock"):
+			if self.deliteepgeidisabled.value == True:
+				os_remove("/etc/eiepglock")
+		else:
+			if self.deliteepgeidisabled.value == False:
+				out = open("/etc/eiepglock", "w")
 				out.write("Black Hole is the Best")
 				out.close()
 		
