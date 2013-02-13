@@ -1527,6 +1527,20 @@
 				</convert>
 						</widget>
 	</screen>
+	
+	<screen name="menu_bhbackup" position="0,0" size="1280,720" title="Main menu"   flags="wfNoBorder">
+		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  /> 
+		<eLabel text="Backup Menu" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
+		<widget source="menu" render="Listbox" position="60,120" size="760,440" scrollbarMode="showNever" selectionPixmap="skin_default/icons/listselection450x38_S1-fs8.png"  backgroundPixmap="skin_default/icons/butselection.png" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (60, 2), size = (450, 38), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 26)],
+				"itemHeight": 38 
+				}
+			</convert>
+		</widget>
+	</screen>
+	
 	<!--AF108 Bh_Bfull_main ( 2 )-->	
 	   <screen name="Bh_Bfull_main" position="0,0" size="1280,720" title="BH Full Backup" flags="wfNoBorder">
 	     <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
@@ -2023,21 +2037,22 @@
         <widget name="lsinactive" position="60,120" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
         <widget name="lsactive" position="60,120" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
         <widget name="lab1" position="100,120" size="400,30" font="Regular;24" valign="center" transparent="1"/>
-	
-	<widget name="leinactive" position="60,160" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-	<widget name="leactive" position="60,160" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+	<widget name="lninactive" position="60,160" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+	<widget name="lnactive" position="60,160" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
         <widget name="lab1a" position="100,160" size="400,30" font="Regular;24" valign="center" transparent="1"/>
-	
-        <widget name="luinactive" position="60,200" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-        <widget name="luactive" position="60,200" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab2" position="100,200" size="400,30" font="Regular;24" valign="center" transparent="1"/>
-        <widget name="lpinactive" position="60,240" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-        <widget name="lpactive" position="60,240" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab3" position="100,240" size="450,30" font="Regular;24" valign="center" transparent="1"/>  
-        <widget name="lab4" position="100,280" size="260,30" font="Regular;24" valign="center" transparent="1"/>
-        <widget name="labpath" position="220,280" size="560,32" font="Regular;24" valign="center" halign="center" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
-        <widget name="lab5" position="60,320" size="260,30" font="Regular;24" valign="center" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
-        <widget source="list" render="Listbox" position="60,350" size="1160,220" scrollbarMode="showOnDemand"   transparent="1">
+	<widget name="leinactive" position="60,200" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+	<widget name="leactive" position="60,200" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+        <widget name="lab1b" position="100,200" size="400,30" font="Regular;24" valign="center" transparent="1"/>
+        <widget name="luinactive" position="60,240" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+        <widget name="luactive" position="60,240" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+        <widget name="lab2" position="100,240" size="400,30" font="Regular;24" valign="center" transparent="1"/>
+        <widget name="lpinactive" position="60,280" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+        <widget name="lpactive" position="60,280" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+        <widget name="lab3" position="100,280" size="450,30" font="Regular;24" valign="center" transparent="1"/>  
+        <widget name="lab4" position="100,320" size="260,30" font="Regular;24" valign="center" transparent="1"/>
+        <widget name="labpath" position="320,320" size="560,32" font="Regular;24" valign="center" halign="center" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="lab5" position="60,360" size="260,30" font="Regular;24" valign="center" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
+        <widget source="list" render="Listbox" position="60,390" size="1160,180" scrollbarMode="showOnDemand"   transparent="1">
             <convert type="StringList"/>
         </widget>
         <ePixmap position="56,650" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />

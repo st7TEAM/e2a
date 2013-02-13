@@ -47,17 +47,20 @@ class DeliteEpgPanel(Screen):
 		<widget name="lsinactive" position="20,10" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
 		<widget name="lsactive" position="20,10" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
 		<widget name="lab1" position="60,10" size="300,30" font="Regular;20" valign="center" transparent="1"/>
-		<widget name="leinactive" position="320,10" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-		<widget name="leactive" position="320,10" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-		<widget name="lab1a" position="360,10" size="280,30" font="Regular;20" valign="center" transparent="1"/>
-		<widget name="luinactive" position="20,50" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-		<widget name="luactive" position="20,50" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-		<widget name="lab2" position="50,50" size="400,30" font="Regular;20" valign="center" transparent="1"/>
-		<widget name="lpinactive" position="20,90" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-		<widget name="lpactive" position="20,90" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-		<widget name="lab3" position="60,90" size="400,30" font="Regular;20" valign="center" transparent="1"/>    
-		<widget name="lab4" position="20,130" size="260,30" font="Regular;20" valign="center" transparent="1"/>
-		<widget name="labpath" position="290,130" size="190,30" font="Regular;20" valign="center" halign="center" backgroundColor="black"/>
+		<widget name="lninactive" position="320,40" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+		<widget name="lnactive" position="320,40" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+		<widget name="lab1a" position="360,40" size="280,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="leinactive" position="320,70" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+		<widget name="leactive" position="320,70" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+		<widget name="lab1b" position="360,70" size="280,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="luinactive" position="20,100" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+		<widget name="luactive" position="20,100" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+		<widget name="lab2" position="50,100" size="400,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="lpinactive" position="20,120" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+		<widget name="lpactive" position="20,120" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+		<widget name="lab3" position="60,120" size="400,30" font="Regular;20" valign="center" transparent="1"/>    
+		<widget name="lab4" position="20,150" size="260,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="labpath" position="290,150" size="190,30" font="Regular;20" valign="center" halign="center" backgroundColor="black"/>
 		<widget name="lab5" position="20,170" size="260,30" font="Regular;20" valign="center" transparent="1"/>
 		<widget source="list" render="Listbox" position="40,200" size="500,250" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
@@ -75,9 +78,13 @@ class DeliteEpgPanel(Screen):
 		self["lsactive"] = Pixmap()
 		self["lab1"] = Label(_("Enable OpenTv Epg Loader"))
 		
+		self["lninactive"] = Pixmap()
+		self["lnactive"] = Pixmap()
+		self["lab1a"] = Label(_("Enable EIT now/next in Infobar"))
+		
 		self["leinactive"] = Pixmap()
 		self["leactive"] = Pixmap()
-		self["lab1a"] = Label(_("Enable EIT Epg"))
+		self["lab1b"] = Label(_("Enable EIT Epg"))
 		
 		self["luinactive"] = Pixmap()
 		self["luactive"] = Pixmap()
@@ -150,6 +157,8 @@ class DeliteEpgPanel(Screen):
 	def updatemyinfo(self):
 		self["lsinactive"].hide()
 		self["lsactive"].hide()
+		self["lninactive"].hide()
+		self["lnactive"].hide()
 		self["leinactive"].hide()
 		self["leactive"].hide()
 		self["luinactive"].hide()
@@ -163,6 +172,11 @@ class DeliteEpgPanel(Screen):
 			self["lsinactive"].show()
 		else:
 			self["lsactive"].show()
+			
+		if config.usage.show_eit_nownext.value == True:
+			self["lnactive"].show()
+		else:
+			self["lninactive"].show()
 			
 		if fileExists("/etc/eiepglock"):
 			self["leinactive"].show()
@@ -397,6 +411,7 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 	def updateList(self):
 		self.deliteepgdisabled = NoSave(ConfigYesNo(default=True))
 		self.deliteepgeidisabled = NoSave(ConfigYesNo(default=True))
+		self.show_eit_nownext = NoSave(ConfigYesNo(default=True))
 		self.delitepopdisabled = NoSave(ConfigYesNo(default=True))
 		self.deliteepgbuttons = NoSave(ConfigYesNo(default=True))
 		
@@ -415,6 +430,7 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 		else:
 			self.deliteepgeidisabled.value = True
 		
+		self.show_eit_nownext.value = config.usage.show_eit_nownext.value
 		self.delitepopdisabled.value = config.misc.deliteepgpop.value
 		self.deliteepgbuttons.value = config.misc.deliteepgbuttons.value
 		
@@ -422,6 +438,9 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 		
 		epg_disabled = getConfigListEntry(_("Enable OpenTv Epg Loader"), self.deliteepgdisabled)
 		self.list.append(epg_disabled)
+		
+		res = getConfigListEntry(_("Enable EIT now/next in Infobar"), self.show_eit_nownext)
+		self.list.append(res)
 		
 		epgei_disabled = getConfigListEntry(_("Enable EIT Epg"), self.deliteepgeidisabled)
 		self.list.append(epgei_disabled)
@@ -440,6 +459,8 @@ class DeliteEpgGlobalSetup(Screen, ConfigListScreen):
 	
 	
 	def saveMyosd(self):
+		config.usage.show_eit_nownext.value = self.show_eit_nownext.value
+		config.usage.show_eit_nownext.save()
 		config.misc.deliteepgpop.value = self.delitepopdisabled.value
 		config.misc.deliteepgpop.save()
 		config.misc.deliteepgbuttons.value = self.deliteepgbuttons.value

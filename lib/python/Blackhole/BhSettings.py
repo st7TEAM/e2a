@@ -311,7 +311,7 @@ class DeliteSetupOSD2(Screen):
 		self["lbinactive"] = Pixmap()
 		self["lbactive"] = Pixmap()
 		
-		self["lab4"] = Label(_("Show EIT now/next in infobar"))
+		self["lab4"] = Label(_("Show infobar on event change"))
 		self["lpinactive"] = Pixmap()
 		self["lpactive"] = Pixmap()
 		
@@ -359,7 +359,7 @@ class DeliteSetupOSD2(Screen):
 		else:
 			self["lbinactive"].show()
 		
-		if config.usage.show_eit_nownext.value:
+		if config.usage.show_infobar_on_event_change.value:
 			self["lpactive"].show()
 		else:
 			self["lpinactive"].show()
@@ -410,13 +410,13 @@ class DeliteSetupOSDConf2(Screen, ConfigListScreen):
 		})
 			
 		self.updateList()
-	
+		
 	
 	def updateList(self):
 	
 		self.deliteeinfo = NoSave(ConfigYesNo(default="False"))
 		self.delitepanicb = NoSave(ConfigYesNo(default="False"))
-		self.show_eit_nownext = NoSave(ConfigYesNo(default="False"))
+		self.show_infobar_on_event_change = NoSave(ConfigYesNo(default="False"))
 		self.hide_zap_errors = NoSave(ConfigYesNo(default="False"))
 		self.hide_ci_messages = NoSave(ConfigYesNo(default="False"))
 		self.infobar_timeout = NoSave(ConfigSelection(default = "5", choices = [
@@ -427,16 +427,16 @@ class DeliteSetupOSDConf2(Screen, ConfigListScreen):
 		
 		self.deliteeinfo.value = config.misc.deliteeinfo.value
 		self.delitepanicb.value = config.misc.delitepanicb.value
-		self.show_eit_nownext.value = config.usage.show_eit_nownext.value
+		self.show_infobar_on_event_change.value = config.usage.show_infobar_on_event_change.value
 		self.hide_zap_errors.value = config.usage.hide_zap_errors.value
 		self.hide_ci_messages.value = config.usage.hide_ci_messages.value
 		self.infobar_timeout.value = config.usage.infobar_timeout.value
 		
-		osd_ei = getConfigListEntry(_("Disable Light Skin on Zap"), self.deliteeinfo)
+		osd_ei = getConfigListEntry(_("Disable Light Infobar on Zap"), self.deliteeinfo)
 		self.list.append(osd_ei)
 		osd_panic = getConfigListEntry(_("Enable Panic button 0"), self.delitepanicb)
 		self.list.append(osd_panic)
-		res = getConfigListEntry(_("Show EIT now/next in infobar"), self.show_eit_nownext)
+		res = getConfigListEntry(_("Show infobar on event change"), self.show_infobar_on_event_change)
 		self.list.append(res)
 		res = getConfigListEntry(_("Hide zap errors"), self.hide_zap_errors)
 		self.list.append(res)
@@ -453,14 +453,14 @@ class DeliteSetupOSDConf2(Screen, ConfigListScreen):
 		
 		config.misc.deliteeinfo.value = self.deliteeinfo.value
 		config.misc.delitepanicb.value = self.delitepanicb.value
-		config.usage.show_eit_nownext.value = self.show_eit_nownext.value
+		config.usage.show_infobar_on_event_change.value = self.show_infobar_on_event_change.value
 		config.usage.hide_zap_errors.value = self.hide_zap_errors.value
 		config.usage.hide_ci_messages.value = self.hide_ci_messages.value
 		config.usage.infobar_timeout.value = self.infobar_timeout.value
 		
 		config.misc.deliteeinfo.save()
 		config.misc.delitepanicb.save()
-		config.usage.show_eit_nownext.save()
+		config.usage.show_infobar_on_event_change.save()
 		config.usage.hide_zap_errors.save()
 		config.usage.hide_ci_messages.save()
 		config.usage.infobar_timeout.save()
