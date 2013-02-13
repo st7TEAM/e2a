@@ -1034,8 +1034,9 @@ class Bh_Feed_Settings(Screen):
 	skin = """
 	<screen position="center,center" size="902,570" title="BH Feeds Settings">
 		<widget name="lab1" position="50,260" size="800,40" zPosition="2" halign="center" font="Regular;24" />
-		<widget name="lab2" position="10,10" size="882,60" font="Regular;20" valign="top" transparent="1"/>
-		<widget source="list" render="Listbox" position="30,70" size="840,430" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="lab2" position="10,10" size="882,22" font="Regular;20" valign="top" transparent="1"/>
+		<widget name="lab3" position="20,32" size="872,20" font="Regular;20" valign="top" transparent="1"/>
+		<widget source="list" render="Listbox" position="30,80" size="840,420" scrollbarMode="showOnDemand" transparent="1">
             	<convert type="TemplatedMultiContent">
                     {"template": [
                        MultiContentEntryText(pos = (10, 5), size = (690, 25), font=0, text = 0),
@@ -1059,6 +1060,7 @@ class Bh_Feed_Settings(Screen):
 		self["key_green"] = Label(_("Remove"))
 		self["lab1"] = Label(_("Wait please checking for available updates..."))
 		self["lab2"] = Label("")
+		self["lab3"] = Label("")
 		
 		self.list = []
 		self["list"] = List(self.list)
@@ -1084,8 +1086,8 @@ class Bh_Feed_Settings(Screen):
 	def updateList2(self):
 		self.activityTimer.stop()
 		self.installed = ""
+		self.installedver = ""
 		self.list = []
-		self.installed = ""
 		ret = system("opkg update")
 		ret = system("opkg info enigma2-settings* > /tmp/cpanel.tmp")
 		packname = ""
@@ -1110,6 +1112,7 @@ class Bh_Feed_Settings(Screen):
 					elif line.find("Status:") != -1:
 						if line.find("not-installed") == -1:
 							self.installed = packname
+							self.installedver = packver
 							step = 0
 						
  			f.close()
@@ -1119,6 +1122,7 @@ class Bh_Feed_Settings(Screen):
 		self["lab1"].hide()
 		lab2_text = _("Settings installed:") + " " + self.installed
 		self["lab2"].setText(lab2_text)
+		self["lab3"].setText(self.installedver)
 		
 		if self.checkupgrade == False:
 			self.checkUpgrade()
