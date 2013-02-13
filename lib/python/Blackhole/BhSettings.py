@@ -283,10 +283,16 @@ class DeliteSetupOSD2(Screen):
 		<widget name="lab1" position="50,20" size="260,30" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="lbinactive" position="10,70" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
 		<widget name="lbactive" position="10,70" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-		<widget name="lab4" position="50,70" size="550,50" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="lab2" position="50,70" size="550,50" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="lpinactive" position="10,130" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
 		<widget name="lpactive" position="10,130" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-		<widget name="lab2" position="50,130" size="260,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="lab4" position="50,130" size="260,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="lzinactive" position="10,130" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+		<widget name="lzactive" position="10,130" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+		<widget name="lab5" position="50,130" size="260,30" font="Regular;20" valign="center" transparent="1"/>
+		<widget name="lcinactive" position="10,130" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+		<widget name="lcactive" position="10,130" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+		<widget name="lab6" position="50,130" size="260,30" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="lab3" position="10,180" size="320,30" font="Regular;20" valign="center" transparent="1"/>
 		<widget name="labsize" position="330,180" size="30,30" font="Regular;20" valign="center" backgroundColor="#4D5375"/>
 		<ePixmap pixmap="skin_default/buttons/red.png" position="235,290" size="150,40" alphatest="on"/>
@@ -301,13 +307,22 @@ class DeliteSetupOSD2(Screen):
 		self["lsinactive"] = Pixmap()
 		self["lsactive"] = Pixmap()
 		
+		self["lab2"] = Label(_("Enable Panic button 0 (zap to 1 & clear zap history)"))
 		self["lbinactive"] = Pixmap()
 		self["lbactive"] = Pixmap()
-		self["lab4"] = Label(_("Enable Panic button 0 (zap to 1 & clear zap history)"))
 		
-		self["lab2"] = Label(_("Enable LCD Picons"))
+		self["lab4"] = Label(_("Show EIT now/next in infobar"))
 		self["lpinactive"] = Pixmap()
 		self["lpactive"] = Pixmap()
+		
+		self["lab5"] = Label(_("Hide zap errors"))
+		self["lzinactive"] = Pixmap()
+		self["lzactive"] = Pixmap()
+		
+		self["lab6"] = Label(_("Hide CI messages"))
+		self["lcinactive"] = Pixmap()
+		self["lcactive"] = Pixmap()
+		
 		self["lab3"] = Label(_("Hide Infobar Timeout in sec.:"))
 		self["labsize"] = Label("")
 		
@@ -319,46 +334,45 @@ class DeliteSetupOSD2(Screen):
 			"red": self.setupmyosd
 		})
 		
-		lab2txt = _("Enable LCD Picons")
-		machine = nab_Detect_Machine()
-		if machine == "et9000":
-			lab2txt = "unused in " + machine
-		elif machine == "dm500hd":
-			lab2txt = "unused in " + machine
-		elif machine == "bm750":
-			lab2txt = _("unused in Vu Duo")
-		elif machine == "vusolo":
-			lab2txt = _("unused in Vu Solo")
-		elif machine == "vuultimo":
-			lab2txt = _("unused in Vu Ultimo")
-				
-		self["lab2"].setText(lab2txt)
-		
 		self.onLayoutFinish.append(self.updatemyinfo)
 		
 	def updatemyinfo(self):
 		
 		self["lsinactive"].hide()
 		self["lsactive"].hide()
-		self["lpinactive"].hide()
-		self["lpactive"].hide()
 		self["lbinactive"].hide()
 		self["lbactive"].hide()
+		self["lpinactive"].hide()
+		self["lpactive"].hide()
+		self["lzinactive"].hide()
+		self["lzactive"].hide()
+		self["lcinactive"].hide()
+		self["lcactive"].hide()
 		
 		if config.misc.deliteeinfo.value:
 			self["lsactive"].show()
 		else:
 			self["lsinactive"].show()
-		
-		if config.misc.delitepiconlcd.value:
-			self["lpactive"].show()
-		else:
-			self["lpinactive"].show()
 			
 		if config.misc.delitepanicb.value:
 			self["lbactive"].show()
 		else:
 			self["lbinactive"].show()
+		
+		if config.usage.show_eit_nownext.value:
+			self["lpactive"].show()
+		else:
+			self["lpinactive"].show()
+			
+		if config.usage.hide_zap_errors.value:
+			self["lzactive"].show()
+		else:
+			self["lzinactive"].show()
+			
+		if config.usage.hide_ci_messages.value:
+			self["lcactive"].show()
+		else:
+			self["lcinactive"].show()
 			
 		myt = "5"
 		idx = config.usage.infobar_timeout.index
@@ -402,41 +416,32 @@ class DeliteSetupOSDConf2(Screen, ConfigListScreen):
 	
 		self.deliteeinfo = NoSave(ConfigYesNo(default="False"))
 		self.delitepanicb = NoSave(ConfigYesNo(default="False"))
-		self.delitepiconlcd = NoSave(ConfigYesNo(default="False"))
+		self.show_eit_nownext = NoSave(ConfigYesNo(default="False"))
+		self.hide_zap_errors = NoSave(ConfigYesNo(default="False"))
+		self.hide_ci_messages = NoSave(ConfigYesNo(default="False"))
 		self.infobar_timeout = NoSave(ConfigSelection(default = "5", choices = [
 		("0", _("no timeout")), ("1", "1 " + _("second")), ("2", "2 " + _("seconds")), ("3", "3 " + _("seconds")),
 		("4", "4 " + _("seconds")), ("5", "5 " + _("seconds")), ("6", "6 " + _("seconds")), ("7", "7 " + _("seconds")),
 		("8", "8 " + _("seconds")), ("9", "9 " + _("seconds")), ("10", "10 " + _("seconds"))]))
 		
-		self.plcd_original = config.misc.delitepiconlcd.value
 		
 		self.deliteeinfo.value = config.misc.deliteeinfo.value
 		self.delitepanicb.value = config.misc.delitepanicb.value
-		self.delitepiconlcd.value = config.misc.delitepiconlcd.value
+		self.show_eit_nownext.value = config.usage.show_eit_nownext.value
+		self.hide_zap_errors.value = config.usage.hide_zap_errors.value
+		self.hide_ci_messages.value = config.usage.hide_ci_messages.value
 		self.infobar_timeout.value = config.usage.infobar_timeout.value
-		
-		lab2txt = _("Enable LCD Picons")
-		machine = nab_Detect_Machine()
-		if machine == "et9000":
-			lab2txt = "unused in " + machine
-		elif machine == "dm500hd":
-			lab2txt = "unused in " + machine
-		elif machine == "bm750":
-			lab2txt = _("unused in Vu Duo")
-		elif machine == "vusolo":
-			lab2txt = _("unused in Vu Solo")
-		elif machine == "vuultimo":
-			lab2txt = _("unused in Vu Ultimo")
 		
 		osd_ei = getConfigListEntry(_("Disable Light Skin on Zap"), self.deliteeinfo)
 		self.list.append(osd_ei)
-		
 		osd_panic = getConfigListEntry(_("Enable Panic button 0"), self.delitepanicb)
 		self.list.append(osd_panic)
-		
-		osd_lcdpicon = getConfigListEntry(lab2txt, self.delitepiconlcd)
-		self.list.append(osd_lcdpicon)
-		
+		res = getConfigListEntry(_("Show EIT now/next in infobar"), self.show_eit_nownext)
+		self.list.append(res)
+		res = getConfigListEntry(_("Hide zap errors"), self.hide_zap_errors)
+		self.list.append(res)
+		res = getConfigListEntry(_("Hide CI messages"), self.hide_ci_messages)
+		self.list.append(res)
 		infobar_timeout = getConfigListEntry(_("Hide Infobar Timeout in sec."), self.infobar_timeout)
 		self.list.append(infobar_timeout)
 		
@@ -448,32 +453,20 @@ class DeliteSetupOSDConf2(Screen, ConfigListScreen):
 		
 		config.misc.deliteeinfo.value = self.deliteeinfo.value
 		config.misc.delitepanicb.value = self.delitepanicb.value
-		config.misc.delitepiconlcd.value = self.delitepiconlcd.value
+		config.usage.show_eit_nownext.value = self.show_eit_nownext.value
+		config.usage.hide_zap_errors.value = self.hide_zap_errors.value
+		config.usage.hide_ci_messages.value = self.hide_ci_messages.value
 		config.usage.infobar_timeout.value = self.infobar_timeout.value
 		
 		config.misc.deliteeinfo.save()
 		config.misc.delitepanicb.save()
-		
-		machine = nab_Detect_Machine()
-		good = ["dm8000", "dm800", "dm800se", "dm7020hd"]
-		if machine in good:
-			config.misc.delitepiconlcd.save()
-		
+		config.usage.show_eit_nownext.save()
+		config.usage.hide_zap_errors.save()
+		config.usage.hide_ci_messages.save()
 		config.usage.infobar_timeout.save()
 		
-		if self.plcd_original != self.delitepiconlcd.value:
-			message = _("Picons LCD changes need gui restart to take effects.\nRestart Gui now?")
-			ybox = self.session.openWithCallback(self.restEn, MessageBox, message, MessageBox.TYPE_YESNO)
-			ybox.setTitle(_("Gui Restart."))
-		else:
-			self.close()
-			
-	def restEn(self, answer):
-		if answer is True:
-			self.session.open(TryQuitMainloop, 3)
-		else:
-			self.close()
-
+		self.close()
+		
 
 
 class DeliteCronMang(Screen):
