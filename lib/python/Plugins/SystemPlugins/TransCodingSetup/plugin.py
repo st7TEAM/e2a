@@ -152,8 +152,8 @@ class TranscodingSetup(Screen,ConfigListScreen, TranscodingSetupInit):
 		}, -2)
 		self.list = []
 		ConfigListScreen.__init__(self, self.list,session = self.session)
-		TEXT = "Transcoding can be started when there is no corresponding channel recordings."
-		TEXT += "\nWhen transcoding, both PIP and analog video outputs are disabled."
+		TEXT = _("Transcoding can be started when there is no corresponding channel recordings.")
+		TEXT += _("\nWhen transcoding, both PIP and analog video outputs are disabled.")
 		self["key_red"] = StaticText(_("Cancel"))
 		self["key_green"] = StaticText(_("Ok"))
 		self["text"] = StaticText(_("%s")%TEXT)
