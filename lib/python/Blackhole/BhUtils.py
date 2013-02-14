@@ -192,19 +192,6 @@ def BhU_checkSkinVersion(skinfile):
 				
 	return ret
 	
-def BhU_fake_transl():
-	Teleportation = _("Teleportation")
-	Bh_apps = _("Black Hole apps")
-	Epg_Panel = _("Epg Panel")
-	Backup_menu = _("Backup Menu")
-	Bh_Shutdown = _("Black Hole Shutdown")
-	Restart_Gui = _("Restart Gui")
-	Hard_Reset = _("Hard Reset")
-	Standby = _("Standby")
-	Set_Sleeptimer = _("Set Sleeptimer")
-	Weather = _("Black Hole Weather")
-	
-	
 
 #def make_Delite_cipher():
 #	key = 'AGA6A3A2ACA1A8A5A6A9A9A4A'

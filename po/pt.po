@@ -11725,6 +11725,9 @@ msgstr ""
 msgid "Devices Manager"
 msgstr ""
 
+msgid "Auto language selection settings"
+msgstr ""
+
 msgid "Usb Format Wizard"
 msgstr ""
 
@@ -11773,39 +11776,25 @@ msgstr ""
 msgid "Network Browse & Mountpoints"
 msgstr ""
 
-msgid "Disable Light Skin on Zap"
+msgid "Disable Light Infobar on Zap"
 msgstr ""
 
 msgid "Enable Panic button 0 (zap to 1 & clear zap history)"
 msgstr ""
 
-msgid "Enable LCD Picons"
+msgid "Hide zap errors"
+msgstr ""
+
+msgid "Hide CI messages"
 msgstr ""
 
 msgid "Hide Infobar Timeout in sec.:"
-msgstr ""
-
-msgid "unused in Vu Duo"
-msgstr ""
-
-msgid "unused in Vu Solo"
-msgstr ""
-
-msgid "unused in Vu Ultimo"
 msgstr ""
 
 msgid "Enable Panic button 0"
 msgstr ""
 
 msgid "Hide Infobar Timeout in sec."
-msgstr ""
-
-msgid ""
-"Picons LCD changes need gui restart to take effects.\n"
-"Restart Gui now?"
-msgstr ""
-
-msgid "Gui Restart."
 msgstr ""
 
 msgid "reboot"
@@ -12010,6 +11999,12 @@ msgstr ""
 msgid "Enable OpenTv Epg Loader"
 msgstr ""
 
+msgid "Enable EIT now/next in Infobar"
+msgstr ""
+
+msgid "Enable EIT Epg"
+msgstr ""
+
 msgid "Enable Epg Popup Notifications"
 msgstr ""
 
@@ -12110,6 +12105,9 @@ msgstr ""
 msgid "Click Ok to restart gui and activate changes."
 msgstr ""
 
+msgid "Gui Restart."
+msgstr ""
+
 msgid "Server Name:"
 msgstr ""
 
@@ -12164,6 +12162,9 @@ msgid "In %s universe"
 msgstr ""
 
 msgid "Addons Download Manager"
+msgstr ""
+
+msgid "Online Feeds Settings update"
 msgstr ""
 
 msgid "Online Black Hole image update"
@@ -12302,6 +12303,56 @@ msgid "Wait please, download in progress..."
 msgstr ""
 
 msgid "Connection Established"
+msgstr ""
+
+msgid "Wait please checking for available updates..."
+msgstr ""
+
+msgid "version:"
+msgstr ""
+
+msgid "Settings installed:"
+msgstr ""
+
+msgid ""
+"Upgrade found.\n"
+"Do you want to upgrade the settings package:\n"
+" "
+msgstr ""
+
+#, python-format
+msgid "Package %s upgraded."
+msgstr ""
+
+msgid "New Settings Package Installation"
+msgstr ""
+
+#, python-format
+msgid ""
+"You have to remove the installed %s before to install a new settings pack."
+msgstr ""
+
+msgid ""
+"Do you want to install the Package:\n"
+" "
+msgstr ""
+
+msgid "Package installed."
+msgstr ""
+
+msgid "No package installed. Nothing to remove."
+msgstr ""
+
+msgid ""
+"Are you sure you want to remove the Package:\n"
+" "
+msgstr ""
+
+#, python-format
+msgid "Package %s removed."
+msgstr ""
+
+msgid "Removing package"
 msgstr ""
 
 msgid "Panel Setup"
@@ -12641,6 +12692,24 @@ msgid "Please wait while starting\n"
 msgstr ""
 
 msgid "Default Cam:"
+msgstr ""
+
+msgid "Audio language selection 1"
+msgstr ""
+
+msgid "Audio language selection 2"
+msgstr ""
+
+msgid "Audio language selection 3"
+msgstr ""
+
+msgid "Audio language selection 4"
+msgstr ""
+
+msgid "Prefer AC3"
+msgstr ""
+
+msgid "Prefer audio stream stored by service"
 msgstr ""
 
 #
