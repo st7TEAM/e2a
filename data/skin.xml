@@ -1,6 +1,6 @@
 <skin>
  	<!--
-     ################### Army_skin_default-skin_default-HD_VU_BH1.7.8_v.1.1_BH  ####################
+     ################### Army_skin_default-skin_default-HD_VU_BH2.0.x_v.1.0  ####################
 
     QUESTA SKIN E' PROTETTA DA COPYRIGHT E PUO' ESSERE USATA SOLO PER
 	LE IMMAGINI  BLACK HOLE. IL CODICE DELLA SKIN PUO' ESSERE MODIFICATO
@@ -13,10 +13,10 @@
 	SKIN CODE AND GRAPHICS TO MAKE A NEW SKIN OR TO ADAPT THIS SKIN FOR
 	DIFFERENT IMAGES.
 	
-	black hole version: 1.7.8
+	black hole version: 2.0.0
     skin author: Army
 
-    ################### Army_skin_default-skin_default-HD_VU_BH1.7.8_v.1.1_BH  ####################
+    ################### Army_skin_default-skin_default-HD_VU_BH2.0.x_v.1.0  ####################
     -->
     <!-- LEGENDA -->
     <!-- AA100 COLORS-FONTS-SUBTITLES-BORDER -->
@@ -507,7 +507,7 @@
 		<widget name="key_green"  position="770,650" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen> 
 	<!--##### AC100 MAIN GREEN PANEL  #####-->	
-	<!-- AC101 Black Hole GreenPanel ( 4S )-->
+	<!-- AC101 Black Hole GreenPanel ( 4S )######################################-->
 	<screen name="DeliteGreenPanel" position="0,0" size="1280,720" title="BH Green Panel"  flags="wfNoBorder">
 	    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  /> 
 		<ePixmap position="1198,118" zPosition="2" size="22,452" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
@@ -654,7 +654,78 @@
 	<!-- AC111 Delite Stats -->
 	<screen name="Nab_Stats" position="center,center" size="1130,520" title="BH Statistics">
 		<widget name="infotext" position="20,20" size="1090,500" font="Regular;24" transparent="1" />
-	</screen>	
+	</screen>
+	<!-- AC111-1 Bh_Feed_Settings (2) ##############################-->
+	<screen name="Bh_Feed_Settings" position="0,0" size="1280,720" title="BH Feeds Settings" backgroundColor="transparent" flags="wfNoBorder">
+	    <ePixmap pixmap="skin_default/frame_base-fs8.png" position="0,0" zPosition="-3" size="1280,720" /> 
+	    <eLabel text="BH Feed Settings" position="80,30" zPosition="3" size="800,44" font="RegularAA;36" halign="left" transparent="1" foregroundColor="#5395c3" backgroundColor="transpBlack" /> 
+	    <ePixmap position="1198,178" zPosition="2" size="22,420" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
+        <widget name="lab1" position="240,450" size="800,80" zPosition="3" halign="center" font="Regular;24" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="lab2" position="60,120" size="882,62" font="Regular;20" valign="top" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="lab3" position="70,142" size="872,60" font="Regular;20" valign="top"  transparent="1"/>
+        <widget source="list" render="Listbox" position="60,180" size="1160,420" scrollbarMode="showOnDemand" transparent="1">
+                <convert type="TemplatedMultiContent">
+                    {"template": [
+                      MultiContentEntryText(pos = (10, 5), size = (690, 25), font=0, text = 0),
+                      MultiContentEntryText(pos = (20, 30), size = (670, 20), font=1, flags = RT_VALIGN_TOP, text = 1),
+                    ],
+                    "fonts": [gFont("Regular", 24),gFont("Regular", 20)],
+                    "itemHeight": 60
+                    }
+                  </convert>
+            </widget>
+        <ePixmap pixmap="skin_default/buttons/red25.png" position="260,650" size="250,40" alphatest="on"/>
+        <ePixmap pixmap="skin_default/buttons/green25.png" position="770,650" size="250,40" alphatest="on"/>
+        <widget name="key_red" position="260,650" zPosition="1" size="250,40" font="Regular;24"  halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
+        <widget name="key_green" position="770,650" zPosition="1" size="250,40" font="Regular;24"  halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
+    </screen>
+	<!-- AC111-2 Nab_downFeedCat  ##############################-->
+	 <screen name="Nab_downFeedCat" position="0,0" size="1280,720" title="Black Hole Feeds Plugins" flags="wfNoBorder">
+	  <ePixmap pixmap="skin_default/frame_base-fs8.png" position="0,0" zPosition="-3" size="1280,720" /> 
+	    <eLabel text="BH Feeds Plugins" position="80,30" zPosition="3" size="800,44" font="RegularAA;36" halign="left" transparent="1" foregroundColor="#5395c3" backgroundColor="transpBlack" /> 
+	    <ePixmap position="1198,118" zPosition="2" size="22,470" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
+        <widget source="list" render="Listbox" position="60,120" size="1160,470" zPosition="1" scrollbarMode="showOnDemand"  transparent="1">
+                <convert type="TemplatedMultiContent">
+                {"template": [
+                MultiContentEntryText(pos = (4, 2), size = (840, 36), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+                ],
+                "fonts": [gFont("Regular", 26)],
+                "itemHeight": 36
+                }
+                </convert>
+            </widget>
+    </screen>
+	<!-- AC111-3 Nab_ShowFeedFile (2) ##############################-->
+	 <screen name="Nab_ShowFeedFile" position="0,0" size="1280,720" title="Black Hole E2 Package Details" flags="wfNoBorder">
+	    <ePixmap pixmap="skin_default/frame_base-fs8.png" position="0,0" zPosition="-3" size="1280,720" /> 
+	    <eLabel text="BH Package Details" position="80,30" zPosition="3" size="800,44" font="RegularAA;36" halign="left" transparent="1" foregroundColor="#5395c3" backgroundColor="transpBlack" /> 
+        <widget name="infotext" position="60,120" size="760,315" font="Regular;24" />
+        <ePixmap pixmap="skin_default/buttons/green25.png" position="260,650" size="250,40" alphatest="on" />
+        <ePixmap pixmap="skin_default/buttons/yellow25.png" position="770,650" size="250,40" alphatest="on" />
+        <widget name="key_green" position="260,650" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
+        <widget name="key_yellow" position="770,650" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
+    </screen>
+    <!-- AC111-4 BhSpeedUp (2) ##############################-->		
+   <screen name="BhSpeedUp" position="center,center" size="1280,720" title="Black Hole Speed up" flags="wfNoBorder">
+        <ePixmap pixmap="skin_default/frame_base-fs8.png" position="0,0" zPosition="-3" size="1280,720" /> 
+	    <eLabel text="BH Speed up" position="80,30" zPosition="3" size="800,44" font="RegularAA;36" halign="left" transparent="1" foregroundColor="#5395c3" backgroundColor="transpBlack" /> 
+	      <ePixmap position="1198,168" zPosition="2" size="22,425" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
+        <widget name="lab1" position="60,120" size="882,60" font="Regular;20" valign="top" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
+        <widget name="config" position="60,170" size="1160,425" scrollbarMode="showOnDemand" transparent="1"/>
+        <ePixmap pixmap="skin_default/buttons/red25.png" position="260,650" size="250,40" alphatest="on"/>
+        <ePixmap pixmap="skin_default/buttons/green25.png" position="770,650" size="250,40" alphatest="on"/>
+        <widget name="key_red" position="260,650" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
+        <widget name="key_green" position="770,650" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
+    </screen>
+   <!-- AC111-5 TranscodingSetup (2) ##############################--> 
+    <screen name="TranscodingSetup" position="center,center" size="750,270" title="Transcoding Setup" >
+            <ePixmap pixmap="skin_default/buttons/red25.png" position="83,210" size="250,40" alphatest="on" />
+            <ePixmap pixmap="skin_default/buttons/green25.png" position="417,210" size="250,40" alphatest="on" />
+            <widget source="key_red" render="Label" position="83,210" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
+            <widget source="key_green" render="Label" position="417,210" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" /> 
+            <widget name="config" zPosition="2" position="20,20" size="710,70" scrollbarMode="showOnDemand" transparent="1" />
+            <widget source="text" render="Label" position="20,90" size="710,130" font="Regular;18" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
+        </screen>
 	<!-- AC112 Delite Script ( 1 S ) -->
 	<screen name="DeliteScript" position="0,0" size="1280,720" title="BH Script Panel" backgroundColor="transparent" flags="wfNoBorder">
     	<ePixmap pixmap="skin_default/frame_base-fs8.png" position="0,0" zPosition="-3" size="1280,720" /> 
@@ -732,12 +803,12 @@
 			<widget source="key_blue" render="Label" position="974,650" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 			<widget name="config" zPosition="2" position="60,120" size="1160,350" scrollbarMode="showOnDemand"  transparent="1"  /> 
 		</screen>
-		<!--AC119 OpenWebifConfig ( 2 )-->	
+		<!--AC119 OpenWebifConfig ( 2 )#####################################-->	
 	<screen name="OpenWebifConfig" position="0,0" size="1280,720" title=" BH OpenWebif Configuration" flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
 	    <eLabel text="BH OpenWebif Configuration " position="80,30" zPosition="2" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="lab1" position="55,120" halign="center" size="680,60" zPosition="1" font="Regular;24" valign="top" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="config" position="60,170" size="1160,160" scrollbarMode="showOnDemand"  transparent="1"  /> 
+		<widget name="config" position="60,170" size="1160,250" scrollbarMode="showOnDemand"  transparent="1"  /> 
 		<ePixmap position="260,650" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<ePixmap position="770,650" size="250,40" pixmap="skin_default/buttons/green25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="260,650" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
@@ -892,7 +963,8 @@
 			<widget source="key_green" render="Label" position="770,650" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 			<widget name="config" zPosition="2" position="60,120" size="1160,200" scrollbarMode="showOnDemand" transparent="1" />
 		</screen>
-	<!--##### AD100 MAIN BLUE PANEL  #####-->	
+	<!--##### AD100 MAIN BLUE PANEL  ######-->	
+	<!-- AD101  DeliteBluePanel ( 4 ) #####################################################-->
 	<screen name="DeliteBluePanel" position="0,0" size="1280,720"  title="BH Blue Panel" backgroundColor="transparent" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
         <ePixmap position="0,650" zPosition="1" size="1280,40" pixmap="skin_default/buttons4.png" alphatest="blend" transparent="1" />
@@ -909,11 +981,11 @@
         <widget name="Ilab3" position="60,300" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
         <widget name="Ilab4" position="60,325" size="350,28" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
         <widget name="Ecmtext" position="60,380" size="1160,200" font="Regular;20" zPosition="2" foregroundColor="#58bcff" backgroundColor="transpBlack" transparent="1"/>
-	<widget name="key_red" position="90,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-	<widget name="key_green" position="400,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-	<widget name="key_yellow" position="700,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-	<widget name="key_blue" position="1000,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-	<applet type="onLayoutFinish">
+		<widget name="key_red" position="90,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="key_green" position="400,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="key_yellow" position="700,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="key_blue" position="1000,655" size="250,40" font="Regular;24" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+		<applet type="onLayoutFinish">
 		self[&quot;list&quot;].instance.setItemHeight(38)
 		        </applet>
     </screen>
@@ -1018,7 +1090,7 @@
 		<widget name="key_red" position="260,650" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
 		<widget name="key_yellow" position="770,650" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
         </screen>
-    <!-- AE104 Delite Osd Setup (1 ) -->
+    <!-- AE104 Delite Osd Setup (1 )################################################## -->
 		<screen name="DeliteSetupOSD2" position="0,0" size="1280,720" title="BH Osd Settings" flags="wfNoBorder">
 	    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  /> 
 	    <eLabel text="BH Osd Settings" position="80,30" zPosition="2" size="800,44" font="RegularAA;36" halign="left" transparent="1" foregroundColor="#5395c3" backgroundColor="transpBlack" /> 
@@ -1030,20 +1102,19 @@
         <widget name="lab2" position="130,160" size="650,26" font="Regular;24" valign="center" transparent="1"/>
         <widget name="lpinactive" position="80,200" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
         <widget name="lpactive" position="80,200" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab4" position="130,200" size="350,26" font="Regular;24" valign="center" transparent="1"/>
-        
-	<widget name="lzinactive" position="80,240" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-	<widget name="lzactive" position="80,240" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab5" position="130,240" size="350,26" font="Regular;24" valign="center" transparent="1"/>
-	<widget name="lcinactive" position="80,280" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-	<widget name="lcactive" position="80,280" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab6" position="130,280" size="350,26" font="Regular;24" valign="center" transparent="1"/>
-	<widget name="lab3" position="130,330" size="380,26" font="Regular;24" valign="center" transparent="1"/>
+        <widget name="lab4" position="130,200" size="650,26" font="Regular;24" valign="center" transparent="1"/>
+	    <widget name="lzinactive" position="80,240" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+	    <widget name="lzactive" position="80,240" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+        <widget name="lab5" position="130,240" size="650,26" font="Regular;24" valign="center" transparent="1"/>
+	    <widget name="lcinactive" position="80,280" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+	    <widget name="lcactive" position="80,280" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+        <widget name="lab6" position="130,280" size="650,26" font="Regular;24" valign="center" transparent="1"/>
+	    <widget name="lab3" position="130,330" size="380,26" font="Regular;24" valign="center" transparent="1"/>
         <widget name="labsize" position="490,330" size="40,32" font="Regular;24" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
         <ePixmap position="515,650" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="515,650" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
-	<!-- AE105 Delite Osd Setup2_Conf2 ( 1 )-->
+	<!-- AE105 Delite Osd Setup2_Conf2 ( 1 )####################################-->
     	<screen name="DeliteSetupOSDConf2" position="0,0" size="1280,720" title="BH OSD Setup" flags="wfNoBorder">
     	<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  /> 
 	    <eLabel text="BH Osd Setup" position="80,30" zPosition="2" size="800,44" font="RegularAA;36" halign="left" transparent="1" foregroundColor="#5395c3" backgroundColor="transpBlack" /> 
@@ -1194,7 +1265,7 @@
 	    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
 	    <ePixmap position="1198,118" zPosition="2" size="22,62" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
 		<eLabel text="BH Hard Disk Panel" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
-		<widget name="infotext" position="60,120" size="1160,60" font="Regular;24"  foregroundColor="#999999" backgroundColor="transpBlack" transparent="1"/>
+		<widget name="infotext" position="60,120" size="1160,200" font="Regular;24"  foregroundColor="#999999" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="lab1" position="60,385" size="100,32" font="Regular;24" valign="center" foregroundColor="#999999" backgroundColor="transpBlack" transparent="1"/>
 		<widget name="labstop" position="380,365" size="300,28" zPosition="2" font="Regular;22" valign="left" halign="left" foregroundColor="red" transparent="1" />
 		<widget name="labrun" position="380,415" size="300,28" zPosition="2" font="Regular;22" valign="left" halign="left" foregroundColor="green" transparent="1" />
@@ -1386,7 +1457,7 @@
         <widget name="key_green" position="770,650" zPosition="1" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1"/>
     </screen>   
 	<!--##### AF100 MENU MAIN MENU  #####-->
-	<!-- AF101 Main menu infobar -->
+	<!-- AF101 Main menu infobar #######################################################-->
 	<screen name="menu_mainmenu" position="0,0" size="1280,720" title="BH Main menu"  flags="wfNoBorder">
 		 <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
       	 <eLabel text="BH Main Menu" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
@@ -1431,7 +1502,7 @@
 			<convert type="MenuEntryCompare">dvd_player</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="skin_default/menu/BlackHoleEpgBackup.png" position="940,160" size="200,130" alphatest="blend" transparent="1" >
+	<!--	<widget source="menu" render="Pixmap" pixmap="skin_default/menu/BlackHoleEpgBackup.png" position="940,160" size="200,130" alphatest="blend" transparent="1" >
             <convert type="MenuEntryCompare">BlackHoleEpgBackup</convert>
             <convert type="ConditionalShowHide" />
           </widget>
@@ -1442,11 +1513,34 @@
         <widget source="menu" render="Pixmap" pixmap="skin_default/menu/BlackHoleFullBackup.png" position="940,160"  size="200,130" alphatest="blend" transparent="1" >
             <convert type="MenuEntryCompare">BlackHoleFullBackup</convert>
             <convert type="ConditionalShowHide" />
-        </widget>
+        </widget>-->
         <widget source="menu" render="Pixmap" pixmap="skin_default/menu/BlackHoleWeather.png" position="940,160"  size="200,130" alphatest="blend" transparent="1" >
             <convert type="MenuEntryCompare">BlackHoleWeather</convert>
             <convert type="ConditionalShowHide" />
         </widget>
+            <widget source="menu" render="Pixmap" pixmap="skin_default/menu/blackhole_red.png" position="940,160"  size="200,130" alphatest="blend" transparent="1" >
+            <convert type="MenuEntryCompare">blackhole_red</convert>
+            <convert type="ConditionalShowHide" />
+        </widget>
+        
+          <widget source="menu" render="Pixmap" pixmap="skin_default/menu/blackhole_extra.png" position="940,160"  size="200,130" alphatest="blend" transparent="1" >
+            <convert type="MenuEntryCompare">blackhole_extra</convert>
+            <convert type="ConditionalShowHide" />
+        </widget>
+        
+          <widget source="menu" render="Pixmap" pixmap="skin_default/menu/epg_panel.png" position="940,160"  size="200,130" alphatest="blend" transparent="1" >
+            <convert type="MenuEntryCompare">epg_panel</convert>
+            <convert type="ConditionalShowHide" />
+        </widget>   
+        
+         <widget source="menu" render="Pixmap" pixmap="skin_default/menu/backup_screen.png" position="940,160"  size="200,130" alphatest="blend" transparent="1" >
+            <convert type="MenuEntryCompare">backup_screen</convert>
+            <convert type="ConditionalShowHide" />
+        </widget>  
+          <widget source="menu" render="Pixmap" pixmap="skin_default/menu/bh_addons.png" position="940,160"  size="200,130" alphatest="blend" transparent="1" >
+            <convert type="MenuEntryCompare">bh_addons</convert>
+            <convert type="ConditionalShowHide" />
+        </widget>                   
 	</screen> 
 	<!-- AF102 Menu Information -->
 	<screen name="menu_information" position="0,0" size="1280,720" title="Main menu"   flags="wfNoBorder">
@@ -1527,7 +1621,7 @@
 				</convert>
 						</widget>
 	</screen>
-	
+	<!-- AF107-1 Menu bhbackup #####################################-->
 	<screen name="menu_bhbackup" position="0,0" size="1280,720" title="Main menu"   flags="wfNoBorder">
 		<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  /> 
 		<eLabel text="Backup Menu" position="80,30" size="800,44" font="RegularAA;36" halign="left" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
@@ -1540,7 +1634,6 @@
 			</convert>
 		</widget>
 	</screen>
-	
 	<!--AF108 Bh_Bfull_main ( 2 )-->	
 	   <screen name="Bh_Bfull_main" position="0,0" size="1280,720" title="BH Full Backup" flags="wfNoBorder">
 	     <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
@@ -2029,7 +2122,7 @@
 		<widget name="Dishpixmap" pixmap="skin_default/icons/dish.png" position="0,0" size="119,146" alphatest="off" />
 	</screen>
 	<!--##### AH100 EPG   #####-->
-    	 <!--AH101 DeliteEpgPanel_EPG Settings ( 4 )-->
+    	 <!--AH101 DeliteEpgPanel_EPG Settings ( 4 )########################################-->
    <screen name="DeliteEpgPanel" position="0,0" size="1280,720" title="BH EPG Settings" flags="wfNoBorder">
         <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  />
 		<ePixmap position="1198,318" zPosition="2" size="22,252" pixmap="skin_default/scroll.png" alphatest="blend" transparent="1" />
@@ -2037,11 +2130,11 @@
         <widget name="lsinactive" position="60,120" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
         <widget name="lsactive" position="60,120" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
         <widget name="lab1" position="100,120" size="400,30" font="Regular;24" valign="center" transparent="1"/>
-	<widget name="lninactive" position="60,160" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-	<widget name="lnactive" position="60,160" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+	    <widget name="lninactive" position="60,160" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+	    <widget name="lnactive" position="60,160" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
         <widget name="lab1a" position="100,160" size="400,30" font="Regular;24" valign="center" transparent="1"/>
-	<widget name="leinactive" position="60,200" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-	<widget name="leactive" position="60,200" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+	    <widget name="leinactive" position="60,200" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+	    <widget name="leactive" position="60,200" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
         <widget name="lab1b" position="100,200" size="400,30" font="Regular;24" valign="center" transparent="1"/>
         <widget name="luinactive" position="60,240" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
         <widget name="luactive" position="60,240" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
