@@ -61,6 +61,14 @@
 			<item level="2" text="Limited character set for recording filenames">config.recording.ascii_filenames</item>
 			<item level="2" text="Composition of the recording filenames">config.recording.filename_composition</item>
 		</setup>
+		<setup key="autolanguagesetup" title="Auto language selection settings">
+			<item level="1" text="Audio language selection 1">config.autolanguage.audio_autoselect1</item>
+			<item level="1" text="Audio language selection 2">config.autolanguage.audio_autoselect2</item>
+			<item level="1" text="Audio language selection 3">config.autolanguage.audio_autoselect3</item>
+			<item level="1" text="Audio language selection 4">config.autolanguage.audio_autoselect4</item>
+			<item level="1" text="Prefer AC3">config.autolanguage.audio_defaultac3</item>
+			<item level="1" text="Prefer audio stream stored by service">config.autolanguage.audio_usecache</item>
+		</setup>
 		<setup key="harddisk" title="Harddisk setup" >
 			<item level="0" text="Harddisk standby after">config.usage.hdd_standby</item>
 		</setup>

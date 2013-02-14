@@ -486,6 +486,34 @@ int eDVBServicePMTHandler::getProgramInfo(program &program)
 	program.aitPid = -1;
 
 	int first_ac3 = -1;
+	int audio_cached = -1;
+	int autoaudio_mpeg = -1;
+	int autoaudio_ac3 = -1;
+	int autoaudio_level = 4;
+	
+	std::string configvalue;
+	std::vector<std::string> autoaudio_languages;
+	if (!ePythonConfigQuery::getConfigValue("config.autolanguage.audio_autoselect1", configvalue) && !configvalue.empty())
+	{
+		std::transform(configvalue.begin(), configvalue.end(), configvalue.begin(), tolower);
+		autoaudio_languages.push_back(configvalue);
+	}
+	if (!ePythonConfigQuery::getConfigValue("config.autolanguage.audio_autoselect2", configvalue) && !configvalue.empty())
+	{
+		std::transform(configvalue.begin(), configvalue.end(), configvalue.begin(), tolower);
+		autoaudio_languages.push_back(configvalue);
+	}
+	if (!ePythonConfigQuery::getConfigValue("config.autolanguage.audio_autoselect3", configvalue) && !configvalue.empty())
+	{
+		std::transform(configvalue.begin(), configvalue.end(), configvalue.begin(), tolower);
+		autoaudio_languages.push_back(configvalue);
+	}
+	if (!ePythonConfigQuery::getConfigValue("config.autolanguage.audio_autoselect4", configvalue) && !configvalue.empty())
+	{
+		std::transform(configvalue.begin(), configvalue.end(), configvalue.begin(), tolower);
+		autoaudio_languages.push_back(configvalue);
+	}
+
 	program.defaultAudioStream = 0;
 	audioStream *prev_audio = 0;
 
@@ -789,15 +817,34 @@ int eDVBServicePMTHandler::getProgramInfo(program &program)
 							case ISO_639_LANGUAGE_DESCRIPTOR:
 								if (!isvideo)
 								{
-									int cnt=0;
 									const Iso639LanguageList *languages = ((Iso639LanguageDescriptor*)*desc)->getIso639Languages();
 										/* use last language code */
-									for (Iso639LanguageConstIterator i(languages->begin()); i != languages->end(); ++i, ++cnt)
+									int cnt=0;
+									for (Iso639LanguageConstIterator i=languages->begin(); i != languages->end(); ++i)
 									{
-										if (cnt == 0)
-											audio.language_code = (*i)->getIso639LanguageCode();
+										std::string language=(*i)->getIso639LanguageCode();
+										if ( cnt==0 )
+											audio.language_code = language;
 										else
-											audio.language_code += "/" + (*i)->getIso639LanguageCode();
+											audio.language_code += "/" + language;
+										cnt++;
+											
+										if (!language.empty())
+										{
+											int x = 1;
+											for (std::vector<std::string>::iterator it = autoaudio_languages.begin();x <= autoaudio_level && it != autoaudio_languages.end();x++,it++)
+											{
+												if ((*it).find(language) != std::string::npos)
+												{
+													if (audio.type == audioStream::atMPEG && (autoaudio_level > x || autoaudio_mpeg == -1)) 
+														autoaudio_mpeg = program.audioStreams.size();
+													else if (audio.type != audioStream::atMPEG && (autoaudio_level > x || autoaudio_ac3 == -1))
+														autoaudio_ac3 = program.audioStreams.size();
+													autoaudio_level = x;
+													break;
+												}
+											}
+										}
 									}
 								}
 								break;
@@ -887,9 +934,9 @@ int eDVBServicePMTHandler::getProgramInfo(program &program)
 					{
 						audio.pid = (*es)->getPid();
 
-							/* if we find the cached pids, this will be our default stream */
+						/* if we find the cached pids, this will be our default stream */
 						if (audio.pid == cached_apid_ac3 || audio.pid == cached_apid_mpeg)
-							program.defaultAudioStream = program.audioStreams.size();
+							audio_cached = program.audioStreams.size();
 
 							/* also, we need to know the first non-mpeg (i.e. "ac3"/dts/...) stream */
 						if ((audio.type != audioStream::atMPEG) && ((first_ac3 == -1) || (audio.pid == cached_apid_ac3)))
@@ -904,18 +951,32 @@ int eDVBServicePMTHandler::getProgramInfo(program &program)
 			}
 			ret = 0;
 
-			/* finally some fixup: if our default audio stream is an MPEG audio stream, 
-			   and we have 'defaultac3' set, use the first available ac3 stream instead.
-			   (note: if an ac3 audio stream was selected before, this will be also stored
-			   in 'fisrt_ac3', so we don't need to worry. */
 			bool defaultac3 = false;
-			std::string default_ac3;
+			bool useaudio_cache = false;
 
-			if (!ePythonConfigQuery::getConfigValue("config.av.defaultac3", default_ac3))
-				defaultac3 = default_ac3 == "True";
+			if (!ePythonConfigQuery::getConfigValue("config.autolanguage.audio_defaultac3", configvalue))
+				defaultac3 = configvalue == "True";
+			if (!ePythonConfigQuery::getConfigValue("config.autolanguage.audio_usecache", configvalue))
+				useaudio_cache = configvalue == "True";
 
-			if (defaultac3 && (first_ac3 != -1))
-				program.defaultAudioStream = first_ac3;
+			if (useaudio_cache && audio_cached != -1)
+				program.defaultAudioStream = audio_cached;
+			else if ( defaultac3 )
+			{
+				if ( autoaudio_ac3 != -1 )
+					program.defaultAudioStream = autoaudio_ac3;
+				else if ( autoaudio_mpeg != -1 )
+					program.defaultAudioStream = autoaudio_mpeg;
+				else if ( first_ac3 != -1 )
+					program.defaultAudioStream = first_ac3;
+			}
+			else
+			{
+				if ( autoaudio_mpeg != -1 )
+					program.defaultAudioStream = autoaudio_mpeg;
+				else if ( autoaudio_ac3 != -1 )
+					program.defaultAudioStream = autoaudio_ac3;
+			}
 
 			m_cached_program = program;
 			m_have_cached_program = true;

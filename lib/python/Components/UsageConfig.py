@@ -134,6 +134,52 @@ def InitUsageConfig():
 
 	config.seek.speeds_backward.addNotifier(updateEnterBackward, immediate_feedback = False)
 
+	config.autolanguage = ConfigSubsection()
+	audio_language_choices=[
+		("---", _("None")),
+		("orj dos ory org esl qaa und mis mul ORY ORJ Audio_ORJ", _("Original")),
+		("ara", _("Arabic")),
+		("eus baq", _("Basque")),
+		("bul", _("Bulgarian")), 
+		("hrv", _("Croatian")),
+		("ces cze", _("Czech")),
+		("dan", _("Danish")),
+		("dut ndl", _("Dutch")),
+		("eng qaa", _("English")),
+		("est", _("Estonian")),
+		("fin", _("Finnish")),
+		("fra fre", _("French")),
+		("deu ger", _("German")),
+		("ell gre", _("Greek")),
+		("heb", _("Hebrew")),
+		("hun", _("Hungarian")),
+		("ita", _("Italian")),
+		("lat", _("Latvian")),
+		("lit", _("Lithuanian")),
+		("ltz", _("Letzeburgesch")),
+		("nor", _("Norwegian")),
+		("pol", _("Polish")),
+		("por", _("Portuguese")),
+		("fas per", _("Persian")),
+		("ron rum", _("Romanian")),
+		("rus", _("Russian")),
+		("srp", _("Serbian")),
+		("slk slo", _("Slovak")),
+		("slv", _("Slovenian")),
+		("spa", _("Spanish")),
+		("swe", _("Swedish")),
+		("tha", _("Thai")),
+		("tur Audio_TUR", _("Turkish")),
+		("und", _("Undetermined")),
+		]
+
+	config.autolanguage.audio_autoselect1 = ConfigSelection(choices=audio_language_choices, default="---")
+	config.autolanguage.audio_autoselect2 = ConfigSelection(choices=audio_language_choices, default="---")
+	config.autolanguage.audio_autoselect3 = ConfigSelection(choices=audio_language_choices, default="---")
+	config.autolanguage.audio_autoselect4 = ConfigSelection(choices=audio_language_choices, default="---")
+	config.autolanguage.audio_defaultac3 = ConfigYesNo(default = False)
+	config.autolanguage.audio_usecache = ConfigYesNo(default = True)
+
 def updateChoices(sel, choices):
 	if choices:
 		defval = None
