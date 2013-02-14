@@ -303,7 +303,7 @@ class DeliteSetupOSD2(Screen):
 		Screen.__init__(self, session)
 		
 		
-		self["lab1"] = Label(_("Disable Light Skin on Zap"))
+		self["lab1"] = Label(_("Disable Light Infobar on Zap"))
 		self["lsinactive"] = Pixmap()
 		self["lsactive"] = Pixmap()
 		
