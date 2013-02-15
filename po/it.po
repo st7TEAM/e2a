@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-02-15 00:19+0100\n"
+"PO-Revision-Date: 2013-02-15 10:37+0100\n"
 "Last-Translator: meo <lupomeo@hotmail.com>\n"
 "Language-Team: Black Hole <info@vuplus-community.net>\n"
 "MIME-Version: 1.0\n"
@@ -6487,7 +6487,7 @@ msgstr "Mostrare la finestra informazioni"
 
 #
 msgid "Show infobar on channel change"
-msgstr "Mostrare barra informazioni su cambio canale"
+msgstr "Mostra barra informazioni su cambio canale"
 
 #
 msgid "Show infobar on event change"
@@ -12124,7 +12124,7 @@ msgid "Weather forecast"
 msgstr "Previsioni del tempo"
 
 msgid "BlackHole Personal Backup"
-msgstr "Backup delle tue impostazioni personali"
+msgstr "Backup impostazioni personali"
 
 msgid "your STB might be unusable now. Please consult the manual for further assistance before rebooting your STB."
 msgstr "Il tuo Vu+ potrebbe essere instabile ora. Consulta il manuale per una completa assistenza prima di riavviarlo."
@@ -12469,7 +12469,7 @@ msgid "Extra Settings"
 msgstr "Bh apps"
 
 msgid "Disable Light Infobar on Zap"
-msgstr "Disabilita la Infobar ridotta al cambio canale"
+msgstr "Disabilita mini osd al cambio canale"
 
 msgid "Hide zap errors"
 msgstr "Nascondi popup di errore al cambio canale"
@@ -12478,7 +12478,7 @@ msgid "Hide CI messages"
 msgstr "Nascondi i messaggi della CI"
 
 msgid "Enable EIT now/next in Infobar"
-msgstr "Abilita la epg EIT per le info programmi nella Infobar"
+msgstr "Abilita EIT now/next nella Infobar"
 
 msgid "Enable EIT Epg"
 msgstr "Abilita la Epg EIT"
@@ -12561,5 +12561,5 @@ msgid "Prefer AC3"
 msgstr "Preferisci  le tracce audio AC3"
 
 msgid "Prefer audio stream stored by service"
-msgstr "Privilegia la lingua memorizzata nel canale (lingua selezionata manualmente in precedenza)"
+msgstr "Privilegia la lingua memorizzata dal canale (selezionata in precedenza)"
 
