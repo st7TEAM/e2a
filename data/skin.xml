@@ -1091,27 +1091,27 @@
 		<widget name="key_yellow" position="770,650" zPosition="2" size="250,40" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
         </screen>
     <!-- AE104 Delite Osd Setup (1 )################################################## -->
-		<screen name="DeliteSetupOSD2" position="0,0" size="1280,720" title="BH Osd Settings" flags="wfNoBorder">
-	    <ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  /> 
-	    <eLabel text="BH Osd Settings" position="80,30" zPosition="2" size="800,44" font="RegularAA;36" halign="left" transparent="1" foregroundColor="#5395c3" backgroundColor="transpBlack" /> 
-        <widget name="lsinactive" position="80,120" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-        <widget name="lsactive" position="80,120" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab1" position="130,120" size="350,26" font="Regular;24" valign="center" transparent="1"/>
-        <widget name="lbinactive" position="80,160" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-        <widget name="lbactive" position="80,160" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab2" position="130,160" size="650,26" font="Regular;24" valign="center" transparent="1"/>
-        <widget name="lpinactive" position="80,200" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-        <widget name="lpactive" position="80,200" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab4" position="130,200" size="650,26" font="Regular;24" valign="center" transparent="1"/>
-	    <widget name="lzinactive" position="80,240" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-	    <widget name="lzactive" position="80,240" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab5" position="130,240" size="650,26" font="Regular;24" valign="center" transparent="1"/>
-	    <widget name="lcinactive" position="80,280" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
-	    <widget name="lcactive" position="80,280" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
-        <widget name="lab6" position="130,280" size="650,26" font="Regular;24" valign="center" transparent="1"/>
-	    <widget name="lab3" position="130,330" size="380,26" font="Regular;24" valign="center" transparent="1"/>
-        <widget name="labsize" position="490,330" size="40,32" font="Regular;24" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
-        <ePixmap position="515,650" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
+	<screen name="DeliteSetupOSD2" position="0,0" size="1280,720" title="BH Osd Settings" flags="wfNoBorder">
+	    	<ePixmap position="0,0" zPosition="-1" size="1280,720" pixmap="skin_default/frame_base-fs8.png"  /> 
+	    	<eLabel text="BH Osd Settings" position="80,30" zPosition="2" size="800,44" font="RegularAA;36" halign="left" transparent="1" foregroundColor="#5395c3" backgroundColor="transpBlack" /> 
+        	<widget name="lsinactive" position="80,120" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+        	<widget name="lsactive" position="80,120" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+        	<widget name="lab1" position="130,120" size="650,26" font="Regular;24" valign="center" transparent="1"/>
+        	<widget name="lbinactive" position="80,160" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+        	<widget name="lbactive" position="80,160" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+       		<widget name="lab2" position="130,160" size="650,26" font="Regular;24" valign="center" transparent="1"/>
+        	<widget name="lpinactive" position="80,200" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+        	<widget name="lpactive" position="80,200" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+        	<widget name="lab4" position="130,200" size="650,26" font="Regular;24" valign="center" transparent="1"/>
+	    	<widget name="lzinactive" position="80,240" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+	    	<widget name="lzactive" position="80,240" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+        	<widget name="lab5" position="130,240" size="650,26" font="Regular;24" valign="center" transparent="1"/>
+	    	<widget name="lcinactive" position="80,280" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="on"/>
+	    	<widget name="lcactive" position="80,280" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="on"/>
+        	<widget name="lab6" position="130,280" size="650,26" font="Regular;24" valign="center" transparent="1"/>
+	    	<widget name="lab3" position="130,330" size="380,26" font="Regular;24" valign="center" transparent="1"/>
+        	<widget name="labsize" position="490,330" size="40,32" font="Regular;24" halign="center" valign="center" foregroundColor="#5395c3" backgroundColor="transpBlack" transparent="1"/>
+        	<ePixmap position="515,650" size="250,40" pixmap="skin_default/buttons/red25.png" alphatest="on" zPosition="1" />
 		<widget name="key_red" position="515,650" size="250,40" zPosition="2" font="Regular;24" halign="center" valign="center" backgroundColor="transpBlack" transparent="1" />
     </screen>
 	<!-- AE105 Delite Osd Setup2_Conf2 ( 1 )####################################-->
