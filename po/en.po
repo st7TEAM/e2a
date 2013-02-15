@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-02-14 11:04-0000\n"
+"PO-Revision-Date: 2013-02-14 23:51-0000\n"
 "Last-Translator: Ev0, Black Hole Team\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -13528,22 +13528,22 @@ msgid "Removing package"
 msgstr "Removing package"
 
 msgid "Auto language selection settings"
-msgstr ""
+msgstr "Auto language selection settings"
 
 msgid "Audio language selection 1"
-msgstr ""
+msgstr "Audio language selection 1"
 
 msgid "Audio language selection 2"
-msgstr ""
+msgstr "Audio language selection 2"
 
 msgid "Audio language selection 3"
-msgstr ""
+msgstr "Audio language selection 3"
 
 msgid "Audio language selection 4"
-msgstr ""
+msgstr "Audio language selection 4"
 
 msgid "Prefer AC3"
-msgstr ""
+msgstr "Prefer AC3"
 
 msgid "Prefer audio stream stored by service"
-msgstr ""
+msgstr "Prefer audio stream stored by service"
