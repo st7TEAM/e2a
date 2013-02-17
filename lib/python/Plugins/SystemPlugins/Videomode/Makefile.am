@@ -6,7 +6,16 @@ install_PYTHON =	\
 	__init__.py \
 	plugin.py \
 	VideoHardware.py \
-	VideoWizard.py 
+	VideoWizard.py
 
 dist_install_DATA = \
-	videowizard.xml
+	DVI.png \
+	lcd_DVI.png \
+	lcd_Scart.png \
+	lcd_YPbPr.png \
+	LICENSE \
+	Scart.png \
+	videowizard.xml \
+	YPbPr.png \
+	HDMI.png \
+	lcd_HDMI.png
