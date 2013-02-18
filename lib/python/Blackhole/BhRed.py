@@ -303,6 +303,7 @@ class BhRedPanel(Screen):
 		path = "/universe/" + self.destination
 		path1 = path + "/etc"
 		path2 = path + "/usr"
+		path3 = path + "/var/lib/opkg"
 		pathspinorig = "/usr/share/spinners/"  + self.destination + "/*"
 		pathspindest = path2 + "/share/enigma2/skin_default/spinner/"
 		if self.destination != "Black Hole":
@@ -311,6 +312,13 @@ class BhRedPanel(Screen):
 			if not pathExists(path1):
 				createDir(path1)
 				cmd = "cp -r /etc %s" % (path)
+				system(cmd)
+			if not pathExists(path3):
+				pathtmp = path + "/var"
+				createDir(pathtmp)
+				pathtmp = pathtmp + "/lib"
+				createDir(pathtmp)
+				cmd = "cp -r /var/lib/opkg %s/var/lib" % (path)
 				system(cmd)
 			if not pathExists(path2):
 				createDir(path2)
@@ -333,6 +341,8 @@ class BhRedPanel(Screen):
 				out = open("/bin/bh_parallel_mount",'w')
 				line = "mount -o bind %s /etc > /tmp/jump.tmp\n" % (path1)
 				out.write(line)
+				line = "mount -o bind %s /var/lib/opkg > /tmp/jump.tmp\n" % (path3)
+				out.write(line)
 				line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr > /tmp/jump.tmp\n" % (path2)
 				out.write(line)
 				out.write("exit 0\n\n")
@@ -346,6 +356,7 @@ class BhRedPanel(Screen):
 			out.write("fuser -km /etc > /tmp/jump.tmp\n")
 			out.write("umount -l /etc > /tmp/jump.tmp\n")
 			out.write("umount -l /usr > /tmp/jump.tmp\n")
+			out.write("umount -l /var/lib/opkg > /tmp/jump.tmp\n")
 			
 #		out.write("/etc/init.d/avahi-daemon stop\n")
 #		out.write("/etc/init.d/networking stop\n")
@@ -355,6 +366,8 @@ class BhRedPanel(Screen):
 			out.write("sleep 1\n")
 #			line = "sleep 1\n\nmount -t unionfs -o dirs=%s:/etc=ro none /etc 2>/dev/null \n" % (path1)
 			line = "mount -o bind %s /etc > /tmp/jump.tmp\n" % (path1)
+			out.write(line)
+			line = "mount -o bind %s /var/lib/opkg > /tmp/jump.tmp\n" % (path3)
 			out.write(line)
 			line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr > /tmp/jump.tmp\n" % (path2)
 			out.write(line)
@@ -484,8 +497,11 @@ class BhUniverseConfig(Screen, ConfigListScreen):
 					path = "/universe/" + self.universe
 					path1 = path + "/etc"
 					path2 = path + "/usr"
+					path3 = path + "/var/lib/opkg"
 					out = open("/bin/bh_parallel_mount",'w')
 					line = "mount -o bind %s /etc > /tmp/jump.tmp\n" % (path1)
+					out.write(line)
+					line = "mount -o bind %s /var/lib/opkg > /tmp/jump.tmp\n" % (path3)
 					out.write(line)
 					line = "mount -t unionfs -o dirs=%s:/usr=ro none /usr > /tmp/jump.tmp\n" % (path2)
 					out.write(line)
