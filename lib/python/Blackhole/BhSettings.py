@@ -711,31 +711,32 @@ class DeliteDevicesPanel(Screen):
 		self.activityTimer.stop()
 		self.list = [ ]
 		self.conflist = [ ]
-		system ("ls -l /dev/disk/by-uuid/ > /tmp/ninfo2")
-		f = open("/tmp/ninfo2",'r')
-		for line in f.readlines():
-			parts = line.strip().split()
-			uuid = parts[8]
-			device = parts[10]
-			partition = device.strip().replace('../../', '')
-			if len(partition) != 4:
-				continue
-			device = partition[0:-1]
-			dtype = self.get_Dtype(device)
-			name = dtype[0]
-			model = self.get_Dmodel(device)
-			png = LoadPixmap(dtype[1])
-			name = name + " " + model
-			cap = self.get_Dsize(device, partition)
-			des = _("Size: ") + cap
-			mountpoint = self.get_Dpoint(uuid)
-			des += _("   Mount: ") + mountpoint + _("\nDevice: ") + "/dev/" + partition
-			res = (name, des, png)
-			self.list.append(res)
-			description = "%s  %s  %s" % (name, cap, partition)
-			self.conflist.append((description, uuid))
-			
-		f.close()
+		ret = system ("ls -l /dev/disk/by-uuid/ > /tmp/ninfo2")
+		if fileExists("/tmp/ninfo2"):
+			f = open("/tmp/ninfo2",'r')
+			for line in f.readlines():
+				parts = line.strip().split()
+				uuid = parts[8]
+				device = parts[10]
+				partition = device.strip().replace('../../', '')
+				if len(partition) != 4:
+					continue
+				device = partition[0:-1]
+				dtype = self.get_Dtype(device)
+				name = dtype[0]
+				model = self.get_Dmodel(device)
+				png = LoadPixmap(dtype[1])
+				name = name + " " + model
+				cap = self.get_Dsize(device, partition)
+				des = _("Size: ") + cap
+				mountpoint = self.get_Dpoint(uuid)
+				des += _("   Mount: ") + mountpoint + _("\nDevice: ") + "/dev/" + partition
+				res = (name, des, png)
+				self.list.append(res)
+				description = "%s  %s  %s" % (name, cap, partition)
+				self.conflist.append((description, uuid))
+			f.close()
+			os_remove("/tmp/ninfo2")
 	
 		self["list"].list = self.list
 		self["lab1"].hide()

@@ -558,8 +558,12 @@ class DeliteInfo(Screen):
 
 	def delTimer(self):
 		if fileExists("/sys/block/sda/removable"):
-			if file("/sys/block/sda/removable").read().strip() == "0":
-				system("hdparm -y /dev/sda1")
+			f = open("/sys/block/sda/removable","r")
+			s = f.read().strip()
+			if s == "0":
+				system("hdparm -y /dev/sda")
+			f.close()
+				
 		del self.activityTimer
 		del self.moniTimer
 
