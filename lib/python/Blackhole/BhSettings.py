@@ -1339,13 +1339,12 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		<widget name="key_green" position="550,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
 	</screen>"""
 
-
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
-		self["lab1"] = Label(_("Please disable ALL the plugins you don't need to use.\nThis will speed up Image Performance."))
+		self["lab1"] = Label(_("Retrieving data ..."))
 		self["key_red"] = Label(_("Save"))
 		self["key_green"] = Label(_("Cancel"))
 		
@@ -1357,49 +1356,62 @@ class BhSpeedUp(Screen, ConfigListScreen):
 
 		})
 		self.pluglist = [
-		["MeoBoot", "/usr/lib/enigma2/python/Plugins/Extensions/MeoBoot"],
-		["BhWeather", "/usr/lib/enigma2/python/Plugins/Extensions/BhWeather"],
-		["BhFullBackup", "/usr/lib/enigma2/python/Plugins/Extensions/BhFullBackup"],
-		["BhPersonalBackup", "/usr/lib/enigma2/python/Plugins/Extensions/BhPersonalBackup"],
-		["BhEpgBackup", "/usr/lib/enigma2/python/Plugins/Extensions/BhEpgBackup"],
-		["3GModemManager", "/usr/lib/enigma2/python/Plugins/SystemPlugins/3GModemManager"],
-		["AutoResolution", "/usr/lib/enigma2/python/Plugins/SystemPlugins/AutoResolution"],
-		["CommonInterfaceAssignment", "/usr/lib/enigma2/python/Plugins/SystemPlugins/CommonInterfaceAssignment"],
-		["RemoteControlCode", "/usr/lib/enigma2/python/Plugins/SystemPlugins/RemoteControlCode"],
-		["UI3DSetup", "/usr/lib/enigma2/python/Plugins/SystemPlugins/UI3DSetup"],
-		["UIPositionSetup", "/usr/lib/enigma2/python/Plugins/SystemPlugins/UIPositionSetup"],
-		["WirelessAccessPoint", "/usr/lib/enigma2/python/Plugins/SystemPlugins/WirelessAccessPoint"],
-		["ZappingModeSelection", "/usr/lib/enigma2/python/Plugins/SystemPlugins/ZappingModeSelection"],
-		["AddStreamUrl", "/usr/lib/enigma2/python/Plugins/Extensions/AddStreamUrl"],
-		["DVDPlayer", "/usr/lib/enigma2/python/Plugins/Extensions/DVDPlayer"],
-		["PicturePlayer", "/usr/lib/enigma2/python/Plugins/Extensions/PicturePlayer"],
-		["RemoteChannelStreamConverter", "/usr/lib/enigma2/python/Plugins/Extensions/RemoteChannelStreamConverter"],
-		["StreamTV", "/usr/lib/enigma2/python/Plugins/Extensions/StreamTV"],
-		["VuplusEvent", "/usr/lib/enigma2/python/Plugins/Extensions/VuplusEvent"],
-		["MyTube", "/usr/lib/enigma2/python/Plugins/Extensions/MyTube"],
-		["HbbTV", "/usr/lib/enigma2/python/Plugins/Extensions/HbbTV"]
+		["MeoBoot", "meoboot"],
+		["BhWeather", "bhweather"],
+		["BhFullBackup", "bhfullbackup"],
+		["BhPersonalBackup", "bhpersonalbackup"],
+		["BhEpgBackup", "bhepgbackup"],
+		["3GModemManager", "enigma2-plugin-systemplugins-3gmodemmanager"],
+		["AutoResolution", "enigma2-plugin-systemplugins-autoresolution"],
+		["CommonInterfaceAssignment", "enigma2-plugin-systemplugins-commoninterfaceassignment"],
+		["RemoteControlCode", "enigma2-plugin-systemplugins-remotecontrolcode"],
+		["UI3DSetup", "enigma2-plugin-systemplugins-ui3dsetup"],
+		["UIPositionSetup", "enigma2-plugin-systemplugins-uipositionsetup"],
+		["WirelessAccessPoint", "enigma2-plugin-systemplugins-wirelessaccesspoint"],
+		["ZappingModeSelection", "enigma2-plugin-systemplugins-zappingmodeselection"],
+		["AddStreamUrl", "enigma2-plugin-extensions-addstreamurl"],
+		["DVDPlayer", "enigma2-plugin-extensions-dvdplayer"],
+		["PicturePlayer", "enigma2-plugin-extensions-pictureplayer"],
+		["RemoteChannelStreamConverter", "enigma2-plugin-extensions-remotestreamconvert"],
+		["StreamTV", "enigma2-plugin-extensions-streamtv"],
+		["VuplusEvent", "enigma2-plugin-extensions-vuplusevent"],
+		["MyTube", "enigma2-plugin-extensions-mytube"],
+		["HbbTV", "enigma2-plugin-extensions-hbbtv"]
 		]
 		
-		if pathExists("/usr/lib/enigma2/python/Plugins/SystemPlugins/AutoShutDown") or pathExists("/usr/share/blackhole/disabledPlugins/SystemPlugins/AutoShutDown"):
-			self.pluglist.append(["AutoShutDown", "/usr/lib/enigma2/python/Plugins/SystemPlugins/AutoShutDown"])
+		if pathExists("/usr/lib/enigma2/python/Plugins/SystemPlugins/AutoShutDown"):
+			self.pluglist.append(["AutoShutDown", "enigma2-plugin-systemplugins-autoshutdown"])
 		
+		self.activityTimer = eTimer()
+		self.activityTimer.timeout.get().append(self.updateFeed2)
 		
-		if not pathExists("/usr/share/blackhole"):
-			createDir("/usr/share/blackhole")
-		if not pathExists("/usr/share/blackhole/disabledPlugins"):
-			createDir("/usr/share/blackhole/disabledPlugins")
-		if not pathExists("/usr/share/blackhole/disabledPlugins/Extensions"):
-			createDir("/usr/share/blackhole/disabledPlugins/Extensions")
-		if not pathExists("/usr/share/blackhole/disabledPlugins/SystemPlugins"):
-			createDir("/usr/share/blackhole/disabledPlugins/SystemPlugins")
+		self.updateFeed()
+		
+	def updateFeed(self):
+		self.activityTimer.start(3)
+		
+	def updateFeed2(self):
+		self.activityTimer.stop()
+		
+		if not fileExists("/tmp/official-all"):
+			ret = system("opkg update")
+		
 		self.updateList()
-	
 	
 	def updateList(self):
 		self.list = []
+		
+		if fileExists("/tmp/bhspeed.tmp"):
+			os_remove("/tmp/bhspeed.tmp")
+		
+		for plug in self.pluglist:
+			cmd = "opkg status %s >> /tmp/bhspeed.tmp" % (plug[1])
+			system(cmd)
+		
 		for plug in self.pluglist:
 			item = NoSave(ConfigSelection(default = "Enabled", choices = [("Enabled", _("Enabled")), ("Disabled", _("Disabled"))]))
-			if pathExists(plug[1]):
+			installed = self.checkInst(plug[1])
+			if installed == True:
 				item.value = "Enabled"
 			else:
 				item.value = "Disabled"
@@ -1410,37 +1422,44 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		self["config"].list = self.list
 		self["config"].l.setList(self.list)
 		
+		self["lab1"].setText("Please disable ALL the plugins you don't need to use.\nThis will speed up Image Performance.")
+		
+	def checkInst(self, name):
+		ret = False
+		f = open("/tmp/bhspeed.tmp",'r')
+		for line in f.readlines():
+			if line.find(name) != -1:
+				ret = True
+				break
+		f.close()
+		return ret
+		
 	def saveMypoints(self):
+		self.mycmdlist = []
 		for x in self["config"].list:
-			if x[1].value == "Enabled":
-				self.enablePlug(x[0])
-			else:
-				self.disablePlug(x[0])
-		self.allDone()
+			cmd = self.buildcoM(x[0], x[1].value)
+			if cmd != "":
+				self.mycmdlist.append(cmd)
+				
+			
+
+		if len(self.mycmdlist) > 0:
+			self.session.open(Console, title=_("Black Hole Speed up"), cmdlist=self.mycmdlist, finishedCallback = self.allDone)
+		else:
+			self.close()
 		
-	def enablePlug(self, name):
+	def buildcoM(self, name, what):
+		cmd = ""
 		for plug in self.pluglist:
 			if plug[0] == name:
-				if not pathExists(plug[1]):
-					ppath = plug[1].replace('/usr/lib/enigma2/python/Plugins', '/usr/share/blackhole/disabledPlugins')
-					cmd = "mv %s %s" % (ppath, plug[1])
-					ret = system(cmd)
+				installed = self.checkInst(plug[1])
+				if what == "Enabled" and installed == False:
+					cmd = "opkg install %s" % (plug[1])
+				elif what == "Disabled" and installed == True:
+					cmd = "opkg remove --force-depends --force-remove %s" % (plug[1])
 				break
-				
-				
+		return cmd
 		
-		
-	def disablePlug(self, name):
-		for plug in self.pluglist:
-			if plug[0] == name:
-				ppath = plug[1].replace('/usr/lib/enigma2/python/Plugins', '/usr/share/blackhole/disabledPlugins')
-				if pathExists(ppath) and pathExists(plug[1]):
-					cmd = "rm - r %s" % (ppath)
-					ret = system(cmd)
-				if not pathExists(ppath):
-					cmd = "mv %s %s" % (plug[1], ppath)
-					ret = system(cmd)
-				break
 		
 	def allDone(self):
 		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Enigma2 will be now restarted for the changes to take effect.\nPress ok to continue"), MessageBox.TYPE_INFO)
