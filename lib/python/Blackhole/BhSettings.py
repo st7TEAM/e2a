@@ -711,9 +711,9 @@ class DeliteDevicesPanel(Screen):
 		self.activityTimer.stop()
 		self.list = [ ]
 		self.conflist = [ ]
-		ret = system ("ls -l /dev/disk/by-uuid/ > /tmp/ninfo2")
-		if fileExists("/tmp/ninfo2"):
-			f = open("/tmp/ninfo2",'r')
+		ret = system ("ls -l /dev/disk/by-uuid/ > /var/volatile/tmp/ninfo2")
+		if fileExists("/var/volatile/tmp/ninfo2"):
+			f = open("/var/volatile/tmp/ninfo2",'r')
 			for line in f.readlines():
 				parts = line.strip().split()
 				uuid = parts[8]
@@ -736,7 +736,7 @@ class DeliteDevicesPanel(Screen):
 				description = "%s  %s  %s" % (name, cap, partition)
 				self.conflist.append((description, uuid))
 			f.close()
-			os_remove("/tmp/ninfo2")
+			os_remove("/var/volatile/tmp/ninfo2")
 	
 		self["list"].list = self.list
 		self["lab1"].hide()
@@ -1026,7 +1026,7 @@ class Bp_UsbFormat(Screen):
 		msg +=_("\nWarning: all the data will be lost.\nAre you sure you want to format this device?\n")
 		
 		
-		out = open("/tmp/sfdisk.tmp",'w')
+		out = open("/var/volatile/tmp/sfdisk.tmp",'w')
 		out.write(out0)
 		out.write(out1)
 		if self.totalpartitions > 1:
@@ -1037,7 +1037,7 @@ class Bp_UsbFormat(Screen):
 			out.write(out4)
 		out.write("EOF\n")
 		out.close()
-		system("chmod 0755 /tmp/sfdisk.tmp")
+		system("chmod 0755 /var/volatile/tmp/sfdisk.tmp")
 		self["lab1"].setText(msg)
 		
 		if int(self.p1size) + int(self.p2size) + int(self.p3size) + int(self.p4size) > self.totalsize:
@@ -1051,7 +1051,7 @@ class Bp_UsbFormat(Screen):
 		
 		device = "/dev/%s" % (self.device)
 		cmd = "echo -e 'Partitioning: %s \n\n'" % (device)
-		cmd2 = "/tmp/sfdisk.tmp"
+		cmd2 = "/var/volatile/tmp/sfdisk.tmp"
 		self.session.open(Console, title=_("Partitioning..."), cmdlist=[cmd, cmd2], finishedCallback = self.partDone)
 		
 	def partDone(self):
@@ -1084,7 +1084,7 @@ class Bp_UsbFormat(Screen):
 			self.do_Format()
 		
 	def do_Format(self):
-		os_remove("/tmp/sfdisk.tmp")
+		os_remove("/var/volatile/tmp/sfdisk.tmp")
 		cmds = ["sleep 1"]
 		device = "/dev/%s1" % (self.device)
 		cmd = "%s %s" % (self.formatcmd, device)
@@ -1299,10 +1299,10 @@ class DeliteKernelModShow(Screen):
 
 	def updateList(self):
 		
-		rc = system("lsmod > /tmp/ninfo.tmp")
+		rc = system("lsmod > /var/volatile/tmp/ninfo.tmp")
 		strview = ""
-		if fileExists("/tmp/ninfo.tmp"):
-			f = open("/tmp/ninfo.tmp",'r')
+		if fileExists("/var/volatile/tmp/ninfo.tmp"):
+			f = open("/var/volatile/tmp/ninfo.tmp",'r')
  			for line in f.readlines():
 				parts = line.strip().split()
 				if parts[0] == "Module":
@@ -1310,7 +1310,7 @@ class DeliteKernelModShow(Screen):
 				res = (parts[0], line)
 				self.list.append(res)
  			f.close()
-			os_remove("/tmp/ninfo.tmp")
+			os_remove("/var/volatile/tmp/ninfo.tmp")
 			self["list"].list = self.list
 			
 		
@@ -1392,20 +1392,17 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		
 	def updateFeed2(self):
 		self.activityTimer.stop()
-		
-		if not fileExists("/tmp/official-all"):
-			ret = system("opkg update")
-		
+		ret = system("opkg update")
 		self.updateList()
 	
 	def updateList(self):
 		self.list = []
 		
-		if fileExists("/tmp/bhspeed.tmp"):
-			os_remove("/tmp/bhspeed.tmp")
+		if fileExists("/var/volatile/tmp/bhspeed.tmp"):
+			os_remove("/var/volatile/tmp/bhspeed.tmp")
 		
 		for plug in self.pluglist:
-			cmd = "opkg status %s >> /tmp/bhspeed.tmp" % (plug[1])
+			cmd = "opkg status %s >> /var/volatile/tmp/bhspeed.tmp" % (plug[1])
 			system(cmd)
 		
 		for plug in self.pluglist:
@@ -1426,7 +1423,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		
 	def checkInst(self, name):
 		ret = False
-		f = open("/tmp/bhspeed.tmp",'r')
+		f = open("/var/volatile/tmp/bhspeed.tmp",'r')
 		for line in f.readlines():
 			if line.find(name) != -1:
 				ret = True
