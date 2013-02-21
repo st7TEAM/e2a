@@ -734,7 +734,7 @@ class DeliteDevicesPanel(Screen):
 				res = (name, des, png)
 				self.list.append(res)
 				description = "%s  %s  %s" % (name, cap, partition)
-				self.conflist.append((description, uuid))
+				self.conflist.append((description, uuid, partition))
 			f.close()
 			os_remove("/var/volatile/tmp/ninfo2")
 	
@@ -824,11 +824,12 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 		self.list = []
 		for device in self.devices:
 			uid = device[1]
+			uid2 = "/dev/" + device[2]
 			d1 = _("Not mapped")
 			checkmb = False
 			f = open("/proc/mounts",'r')
 			for line in f.readlines():
-				if line.find(uid) != -1:
+				if line.find(uid) != -1 or line.find(uid2) != -1:
 					parts = line.strip().split()
 					d1 = parts[1]
 					break
