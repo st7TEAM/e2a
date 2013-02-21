@@ -729,7 +729,7 @@ class DeliteDevicesPanel(Screen):
 				name = name + " " + model
 				cap = self.get_Dsize(device, partition)
 				des = _("Size: ") + cap
-				mountpoint = self.get_Dpoint(uuid)
+				mountpoint = self.get_Dpoint(uuid, partition)
 				des += _("   Mount: ") + mountpoint + _("\nDevice: ") + "/dev/" + partition
 				res = (name, des, png)
 				self.list.append(res)
@@ -771,11 +771,12 @@ class DeliteDevicesPanel(Screen):
 			model = "%s %s" % (vendor, mod)
 		return model
 		
-	def get_Dpoint(self, uid):
+	def get_Dpoint(self, uid, partition):
 		point = _("NOT MAPPED")
+		device = "/dev/" + partition
 		f = open("/proc/mounts",'r')
 		for line in f.readlines():
-			if line.find(uid) != -1:
+			if line.find(uid) != -1 or line.find(device) != -1:
 				parts = line.strip().split()
 				point = parts[1]
 				break
@@ -1419,7 +1420,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		self["config"].list = self.list
 		self["config"].l.setList(self.list)
 		
-		self["lab1"].setText("Please disable ALL the plugins you don't need to use.\nThis will speed up Image Performance.")
+		self["lab1"].setText(_("Please disable ALL the plugins you don't need to use.\nThis will speed up Image Performance."))
 		
 	def checkInst(self, name):
 		ret = False
