@@ -15,8 +15,13 @@ class About(Screen):
 		f = open("/etc/bhversion",'r')
 		bhVer = f.readline().strip()
 		f.close()
+		
+		bhRev = ""
+		f = open("/etc/bhrev",'r')
+		bhRev = f.readline().strip()
+		f.close()
 
-		self["EnigmaVersion"] = StaticText("Firmware: " + bhVer)
+		self["EnigmaVersion"] = StaticText("Firmware: " + bhVer + " " + bhRev)
 #		self["ImageVersion"] = StaticText("Image: " + about.getImageVersionString())
 		
 		self["ImageVersion"] = StaticText("Build: " + about.getEnigmaVersionString())
