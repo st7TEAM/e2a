@@ -188,7 +188,7 @@ class ParentalControl:
 		else:
 			self.checkPinInterval = True
 			iMinutes = float(self.storeServicePin)
-			iSeconds = iMinutes*60
+			iSeconds = int(iMinutes*60)
 			self.pinIntervalSeconds = iSeconds
 	
 		if self.storeServicePinCancel == "never":
@@ -198,7 +198,7 @@ class ParentalControl:
 		else:
 			self.checkPinIntervalCancel = True
 			iMinutes = float(self.storeServicePinCancel)
-			iSeconds = iMinutes*60
+			iSeconds = int(iMinutes*60)
 			self.pinIntervalSecondsCancel = iSeconds
 	
 		self.configInitialized = True
