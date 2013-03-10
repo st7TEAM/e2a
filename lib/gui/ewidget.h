@@ -37,6 +37,8 @@ public:
 	
 	void destruct();
 	
+	eWidget *getParent() { return m_parent; }
+	
 	SWIG_VOID(int) getStyle(ePtr<eWindowStyle> &SWIG_NAMED_OUTPUT(style)) { if (!m_style) return 1; style = m_style; return 0; }
 	void setStyle(eWindowStyle *style) { m_style = style; }
 	
