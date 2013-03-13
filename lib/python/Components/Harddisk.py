@@ -178,10 +178,7 @@ class Harddisk:
 		return numPart
 
 	def unmount(self):
-#BlackHole
-		res = system("umount /media/hdd")
-		res = system("mount /dev/sda1 /media/hdd")
-#end		
+		
 		try:
 			mounts = open("/proc/mounts")
 		except IOError:
@@ -203,6 +200,9 @@ class Harddisk:
 					break
 			except OSError:
 				pass
+
+#Bh
+		cmd = "umount /media/hdd"
 
 		res = system(cmd)
 		return (res >> 8)
@@ -232,30 +232,32 @@ class Harddisk:
 		return (res >> 8)
 
 	def mount(self):
-		try:
-			fstab = open("/etc/fstab")
-		except IOError:
-			return -1
 
-		lines = fstab.readlines()
-		fstab.close()
+# Bh
+#		try:
+#			fstab = open("/etc/fstab")
+#		except IOError:
+#			return -1
 
-		res = -1
-		for line in lines:
-			parts = line.strip().split(" ")
-                        real_path = path.realpath(parts[0])                                                 
-                        if not real_path[-1].isdigit():                                                     
-                                continue                                                                    
-                        try:                                                                                
-                                if MajorMinor(real_path) == MajorMinor(self.partitionPath(real_path[-1])):
-					cmd = "mount -t ext3 " + parts[0]
-#BlackHole					
+#		lines = fstab.readlines()
+#		fstab.close()
+
+#		res = -1
+#		for line in lines:
+#			parts = line.strip().split(" ")
+#			real_path = path.realpath(parts[0])                                                 
+#                       if not real_path[-1].isdigit():                                                     
+#							continue                                                                    
+#                       try:                                                                                
+#							if MajorMinor(real_path) == MajorMinor(self.partitionPath(real_path[-1])):
+#					cmd = "mount -t ext3 " + parts[0]
+#					
 #					res = system(cmd)
-					break
-			except OSError:
-				pass
-	
-		res = system("mount /dev/sda1 /media/hdd")
+#					break
+#			except OSError:
+#				pass
+		cmd = "mount " + self.disk_path + "1 /media/hdd" 
+		res = system(cmd)
 #end
 
 		return (res >> 8)
