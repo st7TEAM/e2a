@@ -9,6 +9,7 @@ from Components.ScrollLabel import ScrollLabel
 from Components.Pixmap import Pixmap
 from Components.config import config
 from Tools.Directories import fileExists
+from BhUtils import BhU_find_hdd
 from os import system, statvfs, remove as os_remove
 
 
@@ -52,17 +53,20 @@ class DeliteHdd(Screen):
 			"yellow": self.setSsec
 		})
 		
-		self.hddloc = ""
-		if fileExists("/proc/mounts"):
-			f = open("/proc/mounts",'r')
- 			for line in f.readlines():
-				if line.find('/hdd') != -1:
-					self.hddloc = line
-					pos = self.hddloc.find(' ')
-					self.hddloc = self.hddloc[0:pos]
-					self.hddloc = self.hddloc.strip()
-					self.hddloc = self.hddloc.replace('part1', 'disc')
-			f.close()
+#		self.hddloc = ""
+#		if fileExists("/proc/mounts"):
+#			f = open("/proc/mounts",'r')
+#			for line in f.readlines():
+#				if line.find('/hdd') != -1:
+#					self.hddloc = line
+#					pos = self.hddloc.find(' ')
+#					self.hddloc = self.hddloc[0:pos]
+#					self.hddloc = self.hddloc.strip()
+#					self.hddloc = self.hddloc.replace('part1', 'disc')
+#			f.close()
+
+		self.hdd_dev = BhU_find_hdd()
+		self.hddloc = "/dev/" + self.hdd_dev
 		
 		self.onLayoutFinish.append(self.updateHdd)
 	
@@ -76,7 +80,7 @@ class DeliteHdd(Screen):
 		self.close()
 	
 	def updateHdd(self):
-		if self.hddloc == "" :
+		if self.hdd_dev == "" :
 			self.activityTimer = eTimer()
 			self.activityTimer.timeout.get().append(self.myclose)
 			self.activityTimer.start(100, True)
@@ -94,23 +98,30 @@ class DeliteHdd(Screen):
 				
 			
 			model = "Generic"
-			filename = "/sys/block/sda/device/model"
+			filename = "/sys/block/%s/device/model" % self.hdd_dev
 			if fileExists(filename):
 				model = file(filename).read().strip()
 				strview += _("HARD DISK MODEL:") + " \t" + model + "\n"
 			
 			
 			size = "0"
-			filename = "/sys/block/sda/size"
+			filename = "/sys/block/%s/size" % self.hdd_dev
 			if fileExists(filename):
 				cap = int(file(filename).read().strip())
 				cap = cap / 1000 * 512 / 1000
 				cap = "%d.%03d GB" % (cap/1024, cap%1024)
 				strview += _("Disk Size:") + "     \t" + cap + "\n"
 				
-			stat = statvfs('/media/hdd')
-			free = stat.f_bfree/1000 * stat.f_bsize/1000
-			free = "%d.%03d GB" % (free/1024, free%1024)
+			free = _("Not mounted")
+			f = open("/proc/mounts",'r')
+			for line in f.readlines():
+					if line.find('/media/hdd') != -1:
+						stat = statvfs('/media/hdd')
+						free = stat.f_bfree/1000 * stat.f_bsize/1000
+						free = "%d.%03d GB" % (free/1024, free%1024)
+						break					
+			f.close()
+			
 			strview += _("Available Space:") + "\t" + free + "\n"
 			
 			mysett = self.getHconf()
@@ -121,10 +132,10 @@ class DeliteHdd(Screen):
 			#cvalue = (int(mysett[0]) *5) / 60
 			mystand = str(cvalue)
 			strview += _("Standby:") + "\t\t" + mystand + _(" min.\n")
-			strview += "_______________________________________________\n"
 			
 			myfile = procf + "settings"
 			if fileExists(myfile):
+				strview += "_______________________________________________\n"
 				f = open(myfile,'r')
 				for line in f.readlines():
 					if line.find('--') != -1:
@@ -134,9 +145,8 @@ class DeliteHdd(Screen):
 					if len(parts) > 3:
 						line = parts[0] + "\t" + parts[1] + "\t" + parts[2]+ "\t" + parts[3]
 						strview += line + "\n"
+				strview += "_______________________________________________\n\n"
 				f.close()
-				
-			strview += "_______________________________________________\n\n"
 			
 			self.cur_state = False
 			check = False

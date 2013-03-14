@@ -192,6 +192,17 @@ def BhU_checkSkinVersion(skinfile):
 				
 	return ret
 	
+def BhU_find_hdd():
+	hdd = ""
+	hdds = ['sda', 'sdb', 'sdc',  'sdd', 'sde', 'sdf']
+	for device in hdds:
+		filename = "/sys/block/%s/removable" % (device)
+		if fileExists(filename):
+			if file(filename).read().strip() == "0":
+				hdd = device
+				break
+	return hdd
+
 
 #def make_Delite_cipher():
 #	key = 'AGA6A3A2ACA1A8A5A6A9A9A4A'

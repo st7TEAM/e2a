@@ -871,11 +871,13 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 				continue
 			if line.find("/dev/sda1") != -1:
 				continue
+			if line.find("UUID=") != -1:
+				continue
 			out.write(line)
 		for x in self["config"].list:
 			if x[1].value == "Not mapped" or x[1].value == "/media/meoboot":
 				continue
-			line = "/dev/disk/by-uuid/%s    %s    auto   defaults    0  0\n" % (x[2], x[1].value)
+			line = "UUID=%s    %s    auto   defaults    0  0\n" % (x[2], x[1].value)
 			out.write(line)
 
 		out.write("\n")

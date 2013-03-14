@@ -8,6 +8,7 @@ from Components.Gauge import Gauge
 from Components.Pixmap import Pixmap
 from Components.ScrollLabel import ScrollLabel
 from Tools.Directories import fileExists
+from BhUtils import BhU_find_hdd
 from os import system, remove as os_remove
 from enigma import ePoint, eSize, eTimer
 from random import randint
@@ -301,19 +302,10 @@ class DeliteInfo(Screen):
 	def getHddtemp(self):
 		temperature = "N/A"
 		temperc = 0
-		hddloc = ""
-		if fileExists("/proc/mounts"):
-			f = open("/proc/mounts",'r')
- 			for line in f.readlines():
-				if line.find('/hdd') != -1:
-					hddloc = line
-					pos = hddloc.find(' ')
-					hddloc = hddloc[0:pos]
-					hddloc = hddloc.strip()
-					#hddloc = hddloc.replace('1', 'disc')
-			f.close()
+		hdd_dev = BhU_find_hdd()
+		hddloc = "/dev/" + hdd_dev
 		
-		if hddloc:
+		if hdd_dev:
 			cmd = "hddtemp -w " + hddloc + " > /tmp/ninfo.tmp"
 			rc = system(cmd)
 			if fileExists("/tmp/ninfo.tmp"):
@@ -557,12 +549,11 @@ class DeliteInfo(Screen):
 	
 
 	def delTimer(self):
-		if fileExists("/sys/block/sda/removable"):
-			f = open("/sys/block/sda/removable","r")
-			s = f.read().strip()
-			if s == "0":
-				system("hdparm -y /dev/sda")
-			f.close()
+		hdd_dev = BhU_find_hdd()
+		hddloc = "/dev/" + hdd_dev
+		if hdd_dev != "" :
+			cmd = "hdparm -y " + hddloc
+			system(cmd)
 				
 		del self.activityTimer
 		del self.moniTimer
