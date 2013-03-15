@@ -832,10 +832,8 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 				if line.find(uid) != -1 or line.find(uid2) != -1:
 					parts = line.strip().split()
 					d1 = parts[1]
-					break
-				if line.find("/media/meoboot") != -1:
-					d1 = "/media/meoboot"
-					break
+					if line.find("/media/meoboot") != -1:
+						d1 = "/media/meoboot"
 			f.close()
 			item = NoSave(ConfigSelection(default = "Not mapped", choices = self.get_Choices()))
 			if d1 == "/media/meoboot":
