@@ -14,6 +14,7 @@ from Tools.Directories import fileExists, pathExists, createDir
 from os import system, listdir, chdir, getcwd, remove as os_remove
 from urllib2 import Request, urlopen, URLError, HTTPError
 from BhUtils import nab_strip_html, DeliteGetSkinPath, nab_Detect_Machine, BhU_get_Version
+from operator import itemgetter
 
 class DeliteAddons(Screen):
 	skin = """
@@ -1112,7 +1113,8 @@ class Bh_Feed_Settings(Screen):
  			f.close()
 			os_remove("/tmp/cpanel.tmp")
 	
-		self["list"].list = self.list
+		mylist = sorted(self.list,  key=itemgetter(0))
+		self["list"].list = mylist
 		self["lab1"].hide()
 		lab2_text = _("Settings installed:") + " " + self.installed
 		self["lab2"].setText(lab2_text)
