@@ -832,12 +832,12 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 				if line.find(uid) != -1 or line.find(uid2) != -1:
 					parts = line.strip().split()
 					d1 = parts[1]
-					if line.find("/media/meoboot") != -1:
-						d1 = "/media/meoboot"
+					break
 			f.close()
 			item = NoSave(ConfigSelection(default = "Not mapped", choices = self.get_Choices()))
-			if d1 == "/media/meoboot":
-				item = NoSave(ConfigSelection(default = "/media/meoboot", choices = [("/media/meoboot", "/media/meoboot")]))
+			mymeo = d1 + "/MbootM/.meoboot"
+			if fileExists(mymeo):
+				item = NoSave(ConfigSelection(default = d1, choices = [(d1, "meoboot")]))
 			item.value = d1.strip()
 			text =  device[0]
 			res = getConfigListEntry(text, item, uid)
@@ -853,7 +853,7 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 		choices = [("Not mapped", _("Not mapped"))]
 		folders = listdir("/media")
 		for f in folders:
-			if f == "net" or f == "ram" or f == "realroot" or f == "union":
+			if f == "net" or f == "ram" or f == "realroot" or f == "union" or f == "meoboot":
 				continue
 			c = "/media/" + f
 			choices.append((c,c))
