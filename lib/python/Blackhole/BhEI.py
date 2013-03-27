@@ -133,9 +133,7 @@ class Nab_ExtraInfobar(Screen):
 		myinfo = service and service.info()
 		if myinfo is not None:
 			isCrypt = myinfo.getInfo(iServiceInformation.sIsCrypted) == 1
-
-#			orbital = 0
-#			orbital2 = ""	
+	
 			feinfo = service.frontendInfo()
 			frontendData = feinfo and feinfo.getAll(True)
 			if frontendData is not None:
@@ -145,35 +143,15 @@ class Nab_ExtraInfobar(Screen):
 					sr = str(int(frontendData.get("symbol_rate", 0) / 1000))
 					freq = str(int(frontendData.get("frequency", 0) / 1000))
 					pol = {0: "H", 1: "V", 2: "CL", 3: "CR", 4: None}[frontendData.get("polarization", "HORIZONTAL")]
-#					fec = fedata.get("fec_inner", "")
-					fec = {
-						eDVBFrontendParametersSatellite.FEC_None : "None",
-						eDVBFrontendParametersSatellite.FEC_Auto :"Auto",
-						eDVBFrontendParametersSatellite.FEC_1_2 : "1/2",
-						eDVBFrontendParametersSatellite.FEC_2_3 : "2/3",
-						eDVBFrontendParametersSatellite.FEC_3_4 : "3/4",
-						eDVBFrontendParametersSatellite.FEC_5_6 : "5/6",
-						eDVBFrontendParametersSatellite.FEC_7_8 : "7/8",
-						eDVBFrontendParametersSatellite.FEC_3_5 : "3/5",
-						eDVBFrontendParametersSatellite.FEC_4_5 : "4/5",
-						eDVBFrontendParametersSatellite.FEC_8_9 : "8/9",
-						eDVBFrontendParametersSatellite.FEC_9_10 : "9/10"}[frontendData.get("fec_inner")]
-
-
+					fec = fedata.get("fec_inner", " ")
 					self["nfreq_info"].setText( "Freq: " + freq + " " + pol + " Sr: " + sr + " " + fec )
-		
-#					orbital = int(frontendData["orbital_position"])
-#					if orbital > 1800:
-#						orbital2 = str((float(3600 - orbital))/10.0) + "W"
-#					elif orbital > 0:
-#						orbital2 = str((float(orbital))/10.0) + "E"
-					
-#					orbital3 = self.parse_sats(orbital2)
-#					orbital3 = orbital3 + orbital2
-#					self["orbital_pos"].setText(orbital3)
-
 					orbital = fedata["orbital_position"]
 					self["orbital_pos"].setText(orbital)
+				elif ttype == "DVB-T":
+					fedata = ConvertToHumanReadable(frontendData)
+					freq = str(int(frontendData.get("frequency", 0) / 1000))
+					band = fedata.get("bandwidth", " ")
+					self["nfreq_info"].setText( "Freq: " + freq + "  Band: " + band)
 
 
 		if isCrypt == True:

@@ -22,7 +22,7 @@ def ConvertToHumanReadable(tp, type = None):
 			eDVBFrontendParametersSatellite.FEC_3_5 : "3/5",
 			eDVBFrontendParametersSatellite.FEC_4_5 : "4/5",
 			eDVBFrontendParametersSatellite.FEC_8_9 : "8/9",
-			eDVBFrontendParametersSatellite.FEC_9_10 : "9/10"}[tp["fec_inner"]]
+			eDVBFrontendParametersSatellite.FEC_9_10 : "9/10"}.get(tp.get("fec_inner", _("Auto")))
 		ret["modulation"] = {
 			eDVBFrontendParametersSatellite.Modulation_Auto : _("Auto"),
 			eDVBFrontendParametersSatellite.Modulation_QPSK : "QPSK",
