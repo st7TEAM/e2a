@@ -15,7 +15,8 @@ gFBDC::gFBDC()
 		eFatal("no framebuffer available");
 
 	surface.clut.data = 0;
-	setResolution(720, 576); // default res
+//	setResolution(720, 576); // default res
+	setResolution(1280, 720); // default res
 
 	reloadSettings();
 }
