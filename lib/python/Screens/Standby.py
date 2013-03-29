@@ -104,6 +104,23 @@ from time import time
 from Components.Task import job_manager
 from Components.config import ConfigYesNo,NoSave
 
+class QuitMainloopScreen(Screen):
+
+	def __init__(self, session, retvalue=1):
+		self.skin = """<screen name="QuitMainloopScreen" position="0,0" size="1280,720" flags="wfNoBorder">
+				<ePixmap pixmap="skin_default/icons/input_info.png" position="613,300" size="53,53" alphatest="on" />
+				<widget name="text" position="0,360" size="1280,100" font="Regular;22" halign="center" />
+			</screen>"""
+		Screen.__init__(self, session)
+		from Components.Label import Label
+		text = { 1: _("Your receiver is shutting down"),
+			2: _("Your receiver is rebooting"),
+			3: _("The user interface of your receiver is restarting"),
+			4: _("Your frontprocessor will be upgraded\nPlease wait until your receiver reboots\nThis may take a few minutes"),
+			5: _("The user interface of your receiver is restarting\ndue to an error in mytest.py"),
+			42: _("Unattended upgrade in progress\nPlease wait until your receiver reboots\nThis may take a few minutes") }.get(retvalue)
+		self["text"] = Label(text)
+
 inTryQuitMainloop = False
 config.misc.DeepStandbyOn = NoSave(ConfigYesNo(default=False))
 
@@ -162,12 +179,16 @@ class TryQuitMainloop(MessageBox):
 			self.conntected=False
 			self.session.nav.record_event.remove(self.getRecordEvent)
 		if value:
+			self.hide()
 			if self.retval ==1:
 				config.misc.DeepStandbyOn.value=True
-# WARNING HACK !! Black Hole bad hack
+# WARNING HACK !! Black Hole dirty hack
 			if self.retval == 1 or self.retval == 2:
 				system("umount -a -f -t nfs,smbfs,cifs,ncpfs")
 #end
+			self.session.nav.stopService()
+			self.quitScreen = self.session.instantiateDialog(QuitMainloopScreen,retvalue=self.retval)
+			self.quitScreen.show()
 			quitMainloop(self.retval)
 		else:
 			MessageBox.close(self, True)
