@@ -51,8 +51,8 @@ fbClass::fbClass(const char *fb)
 		perror("FBIOGET_VSCREENINFO");
 		goto nolfb;
 	}
-	
-	memcpy(&oldscreen, &screeninfo, sizeof(screeninfo));
+//Blackhole	
+//	memcpy(&oldscreen, &screeninfo, sizeof(screeninfo));
 
 	fb_fix_screeninfo fix;
 	if (ioctl(fd, FBIOGET_FSCREENINFO, &fix)<0)
@@ -191,8 +191,9 @@ void fbClass::blit()
 
 fbClass::~fbClass()
 {
-	if (available)
-		ioctl(fd, FBIOPUT_VSCREENINFO, &oldscreen);
+//Blackhole
+//	if (available)
+//		ioctl(fd, FBIOPUT_VSCREENINFO, &oldscreen);
 	if (lfb)
 		munmap(lfb, available);
 	showConsole(1);
