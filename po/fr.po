@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-03-08 23:32+0100\n"
+"PO-Revision-Date: 2013-04-07 11:51+0100\n"
 "Last-Translator: meo <lupomeo@hotmail.com>\n"
 "Language-Team: french\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +14,9 @@ msgstr ""
 "X-Generator: Poedit 1.5.3\n"
 "X-Poedit-SourceCharset: iso-8859-15\n"
 
+msgid "\tMount: "
+msgstr "\tMonte à: "
+
 msgid ""
 "\n"
 "\n"
@@ -22,9 +25,6 @@ msgstr ""
 "\n"
 "\n"
 "    Info ECM non disponible"
-
-msgid "\tMount: "
-msgstr "\tMonte à: "
 
 msgid ""
 "\n"
@@ -190,7 +190,7 @@ msgid " Results"
 msgstr " Résultats"
 
 msgid " Standby Now"
-msgstr " Mettre en veille"
+msgstr " Mise en veille"
 
 msgid " Used: "
 msgstr " Utilisé: "
@@ -226,6 +226,13 @@ msgstr " MàJ disponibles."
 msgid " wireless networks found!"
 msgstr " Réseaux sans fil trouvés!"
 
+msgid ""
+"!!(Empty)\n"
+"Please, Input to the "
+msgstr ""
+"!!(Vide)\n"
+"Saisir dans "
+
 msgid "#000000"
 msgstr "#000000"
 
@@ -259,6 +266,9 @@ msgstr "#ffffffff"
 msgid "%H:%M"
 msgstr "%H:%M"
 
+msgid "%d  CAMs Installed"
+msgstr "%d  CAM(s) Installé(s)"
+
 msgid "%d / 100"
 msgstr "%d / 100"
 
@@ -273,17 +283,17 @@ msgid ""
 "%d conflict(s) solved with similar timer(s):\n"
 "%s"
 msgstr ""
-"%d confli's) résolus avec programmations similaires:\n"
+"%d conflit(s) résolus avec programmations similaires:\n"
 "%s"
-
-msgid "%d  CAMs Installed"
-msgstr "%d  CAM(s) Installé(s)"
 
 msgid "%d jobs are running in the background!"
 msgstr "les tâches %d fonctionnent en arrière-plan!"
 
 msgid "%d min"
 msgstr "%d min"
+
+msgid "%d providers updated"
+msgstr "%d Opérateurs Mis à Jour"
 
 msgid "%d services found!"
 msgstr "%d services trouvés!"
@@ -303,6 +313,12 @@ msgstr ""
 
 msgid "%s (%s)\n"
 msgstr "%s (%s)\n"
+
+msgid "%s channels"
+msgstr "%s chaînes"
+
+msgid "%s of %s"
+msgstr "%s de %s"
 
 msgid "(ZAP)"
 msgstr "(ZAP)"
@@ -348,6 +364,9 @@ msgstr "1-1. Numéro Série (2 ou 3 premières lettres du numéro)"
 
 msgid "1-2. Serial Number (The remaining numbers of SN)"
 msgstr "1-2. Numéro de série (les autres chiffres du numéro)"
+
+msgid "1. Load a Mobile Broadband Device"
+msgstr "1. Charger un mobile large bande"
 
 msgid "1.0"
 msgstr "1.0"
@@ -399,7 +418,7 @@ msgid ""
 " -click on blue -> blue -> Devices Manager."
 msgstr ""
 "2) Montez la clé formatée comme 'universe'\n"
-" -Bouton bleu -> blue -> Gérer périphériques."
+" -Bouton bleu -> bleu -> Gérer périphériques."
 
 msgid ""
 "2) To connect via UPnP you have to start Mediatomb on this box and then start Djmount on the client. Then you can access the tuners server channel list for the client Media Player -> DLNA -> MediaTomb -> playlists.\n"
@@ -411,6 +430,9 @@ msgstr ""
 msgid "2. Contact"
 msgstr "2. Contact"
 
+msgid "2. Set up a Mobile Broadband Device"
+msgstr "2. Paramétrer un mobile large bande"
+
 msgid "3"
 msgstr "3"
 
@@ -419,6 +441,9 @@ msgstr "3    A propos"
 
 msgid "3    MultiG Epg"
 msgstr "3   Graphique"
+
+msgid "3. Generate a WvDial profile"
+msgstr "3. Génèrer un profil WvDial"
 
 msgid "30 minutes"
 msgstr "30 minutes"
@@ -431,6 +456,9 @@ msgstr "4"
 
 msgid "4    Last Search"
 msgstr "4   Rech. Préced"
+
+msgid "4. Attempt to Connect"
+msgstr "4. Tentative connection"
 
 msgid "4:3"
 msgstr "4:3"
@@ -446,6 +474,9 @@ msgstr "5"
 
 msgid "5 minutes"
 msgstr "5 minutes"
+
+msgid "5. Done"
+msgstr "5. Fini"
 
 msgid "6"
 msgstr "6"
@@ -463,7 +494,7 @@ msgid "9"
 msgstr "9"
 
 msgid "<Current movielist location>"
-msgstr "<Emplacement courante liste film>"
+msgstr "<Emplacement liste film courante>"
 
 msgid "<Default movie location>"
 msgstr "<Emplacement défaut film>"
@@ -482,9 +513,6 @@ msgstr "??"
 
 msgid "A"
 msgstr "A"
-
-msgid "A BackToTheRoots-Skin .. but with Warp-8 speed."
-msgstr "Un thème retour aux sources ..... avec la vitesse Warp-8."
 
 msgid "A BackToTheRoots-Skin .. or good old times."
 msgstr "Un thème retour aux sources .. ou bon vieux temps."
@@ -568,7 +596,7 @@ msgid "A recording is currently running. Please stop the recording before trying
 msgstr "Un enregistrement est en cours. Veuillez arrêter l'enregistrement avant de démarrer la recherche satellites."
 
 msgid "A required tool (%s) was not found."
-msgstr "Un outil (%s) nécessaire n'a pas été trouvé"
+msgstr "Un outil nécessaire (%s) n'a pas été trouvé"
 
 msgid "A search for available updates is currently in progress."
 msgstr "La recherche pour des mises à jour est actuellement en cours"
@@ -583,14 +611,14 @@ msgstr ""
 "Voulez-vous désactiver la seconde interface réseau?"
 
 msgid "A simple downloading application for other plugins"
-msgstr "Une simple application téléchargement pour d'autres plugins"
+msgstr "Une application de téléchargement pour d'autres plugins"
 
 msgid ""
 "A sleep timer wants to set your\n"
 "STB to standby. Do that now?"
 msgstr ""
 "Une programmation de mise en veille veux passer\n"
-"votre dreambox en sommeil. Procéder maintenant?"
+"votre Vu+ en veille. Procéder maintenant?"
 
 msgid ""
 "A sleep timer wants to shut down\n"
@@ -681,6 +709,9 @@ msgstr "Accéder à la base de données en ligne Médiatèque-ARD."
 msgid "Accesspoint:"
 msgstr "Point accès:"
 
+msgid "Action for inactivity:"
+msgstr "Action pour inactivité:"
+
 msgid "Action on long powerbutton press"
 msgstr "Mode appui long sur bouton éteindre"
 
@@ -715,7 +746,7 @@ msgid "Active Modules"
 msgstr "Modules actifs"
 
 msgid "Active Source Reply On:"
-msgstr "Activer réponse source sur:"
+msgstr "Activer réponse Source sur:"
 
 msgid ""
 "Active/\n"
@@ -725,7 +756,7 @@ msgstr ""
 "Inactif"
 
 msgid "Active/Autostart enabled"
-msgstr "Activer/Départ auto activé"
+msgstr "Activer/Départ-auto activé"
 
 msgid "Adapter settings"
 msgstr "Paramètres adaptateur"
@@ -742,14 +773,17 @@ msgstr "Ajouter configuration WLAN"
 msgid "Add a mark"
 msgstr "Ajouter un marqueur"
 
-msgid "Add a new NFS or CIFS mount point to your Dreambox."
+msgid "Add a new NFS or CIFS mount point to your dreambox."
 msgstr "Ajouter un nouveau point montage NFS ou CIFS."
+
+msgid "Add a new NFS or CIFS mount point to your STB."
+msgstr "Ajouter nouveau point montage NFS ou CIFS à votre Vu+."
 
 msgid "Add a new title"
 msgstr "Ajouter un nouveau titre"
 
 msgid "Add a streaming url to your channellist"
-msgstr "Ajouter URL du flux à la liste de chaînes"
+msgstr "Ajouter URL d'un flux à la liste de chaînes"
 
 msgid "Add network configuration?"
 msgstr "Ajouter configuration réseau?"
@@ -767,7 +801,7 @@ msgid "Add stream URL"
 msgstr "Ajouter URL du flux"
 
 msgid "Add tags to recorded movies"
-msgstr "Ajout de tags sur l\"enregistrement"
+msgstr "Ajout de tags sur enregistrements"
 
 msgid "Add timer"
 msgstr "Programmer"
@@ -837,16 +871,16 @@ msgid "Adjust screen position"
 msgstr "Ajuster position écran"
 
 msgid "Adjust the color settings so that all the color shades are distinguishable, but appear as saturated as possible. If you are happy with the result, press OK to close the video fine-tuning, or use the number keys to select other test screens."
-msgstr "Ajustez les paramètres des couleur de sorte que toutes les nuances de couleur soient distinguables, mais apparaissent comme saturées comme possible. Si vous êtes heureux avec le résultat, pressez OK pour fermer l'accord fin vidéo, ou utilisez les touches numérique pour choisir d'autres écrans de test. "
+msgstr "Ajustez les paramètres des couleurs de sorte que toutes les nuances de couleur soient distinguables, mais apparaissent les plus saturées possible. Si vous êtes heureux avec le résultat, pressez OK pour fermer l'accord fin vidéo, ou utilisez les touches numérique pour choisir d'autres écrans de test. "
 
 msgid "Adress:"
 msgstr "Adresse:"
 
 msgid "Adult streaming plugin"
-msgstr "Plugin flux vidéo adult"
+msgstr "Plugin flux vidéo adulte"
 
 msgid "Adult streaming plugin."
-msgstr "Plugin flux vidéo adult."
+msgstr "Plugin flux vidéo adulte"
 
 msgid "Advanced Options"
 msgstr "Options avancées"
@@ -890,6 +924,9 @@ msgstr "Alias"
 msgid "Alias:"
 msgstr "Alias:"
 
+msgid "Aliases db size: %s"
+msgstr "Taille Alias db:  %s"
+
 msgid "All"
 msgstr "Toutes"
 
@@ -900,7 +937,7 @@ msgid "All Time"
 msgstr "Tout le temps"
 
 msgid "All non-repeating timers"
-msgstr "toutes les tempo non-répétitives"
+msgstr "Toutes les tempo non-répétitives"
 
 msgid "Allow subtitle language to equal audio language"
 msgstr "Permettre sous-titres même langue que l'audio"
@@ -944,7 +981,7 @@ msgstr "Toujours demander avant d'envoyer"
 msgid "Amount of recordings left"
 msgstr "Nombre d'enregistrements restants"
 
-msgid "An EPG downloader."
+msgid "An EPG downloader"
 msgstr "Téléchargez l'EPG"
 
 msgid "An empty filename is illegal."
@@ -957,10 +994,10 @@ msgid "An unknown error occured!"
 msgstr "Une erreur est survenue!"
 
 msgid "Anonymize crashlog?"
-msgstr "Afficher crashlog anonyme?"
+msgstr "Anonymiser crashlog ?"
 
 msgid "Any service/recording"
-msgstr "tout service/enregistrement"
+msgstr "Tout service/enregistrement"
 
 msgid "Arabic"
 msgstr "Arabe"
@@ -1133,7 +1170,7 @@ msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Partage automatique chapitres chaque ? Minutes (0=jamais)"
 
 msgid "Auto flesh"
-msgstr "Correction couleurs auto (Auto flesh)"
+msgstr "Correction couleurs de Peau"
 
 msgid "Auto language selection"
 msgstr "Selection Langage Auto"
@@ -1152,6 +1189,18 @@ msgstr "Sauvegarde automatique"
 
 msgid "AutoBackup Configuration"
 msgstr "Configuration Sauvegarde automatique"
+
+msgid "AutoShutDown"
+msgstr "ArrêtAuto"
+
+msgid "AutoShutDown Setup"
+msgstr "Paramétrage ArrêtAuto"
+
+msgid "AutoShutDown settings"
+msgstr "Paramètres ArrêtAuto"
+
+msgid "AutoShutDown: %s ?"
+msgstr "ArrêtAuto: %s ?"
 
 msgid "AutoTimer Editor"
 msgstr "Editeur AutoTimer"
@@ -1172,13 +1221,13 @@ msgid "AutoTimer scans the EPG and creates Timers depending on user-defined sear
 msgstr "La ProgAuto balaye l'EPG et crée des programmations définies par les critères de recherche utilisateur."
 
 msgid "AutoTimer was added successfully"
-msgstr "AutoTimer ajouté correctement"
+msgstr "ProgAuto ajoutée correctement"
 
 msgid "AutoTimer was changed successfully"
-msgstr "AutoTimer modifié correctement"
+msgstr "ProgAuto modifiée correctement"
 
 msgid "AutoTimer was removed"
-msgstr "AutoTimer supprimé"
+msgstr "ProgAuto supprimée"
 
 msgid "Autocam Manager"
 msgstr "CAM automatique"
@@ -1214,7 +1263,13 @@ msgid "Automatically create timer events based on keywords"
 msgstr "Créer automatiquement les programmations d'événements basés sur des mots-clés"
 
 msgid "Automatically informs you on low internal memory"
-msgstr "Vous informe automatiquement sur faible mémoire interne"
+msgstr "Vous informe automatiquement si mémoire interne faible"
+
+msgid "Automatically reboot the decoder after a manual download"
+msgstr "Reboote automatiquement le Vu+ après téléchargement manuel"
+
+msgid "Automatically reboot the decoder after a scheduled download"
+msgstr "Reboote automatiquement le Vu+ après téléchargement programmé"
 
 msgid "Automatically refresh EPG"
 msgstr "Régénérer automatiquement EPG"
@@ -1252,7 +1307,7 @@ msgid "Autoresolution videomode setup"
 msgstr "Paramètres vidéo de ResolutionAuto"
 
 msgid "Autos & Vehicles"
-msgstr "Autos ¬ Véhicules"
+msgstr "Autos & Véhicules"
 
 msgid "Autostart"
 msgstr "Départ auto"
@@ -1299,8 +1354,455 @@ msgstr "BER"
 msgid "BER:"
 msgstr "BER:"
 
-msgid "BLACK POLE GREEN PANEL:"
-msgstr "Menu Vert Black Pole:"
+msgid "BH  Devices Manager"
+msgstr "BH Gestionnaire Périphériques"
+
+msgid "BH 3G Modem Manager"
+msgstr "BH Gestionnaire modem 3G"
+
+msgid "BH 3G Modem Manager Config"
+msgstr "BH Config Modem 3G"
+
+msgid "BH 3G Modem Manager Config Edit"
+msgstr "BH Editer Config Modem 3G"
+
+msgid "BH About"
+msgstr "BH A Propos"
+
+msgid "BH Active Clients"
+msgstr "BH Clients Actifs"
+
+msgid "BH Active Kernel Modules"
+msgstr "BH Modules Kernel Actifs"
+
+msgid "BH Addons Manager"
+msgstr "BH Gestionnaire Addons"
+
+msgid "BH Audio"
+msgstr "BH Audio"
+
+msgid "BH Autocam Setup"
+msgstr "BH Param. Cam Auto"
+
+msgid "BH Blindscan"
+msgstr "BH Scan en Aveugle"
+
+msgid "BH Blue Panel"
+msgstr "BH Bouton Bleu"
+
+msgid "BH Browser Net Neighbourhood"
+msgstr "BH Explorateur Réseau"
+
+msgid "BH CCcam Info"
+msgstr "BH CCcam Info"
+
+msgid "BH CCcam Info Setup"
+msgstr "BH Paramétrage CCcam Info"
+
+msgid "BH CI Assignment"
+msgstr "BH Assignement IC"
+
+msgid "BH CI assignment"
+msgstr "BH Assignement IC"
+
+msgid "BH Cccam Entitlements Info"
+msgstr "BH CCcam Info sur Droits"
+
+msgid "BH Cccam Main Info"
+msgstr "BH CCcam Info Principale"
+
+msgid "BH Channel Selection Radio"
+msgstr "BH Choix Canal Radio"
+
+msgid "BH Channel Selection TV"
+msgstr "BH Choix de chaîne TV"
+
+msgid "BH Choose Tuner"
+msgstr "BH Choix Tuner"
+
+msgid "BH Choose bouquet"
+msgstr "BH Choix du Bouquet"
+
+msgid "BH Choose your Skin "
+msgstr "BH Choisir le Thème"
+
+msgid "BH CrashlogReport Setting"
+msgstr "BH Réglages Report Crashlog"
+
+msgid "BH Cron Manager"
+msgstr "BH Gestion CRON"
+
+msgid "BH Cron Setup"
+msgstr "BH Paramétrage CRON"
+
+msgid "BH Default services lists"
+msgstr "BH Liste Services standard"
+
+msgid "BH Devices Mountpoints Setup"
+msgstr "BH Param. Points de Montage"
+
+msgid "BH Downloads Manage"
+msgstr "BH Gestion Téléchargements"
+
+msgid "BH Downloads Manager"
+msgstr "BH Gestion Téléchargements"
+
+msgid "BH EPG MyTubeTasksScreen"
+msgstr "BH Tâches EPG MyTube"
+
+msgid "BH EPG MyTubeVideoInfoScreen"
+msgstr "BH Info MyTubeVideo"
+
+msgid "BH EPG Selection"
+msgstr "BH Selection EPG"
+
+msgid "BH EPG Selection Multi"
+msgstr "BH Selection EPG Multi"
+
+msgid "BH EPG Settings"
+msgstr "BH Réglages EPG"
+
+msgid "BH EPG Setup"
+msgstr "BH Paramétrage EPG"
+
+msgid "BH Electronic Program Guide"
+msgstr "BH Guide Programme Electronique"
+
+msgid "BH Epg Backup"
+msgstr "BH Sauvegarde EPG"
+
+msgid "BH Epg Channels Setup"
+msgstr "BH Paramétrage Chaînes EPG"
+
+msgid "BH EpgPanel:Add Ext. epg Server"
+msgstr "BH Menu EPG : Ajout de serveur"
+
+msgid "BH Event View"
+msgstr "BH Voir Evenement"
+
+msgid "BH Extensions management"
+msgstr "BH Gestion Extensions"
+
+msgid "BH Extra Kernel Modules"
+msgstr "BH Autres Modules Kernel"
+
+msgid "BH Extra Settings"
+msgstr "BH Autres Réglages"
+
+msgid "BH FTP Server Editor"
+msgstr "BH Editeur Serveur FTP"
+
+msgid "BH Fancontrol Settings in Standby mode"
+msgstr "BH Param. Ventilo en mode veille"
+
+msgid "BH Fast Plugin Setup"
+msgstr "Menu Plugin Rapide BH"
+
+msgid "BH Feed Settings"
+msgstr "BH Listes de chaînes"
+
+msgid "BH Feeds Plugins"
+msgstr "BH Liste de Plugins"
+
+msgid "BH Feeds Settings"
+msgstr "Param. Feeds B.H."
+
+msgid "BH Ftp Panel"
+msgstr "BH Menu FTP"
+
+msgid "BH Full Backup"
+msgstr "BH Sauvegarde Complète"
+
+msgid "BH Green Panel"
+msgstr "Bouton Vert Black Hole"
+
+msgid "BH Green Panel Setup"
+msgstr "BH Paramètres Bouton Vert"
+
+msgid "BH Hard Disk Panel"
+msgstr "BH Menu Disque Dur"
+
+msgid "BH Help..."
+msgstr "BH Aide..."
+
+msgid "BH Inadyn Manager"
+msgstr "BH Gestion Inadyn"
+
+msgid "BH Inadyn Setup"
+msgstr "BH Paramétrage Inadyn"
+
+msgid "BH Info"
+msgstr "BH Info"
+
+msgid "BH Input"
+msgstr "BH Entrées"
+
+msgid "BH LED Brightness Setup"
+msgstr "BH Param. Luminosité LED"
+
+msgid "BH Language selection"
+msgstr "BH Choix du Langage"
+
+msgid "BH Live Streaming Links"
+msgstr "BH Liens TV Streaming"
+
+msgid "BH Live Streaming Links Header"
+msgstr "BH En-Tête Liens Streaming"
+
+msgid "BH Main Menu"
+msgstr "BH Menu Principal"
+
+msgid "BH Media Player"
+msgstr "BH Lecteur Média"
+
+msgid "BH Menu HDD"
+msgstr "BH Menu Disque Dur"
+
+msgid "BH Menu Information"
+msgstr "BH Menu Information"
+
+msgid "BH Menu Scan"
+msgstr "BH Menu Scanner"
+
+msgid "BH Menu Setup"
+msgstr "BH Menu Paramétrage"
+
+msgid "BH Menu Shutdown"
+msgstr "BH Menu Arrêt"
+
+msgid "BH Menu System"
+msgstr "BH Menu Système"
+
+msgid "BH MountEdit"
+msgstr "BH Editer Montage"
+
+msgid "BH MountManager"
+msgstr "BH Gestionnaire Montage"
+
+msgid "BH MountView"
+msgstr "BH Voir Montages"
+
+msgid "BH MyTubePlayerHelpScreen..."
+msgstr "BH Aide MyTubePlayer"
+
+msgid "BH MyTubePlayerMainScreen..."
+msgstr "BH Ecran MyTubePlayer"
+
+msgid "BH MyTubeSettingsScreen"
+msgstr "BH Réglages MyTube"
+
+msgid "BH Nameserver Setup"
+msgstr "BH Paramétrage Nom Serveur"
+
+msgid "BH Network Configuration..."
+msgstr "BH Configuration Réseau..."
+
+msgid "BH Network Setup"
+msgstr "BH Paramétrage Réseau"
+
+msgid "BH Network test..."
+msgstr "BH Test Réseau..."
+
+msgid "BH Nfs Server Panel"
+msgstr "BH Menu Serveur NFS"
+
+msgid "BH OpenVpn Panel"
+msgstr "BH Menu OpenVPN"
+
+msgid "BH OpenWebif Configuration "
+msgstr "BH Configuration OpenWebif"
+
+msgid "BH Osd Settings"
+msgstr "BH Réglages Affichage"
+
+msgid "BH Osd Setup"
+msgstr "BH Paramétrer Affichage"
+
+msgid "BH Package Details"
+msgstr "BH Détails du Paquet"
+
+msgid "BH Packet manager"
+msgstr "BH Gestionnaire de Paquets"
+
+msgid "BH Parallel Univ... Teleportation"
+msgstr "BH Téléportation vers Univers"
+
+msgid "BH Parallel Universe Setup"
+msgstr "BH Paramétrage Univers"
+
+msgid "BH Pcsc Panel"
+msgstr "BH Menu Pcsc"
+
+msgid "BH Personal Backup"
+msgstr "BH Sauvegarde Personnelle"
+
+msgid "BH Personal Backup Setup"
+msgstr "BH Param. Sauvegarde Perso."
+
+msgid "BH PicturePlayer"
+msgstr "BH LecteurPhotos"
+
+msgid "BH Plugin browser"
+msgstr "BH Explorateur Plugin"
+
+msgid "BH Plugin details"
+msgstr "BH Détails Plugin"
+
+msgid "BH Plugin manager activity information"
+msgstr "BH Info Activités Gestionnaire Plugin"
+
+msgid "BH Recorded files... /hdd/movie"
+msgstr "BH Enregistrements.. /hdd/movie"
+
+msgid "BH Recording paths"
+msgstr "BH Chemins Enregistrements"
+
+msgid "BH Remote Control System Code Setting"
+msgstr "BH Code Syst. télécommande"
+
+msgid "BH Reorder Plugin List"
+msgstr "BH Ordonner Liste Plugins"
+
+msgid "BH Return the Love Event (only for genuine box)"
+msgstr "BH Retourner le Love Event (pour véritable Vu+)"
+
+msgid "BH Samba Panel"
+msgstr "BH Menu Samba"
+
+msgid "BH Satfinder"
+msgstr "BH Pointeur Sat"
+
+msgid "BH Scan IP"
+msgstr "BH Scanner IP"
+
+msgid "BH Script Panel"
+msgstr "BH Menu Scripts"
+
+msgid "BH Select Location Box"
+msgstr "BH Choix Localisation démo"
+
+msgid "BH Select Network Adapter"
+msgstr "BH Choix Adaptateur Réseau"
+
+msgid "BH Select Network Interface"
+msgstr "BH Choix Interface Réseau"
+
+msgid "BH Select bouquets to convert"
+msgstr "BH Choix bouquets à convertir"
+
+msgid "BH Select provider to add..."
+msgstr "BH Choix opérateur à ajouter.."
+
+msgid "BH Select service to add..."
+msgstr "BH Choix service à ajouter"
+
+msgid "BH Servers"
+msgstr "BH Serveurs"
+
+msgid "BH Service Scan"
+msgstr "BH Scanner Service"
+
+msgid "BH Serviceinfo"
+msgstr "BH Info Service"
+
+msgid "BH Setup"
+msgstr "BH Paramétrage"
+
+msgid "BH Sleep Timer"
+msgstr "BH Veille Programmée"
+
+msgid "BH Software Management"
+msgstr "BH Gestion Logiciel"
+
+msgid "BH Speed up"
+msgstr "BH Accélérer"
+
+msgid "BH Statistics"
+msgstr "BH Statistiques"
+
+msgid "BH StreamTV List"
+msgstr "BH Liste Chaînes de streaming"
+
+msgid "BH Swap File Manager"
+msgstr "BH Gestionnaire Fichier SWAP"
+
+msgid "BH System Info"
+msgstr "BH Info Système"
+
+msgid "BH Telnet Panel"
+msgstr "BH Menu Telnet"
+
+msgid "BH Timer Editor"
+msgstr "BH Editeur Programmations"
+
+msgid "BH Timer Entry"
+msgstr "BH Entrées Programmations"
+
+msgid "BH Tuner Server Panel"
+msgstr "BH Menu Tuner Mode Serveur"
+
+msgid "BH UI 3D setup"
+msgstr "BH Param. Interface en 3D"
+
+msgid "BH UPnP Client Panel"
+msgstr "BH Menu Client UPnP"
+
+msgid "BH UPnP Minidlna Server Panel"
+msgstr "BH Menu Serveur UPnP Minidlna"
+
+msgid "BH UPnP Server Panel"
+msgstr "BH Menu Serveur UPnP"
+
+msgid "BH Uninstall Panel"
+msgstr "BH Menu Désinstallation"
+
+msgid "BH Usb Format Wizard"
+msgstr "BH Assistant Formatage USB"
+
+msgid "BH UserDialog"
+msgstr "BH Dialogue Utilisateur"
+
+msgid "BH UserManager"
+msgstr "BH Gestion Utilisateur"
+
+msgid "BH Video Enhancement Setup"
+msgstr "BH Param. Amélioration Vidéo"
+
+msgid "BH Webinterface: Main Setup"
+msgstr "BH Interface Web: Paramétrage"
+
+msgid "BH Welcome..."
+msgstr "BH Bienvenue..."
+
+msgid "BH Welcome...Net"
+msgstr "BH Bienvenue...Réseau"
+
+msgid "BH Welcome...SM"
+msgstr "BH Bienvenue..SM"
+
+msgid "BH Welcome...Start"
+msgstr "BH Bienvenue...Départ"
+
+msgid "BH Wireless Net Setup Menu..."
+msgstr "BH Menu Paramétrage Réseau WIFI.."
+
+msgid "BH Wireless Network AP Scan..."
+msgstr "BH Scan AP Réseau WIFI..."
+
+msgid "BH Wireless Network Adapter Selection..."
+msgstr "BH Choix adaptateur Réseau WIFI..."
+
+msgid "BH Wireless Network Configuration..."
+msgstr "BH Configuration réseau WIFI..."
+
+msgid "BH Wireless Network Status..."
+msgstr "BH Statut Réseau WIFI..."
+
+msgid "BH Zapping Mode Selection"
+msgstr "BH Sélection Mode Zapping"
+
+msgid "BH select CAId's"
+msgstr "BH Choix CaId's"
 
 msgid "Back"
 msgstr "Arrière"
@@ -1319,6 +1821,9 @@ msgstr "Option suppression en Arrière plan"
 
 msgid "Background delete speed"
 msgstr "Vitesse de suppression en Arrière plan"
+
+msgid "Backspace Key"
+msgstr "Touche Espace"
 
 msgid "Backup"
 msgstr "Sauvegarder"
@@ -1354,10 +1859,10 @@ msgid "Bandwidth"
 msgstr "Bande passante"
 
 msgid "Begin of \"after event\" timespan"
-msgstr "Démarrage par \"après événement\" période"
+msgstr "Début de période \"après événement\""
 
 msgid "Begin of timespan"
-msgstr "Démarrage par période"
+msgstr "Début de période"
 
 msgid "Begin time"
 msgstr "Heure début"
@@ -1381,13 +1886,19 @@ msgid "Big Bang"
 msgstr "Big Bang"
 
 msgid "Bitrate:"
-msgstr "Bitrate:"
+msgstr "Débit:"
 
 msgid "Black Hole"
 msgstr "Black Hole"
 
 msgid "Black Hole Addons Plugins"
 msgstr "Addons et Plugins Black Hole"
+
+msgid "Black Hole Autocam Manager"
+msgstr "Gestionnaire CamAuto"
+
+msgid "Black Hole Autocam Setup"
+msgstr "Paramétrage CamAuto"
 
 msgid "Black Hole Cron Manager"
 msgstr "Gérer Cron"
@@ -1397,6 +1908,33 @@ msgstr "Paramètres Cron"
 
 msgid "Black Hole Devices Mountpoints Setup"
 msgstr "Paramétrage des points de montage"
+
+msgid "Black Hole E2"
+msgstr "Black Hole E2"
+
+msgid "Black Hole E2 Addons Manager"
+msgstr "Gestionnaire Addons B.H."
+
+msgid "Black Hole E2 Downloads Manager"
+msgstr "Gestionnaire Téléchargements"
+
+msgid "Black Hole E2 Manual Install BH Packages"
+msgstr "Installation Manuelle paquets B.H."
+
+msgid "Black Hole E2 Manual Install Ipk Packages"
+msgstr "Installation Manuelle Paquets IPK B.H."
+
+msgid "Black Hole E2 Package Details"
+msgstr "Détails Paquets Black Hole E2"
+
+msgid "Black Hole E2 Preview"
+msgstr "Pré-visualisation B.H."
+
+msgid "Black Hole E2 Statistics"
+msgstr "Statistiques Black Hole E2"
+
+msgid "Black Hole E2 Uninstall Panel"
+msgstr "Menu Désinstallation B.H. E2"
 
 msgid "Black Hole EPG Setup"
 msgstr "Configuration EPG"
@@ -1415,6 +1953,9 @@ msgstr "Sauvegarde complète"
 
 msgid "Black Hole Full Backup on: "
 msgstr "Sauvegarde complète sur: "
+
+msgid "Black Hole Green Panel Setup"
+msgstr "Param. Bouton Vert Black Hole"
 
 msgid "Black Hole Image Boot Logo"
 msgstr "Logo démarrage pour images Black Hole"
@@ -1489,41 +2030,11 @@ msgstr "Sauvegarde Image Black Hole"
 msgid "Black Hole personal backup"
 msgstr "Sauvegarde personnelle BH"
 
-msgid "Black Pole E2 Addons Manager"
-msgstr "Gestion des Addons Black Pole"
+msgid "Black Hole: choose your experience ... NOW !"
+msgstr "Black Hole: Tentez l'expérience Maintenant !"
 
-msgid "Black Pole E2 Manual Install BH Packages"
-msgstr "Installation Manuelle de Paquets Black Pole"
-
-msgid "Black Pole E2 Manual Install Ipk Packages"
-msgstr "Installation Manuelle de Paquets IPK"
-
-msgid "Black Pole E2 Script: "
-msgstr "Script Black Pole: "
-
-msgid "Black Pole E2 Uninstall Panel"
-msgstr "Menu de Désinstallation"
-
-msgid "Black Pole Extra Settings"
-msgstr "Réglages Supplémentaires"
-
-msgid "Black Pole Green Panel"
-msgstr "Menu Vert Black Pole"
-
-msgid "Black Pole Info"
-msgstr "Info Black Pole"
-
-msgid "Black Pole Settings"
-msgstr "Réglages Black Pole"
-
-msgid "Black Pole Shutdown"
-msgstr "Extinction / Redémarrage"
-
-msgid "Black Pole Swap File Manager"
-msgstr "Réglages Fichier d'Echanges"
-
-msgid "Black Pole Usb Format Wizard"
-msgstr "Assistant Formatage USB"
+msgid "BlackHole Epg Backup"
+msgstr "Sauvegarde EPG"
 
 msgid "BlackHole Full Backup"
 msgstr "Sauvegarde complète"
@@ -1546,6 +2057,15 @@ msgstr "Plugin contrôle Bonjour/Avahi"
 msgid "Bonjour/Avahi control plugin."
 msgstr "Plugin contrôle Bonjour/Avahi."
 
+msgid "Bookmark"
+msgstr "Marque Page"
+
+msgid "Bookmark Title"
+msgstr "Titre MarquePage"
+
+msgid "Bookmark URL"
+msgstr "URL MarquePage"
+
 msgid "Bookmarks"
 msgstr "Marque pages"
 
@@ -1562,16 +2082,25 @@ msgid "Brightness"
 msgstr "Luminosité"
 
 msgid "Browse ORF and SAT1 Teletext independent from channel. This need I-net conection."
-msgstr "Explorer teletext ORF & SAT1 peu importe la chaîne. Nécessite un accès I-net"
+msgstr "Explorer teletexte ORF & SAT1 peu importe la chaîne. Nécessite un accès I-net"
 
 msgid "Browse for and connect to network shares"
-msgstr "Recherche pour et connection partages réseau"
+msgstr "Recherche de partages réseau et connection"
 
 msgid "Browse for nfs/cifs shares and connect to them."
-msgstr "Recherche pour partages nfs/cifs et se connecter à eux."
+msgstr "Recherche de partages nfs/cifs et se connecter à eux."
 
 msgid "Browse network neighbourhood"
 msgstr "Analyser le voisinage de réseau"
+
+msgid "Browser Help"
+msgstr "Aide Explorateur"
+
+msgid "Browser Start/Stop"
+msgstr "Démarrer/Stopper Explo."
+
+msgid "BrowserMain"
+msgstr "Explorateur"
 
 msgid "Build Complete."
 msgstr "Construction Finie"
@@ -1633,6 +2162,9 @@ msgstr "Assignation CI"
 msgid "CIFS share"
 msgstr "Partage CIFS"
 
+msgid "CRD"
+msgstr "CRT"
+
 msgid "CVBS"
 msgstr "CVBS"
 
@@ -1655,7 +2187,7 @@ msgid "Can not find any WirelessLan Module\n"
 msgstr "Impossible de trouver module LAN WIFI\n"
 
 msgid "Can not open 'fan_pwm'"
-msgstr "Imposible ouvrir 'fan_pwm'"
+msgstr "Impossible ouvrir 'fan_pwm'"
 
 msgid "Can not setup WirelessLan Module in 'AP Mode'\n"
 msgstr "Impossible de paramétrer module LAN WIFI en mode AP\n"
@@ -1681,20 +2213,36 @@ msgstr "Pas trouvé de fichier appareil"
 msgid "Can't found model name."
 msgstr "Pas trouvé nom du modèle."
 
+msgid ""
+"Can't open selected bookmark.\n"
+"   - URL data is empty!!"
+msgstr ""
+"Impossible ouvrir MarquePage.\n"
+"   - l'adresse URL est vide!!"
+
 msgid "Canada"
 msgstr "Canada"
 
 msgid "Cancel"
 msgstr "Annuler"
 
+msgid "Cannot retrieve rytec sources"
+msgstr "Pas trouvé trouvé sources rytec"
+
+msgid "Cannot retrieve xepgdb sources"
+msgstr "Pas trouvé sources xepgdb"
+
 msgid "Capacity: "
-msgstr "Capacité : "
+msgstr "Capacité: "
 
 msgid "Card"
 msgstr "Carte"
 
 msgid "Catalan"
 msgstr "Catalan"
+
+msgid "Category Name"
+msgstr "Nom Catégorie"
 
 msgid "Center DVB subtitles"
 msgstr "Centrer sous-titres DVB"
@@ -1733,13 +2281,16 @@ msgid "Change service PINs"
 msgstr "Changer PINs service"
 
 msgid "Change setup PIN"
-msgstr "Changer PIN paramètres"
+msgstr "Changer paramètres PIN"
 
 msgid "Change step size"
-msgstr "changer taille pas"
+msgstr "Changer taille pas"
 
-msgid "Change the hostname of your Dreambox."
+msgid "Change the hostname of your dreambox."
 msgstr "Modifier le nom d'hôte de votre décodeur"
+
+msgid "Change the hostname of your STB."
+msgstr "Modifier le nom d'hôte de votre Vu+"
 
 msgid "Changelog"
 msgstr "Changements"
@@ -1749,6 +2300,9 @@ msgstr "Canal"
 
 msgid "Channel (1~13)"
 msgstr "Canal (1~13)"
+
+msgid "Channel Name:"
+msgstr "Nom de la chaîne:"
 
 msgid "Channel Selection"
 msgstr "Sélection de la chaîne"
@@ -1770,6 +2324,9 @@ msgstr "Chaînes"
 
 msgid "Channels List Successfully Updated."
 msgstr "Liste de chaînes mise à jour."
+
+msgid "Channels count: %s"
+msgstr "Nb Chaînes: %s"
 
 msgid "Chap."
 msgstr "Chap."
@@ -1877,10 +2434,10 @@ msgid "Close"
 msgstr "Fermer"
 
 msgid "Close and forget changes"
-msgstr "Fermer sans sauver les changements"
+msgstr "Fermer et annuler changements"
 
 msgid "Close and save changes"
-msgstr "Fermer et sauver les changements"
+msgstr "Fermer et sauver changements"
 
 msgid "Close title selection"
 msgstr "Fermer sélection titre"
@@ -1916,7 +2473,7 @@ msgid "Command to execute after EPG Refresh:"
 msgstr "Commande après rafraichissement Epg:"
 
 msgid "Committed DiSEqC command"
-msgstr "Commande DiSEqC validée"
+msgstr "Commande DiSEqC assignée"
 
 msgid "Common Interface"
 msgstr "Interface commune"
@@ -2040,7 +2597,7 @@ msgid "Contrast"
 msgstr "Contraste"
 
 msgid "Control recording completely by service"
-msgstr " Enregistrement contrôlé par la chaîne "
+msgstr " Enregistrement contrôlé par la chaîne"
 
 msgid "Control your STB with your Web browser."
 msgstr "Contrôler votre Vu+ avec votre navigateur Web."
@@ -2068,6 +2625,9 @@ msgstr "Convertir ext3 vers ext4"
 
 msgid "Convert remote channel list for streaming"
 msgstr "Convertir Liste de chaines pour streaming"
+
+msgid "Converting data"
+msgstr "Conversion données"
 
 msgid "Copy Settings to the new Image"
 msgstr "Copier paramètres dans nouvelle image"
@@ -2122,13 +2682,13 @@ msgid "Create DVD-ISO"
 msgstr "Créer DVD-ISO"
 
 msgid "Create a backup of your Video DVD on your DreamBox hard drive."
-msgstr "Créer une sauvegarde du DVD vidéo sur le disque dur de la STB."
+msgstr "Créer une sauvegarde du DVD vidéo sur le disque dur du STB."
 
 msgid "Create a backup of your Video-DVD"
 msgstr "Crérer une sauvegarde de votre DVD-Vidéo"
 
 msgid "Create a new AutoTimer."
-msgstr "Créer un nouveau AutoTimer."
+msgstr "Créer nouvelle ProAuto."
 
 msgid "Create a new timer using the classic editor"
 msgstr "Créer une nouvelle programmation en utilisant l'éditeur classique"
@@ -2143,7 +2703,7 @@ msgid "Create movie folder failed"
 msgstr "Echec création dossier films"
 
 msgid "Create preview pictures of your Movies"
-msgstr "Créer des images prévisualisation de vos films"
+msgstr "Créer des images prévisualisation des films"
 
 msgid "Create remote timers"
 msgstr "Créer programmations distantes"
@@ -2157,20 +2717,56 @@ msgstr "Echec création répertoire %s."
 msgid "Creating partition failed"
 msgstr "Echec création partition"
 
+msgid "Creation time: %s"
+msgstr "Heure création: %s"
+
 msgid "Croatian"
 msgstr "Croate"
 
+msgid "CrossEPG - Providers start order"
+msgstr "CrossEPG: Ordre départ Opérateurs"
+
+msgid "CrossEPG About"
+msgstr "A Propos de CrossEpg"
+
+msgid "CrossEPG Configuration"
+msgstr "Configuration CrossEpg"
+
+msgid "CrossEPG DataBase Information"
+msgstr "Info Base de données CrossEpg"
+
+msgid "CrossEPG Force Reload"
+msgstr "Forcer Rechargement EPG"
+
+msgid "CrossEPG Menu"
+msgstr "Menu CrossEpg"
+
+msgid "CrossEPG automatic actions"
+msgstr "Action Automatiques EPG"
+
+msgid "CrossEPG error: %s"
+msgstr "CrossEPG erreur: %s"
+
+msgid "CrossEPG setup panel"
+msgstr "Configuration CrossEPG"
+
+msgid "Current Page"
+msgstr "Page Actuelle"
+
 msgid "Current Running Image: "
-msgstr "Image actuelle"
+msgstr "Image actuelle: "
 
 msgid "Current Status:"
-msgstr "Etat actuel"
+msgstr "Etat actuel:"
 
 msgid "Current Transponder"
 msgstr "Transpondeur actuel"
 
 msgid "Current device: "
 msgstr "Périphérique actuel: "
+
+msgid "Current page is already exist."
+msgstr "La page actuelle existe déjà."
 
 msgid "Current settings (interface : br0)"
 msgstr "Paramètres actuels (interface : br0)"
@@ -2185,7 +2781,10 @@ msgid "Current version:"
 msgstr "Version actuelle:"
 
 msgid "Currently installed image"
-msgstr "Image installé actuellement"
+msgstr "Image installée actuellement"
+
+msgid "Currentpage(Bookmark)"
+msgstr "Page Actuelle(MarquePage)"
 
 msgid "Custom (%s)"
 msgstr "Personnel (%s)"
@@ -2285,7 +2884,7 @@ msgid ""
 "With the DVDPlayer you can play your DVDs on your STB from a DVD or even from an iso file or video_ts folder on your harddisc or network."
 msgstr ""
 "Le DVDPlayer joue vos DVDs sur votre STB.\n"
-"Avec le DVDPlayer vous pouvez jouer votre DVDs sur votre STB d'un DVD ou même d'un fichier iso ou dossier de video_ts sur votre disque dur ou réseau."
+"Avec le DVDPlayer vous pouvez jouer votre DVDs sur votre STB depuis un DVD ou même d'un fichier iso ou dossier de video_ts sur votre disque dur ou réseau."
 
 msgid "Daily automatic backup"
 msgstr "Sauvegarde auto journalière"
@@ -2312,10 +2911,13 @@ msgid "Decrease delay"
 msgstr "Diminuer le retard"
 
 msgid "Decrease delay by %i ms (can be set)"
-msgstr "Diminuer le retard par %i ms (peut-être réglé)"
+msgstr "Diminuer le retard de %i ms (peut-être réglé)"
 
 msgid "Deep Standby"
-msgstr "Veille profonde"
+msgstr "Veille prof."
+
+msgid "Deepstandby"
+msgstr "Veille Profonde"
 
 msgid "Default"
 msgstr "Standard"
@@ -2342,10 +2944,16 @@ msgid "Defaults"
 msgstr "Standards"
 
 msgid "Define a startup service"
-msgstr "Définir un services démarrage"
+msgstr "Définir le service au démarrage"
 
 msgid "Define a startup service for your STB."
-msgstr "Définir un services démarrage pour votre STB"
+msgstr "Définir le service au démarrage pour votre STB"
+
+msgid "Deflating channels list"
+msgstr "Décompresse liste chaînes"
+
+msgid "Deflating events"
+msgstr "Décompresse évenements"
 
 msgid "Deinterlacer mode for interlaced content"
 msgstr "Mode désentrelacé pour contenu entrelacé"
@@ -2355,6 +2963,9 @@ msgstr "Mode désentrelacé pour contenu progressif"
 
 msgid "Delay"
 msgstr "Délai"
+
+msgid "Delay x seconds after service started"
+msgstr "Retarder x secondes après démarrage service"
 
 msgid "Delete"
 msgstr "Effacer"
@@ -2384,6 +2995,9 @@ msgstr ""
 "Ne pas effacer plus de satellites configurés\n"
 "%s?"
 
+msgid "Delete_all_Crashlogs"
+msgstr "Efface tous Crash-Logs"
+
 msgid "Depth"
 msgstr "Profondeur"
 
@@ -2395,6 +3009,9 @@ msgstr "Decoder flux http"
 
 msgid "Description"
 msgstr "Description"
+
+msgid "Descriptors db size: %s"
+msgstr "Descripteurs taille db: %s"
 
 msgid "Deselect"
 msgstr "Désélectionner"
@@ -2414,15 +3031,15 @@ msgstr "Gestion des Périphériques"
 msgid "Devices Manager & Mountpoints"
 msgstr "Gérer et Monter Périphériques"
 
-msgid "Devices.."
-msgstr "Périphériques.."
-
 msgid ""
 "Devices changes need a system restart to take effects.\n"
 "Restart your Box now?"
 msgstr ""
 "Les changements nécessitent un redémarrage.\n"
 "Redémarrer maintenant ?"
+
+msgid "Devices.."
+msgstr "Périphériques"
 
 msgid "DiSEqC"
 msgstr "DiSEqC"
@@ -2450,6 +3067,15 @@ msgstr "Retrait contour digital"
 
 msgid "Dir:"
 msgstr "Répertoire:"
+
+msgid "Direct Input"
+msgstr "Saisie Directe"
+
+msgid "Direct Input(Bookmark)"
+msgstr "Saisie Directe(MarquePage)"
+
+msgid "Direct Input(Category)"
+msgstr "Saisie Directe(Catégorie)"
 
 msgid "Direct playback of Youtube videos"
 msgstr "Playback direct de vidéos Youtube"
@@ -2480,6 +3106,9 @@ msgstr "Désactiver recherche arrière plan"
 
 msgid "Disable crashlog reporting"
 msgstr "Désactiver rapport automatique crashlog"
+
+msgid "Disable shutdown in EPGRefresh time span:"
+msgstr "Désactiv ArrêtAuto pendant rafraich. EPG:"
 
 msgid "Disable timer"
 msgstr "Désactiver programmation"
@@ -2523,6 +3152,9 @@ msgstr "Paramètres afficheur"
 msgid "Display and Userinterface"
 msgstr "Affichage et interface utilisateur"
 
+msgid "Display message before playing next movie"
+msgstr "Affichage message avant de lancer film suivant"
+
 msgid "Display search results by:"
 msgstr "Afficher résultats recherche par:"
 
@@ -2534,9 +3166,6 @@ msgstr "Information sur le film depuis base de données Films Internet"
 
 msgid "Displays Movie Information from the Online Film Datenbank (German)"
 msgstr "Informations à partirde la banque de données en ligne.( allemagne)"
-
-msgid "Display message before playing next movie"
-msgstr "Affichage message avant de lancer film suivant"
 
 msgid "Dlna Browser & UPnP Client"
 msgstr "Explorateur DLNA et Client UPnP"
@@ -2562,7 +3191,7 @@ msgid ""
 "Do you really want to delete %s\n"
 "%s?"
 msgstr ""
-"Voulez vous l'effacer %s\n"
+"Voulez vous effacer %s\n"
 "%s?"
 
 msgid "Do you really want to delete %s?"
@@ -2598,6 +3227,12 @@ msgstr ""
 
 msgid "Do you want to burn this collection to DVD medium?"
 msgstr "Voulez-vous graver cette collection sur le DVD?"
+
+msgid "Do you want to delete the bookmark?"
+msgstr "Voulez vous supprimer le MarquePage ?"
+
+msgid "Do you want to delete the category and the bookmarks?"
+msgstr "Voulez vous supprimer la catégorie et le marque page ?"
 
 msgid "Do you want to do a service scan?"
 msgstr "Voulez-vous faire une analyse des services?"
@@ -2641,7 +3276,7 @@ msgid "Do you want to play DVD in drive?"
 msgstr "Voulez-vous lire le DVD dans le lecteur?"
 
 msgid "Do you want to preview this DVD before burning?"
-msgstr "Voulez-vous une prévue du DVD avant de le graver?"
+msgstr "Voulez-vous une pré-vue du DVD avant de le graver?"
 
 msgid "Do you want to reboot your STB?"
 msgstr "Voulez-vous redémarrer votre Vu+?"
@@ -2661,6 +3296,9 @@ msgstr "Voulez-vous reprendre cette lecture?"
 msgid "Do you want to see more entries?"
 msgstr "Voulez-vous voir plus d'entrées?"
 
+msgid "Do you want to set selected url to the Startpage?"
+msgstr "Attribuer l'URL sélectionnée au Marque Page ?"
+
 msgid "Do you want to submit your email address and name so that we can contact you if needed?"
 msgstr "voulez-vous soumettre votre adresse email et votre nom afin que l'on vous contacte si besoin?"
 
@@ -2672,15 +3310,6 @@ msgid ""
 "After pressing OK, please wait!"
 msgstr ""
 "Voulez-vous mettre à jour l'image Black Hole?\n"
-"Après appui sur OK, patientez!"
-
-msgid ""
-"Do you want to update your Black Pole image?\n"
-"\n"
-"After pressing OK, please wait!"
-msgstr ""
-"Voulez-vous mettre à jour l'image Black Pole ?\n"
-"\n"
 "Après appui sur OK, patientez!"
 
 msgid "Do you want to update your STB?"
@@ -2713,31 +3342,37 @@ msgid "Don't stop current event but disable coming events"
 msgstr "Ne pas stopper événement actuel, mais désactiver les prochains"
 
 msgid "Done - Installed or upgraded %d packages"
-msgstr "Terminé - Installé ou mis à jour de %d paquets"
+msgstr "Terminé- %d paquets Installés ou mis à jour"
 
 msgid "Done - Installed, upgraded or removed %d packages with %d errors"
 msgstr "Terminé - Installé, mis à jour ou retiré %d paquets avec %d erreurs"
+
+msgid "Down Key"
+msgstr "Flèche Basse"
 
 msgid "Download"
 msgstr "Télécharger"
 
 msgid "Download %s from Server"
-msgstr "Télécharge %s depuis le Serveur"
+msgstr "Télécharger %s depuis Serveur"
 
 msgid "Download .NFI-Files for USB-Flasher"
-msgstr "Téléchargement fichiers .NFI pour USB-flasheur"
+msgstr "Télécharger fichiers .NFI pour USB-flasheur"
 
 msgid "Download Complete"
 msgstr "Téléchargement terminé"
 
 msgid "Download Plugins"
-msgstr "Téléchargement Plugins"
+msgstr "Télécharger Plugins"
 
 msgid "Download Video"
-msgstr "Téléchargement vidéo"
+msgstr "Télécharger vidéo"
+
+msgid "Download epg once a day"
+msgstr "Télécharger epg 1 fois par jour"
 
 msgid "Download files from Rapidshare"
-msgstr "Téléchargement fichiers depuis rapidshare"
+msgstr "Télécharger fichiers depuis rapidshare"
 
 msgid "Download from remote failed"
 msgstr "Téléchargement depuis distant à échoué"
@@ -2748,6 +3383,9 @@ msgstr "Emplacement téléchargement"
 msgid "Download now"
 msgstr "Télécharger"
 
+msgid "Download on tune"
+msgstr "Télécharger en utilisation"
+
 msgid "Downloadable new plugins"
 msgstr "Nouvelles extensions téléchargables"
 
@@ -2757,6 +3395,15 @@ msgstr "Extensions téléchargeables"
 msgid "Downloading"
 msgstr "Téléchargement"
 
+msgid "Downloading XEPGDB"
+msgstr "Télécharge XEPGDB"
+
+msgid "Downloading channels list"
+msgstr "Télécharge liste de chaînes"
+
+msgid "Downloading events"
+msgstr "Télécharge évenements"
+
 msgid "Downloading plugin information. Please wait..."
 msgstr "Téléchargement des informations sur les extensions. Patientez SVP..."
 
@@ -2765,6 +3412,13 @@ msgstr "Téléchargement des services distants"
 
 msgid "Downloading screenshots. Please wait..."
 msgstr "Téléchargement captures écrans. Veuillez patienter..."
+
+msgid ""
+"Drive where you save data.\n"
+"The drive MUST be mounted in rw. If you can't see your device here probably is mounted as read only or autofs handle it only in read only mode. In case of mount it manually and try again"
+msgstr ""
+"Support où les données sont sauvegardées.\n"
+"Le support DOIT être monté en RW. Si vous ne pouvez pas le voir, il est probablement monté en lecture seule, ou bien autofs est en lecture seule. Dans ce cas, montez-le à la main et re-essayez."
 
 msgid "Driver for Ralink RT8070/RT3070/RT3370 based wireless-n USB devices."
 msgstr "Driver pour périphériques sans fil  Ralink RT8070/RT3070/RT3370 "
@@ -2784,11 +3438,14 @@ msgstr "Contraste dynamique"
 msgid "E"
 msgstr "E"
 
+msgid "E2 Light Multiboot"
+msgstr "Multi-Boot pour Enigma2"
+
 msgid "EPG Selection"
 msgstr "Sélection EPG"
 
 msgid "EPG encoding"
-msgstr "encodage EPG"
+msgstr "Encodage EPG"
 
 msgid "EPG language selection 1"
 msgstr "Sélection langue EPG choix 1"
@@ -2846,7 +3503,7 @@ msgid "Edit chapters of current title"
 msgstr "Editer chapitres titre actuel"
 
 msgid "Edit new timer defaults"
-msgstr "Editer nouvelle programmation standard"
+msgstr "Editer nouveau standard de programmation"
 
 msgid "Edit selected AutoTimer"
 msgstr "Editer ProgAuto sélectionnée"
@@ -2930,6 +3587,9 @@ msgstr "Autoriser 5V pour antenne active"
 msgid "Enable 64 bit (Input 10 hex keys)"
 msgstr "Activer 64 bit (avec clé 10 hexa)"
 
+msgid "Enable AutoShutDown:"
+msgstr "Activer ArrêtAuto:"
+
 msgid "Enable Automatic EPG Refresh"
 msgstr "Activer rafraichis. auto de l'Epg"
 
@@ -2964,7 +3624,7 @@ msgid "Enable HTTP Access"
 msgstr "Activer accès HTTP"
 
 msgid "Enable HTTP Authentication"
-msgstr "Ativer authentification HTTP"
+msgstr "Activer authentification HTTP"
 
 msgid "Enable HTTPS Access"
 msgstr "Activer accès HTTPS"
@@ -2973,7 +3633,7 @@ msgid "Enable HTTPS Authentication"
 msgstr "Activer authentification HTTPS"
 
 msgid "Enable Http Authentication"
-msgstr "Ativer authentification HTTP"
+msgstr "Activer authentification HTTP"
 
 msgid "Enable Https"
 msgstr "Activer Https"
@@ -2991,7 +3651,7 @@ msgid "Enable Panic button 0"
 msgstr "Activer Bouton 0"
 
 msgid "Enable Panic button 0 (zap to 1 & clear zap history)"
-msgstr "Activer Bouton 0 (zappe sur 1)"
+msgstr "Activer Bouton panique 0 (zappe sur 1)"
 
 msgid "Enable Service Restriction"
 msgstr "Activer restriction services"
@@ -3004,6 +3664,12 @@ msgstr "Activer Swap au démarrage"
 
 msgid "Enable ViaSat EPG"
 msgstr "Activer ViaSat EPG"
+
+msgid "Enable action after inactivity:"
+msgstr "Activer action après inactivité:"
+
+msgid "Enable csv import"
+msgstr "Activer import csv"
 
 msgid "Enable freesat EPG"
 msgstr "Activer Freesat EPG"
@@ -3039,7 +3705,7 @@ msgid "Encryption"
 msgstr "Cryptage"
 
 msgid "Encryption Key"
-msgstr "Clés cryptage"
+msgstr "Clé cryptage"
 
 msgid "Encryption Keytype"
 msgstr "Type clé cryptage"
@@ -3063,7 +3729,7 @@ msgid "English"
 msgstr "Anglais"
 
 msgid "Enigma2 Plugin to play AVI/DIVX/WMV/etc. videos from PC on your STB. Needs a running VLC from www.videolan.org on your pc."
-msgstr "Plugin Enigma2 pour jouer vidéos AVI/DIVX/WMV/etc. depuis le PC sur votre STB. Un VLC tournant est nécessaire de www.videolan.org sur votre pc."
+msgstr "Plugin Enigma2 pour jouer vidéos AVI/DIVX/WMV/etc. depuis le PC sur votre STB. VLC de www.videolan.org tournant sur votre pc est nécessaire."
 
 msgid ""
 "Enigma2 Skinselector\n"
@@ -3089,6 +3755,9 @@ msgstr ""
 
 msgid "Enter IP to scan..."
 msgstr "Saisir IP à analyser..."
+
+msgid "Enter Key"
+msgstr "Bouton Entrée"
 
 msgid "Enter URL"
 msgstr "Saisir URL"
@@ -3154,7 +3823,7 @@ msgid "Enter your email address so that we can contact you if needed."
 msgstr "Saisir votre adresse email afin que l'on vous contact si nécessaire."
 
 msgid "Enter your search term(s)"
-msgstr "Saisir vos terme(s) recherche ici"
+msgstr "Saisir vos termes de recherche ici"
 
 msgid "Entering a Custom command you have to set Predefined command: None "
 msgstr "Entrant une commande perso, paramètrez commande prédéfinie: Aucune "
@@ -3217,6 +3886,9 @@ msgstr "Taille estimée: %s \n"
 msgid "Estonian"
 msgstr "Estonien"
 
+msgid "Events count: %s"
+msgstr "NB Evenements: %s"
+
 msgid "Eventview"
 msgstr "Programme TV"
 
@@ -3265,6 +3937,9 @@ msgstr "Quitter sélection périphériques entrée"
 msgid "Exit network wizard"
 msgstr "Quitter assistant réseau"
 
+msgid "Exit the Opera browser."
+msgstr "Quitter explorateur Opéra."
+
 msgid "Exit the cleanup wizard"
 msgstr "Quitter l'assistant nettoyage"
 
@@ -3278,7 +3953,7 @@ msgid "Expert"
 msgstr "Expert"
 
 msgid "Extended Networksetup Plugin..."
-msgstr "Extension paramètre réseau avancée..."
+msgstr "Plugin réglage réseau avancé..."
 
 msgid "Extended Setup..."
 msgstr "Paramètre avancé..."
@@ -3312,6 +3987,9 @@ msgstr "FLASH: "
 
 msgid "FPGA"
 msgstr "FPGA"
+
+msgid "FPGA Upgrade"
+msgstr "Mise à jour FPGA (boot loader)"
 
 msgid "FRAGM Threshold (256~2346)"
 msgstr "Seuil FRAGM (256~2346"
@@ -3365,7 +4043,7 @@ msgid "Fast Plugin"
 msgstr "Plugin Rapide"
 
 msgid "Fast Plugin Setup"
-msgstr "Paramètrage Plugin Rapide"
+msgstr "Paramétrage Plugin Rapide"
 
 msgid "Fast Plugin not found. You have to setup Fast Plugin before to use this shortcut."
 msgstr "Plugin Rapide non trouvé. Paramétrez d'abord Plugin Rapide avant d'utiliser ce raccourci."
@@ -3392,11 +4070,17 @@ msgstr ""
 msgid "Favourites"
 msgstr "Favoris"
 
+msgid "Feeds Std."
+msgstr "Flux Std."
+
 msgid "Fetching feed entries"
 msgstr "Chercher entrées feed"
 
 msgid "Fetching search entries"
 msgstr "Chercher entrées recherche"
+
+msgid "File"
+msgstr "Fichier"
 
 msgid ""
 "Files extraction in progress...\n"
@@ -3431,10 +4115,10 @@ msgid "Finished"
 msgstr "Terminé"
 
 msgid "Finished configuring your network"
-msgstr "Termine la configuration de votre réseau"
+msgstr "Configuration de votre réseau finie"
 
 msgid "Finished restarting your network"
-msgstr "Termine le redémarrage de votre réseau"
+msgstr "Redémarrage de votre réseau fini"
 
 msgid "Finnish"
 msgstr "Finlandais"
@@ -3473,10 +4157,13 @@ msgid "For use this plugin, you must update the kernel version to 3.1 or later"
 msgstr "Pour utiliser ce plugin, le kernel doit être supérieur à 3.1"
 
 msgid "Force csv import now"
-msgstr "Forcer import csv maintenant"
+msgstr "Forcer import csv"
 
 msgid "Force epg reload"
 msgstr "Forcer rechargement epg"
+
+msgid "Force epg reload on boot"
+msgstr "Forcer chargement epg au boot"
 
 msgid "Force epg.dat conversion now"
 msgstr "Forcer conversion epg.dat"
@@ -3514,6 +4201,9 @@ msgstr "Taille pas scan fréquence (khz)"
 msgid "Frequency steps"
 msgstr "Pas fréquences"
 
+msgid "Frequency:"
+msgstr "Fréquence"
+
 msgid "Frequently asked questions"
 msgstr "Questions fréquentes"
 
@@ -3539,7 +4229,7 @@ msgid "Frontend for /tmp/mmi.socket"
 msgstr "Tuner pour /tmp/mmi.socket"
 
 msgid "Frontprocessor version: %d"
-msgstr "Version du processeur frontal : %d"
+msgstr "Version processeur frontal : %d"
 
 msgid "Fsck failed"
 msgstr "Echec Fsck"
@@ -3583,6 +4273,9 @@ msgstr "Jouer"
 
 msgid "Gateway"
 msgstr "Passerelle"
+
+msgid "Gateway : "
+msgstr "Passerelle:"
 
 msgid "General AC3 Delay"
 msgstr "Retard général AC3"
@@ -3648,13 +4341,22 @@ msgid "Get latest release image"
 msgstr "Obtenir dernière image publiée"
 
 msgid "Getting plugin information. Please wait..."
-msgstr "Récupération des informations du plugin. Patientez SVP..."
+msgstr "Récupération des informations du plugin. Patientez..."
 
 msgid "Global Settings"
 msgstr "Param. Globaux"
 
 msgid "Global delay"
 msgstr "Retard global"
+
+msgid "Go to next page."
+msgstr "Page suivante."
+
+msgid "Go to previous page."
+msgstr "Aller page précédente."
+
+msgid "Go to standby"
+msgstr "Aller en veille"
 
 msgid "Goto 0"
 msgstr "Aller à 0"
@@ -3679,7 +4381,7 @@ msgid "Great Britain"
 msgstr "Grande Bretagne"
 
 msgid "Greek"
-msgstr "Grèque"
+msgstr "Grec"
 
 msgid "Green boost"
 msgstr "Intensifier le vert"
@@ -3781,11 +4483,30 @@ msgstr "Paramètres disque dur"
 msgid "Harddisk standby after"
 msgstr "Disque dur en veille après"
 
+msgid "Hashes count: %s"
+msgstr "NB morceaux: %s"
+
 msgid "Have fun !!"
 msgstr "Amusez vous !!"
 
+msgid "HbbTV Applications"
+msgstr "Application HbbTV"
+
+msgid ""
+"HbbTV Browser was not running.\n"
+"Please running browser before start HbbTV Application."
+msgstr ""
+"Explorateur HbbTV ne fonctionne pas.\n"
+"Démarrer l'explorateur avant l'application HbbTV."
+
+msgid "HbbTV Plugin"
+msgstr "Plugin HbbTV"
+
 msgid "Hdd in use: "
 msgstr "Disque utilisé: "
+
+msgid "Headers db size: %s"
+msgstr "Taille en-têtes db:"
 
 msgid "Help"
 msgstr "Aide"
@@ -3845,7 +4566,7 @@ msgid "Https port"
 msgstr "Port Https"
 
 msgid "Hue"
-msgstr "Couleur"
+msgstr "Saturation"
 
 msgid "Hungarian"
 msgstr "Hongrois"
@@ -3856,11 +4577,14 @@ msgstr "visionneuse IMAP4e-mail pour le Vu+"
 msgid "IN % UNIVERSE"
 msgstr "Dans l'univers %"
 
+msgid "IP"
+msgstr "IP"
+
 msgid "IP Address"
 msgstr "Adresse IP"
 
-msgid "IP"
-msgstr "IP"
+msgid "IP Address : "
+msgstr "Adresse IP: "
 
 msgid "IP:"
 msgstr "IP:"
@@ -3884,7 +4608,7 @@ msgid "If a timer conflict occurs, AutoTimer will search outside the timespan fo
 msgstr "En cas de conflit, ProgAuto recherchera des évènements semblables et ils seront automatiquement ajoutés"
 
 msgid "If installed, the plugin allows to modify the order in which entries of the main menu are shown.It can be changed using the \"MenuSort\" plugin, launchable from the regular plugin overview."
-msgstr "Ce plugin permet de modifier l'ordre des entrées du menu principal. On peut le modifier à l'aide du  \"MenuSort\" plugin, accessible depuis le menu Plugins."
+msgstr "Ce plugin permet de modifier l'ordre des entrées du menu principal. On peut le modifier à l'aide du  plugin \"MenuSort\", accessible depuis le menu Plugins."
 
 msgid ""
 "If you see this, something is wrong with\n"
@@ -3907,11 +4631,21 @@ msgstr "Si votre TV a un perfectionnement de luminosité ou de contraste, neutra
 msgid "If your usb drive is connected and mounted you have to poweroff your box, remove the usb device and reboot.\n"
 msgstr "Si le disque USB est connecté, arrêtez le Vu+ ; déconnectez le et relancez le Vu+.\n"
 
+msgid "Ifconfig"
+msgstr "Info Interfaces"
+
 msgid "Ignore Broadcast SSID"
 msgstr "Ignorer Emission SSID"
 
 msgid "Image Name"
 msgstr "Nom de l'Image"
+
+msgid ""
+"Import *.csv and *.bin from %s/import or %s/import\n"
+"(*.bin are binaries with a csv as stdout)"
+msgstr ""
+"Importer *.csv et *.bin de %s/import ou %s/import\n"
+"(*.bin sont des binaires avec csv en sortie)"
 
 msgid "Import AutoTimer"
 msgstr "Importer ProgAuto"
@@ -3964,6 +4698,9 @@ msgstr "Augmenter la tension"
 msgid "Index"
 msgstr "Index"
 
+msgid "Indexes db size: %s"
+msgstr "Taille index db: %s"
+
 msgid "India"
 msgstr "Inde"
 
@@ -3998,7 +4735,7 @@ msgid "Initial fast forward speed"
 msgstr "Vitesse initiale d'avance rapide"
 
 msgid "Initial location in new timers"
-msgstr "Emplacement initial pour nouveaux enregistrements"
+msgstr "Emplacement initial pour nouvelles programmations"
 
 msgid "Initial rewind speed"
 msgstr "Vitesse initiale retour arrière"
@@ -4076,7 +4813,7 @@ msgid "Installing package content... Please wait..."
 msgstr "Installation contenu paquet... Veuillez patienter..."
 
 msgid "Instant Record..."
-msgstr "enregistrement immédiat..."
+msgstr "Enregistrement immédiat..."
 
 msgid "Instant record location"
 msgstr "Emplacement enregistrements immédiats"
@@ -4108,10 +4845,19 @@ msgid "Internal USB Slot"
 msgstr "Slot USB interne"
 
 msgid "Internal firmware updater"
-msgstr "Updater interne firmware"
+msgstr "MàJ interne du firmware"
+
+msgid "Internal flash"
+msgstr "Flash interne"
+
+msgid "Internal flash (unsuggested)"
+msgstr "En Flash (non recommandé)"
 
 msgid "Internal hdd only"
 msgstr "Disque Interne seulement"
+
+msgid "Invalid "
+msgstr "Non Valide "
 
 msgid "Invalid Fragm Threshold\n"
 msgstr "Seuil Fragm invalide\n"
@@ -4124,6 +4870,16 @@ msgstr "Seuil RTS invalide\n"
 
 msgid "Invalid SSID\n"
 msgstr "SSID invalide\n"
+
+msgid ""
+"Invalid URL!!(Empty)\n"
+"Please, Input to the URL."
+msgstr ""
+"URL non valide!!\n"
+"Saisissez une URL."
+
+msgid "Invalid URL. Please check again!!"
+msgstr "URL non valide. Vérifiez à nouveau."
 
 msgid ""
 "Invalid WEP key\n"
@@ -4141,7 +4897,7 @@ msgid "Invalid WirelessLan Module.\n"
 msgstr "Module LAN WIFI invalide.\n"
 
 msgid "Invalid beacon\n"
-msgstr " Beacon invalide\n"
+msgstr "Beacon invalide\n"
 
 msgid "Invalid channel\n"
 msgstr "Canal invalide\n"
@@ -4159,7 +4915,7 @@ msgid "Invalid response from server."
 msgstr "Réponse invalide du serveur."
 
 msgid "Invalid response from server. Please report: %s"
-msgstr "Réponse invalide du serveur. Veuillez rapporter: %s"
+msgstr "Réponse invalide du serveur. Veuillez reporter: %s"
 
 msgid "Invalid selection"
 msgstr "sélection invalide"
@@ -4183,10 +4939,22 @@ msgid "Ireland"
 msgstr "Irlande"
 
 msgid "Is this videomode ok?"
-msgstr "Est-ce que ce mode vidéo est OK?"
+msgstr "Ce mode vidéo est-il OK?"
 
 msgid "Israel"
 msgstr "Israël"
+
+msgid "It will move the mouse pointer down."
+msgstr "Déplace le pointeur vers le bas."
+
+msgid "It will move the mouse pointer left."
+msgstr "Déplace le pointeur vers la gauche."
+
+msgid "It will move the mouse pointer right."
+msgstr "Déplace le pointeur vers la droite."
+
+msgid "It will move the mouse pointer up."
+msgstr "Déplace le pointeur vers le haut."
 
 msgid ""
 "It's possible to restrict an AutoTimer to certain Services or Bouquets or to deny specific ones.\n"
@@ -4302,6 +5070,9 @@ msgstr "Clavier Azerty"
 msgid "Keyboard English"
 msgstr "Clavier Qwerty"
 
+msgid "Keyboard Layout"
+msgstr "Type Clavier"
+
 msgid "Keyboard Map"
 msgstr "Agencement du clavier"
 
@@ -4332,6 +5103,13 @@ msgstr "LOF/H"
 msgid "LOF/L"
 msgstr "LOF/L"
 
+msgid ""
+"Lamedb used for epg.dat conversion.\n"
+"This option doesn't work with crossepg patch v2"
+msgstr ""
+"Lamedb utilisé pour conversion epg.dat.\n"
+"Ne fonctionne pas avec patch crossepg v2"
+
 msgid "Language"
 msgstr "Langage"
 
@@ -4350,6 +5128,9 @@ msgstr "Config Préc"
 msgid "Last speed"
 msgstr "Dernière vitesse"
 
+msgid "Last update time: %s"
+msgstr "Dernière MàJ: %s"
+
 msgid "Latest 10 Uploads"
 msgstr "10 derniers téléchargements"
 
@@ -4360,10 +5141,16 @@ msgid "Latvian"
 msgstr "Letton"
 
 msgid "Leave DVD Player?"
-msgstr "Laissez le lecteur DVD?"
+msgstr "Quitter le lecteur DVD?"
 
 msgid "Left"
 msgstr "Gauche"
+
+msgid "Left Key"
+msgstr "Flèche gauche"
+
+msgid "Left Mouse Button"
+msgstr "Bouton souris gauche"
 
 msgid "Letterbox"
 msgstr "Boîte à lettre"
@@ -4408,7 +5195,7 @@ msgid "Lithuanian"
 msgstr "Lithuanien"
 
 msgid "Load"
-msgstr "charger"
+msgstr "Charger"
 
 msgid "Load Length of Movies in Movielist"
 msgstr "Charger longueur des films dans liste films"
@@ -4418,6 +5205,9 @@ msgstr "Charger feed au démarrage:"
 
 msgid "Load movie-length"
 msgstr "Charger longueur-film"
+
+msgid "Loading data"
+msgstr "Chargement données"
 
 msgid "Local Network"
 msgstr "Réseau local"
@@ -4536,14 +5326,14 @@ msgstr "Gérer vos partages réseau..."
 msgid "Manage your receiver's software"
 msgstr "Gestion de votre logiciel récepteur"
 
+msgid "Manual"
+msgstr "Manuel"
+
 msgid "Manual Fan control"
 msgstr "Contrôle manuel ventilo"
 
 msgid "Manual Install Bh packges"
 msgstr "Installation manuelle de paquets BH"
-
-msgid "Manual Install Bh/Bp packges"
-msgstr "Installation manuelle de paquets BH / BP"
 
 msgid "Manual Install Ipk packges"
 msgstr "Installation manuelle de IPK"
@@ -4588,7 +5378,7 @@ msgid "Maximum duration (in m)"
 msgstr "Durée maximum (en m)"
 
 msgid "Maximum event duration to match. If an event is longer than this amount of time (without offset) it won't be matched."
-msgstr "Choisir durée Maximum émission à assortir. Si une émission est plus longue que ce choix il ne sera pas sélectionné."
+msgstr "Choisir durée Maximum émission à assortir. Si une émission est plus longue que ce choix elle ne sera pas sélectionnée."
 
 msgid "Media player"
 msgstr "Lecteur de Médias"
@@ -4604,7 +5394,7 @@ msgid ""
 "Play all your favorite music and video files, organize them in playlists, view cover and album information."
 msgstr ""
 "Mediaplayer jouez vos musiques et vidéos préférées.\n"
-"Jouez toute vos musiques préférées et fichiers vidéo, organisez les en playlists, Visionnez couverture et informations album."
+"Jouez toute vos musiques préférées et fichiers vidéo, organisez les en liste de lecture, Visionnez couverture et informations album."
 
 msgid "Mediatomb Server Disabled."
 msgstr "Serveur Mediatomb Désactivé."
@@ -4624,7 +5414,7 @@ msgid ""
 "Mediatomb configs: /.mediatomb/config.xml\n"
 "Mediatomb docs & howto: http://mediatomb.cc/"
 msgstr ""
-"Mediatomb: Serveur média UPnP sauce Black Hole.\n"
+"Mediatomb: Serveur média UPnP version Black Hole.\n"
 "Mediatomb déjà configuré et prêt à fonctionner. Activez le et jouez.\n"
 "Mediatomb inclut une interface url pour gérer vos médias.\n"
 "\n"
@@ -4658,7 +5448,7 @@ msgid ""
 "MeoBoot successfully updated. You can restart the plugin now.\n"
 "Have fun !!"
 msgstr ""
-"Mise à jour Meoboot terminée avec succès. Vous pouvez redémarer.\n"
+"Mise à jour Meoboot terminée avec succès. Vous pouvez redémarrer.\n"
 "Amusez vous bien !!"
 
 msgid "Meoboot will stop all your Vu+ activity now to install the new image."
@@ -4683,17 +5473,23 @@ msgstr "Fusionner"
 msgid "Merge directory "
 msgstr "Fusionne répertoire "
 
+msgid "Merging XEPGDB"
+msgstr "Fusionne XEPGDB"
+
 msgid "Merlin Music Player and iDream"
 msgstr "Music Player Merlin et iDream"
 
 msgid "Message"
 msgstr "Message"
 
+msgid "Message timeout (sec):"
+msgstr "Durée Message (sec):"
+
 msgid "Message..."
 msgstr "Message..."
 
 msgid "Method"
-msgstr "Method"
+msgstr "Méthode"
 
 msgid "Mexico"
 msgstr "Mexique"
@@ -4717,23 +5513,6 @@ msgid ""
 "Minidlna home site: http://sourceforge.net/projects/minidlna/"
 msgstr ""
 "'Minidlna: UPnP serveur média version Black Hole.\n"
-"Minidlna est totalement configuré et prêt à fonctionner. Juste à activer.\n"
-"Minidlna inclut une interface web.\n"
-"\n"
-"Minidlna webif url: http://ip_box:8200\n"
-"Minidlna config: /etc/minidlna.conf\n"
-"Minidlna home site: http://sourceforge.net/projects/minidlna/"
-
-msgid ""
-"Minidlna: UPnP media server Black Pole version.\n"
-"Minidlna is fully configured for your box and ready to work. Just enable it and play.\n"
-"Minidlna include little web interface.\n"
-"\n"
-"Minidlna webif url: http://ip_box:8200\n"
-"Minidlna config: /etc/minidlna.conf\n"
-"Minidlna home site: http://sourceforge.net/projects/minidlna/"
-msgstr ""
-"'Minidlna: UPnP serveur média version Black Pole.\n"
 "Minidlna est totalement configuré et prêt à fonctionner. Juste à activer.\n"
 "Minidlna inclut une interface web.\n"
 "\n"
@@ -4850,8 +5629,14 @@ msgstr "Editeur montages"
 msgid "Mounts management"
 msgstr "Gérer montages"
 
+msgid "Mouse"
+msgstr "Souris"
+
 msgid "Move Picture in Picture"
 msgstr "Déplacer l'incrustation d'image"
+
+msgid "Move down"
+msgstr "Descendre"
 
 msgid "Move east"
 msgstr "Déplacer vers l'est"
@@ -4891,6 +5676,9 @@ msgstr "Déplacer écran vers le coin haut droit"
 
 msgid "Move screen up"
 msgstr "Déplacer écran vers le haut"
+
+msgid "Move up"
+msgstr "Remonter"
 
 msgid "Move west"
 msgstr "Déplacer vers l'ouest"
@@ -4933,6 +5721,9 @@ msgstr "Sourdine"
 
 msgid "My TubePlayer"
 msgstr "Lecteur MyTube"
+
+msgid "My favorite"
+msgstr "Ma favorite"
 
 msgid "MyTube Settings"
 msgstr "Paramètres MyTube"
@@ -5111,8 +5902,14 @@ msgstr "Thème Nemesis ShadowLine"
 msgid "Nemesis ShadowLine Skin for the STB"
 msgstr "Thème Nemesis ShadowLine pour la STB"
 
+msgid "NetMask : "
+msgstr "Masque : "
+
 msgid "Netmask"
 msgstr "Masque sous réseau"
+
+msgid "Netstat"
+msgstr "Stat. Réseau"
 
 msgid "Network"
 msgstr "Réseau"
@@ -5190,7 +5987,7 @@ msgid "New Zealand"
 msgstr "Nouvelle Zélande"
 
 msgid "New version:"
-msgstr "Nouvelle version : "
+msgstr "Nouvelle version :"
 
 msgid "News & Politics"
 msgstr "Nouvelles et Politique"
@@ -5247,17 +6044,20 @@ msgstr "Description non disponible."
 msgid "No details for this image file"
 msgstr "Aucun détails pour ce fichier image"
 
+msgid "No detected HbbTV applications."
+msgstr "Pas d'application HbbTV trouvée."
+
 msgid "No displayable files on this medium found!"
-msgstr "Aucun fichiers affichables trouvés sur ce support!"
+msgstr "Aucun fichier affichable trouvé sur ce support!"
 
 msgid "No event info found, recording indefinitely."
 msgstr "Aucune information trouvée sur l'émission, enregistre indéfiniment."
 
 msgid "No fast winding possible yet.. but you can use the number buttons to skip forward/backward!"
-msgstr "Aucun passage rapide possible encore. Cependant, vous pouvez sauter avec les boutons numériques avant/arrière!"
+msgstr "Pas d'avance rapide possible... Cependant, vous pouvez sauter avec les boutons numériques avant/arrière!"
 
 msgid "No free tuner!"
-msgstr "Pas de tuner libre"
+msgstr "Aucun tuner libre"
 
 msgid "No information..."
 msgstr "Pas d'information..."
@@ -5275,7 +6075,7 @@ msgid "No package installed. Nothing to remove."
 msgstr "Aucun paquet installé. Rien à enlever"
 
 msgid "No packages were upgraded yet. So you can check your network and try again."
-msgstr "Aucun paquet n'a été encore upgradé. Veuillez vérifier le réseau et réessayer."
+msgstr "Aucun paquet n'a été encore mis à jour. Veuillez vérifier le réseau et réessayer."
 
 msgid "No picture on TV? Press EXIT and retry."
 msgstr "Pas d'image sur la TV? Presser EXIT et réessayer."
@@ -5290,7 +6090,7 @@ msgid "No satellite frontend found!!"
 msgstr "Aucun tuner satellite trouvé!!"
 
 msgid "No selected binary data!!"
-msgstr "Pas de données binaires selectionnée!"
+msgstr "Pas de donnée binaire selectionnée!"
 
 msgid "No tags are set on these movies."
 msgstr "Aucun pointeur réglé sur ces films."
@@ -5315,7 +6115,7 @@ msgid ""
 msgstr ""
 "Aucun Service-PIN trouvé!\n"
 "Voulez-vous changer le Service-PIN maintenant?\n"
-"Si vous répondez 'NON', la protection de service restera désactivé!"
+"Si vous répondez 'NON', la protection de service restera désactivée!"
 
 msgid ""
 "No valid setup PIN found!\n"
@@ -5324,13 +6124,13 @@ msgid ""
 msgstr ""
 "Aucun Réglages-PIN trouvé!\n"
 "Voulez-vous changer le Réglages-PIN maintenant?\n"
-"Si vous répondez 'NON', la protection des Réglages restera désactivé!"
+"Si vous répondez 'NON', la protection des Réglages restera désactivée!"
 
 msgid "No videos to display"
 msgstr "Pas de vidéos à afficher"
 
 msgid "No wireless networks found! Searching..."
-msgstr "Pas de réseaux sans fils ! Recherche..."
+msgstr "Aucun réseau sans fil trouvé! Recherche.."
 
 msgid ""
 "No working local network adapter found.\n"
@@ -5352,7 +6152,7 @@ msgstr ""
 "Veuillez vérifier que vous avez inséré un périphérique WLAN compatible ou activer votre interface réseau locale."
 
 msgid "No, but play video again"
-msgstr "Non, mais jouer encore vidéo."
+msgstr "Non, mais lire encore vidéo."
 
 msgid "No, but restart from begin"
 msgstr "Non, mais relancer depuis le début"
@@ -5367,7 +6167,7 @@ msgid "No, do nothing."
 msgstr "Non, ne rien faire."
 
 msgid "No, just start my dreambox"
-msgstr "Non, juste démarrer ma STB"
+msgstr "Non, juste démarrer le Vu+"
 
 msgid "No, never"
 msgstr "Non, jamais"
@@ -5391,7 +6191,7 @@ msgid "Nonlinear"
 msgstr "Non Linéaire"
 
 msgid "Nonprofits & Activism"
-msgstr "Nonprofits & Activisme"
+msgstr "Nonprofit & Activisme"
 
 msgid "North"
 msgstr "Nord"
@@ -5434,13 +6234,13 @@ msgstr ""
 msgid ""
 "Nothing to scan!\n"
 "Please setup your tuner settings before you start a service scan."
-msgstr "Rien à analyser!Veuillez paramétrer votre tuner avant de démarrer une analyse de chaînes."
+msgstr "Rien à analyser! Veuillez paramétrer votre tuner avant de démarrer une analyse de chaînes."
 
 msgid "Now Playing"
 msgstr "Lecture en cours"
 
 msgid "Now, use the contrast setting to turn up the brightness of the background as much as possible, but make sure that you can still see the difference between the two brightest levels of shades.If you have done that, press OK."
-msgstr "Maintenant, utilisez les paramètres de contraste pour indiquer la luminosité du fond autant que possible, mais assurez-vous que vous pouvez toujours voir la différence entre les deux niveaux les plus lumineux des nuances. Si vous avez fait cela, pressez OK."
+msgstr "Maintenant, utilisez les paramètres de contraste pour augmenter la luminosité du fond autant que possible, mais assurez-vous que vous pouvez toujours voir la différence entre les deux niveaux les plus lumineux des nuances. Si vous avez fait cela, pressez OK."
 
 msgid "Number of scheduled recordings left."
 msgstr "Nombre d'enregistrements programmés restants."
@@ -5448,11 +6248,14 @@ msgstr "Nombre d'enregistrements programmés restants."
 msgid "OK"
 msgstr "OK"
 
+msgid "OK = Menu"
+msgstr "OK = Menu"
+
 msgid "OK, guide me through the upgrade process"
 msgstr "D'accord, guidez moi à travers la procédure de mise à jour"
 
 msgid "OK, remove another extensions"
-msgstr "OK, retirer autre extensions"
+msgstr "OK, retirer autre extension"
 
 msgid "OK, remove some extensions"
 msgstr "OK, retirer quelques extensions"
@@ -5496,14 +6299,11 @@ msgstr "Un"
 msgid "Online Black Hole image update"
 msgstr "Mise à jour image Black Hole"
 
-msgid "Online Black Pole image update"
-msgstr "Mise à jour image Black Pole"
-
 msgid "Online Feeds Extensions"
 msgstr "Serveur d'extensions en ligne"
 
 msgid "Online Feeds Settings update"
-msgstr "Mises à jour en ligne"
+msgstr "Listes de Chaînes en Ligne"
 
 msgid "Online Feeds all Packages"
 msgstr "Serveur d'extensions tous paquets"
@@ -5515,19 +6315,32 @@ msgid "Only Free scan"
 msgstr "Scanner seulement FTA"
 
 msgid "Only add timer for next x days"
-msgstr "programer selement pour les x prochains jours"
+msgstr "Programmer seulement pour les x prochains jours"
 
 msgid "Only extensions."
 msgstr "Extensions seules"
 
+msgid ""
+"Only for opentv providers.\n"
+"If you zap on channel used from a provider it download the epg in background"
+msgstr ""
+"Seulement pour opérateurs opentv.\n"
+"Si vous zappez sur une chaîne de cet opérateur, l'EPG est chargé en tache de fond"
+
 msgid "Only match during timespan"
-msgstr "Seulement correspondant pendant la période"
+msgstr "Seulement correspondant durant la période"
 
 msgid "Only on Service: %s"
 msgstr "Seulement sur service: %s"
 
 msgid "Open Context Menu"
 msgstr "Ouvrir menu contextuel"
+
+msgid "Open Startpage"
+msgstr "Ouvrir PageDémarrage"
+
+msgid "Open URL"
+msgstr "Ouvrir URL"
 
 msgid "Open plugin menu"
 msgstr "Ouvrir menu plugin"
@@ -5552,6 +6365,22 @@ msgstr "OpenWebInterface Activé"
 
 msgid "OpenWebif Configuration"
 msgstr "Configuration OpenWebif"
+
+msgid "Opera Browser"
+msgstr "Explorateur Opera"
+
+msgid ""
+"Opera Browser was not running.\n"
+"Please running browser using [File]>[Start/Stop] menu."
+msgstr ""
+"Explorateur non actif\n"
+"Démarrer explorateur avec  [Fichier]>[Démarrer/Stopper]."
+
+msgid "Opera Web Browser"
+msgstr "Explorateur web Opera"
+
+msgid "Opera Web Browser Plugin v1.0"
+msgstr "Plugin Explorateur Opera Web v1.0"
 
 msgid "Optionally enter your name if you want to."
 msgstr "Optionnel, saisir votre nom si vous le souhaitez."
@@ -5604,6 +6433,17 @@ msgstr "PIDs"
 msgid "PIN :"
 msgstr "PIN :"
 
+msgid ""
+"PLEASE READ!\n"
+"No disk found. An hard drive or an usb pen is HARDLY SUGGESTED. If you still want use your internal flash pay attention to:\n"
+"(1) If you don't have enough free space your box may completely block and you need to flash it again\n"
+"(2) Many write operations on your internal flash may damage your flash memory"
+msgstr ""
+"LIZEZ!\n"
+"Pas de disque trouvé. Un disque dur ou clé USB est fortement recommandé. Si vous voulez utiliser la Flash assurez vous:\n"
+"(1) Si la place manque, le Vu+ risque de bloquer complètement et vous devrez le flasher à nouveau.\n"
+"(2) De nombreuses écritures sur la Flash risquent de l'endommager"
+
 msgid "PMT PID"
 msgstr "PID PMT "
 
@@ -5634,6 +6474,12 @@ msgstr "Gestion des paquets"
 msgid "Packet manager"
 msgstr "Gestionnaire paquet"
 
+msgid "PageDown Key"
+msgstr "Bouton PageSuivante"
+
+msgid "PageUp Key"
+msgstr "Bouton PagePrécédente"
+
 msgid "Pan&Scan"
 msgstr "Pan&Scan"
 
@@ -5654,13 +6500,25 @@ msgid "Parental control"
 msgstr "Contrôle parental"
 
 msgid "Parental control services Editor"
-msgstr "Editeur des contrôles services parentals"
+msgstr "Editeur des contrôles services parentaux"
 
 msgid "Parental control setup"
 msgstr "Paramètres contrôle parental"
 
 msgid "Parental control type"
 msgstr "Type contrôle parental"
+
+msgid "Parsing"
+msgstr "Analyse syntaxique"
+
+msgid "Parsing channels list"
+msgstr "Analyse liste de chaînes"
+
+msgid "Parsing events"
+msgstr "Analyse évenements"
+
+msgid "Parsing titles"
+msgstr "Analyse titres"
 
 msgid "Partition size"
 msgstr "Taille partition"
@@ -5763,7 +6621,7 @@ msgid "Picons Packages"
 msgstr "Packs de Picons"
 
 msgid "PicturePlayer"
-msgstr "Visualisateur"
+msgstr "Afficher Photos"
 
 msgid "Pillarbox"
 msgstr "Bandes noires"
@@ -5775,46 +6633,46 @@ msgid "Pin code needed"
 msgstr "Code Pin requis"
 
 msgid "Play"
-msgstr "Jouer"
+msgstr "Lire"
 
 msgid "Play Audio-CD..."
-msgstr "Jouer CD-Audio..."
+msgstr "Lire CD-Audio..."
 
 msgid "Play DVD"
-msgstr "Jouer DVD..."
+msgstr "Lire DVD..."
 
 msgid "Play DVDs"
-msgstr "Joue DVDs"
+msgstr "Lire des DVDs"
 
 msgid "Play Internet Radio downloaded from Last.FM"
-msgstr "Jouer dernière radio FM téléchargée sur le net"
+msgstr "Lire dernière radio FM téléchargée sur le net"
 
 msgid "Play Internet Radio downloaded from ShoutCast"
-msgstr "Jouer derniere radio shoutCast téléchargée sur le net"
+msgstr "Lire derniere radio shoutCast téléchargée sur le net"
 
 msgid "Play Music..."
-msgstr "Jouer Musique..."
+msgstr "Lire Musique..."
 
 msgid "Play YouTube movies"
-msgstr "Jouer films YouTube"
+msgstr "Lire films YouTube"
 
 msgid "Play next (return to movie list)"
-msgstr "Jouer suivant (retour à liste)"
+msgstr "Lire suivant (retour à liste)"
 
 msgid "Play next (return to previous service)"
-msgstr "Jouer suivant (retour service précédent)"
+msgstr "Lire suivant (retour service précédent)"
 
 msgid "Play next video"
-msgstr "Jouer vidéo suivante"
+msgstr "Lire vidéo suivante"
 
 msgid "Play recorded movies..."
-msgstr "lire les films enregistrés..."
+msgstr "Lire les films enregistrés..."
 
 msgid "Play video again"
-msgstr "Jouer vidéo encore"
+msgstr "Lire vidéo encore"
 
 msgid "Play videos from PC on your STB"
-msgstr "Jouer vidéo du PC sur votre STB"
+msgstr "Lire vidéo du PC sur votre STB"
 
 msgid "Playback of Youtube through a PC"
 msgstr "Playback de Youtube à travers un PC"
@@ -5826,7 +6684,7 @@ msgid "Player for Network and Internet Streams."
 msgstr "Lecteur pour flux réseau et internet."
 
 msgid "Plays your favorite music and videos"
-msgstr "Jouer vos musiques et vidéos favorites"
+msgstr "Lire vos musiques et vidéos favorites"
 
 msgid "Please Reboot"
 msgstr "Veuiller rebooter"
@@ -5852,14 +6710,26 @@ msgstr "Veuillez changer heure fin enregistrement"
 msgid "Please check your network settings!"
 msgstr "Veuillez vérifier vos paramètres réseau!"
 
+msgid "Please choose an HbbTV application."
+msgstr "Sélectionner une application HbbTV."
+
 msgid "Please choose an extension..."
 msgstr "Veuillez choisir une extension..."
 
 msgid "Please choose he package..."
 msgstr "Veuillez choisir le paquet..."
 
+msgid "Please choose one."
+msgstr "Choisissez en une"
+
 msgid "Please choose the default services lists you want to install."
 msgstr "Veuillez choisir la liste services standard à installer."
+
+msgid "Please choose."
+msgstr "Choisissez."
+
+msgid "Please configure crossepg before start downloader"
+msgstr "Configurez crossepg avant de télécharger"
 
 msgid ""
 "Please configure or verify your Nameservers by filling out the required values.\n"
@@ -5885,6 +6755,9 @@ msgstr ""
 msgid "Please do not change any values unless you know what you are doing!"
 msgstr "Veuillez ne changer aucune valeur avant de savoir ce que vous faites!"
 
+msgid "Please enter URL here"
+msgstr "Saisir URL ici."
+
 msgid "Please enter a name for the new bouquet"
 msgstr "Veuillez saisir un nom pour le bouquet"
 
@@ -5901,7 +6774,7 @@ msgid "Please enter name of the new directory"
 msgstr "Veuillez saisir le nom du nouveau répertoire"
 
 msgid "Please enter the correct pin code"
-msgstr "Veuillez saisir le code pin correcte"
+msgstr "Veuillez saisir le code pin correct"
 
 msgid "Please enter the old PIN code"
 msgstr "Veuillez saisir l'ancien code pin"
@@ -5947,7 +6820,7 @@ msgid "Please select a playlist..."
 msgstr "Veuillez choisir une liste lecture..."
 
 msgid "Please select a standard feed or try searching for videos."
-msgstr "Veuillez sélectionner une feed standard ou essyer de chercher des vidéos."
+msgstr "Veuillez sélectionner une feed standard ou essayer de chercher des vidéos."
 
 msgid "Please select a subservice to record..."
 msgstr "Veuillez choisir un sous-service à enregistrer..."
@@ -6022,7 +6895,7 @@ msgid ""
 "Press OK to go back to the TV mode or EXIT to cancel the moving."
 msgstr ""
 "Veuillez utiliser les touches direction pour bouger la fenêtre PiP.\n"
-"Presser Bouquet +/- pour redimmensionner la fenêtre.\n"
+"Presser Bouquet +/- pour redimensionner la fenêtre.\n"
 "Presser OK pour revenir au mode TV ou EXIT pour annuler le déplacement."
 
 msgid "Please use the UP and DOWN keys to select your language. Afterwards press the OK button."
@@ -6051,7 +6924,7 @@ msgstr ""
 " %s ..."
 
 msgid "Please wait while removing selected package..."
-msgstr "Veuillez attendre pendant le retrait du paquet sélctionné..."
+msgstr "Veuillez attendre pendant le retrait du paquet sélectionné..."
 
 msgid "Please wait while removing your network mount..."
 msgstr "Veuillez patienter, retrait du montage de votre réseau..."
@@ -6108,13 +6981,16 @@ msgid "Plugins"
 msgstr "Plugins"
 
 msgid "Plugins list positions saved."
-msgstr "Positions des plugins dans liste sauvée"
+msgstr "Positions des plugins dans liste sauvées"
 
 msgid "PodCast streams podcasts to your STB."
 msgstr "Podcast envoie flux Podcast vers votre STB."
 
 msgid "Poland"
 msgstr "Pologne"
+
+msgid "Polarity"
+msgstr "Polarité"
 
 msgid "Polarization"
 msgstr "Polarisation"
@@ -6161,14 +7037,20 @@ msgstr "Mouvement du positionneur"
 msgid "Positioner setup"
 msgstr "Paramètres positionneur"
 
+msgid "Positioner setup... "
+msgstr "Réglage Positionneur"
+
 msgid "Positioner storage"
 msgstr "Stockage du positionneur"
 
 msgid "PositionerSetup helps you installing a motorized dish"
 msgstr "PositionerSetup vous aide à installer une parabole motorisée"
 
+msgid "Power off STB"
+msgstr "Arrêt Vu+"
+
 msgid "Power state to change to after recordings. Select \"standard\" to not change the default behavior of enigma2 or values changed by yourself."
-msgstr "changement état de puissance après des enregistrements. Choisir \"standard\" pour ne pas changer le comportement par défaut d'enigma2 ou valeurs changées par vous-même."
+msgstr "Etat marche ou arrêt après les enregistrements. Choisir \"standard\" pour ne pas changer le comportement par défaut d'enigma2 ou valeurs changées par vous-même."
 
 msgid "Power threshold in mA"
 msgstr "Seuil puissance en mA"
@@ -6180,7 +7062,7 @@ msgid "Predefined Command to execute"
 msgstr "Commande prédéfinie à exécuter"
 
 msgid "Predefined transponder"
-msgstr "transpondeur prédéfini"
+msgstr "Transpondeur prédéfini"
 
 msgid "Prefer AC3"
 msgstr "Préférence AC3"
@@ -6197,6 +7079,12 @@ msgstr "Préférence sous-titres différents de l'audio"
 msgid "Prefer subtitles stored by service"
 msgstr "Préférence sous-titres par service"
 
+msgid "Preference"
+msgstr "Préférence"
+
+msgid "Preferred lamedb"
+msgstr "lamedb préféré"
+
 msgid "Preferred tuner"
 msgstr "Préférence tuner"
 
@@ -6205,6 +7093,9 @@ msgstr "Préparer une nouvelle clé USB pour flasher l'image"
 
 msgid "Preparing... Please wait"
 msgstr "Préparation... Veuillez patienter"
+
+msgid "Press Green/OK to start the scan"
+msgstr "Bouton Vert / OK pour scanner"
 
 msgid "Press INFO on your remote control for additional information."
 msgstr "Presser INFO sur votre télécommande pour information additionnelle."
@@ -6222,13 +7113,13 @@ msgid "Press OK to activate the settings."
 msgstr "Pressez OK pour activer les paramètres."
 
 msgid "Press OK to collapse this host"
-msgstr "Pressez OK pour effondrer cet hôte"
+msgstr "Pressez OK pour supprimer cet hôte"
 
 msgid "Press OK to edit selected settings."
 msgstr "Presser OK pour éditer paramètres sélectionnés"
 
 msgid "Press OK to edit the settings."
-msgstr "Pressez OK pour éditer les paramètres."
+msgstr "OK pour éditer les paramètres."
 
 msgid "Press OK to expand this host"
 msgstr "Pressez OK pour étendre cet hôte"
@@ -6272,15 +7163,15 @@ msgstr "Presser bouton vert pour démarrer"
 msgid "Press ok to confirm"
 msgstr "Presser ok pour continuer"
 
-msgid "Press red button to continue."
-msgstr "Presser bouton rouge pour continuer"
-
 msgid ""
 "Press red button to continue when ready.\n"
 "\n"
 msgstr ""
 "Appuyer sur bouton rouge lorsque vous serez prêt.\n"
 "\n"
+
+msgid "Press red button to continue."
+msgstr "Presser bouton rouge pour continuer"
 
 msgid "Press yellow to set this interface as default interface."
 msgstr "Presser JAUNE pour choisir l'interface comme interface standard."
@@ -6289,13 +7180,13 @@ msgid "Prev"
 msgstr "Précédent"
 
 msgid "Preview"
-msgstr "Prévue"
+msgstr "Pré-vue"
 
 msgid "Preview AutoTimer"
-msgstr "Prévue ProgAuto"
+msgstr "Pré-vue ProgAuto"
 
 msgid "Preview menu"
-msgstr "Menu prévue"
+msgstr "Menu pré-vue"
 
 msgid "Preview screenshots of running tv shows"
 msgstr "Pré-vue captures écrans d'émissions TV en cours"
@@ -6325,10 +7216,10 @@ msgid "Progress Small"
 msgstr "Petite Progression"
 
 msgid "Properties of current title"
-msgstr "Propriétés du titre courant"
+msgstr "Propriétés du titre actuel"
 
 msgid "Protect services"
-msgstr "Services protégés"
+msgstr "Proteger Services"
 
 msgid "Protect setup"
 msgstr "Paramètres protection"
@@ -6355,7 +7246,7 @@ msgid "Providers start order"
 msgstr "Ordre démarrage Opérateurs"
 
 msgid "Published"
-msgstr "Edité"
+msgstr "Publié"
 
 msgid "Push key \"Exit long\" to show the clock while watching TV."
 msgstr "Appui long \"Sortie\" pour voir l'horloge en regardant la télé."
@@ -6368,7 +7259,7 @@ msgstr ""
 "Modifier les paramètres selon vos prérences. Pour changer la position de l'horloge, sélectioner \"Deplacer Hologe\" ... "
 
 msgid "Push red button to continue when you are ready and your usb is disconnected.\n"
-msgstr "Appuyez sur le bouton rouge dès que vous êtes prêt et que le USB est déconnecté.\n"
+msgstr "Appuyez sur le bouton rouge dès que vous êtes prêt et que l' USB est déconnecté.\n"
 
 msgid "Python frontend for /tmp/mmi.socket"
 msgstr "\"Frontend\" Python pour /tmp/mmi.socket"
@@ -6389,7 +7280,7 @@ msgid "RF output"
 msgstr "Sortie RF"
 
 msgid "RGB"
-msgstr "RGB"
+msgstr "RVB"
 
 msgid "RSS viewer"
 msgstr "Visualisateur RSS"
@@ -6417,6 +7308,18 @@ msgstr "Classement"
 
 msgid "Ratings: "
 msgstr "Classements: "
+
+msgid "Read %s"
+msgstr "Lire %s"
+
+msgid "Reading channels"
+msgstr "Lecture chaînes"
+
+msgid "Reading summaries"
+msgstr "Lecture résumés"
+
+msgid "Reading titles"
+msgstr "Lecture titres"
 
 msgid "Really close without saving settings?"
 msgstr "Vraiment fermer sans sauver les paramètres?"
@@ -6447,6 +7350,12 @@ msgstr "Reboot"
 
 msgid "Reboot Confirmation"
 msgstr "Confirmation redémarrage"
+
+msgid "Reboot after a manual download"
+msgstr "Rebooter après téléchargement manuel"
+
+msgid "Reboot after a scheduled download"
+msgstr "Rebooter après téléchargement progammé"
 
 msgid "Recently featured"
 msgstr "Récemment montré"
@@ -6485,7 +7394,7 @@ msgid "Recording paths"
 msgstr "Chemins pour enregistrer"
 
 msgid "Recording(s) are in progress or coming up in few seconds!"
-msgstr "Enregistrement(s) en cours ou se terminent dans quelques secondes!"
+msgstr "Enregistrement(s) en cours ou arrivent dans quelques secondes!"
 
 msgid "Recordings"
 msgstr "Enregistrements"
@@ -6506,16 +7415,16 @@ msgid "Refresh EPG every day at time:"
 msgstr "Rafraîchir journellement Epg à:"
 
 msgid "Refresh Rate"
-msgstr "Vitesse rafraîchissement"
+msgstr "Taux rafraîchissement"
 
 msgid "Refresh rate"
-msgstr "Vitesse rafraîchissement"
+msgstr "Taux rafraîchissement"
 
 msgid "Refresh rate selection."
-msgstr "Sélection vitesse rafraîchissement "
+msgstr "Sélection taux rafraîchissement "
 
 msgid "Related video entries."
-msgstr "Entrées visuelles relatives."
+msgstr "Entrées vidéo apparentées."
 
 msgid "Relevance"
 msgstr "Pertinence"
@@ -6526,11 +7435,18 @@ msgstr "Recharger"
 msgid "Reload Black-/Whitelists"
 msgstr "Recharger Black-/Whitelists"
 
+msgid ""
+"Reload epg at every boot.\n"
+"Normally it's not necessary but recover epg after an enigma2 crash"
+msgstr ""
+"Recharge epg à chaque boot.\n"
+"Normalement pas necessaire mais restaure epg après crash de enigma2."
+
 msgid "Remember service PIN"
 msgstr "Enregistrer PIN service"
 
 msgid "Remember service PIN cancel"
-msgstr "Désenregistrer PIN service"
+msgstr "Enregistrer annulation PIN service"
 
 msgid "Remember to select the correct Audio track in the audio menu if there is no audio or the wrong language is streaming.\n"
 msgstr "Pensez à choisir le bon audio dans le menu audio en cas d'absence de son ou de mauvais langage diffusé.\n"
@@ -6613,8 +7529,11 @@ msgstr "Renommer le crashlog"
 msgid "Rename your movies"
 msgstr "Renommer vos films"
 
+msgid "Reorder Plugin List"
+msgstr "Ordonner Liste Plugins"
+
 msgid "Reorder plugins list"
-msgstr "Reorganiser liste plugins"
+msgstr "Réorganiser liste plugins"
 
 msgid "Repeat"
 msgstr "Répéter"
@@ -6640,7 +7559,7 @@ msgid "Reply timeout"
 msgstr "Réponse Timeout"
 
 msgid "Require description to be unique"
-msgstr "Exiger de la description d'être unique"
+msgstr "Exige que la description soit unique"
 
 msgid "Required medium type:"
 msgstr "Type medium requis:"
@@ -6660,6 +7579,9 @@ msgstr "Rescanner"
 msgid "Reset"
 msgstr "Réinitialiser"
 
+msgid "Reset AutoShutDown settings to defaults?"
+msgstr "Rétablir paramètres ArrêtAuto par défaut"
+
 msgid "Reset and renumerate title names"
 msgstr "Réinitialiser et renuméroter les titres"
 
@@ -6670,7 +7592,7 @@ msgid "Reset saved position"
 msgstr "Réinitialiser position sauvée"
 
 msgid "Reset video enhancement settings to system defaults?"
-msgstr "Réinitialiser la configuration vidéo améliorée au système standards?"
+msgstr "Réinitialiser la configuration vidéo améliorée au standard système?"
 
 msgid "Reset video enhancement settings to your last configuration?"
 msgstr "Réinitialiser la configuration vidéo améliorée à votre dernière configuration?"
@@ -6727,7 +7649,7 @@ msgid "Restore system settings"
 msgstr "Restaurer paramètres système"
 
 msgid "Restore your STB with a USB stick"
-msgstr "Restaurer votre Drembox avec clé USB"
+msgstr "Restaurer votre Vu+ avec clé USB"
 
 msgid "Restrict \"after event\" to a certain timespan?"
 msgstr "Restreindre \"après émission\" à une certaine période?"
@@ -6747,11 +7669,14 @@ msgstr "Reprise de la lecture"
 msgid "Retrieving data ..."
 msgstr "Recherche des données..."
 
+msgid "Return"
+msgstr "Retour"
+
 msgid "Return the Love Event"
 msgstr "Retourner le Love Event"
 
 msgid "Return to file browser"
-msgstr "Retour au sélecteur fichiers"
+msgstr "Retour à explorer fichiers"
 
 msgid "Return to movie list"
 msgstr "Retour vers liste des films"
@@ -6760,19 +7685,25 @@ msgid "Return to previous service"
 msgstr "Retour service précédent"
 
 msgid "Reusable Help-component for other plugins."
-msgstr "Eléments d'aide reutilisables pour d'autres plugins."
+msgstr "Elément d'aide reutilisable pour d'autres plugins."
 
 msgid "Rewind speeds"
 msgstr "Vitesses rembobinage"
 
 msgid "Rewrap teletext subtitles"
-msgstr "Ré-envelopper sous titres télétext"
+msgstr "Ré-envelopper sous titres télétexte"
 
 msgid "Right"
 msgstr "Droite"
 
+msgid "Right Key"
+msgstr "Flèche droite"
+
+msgid "Right Mouse Button"
+msgstr "Bouton droit souris"
+
 msgid "Roll-off"
-msgstr "Roll-off"
+msgstr "Défaire"
 
 msgid "Rotor turning speed"
 msgstr "Vitesse rotation rotor"
@@ -6782,6 +7713,12 @@ msgstr "Tourne"
 
 msgid "Running !"
 msgstr "Tourne !"
+
+msgid "Running in test mode"
+msgstr "Fonctionnement en mode test"
+
+msgid "Running script"
+msgstr "Execute le script"
 
 msgid "Russia"
 msgstr "Russie"
@@ -6802,7 +7739,7 @@ msgid "SD 30/60HZ Interlace Mode"
 msgstr "Mode entrelacé SD 30/60HZ"
 
 msgid "SD 30/60HZ Progressive Mode"
-msgstr "ModeProgressif SD 30/60HZ"
+msgstr "Mode Progressif SD 30/60HZ"
 
 msgid ""
 "SET FAILED!\n"
@@ -6833,7 +7770,7 @@ msgid "STB format data DVD (HDTV compatible)"
 msgstr "Données DVD en format STB (Compatible HDTV)"
 
 msgid "STB software because updates are available."
-msgstr "logiciel de STB car des mises à jour sont disponibles."
+msgstr "Logiciel Vu+ car des mises à jour sont disponibles."
 
 msgid ""
 "SVDRP is a protocol developed for the VDR software to control a set-top box remotely.\n"
@@ -6841,10 +7778,10 @@ msgid ""
 "\n"
 "You probably don't need this plugin and should use the regular Web Interface for Enigma2 instead."
 msgstr ""
-"SVDRP est un protocole  pour le soft VDR afin de contrôler un Vu+ par télécommande.\n"
+"SVDRP est un protocole  pour le soft VDR afin de contrôler un Vu+ à distance.\n"
 "Ce plugin est dédié aux dérivés de SVDRP et se lance automatiquement avec ses paramètres par défaut.\n"
 "\n"
-"vous n'avez probablement pas besoin de ce plugin, et préférerez utiliser l'Interface Web pour Enigma2."
+"Vous n'avez probablement pas besoin de ce plugin, et préférerez utiliser l'Interface Web pour Enigma2."
 
 msgid "SVDRP server for Enigma2"
 msgstr "Serveur SVDRP pour Enigma2"
@@ -6862,7 +7799,7 @@ msgid "Samba/Cifs Panel"
 msgstr "Menu Samba/Cifs"
 
 msgid "Sat"
-msgstr "Sat"
+msgstr "Sam"
 
 msgid "Sat / Dish Setup"
 msgstr "Paramétrage Sat / Parabole"
@@ -6918,6 +7855,9 @@ msgstr "Sauver valeurs et fermer plugin"
 msgid "Save values and close screen"
 msgstr "Sauver valeurs et fermer écran"
 
+msgid "Saving data"
+msgstr "Sauvegarde données"
+
 msgid "Saving epg.dat...."
 msgstr "Sauvegarde de epg.dat..."
 
@@ -6927,8 +7867,14 @@ msgstr "Niveau netteté"
 msgid "Scaling Mode"
 msgstr "Mode mise à l'échelle"
 
+msgid "Scan"
+msgstr "Scanner"
+
 msgid "Scan "
 msgstr "Analyser "
+
+msgid "Scan All"
+msgstr "Scanner Tout"
 
 msgid "Scan Files..."
 msgstr "Parcourir fichiers..."
@@ -6964,7 +7910,10 @@ msgid "Scan Wireless Networks"
 msgstr "Scanner réseaux sans fil"
 
 msgid "Scan additional SR"
-msgstr "Analyser additional SR"
+msgstr "Analyser SR additionnel"
+
+msgid "Scan band"
+msgstr "Scanner bande"
 
 msgid "Scan band EU HYPER"
 msgstr "Analyser bande EU HYPER"
@@ -7006,7 +7955,7 @@ msgid "Scan circular polarisation"
 msgstr "Analyser bande circulaire"
 
 msgid "Scan devices for playable media files"
-msgstr "Analyser périphériques pour fichiers média jouables"
+msgstr "Analyser périphériques pour fichiers média lisibles"
 
 msgid "Scan found transponders"
 msgstr "Analyser transpondeurs trouvés"
@@ -7016,6 +7965,18 @@ msgstr "Analyser seulement FTA"
 
 msgid "Scan range"
 msgstr "Etendue recherche"
+
+msgid "Scan start frequency"
+msgstr "Fréq. Début de scan"
+
+msgid "Scan start symbolrate"
+msgstr "Symbolrate début scan"
+
+msgid "Scan stop frequency"
+msgstr "Fréq. Fin de scan"
+
+msgid "Scan stop symbolrate"
+msgstr "Symbolrate fin scan"
 
 msgid "Scan your network for wireless access points and connect to them using your selected wireless device.\n"
 msgstr "Analyser votre réseau pour points d'accès sans fil et se connecter en utilisant le périphérique sélectionné.\n"
@@ -7029,6 +7990,15 @@ msgstr "Analyser lamedbs standards triés par satellite"
 msgid "Scans default lamedbs sorted by satellite with a connected dish positioner"
 msgstr "Scanner lamedbs standards triés par satellite avec un positionneur parabole connecté"
 
+msgid "Scheduled download"
+msgstr "Téléchargement programmé"
+
+msgid "Scheduled download at"
+msgstr "Téléchargement programmé à"
+
+msgid "Scheduled download disabled"
+msgstr "Téléchargement programmé déactivé"
+
 msgid "Science & Technology"
 msgstr "Science & Technologie"
 
@@ -7039,7 +8009,7 @@ msgid "Scripts"
 msgstr "Scripts"
 
 msgid "Scripts providers"
-msgstr "Scripts Opérateurs"
+msgstr "Scripts opérateurs"
 
 msgid "Search Term(s)"
 msgstr "Terme(s) recherche"
@@ -7060,10 +8030,10 @@ msgid "Search region:"
 msgstr "Recherche région:"
 
 msgid "Search restricted content:"
-msgstr "Recherche contenu restreinte:"
+msgstr "Recherche contenu restreint:"
 
 msgid "Search strictness"
-msgstr "Sévérité recherche"
+msgstr "Recherche Strictement"
 
 msgid "Search through the EPG"
 msgstr "Recherche dans EPG"
@@ -7099,7 +8069,7 @@ msgid "Select"
 msgstr "Sélectionner"
 
 msgid "Select \"exact match\" to enforce \"Match title\" to match exactly or \"partial match\" if you only want to search for a part of the event title."
-msgstr "Sélectionner \"correspondance exacte\" pour imposer \"Titre correspondant\" pour correspondre exactement ou \"Correspondance partielle\" si vous voulez seulement rechercher une partie du titre d'émission."
+msgstr "Sélectionner \"correspondance exacte\" pour imposer \"Titre correspondant\" une correspondance exacte ou \"Correspondance partielle\" si vous voulez seulement rechercher une partie du titre d'émission."
 
 msgid "Select HDD"
 msgstr "Choisir le disque dur"
@@ -7116,11 +8086,14 @@ msgstr "Chosir interface réseau"
 msgid "Select URL type"
 msgstr "Choisir type URL"
 
+msgid "Select Video Output..."
+msgstr "Choix Sortie Vidéo..."
+
 msgid "Select Wireless Lan module. \n"
 msgstr "Choisir module LAN WIFI. \n"
 
 msgid "Select a bouquet to add a channel to"
-msgstr "Choisir un bouquet pour y ajouter une chaine"
+msgstr "Choisir un bouquet pour y ajouter une chaîne"
 
 msgid "Select a movie"
 msgstr "Choisir un film"
@@ -7198,25 +8171,25 @@ msgid "Select the key you want to set to %i ms"
 msgstr "Choisir touche à régler à %i ms"
 
 msgid "Select the location to save the recording to."
-msgstr "Sélectionner l'endroit ou sauver l'enregistrement."
+msgstr "Sélectionner l'endroit où sauver l'enregistrement."
 
 msgid "Select type of Filter"
 msgstr "Choisir le type de filtre"
 
 msgid "Select upgrade source to edit."
-msgstr "Choisissez la source de mise à niveau à éditer."
+msgstr "Choisir source de mise à jour à éditer."
 
 msgid "Select video input with up/down buttons"
 msgstr "Choisir l'entrée vidéo avec touches haut/bas"
 
 msgid "Select video mode"
-msgstr "Choisir le mode vidéo"
+msgstr "Choisir mode vidéo"
 
 msgid "Select whether or not you want to enforce case correctness."
 msgstr "Choisir si vous voulez imposer l'exactitude de cas."
 
 msgid "Select wireless network"
-msgstr "séectionner l'interface sans fil"
+msgstr "Choisir réseau WIFI"
 
 msgid "Select your choice."
 msgstr "Sélectionner votre choix"
@@ -7228,7 +8201,7 @@ msgid "Send DiSEqC"
 msgstr "Envoyer DiSEqC"
 
 msgid "Send DiSEqC only on satellite change"
-msgstr "Envoyer seulement DiSEqC pour changement satellite"
+msgstr "Envoyer seulement DiSEqC si changement satellite"
 
 msgid "Seperate titles with a main menu"
 msgstr "Titres séparés avec un menu principal"
@@ -7277,7 +8250,7 @@ msgid "Service Searching"
 msgstr "Recherche des services"
 
 msgid "Service delay"
-msgstr "Délai service"
+msgstr "Retard service"
 
 msgid "Service has been added to the favourites."
 msgstr "Le service a été ajouté aux favoris."
@@ -7351,6 +8324,9 @@ msgstr "Entrer nom appareil Vu+:"
 msgid "Set Voltage and 22KHz"
 msgstr "Utiliser Voltage et 22KHz"
 
+msgid "Set as Startpage"
+msgstr "Déf. PageDémarr."
+
 msgid "Set available internal memory threshold for the warning."
 msgstr "Paramètrer seuil mémoire disponible avant l'avertissement"
 
@@ -7361,25 +8337,25 @@ msgid "Set interface as default Interface"
 msgstr "Utiliser interface comme interface par défaut"
 
 msgid "Set limits"
-msgstr "Fixer les limites"
+msgstr "Fixer limites"
 
 msgid "Set maximum duration"
 msgstr "Régler durée maximum"
 
 msgid "Set server IP"
-msgstr "Régler IP serveur"
+msgstr "IP serveur"
 
 msgid "Set this NO to disable this AutoTimer."
 msgstr "Régler ceci à non pour désactiver ProgAuto"
 
 msgid "Setting key canceled"
-msgstr "Paramètre touche abandonné"
+msgstr "Paramètre clé abandonné"
 
 msgid "Settings"
 msgstr "Paramètres"
 
 msgid "Settings installed:"
-msgstr "Paramètres installés"
+msgstr "Listes disponibles:"
 
 msgid "Setup"
 msgstr "Paramètrer"
@@ -7409,7 +8385,7 @@ msgid "Short filenames"
 msgstr "Nom fichiers courts"
 
 msgid "Should this AutoTimer be restricted to a timespan?"
-msgstr "La ProgAuto doit-elle est restreinte à une période?"
+msgstr "La ProgAuto doit-elle être restreinte à une période?"
 
 msgid "Should this AutoTimer only match up to a certain event duration?"
 msgstr "La ProgAuto doit-elle correspondre à une certaine durée d'émission?"
@@ -7419,6 +8395,9 @@ msgstr "Les programmations créées par cette ProgAuto doivent-elles être enreg
 
 msgid "Shouts sent by users:\t"
 msgstr "Messages envoyés:\t"
+
+msgid "Show 'Force reload' as plugin"
+msgstr "Montrer 'Forcer Rechargement' comme plugin"
 
 msgid "Show EIT now/next in infobar"
 msgstr "Montrer EIT Actuel / Suivant dans barre d'info"
@@ -7436,10 +8415,16 @@ msgid "Show SNR percentage instead of dB value"
 msgstr "Montrer SNR en pourcentage  plutôt qu'en dB"
 
 msgid "Show WLAN Status"
-msgstr "Montrer status WLAN"
+msgstr "Montrer statut WLAN"
 
 msgid "Show animation while busy"
 msgstr "Montrer animation quand système occupé"
+
+msgid "Show as extension"
+msgstr "Montrer comme extension"
+
+msgid "Show as plugin"
+msgstr "Montrer comme plugin"
 
 msgid "Show background in radio mode"
 msgstr "Montrer image de fond en mode radio"
@@ -7448,13 +8433,22 @@ msgid "Show blinking clock in display during recording"
 msgstr "Faire clignoter horloge pendant enregistrement"
 
 msgid "Show channel numbers in channel selection"
-msgstr "Montrer nunéro de chaine dans la selection de chaine"
+msgstr "Montrer nunéro de chaîne dans la selection de chaîne"
+
+msgid "Show crossepg in extensions menu"
+msgstr "Montrer crossepg dans menu addons"
+
+msgid "Show crossepg in plugin menu"
+msgstr "Montrer crossepg dans menu plugins"
 
 msgid "Show crypto info in infobar"
 msgstr "Montrer cryptage dans barre d'info"
 
 msgid "Show event-progress in channel selection"
 msgstr "Montrer progression-événement dans sélecteur chaînes"
+
+msgid "Show in Extensions/Plugins:"
+msgstr "Montrer dans Extensions/Plugins:"
 
 msgid "Show in extension menu"
 msgstr "Montrer dans le menu extension"
@@ -7471,6 +8465,9 @@ msgstr "Montrer infobar en changeant d'émission"
 msgid "Show infobar on skip forward/backward"
 msgstr "Montrer infobar pour saut avant/arrière"
 
+msgid "Show message before inactivity action:"
+msgstr "Montrer message avant mise en inactivité:"
+
 msgid "Show message when recording starts"
 msgstr "Montrer message quand enregistrement démarre"
 
@@ -7478,7 +8475,7 @@ msgid "Show movie lengths in movielist"
 msgstr "Montrer durée film dans la liste des films"
 
 msgid "Show notification on conflicts"
-msgstr "Afficher les avertissements si conflits"
+msgstr "Afficher avertissements si conflits"
 
 msgid "Show notification on similars"
 msgstr "Notifier pour similaires"
@@ -7494,6 +8491,12 @@ msgstr "Montrer services commençant par"
 
 msgid "Show status icons in movielist"
 msgstr "Montrer icone de statut dans liste films"
+
+msgid "Show the Menu window."
+msgstr "Montrer Menu."
+
+msgid "Show the Virtual keyboard window."
+msgstr "Monter Clavier Virtuel."
 
 msgid "Show the radio player..."
 msgstr "afficher la radio..."
@@ -7511,13 +8514,10 @@ msgid "Shows a list of recent zap entries"
 msgstr "Afficher une liste des entrées zap récente"
 
 msgid "Shows average bitrate of video and audio"
-msgstr "Montrer débit binaire moyen vidéo et audio"
+msgstr "Montrer débit moyen vidéo et audio"
 
 msgid "Shows statistics of watched services"
 msgstr "Afficher les statistiques des services regardés"
-
-msgid "Shows the state of your wireless LAN connection.\n"
-msgstr "Montrer l'état de votre connection LAN sans fil.\n"
 
 msgid "Shows the clock permanently on the screen"
 msgstr "Affiche l'horloge permanente sur l'écran"
@@ -7525,11 +8525,14 @@ msgstr "Affiche l'horloge permanente sur l'écran"
 msgid "Shows the service name instead of the service number when zapping."
 msgstr "Afficher le nom de la chaîne (service) au lieu du numéro lors du zapping."
 
+msgid "Shows the state of your wireless LAN connection.\n"
+msgstr "Montrer l'état de votre connection LAN sans fil.\n"
+
 msgid "Shutdown"
 msgstr "Eteindre"
 
 msgid "Shutdown STB after"
-msgstr "Eteindre la STB après"
+msgstr "Eteindre le Vu+ après"
 
 msgid "Shuts down your STB into Deep Standby (Power Save Mode)"
 msgstr "Eteint en veille profonde ( économie d'énergie)"
@@ -7538,7 +8541,7 @@ msgid "Side by Side"
 msgstr "Cote à cote"
 
 msgid "Signal Strength:"
-msgstr "Force signal:"
+msgstr "Intensité signal:"
 
 msgid "Signal: "
 msgstr "Signal: "
@@ -7559,7 +8562,7 @@ msgid "Simple titleset (compatibility for legacy players)"
 msgstr "Jeu titre simple (compatibilité descendante lecteurs)"
 
 msgid "SimpleRSS allows reading RSS newsfeeds on your STB."
-msgstr "SimpleRSS permet de lire nouvelles feeds RSS sur votre STB"
+msgstr "SimpleRSS permet de lire nouvelles feeds RSS sur votre Vu+"
 
 msgid "Single"
 msgstr "Unique"
@@ -7596,6 +8599,12 @@ msgstr "Action veille programmée:"
 
 msgid "Slideshow Interval (sec.)"
 msgstr "Intervalle diaporama (sec.)"
+
+msgid "Slideshow Mode"
+msgstr "Mode diaporama"
+
+msgid "Slideshow Time"
+msgstr "Durée Diapositive"
 
 msgid "Slot %d"
 msgstr "Slot %d"
@@ -7634,10 +8643,10 @@ msgid "Software restore"
 msgstr "Restauration logiciel"
 
 msgid "Software update"
-msgstr "Mise à jour logiciel"
+msgstr "MàJ logiciel"
 
 msgid "SoftwareManager manages your STB software"
-msgstr "Le gestionnaire logiciel gère votre logiciel STB"
+msgstr "Le gestionnaire logiciel gère le logiciel du Vu+"
 
 msgid "Softwaremanager information"
 msgstr "Informations gestionnaire logiciel"
@@ -7679,20 +8688,11 @@ msgstr ""
 "Désolé pas de place disponible pour étendre votre univers.\n"
 "\n"
 
-msgid ""
-"Sorry no valid device found.\n"
-"Be sure your device is Linux formatted and mapped.\n"
-"Please use Black Pole format wizard and Black Pole device manager to prepare and map your usb stick."
-msgstr ""
-"Désolé pas de composant trouvé.\n"
-"Vérifiez que votre composant est formaté et peuplé en LINUX.\n"
-"Utilisez Le gestionaire de formatage pour préparer et peupler votre clé USB."
-
 msgid "Sorry the name of the new Image is too long."
 msgstr "Désolé, le nom de l'image est trop long"
 
 msgid "Sorry there is not enought available space on your device. You need at least 500 Mb free to install a new image"
-msgstr "Désolé, il n'y a pas assez de place sur votre périphérique. Vous avez besoin au moins de 500 Mb de libres pour installer nouvelle image"
+msgstr "Désolé, il n'y a pas assez de place sur votre périphérique. Vous avez besoin d'au moins 500 Mb de libres pour installer nouvelle image"
 
 msgid "Sorry this name is reserved. Choose another name for the new Image."
 msgstr "Désolé, ce nom est réservé. Choisir un autre nom pour la nouvelle image."
@@ -7755,9 +8755,6 @@ msgstr "Désolé, une image avec le nom "
 
 msgid "Sorry, function not available for this provider."
 msgstr "Désolé, fonction non disponible pour cet opérateur"
-
-msgid "Sorry, function not available in Black Pole"
-msgstr "Désolé, fonction non disponible dans BP"
 
 msgid "Sorry, no Details available!"
 msgstr "Désolé, aucun détail disponible!"
@@ -7854,7 +8851,7 @@ msgid "Standby / Restart"
 msgstr "Veille / Redémarrage"
 
 msgid "Standby Fan %d PWM"
-msgstr "PWM Ventilo en veille %d"
+msgstr "Ventilo en veille %d PWM"
 
 msgid "Standby Fan %d Voltage"
 msgstr "Voltage ventilo en veille %d"
@@ -7867,6 +8864,9 @@ msgstr "Veille:"
 
 msgid "Start"
 msgstr "Démarrer"
+
+msgid "Start Page"
+msgstr "Page Démarrage"
 
 msgid "Start Webinterface"
 msgstr "Démarrer interface Web"
@@ -7886,11 +8886,26 @@ msgstr "Lancer le test"
 msgid "Start with following feed:"
 msgstr "Démarrer avec feed suivante:"
 
+msgid "Start/Stop"
+msgstr "Démarrer/Stopper"
+
 msgid "StartTime"
 msgstr "Heure Départ"
 
+msgid "Starting converter"
+msgstr "Démarrage convertisseur"
+
+msgid "Starting downloader"
+msgstr "Démarrage téléchargeur"
+
+msgid "Starting importer"
+msgstr "Démarrage importateur"
+
 msgid "Starting on"
 msgstr "Démarre sur"
+
+msgid "Startpage"
+msgstr "PageDémarrage"
 
 msgid "Startup Module:"
 msgstr "Module démarrage"
@@ -7941,7 +8956,7 @@ msgid "Stop playing this movie?"
 msgstr "Arrêter la lecture du film?"
 
 msgid "Stop playing this stream?"
-msgstr "Arrêter de jouer ce flux?"
+msgstr "Arrêter de lire ce flux?"
 
 msgid "Stop test"
 msgstr "Stopper le test"
@@ -7954,6 +8969,9 @@ msgstr "Stopper le test à partir # succès transpondeurs"
 
 msgid "Stopped"
 msgstr "Arrêté"
+
+msgid "Storage device"
+msgstr "Périphérique stockage"
 
 msgid "Store position"
 msgstr "Enregistrer la position"
@@ -7986,7 +9004,7 @@ msgid "Subtitle border width"
 msgstr "Largeur bordure sous-titres"
 
 msgid "Subtitle delay when timing lacks"
-msgstr "Delai sous-titres quand temps manque"
+msgstr "Retard sous-titres quand temps manque"
 
 msgid "Subtitle font size"
 msgstr "Taille police sous-titres"
@@ -8037,10 +9055,10 @@ msgid "Swap File created."
 msgstr "Fichier SWAP crée"
 
 msgid "Swap File creation Failed. Check for Available space."
-msgstr "Création fichier SWAP à échoué. Vérifier espace disponible"
+msgstr "Création fichier SWAP a échoué. Vérifier espace disponible"
 
 msgid "Swap File creation Failed. Check for available space."
-msgstr "Création fichier SWAP à échoué. Vérifier espace disponible"
+msgstr "Création fichier SWAP a échoué. Vérifier espace disponible"
 
 msgid "Swap File not found. You have to create the file before to activate."
 msgstr "Fichier échange non trouvé. Créez le fichier avant de l'activer."
@@ -8088,6 +9106,9 @@ msgstr "Suède"
 msgid "Swedish"
 msgstr "Suédois"
 
+msgid "Switch to keyboard/mouse mode."
+msgstr "Basculer vers Clavier/Souris."
+
 msgid "Switch to next subservice"
 msgstr "Basculer vers sous-service suivant"
 
@@ -8095,7 +9116,7 @@ msgid "Switch to previous subservice"
 msgstr "Basculer vers sous-service précédent"
 
 msgid "Switchable tuner types:"
-msgstr "Types de tuner permutables:"
+msgstr "Types de tuner enfichable:"
 
 msgid "Symbol rate"
 msgstr "Taux modulation"
@@ -8122,7 +9143,7 @@ msgid "TSID"
 msgstr "TSID"
 
 msgid "TV Charts of all users"
-msgstr "Chartes TV tout les utilisateur"
+msgstr "Chartes TV tout utilisateur"
 
 msgid "TV System"
 msgstr "Système TV"
@@ -8155,10 +9176,10 @@ msgid "Tags"
 msgstr "Etiq."
 
 msgid "Tags the Timer/Recording will have."
-msgstr "Pointeur la Programmation/Enregistrement aura."
+msgstr "Etiq. que Programmation/Enregistrement auront."
 
 msgid "Tags: "
-msgstr "Pointeurs: "
+msgstr "Etiq.: "
 
 msgid "Taiwan"
 msgstr "Taiwan"
@@ -8203,7 +9224,7 @@ msgid "Test mode"
 msgstr "Mode test"
 
 msgid "Test the network configuration of your STB.\n"
-msgstr "Tester la configuration réseau de votre STB\n"
+msgstr "Tester la configuration réseau de votre Vu+.\n"
 
 msgid "Test the network configuration of your receiver.\n"
 msgstr "Tester la configuration réseau de votre décodeur.\n"
@@ -8228,14 +9249,14 @@ msgid ""
 "Thank you for using the wizard. Your box is now ready to use.\n"
 "Please press OK to start using your STB."
 msgstr ""
-"Merci d'avoir utilisé l'assistant. Votre STB est maintenant prête à l'usage.\n"
-"Veuillez appuyer sur OK pour commencer à l'utiliser."
+"Merci d'avoir utilisé l'assistant. Votre Vu+ est maintenant prêt à l'usage.\n"
+"Appuyer sur OK pour commencer à l'utiliser."
 
 msgid ""
 "Thank you for using the wizard. Your new AutoTimer has been added to the List.\n"
 "Please press OK to continue."
 msgstr ""
-"Merci d'utiliser l'assistant. Votre nouveau ProgAuto a été ajouté à la liste.\n"
+"Merci d'utiliser l'assistant. Votre nouvelle ProgAuto a été ajoutée à la liste.\n"
 "Veuillez presser OK pour continuer."
 
 msgid ""
@@ -8279,12 +9300,12 @@ msgid ""
 "Don't forget to remap your device after the reboot.\n"
 "Press ok to continue"
 msgstr ""
-"Le démo va redémarrer et générer un identifiant au composant.\n"
-"N'oubliez pas de peupler le composant après reboot.\n"
+"Le Vu+ va redémarrer et générer un identifiant au périphérique.\n"
+"N'oubliez pas de peupler le périphérique après reboot.\n"
 "Presser OK pour continuer"
 
 msgid "The CleanupWizard informs you when the internal free memory of your dreambox has dropped below a definable threshold.You can use this wizard to remove some plugins."
-msgstr "L'assistant nettoyage vous informe quand la mémoire libre interne de votre dreambox chute au-dessous d'un seuil défini. Vous pouvez employer cet assistant pour enlever quelques plugins."
+msgstr "L'assistant nettoyage vous informe quand la mémoire libre interne de votre Vu+ chute au-dessous d'un seuil défini. Vous pouvez employer cet assistant pour enlever quelques plugins."
 
 msgid "The DVD standard doesn't support H.264 (HDTV) video streams. Do you want to create a STB format data DVD (which will not play in stand-alone DVD players) instead?"
 msgstr "Le DVD standard ne supporte pas les flux vidéo H.264 (HDTV). Souhaitez-vous créer un DVD au format de données Vu+ (qui ne sera pas lu dans un lecteur DVD seul) à la place?"
@@ -8294,9 +9315,9 @@ msgid ""
 "This only happens if the box is in standby and no recording is running or scheduled during the next 20 minutes.\n"
 "The box automatically wakes up for recordings or at the end of the specified sleep time. Hence you needn't wait for it to boot-up."
 msgstr ""
-"Le Plugin Economie d'énergie fait passer le VU+ du mode veille au mode  de veille profonde à l'heure spécifiée. \n"
+"Le Plugin Economie d'énergie fait passer le VU+ du mode veille au mode de veille profonde à l'heure spécifiée. \n"
 "Uniquement actif si le VU+ est en mode veille et si aucun enregistrement n'est en cours ou prévu dans les 20 prochaines mn. \n"
-"Le Vu+ se réveillera automatiquement pour des enregistrements ou à la fin de la période de sommeil spécifié. Pas besoin de l'allumer."
+"Le Vu+ se réveillera automatiquement pour des enregistrements ou à la fin de la période de sommeil spécifiée. Pas besoin de l'allumer."
 
 msgid "The Hotplug plugin notifies your system of newly added or removed devices."
 msgstr "Le plugin Hotplug notifie votre système des périphériques ajoutés ou retirés dernièrement."
@@ -8319,13 +9340,13 @@ msgid ""
 "You can view them as thumbnails or slideshow."
 msgstr ""
 "Le PicturePlayer affiche vos photos à la TV.\n"
-"Vous pouvez les regarder comme vignettes ou présentation."
+"Vous pouvez les regarder comme vignettes ou diaporama."
 
 msgid ""
 "The Satfinder plugin helps you to align your dish.\n"
 "It shows you informations about signal rate and errors."
 msgstr ""
-"Le plugin Satfinder vous aide à aligner votre parapole.\n"
+"Le plugin Satfinder vous aide à aligner votre parabole.\n"
 "Il vous montre des informations sur le taux et les erreurs de signal."
 
 msgid ""
@@ -8333,13 +9354,13 @@ msgid ""
 "It's now easy to change the look and feel of your STB."
 msgstr ""
 "Le SkinSelector montre un menu avec les thèmes disponibles.\n"
-"Il est maintenant facile de changer l'apparence de votre STB."
+"Il est maintenant facile de changer l'apparence de votre Vu+."
 
 msgid ""
 "The SoftwareManager manages your STB software.\n"
 "It's easy to update your receiver's software, install or remove plugins or even backup and restore your system settings."
 msgstr ""
-"Le SoftwareManager gère le logiciel du Vu+.\n"
+"Le Gestionnaire Logiciel gère le logiciel du Vu+.\n"
 "Il est facile de mettre à jour le logiciel de votre récepteur ou retirer des plugins, ou même sauvegarder ou restaurer vos paramètres système."
 
 msgid ""
@@ -8357,23 +9378,23 @@ msgstr ""
 "Veuillez presser OK pour fermer cet assistant."
 
 msgid "The Timespan of an AutoTimer is the first 'advanced' attribute. If a timespan is specified an event will only match this AutoTimer if it lies inside of this timespan."
-msgstr "La période d'une ProgAuto est le premier attribut 'avancé'. si une période est spécifiée, un événement correspondra seulement à la ProgAuto si il se trouve dans cette période."
+msgstr "La période d'une ProgAuto est le premier attribut 'avancé'. Si une période est spécifiée, un événement correspondra seulement à la ProgAuto si il se trouve dans cette période."
 
 msgid ""
 "The USB stick was prepared to be bootable.\n"
 "Now you can download an NFI image file!"
 msgstr ""
-"La clé USB à été préparé pour être bootable.\n"
+"La clé USB a été préparée pour être bootable.\n"
 "Maintenant vous pouvez télécharger un fichier image NFI!"
 
 msgid "The User Interface of your receiver is restarting"
 msgstr "L'interface utilisateur du décodeur redémarre"
 
-msgid "The VideoEnhancement plugin provides advanced video enhancement settings."
-msgstr "Le plugin VideoEnhancement plugin fournit des paramètres avancés vidéo."
-
 msgid "The VPS-Plugin can determine whether a programme begins earlier or lasts longer."
 msgstr "Le Plugin VPS peut détecter si un programme débute plus tôt ou dure plus longtemps."
+
+msgid "The VideoEnhancement plugin provides advanced video enhancement settings."
+msgstr "Le plugin VideoEnhancement fournit des paramètres d'amélioration vidéo."
 
 msgid ""
 "The VideoTune helps fine-tuning your tv display.\n"
@@ -8412,7 +9433,7 @@ msgstr ""
 "Choisir un répertoire inscriptible à la place."
 
 msgid "The editor to be used for new AutoTimers. This can either be the Wizard or the classic editor."
-msgstr "L'éditeur peut-être utilisé pour des nouveau ProgAutos. Ceci peut être l'assistant  ou l'éditeur classique."
+msgstr "L'éditeur peut-être utilisé pour des nouvelles ProgAutos. Ceci peut être l'assistant  ou l'éditeur classique."
 
 msgid ""
 "The following device was found:\n"
@@ -8435,7 +9456,7 @@ msgid ""
 "You can now configure the screen by displaying some test pictures. Do you want to do that now?"
 msgstr ""
 "Le port d'entrée doit-être configuré maintenant.\n"
-"Vous pouvez le configurer l'écran maintenant en affichant quelques images test. Voulez-vous le faire maintenant?"
+"Vous pouvez configurer l'écran maintenant en affichant quelques images test. Voulez-vous le faire maintenant?"
 
 msgid "The installation of the default services lists is finished."
 msgstr "L'installation de la liste des services standard est terminée."
@@ -8462,13 +9483,13 @@ msgid "The path %s already exists."
 msgstr "Le chemin %s existe déjà."
 
 msgid "The pin code you entered is wrong."
-msgstr "Le code pin saisi est mauvais"
+msgstr "Le code pin saisi est faux"
 
 msgid "The results have been written to %s."
 msgstr "Les résultats ont été écrit sur %s."
 
 msgid "The server will build a virtual channels list in the folder /media/hdd/tuner on this box.\n"
-msgstr "Le serveur va bâtir une liste de chaînes virtuelles dans /media/hdd/tuner sur ce démo.\n"
+msgstr "Le serveur va bâtir une liste de chaînes virtuelles dans /media/hdd/tuner sur ce récepteur.\n"
 
 msgid "The skin is in KingSize-definition 1024x576"
 msgstr "Le thème est en grande définition 1024x576"
@@ -8483,7 +9504,17 @@ msgid "The timer file (timers.xml) is corrupt and could not be loaded."
 msgstr "Le fichier programmation (timers.xml) est corrompu et ne peut-être chargé."
 
 msgid "The tuner of the server (this box) has to be avaliable."
-msgstr "Le tuner du serveur (ce démo) doit être disponible. "
+msgstr "Le tuner du serveur (ce récepteur) doit être disponible. "
+
+msgid "The user interface of your receiver is restarting"
+msgstr "L'Interface Graphique Utilisateur redémarre"
+
+msgid ""
+"The user interface of your receiver is restarting\n"
+"due to an error in mytest.py"
+msgstr ""
+"L'Interface Graphique Utilisateur redémarre\n"
+"à cause d'une erreur dans mytest.py"
 
 msgid ""
 "The wireless LAN plugin is not installed!\n"
@@ -8503,7 +9534,7 @@ msgid "The wizard can backup your current settings. Do you want to do a backup n
 msgstr "L'assistant peut sauvegarder vos paramètres actuels. Voulez-vous sauvegarder maintenant?"
 
 msgid "The wizard found a configuration backup. Do you want to restore your old settings from %s?"
-msgstr "L'assistant à trouvé une configuration sauvegarde. Voulez-vous restaurer vos anciens paramètres depuis %s?"
+msgstr "L'assistant à trouvé une configuration sauvegardée. Voulez-vous restaurer vos anciens paramètres depuis %s?"
 
 msgid "The wizard is finished now."
 msgstr "L'assistant est terminé."
@@ -8553,7 +9584,7 @@ msgid "There was an error. The package:"
 msgstr "Il y a eu une erreur! Le paquet:"
 
 msgid "There's a certificate update available for your dreambox. Would you like to apply this update now?"
-msgstr "Il y a une mise à jour de disponible pour votre dreambox. Souhaitez vous appliquer cette mise à jour maintenant?"
+msgstr "Il y a une mise à jour de disponible pour votre Vu+. Souhaitez vous appliquer cette mise à jour maintenant?"
 
 msgid "This DVD RW medium is already formatted - reformatting will erase all content on the disc."
 msgstr "Ce support DVD RW est déjà formaté - le reformater effacera tout le contenu sur le disque."
@@ -8565,16 +9596,16 @@ msgid "This Plugin doesn't support on SOLO/DUO"
 msgstr "Ce plugin n'est pas supporté par SOLO/DUO"
 
 msgid "This Plugin modifies the original PluginBrowser so you can move Plugins around."
-msgstr "Permet de modifier l'emplacement des Plugins dans le  navigateur."
+msgstr "Permet de modifier l'emplacement des Plugins dans le navigateur."
 
 msgid "This STB can't decode %s streams!"
-msgstr "Cette STB ne peut décoder les flux %s!"
+msgstr "Ce Vu+ ne peut décoder les flux %s!"
 
 msgid "This Week"
 msgstr "Cette semaine"
 
 msgid "This feature will allow you to share the tuners of this box with another Vu+ box, a PC, a Ps3 and/or a compatible UPnP device in your home network.\n"
-msgstr "Cette fonction permet de partager les tuners de ce démo avec un autre démo, un PC, une PS3, ou un appareil compatible UPnP sur votre réseau domestique.\n"
+msgstr "Cette fonction permet de partager les tuners de ce Vu+ avec un autre démo, un PC, une PS3, ou un appareil compatible UPnP sur votre réseau domestique.\n"
 
 msgid "This is a name you can give the AutoTimer. It will be shown in the Overview and the Preview."
 msgstr "C'est un nom que vous pouvez donner à la ProgAuto. Il sera affiché dans la vue d'ensemble et la pré-vue."
@@ -8600,10 +9631,10 @@ msgid ""
 "In the next step, an NFI image file can be downloaded from the update server and saved on the USB stick.\n"
 "If you already have a prepared bootable USB stick, please insert it now. Otherwise plug in a USB stick with a minimum size of 64 MB!"
 msgstr ""
-"Ce plugin créé une clé USB qui peut-être utilisée pour mettre à jour le logiciel de votre STB sans l'aide d'une connection réseau ou sans fil.\n"
+"Ce plugin créé une clé USB qui peut-être utilisée pour mettre à jour le logiciel de votre Vu+ sans l'aide d'une connection réseau ou sans fil.\n"
 "Premièrement, une clé USB doit être préparée pour devenir bootable.\n"
 "A l'étape suivante, un fichier image NFI peut-être téléchargé depuis le serveur MAJ et sauvé sur la clé USB.\n"
-"si vous avez déjà préparé une clé USB bootable, veuillez l'insérer maintenant. Autrement insérez une clé USB avec une taille mini de 64 MB!"
+"Si vous avez déjà préparé une clé USB bootable, veuillez l'insérer maintenant. Autrement insérez une clé USB avec une taille mini de 64 MB!"
 
 msgid "This plugin is installed."
 msgstr "Ce plugin est installé."
@@ -8623,6 +9654,18 @@ msgstr "Ce plugin sera retiré."
 msgid "This plugin will show you the uptime"
 msgstr "Montre le temps de fonctionnement depuis dernier reboot"
 
+msgid "This script shows Network Connections"
+msgstr "Montre les connections Réseau"
+
+msgid "This script shows Network Interfaces Informations"
+msgstr "Montre les infos sur les interfaces réseau"
+
+msgid "This script will delete all crash-logs from /media/hdd"
+msgstr "Efface tous les crash-logs présents sur /media/hdd"
+
+msgid "This script will show you the up time"
+msgstr "Montre le temps de fonctionnement"
+
 msgid "This script will show you the uptime"
 msgstr "Montre le temps de service depuis reboot"
 
@@ -8630,7 +9673,7 @@ msgid "This setting controls the behavior when a timer matches a found event."
 msgstr "Ces paramètres contrôlent le comportement quand une programmation correspond à une émission."
 
 msgid "This system tool is internally used to program the hardware with firmware updates."
-msgstr "Cet outil système est utilisé en interne pour programmer le Hardware avec la MAJ du logiciel."
+msgstr "Cet outil système est utilisé en interne pour programmer le Hardware avec la MàJ du logiciel."
 
 msgid ""
 "This test checks for configured Nameservers.\n"
@@ -8640,8 +9683,8 @@ msgid ""
 msgstr ""
 "Ce test vérifie les noms serveurs configurés.\n"
 "Si vous obtenez le message \"Non confirmé\" :\n"
-"- Veuillez vérifier votre DHCP, paramètres câblage et adaptateur\n"
-"- Si vous avez configuré manuellement les noms serveurs, veuillez vérifier la configuration des \"DNS\" "
+"- Veuillez vérifier votre DHCP, câblage et paramètres adaptateur\n"
+"- Si vous avez configuré manuellement les noms serveurs, veuillez vérifier la configuration des \"Nom du serveur\" "
 
 msgid ""
 "This test checks whether a network cable is connected to your LAN-Adapter.\n"
@@ -8666,7 +9709,7 @@ msgstr ""
 "Ce test vérifie qu'une adresse IP valide est trouvée pour votre adaptateur LAN.\n"
 "Si vous obtenez le message \"Non confirmé\" :\n"
 "- Aucune adresse IP valide na été trouvée\n"
-"- Veuillez vérifier votre DHCP, paramètres câblage et adaptateur"
+"- Veuillez vérifier votre DHCP, câblage et paramètres adaptateur"
 
 msgid ""
 "This test checks whether your LAN Adapter is set up for automatic IP Address configuration with DHCP.\n"
@@ -8720,7 +9763,7 @@ msgid "This test detects your configured Wireless LAN-Adapter."
 msgstr "Ce test détecte les adaptateurs LAN WIFI configurés."
 
 msgid "This toggles the behavior on timer conflicts. If an AutoTimer matches an event that conflicts with an existing timer it will not ignore this event but add it disabled."
-msgstr "Ceci bascule le comportement des conflits programmations. Si une ProgAuto correspondante avec une émission est en conflit avec une programmation existante, l'émission ne sera pas ignorée mais ajoutée comme désactivée."
+msgstr "Ceci bascule le comportement lors des conflits programmations. Si une ProgAuto correspondante avec une émission est en conflit avec une programmation existante, l'émission ne sera pas ignorée mais ajoutée comme désactivée."
 
 msgid "This wizard will help you to format Usb mass storages for Linux.\n"
 msgstr "Cet assistant permet de formater en Linux des stockages USB.\n"
@@ -8749,11 +9792,20 @@ msgstr "Délai Mise à jour min."
 msgid "Time Update in Minutes:"
 msgstr "Délai Mise à jour min.:"
 
+msgid "Time for inactivity (min):"
+msgstr "Durée pour inactivité (min)"
+
+msgid "Time for scheduled daily download"
+msgstr "Heure de téléchargement programmé"
+
 msgid "Time in minutes to append to recording."
 msgstr "Temps en minutes à apposer à l'enregistrement."
 
 msgid "Time in minutes to prepend to recording."
 msgstr "Temps en minutes à ajouter au début de l'enregistrement."
+
+msgid "Time in standby for power off (min):"
+msgstr "Temps de veille pour arrêt total (min):"
 
 msgid "Time to execute command or script"
 msgstr "Heure pour exécuter commande ou script"
@@ -8783,8 +9835,8 @@ msgid ""
 "Timer overlap in timers.xml detected!\n"
 "Please recheck it!"
 msgstr ""
-"Chevauchement temporisateur dans timers.xml détecté!\n"
-"Veuiller le re-vérifier!"
+"Chevauchement programmations dans timers.xml détecté!\n"
+"Veuillez re-vérifiez!"
 
 msgid "Timer record location"
 msgstr "Emplacement enregistrements programmés"
@@ -8832,11 +9884,11 @@ msgid ""
 "To access this box's tuners you can connect via lan or UPnP.\n"
 "\n"
 msgstr ""
-"Pour accéder aux tuners de ce démo, connectez via lan ou UPnP.\n"
+"Pour accéder aux tuners de ce Vu+, connectez via lan ou UPnP.\n"
 "\n"
 
 msgid "To be used as simple downloading application by other Plugins."
-msgstr "Pour être employé comme application simple de téléchargement par d'autres Plugins"
+msgstr "Pour être employée comme application simple de téléchargement par d'autres Plugins"
 
 msgid ""
 "To enable Parallel dimensions you need a dedicated Usb stick.\n"
@@ -8856,7 +9908,7 @@ msgstr ""
 "Pour mettre à jour le firmware du Vu+, veuillez suivre ces indications:\n"
 "1) Couper votre récepteur avec le bouton d'alimentation arrière et insérer la clef USB bootable.\n"
 "2) Ré-enclencher l'alimentation en maintenant appuyé le bouton bas du panneau avant pendant 10 secondes.\n"
-"3) Attendre que ça boot et suivre les instructions de l'assistant."
+"3) Attendre que ça boote et suivre les instructions de l'assistant."
 
 msgid "Today"
 msgstr "Aujourd'hui"
@@ -8875,6 +9927,9 @@ msgstr "Toneburst"
 
 msgid "Toneburst A/B"
 msgstr "Toneburst A/B"
+
+msgid "Tools"
+msgstr "Outils"
 
 msgid "Top and Bottom"
 msgstr "Haut et Bas"
@@ -8902,6 +9957,9 @@ msgstr "Espace Total"
 
 msgid "Total in use: "
 msgstr "Total utilisé: "
+
+msgid "Total size: %s"
+msgstr "Taille totale: %s"
 
 msgid "Total: "
 msgstr "Total: "
@@ -8931,19 +9989,19 @@ msgid "Tries left:"
 msgstr "Essais annulés:"
 
 msgid "Try to find used Transponders in cable network.. please wait..."
-msgstr "Essai de trouver transpondeurs utilisés sur réseau câble... Veuillez patienter..."
+msgstr "Essai de trouver transpondeurs utilisés sur réseau câble... Patienter..."
 
 msgid "Try to find used transponders in cable network.. please wait..."
-msgstr "Essai de trouver transpondeurs utilisés sur réseau câble... Veuillez patienter..."
+msgstr "Essai de trouver transpondeurs utilisés sur réseau câble... Patienter..."
 
 msgid "Trying to download a new packetlist. Please wait..."
-msgstr "Essai téléchargement nouvelle liste paquet. Veuillez patienter..."
+msgstr "Essai téléchargement nouvelle liste paquet. Patienter..."
 
 msgid "Trying to download the Youtube feed entries. Please wait..."
-msgstr "Essai de télécharger les entrées feed Youtube. Veuillez patienter..."
+msgstr "Essai de télécharger les entrées feed Youtube. Patienter..."
 
 msgid "Trying to download the Youtube search results. Please wait..."
-msgstr "Essai de télécharger les résultats recherche Youtube. Veuillez patienter..."
+msgstr "Essai de télécharger les résultats recherche Youtube. Patienter..."
 
 msgid "Tue"
 msgstr "Mar"
@@ -9040,6 +10098,15 @@ msgstr ""
 "Impossible d'initialiser le disque dur.\n"
 "Erreur: "
 
+msgid ""
+"Unattended upgrade in progress\n"
+"Please wait until your receiver reboots\n"
+"This may take a few minutes"
+msgstr ""
+"Mise à jour imprévue en cours\n"
+"Attendez jusqu'à ce que le récepteur reboote\n"
+"Cela peut prendre quelques minutes"
+
 msgid "Uncommitted DiSEqC command"
 msgstr "Commande DiSEqC non validée"
 
@@ -9053,16 +10120,16 @@ msgid "Unencrypted"
 msgstr "Non crypté"
 
 msgid "UnhandledKey"
-msgstr "UnhandledKey"
+msgstr "Clé non prise en charge"
 
 msgid "Unicable"
-msgstr "Unicable"
+msgstr "Monocâble"
 
 msgid "Unicable LNB"
-msgstr "Unicable LNB"
+msgstr "LNB Monocâble"
 
 msgid "Unicable Martix"
-msgstr "Unicable Martix"
+msgstr "Martix Monocâble"
 
 msgid "Uninstall"
 msgstr "Désinstaller"
@@ -9106,7 +10173,7 @@ msgid "Unknown network adapter"
 msgstr "Adaptateur réseau inconnu"
 
 msgid "Unless this is enabled AutoTimer will NOT automatically look for events matching your AutoTimers but only when you leave the GUI with the green button."
-msgstr "À moins que ceci soit permis, ProgAuto ne cherchera pas automatiquement des émissions correspondantes à vos programmations mais seulement quand vous laissez l'IGU avec le bouton vert."
+msgstr "À moins que ceci soit permis, ProgAuto ne cherchera pas automatiquement des émissions correspondantes à vos programmations mais seulement quand vous quittez l'IGU avec le bouton vert."
 
 msgid "Unmount failed"
 msgstr "Echec démontage"
@@ -9116,6 +10183,9 @@ msgstr "Non supporté"
 
 msgid "UnwetterInfo shows German storm information."
 msgstr "UnwetterInfo alerte pour orages en Allemagne"
+
+msgid "Up Key"
+msgstr "Flèche haute"
 
 msgid "Update"
 msgstr "Mise à jour"
@@ -9127,7 +10197,7 @@ msgid "Update done..."
 msgstr "Mise à jour effectuée..."
 
 msgid "Update done... The genuine dreambox test will now be rerun and should not ask you to update again."
-msgstr "MAJ effectuée... Le test d'authenticité STB sera maintenant relancé et ne devrait pas vous demander de remettre à jour."
+msgstr "MAJ effectuée... Le test d'authenticité Vu+ sera maintenant relancé et ne devrait pas vous demander de remettre à jour."
 
 msgid "Update rytec providers"
 msgstr "Mise à jour Opérateurs rytec"
@@ -9139,19 +10209,25 @@ msgid "Updatefeed not available."
 msgstr "MAJ feed non disponible."
 
 msgid "Updating failed. Nothing is broken, just the update couldn't be applied."
-msgstr "Echec mise à jour. Rien n'est cassé, juste que la MAJ n'a pas pu s'effectuer."
+msgstr "Echec mise à jour. Rien n'est cassé, juste que la MàJ n'a pas pu s'effectuer."
 
 msgid "Updating finished. Here is the result:"
-msgstr "Mise à jour terminée. Voici le résultat :"
+msgstr "Mise à jour terminée. Voici le résultat:"
+
+msgid "Updating rytec providers..."
+msgstr "MàJ opérateurs rytec..."
 
 msgid "Updating software catalog"
 msgstr "Mise à jour catalogue logiciel"
+
+msgid "Updating xepgdb providers..."
+msgstr "MàJ opérateurs xepgdb..."
 
 msgid "Updating, please wait..."
 msgstr "Mise à jour, veuillez patienter..."
 
 msgid "Updating... Please wait... This can take some minutes..."
-msgstr "Mise à jour... Veuillez patienter... Ceci peut prendre quelques minutes..."
+msgstr "Mise à jour... Patientez... Ceci peut prendre quelques minutes..."
 
 msgid "Upgrade"
 msgstr "Mise à jour"
@@ -9178,13 +10254,16 @@ msgid "Upgrading"
 msgstr "Mise à jour"
 
 msgid "Upgrading STB... Please wait"
-msgstr "Mise à jour STB... Veuillez patienter"
+msgstr "Mise à jour Vu+... Patientez"
 
 msgid "Upper bound of timespan."
 msgstr "Limite supérieure de période"
 
 msgid "Upper bound of timespan. Nothing after this time will be matched. Offsets are not taken into account!"
-msgstr "Limite supérieure de période. Rien après cette fois ne sera comparé. Les décalages ne sont pas pris en compte!"
+msgstr "Limite supérieure de période. Rien après cette heure ne sera comparé. Les décalages ne sont pas pris en compte!"
+
+msgid "Uptime"
+msgstr "Temps de fonctionnement"
 
 msgid "Url:"
 msgstr "Url:"
@@ -9194,13 +10273,6 @@ msgstr "Assistant Formatage USB"
 
 msgid "Usb in use: "
 msgstr "Usb utilisé: "
-
-msgid ""
-"Usb storage formatted.\n"
-"You can now use the Black Pole Devices Manager to assign your preferred mount point"
-msgstr ""
-"Stockage USB formaté.\n"
-"Vous pouver utiliser le Gestionnaire de périphériques pour assigner le point de montage"
 
 msgid "Use"
 msgstr "Utiliser"
@@ -9215,7 +10287,7 @@ msgid "Use Device"
 msgstr "Utiliser périphérique"
 
 msgid "Use Gateway"
-msgstr "Utiliser Gateway"
+msgstr "Utiliser Passerelle"
 
 msgid "Use IP"
 msgstr "Utiliser IP"
@@ -9239,7 +10311,7 @@ msgid "Use address"
 msgstr "Utiliser adresse"
 
 msgid "Use and control multiple STBes with different RCs."
-msgstr "Utiliser et contrôler plusieurs STBes avec différentes Télécommandes."
+msgstr "Utiliser et contrôler plusieurs Vu+s avec différentes Télécommandes."
 
 msgid "Use fastscan channel names"
 msgstr "Utiliser nom des canaux de Scanrapide"
@@ -9257,7 +10329,7 @@ msgid "Use power measurement"
 msgstr "Utiliser mesure puissance"
 
 msgid "Use the Networkwizard to configure selected network adapter"
-msgstr "Utiliser l'asistant réseau pour configurer l'adaptateur réseau"
+msgstr "Utiliser l'assistant réseau pour configurer l'adaptateur réseau"
 
 msgid "Use the Networkwizard to configure your Network\n"
 msgstr "Utiliser l'assistant réseau pour configurer réseau\n"
@@ -9275,7 +10347,7 @@ msgid "Use the up/down keys on your remote control to select an option. After th
 msgstr "Utilisez les boutons haut/bas de votre télécommande pour sélectionner une option. Après cela, appuyez sur OK."
 
 msgid "Use this input device settings?"
-msgstr "Utiliser ces paramètres périphérique entrée?"
+msgstr "Utiliser ces paramètres du périphérique d'entrée?"
 
 msgid "Use this settings?"
 msgstr "Utiliser ces paramètres"
@@ -9284,7 +10356,7 @@ msgid "Use this video enhancement settings?"
 msgstr "Utiliser ces paramètres vidéo améliorés?"
 
 msgid "Use time of currently running service"
-msgstr "Utiliser temps du service actuel"
+msgstr "Utiliser heure du service actuel"
 
 msgid "Use trash can in movielist"
 msgstr "Utiliser corbeille dans liste des films"
@@ -9325,6 +10397,12 @@ msgstr "Utilisateur"
 msgid "Username:"
 msgstr "NomUtilis:"
 
+msgid "Using a Wireless module as access point"
+msgstr "Utilisant un module WIFI en point d'acces"
+
+msgid "Using a Wireless module as access point."
+msgstr "Utiliser module WIFI comme point d'acces"
+
 msgid "VCR scart"
 msgstr "Péritel magnétoscope"
 
@@ -9353,10 +10431,13 @@ msgid "Vali.HD.nano skin"
 msgstr "Thème Vali.HD.nano"
 
 msgid "Verify your STB authenticity by running the genuine dreambox plugin!"
-msgstr "Vérifie l'authenticité de votre Vu+ en lançant le plugin authenticité dreambox!"
+msgstr "Vérifiez l'authenticité de votre Vu+ en lançant le plugin authenticité !"
 
 msgid "Verifying your internet connection..."
 msgstr "Vérification de votre accès internet.."
+
+msgid "Version: %s"
+msgstr "Version: %s"
 
 msgid "Vertical"
 msgstr "Vertical"
@@ -9380,7 +10461,7 @@ msgid "Video Wizard"
 msgstr "Assistant vidéo"
 
 msgid "Video enhancement preview"
-msgstr "Prévue vidéo améliorée"
+msgstr "Pré-vue vidéo améliorée"
 
 msgid "Video enhancement settings"
 msgstr "Paramètres vidéo améliorés"
@@ -9429,7 +10510,7 @@ msgid "Videoplayer stop/exit behavior:"
 msgstr "Comportement stop/sortie lecteur vidéo"
 
 msgid "Videosize: "
-msgstr "Taille Vidéo"
+msgstr "Taille Vidéo: "
 
 msgid "View Count"
 msgstr "Voir compteur"
@@ -9450,7 +10531,7 @@ msgid "View Rass interactive..."
 msgstr "Afficher Rass interactif..."
 
 msgid "View Video CD..."
-msgstr "Voir viudéo CD..."
+msgstr "Voir vidéo CD..."
 
 msgid "View active downloads"
 msgstr "Voir téléchargement actif"
@@ -9459,13 +10540,13 @@ msgid "View details"
 msgstr "Voir détails"
 
 msgid "View list of available "
-msgstr "Voir liste disponibles des "
+msgstr "Voir liste disponibilités "
 
 msgid "View list of available CommonInterface extensions"
-msgstr "Voir liste des Common Interface disponibles."
+msgstr "Voir liste des Interface Communes disponibles."
 
 msgid "View list of available Display and Userinterface extensions."
-msgstr "Voir liste extensions affichages/interface utilisateur disponibles."
+msgstr "Voir liste extensions affichage/interface utilisateur disponibles."
 
 msgid "View list of available EPG extensions."
 msgstr "Voir liste extensions EPG disponibles."
@@ -9498,7 +10579,7 @@ msgid "View list of available system extensions"
 msgstr "Voir liste extensions des systèmes disponibles."
 
 msgid "View related videos"
-msgstr "Voir vidéos relatées"
+msgstr "Voir vidéos proches"
 
 msgid "View response videos"
 msgstr "Voir réponses vidéos"
@@ -9506,8 +10587,11 @@ msgstr "Voir réponses vidéos"
 msgid "View teletext..."
 msgstr "Afficher télétexte..."
 
-msgid "View, edit or delete mountpoints on your Dreambox."
+msgid "View, edit or delete mountpoints on your dreambox."
 msgstr "Voir, éditer ou supprimer points de montage réseau"
+
+msgid "View, edit or delete mountpoints on your STB."
+msgstr "Voir, éditer ou effacer points montage sur votre Vu+."
 
 msgid "View, edit or delete usernames and passwords for your network."
 msgstr "Voir, éditer ou supprimer noms d'utilisateurs et mot de passe"
@@ -9592,7 +10676,7 @@ msgid "Wait a moment..."
 msgstr "Patientez ..."
 
 msgid "Wait please checking for available updates..."
-msgstr "Patientez vérification si mises à jour disponibles..."
+msgstr "Patientez recherche des mises à jour disponibles..."
 
 msgid "Wait please connection in progress ..."
 msgstr "Patientez connection en cours ..."
@@ -9619,7 +10703,7 @@ msgid "Wait time in ms before activation:"
 msgstr "Temps attente en ms avant activation:"
 
 msgid "Wait while starting Cam"
-msgstr "Patienter : démarrage CAM"
+msgstr "Patientez : démarrage CAM"
 
 msgid "Waiting"
 msgstr "Attente"
@@ -9659,7 +10743,7 @@ msgid "WeatherPlugin shows weatherforecasts on your STB."
 msgstr "WeatherPlugin montre les prévisions météorologiques sur votre STB."
 
 msgid "Weatherforecast on your STB"
-msgstr "Prévisions météorologiques sur votre STB"
+msgstr "Prévisions météorologiques sur votre Vu+"
 
 msgid "Web-Bouquet-Editor for PC"
 msgstr "Editeur de bouquet pour PC"
@@ -9668,7 +10752,7 @@ msgid "Webinterface"
 msgstr "InterfaceWeb"
 
 msgid "Webinterface: Main Setup"
-msgstr "InterfaceWebe: paramètres principaux"
+msgstr "InterfaceWeb: paramètres principaux"
 
 msgid "Wed"
 msgstr "Mer"
@@ -9711,9 +10795,9 @@ msgid ""
 msgstr ""
 "Bienvenue dans l'éditeur Cutlist.\n"
 "\n"
-"Recherchez le départ de la partie que vous voulez couper. Presser OK, sélectionner 'départ de coupe'.\n"
+"Recherchez le départ de la partie que vous voulez couper. Presser OK, sélectionnez 'départ de coupe'.\n"
 "\n"
-"Puis recherchez la fin, presser OK, sélectionner 'fin de coupe'. C'est fait."
+"Puis recherchez la fin, presser OK, sélectionnez 'fin de coupe'. C'est fait."
 
 msgid "Welcome to the Image upgrade wizard. The wizard will assist you in upgrading the firmware of your STB by providing a backup facility for your current settings and a short explanation of how to upgrade your firmware."
 msgstr "Bienvenue dans l'assistant de mise à jour d'image. L'assistant vous aidera à mettre à jour le firmware de votre Vu+ en vous fournissant un moyen de sauvegarder vos paramètres actuels et une explication sur comment mettre à jour votre firmware."
@@ -9730,7 +10814,7 @@ msgid ""
 "Press the Menu button for additional options.\n"
 "\n"
 "The Help button shows this help again."
-msgstr "Bienvenue dans le lecteur MyTube Youtube.Utiliser les boutons bouquet+ pour naviguer dans le champ de recherche et le bouquet- pour naviguer dans les entrées vidéo. Pour lire un film, presser simplement OK sur la télécommmande.Presser sur info pour voir les descriptions de film.Presser le bouton Menu pour voir les options suplémentaires.Le bouton Help montre à nouveau ce message."
+msgstr "Bienvenue dans le lecteur MyTube Youtube. Utilisez les boutons bouquet+ pour naviguer dans le champ de recherche et le bouquet- pour naviguer dans les entrées vidéo. Pour lire un film, pressez simplement OK sur la télécommmande. Pressez sur info pour voir les descriptions de film. Presser le bouton Menu pour voir les options suplémentaires. Le bouton Help montre à nouveau ce message."
 
 msgid ""
 "Welcome to the MyTube Youtube Player.\n"
@@ -9743,9 +10827,9 @@ msgid ""
 msgstr ""
 "Bienvenue dans le lecteur MyTube Youtube.\n"
 "\n"
-"En saisissant vos limites de recherche vous obtiendrez des suggestions affichées correspondant à votre limite de recherche.\n"
+"En saisissant vos termes de recherche vous obtiendrez des suggestions affichées correspondant à votre terme de recherche.\n"
 "\n"
-"Pour sélectionner une suggestion presser DOWN sur la télécommande, sélectionner le résultat désiré et presser OK sur votre télécommande pour lancer la recherche.\n"
+"Pour sélectionner une suggestion presser BAS sur la télécommande, sélectionner le résultat désiré et presser OK sur votre télécommande pour lancer la recherche.\n"
 "\n"
 "Presser sortir pour revenir au champ de saisie."
 
@@ -9768,7 +10852,7 @@ msgid ""
 "If you want to connect your STB to the Internet, this wizard will guide you through the basic network setup of your STB.\n"
 "\n"
 "Press OK to start configuring your network"
-msgstr "Bienvenue.Si vous voulez connecter votre Vu+ à internet, cette assistant vous guidera à Paramètrer les réglages basiques du réseau de votre Vu+.Presser OK pour démarrer la configuration du réseau"
+msgstr "Bienvenue. Si vous voulez connecter votre Vu+ à internet, cet assistant vous aidera à paramètrer les réglages basiques du réseau de votre Vu+.Presser OK pour démarrer la configuration du réseau"
 
 msgid ""
 "Welcome.\n"
@@ -9800,8 +10884,8 @@ msgid ""
 msgstr ""
 "Bienvenue.\n"
 "\n"
-"Cet assistant de démarrage va vous guider lors du paramétrage de base de votre STB.\n"
-"Veuillez appuyer sur le bouton OK de la télecommande pour passer à l'étape suivante."
+"Cet assistant de démarrage va vous guider lors du paramétrage de base de votre Vu+.\n"
+"Appuyez sur le bouton OK de la télecommande pour passer à l'étape suivante."
 
 msgid "Welcome..."
 msgstr "Bienvenue..."
@@ -9816,10 +10900,17 @@ msgid "What to do with submitted crashlogs?"
 msgstr "Que faire des crashlogs soumis?"
 
 msgid "When supporting \"Fast Scan\" the service type is ignored. You don't need to enable this unless your Image supports \"Fast Scan\" and you are using it."
-msgstr "Le service type est ignoré quand Scan Rapide est utilisé. Ne l'activez que si votre Image supporte Scan rapide et que vous en ayiez besoin."
+msgstr "Le service type est ignoré quand Scan Rapide est utilisé. Ne l'activez que si votre Image supporte Scan rapide et que vous en avez besoin."
+
+msgid ""
+"When the decoder is in standby opentv providers will be automatically downloaded every hour.\n"
+"XMLTV providers will be always downloaded only once a day"
+msgstr ""
+"Quand le Vu+ est en veille, les opérateurs opentv seront automatiquement téléchargés chaque heure.\n"
+"Les opérateurs XMLTV ne seront téléchargés qu'une seule fois par jour"
 
 msgid "When this option is enabled the AutoTimer won't match events where another timer with the same description already exists in the timer list."
-msgstr "Quand cette option est activée la ProAuto ne mariera pas les émissions ou une autre programmation avec la même description existant déjà dans la liste de programmation."
+msgstr "Quand cette option est activée la ProAuto ne mariera pas les émissions ou une autre programmation avec la même description existante déjà dans la liste de programmation."
 
 msgid ""
 "When you do a factory reset, you will lose ALL your configuration data\n"
@@ -9865,7 +10956,7 @@ msgid "Wireless network state"
 msgstr "Etat du réseau WIFI"
 
 msgid "With AntiScrollbar you can cover up annoying ticker lines (e.g. in news channels)."
-msgstr "Avec les AntiScrollbar vous pouvez dissimuler les lignes ennuyantes (par exemple les chaînes d'informations)."
+msgstr "Avec les AntiScrollbar vous pouvez dissimuler les lignes ennuyantes (par exemple dans les chaînes d'informations)."
 
 msgid ""
 "With DVDBurn you can make compilations of records from your STB hard drive.\n"
@@ -9874,7 +10965,7 @@ msgid ""
 msgstr ""
 "Avec DVDBurn vous pouvez faire des compilations d'enrigistrement depuis le disque dur du Vu+.\n"
 "Optionnellement vous pouvez ajouter des menus personnels. Vous pouvez enregistrer la compilation en mode compatible-standard DVD pouvant-être lue sur un lecteur DVD.\n"
-"Les enregistrements HDTV peuvent seulement être gravés en format propriétaires dreambox."
+"Les enregistrements HDTV peuvent seulement être gravés en format propriétaires Vu+."
 
 msgid "With EPGSearch you can search through the EPG and create timers."
 msgstr "Avec EPGsearch vous pouvez rechercher dans l'EPG et créer des programmations."
@@ -9895,7 +10986,7 @@ msgid "With OFDb you can display downloaded movie information (rating, poster, c
 msgstr "Avec IMDB téléchargez des infos sur le film sélectionné (notes, distribution, ..etc)."
 
 msgid "With WebcamViewer you can watch webcams on your TV Screen."
-msgstr "Avec WebcamViewer vous pouvez observer des webcams sur votre écran TV."
+msgstr "Avec WebcamViewer observez des webcams sur votre écran TV."
 
 msgid ""
 "With Werbezapper you can bridge commercials by creating short timers\n"
@@ -9915,14 +11006,14 @@ msgid ""
 "With the CommonInterfaceAssignment plugin it is possible to use differentCI modules in your STB and assign dedicated providers/services or caids to each of them.\n"
 "This allows watching a scrambled service while recording another one."
 msgstr ""
-"Avec le plugin CommonInterfaceAssignment il est possible d'utiliser différent modules CI dans votre STB et assigner dédier fournisseurs/services ou caids à chacun d'entre eux.\n"
+"Avec le plugin CommonInterfaceAssignment il est possible d'utiliser différent modules CI dans votre Vu+ et assigner des opérateurs/services ou caids à chacun d'entre eux.\n"
 "Ceci permet de regarder un service crypté pendant l'enregistrement d'un autre."
 
 msgid "With the CrashlogAutoSubmit plugin it is possible to automaticallymail crashlogs found on your hard drive to Dream Multimedia."
 msgstr "Avec le plugin CrashlogAutoSubmit il est possible d'envoyer automatiquement par email les crashlogs trouvés sur le HDD à Dream Multimedia."
 
 msgid "With the DefaultServicesScanner plugin you can scan default lamedbs sorted by satellite with a connected dish positioner."
-msgstr "Avec le plugin DefaultServicesScanner vous pouvez scanner les lamedbs standards triés par le satellite avec un positionneur de parabole."
+msgstr "Avec le plugin DefaultServicesScanner vous pouvez scanner les lamedbs standards triés par satellite avec un positionneur de parabole."
 
 msgid "With the DiseqcTester plugin you can test your satellite equipment for DiSEqC compatibility and errors."
 msgstr "Avec le plugin DiseqcTester vous pouvez tester votre équipement sat pour compatibilité DiSEqC et erreurs."
@@ -9932,7 +11023,7 @@ msgid ""
 "It is then possible to flash your STB with the image on that stick."
 msgstr ""
 "Avec le plugin NFIFlash il est possible de préparer une clé USB avec une image STB.\n"
-"Il est ensuite possible de flasher votre STB avec l'image sur la clé."
+"Il est ensuite possible de flasher votre Vu+ avec l'image sur la clé."
 
 msgid "With the NetworkWizard you can easily configure your network step by step."
 msgstr "Avec le NetworkWizard vous pouvez facilement configuer votre réseau pas à pas."
@@ -9979,9 +11070,6 @@ msgstr ""
 
 msgid "Wrong file format. Only bz2 and gzip files are allowed (.dat.gz .dat.bz2)."
 msgstr "Mauvais format de fichier. Uniquement bz2 et gzip autorisés (.dat.gz .dat.bz2)."
-
-msgid "Wrong kernel version. Please install Black Pole image in Flash."
-msgstr "Mauvais Kernel, Installer Black Pole en Flash"
 
 msgid "XEPGDB providers"
 msgstr "Opérateurs XEPGDB"
@@ -10092,7 +11180,7 @@ msgid "You can disable Telnet Server and use ssh to login to your box."
 msgstr "Vous pouvez désactiver TELNET et utiliser SSH pour vous connecter au vuplus."
 
 msgid "You can install this plugin."
-msgstr "Vous pouvez installer le plugin."
+msgstr "Vous pouvez installer ce plugin."
 
 msgid "You can only burn STB recordings!"
 msgstr "Vous pouvez seulement graver des enregistrements STB!"
@@ -10103,10 +11191,10 @@ msgstr "Vous pouvez retirer ce plugin."
 msgid ""
 "You can set the basic properties of an AutoTimer here.\n"
 "While 'Name' is just a human-readable name displayed in the Overview, 'Match in title' is what is looked for in the EPG."
-msgstr "Vous pouvez régler les propriétés de base d'une ProgAuto ici.Tandis que 'Nom' est juste un nom lisible par l'homme affiché dans la vue d'ensemble, 'correspondance dans le titre' est ce qui est recherché dans l'EPG."
+msgstr "Vous pouvez régler les propriétés de base d'une ProgAuto ici. Tandis que 'Nom' est juste un nom lisible par l'homme affiché dans la vue d'ensemble, 'correspondance dans le titre' est ce qui est recherché dans l'EPG."
 
 msgid "You can use the EasyInfo for manage your EPG plugins from info button. You have also a new now-next event viewer. Easy-PG, the own graphical EPG bowser is also included."
-msgstr "Vous pouvez utiliser  EasyInfo pour gérer vos plugins EPG depuis la touche \"info\". Vous avez également une nouvelle visionneuse d'événements maintenant-suivant. Easy-PG: son propre graphique EPG browser est également inclus."
+msgstr "Vous pouvez utiliser  EasyInfo pour gérer vos plugins EPG depuis la touche \"info\". Vous avez également une nouvelle visionneuse d'événements maintenant-suivant. Easy-PG: son propre explorateur EPG graphique est également inclus."
 
 msgid "You can use this plugin to dynamically hide Plugins from either the Extensions- or Pluginmenu without having to modify the source code of the respective plugin.After installation you find the settings as \"Hide Plugins\" under Setup / System."
 msgstr "Vous pouvez utiliser ce plugin pour cacher dynamiquement des Plugins des autres  Extensions ou du menu Plugin sans avoir à modifier son code source. Après l'installation, vous trouverez les fonctions comme \"Cacher Plugins\" sous Configuration / Système."
@@ -10131,7 +11219,7 @@ msgid ""
 "As this is a mandatory Attribute you cannot continue without doing so."
 msgstr ""
 "Vous n'avez pas fourni un attribut 'Correspondance dans le titre' valide pour votre nouvelle ProgAuto.\n"
-"Ceci est un attribut obligatoire vous ne pouvez pas continuer sans le faire ainsi."
+"Ceci est un attribut obligatoire vous ne pouvez pas continuer sans le faire."
 
 msgid "You didn't select a channel to record from."
 msgstr "Vous n'avez pas sélectionné une chaîne à enregistrer."
@@ -10150,7 +11238,7 @@ msgid "You have chosen to create a new .NFI flasher bootable USB stick. This wil
 msgstr "Vous avez choisi de créer une nouvelle clef USB flasheur bootable .NFI. Ceci repartitionnera la clef USB et par conséquent effacera toutes données dessus."
 
 msgid "You have chosen to restore your settings. Enigma2 will restart after restore. Please press OK to start the restore now."
-msgstr "Vious avez choisi de restaurer vos paramètres. Enigma2 redémarrera après la la restauration. Veuillez appuyer sur OK pour démarrer la restauration."
+msgstr "Vious avez choisi de restaurer vos paramètres. Enigma2 redémarrera après la restauration. Veuillez appuyer sur OK pour démarrer la restauration."
 
 msgid "You have to Activate Inadyn before to start"
 msgstr "Vous devez Activer Inadyn avant de démarrer"
@@ -10194,14 +11282,14 @@ msgid ""
 "Your dreambox will now be halted. After you have performed the update instructions from the website, your new firmware will ask you to restore your settings."
 msgstr ""
 "Vous avez besoin d'un PC connecté à votre STB. Si vous avez besoin de plus d'informations, veuillez visiter le site Web http://www.dm7025.de.\n"
-"Votre STB va être arrêtée. Après que vous ayez effectué les instructions de mise à jour, votre nouveau firmware vous demandera de restaurer les paramètres."
+"Votre STB va être arrêtée. Après que vous ayiez effectué les instructions de mise à jour, votre nouveau firmware vous demandera de restaurer les paramètres."
 
 msgid ""
 "You need to set a PIN code and hide it from your children.\n"
 "\n"
 "Do you want to set the pin now?"
 msgstr ""
-"vous devez saisir un code pin et le cacher de vos enfants.\n"
+"Vous devez saisir un code pin et le cacher de vos enfants.\n"
 "\n"
 "Voulez-vous paramétrer ce code maintenant?"
 
@@ -10218,7 +11306,7 @@ msgid ""
 "Your 'Match in title' Attribute ends with a Whitespace.\n"
 "Please confirm if this was intentional, if not they will be removed."
 msgstr ""
-"Votre 'Correspondance dans le titre' à mis un espace à la fin.\n"
+"Votre 'Correspondance dans le titre' a mis un espace à la fin.\n"
 "Veuillez confirmer si c'était intentionnel, sinon il sera retiré."
 
 msgid ""
@@ -10239,7 +11327,7 @@ msgid ""
 "\n"
 "Please press OK to continue."
 msgstr ""
-"Votre STB est maintenant prète à l'utilisation.\n"
+"Votre Vu+ est maintenant pret à l'utilisation.\n"
 "\n"
 "Votre connection internet fonctionne maintenant.\n"
 "\n"
@@ -10274,10 +11362,10 @@ msgid "Your current collection will get lost!"
 msgstr "Votre collection actuelle sera perdue!"
 
 msgid "Your dreambox is shutting down. Please stand by..."
-msgstr "Votre STB s'éteint. Veuillez patienter..."
+msgstr "Votre Vu+ s'éteint. Veuillez patienter..."
 
 msgid "Your dreambox isn't connected to the internet properly. Please check it and try again."
-msgstr "Votre STB n'est pas connectée correctement à internet. Veuillez vérifier et réessayer encore."
+msgstr "Votre Vu+ n'est pas connecté correctement à internet. Veuillez vérifier et réessayer encore."
 
 msgid "Your email address:"
 msgstr "Votre adresse email:"
@@ -10288,6 +11376,15 @@ msgid ""
 msgstr ""
 "Le logiciel de votre frontprocessor doit être mis à jour.\n"
 "Veuillez appuyer sur OK pour commencer la mise à jour."
+
+msgid ""
+"Your frontprocessor will be upgraded\n"
+"Please wait until your receiver reboots\n"
+"This may take a few minutes"
+msgstr ""
+"Le Processeur Frontal va être mis à jour\n"
+"Attendez jusqu'à ce que le récepteur reboote\n"
+"Cela peut prendre quelques minutes"
 
 msgid ""
 "Your internet connection is not working!\n"
@@ -10316,6 +11413,9 @@ msgstr "Votre montage réseau a été actualisé."
 
 msgid "Your receiver is rebooting"
 msgstr "Votre démodulateur reboote"
+
+msgid "Your receiver is shutting down"
+msgstr "Votre démodulateur va s'éteindre"
 
 msgid ""
 "Your wireless LAN internet connection could not be started!\n"
@@ -10359,10 +11459,10 @@ msgid "ZappingModeSelection"
 msgstr "Choix mode zapping"
 
 msgid "Zoom into letterboxed/anamorph movies"
-msgstr "Zoom dans films letterboxed/anamorphic"
+msgstr "Zoom dans films boite à lettre/anamorphe"
 
 msgid "Zoom into letterboxed/anamorph movies."
-msgstr "Zoom dans films letterboxed/anamorphic."
+msgstr "Zoom dans films boite à lettre/anamorphe"
 
 msgid "Zydas"
 msgstr "Zydas"
@@ -10434,13 +11534,13 @@ msgid "add bouquet"
 msgstr "ajouter bouquet"
 
 msgid "add directory to playlist"
-msgstr "ajouter le répertoire à la liste de lecture"
+msgstr "ajouter répertoire à liste de lecture"
 
 msgid "add file to playlist"
-msgstr "ajouter le fichier à la liste de lecture"
+msgstr "ajouter fichier à liste de lecture"
 
 msgid "add files to playlist"
-msgstr "ajouter fichiers à la liste lecture"
+msgstr "ajouter fichiers à liste lecture"
 
 msgid "add filters"
 msgstr "ajouter filtres"
@@ -10479,13 +11579,13 @@ msgid "alphabetic sort"
 msgstr "tri alphabetique"
 
 msgid "assign color buttons (red/green/yellow/blue) to plugins from MOVIELIST."
-msgstr "assigner boutons couleur (rouge/vert/jaune/bleu) aux plugins depuis LISTE FILMS."
+msgstr "assigner boutons (rouge/vert/jaune/bleu) aux plugins depuis LISTE FILMS."
 
 msgid "assign color buttons to plugins from MOVIELIST"
 msgstr "assigner boutons couleur aux plugins depuis LISTE FILMS"
 
 msgid "assign long key-press (red/green/yellow/blue) to plugins or E2 functions."
-msgstr "assigner appui-touche long (rouge/vert/jaune/bleu) aux plugins ou fonctions E2."
+msgstr "assigner appui-long (rouge/vert/jaune/bleu) aux plugins ou fonctions E2."
 
 msgid "assign long key-press on color buttons to plugins or E2 functions"
 msgstr "assigner appui-touche long aux plugins ou fonctions E2."
@@ -10518,7 +11618,7 @@ msgid "autolanguagesetup"
 msgstr "réglage langue auto"
 
 msgid "autotimers need a match attribute"
-msgstr "ProgAuto nécessite un lien valide"
+msgstr "ProgAuto nécessite une correspondance"
 
 msgid "available"
 msgstr "disponible"
@@ -10547,17 +11647,23 @@ msgstr "bleu"
 msgid "bob"
 msgstr "bob"
 
+msgid "browse your local pictures"
+msgstr "visualisez vos images"
+
 msgid "burn audio track (%s)"
 msgstr "graver piste audio (%s)"
 
+msgid "cancel"
+msgstr "Annuler"
+
 msgid "case-insensitive search"
-msgstr "recherche distinguant majuscules et minuscules"
+msgstr "recherche indifférente majuscules et minuscules"
 
 msgid "case-sensitive search"
 msgstr "recherche distinguant majuscules et minuscules"
 
 msgid "center"
-msgstr "centré"
+msgstr "centrer"
 
 msgid "change recording (duration)"
 msgstr "modifier un enregistrement (durée)"
@@ -10596,7 +11702,7 @@ msgid "continue"
 msgstr "continuer"
 
 msgid "control multiple STBes with different RCs"
-msgstr "contrôler STB multiples avec différentes Télécommandes"
+msgstr "contrôler Vu+ multiples avec différentes Télécommandes"
 
 msgid "copy to bouquets"
 msgstr "copier vers bouquets"
@@ -10608,10 +11714,10 @@ msgid "create directory"
 msgstr "création répertoire"
 
 msgid "creates virtual series folders from episodes"
-msgstr "créé des dossiers virtuels des épisodes"
+msgstr "créé des dossiers virtuels depuis épisodes"
 
 msgid "creates virtual series folders from sets of recorded episodes"
-msgstr "créé des dossiers virtuels des lots d'épisode enregistrés"
+msgstr "créé des dossiers virtuels depuis lots d'épisode enregistrés"
 
 msgid "currently installed image: %s"
 msgstr "image installée actuellement: %s"
@@ -10679,6 +11785,9 @@ msgstr "terminé!"
 msgid "driver for Realtek USB wireless devices"
 msgstr "driver pour périphériques USB WIFI  Realtek"
 
+msgid "ecm time: "
+msgstr "temps ecm: "
+
 msgid "edit alternatives"
 msgstr "éditer les alternatifs"
 
@@ -10723,6 +11832,9 @@ msgstr "réglage epg"
 
 msgid "equal to"
 msgstr "égale à"
+
+msgid "every hour (only in standby)"
+msgstr "chaque heure (si en veille)"
 
 msgid "exact match"
 msgstr "concordance exacte"
@@ -10777,6 +11889,9 @@ msgstr "libre"
 
 msgid "free diskspace"
 msgstr "espace disque libre"
+
+msgid "from: "
+msgstr "de: "
 
 msgid "go to deep standby"
 msgstr "mettre en veille profonde"
@@ -10886,6 +12001,9 @@ msgstr "verrouillé"
 msgid "loopthrough to"
 msgstr "rebouclé par"
 
+msgid "main lamedb"
+msgstr "lamedb principal"
+
 msgid "management 3g modem"
 msgstr "gestion Modem 3G"
 
@@ -10950,13 +12068,13 @@ msgid "no CAId selected"
 msgstr "Aucun CAId sélectionné!"
 
 msgid "no CI slots found"
-msgstr "Aucun slots CI trouvés"
+msgstr "Aucun slot CI trouvés"
 
 msgid "no HDD found"
 msgstr "aucun DD trouvé"
 
 msgid "no Services/Providers selected"
-msgstr "Aucun Service/Fourniseur sélectionné"
+msgstr "Aucun Service/Opérateur sélectionné"
 
 msgid "no module found"
 msgstr "Aucun module trouvé"
@@ -10992,7 +12110,7 @@ msgid "nothing"
 msgstr "rien"
 
 msgid "nothing connected"
-msgstr "Rien n'a été trouvé"
+msgstr "Rien de connecté"
 
 msgid "of a DUAL layer medium used."
 msgstr "d'un média double couche utilisé."
@@ -11007,13 +12125,16 @@ msgid "on"
 msgstr "marche"
 
 msgid "on READ ONLY medium."
-msgstr "sur support en LECTURE SEULE"
+msgstr "sur média en LECTURE SEULE"
 
 msgid "on Weekday"
 msgstr "sur jour semaine"
 
 msgid "once"
 msgstr "une fois"
+
+msgid "once a day"
+msgstr "une fois par jour"
 
 msgid "open nameserver configuration"
 msgstr "ouvrir configuration nom serveur"
@@ -11040,19 +12161,19 @@ msgid "pause"
 msgstr "pause"
 
 msgid "play entry"
-msgstr "jouer entrée"
+msgstr "lire entrée"
 
 msgid "play from next mark or playlist entry"
-msgstr "jouer depuis marque suivante ou entrée liste lecture"
+msgstr "lire depuis marque suivante ou entrée liste lecture"
 
 msgid "play from previous mark or playlist entry"
-msgstr "jouer depuis marque précédente ou entrée liste lecture"
+msgstr "lire depuis marque précédente ou entrée liste lecture"
 
 msgid "please press OK when ready"
-msgstr "veuillez appuyer sur OK quand vous êtes prêt(e)"
+msgstr "appuyer sur OK quand vous êtes prêt"
 
 msgid "please wait, loading picture..."
-msgstr "veuillez patienter, chargement image..."
+msgstr "patienter, chargement image..."
 
 msgid "plugin to Backup/Restore Epg"
 msgstr "Sauvegarde /restauration Epg"
@@ -11062,6 +12183,15 @@ msgstr "chaîne précédente"
 
 msgid "previous channel in history"
 msgstr "chaîne précédente dans l'historique"
+
+msgid "protocol: "
+msgstr "protocole: "
+
+msgid "prov: "
+msgstr "opérateur: "
+
+msgid "reader: "
+msgstr "lecteur: "
 
 msgid "record"
 msgstr "enregistrer"
@@ -11150,6 +12280,9 @@ msgstr "analyse en cours - %d%% fait!"
 msgid "scan state"
 msgstr "état de l'analyse"
 
+msgid "scan type(DVB-S)"
+msgstr "Scan en aveugle type (DVB-S)"
+
 msgid "second"
 msgstr "seconde"
 
@@ -11196,10 +12329,10 @@ msgid "setup Fancontol inStandby mode"
 msgstr "Régler Contrôle ventilo en veille"
 
 msgid "setup PIN"
-msgstr "PIN paramètres"
+msgstr "paramètres PIN"
 
 msgid "setup Remote Control System Code Type"
-msgstr "Paramètre Type de code système télécommande"
+msgstr "Paramètrer code système télécommande"
 
 msgid "show DVD main menu"
 msgstr "montrer menu DVD principal"
@@ -11223,10 +12356,10 @@ msgid "show extended description"
 msgstr "montrer description étendue"
 
 msgid "show first selected tag"
-msgstr "montrer premier pointeur sélectionné"
+msgstr "montrer premier marqueur sélectionné"
 
 msgid "show second selected tag"
-msgstr "montrer second pointeur sélectionné"
+msgstr "montrer second marqueur sélectionné"
 
 msgid "show shutdown menu"
 msgstr "montrer menu éteindre"
@@ -11235,7 +12368,7 @@ msgid "show single service EPG..."
 msgstr "montrer service simple EPG..."
 
 msgid "show tag menu"
-msgstr "montrer menu étiquette"
+msgstr "montrer menu marqueur"
 
 msgid "show transponder info"
 msgstr "montrer info transpondeur"
@@ -11285,6 +12418,9 @@ msgstr "départ de coupe ici"
 msgid "start directory"
 msgstr "répertoire départ"
 
+msgid "start opera web browser"
+msgstr "démarrer navigateur web opéra"
+
 msgid "start timeshift"
 msgstr "lancer PauseDirect"
 
@@ -11297,11 +12433,14 @@ msgstr "stéréo"
 msgid "stop PiP"
 msgstr "arrêter Pip"
 
+msgid "stop Service on Start"
+msgstr "Stopper service au démarrage"
+
 msgid "stop entry"
 msgstr "arrêter entrée"
 
 msgid "stop recording"
-msgstr "arrêter l'enregistrement"
+msgstr "arrêter enregistrement"
 
 msgid "stop timeshift"
 msgstr "arrêter PauseDirect"
@@ -11346,16 +12485,16 @@ msgid "this recording"
 msgstr "cet enregistrement"
 
 msgid "this service is protected by a parental control pin"
-msgstr "ce service est protégé par un pin contrôle parental"
+msgstr "ce service est protégé par un contrôle pin parental"
 
 msgid "to the box you have to unplug it, click\n"
 msgstr "vous devez le retirer du Vu+, appuyez\n"
 
 msgid "toggle a cut mark at the current position"
-msgstr "commuter un marqueur coupé à cette position"
+msgstr "permuter un marqueur de coupe à cette position"
 
 msgid "toggle time, chapter, audio, subtitle info"
-msgstr "commuter temps, chapitre, audio, info sous-titres"
+msgstr "permuter temps, chapitre, audio, info sous-titres"
 
 msgid "top"
 msgstr "haut"
@@ -11388,13 +12527,13 @@ msgid "unused in Vu Ultimo"
 msgstr "inutilisé pour Vu+ Ultim"
 
 msgid "use as HDD replacement"
-msgstr "utiliser un HDD en remplacement"
+msgstr "utiliser en HDD de remplacement"
 
 msgid "use your STB as Web proxy"
-msgstr "utiliser votre Vu+ comme Web proxy"
+msgstr "utiliser votre Vu+ comme proxy Web"
 
 msgid "use your STB as Web proxy."
-msgstr "utiliser votre Vu+ comme Web proxy."
+msgstr "utiliser votre Vu+ comme proxy Web."
 
 msgid "user defined"
 msgstr "défini par l'utilisateur"
@@ -11417,8 +12556,11 @@ msgstr "voir extensions..."
 msgid "view recordings..."
 msgstr "voir enregistrements..."
 
+msgid "view webcams around the world"
+msgstr "voir webcams autour du monde"
+
 msgid "wait for ci..."
-msgstr "attente pour ci..."
+msgstr "attente pour IC..."
 
 msgid "wait for mmi..."
 msgstr "attente pour mmi..."
@@ -11427,7 +12569,7 @@ msgid "waiting"
 msgstr "en attente"
 
 msgid "was removed successfully"
-msgstr "à été retiré avec succès"
+msgstr "a été retiré avec succès"
 
 msgid "watch trailer from epglist/eventview"
 msgstr "voir réumé depuis liste epg/évenements"
@@ -11466,10 +12608,10 @@ msgid "yes (keep feeds)"
 msgstr "oui (garder feeds)"
 
 msgid "your STB might be unusable now. Please consult the manual for further assistance before rebooting your STB."
-msgstr "Votre STB peut être hors service maintenant, consulter le manuel pour plus d'information avant de rebooter votre STB."
+msgstr "Votre Vu+ peut être hors service maintenant, consulter le manuel pour plus d'information avant de rebooter votre Vu+."
 
 msgid "your dreambox might be unusable now. Please consult the manual for further assistance before rebooting your dreambox."
-msgstr "your STB doit être hors service maintenant, consulter le manuel pour plus d'information avant de rebooter votre STB."
+msgstr "votre Vu+ doit être hors service maintenant, consulter le manuel pour plus d'information avant de rebooter votre Vu+."
 
 msgid "zap"
 msgstr "zap"
