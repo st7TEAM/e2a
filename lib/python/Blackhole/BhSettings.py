@@ -1394,7 +1394,8 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		
 	def updateFeed2(self):
 		self.activityTimer.stop()
-		ret = system("opkg update")
+		if not fileExists("/var/volatile/tmp/official-all"):
+			ret = system("opkg update")
 		self.updateList()
 	
 	def updateList(self):

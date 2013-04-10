@@ -452,6 +452,8 @@ class Nab_ShowFeedFile(Screen):
 			mydir = getcwd()
 			chdir("/")
 			cmd = "opkg update"
+			if fileExists("/var/volatile/tmp/official-all"):
+				cmd = "echo -e 'Testing: %s '" % (dest)
 			cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 			cmd1 = "opkg install --force-overwrite " + dest
 			cmd2 = "rm -f " + dest
@@ -701,6 +703,8 @@ class Nab_ShowDownFile(Screen):
 				mydir = getcwd()
 				chdir("/")
 				cmd = "opkg update"
+				if fileExists("/var/volatile/tmp/official-all"):
+					cmd = "echo -e 'Testing: %s '" % (dest)
 				cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 				cmd1 = "opkg install --force-overwrite " + dest
 				cmd2 = "rm -f " + dest
@@ -841,6 +845,8 @@ class Nab_downPanelIPK(Screen):
 			mydir = getcwd()
 			chdir("/")
 			cmd = "opkg update"
+			if fileExists("/var/volatile/tmp/official-all"):
+				cmd = "echo -e 'Testing: %s '" % (dest)
 			cmd0 = "opkg install --noaction %s > /tmp/package.info" % (dest)
 			cmd1 = "opkg install --force-overwrite " + dest
 			cmd2 = "rm -f " + dest
@@ -1229,7 +1235,7 @@ class Bh_Feed_Settings(Screen):
 	def upgradePack(self, answer):
 		if answer is True:
 			self.done_message = _("Package %s upgraded.") % (self.installed)
-			cmd1 = "opkg upgrade " + self.installed
+			cmd1 = "opkg install " + self.installed
 			self.session.open(Console, title=_("New Settings Package Installation"), cmdlist=[cmd1], finishedCallback = self.ipkDone, closeOnSuccess = True)
 		
 	
