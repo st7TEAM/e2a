@@ -1,10 +1,13 @@
 from Screens.Screen import Screen
 
 from Screens.MessageBox import MessageBox
+from Screens.InputBox import InputBox
 from Screens.Standby import TryQuitMainloop
 from Screens.Console import Console
 from enigma import eTimer, loadPic, eDVBDB
 from Components.ActionMap import ActionMap
+from Components.ConfigList import ConfigListScreen
+from Components.config import config, getConfigListEntry, ConfigYesNo, ConfigSubsection, ConfigInteger
 from Components.Label import Label
 from Components.ScrollLabel import ScrollLabel
 from Components.Sources.List import List
@@ -15,6 +18,10 @@ from os import system, listdir, chdir, getcwd, remove as os_remove
 from urllib2 import Request, urlopen, URLError, HTTPError
 from BhUtils import nab_strip_html, DeliteGetSkinPath, nab_Detect_Machine, BhU_get_Version
 from operator import itemgetter
+
+config.bhaddons = ConfigSubsection()
+config.bhaddons.lock = ConfigYesNo(default = False)
+config.bhaddons.pin = ConfigInteger(limits = (0, 9999), default = 0)
 
 class DeliteAddons(Screen):
 	skin = """
@@ -34,7 +41,7 @@ class DeliteAddons(Screen):
 	
 	def __init__(self, session):
 		Screen.__init__(self, session)
-
+				
 		self.list = []
 		self["list"] = List(self.list)
 		self.updateList()
@@ -44,7 +51,7 @@ class DeliteAddons(Screen):
 		
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
 		{
-			"ok": self.KeyOk,
+			"ok": self.checkAcceSS,
 			"back": self.close,
 
 		})
@@ -102,7 +109,30 @@ class DeliteAddons(Screen):
 		res = (name, png, idx)
 		self.list.append(res)
 		
+		mypixmap = mypath + "icons/nabpackpanel.png"
+		png = LoadPixmap(mypixmap)
+		name = _("Addons Parental Control")
+		idx = 7
+		res = (name, png, idx)
+		self.list.append(res)
+		
 		self["list"].list = self.list
+		
+		
+	def checkAcceSS(self):
+		if config.bhaddons.lock.value == True:
+			msg = _("Enter the pin")
+			self.session.openWithCallback(self.checkAcceSS2, InputBox, title=msg, windowTitle = _("Insert Pin"), text="0000", useableChars = "1234567890" )
+		else:
+			self.KeyOk()
+			
+	def checkAcceSS2(self, pin):
+		if pin is None:
+			pin = 0
+		if int(pin) == config.bhaddons.pin.value:
+			self.KeyOk()
+		else:
+			self.session.open(MessageBox, _("Sorry, wrong pin."), MessageBox.TYPE_ERROR)
 		
 	def KeyOk(self):
 		
@@ -128,6 +158,8 @@ class DeliteAddons(Screen):
 			if fileExists(downfile):
 				os_remove(downfile)
 			self.session.openWithCallback(self.StatsDone, Nab_ConnectPop, staturl, downfile)
+		elif self.sel == 7:
+			self.session.open(addonsParentalConfig)
 		else:
 			nobox = self.session.open(MessageBox, "Function Not Yet Available", MessageBox.TYPE_INFO)
 			nobox.setTitle(_("Info"))
@@ -945,6 +977,54 @@ class Nab_Stats(Screen):
 			os_remove("/tmp/cpanel.tmp")
 			self["infotext"].setText(strview)
 				
+class addonsParentalConfig(Screen, ConfigListScreen):
+	skin = """
+	<screen position="center,center" size="700,340" title="Addons parental control setup">
+		<widget name="config" position="10,100" size="680,110" scrollbarMode="showOnDemand" transparent="1" />
+		<ePixmap pixmap="skin_default/buttons/red.png" position="140,270" size="140,40" alphatest="on" />
+		<widget name="key_red" position="140,270" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="red" transparent="1" />
+		<ePixmap position="420,270" size="140,40" pixmap="skin_default/buttons/green.png" alphatest="on" zPosition="1" />
+		<widget name="key_green" position="420,270" zPosition="2" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="green" transparent="1" />
+	</screen>"""
+	
+	def __init__(self, session):
+		Screen.__init__(self, session)
+		
+		self.list = []
+		ConfigListScreen.__init__(self, self.list)
+		self["key_red"] = Label(_("Cancel"))
+		self["key_green"] = Label(_("Save"))
+		
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"red": self.keyCancel,
+			"back": self.keyCancel,
+			"green": self.keySave,
+
+		}, -2)
+		
+		self.updateList()
+	
+	def updateList(self):
+		item = getConfigListEntry(_("Addons access protected"), config.bhaddons.lock)
+		self.list.append(item)
+		item = getConfigListEntry(_("Addons access pin"), config.bhaddons.pin)
+		self.list.append(item)	
+		
+		self["config"].list = self.list
+		self["config"].l.setList(self.list)
+
+	def keySave(self):
+		for x in self["config"].list:
+			x[1].save()
+		self.close()
+
+	def keyCancel(self):
+		for x in self["config"].list:
+			x[1].cancel()
+		self.close()
+
+
 class Nab_ConnectPop(Screen):
 	skin = """
 	<screen position="390,100" size="484,220" title="Black Hole E2" flags="wfNoBorder">
@@ -1024,6 +1104,7 @@ class Nab_ConnectPop(Screen):
 		
 	def delTimer(self):
 		del self.activityTimer
+		
 
 class Bh_Feed_Settings(Screen):
 	skin = """
