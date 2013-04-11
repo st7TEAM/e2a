@@ -7,7 +7,7 @@ from Screens.Console import Console
 from enigma import eTimer, loadPic, eDVBDB
 from Components.ActionMap import ActionMap
 from Components.ConfigList import ConfigListScreen
-from Components.config import config, getConfigListEntry, ConfigYesNo, ConfigSubsection, ConfigInteger
+from Components.config import config, getConfigListEntry, ConfigYesNo, ConfigSubsection, ConfigInteger, ConfigSelection, ConfigClock, NoSave
 from Components.Label import Label
 from Components.ScrollLabel import ScrollLabel
 from Components.Sources.List import List
@@ -143,7 +143,7 @@ class DeliteAddons(Screen):
 		if self.sel == 0:
 			self.session.open(Nab_downArea)
 		elif self.sel == 1:
-			self.session.open(Bh_Feed_Settings)
+			self.session.open(Bh_Feed_Settings2)
 		elif self.sel == 2:
 			self.session.openWithCallback(self.runUpgrade, MessageBox, _("Do you want to update Black Hole image?")+"\n"+_("\nAfter pressing OK, please wait!"))
 		elif self.sel == 3:
@@ -1112,7 +1112,7 @@ class Nab_ConnectPop(Screen):
 		del self.activityTimer
 		
 
-class Bh_Feed_Settings(Screen):
+class Bh_Feed_Settings2(Screen):
 	skin = """
 	<screen position="center,center" size="902,570" title="BH Feeds Settings">
 		<widget name="lab1" position="50,260" size="800,40" zPosition="2" halign="center" font="Regular;24" />
@@ -1129,10 +1129,12 @@ class Bh_Feed_Settings(Screen):
                     }
                    </convert>
         	</widget>
-		<ePixmap pixmap="skin_default/buttons/red.png" position="200,530" size="140,40" alphatest="on"/>
-		<ePixmap pixmap="skin_default/buttons/green.png" position="550,530" size="140,40" alphatest="on"/>
-		<widget name="key_red" position="200,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
-		<widget name="key_green" position="550,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
+		<ePixmap pixmap="skin_default/buttons/red.png" position="120,530" size="140,40" alphatest="on"/>
+		<ePixmap pixmap="skin_default/buttons/green.png" position="380,530" size="140,40" alphatest="on"/>
+		<ePixmap pixmap="skin_default/buttons/yellow.png" position="640,530" size="200,40" alphatest="on"/>
+		<widget name="key_red" position="120,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1"/>
+		<widget name="key_green" position="380,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
+		<widget name="key_yellow" position="640,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#a08500" transparent="1"/>
 	</screen>"""
 	
 	def __init__(self, session):
@@ -1140,6 +1142,7 @@ class Bh_Feed_Settings(Screen):
 		
 		self["key_red"] = Label(_("Install"))
 		self["key_green"] = Label(_("Remove"))
+		self["key_yellow"] = Label(_("Setup"))
 		self["lab1"] = Label(_("Wait please checking for available updates..."))
 		self["lab2"] = Label("")
 		self["lab3"] = Label("")
@@ -1152,7 +1155,8 @@ class Bh_Feed_Settings(Screen):
 			"back": self.close,
 			"ok": self.install_Pack,
 			"red": self.install_Pack,
-			"green": self.remove_Pack
+			"green": self.remove_Pack,
+			"yellow": self.setuP
 		})
 		
 		self.eDVBDB = eDVBDB.getInstance()
@@ -1267,12 +1271,135 @@ class Bh_Feed_Settings(Screen):
 	
 	def do_remove_Pack(self, answer):
 		if answer is True:
+			out = open("/etc/bhcron/bh.cron", "w")
+			if fileExists("/etc/bhcron/root"):
+				f = open("/etc/bhcron/root",'r')
+				for line in f.readlines():
+					if line.find(self.installed) != -1:
+						continue	
+					out.write(line)	
+			f.close()
+			out.close()
+			rc = system("crontab /etc/bhcron/bh.cron -c /etc/bhcron/")
+			
 			self.done_message = _("Package %s removed.") % (self.installed)
 			cmd1 = "opkg remove " + self.installed
 			self.session.open(Console, title=_("Removing package"), cmdlist=[cmd1,], finishedCallback = self.ipkDone, closeOnSuccess = True)
+
+	def setuP(self):
+		if self.installed == "":
+			text = _("No package installed. Nothing to setup.")
+			self.session.open(MessageBox, text, MessageBox.TYPE_INFO)
+		else:
+			self.session.open(Bh_Feed_SettingsSetup, self.installed)
+
 		
 	def ipkDone(self):
 		self.eDVBDB.reloadServicelist()
 		self.eDVBDB.reloadBouquets()
 		self.session.open(MessageBox, self.done_message, MessageBox.TYPE_INFO)
 		self.updateList2()
+
+
+class Bh_Feed_SettingsSetup(Screen, ConfigListScreen):
+	skin = """
+	<screen position="center,center" size="900,340" title="BH Feeds Settings Setup">
+		<widget name="lab1" position="10,10" size="220,30" font="Regular;20" transparent="1"/>
+		<widget name="labprov" position="230,10" size="640,30" font="Regular;20"/>
+		<widget name="config" position="10,40" size="880,250" scrollbarMode="showOnDemand" />
+		<ePixmap pixmap="skin_default/buttons/red.png" position="380,290" size="150,40" alphatest="on" />
+		<widget name="key_red" position="380,290" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" transparent="1" />
+	</screen>"""
+	
+	def __init__(self, session, provider):
+		Screen.__init__(self, session)
+		
+		self.pack = provider
+		self.list = []
+		ConfigListScreen.__init__(self, self.list)
+		self["key_red"] = Label(_("Save"))
+		self["lab1"] = Label(_("Settings installed:"))
+		self["labprov"] = Label(provider)
+		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
+		{
+			"red": self.saveMyset,
+			"back": self.close
+
+		})
+			
+		self.updateList()
+
+	def updateList(self):
+	
+		self.packautodown = NoSave(ConfigYesNo(default=False))
+		self.timerentry_starttime = NoSave(ConfigClock(default=0))
+		self.freq = NoSave(ConfigSelection(default = "2", choices = [
+		("1", "day"), ("2", "week"), ("3", "month")]))
+		
+		strview = ""
+		mytmpt = [23,2]
+		autodown = False
+		freq = "2"
+		
+		if fileExists("/etc/bhcron/root"):
+			f = open("/etc/bhcron/root",'r')
+ 			for line in f.readlines():
+				if line.find(self.pack) != -1:
+					strview = line
+					break
+ 			f.close()
+		
+		if strview:
+			parts = strview.strip().split()
+			mytmpt = [int(parts[1]), int(parts[0])]
+			freq = "1"
+			if parts[2] == "1":
+				freq = "3"
+			elif parts[4] == "1":
+				freq = "2"
+			
+			autodown = True
+		
+		self.packautodown.value = autodown
+		self.timerentry_starttime.value = mytmpt
+		self.freq.value = freq
+		
+		res = getConfigListEntry(_("Enable Automatic Settings update"), self.packautodown)
+		self.list.append(res)
+		res = getConfigListEntry(_("Check updates every"), self.freq)
+		self.list.append(res)
+		res = getConfigListEntry(_("Check updates at time"), self.timerentry_starttime)
+		self.list.append(res)		
+		
+		self["config"].list = self.list
+		self["config"].l.setList(self.list)		
+
+	
+	def saveMyset(self):
+		
+		croncmd = "/usr/bin/opkg update && /usr/bin/opkg install " + self.pack
+		hour = "%02d" % (self.timerentry_starttime.value[0])
+		minutes =  "%02d" % (self.timerentry_starttime.value[1])
+		freq = " * * * "
+		if self.freq.value == "2":
+			freq = " * * 1 "
+		elif self.freq.value == "3":
+			freq = " 1 * * "
+			
+		newcron = minutes + " " + hour + freq + croncmd + "\n"
+		
+		out = open("/etc/bhcron/bh.cron", "w")
+		if fileExists("/etc/bhcron/root"):
+			f = open("/etc/bhcron/root",'r')
+			for line in f.readlines():
+				if line.find(self.pack) != -1:
+					continue	
+				out.write(line)	
+			f.close()
+		if self.packautodown.value == True:
+			out.write(newcron)
+		out.close()
+		rc = system("crontab /etc/bhcron/bh.cron -c /etc/bhcron/")
+		self.close()
+		
+		
