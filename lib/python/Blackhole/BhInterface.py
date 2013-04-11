@@ -8,7 +8,7 @@ import socket
 from Tools.Directories import fileExists
 from urllib2 import Request, urlopen, URLError, HTTPError
 from random import randint
-from enigma import eEPGCache
+from enigma import eEPGCache, eDVBDB
 from os import system
 
 #standby
@@ -32,6 +32,8 @@ class DeliteInterface:
 			if self.session:
 				if cmd.find('extepg') == 0:
 					self.downloadExtEpg(cmd)
+				elif cmd.find('reloadsettings') == 0:
+					self.reloadSettings()
 				elif cmd.find('standby') == 0:
 					self.session.open(Standby)
 				elif cmd.find('shutdown') == 0:
@@ -65,6 +67,10 @@ class DeliteInterface:
 				
 				#self.session.open(Nab_debOut, cmd)
 
+	def reloadSettings(self):
+		settings = eDVBDB.getInstance()
+		settings.reloadServicelist()
+		settings.reloadBouquets()
 
 	def downloadExtEpg(self, cmd):
 		parts = cmd.split(",")
