@@ -1378,11 +1378,13 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		["StreamTV", "enigma2-plugin-extensions-streamtv"],
 		["VuplusEvent", "enigma2-plugin-extensions-vuplusevent"],
 		["MyTube", "enigma2-plugin-extensions-mytube"],
+		["AutoShutDown", "enigma2-plugin-systemplugins-autoshutdown"],
 		["HbbTV", "enigma2-plugin-extensions-hbbtv"]
 		]
 		
-		if pathExists("/usr/lib/enigma2/python/Plugins/SystemPlugins/AutoShutDown"):
-			self.pluglist.append(["AutoShutDown", "enigma2-plugin-systemplugins-autoshutdown"])
+		machine = nab_Detect_Machine()
+		if machine != "vusolo" and machine != "bm750":
+			self.pluglist.append(["Web Manual (5.2 Mega)", "vuplus-manual"])
 		
 		self.activityTimer = eTimer()
 		self.activityTimer.timeout.get().append(self.updateFeed2)
@@ -1440,6 +1442,10 @@ class BhSpeedUp(Screen, ConfigListScreen):
 			cmd = self.buildcoM(x[0], x[1].value)
 			if cmd != "":
 				self.mycmdlist.append(cmd)
+				if cmd == "opkg remove --force-depends --force-remove enigma2-plugin-extensions-hbbtv":
+					self.mycmdlist.append("opkg remove --force-depends --force-remove opera-hbbtv")
+					self.mycmdlist.append("rm -rf /usr/local/hbb-browser")
+					
 				
 			
 
