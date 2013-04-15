@@ -126,30 +126,28 @@ eventData::eventData(const eit_event_struct* e, int size, int type)
 
 const eit_event_struct* eventData::get() const
 {
-	int pos = 12;
-	int tmp = ByteSize-10;
+	unsigned int pos = 12;
+	int tmp = ByteSize - 10;
 	memcpy(data, EITdata, 10);
-	int descriptors_length=0;
-	__u32 *p = (__u32*)(EITdata+10);
-	while(tmp>3)
+	unsigned int descriptors_length = 0;
+	__u32 *p = (__u32*)(EITdata + 10);
+	while (tmp > 3)
 	{
-		descriptorMap::iterator it =
-			descriptors.find(*p++);
-		if ( it != descriptors.end() )
+		descriptorMap::iterator it = descriptors.find(*p++);
+		if (it != descriptors.end())
 		{
-			int b = it->second.second[1]+2;
-			memcpy(data+pos, it->second.second, b );
-			pos += b;
-			descriptors_length += b;
+			unsigned int b = it->second.second[1] + 2;
+			if (pos + b < sizeof(data))
+			{
+				memcpy(data + pos, it->second.second, b);
+				pos += b;
+				descriptors_length += b;
+			}
 		}
-//BlackHole
 		else
 			cacheCorrupt("eventData::get");
-			//eFatal("LINE %d descriptor not found in descriptor cache %08x!!!!!!", __LINE__, *(p-1));
-//end
-		tmp-=4;
+		tmp -= 4;
 	}
-	ASSERT(pos <= 4108);
 	data[10] = (descriptors_length >> 8) & 0x0F;
 	data[11] = descriptors_length & 0xFF;
 	return (eit_event_struct*)data;
