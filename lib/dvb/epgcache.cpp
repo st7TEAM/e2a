@@ -33,6 +33,7 @@ bool OnReadBuffer;
 //End
 
 int eventData::CacheSize=0;
+bool eventData::isCacheCorrupt = 0;
 descriptorMap eventData::descriptors;
 __u8 eventData::data[4108];
 extern const uint32_t crc32_table[256];
@@ -142,7 +143,8 @@ const eit_event_struct* eventData::get() const
 			descriptors_length += b;
 		}
 //BlackHole
-		//else
+		else
+			cacheCorrupt("eventData::get");
 			//eFatal("LINE %d descriptor not found in descriptor cache %08x!!!!!!", __LINE__, *(p-1));
 //end
 		tmp-=4;
@@ -174,8 +176,10 @@ eventData::~eventData()
 					descriptors.erase(it);	// remove entry from descriptor map
 				}
 			}
-//BlackHole
-			//else
+			else
+			{
+                cacheCorrupt("eventData::~eventData");
+			}
 			//	eFatal("LINE %d descriptor not found in descriptor cache %08x!!!!!!", __LINE__, *(d-1));
 			ByteSize -= 4;
 		}
@@ -208,6 +212,9 @@ void eventData::load(FILE *f)
 
 void eventData::save(FILE *f)
 {
+	if (isCacheCorrupt)
+		return;
+		
 	int size=descriptors.size();
 	descriptorMap::iterator it(descriptors.begin());
 	fwrite(&size, sizeof(int), 1, f);
@@ -219,6 +226,18 @@ void eventData::save(FILE *f)
 		++it;
 		--size;
 	}
+}
+
+void eventData::cacheCorrupt(const char* context)
+{
+
+       eDebug("WARNING: EPG Cache is corrupt (%s), you should restart Enigma!", context);
+       if (!isCacheCorrupt)
+       {
+               isCacheCorrupt = true;
+				if (!eEPGCache::instance->m_filename.empty())
+					unlink(eEPGCache::instance->m_filename.c_str()); // Remove corrupt EPG data
+       }
 }
 
 eEPGCache* eEPGCache::instance;
@@ -1119,6 +1138,10 @@ void eEPGCache::load()
 
 void eEPGCache::save()
 {
+	
+	if (eventData::isCacheCorrupt)
+		return;
+
 	/* create empty file */
 	FILE *f = fopen(m_filename, "w");
 
