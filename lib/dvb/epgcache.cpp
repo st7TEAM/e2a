@@ -233,8 +233,8 @@ void eventData::cacheCorrupt(const char* context)
        if (!isCacheCorrupt)
        {
                isCacheCorrupt = true;
-				if (!eEPGCache::instance->m_filename.empty())
-					unlink(eEPGCache::instance->m_filename.c_str()); // Remove corrupt EPG data
+               if (strlen(eEPGCache::instance->m_filename))
+					unlink(eEPGCache::instance->m_filename); // Remove corrupt EPG data
        }
 }
 

@@ -337,6 +337,7 @@ public:
 	eFixedMessagePump<Message> messages;
 private:
 	friend class channel_data;
+	friend class eventData;
 	static eEPGCache *instance;
 
 	ePtr<eTimer> cleanTimer;
