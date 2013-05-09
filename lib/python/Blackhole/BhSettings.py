@@ -103,14 +103,23 @@ class DeliteSettings(Screen):
 			from BhNet import DeliteFtp
 			self.session.open(DeliteFtp)
 		elif self.sel == 15:
-			from BhNet import BhDjmount
-			self.session.open(BhDjmount)
+			if not fileExists("/usr/bin/djmount"):
+				self.session.open(MessageBox, _("Please enable this application in BlackHole Speed Up panel before to continue."), MessageBox.TYPE_INFO)
+			else:
+				from BhNet import BhDjmount
+				self.session.open(BhDjmount)
 		elif self.sel == 16:
-			from BhNet import BhMediatomb
-			self.session.open(BhMediatomb)
+			if not fileExists("/usr/bin/mediatomb"):
+				self.session.open(MessageBox, _("Please enable this application in BlackHole Speed Up panel before to continue."), MessageBox.TYPE_INFO)
+			else:
+				from BhNet import BhMediatomb
+				self.session.open(BhMediatomb)
 		elif self.sel == 17:
-			from BhNet import BhMinidlna
-			self.session.open(BhMinidlna)
+			if not fileExists("/usr/bin/minidlna"):
+				self.session.open(MessageBox, _("Please enable this application in BlackHole Speed Up panel before to continue."), MessageBox.TYPE_INFO)
+			else:
+				from BhNet import BhMinidlna
+				self.session.open(BhMinidlna)
 		elif self.sel == 18:
 			from BhNet import BhPcsc
 			self.session.open(BhPcsc)
@@ -1358,6 +1367,9 @@ class BhSpeedUp(Screen, ConfigListScreen):
 
 		})
 		self.pluglist = [
+		["Djmount UPnP Client", "djmount"],
+		["MiniDlna UPnP Server", "minidlna"],
+		["Mediatomb UPnP Server", "mediatomb"],
 		["MeoBoot", "meoboot"],
 		["BhWeather", "bhweather"],
 		["BhFullBackup", "bhfullbackup"],
