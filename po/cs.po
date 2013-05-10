@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-04-21 19:48+0100\n"
+"PO-Revision-Date: 2013-04-30 21:19+0100\n"
 "Last-Translator: Paolino L. <pliesko1@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgid ""
 "After pressing OK, please wait!"
 msgstr ""
 "\n"
-"Po stisknutí tlačítka OK čekejte prosím!"
+"Po stisknutí tlačítka OK čekej prosím!"
 
 #
 msgid ""
@@ -67,7 +67,7 @@ msgid ""
 "Press OK on your remote control to continue."
 msgstr ""
 "\n"
-"Stiskněte tlačítko OK na dálkovém ovladači pro pokračování."
+"Stiskni tlačítko OK na dálkovém ovladači pro pokračování."
 
 #
 msgid ""
@@ -108,7 +108,7 @@ msgid ""
 "Current device: "
 msgstr ""
 "\n"
-"Vyberte si záložní zařízení.\n"
+"Vyber si záložní zařízení.\n"
 "Aktuální zařízení:"
 
 #
@@ -431,7 +431,7 @@ msgid ""
 "Do you want to keep your version?"
 msgstr ""
 "Konfigurační soubor (%s) byl změněn od instalace.\n"
-"Chcete uchovat Vaši verzi?"
+"Chceš uchovat Vaši verzi?"
 
 msgid "A demo plugin for TPM usage."
 msgstr "Demo plugin pro využití TPM."
@@ -500,7 +500,7 @@ msgid ""
 "What do you want to do?"
 msgstr ""
 "Právě se nahrává\n"
-"Co chcete udělat?"
+"Co chceš udělat?"
 
 #
 msgid ""
@@ -533,7 +533,7 @@ msgid ""
 msgstr ""
 "Bylo nalezeno druhé nakonfigurovné rozhraní.\n"
 "\n"
-"Chcete zakázat druhé síťové rozhraní?"
+"Chceš zakázat druhé síťové rozhraní?"
 
 msgid "A simple downloading application for other plugins"
 msgstr "Jednoduchá aplikace pro stahování dalších pluginů"
@@ -694,7 +694,7 @@ msgstr "Přidej značky do zaznamenaných filmů"
 
 #
 msgid "Add timer"
-msgstr "Přidat časování"
+msgstr "Přidat časovač"
 
 #
 msgid "Add timer as disabled on conflict"
@@ -749,10 +749,10 @@ msgid ""
 "OK to close the video fine-tuning, or use the number keys to select other "
 "test screens."
 msgstr ""
-"Upravte barevné nastavení tak, aby všechny barevné odstíny byly "
-"rozpoznatelné ale i tak aby byly nasycené jak je možné. Pokud jste spokojeni "
-"s výsledkem, stiskněte OK pro zavření průvodce nebo použijte numerické "
-"klávesy pro výběr jiné testovací scény."
+"Uprav barevné nastavení tak, aby všechny barevné odstíny byly rozpoznatelné "
+"ale i tak aby byly nasycené jak je možné. Pokud jsi spokojen s výsledkem, "
+"stiskni OK pro zavření průvodce nebo použij numerické klávesy pro výběr jiné "
+"testovací scény."
 
 msgid "Adult streaming plugin"
 msgstr "Plugin streamů pro dospělé"
@@ -800,8 +800,8 @@ msgid ""
 "After the start wizard is completed, you need to protect single services. "
 "Refer to your dreambox's manual on how to do that."
 msgstr ""
-"Po skončení průvodce je potřeba ochránit jednotlivé programy. Podívejte se "
-"do manuálu jak to udělat."
+"Po skončení průvodce je potřeba ochránit jednotlivé programy. Podívej se do "
+"manuálu jak to udělat."
 
 msgid "Ai.HD skin-style control plugin"
 msgstr "Plugin nastavení stylu Ai.HD skinu"
@@ -1195,7 +1195,7 @@ msgstr "Běží zálohování..."
 
 #
 msgid "Backup system settings"
-msgstr "Zálohování systémových nastavení"
+msgstr "Záloha nastavení systému"
 
 #
 msgid "Band"
@@ -1525,7 +1525,7 @@ msgstr "Zvol image ke stažení"
 
 #
 msgid "Choose target folder"
-msgstr "Vyberte cílovou složku"
+msgstr "Vyber cílovou složku"
 
 #
 msgid "Choose upgrade source"
@@ -2279,7 +2279,7 @@ msgid ""
 "Do you really want to check the filesystem?\n"
 "This could take lots of time!"
 msgstr ""
-"Opravdu chcete zkontrolovat souborový systém?\n"
+"Opravdu chceš zkontrolovat souborový systém?\n"
 "Může to trvat dlouho!"
 
 #, python-format
@@ -2293,7 +2293,7 @@ msgstr ""
 #
 #, python-format
 msgid "Do you really want to delete %s?"
-msgstr "Opravdu chcete smazat \"%s\"?"
+msgstr "Opravdu chceš smazat \"%s\"?"
 
 #
 #, python-format
@@ -2306,14 +2306,14 @@ msgstr ""
 
 #
 msgid "Do you really want to exit?"
-msgstr "Opravdu chcete ukončit?"
+msgstr "Opravdu chceš ukončit?"
 
 #
 msgid ""
 "Do you really want to initialize the harddisk?\n"
 "All data on the disk will be lost!"
 msgstr ""
-"Opravdu chcete inizializovat HDD?\n"
+"Opravdu chceš inizializovat HDD?\n"
 "Všechna data na disku budou ztracena!"
 
 #
@@ -2328,7 +2328,7 @@ msgstr "Opravdu chceš odstranit tvoji záložku %s?"
 
 #
 msgid "Do you want to burn this collection to DVD medium?"
-msgstr "Chcete vypálit tuto kolekci na DVD médium?"
+msgstr "Chceš vypálit tuto kolekci na DVD médium?"
 
 #
 msgid "Do you want to do a service scan?"
@@ -2336,7 +2336,7 @@ msgstr "Chceš prohledat programy?"
 
 #
 msgid "Do you want to do another manual service scan?"
-msgstr "Chcete provést další manuální prohledávání?"
+msgstr "Chceš provést další manuální prohledávání?"
 
 #, python-format
 msgid "Do you want to download the image to %s ?"
@@ -2344,7 +2344,7 @@ msgstr "Chceš stáhnout image do %s ?"
 
 #
 msgid "Do you want to enable the parental control feature on your dreambox?"
-msgstr "Chcete povolit rodičovskou kontrolu na vašem STBu?"
+msgstr "Chceš povolit rodičovskou kontrolu na vašem STBu?"
 
 #
 msgid "Do you want to enter a username and password for this host?\n"
@@ -2360,7 +2360,7 @@ msgstr "Chceš nainstalovat balíček:\n"
 
 #
 msgid "Do you want to play DVD in drive?"
-msgstr "Chcete přehrát DVD v mechanice?"
+msgstr "Chceš přehrát DVD v mechanice?"
 
 #
 msgid "Do you want to preview this DVD before burning?"
@@ -2376,11 +2376,11 @@ msgstr "Chceš odstranit balíček:\n"
 
 #
 msgid "Do you want to restore your settings?"
-msgstr "Chcete obnovit vaše nastavení?"
+msgstr "Chceš obnovit vaše nastavení?"
 
 #
 msgid "Do you want to resume this playback?"
-msgstr "Chcete obnovit přehrávání?"
+msgstr "Chceš obnovit přehrávání?"
 
 #
 msgid "Do you want to see more entries?"
@@ -2403,8 +2403,8 @@ msgid ""
 "Do you want to update your STB?\n"
 "After pressing OK, please wait!"
 msgstr ""
-"Chcete updatovat váš STB?\n"
-"Po stisku OK počkejte!"
+"Chceš updatovat tvůj STB?\n"
+"Po stisku OK počkej!"
 
 #
 msgid "Do you want to upgrade the package:\n"
@@ -2412,7 +2412,7 @@ msgstr "Chceš aktualizovat balíček:\n"
 
 #
 msgid "Do you want to view a tutorial?"
-msgstr "Chcete zobrazit tutorial?"
+msgstr "Chceš zobrazit tutorial?"
 
 #
 msgid "Don't ask, just send"
@@ -2443,7 +2443,7 @@ msgstr "Stáhni %s ze Serveru"
 
 #
 msgid "Download .NFI-Files for USB-Flasher"
-msgstr "Staáhni .NFI-Soubory pro USB-Flasher"
+msgstr "Stáhni .NFI-Soubory pro USB-Flasher"
 
 #
 msgid "Download Plugins"
@@ -2474,7 +2474,7 @@ msgstr "Stahuji"
 
 #
 msgid "Downloading plugin information. Please wait..."
-msgstr "Stahuji informace o pluginu. Prosím počkejte..."
+msgstr "Stahuji informace o pluginu. Prosím počkej..."
 
 #
 msgid "Downloading screenshots. Please wait..."
@@ -3052,7 +3052,7 @@ msgstr ""
 "Filtry jsou dalším účinným nástrojem při značení událostí.AutoTimer může být "
 "omezen na určité dny nebo pouze označit událost s textem uvnitř, např. že "
 "její popis.\n"
-"Stiskněte MODRÉ na přidání nového omezení a ŽLUTÉ na odstranění označeného."
+"Stiskni MODRÉ na přidání nového omezení a ŽLUTÉ na odstranění označeného."
 
 #
 msgid "Finetune"
@@ -3177,7 +3177,7 @@ msgid ""
 "Do you want to Restart the GUI now?"
 msgstr ""
 "Pro aplikování skinu je potřeba restart GUI\n"
-"Chcete nyní restartovat GUI?"
+"Chceš nyní restartovat GUI?"
 
 msgid "GUI that allows user to change the ftp- / telnet password."
 msgstr "GUI která umožní uživateli změnit heslo pro ftp- / telnet."
@@ -3198,19 +3198,19 @@ msgstr "Brána"
 
 #
 msgid "General AC3 Delay"
-msgstr "Všeobecné AC3 Zpoždění"
+msgstr "Obecné AC3 zpoždění"
 
 #
 msgid "General AC3 delay (ms)"
-msgstr "Všeobecné AC3 Zpoždění (ms)"
+msgstr "Obecné AC3 zpoždění (ms)"
 
 #
 msgid "General PCM Delay"
-msgstr "Všeobecné PCM Zpoždění"
+msgstr "Obecné PCM zpoždění"
 
 #
 msgid "General PCM delay (ms)"
-msgstr "Všeobecné PCM Zpoždění (ms)"
+msgstr "Obecné PCM zpoždění (ms)"
 
 msgid "Generates and Shows TV Charts of all users having this plugin installed"
 msgstr ""
@@ -3256,7 +3256,7 @@ msgstr "Získej poslední zveřejněné image"
 
 #
 msgid "Getting plugin information. Please wait..."
-msgstr "Získávám informace o pluginu. Prosím počkejte..."
+msgstr "Získávám informace o pluginu. Prosím počkej..."
 
 #
 msgid "Global delay"
@@ -3380,7 +3380,7 @@ msgstr "Hotplugging pro odojitelná zařízení"
 
 #
 msgid "How many minutes do you want to record?"
-msgstr "Kolik minut chcete nahrát?"
+msgstr "Kolik minut chceš nahrát?"
 
 #
 msgid "How to handle found crashlogs?"
@@ -3453,8 +3453,8 @@ msgid ""
 "If you see this, something is wrong with\n"
 "your scart connection. Press OK to return."
 msgstr ""
-"Pokud vidíte, že je něco špatného s\n"
-"vaším scartovým připojením stiskněte OK pro návrat."
+"Pokud vidíš, že je něco špatného s\n"
+"tvým SCART připojením stiskni OK pro návrat."
 
 #
 msgid ""
@@ -3468,14 +3468,14 @@ msgid ""
 "step.\n"
 "If you are happy with the result, press OK."
 msgstr ""
-"Pokud má vaše TV rozšířené nastavení jasu a kontrastu vypněte to. Pokud je v "
-"menu položka nazvaná jako \"dynamické\", nastavte ji na standardní hodnotu. "
-"Nastavte stupeň podsvětlení podle vaší chuti. Stáhněte kontrast na vaší TV "
-"na nejnižší hodnotu.\n"
-"Po té nastavte světlost na nejnižší hodnotu, ale ujistěte se, že poslední "
-"dva odstíny šedé jsou rozpoznatelné.\n"
-"Nyní nemějte obavy o světlé stíny. Budou nastaveny v dalším kroku.\n"
-"Pokud jste spokojeni s výsledkem, stiskněte OK."
+"Pokud má tvůj TV rozšířené nastavení jasu a kontrastu vypni to. Pokud je v "
+"menu položka nazvaná jako \"dynamické\", nastav ji na standardní hodnotu. "
+"Nastav stupeň podsvětlení podle tvojí chuti. Stáhni kontrast na TV na "
+"nejnižší hodnotu.\n"
+"Po té nastav světlost na nejnižší hodnotu, ale ujisti se, že poslední dva "
+"odstíny šedé jsou rozpoznatelné.\n"
+"Nyní neměj obavy o světlé stíny. Budou nastaveny v dalším kroku.\n"
+"Pokud jsi spokojen s výsledkem, stiskni OK."
 
 #
 msgid "Import AutoTimer"
@@ -3622,15 +3622,15 @@ msgstr "Instaluji software..."
 
 #
 msgid "Installing default sat lists... Please wait..."
-msgstr "Instaluji standardní satelitní seznamy... Prosím, čekejte..."
+msgstr "Instaluji standardní satelitní seznamy... Prosím, čekej..."
 
 #
 msgid "Installing defaults... Please wait..."
-msgstr "Instaluji defaultní... Prosím čekejte"
+msgstr "Instaluji defaultní... Prosím čekej..."
 
 #
 msgid "Installing package content... Please wait..."
-msgstr "Instaluji balíčky. Prosím počkejte..."
+msgstr "Instaluji balíčky. Prosím počkej..."
 
 #
 msgid "Instant Record..."
@@ -4028,7 +4028,7 @@ msgstr "Udělat z této značky jen značku"
 
 #
 msgid "Manage extensions"
-msgstr "Spravuje rozšíření"
+msgstr "Spravuj Pluginy"
 
 msgid "Manage local files"
 msgstr "Spravuje místní soubory"
@@ -4705,7 +4705,7 @@ msgid ""
 "No fast winding possible yet.. but you can use the number buttons to skip "
 "forward/backward!"
 msgstr ""
-"Není zatím možné žádné rychlé přvíjení.. ale můžete použít číselná tlačítka "
+"Není zatím možné žádné rychlé přvíjení.. ale můžeš použít číselná tlačítka "
 "pro posun vpřed/vzad!"
 
 #
@@ -4728,12 +4728,12 @@ msgstr "Sítě nenalezany"
 msgid ""
 "No packages were upgraded yet. So you can check your network and try again."
 msgstr ""
-"Zatím nebyly upgradovány žádné blíčky. Můžete zkontrolovat síťově nastavení "
-"a zkusit to znova."
+"Zatím nebyly upgradovány žádné blíčky. Můžeš zkontrolovat síťově nastavení a "
+"zkusit to znova."
 
 #
 msgid "No picture on TV? Press EXIT and retry."
-msgstr "Žádný obraz na TV? Stiskněte EXIT a zkuste to znova."
+msgstr "Žádný obraz na TV? Stiskni EXIT a zkus to znova."
 
 #
 msgid "No playable video found! Stop playing this movie?"
@@ -4765,7 +4765,7 @@ msgid ""
 "Please setup your tuner settings before you start a service scan."
 msgstr ""
 "Není povolen žádný tuner!\n"
-"Prosím nastavte váš tuner před tím než začnete prohledávat kanály."
+"Prosím nastav tvůj tuner před tím než začneš prohledávat kanály."
 
 #
 msgid ""
@@ -4774,7 +4774,7 @@ msgid ""
 "When you say 'No' here the service protection stay disabled!"
 msgstr ""
 "Nebyl nalezen platný PIN programu!\n"
-"Chcete nyní změnit PIN?\n"
+"Chceš nyní změnit PIN?\n"
 "Pokud 'Ne' tak ochrana programu zůstane vypnuta!"
 
 #
@@ -4784,7 +4784,7 @@ msgid ""
 "When you say 'No' here the setup protection stay disabled!"
 msgstr ""
 "Nebyl nalezen platný PIN nastavení!\n"
-"Chcete nyní změnit PIN?\n"
+"Chceš nyní změnit PIN?\n"
 "Pokud 'Ne' tak ochrana nastavení zůstane vypnuta!"
 
 #
@@ -4916,7 +4916,7 @@ msgid ""
 "Please setup your tuner settings before you start a service scan."
 msgstr ""
 "Nic k prohledávání!\n"
-"Prosím nastavte váš tuner před tím než začnete prohledávat kanály."
+"Prosím nastav tvůj tuner před tím než začneš prohledávat kanály."
 
 #
 msgid "Now Playing"
@@ -4928,9 +4928,9 @@ msgid ""
 "much as possible, but make sure that you can still see the difference "
 "between the two brightest levels of shades.If you have done that, press OK."
 msgstr ""
-"Nyní použijte nastavení kontrastu pro nastavení světlosti pozadí na nejvyšší "
-"hodnotu, ale ujistěte se, že stále vidíte rozdíl mezi dvěma nejsvětlejšími "
-"odstíny. Pokud jste hotovi, stiskněte OK."
+"Nyní použij nastavení kontrastu pro nastavení světlosti pozadí na nejvyšší "
+"hodnotu, ale ujisti se, že stále vidíš rozdíl mezi dvěma nejsvětlejšími "
+"odstíny. Pokud jsi hotov, stiskni OK."
 
 #
 msgid "Number of scheduled recordings left."
@@ -5219,7 +5219,7 @@ msgstr "Prosím restartujte"
 
 #
 msgid "Please Select Medium to be Scanned"
-msgstr "Prosím vyberte médium pro prozkoumání"
+msgstr "Prosím vyber médium pro prozkoumání"
 
 #
 msgid "Please add titles to the compilation."
@@ -5242,15 +5242,15 @@ msgstr "Prosím, Zkontrolujte nastavení sítě!"
 
 #
 msgid "Please choose an extension..."
-msgstr "Prosím vyberte si z nabídky možností"
+msgstr "Prosím vyber si z nabídky možností"
 
 #
 msgid "Please choose he package..."
-msgstr "Prosím vyberte balíček..."
+msgstr "Prosím vyber balíček..."
 
 #
 msgid "Please choose the default services lists you want to install."
-msgstr "Vyberte prosím setting, který chcete nainstalovat."
+msgstr "Vyber prosím setting, který chceš nainstalovat."
 
 #
 msgid ""
@@ -5268,7 +5268,7 @@ msgid ""
 "When you are ready press OK to continue."
 msgstr ""
 "Prosím, nakonfiguruj připojení k internetu vyplněním požadovaných hodnot.\n"
-"Když jste připraveni stiskněte tlačítko OK pro pokračování."
+"Když jsi připraven stiskni tlačítko OK pro pokračování."
 
 #
 msgid "Please do not change any values unless you know what you are doing!"
@@ -5276,19 +5276,19 @@ msgstr "Prosíme neměňte hodnoty pokud nevíte co děláte!"
 
 #
 msgid "Please enter a name for the new bouquet"
-msgstr "Prosím zadejte název pro nový bouquet"
+msgstr "Prosím zadej název pro nový bouquet"
 
 #
 msgid "Please enter a name for the new marker"
-msgstr "Prosím zadejte název pro nový popisovač"
+msgstr "Prosím zadej název pro nový popisovač"
 
 #
 msgid "Please enter a new filename"
-msgstr "Zadejte nové jméno souboru"
+msgstr "Zadej nové jméno souboru"
 
 #
 msgid "Please enter filename (empty = use current date)"
-msgstr "Prosím zadejte název souboru (prádné = nynější datum)"
+msgstr "Prosím zadej název souboru (prázdné = nynější datum)"
 
 #
 msgid "Please enter name of the new directory"
@@ -5296,7 +5296,7 @@ msgstr "Prosím, zadej jméno nové složky"
 
 #
 msgid "Please enter the correct pin code"
-msgstr "Prosím zadejte správný PIN"
+msgstr "Prosím zadej správný PIN"
 
 msgid "Please enter the old PIN code"
 msgstr "Prosím, zadej starý PIN kód"
@@ -5331,7 +5331,7 @@ msgstr "Prosím, stiskni OK pro pokračování."
 
 #
 msgid "Please press OK!"
-msgstr "Prosím stiskněte OK!"
+msgstr "Prosím stiskni OK!"
 
 #
 msgid "Please provide a Text to match"
@@ -5339,11 +5339,11 @@ msgstr "Uveď prosím Text k označení"
 
 #
 msgid "Please select a playlist to delete..."
-msgstr "Prosím, vybeberte playlist ke smazání..."
+msgstr "Prosím, vyber playlist ke smazání..."
 
 #
 msgid "Please select a playlist..."
-msgstr "Prosím, vyberte playlist"
+msgstr "Prosím, vyber playlist"
 
 #
 msgid "Please select a standard feed or try searching for videos."
@@ -5351,11 +5351,11 @@ msgstr "Prosím, vyber standardní zdroj nebo zkus vyhledat videa."
 
 #
 msgid "Please select a subservice to record..."
-msgstr "Prosím vyberte podprogram pro nahrávání..."
+msgstr "Prosím vyber podprogram pro nahrávání..."
 
 #
 msgid "Please select a subservice..."
-msgstr "Prosím vyberte podprogram..."
+msgstr "Prosím vyber podprogram..."
 
 msgid "Please select an NFI file and press green key to flash!"
 msgstr "Prosím, vyber NFI soubor a stiskni zelené pro flashnutí!"
@@ -5378,7 +5378,7 @@ msgstr "Prosím, vyber značku na filtrování..."
 
 #
 msgid "Please select the movie path..."
-msgstr "Vyberte cestu k filmům..."
+msgstr "Vyber cestu k filmům..."
 
 #
 msgid ""
@@ -5420,9 +5420,9 @@ msgid ""
 "Press Bouquet +/- to resize the window.\n"
 "Press OK to go back to the TV mode or EXIT to cancel the moving."
 msgstr ""
-"Prosím použijte šipky k posunu okna PiP.\n"
+"Prosím použij šipky k posunu okna PiP.\n"
 "Přes Bouquet +/- ke změně velikosti okna.\n"
-"Stiskněte OK k navrácení k TV módu nebo EXIT pro zrušení přesunu."
+"Stiskni OK k navrácení k TV módu nebo EXIT pro zrušení přesunu."
 
 #
 msgid ""
@@ -5487,7 +5487,7 @@ msgstr "Čekej prosím..."
 
 #
 msgid "Please wait... Loading list..."
-msgstr "Prosím čekejte... Načítá se seznam..."
+msgstr "Prosím čekej... Načítá se seznam..."
 
 #
 msgid "Plugin browser"
@@ -5600,7 +5600,7 @@ msgstr "Připrav další USB klíč pro flashnutí image"
 
 #
 msgid "Preparing... Please wait"
-msgstr "Připravuji... Prosím čekejte"
+msgstr "Připravuji... Prosím čekej"
 
 msgid "Press INFO on your remote control for additional information."
 msgstr "Stiskni tlačítko INFO na dálkovém ovládání pro další informace."
@@ -5610,7 +5610,7 @@ msgstr "Stiskni tlačítko MENU na dálkovém ovládání pro další volby."
 
 #
 msgid "Press OK on your remote control to continue."
-msgstr "Stiskněte OK na dálkovém ovladači pro pokračování."
+msgstr "Stiskni OK na dálkovém ovladači pro pokračování."
 
 #
 msgid "Press OK to activate the selected skin."
@@ -5655,7 +5655,7 @@ msgstr "Stiskni OK pro uložení settingů."
 
 #
 msgid "Press OK to scan"
-msgstr "Stiskněte OK pro prohledávání"
+msgstr "Stiskni OK pro prohledávání"
 
 #
 msgid "Press OK to select a Provider."
@@ -5671,7 +5671,7 @@ msgstr "Stiskni OK pro označení/odznačení CAId."
 
 #
 msgid "Press OK to start the scan"
-msgstr "Stiskněte OK pro spuštění prohledávání"
+msgstr "Stiskni OK pro spuštění prohledávání"
 
 #
 msgid "Press OK to toggle the selection."
@@ -6017,7 +6017,7 @@ msgstr "Druh opakování"
 
 #
 msgid "Repeating event currently recording... What do you want to do?"
-msgstr "Právě se nahrává opakovaná událost... Co chcete udělat?"
+msgstr "Právě se nahrává opakovaná událost... Co chceš udělat?"
 
 #
 msgid "Repeats"
@@ -6537,11 +6537,11 @@ msgstr "Vyber HDD"
 
 #
 msgid "Select Location"
-msgstr "Vyberte umístění"
+msgstr "Vyber umístění"
 
 #
 msgid "Select Network Adapter"
-msgstr "Vyberte síťový adaptér"
+msgstr "Vyber síťový adaptér"
 
 #
 msgid "Select a movie"
@@ -6597,15 +6597,15 @@ msgstr "Vyber balíček"
 
 #
 msgid "Select provider to add..."
-msgstr "Vyberte poskytovatele k přidání..."
+msgstr "Vyber poskytovatele k přidání..."
 
 #
 msgid "Select refresh rate"
-msgstr "Vyberte obnovovací frekvenci"
+msgstr "Vyber obnovovací frekvenci"
 
 #
 msgid "Select service to add..."
-msgstr "Vyberte program k přidání..."
+msgstr "Vyber program k přidání..."
 
 #
 #, python-format
@@ -6630,11 +6630,11 @@ msgstr "Vyber vstup videa tlačitkama nahoru/dolů"
 
 #
 msgid "Select video mode"
-msgstr "Vyberte video mód"
+msgstr "Vyber video mód"
 
 #
 msgid "Select whether or not you want to enforce case correctness."
-msgstr "Vyberte, zda chceš nebo nechceš vynutit korektnost případu."
+msgstr "Vyber, zda chceš nebo nechceš vynutit korektnost případu."
 
 #
 msgid "Select wireless network"
@@ -7074,7 +7074,7 @@ msgstr "Je mi líto, žádné podrobnosti k dispozici!"
 
 #
 msgid "Sorry, video is not available!"
-msgstr "Omlouvám se, ale video není k dispozici!"
+msgstr "Je mi líto, ale video není k dispozici!"
 
 #
 msgid ""
@@ -7321,12 +7321,12 @@ msgstr "Systém"
 #. TRANSLATORS: Add here whatever should be shown in the "translator" about screen, up to 6 lines (use \n for newline)
 msgid "TRANSLATOR_INFO"
 msgstr ""
-"Překled ještě není úplně 100%. Pokud naleznete překlep nebo překlad položek "
+"Překlad ještě není úplně 100%. Pokud nalezneš překlep nebo překlad položek "
 "kde je (???),\n"
 "budu rád když mě kontaktujete na adrese:\n"
-"ws79@centrum.cz\n"
+"pliesko1@gmail.com\n"
 "\n"
-"ws79"
+"paolino"
 
 #
 msgid "TS file is too large for ISO9660 level 1!"
@@ -7429,8 +7429,8 @@ msgid ""
 "Thank you for using the wizard. Your box is now ready to use.\n"
 "Please press OK to start using your STB."
 msgstr ""
-"Děkujeme za použítí průvodce. Váš STB je nyní připraven k používání.\n"
-"Stiskněte OK a můžete začít používat váš STB."
+"Děkujeme za použítí průvodce. Tvůj STB je nyní připraven k používání.\n"
+"Stiskni OK a můžeš začít používat tvůj STB."
 
 #
 msgid ""
@@ -7583,7 +7583,7 @@ msgstr "Plugin WirelessLan ti pomůže nakonfigurovat síťové rozhran WLANí."
 
 #
 msgid "The backup failed. Please choose a different backup location."
-msgstr "Zálohování selhalo. Prosím vyberte jiné umístění zálohy."
+msgstr "Zálohování selhalo. Prosím vyber jiné umístění zálohy."
 
 #
 msgid ""
@@ -7632,8 +7632,8 @@ msgid ""
 "want to do that now?"
 msgstr ""
 "Vstupní zdroj signálu by měl být nyní nakonfigurován.\n"
-"Nyní můžete nastavit obrazovku zobrazením testovacích obrázků. Chcete "
-"provést nastavení?"
+"Nyní můžeš nastavit obrazovku zobrazením testovacích obrázků. Chceš provést "
+"nastavení?"
 
 #
 msgid "The installation of the default services lists is finished."
@@ -7644,8 +7644,8 @@ msgid ""
 "The installation of the default settings is finished. You can now continue "
 "configuring your STB by pressing the OK button on the remote control."
 msgstr ""
-"Vybraný setting byl nainstalován. Nyní můžete pokračovat v konfiguraci "
-"vašeho STBu stisknutím OK na dálkovém ovladači."
+"Vybraný setting byl nainstalován. Nyní můžeš pokračovat v konfiguraci tvého "
+"STBu stisknutím OK na dálkovém ovladači."
 
 #
 msgid "The match attribute is mandatory."
@@ -7742,7 +7742,7 @@ msgid ""
 "Do you really want to continue?"
 msgstr ""
 "Nemusí být dostatek místa na vybraném disku.\n"
-"Opravdu si přejete pokračovat."
+"Opravdu si přeješ pokračovat."
 
 #
 msgid "There was an error downloading the packetlist. Please try again."
@@ -8150,12 +8150,11 @@ msgstr "Zbývá pokusů:"
 #
 msgid "Try to find used Transponders in cable network.. please wait..."
 msgstr ""
-"Zkouším najít použité transpodery v kabelové síti ... prosím počkejte ..."
+"Zkouším najít použité transpodery v kabelové síti ... prosím počkej ..."
 
 #
 msgid "Try to find used transponders in cable network.. please wait..."
-msgstr ""
-"Zkouším najít použité transpodery v kabelové síti ... prosím počkejte ..."
+msgstr "Zkouším najít použité transpodery v kabelové síti... prosím počkej..."
 
 #
 msgid "Trying to download a new packetlist. Please wait..."
@@ -8368,7 +8367,7 @@ msgstr "Aktualizuji, Prosím čekej..."
 
 #
 msgid "Updating... Please wait... This can take some minutes..."
-msgstr "Aktualizuji... Prosím čekejte... Toto může trvat několik minut..."
+msgstr "Aktualizuji... Prosím čekej... Toto může trvat několik minut..."
 
 #
 msgid "Upgrade finished."
@@ -8380,7 +8379,7 @@ msgstr "Aktualizuji"
 
 #
 msgid "Upgrading STB... Please wait"
-msgstr "Aktualizuji STB... Prosím čekejte"
+msgstr "Aktualizuji STB... Prosím čekej"
 
 #
 msgid "Upper bound of timespan."
@@ -8447,8 +8446,7 @@ msgstr ""
 msgid ""
 "Use the up/down keys on your remote control to select an option. After that, "
 "press OK."
-msgstr ""
-"Použijte šipku nahoru / dolu na DO pro výběr volby. Potom stiskněte OK."
+msgstr "Použij šipku nahoru / dolů na DO pro výběr volby. Potom stiskni OK."
 
 msgid "Use this input device settings?"
 msgstr "Použít toto nastavení vstupního zařízení?"
@@ -8571,8 +8569,7 @@ msgid ""
 msgstr ""
 "Výběr zdroje signálu\n"
 "\n"
-"Stiskněte OK pokud vidíte tuto stránku na vaší TV (nebo vyberte jiný zdroj "
-"signálu).\n"
+"Stiskni OK pokud vidíš tuto stránku na TV (nebo vyber jiný zdroj signálu).\n"
 "\n"
 "Další zdroj signálu bude automaticky prozkoumán během 10 sekund."
 
@@ -8842,9 +8839,9 @@ msgid ""
 "the firmware of your STB by providing a backup facility for your current "
 "settings and a short explanation of how to upgrade your firmware."
 msgstr ""
-"Vítejte u průvodce aktualizací image. Tento průvodce vám pomůže při "
-"aktualizaci image vašeho STBu. Provedení zálohy vašeho nastavení a krátkého "
-"vysvětlení jak aktualizovat firmware."
+"Vítej u průvodce aktualizací image. Tento průvodce ti pomůže při aktualizaci "
+"image tvého STB provedením zálohy tvého nastavení a krátkého vysvětlení jak "
+"aktualizovat firmware."
 
 #
 msgid ""
@@ -8910,7 +8907,7 @@ msgstr ""
 "\n"
 "Detekovali jsme, že máš méně než 2MB volné interní paměti.\n"
 "Aby byl zajištěn stabilní provoz STB vnitřní paměť by měla být vyčištěna.\n"
-"Můžete použít tohoto průvodce pro odebrání některých rozšíření.\n"
+"Můžeš použít tohoto průvodce pro odebrání některých rozšíření.\n"
 
 #
 msgid ""
@@ -8947,14 +8944,14 @@ msgid ""
 "This start wizard will guide you through the basic setup of your STB.\n"
 "Press the OK button on your remote control to move to the next step."
 msgstr ""
-"Vítejte.\n"
+"Vítej.\n"
 "\n"
-"Tento průvodce vás provede základním nastavením vašeho STBu.\n"
-"Stiskněte OK na vašem dálkovém ovladači pro přesun na další krok."
+"Tento průvodce tě provede základním nastavením tvého STB.\n"
+"Stiskni OK na tvém dálkovém ovladači pro přesun na další krok."
 
 #
 msgid "Welcome..."
-msgstr "Vítejte..."
+msgstr "Vítej..."
 
 #
 msgid "West"
@@ -8962,7 +8959,7 @@ msgstr "Západ"
 
 #
 msgid "What do you want to scan?"
-msgstr "Co chcete prohledat?"
+msgstr "Co chceš prohledat?"
 
 #
 msgid "What to do with submitted crashlogs?"
@@ -9002,7 +8999,7 @@ msgstr ""
 
 #
 msgid "Where do you want to backup your settings?"
-msgstr "Kam chcete zazálohovat vaše nastavení?"
+msgstr "Kam chceš zazálohovat tvojee nastavení?"
 
 #
 msgid "Where to save temporary timeshift recordings?"
@@ -9079,7 +9076,7 @@ msgid ""
 "(between 1 and 9 minutes long) which will automatically zap back to the "
 "original channel after execution."
 msgstr ""
-"S Werbezapper můžete překlenout reklamy vytvořením krátkých časovačů\n"
+"S Werbezapper můžeš překlenout reklamy vytvořením krátkých časovačů\n"
 "(mezi 1 a 9 minutami), který automaticky přepne po vykonání zpět na původní "
 "kanál."
 
@@ -9257,12 +9254,12 @@ msgid ""
 "You can choose some default settings now. Please select the settings you "
 "want to be installed."
 msgstr ""
-"Nyní si můžete vybrat nějaký defaultní seting. Prosím, veberte si seting, "
-"který chcete nainstalovat."
+"Nyní si můžeš vybrat nějaký defaultní seting. Prosím, veber si seting, který "
+"chceš nainstalovat."
 
 #
 msgid "You can choose, what you want to install..."
-msgstr "Můžete si vybrat, co chcete nainstalovat..."
+msgstr "Můžeš si vybrat, co chceš nainstalovat..."
 
 msgid ""
 "You can control for how many days in the future timers are added. Set this "
@@ -9314,7 +9311,7 @@ msgstr ""
 
 #
 msgid "You cannot delete this!"
-msgstr "Nemůžete toto smazat!"
+msgstr "Nemůžeš toto smazat!"
 
 #
 msgid "You chose not to install any default services lists."
@@ -9325,15 +9322,14 @@ msgid ""
 "You chose not to install any default settings. You can however install the "
 "default settings later in the settings menu."
 msgstr ""
-"Nevybrali jste si k instalaci žádný defaultní seting. Můžete nainstalovat "
+"Nevybral jsi si k instalaci žádný defaultní seting. Můžeš nainstalovat "
 "defaultní seting později přes menu Nastavení. "
 
 #
 msgid ""
 "You chose not to install anything. Please press OK finish the install wizard."
 msgstr ""
-"Nevybrali jste si nic k instalaci. Prosím, stiskněte OK pro dokončení "
-"průvodce."
+"Nevybral jsi si nic k instalaci. Prosím, stiskni OK pro dokončení průvodce."
 
 #
 msgid ""
@@ -9393,10 +9389,10 @@ msgid ""
 "instructions from the website, your new firmware will ask you to restore "
 "your settings."
 msgstr ""
-"Potřebujete PC připojené k vašemu dreamboxu. Pokud potřebujete další "
-"informace navštivte stránku http://www.dm7025.de.\n"
-"Váš dreambox nyní bude zastaven. Po té co provedete aktualizaci pomocí "
-"instrukcí na té stránce se vás váš dreambox zeptá na obnovu nastavení."
+"Potřebuješ PC připojené k tvému dreamboxu. Pokud potřebuješ další informace "
+"navštiv stránku http://www.dm7025.de.\n"
+"Tvůj dreambox nyní bude zastaven. Po té co provedeš aktualizaci pomocí "
+"instrukcí na té stránce se tě tvůj dreambox zeptá na obnovu nastavení."
 
 msgid ""
 "You need to set a PIN code and hide it from your children.\n"
@@ -9487,7 +9483,7 @@ msgstr "Tvoje aktuální kolekce bude ztracena!"
 
 #
 msgid "Your dreambox is shutting down. Please stand by..."
-msgstr "Váš STB je vypínán. Prosím počkejte..."
+msgstr "Tvůj STB je vypínán. Prosím počkej..."
 
 #
 msgid ""
@@ -9506,8 +9502,8 @@ msgid ""
 "Your frontprocessor firmware must be upgraded.\n"
 "Press OK to start upgrade."
 msgstr ""
-"Firmware vašeho frontprocesoru musí být aktualizován.\n"
-"Stiskněte OK pro aktualizaci."
+"Firmware tvého frontprocesoru musí být aktualizován.\n"
+"Stiskni OK pro aktualizaci."
 
 #
 msgid ""
@@ -9515,7 +9511,7 @@ msgid ""
 "Please choose what you want to do next."
 msgstr ""
 "Tvoje internetové připojení nepracuje!\n"
-"Vyberte si prosím, co chceš dělat dál."
+"Vyber si prosím, co chceš dělat dál."
 
 #
 msgid "Your name (optional):"
@@ -9550,7 +9546,7 @@ msgstr ""
 "Bezdrátové LAN připojení na internet nemohlo být spuštěno!\n"
 "Připojil jsi USB WLAN-klíč?\n"
 "\n"
-"Vyberte si prosím, co chceš dělat dál."
+"Vyber si prosím, co chceš dělat dál."
 
 msgid "ZDFMediathek allows you to watch streams from ZDF Mediathek."
 msgstr "ZDFMediathek ti umožní sledovat streamy z ZDF Mediathek."
@@ -9636,12 +9632,12 @@ msgstr "aktivovat kofiguraci síťového adaptéru"
 
 #. TRANSLATORS: AutoTimer title in MovieList (automatically opens importer, I consider this no further interaction)
 msgid "add AutoTimer"
-msgstr "přidat AutoČasovač"
+msgstr "Přidat AutoČasovač"
 
 #
 #. TRANSLATORS: AutoTimer title in EventInfo dialog (requires the user to select an event to base the AutoTimer on)
 msgid "add AutoTimer..."
-msgstr "přidat AutoČasovač..."
+msgstr "Přidat AutoČasovač..."
 
 #
 msgid "add Provider"
@@ -9649,11 +9645,11 @@ msgstr "Přidat Poskytovatele"
 
 #
 msgid "add Service"
-msgstr "přidat Program"
+msgstr "Přidat Program"
 
 #
 msgid "add a nameserver entry"
-msgstr "přidat nameserver záznam"
+msgstr "Přidat nameserver záznam"
 
 #
 msgid "add alternatives"
@@ -9661,11 +9657,11 @@ msgstr "Přidat alternativy"
 
 #
 msgid "add bookmark"
-msgstr "přidat záložku"
+msgstr "Přidat záložku"
 
 #
 msgid "add bouquet"
-msgstr "Přidat buket..."
+msgstr "Přidat bouquet..."
 
 #
 msgid "add directory to playlist"
@@ -9681,7 +9677,7 @@ msgstr "Přidat soubory do playlistu"
 
 #
 msgid "add filters"
-msgstr "přidat filtry"
+msgstr "Přidat filtry"
 
 #
 msgid "add marker"
@@ -9689,11 +9685,11 @@ msgstr "Přidat popisovač"
 
 #
 msgid "add recording (enter recording duration)"
-msgstr "Přidat nahrávání (zadat nahrávací dobu)"
+msgstr "Přidat nahrávání (zadat dobu nahrávání)"
 
 #
 msgid "add recording (enter recording endtime)"
-msgstr "Přidat nahrávání (zadat nahrávací dobu)"
+msgstr "Přidat nahrávání (zadat čas ukončení)"
 
 #
 msgid "add recording (indefinitely)"
@@ -9713,7 +9709,7 @@ msgstr "Přidat kanál do oblíbených"
 
 #
 msgid "add services"
-msgstr "přidat programy"
+msgstr "Přidat programy"
 
 #
 msgid "add to parental protection"
@@ -10193,7 +10189,7 @@ msgstr "délka"
 
 #
 msgid "list of EPG views..."
-msgstr "seznam EPG zobrazení"
+msgstr "Seznam EPG zobrazení"
 
 #
 msgid "list style compact"
@@ -10288,7 +10284,7 @@ msgstr "nikdy"
 
 #
 msgid "next channel"
-msgstr "další program"
+msgstr "Další program"
 
 #
 msgid "next channel in history"
@@ -10383,7 +10379,7 @@ msgstr "otevři konfiguraci nameserveru"
 
 #
 msgid "open servicelist"
-msgstr "otevřít seznam programů"
+msgstr "Otevřít seznam programů"
 
 #
 msgid "open servicelist(down)"
@@ -10419,19 +10415,19 @@ msgstr "přehrát od předchozí značky nebo položky v playlistu"
 
 #
 msgid "please press OK when ready"
-msgstr "stiskněte OK až budete připraveni"
+msgstr "stiskni OK až budeš připraven"
 
 #
 msgid "please wait, loading picture..."
-msgstr "Prosím čekejte... náčítám obrázek..."
+msgstr "Prosím čekej... náčítám obrázek..."
 
 #
 msgid "previous channel"
-msgstr "předchozí program"
+msgstr "Předchozí program"
 
 #
 msgid "previous channel in history"
-msgstr "předchozí program v historii"
+msgstr "Předchozí program v historii"
 
 #
 msgid "record"
@@ -10578,7 +10574,7 @@ msgstr "Výběr filmu"
 
 #
 msgid "select the movie path"
-msgstr "Vyberte cestu k filmům"
+msgstr "Vyber cestu k filmům"
 
 msgid "service PIN"
 msgstr "servisní PIN"
@@ -11751,7 +11747,7 @@ msgid "Dolby Digital downmix"
 msgstr "Dolby Digital downmix"
 
 msgid "General Dolby Digital Delay"
-msgstr "Obecné Dolby Digital Zpoždění"
+msgstr "Obecné Dolby Digital zpoždění"
 
 msgid "FPGA"
 msgstr "FPGA"
@@ -12446,7 +12442,7 @@ msgid "Mountpoints"
 msgstr "Přípojné Body"
 
 msgid "Wait please while scanning your devices..."
-msgstr "Počkejte prosím, prohledávám tvoje zařízení .."
+msgstr "Počkej prosím, prohledávám tvoje zařízení .."
 
 msgid "Size: "
 msgstr "Velikost:"
@@ -12636,7 +12632,7 @@ msgid ""
 "Please disable ALL the plugins you don't need to use.\n"
 "This will speed up Image Performance."
 msgstr ""
-"Zakažte prosím VŠECHNY pluginy, které nepotřebujete.\n"
+"Zakaž prosím VŠECHNY pluginy, které nepotřebuješ.\n"
 "Zvýší to Rychlost a Výkon Image."
 
 msgid ""
@@ -12694,7 +12690,7 @@ msgid ""
 "Warning: file format allowed are gzip and bzip2 epg.dat (.dat.gz .dat.bz2).\n"
 "Example: http://example.com/uk_epg.dat.gz"
 msgstr ""
-"Zde můžete přidat servery ke stažení externích epg.dat souborů.\n"
+"Zde můžeš přidat servery ke stažení externích epg.dat souborů.\n"
 "Upozornění: povolen formát souborů je gzip a bzip2 epg.dat (.dat.gz .dat."
 "bz2).\n"
 "Příklad: http://priklad.com/cs_epg.dat.gz"
@@ -12973,16 +12969,16 @@ msgid "Total Downloads:     \t"
 msgstr "Celkově Stažení:     \t"
 
 msgid "Wait please connection in progress ..."
-msgstr "Čekejte prosím, připojuji..."
+msgstr "Čekej prosím, připojuji..."
 
 msgid "Wait please, download in progress..."
-msgstr "Čekejte prosím, stahuji..."
+msgstr "Čekej prosím, stahuji..."
 
 msgid "Connection Established"
 msgstr "Připojení Aktivní"
 
 msgid "Wait please checking for available updates..."
-msgstr "Čekejte prosím, hledám dostupné aktualizace..."
+msgstr "Čekej prosím, hledám dostupné aktualizace..."
 
 msgid "version:"
 msgstr "verze:"
@@ -13426,7 +13422,7 @@ msgstr ""
 "Hole image v.  "
 
 msgid "Please wait while starting\n"
-msgstr "Počkejte prosím, startuju\n"
+msgstr "Počkej prosím, startuju\n"
 
 msgid "Default Cam:"
 msgstr "Výchozí Cam:"
