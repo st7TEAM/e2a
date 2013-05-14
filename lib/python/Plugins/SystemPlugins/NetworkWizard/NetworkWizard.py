@@ -256,6 +256,18 @@ class NetworkWizard(WizardLanguage, Rc):
 		self.currStep = self.getStepWithID("end")
 		self.afterAsyncCode()
 
+	def bH_close(self):
+		from Blackhole.BhSettings import BhSpeedUp
+		self.session.openWithCallback(self.bH_close_end, BhSpeedUp, True)
+
+	def bH_close_end(self):
+		from Components.PluginComponent import plugins
+		from Tools.Directories import SCOPE_PLUGINS
+		plugins.firstRun = True
+		plugins.clearPluginList()
+		plugins.readPluginList(resolveFilename(SCOPE_PLUGINS))
+		self.close()
+
 
 	def checkNetwork(self):
 		iNetwork.checkNetworkState(self.checkNetworkStateCB)
