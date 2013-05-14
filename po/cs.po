@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-04-30 21:19+0100\n"
+"PO-Revision-Date: 2013-05-09 21:22+0100\n"
 "Last-Translator: Paolino L. <pliesko1@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgid ""
 "Manage extensions or plugins for your STB"
 msgstr ""
 "\n"
-"Správa rozšíření nebo pluginů vašeho STB"
+"Správa rozšíření nebo pluginů tvého STB"
 
 #
 msgid ""
@@ -59,7 +59,7 @@ msgid ""
 "Online update of your STB software."
 msgstr ""
 "\n"
-"Online aktualizace Vašeho STB softwaru."
+"Online aktualizace STB softwaru."
 
 #
 msgid ""
@@ -431,7 +431,7 @@ msgid ""
 "Do you want to keep your version?"
 msgstr ""
 "Konfigurační soubor (%s) byl změněn od instalace.\n"
-"Chceš uchovat Vaši verzi?"
+"Chceš uchovat tvoji verzi?"
 
 msgid "A demo plugin for TPM usage."
 msgstr "Demo plugin pro využití TPM."
@@ -443,14 +443,13 @@ msgstr "Dreambox simulace z SG-Atlantis displejů."
 msgid ""
 "A finished record timer wants to set your\n"
 "STB to standby. Do that now?"
-msgstr ""
-"Dokončený časovač chce přepnout váš STB do standby módu. Přepnout hned?"
+msgstr "Dokončený časovač chce přepnout STB do standby módu. Přepnout hned?"
 
 #
 msgid ""
 "A finished record timer wants to shut down\n"
 "your STB. Shutdown now?"
-msgstr "Dokončený časovač chce vypnout váš STB. Vypnout teď?"
+msgstr "Dokončený časovač chce vypnout STB. Vypnout teď?"
 
 #
 msgid "A graphical EPG for all services of an specific bouquet"
@@ -507,14 +506,14 @@ msgid ""
 "A recording is currently running. Please stop the recording before trying to "
 "configure the positioner."
 msgstr ""
-"Právě se nahrává. Prosím, zastavte nahrávání před konfigurováním positioneru."
+"Právě se nahrává. Prosím, zastav nahrávání před konfigurováním positioneru."
 
 #
 msgid ""
 "A recording is currently running. Please stop the recording before trying to "
 "start the satfinder."
 msgstr ""
-"Právě se nahrává pořad. Prosím, zastavte nahrávání před spuštěním satfinderu."
+"Právě se nahrává pořad. Prosím, zastav nahrávání před spuštěním satfinderu."
 
 #
 #, python-format
@@ -542,13 +541,13 @@ msgstr "Jednoduchá aplikace pro stahování dalších pluginů"
 msgid ""
 "A sleep timer wants to set your\n"
 "STB to standby. Do that now?"
-msgstr "Časovač chce přepnout váš STB do standby módu. Přepnout hned?"
+msgstr "Časovač chce přepnout STB do standby módu. Přepnout hned?"
 
 #
 msgid ""
 "A sleep timer wants to shut down\n"
 "your STB. Shutdown now?"
-msgstr "Časovač chce vypnout váš STB. Má to udělat?"
+msgstr "Časovač chce vypnout STB. Má to udělat?"
 
 #
 msgid "A small overview of the available icon states and actions."
@@ -576,7 +575,7 @@ msgstr "AB"
 
 #
 msgid "AC3 default"
-msgstr "AC3 implicitní"
+msgstr "AC3 výchozí"
 
 #
 msgid "AC3 downmix"
@@ -831,7 +830,7 @@ msgstr "Umožni vyhledávání nahrávek"
 
 #
 msgid "Allow zapping via Webinterface"
-msgstr "Umožní přepínání přes Webinterface"
+msgstr "Umožni přepínání přes Webinterface"
 
 msgid "Allows the execution of TuxboxPlugins."
 msgstr "Umožňuje spuštění Tuxbox Pluginů."
@@ -1309,7 +1308,7 @@ msgid ""
 "By enabling this events will not be matched if they don't occur on certain "
 "dates."
 msgstr ""
-"Když povolíte toto, události nebudou označeny, pokud se nevyskytují v určité "
+"Když povolíš toto, události nebudou označeny, pokud se nevyskytují v určité "
 "dny."
 
 msgid ""
@@ -1334,7 +1333,7 @@ msgstr ""
 msgid ""
 "By pressing the OK Button on your remote control, the info bar is being "
 "displayed."
-msgstr "Zmáčknutím OK na vašem dálkovém ovladači je infobar zobrazen."
+msgstr "Zmáčknutím OK na tvém dálkovém ovladači je infobar zobrazen."
 
 #
 msgid "C"
@@ -1518,7 +1517,7 @@ msgstr "Zvol umístění zálohy"
 
 #
 msgid "Choose bouquet"
-msgstr "Vybrat buket"
+msgstr "Vybrat bouquet"
 
 msgid "Choose image to download"
 msgstr "Zvol image ke stažení"
@@ -1700,7 +1699,7 @@ msgstr "Nakonfiguruj tvoje WLAN síťové rozhraní"
 
 #
 msgid "Configure your internal LAN"
-msgstr "Konfigurovat vaši LAN"
+msgstr "Konfigurovat tvůj LAN"
 
 #
 msgid "Configure your network again"
@@ -1708,7 +1707,7 @@ msgstr "Nakonfiguruj síť znovu"
 
 #
 msgid "Configure your wireless LAN again"
-msgstr "Znova konfigurovat vaši WLAN"
+msgstr "Znova konfigurovat tvou WLAN"
 
 #
 msgid "Configuring"
@@ -1764,7 +1763,7 @@ msgid "Control your STB with your Web browser."
 msgstr "Ovládej tvůj STB Web prohížečem."
 
 msgid "Control your STB with your browser"
-msgstr "Ovládej tvůj STB tvý prohlížečem"
+msgstr "Ovládej tvůj STB tvým prohlížečem"
 
 msgid "Control your dreambox with only the MUTE button"
 msgstr "Ovládej tvůj Dreambox pouze s tlačítkem MUTE"
@@ -2344,7 +2343,7 @@ msgstr "Chceš stáhnout image do %s ?"
 
 #
 msgid "Do you want to enable the parental control feature on your dreambox?"
-msgstr "Chceš povolit rodičovskou kontrolu na vašem STBu?"
+msgstr "Chceš povolit rodičovskou kontrolu na tvém STBu?"
 
 #
 msgid "Do you want to enter a username and password for this host?\n"
@@ -2376,7 +2375,7 @@ msgstr "Chceš odstranit balíček:\n"
 
 #
 msgid "Do you want to restore your settings?"
-msgstr "Chceš obnovit vaše nastavení?"
+msgstr "Chceš obnovit tvojee nastavení?"
 
 #
 msgid "Do you want to resume this playback?"
@@ -2527,7 +2526,7 @@ msgid ""
 "to not disturb the current TV program."
 msgstr ""
 "EPGRefresh se automaticky přepne na uživatelsky definované kanály při boxu v "
-"klidu(tj. v pohotovostním režimu a neběží žádné nahrávky) pro provedení "
+"klidu (tj. v pohotovostním režimu a neběží žádné nahrávky) pro provedení "
 "aktualizace EPG informací na těchto kanálech.\n"
 "Na multi-tunerovém boxu může volitelně běžet na pozadí skrytě nebo v PiP, "
 "aby nerušil aktuální televizní program."
@@ -2564,7 +2563,7 @@ msgstr "Upravit DNS"
 #
 #. TRANSLATORS: description of AutoTimer in PluginBrowser
 msgid "Edit Timers and scan for new Events"
-msgstr "Editovat Časovače a vyhledat nové Události"
+msgstr "Editovat časovače a vyhledat nové události"
 
 #
 msgid "Edit Title"
@@ -2699,7 +2698,7 @@ msgstr "Povolit Streaming Ověřování"
 
 #
 msgid "Enable multiple bouquets"
-msgstr "Povolit vícenásobné bukety"
+msgstr "Povolit vícenásobné bouquety"
 
 #
 msgid "Enable parental control"
@@ -2972,7 +2971,7 @@ msgid ""
 "FTPBrowser allows uploading and downloading files between your STB and a "
 "server using the file transfer protocol."
 msgstr ""
-"FTP Browser umožňuje nahrávání a stahování souborů mezi vaším STB a serverem "
+"FTP Browser umožňuje nahrávání a stahování souborů mezi STB a serverem "
 "pomocí File Transfer Protocol."
 
 #
@@ -3049,8 +3048,8 @@ msgid ""
 "it's Description.\n"
 "Press BLUE to add a new restriction and YELLOW to remove the selected one."
 msgstr ""
-"Filtry jsou dalším účinným nástrojem při značení událostí.AutoTimer může být "
-"omezen na určité dny nebo pouze označit událost s textem uvnitř, např. že "
+"Filtry jsou dalším účinným nástrojem při značení událostí. AutoTimer může "
+"být omezen na určité dny nebo pouze označit událost s textem uvnitř, např. "
 "její popis.\n"
 "Stiskni MODRÉ na přidání nového omezení a ŽLUTÉ na odstranění označeného."
 
@@ -3106,7 +3105,7 @@ msgid ""
 "%d Timer were added and %d modified, %d conflicts encountered, %d similars "
 "added."
 msgstr ""
-"Nalezeno %d odpovídajících Událostí.\n"
+"Nalezeno %d odpovídajících událostí.\n"
 "%d Časovač bude přidán a %d upraven,nalezeno %d konfliktů, přidáno %d "
 "podobných."
 
@@ -3306,7 +3305,7 @@ msgstr ""
 "používající prowl."
 
 msgid "Guard interval"
-msgstr "Intrval hlídání"
+msgstr "Interval hlídání"
 
 #
 msgid "Guess existing timer based on begin/end"
@@ -3638,7 +3637,7 @@ msgstr "Okamžité nahrávání..."
 
 #
 msgid "Instant record location"
-msgstr "Umístění Okamžitého nahrávání"
+msgstr "Umístění okamžitého nahrávání"
 
 #
 msgid "Interface: "
@@ -3705,7 +3704,7 @@ msgstr "Je tento videorežim v pořádku?"
 
 #
 msgid "Israel"
-msgstr "Iyrael"
+msgstr "Izrael"
 
 #
 msgid ""
@@ -4256,7 +4255,7 @@ msgid ""
 "Unmounted"
 msgstr ""
 "Připojen/\n"
-"Odpoje"
+"Odpojen"
 
 #
 msgid "Mountpoints management"
@@ -4422,7 +4421,7 @@ msgid ""
 "Vodafone Easybox) on your STB."
 msgstr ""
 "NCID Klient zobrazuje příchozí hlasová volání z jakéhokoliv NCID serveru "
-"(např. Vodafone EASYBOX) na vašem přijímači."
+"(např. Vodafone EASYBOX) na tvém přijímači."
 
 #
 msgid "NEXT"
@@ -4705,7 +4704,7 @@ msgid ""
 "No fast winding possible yet.. but you can use the number buttons to skip "
 "forward/backward!"
 msgstr ""
-"Není zatím možné žádné rychlé přvíjení.. ale můžeš použít číselná tlačítka "
+"Není zatím možné žádné rychlé převíjení.. ale můžeš použít číselná tlačítka "
 "pro posun vpřed/vzad!"
 
 #
@@ -5211,11 +5210,11 @@ msgid "Player for Network and Internet Streams."
 msgstr "Přehrávač Síťových a Internetu Streamů."
 
 msgid "Plays your favorite music and videos"
-msgstr "Pŕehraje tvoje oblíbená videa a hudbu"
+msgstr "Přehraje tvoje oblíbená videa a hudbu"
 
 #
 msgid "Please Reboot"
-msgstr "Prosím restartujte"
+msgstr "Prosím Restartuj"
 
 #
 msgid "Please Select Medium to be Scanned"
@@ -5234,11 +5233,11 @@ msgstr ""
 
 #
 msgid "Please change recording endtime"
-msgstr "Prosím, změňte nahrávácí dobu"
+msgstr "Prosím, změň nahrávácí dobu"
 
 #
 msgid "Please check your network settings!"
-msgstr "Prosím, Zkontrolujte nastavení sítě!"
+msgstr "Prosím, zkontroluj nastavení sítě!"
 
 #
 msgid "Please choose an extension..."
@@ -5272,7 +5271,7 @@ msgstr ""
 
 #
 msgid "Please do not change any values unless you know what you are doing!"
-msgstr "Prosíme neměňte hodnoty pokud nevíte co děláte!"
+msgstr "Prosíme neměň hodnoty pokud nevíš co děláš!"
 
 #
 msgid "Please enter a name for the new bouquet"
@@ -5574,7 +5573,7 @@ msgstr "Nastavení positioneru"
 
 #
 msgid "Positioner storage"
-msgstr "Paměť pozitioneru"
+msgstr "Paměť pozicionéru"
 
 msgid "PositionerSetup helps you installing a motorized dish"
 msgstr "PositionerSetup ti pomůže seřídit motorizovanou parabolu"
@@ -5754,7 +5753,7 @@ msgid ""
 "select \"Move clock\" and relocate."
 msgstr ""
 "Stiskni tlačítko \"Exit dlouze\" pro zobrazení hodin při sledování TV. "
-"Hodiny zmizí po nastaveném čase nebo opětovným stiskem tlačítka \"Exit long"
+"Hodiny zmizí po nastaveném čase nebo opětovným stiskem tlačítka \"Exit dlouze"
 "\".\n"
 "Změň si nastavení podle tvých požadavků. Na změnu pozice navol \"Přesuň "
 "hodiny\" a přemísti."
@@ -5989,7 +5988,7 @@ msgstr "Úspěšně odstraněno."
 
 #
 msgid "Removing"
-msgstr "Ostraňuji"
+msgstr "Odstraňuji"
 
 #
 #, python-format
@@ -6182,7 +6181,7 @@ msgid "Running"
 msgstr "Spuštěn"
 
 msgid "Running in testmode"
-msgstr "Běží v testovacím ržimu"
+msgstr "Běží v testovacím režimu"
 
 #
 msgid "Russia"
@@ -6241,8 +6240,8 @@ msgstr ""
 "Tento plugin podporuje pouze podskupinu SVDRP a automaticky se spustí pomocí "
 "výchozího nastavení.\n"
 "\n"
-"You probably don't need this plugin and should use the regular Web Interface "
-"for Enigma2 instead."
+"Pravděpodobně nepotřebuješ tento plugin, radši použij místo něj Web "
+"Interface pro Enigma2."
 
 msgid "SVDRP server for Enigma2"
 msgstr "SVDRP server pro Enigma2"
@@ -6253,7 +6252,7 @@ msgstr "So"
 
 #
 msgid "Sat / Dish Setup"
-msgstr "Sat / Dish Setup"
+msgstr "Sat / Parabola Nastavení"
 
 #
 msgid "Satellite"
@@ -6261,7 +6260,7 @@ msgstr "Satelit"
 
 #
 msgid "Satellite Equipment Setup"
-msgstr "Nastavení vybavení satelitu"
+msgstr "Nastavení Satelitního zařízení"
 
 #
 msgid "Satellite equipment"
@@ -6303,11 +6302,11 @@ msgstr "Uložit playlist"
 
 #
 msgid "Save current delay to key"
-msgstr "Uložit aktuální zpoždění to key"
+msgstr "Uložit aktuální zpoždění do tlačítka"
 
 #
 msgid "Save to key"
-msgstr "Uložit to key"
+msgstr "Uložit do tlačítka"
 
 #
 msgid "Save values and close plugin"
@@ -6442,7 +6441,7 @@ msgstr "Prohledá výchozí lamedbs tříděné podle satelitu"
 msgid ""
 "Scans default lamedbs sorted by satellite with a connected dish positioner"
 msgstr ""
-"Prohldá standardní lamedbs srovnaný dle stalitu a připojeného positioneru"
+"Prohldá standardní lamedbs srovnaný dle satelitu a připojeného positioneru"
 
 #
 msgid "Science & Technology"
@@ -6561,7 +6560,7 @@ msgstr "Vyber bouquet na nahrávání"
 
 #
 msgid "Select channel to record from"
-msgstr "Vyberat program pro nahrávání"
+msgstr "Vyber program pro nahrávání"
 
 #
 msgid "Select channel to record on"
@@ -6903,10 +6902,10 @@ msgid "Shows a list of recent zap entries"
 msgstr "Zobrazí seznam posledních záznamů přepnutí"
 
 msgid "Shows average bitrate of video and audio"
-msgstr "Zobrazíprůměrný bitrate videa a zvuku"
+msgstr "Zobrazí průměrný bitrate videa a zvuku"
 
 msgid "Shows statistics of watched services"
-msgstr "Zobrai statistiky sledovaných programů"
+msgstr "Zobrazí statistiky sledovaných programů"
 
 msgid "Shows the clock permanently on the screen"
 msgstr "Zobrazuje trvale na obrazovce hodiny"
@@ -6916,7 +6915,7 @@ msgstr "Při přepínání zobrazuje název místo čísla programu."
 
 #
 msgid "Shows the state of your wireless LAN connection.\n"
-msgstr "Zobrazit stav vaší bezdrátové sítě.\n"
+msgstr "Zobrazit stav tvé bezdrátové sítě.\n"
 
 #
 msgid "Shutdown"
@@ -7040,7 +7039,7 @@ msgstr "Obnovení Software"
 
 #
 msgid "Software update"
-msgstr "Aktualizace Software"
+msgstr "Aktualizace software"
 
 msgid "SoftwareManager manages your STB software"
 msgstr "SoftwareManager spravuje software STB"
@@ -7308,7 +7307,7 @@ msgstr "Přepnout na předchozí podprogram"
 
 #
 msgid "Switchable tuner types:"
-msgstr "Typy přepínalelných tunerů:"
+msgstr "Typy přepínatelných tunerů:"
 
 msgid "Symbol rate"
 msgstr "Symbolová rychlost"
@@ -7407,7 +7406,7 @@ msgstr "Testovací mód"
 
 #
 msgid "Test the network configuration of your STB.\n"
-msgstr "Otestovat síťovou konfiguraci vašeho STBu.\n"
+msgstr "Otestovat síťovou konfiguraci tvého STBu.\n"
 
 msgid "Test your DiSEqC equipment"
 msgstr "Otestuje DiSEqC zařízení"
@@ -7448,7 +7447,7 @@ msgid ""
 "some plugins."
 msgstr ""
 "CleanupWizard tě informuje, když vnitřní paměť Dreamboxu klesla pod "
-"definovatelnou hranici.Můžeš pomocí tohoto průvodce taky odstranit některé "
+"definovatelnou hranici. Můžeš pomocí tohoto průvodce taky odstranit některé "
 "pluginy."
 
 #
@@ -7514,7 +7513,7 @@ msgid ""
 "It's now easy to change the look and feel of your STB."
 msgstr ""
 "SkinSelector zobrazí menu s volitelnými skiny.\n"
-"Je nyní snadné změnit vzhled a dojem z tvéeho STB."
+"Je nyní snadné změnit vzhled a dojem z tvého STB."
 
 msgid ""
 "The SoftwareManager manages your STB software.\n"
@@ -7522,7 +7521,7 @@ msgid ""
 "even backup and restore your system settings."
 msgstr ""
 "SoftwareManager spravuje software tvého STB.\n"
-"Je snadné aktualizovat software přijímače, instalovat nebo odebrt pluginy, "
+"Je snadné aktualizovat software přijímače, instalovat nebo odebrat pluginy, "
 "nebo dokonce zálohovat a obnovit nastavení systému."
 
 #
@@ -7726,7 +7725,7 @@ msgstr "Nejsou na výběr žádné settingy. "
 
 #
 msgid "There are no default settings in your image."
-msgstr "Nejsou žádné standardní nastavení ve vaší image."
+msgstr "Nejsou žádné standardní nastavení ve tvojí image."
 
 #
 msgid "There are no updates available."
@@ -7762,7 +7761,7 @@ msgid ""
 "There's a certificate update available for your dreambox. Would you like to "
 "apply this update now?"
 msgstr ""
-"K dispozici je aktualizace certifikátu pro tvůj Dreambox. Chtěi bys použít "
+"K dispozici je aktualizace certifikátu pro tvůj Dreambox. Chtěl bys použít "
 "tuto aktualizaci?"
 
 #
@@ -7839,8 +7838,8 @@ msgstr ""
 "Za prvé, USB flash disk musí být připraven tak, že bude zaváděcí.\n"
 "V dalším kroku, se může soubor image NFI stáhnout z aktualizačního serveru a "
 "uložit na USB flash disk.\n"
-"Pokud již máš připraven zaváděcí USB flash disk, vložte jej nyní. Jinak "
-"připoj USB flash disk s minimální velikostí 64 MB!"
+"Pokud již máš připraven zaváděcí USB flash disk, vlož jej nyní. Jinak připoj "
+"USB flash disk s minimální velikostí 64 MB!"
 
 #
 msgid "This plugin is installed."
@@ -7878,10 +7877,10 @@ msgid ""
 "the \"Nameserver\" Configuration"
 msgstr ""
 "Tento test ověří, zda je nakonfigurovaný DNS server.\n"
-"Pokud obdržíte zpárvu \"nepotvrzeno\":\n"
-"- ověrte nastavení DHCP, kabelu a síťové karty\n"
-"- pokud jste nastavili DNS server ručně, prosím ověrte nastavení v "
-"konfiguraci DNS serveru"
+"Pokud obdržíš zpárvu \"nepotvrzeno\":\n"
+"- ověr nastavení DHCP, kabelu a síťové karty\n"
+"- pokud jsi nastavil DNS server ručně, prosím ověř nastavení v konfiguraci "
+"DNS serveru"
 
 #
 msgid ""
@@ -7891,9 +7890,9 @@ msgid ""
 "- verify that the cable is not broken"
 msgstr ""
 "Tento test ověří, zda je zapojený kabel do síťové karty.\n"
-"Pokud obdržíte zprávu \"odpojeno\":\n"
-"- ověřte jestli je kabel zapojený\n"
-"- ověřte, že kabel není poškozený"
+"Pokud obdržíš zprávu \"odpojeno\":\n"
+"- ověř jestli je kabel zapojený\n"
+"- ověř, že kabel není poškozený"
 
 #
 msgid ""
@@ -7903,9 +7902,9 @@ msgid ""
 "- please check your DHCP, cabling and adapter setup"
 msgstr ""
 "Tento test ověří, zda je nastavena správná IP adresa na síťové kartě.\n"
-"Pokud obdržíte zpárvu \"nepotvrzeno\":\n"
+"Pokud obdržíš zpárvu \"nepotvrzeno\":\n"
 "- nebyla nalezna žádná platná IP adresa\n"
-"- ověřte nastavení DHCP, kabelu a síťové karty"
+"- ověř nastavení DHCP, kabelu a síťové karty"
 
 #
 msgid ""
@@ -7920,11 +7919,11 @@ msgid ""
 msgstr ""
 "Tento test ověří, zda je nastavena síťová karta pro automatickou konfiguraci "
 "přes DHCP server.\n"
-"Pokud obdržíte zprávu \"zakázáno\":\n"
-"- pak je vaše síťová karta nastavena na ruční nastavení síťové karty\n"
-"- ověrte, že jste zadali správnou konfiguraci síťové karty\n"
-"Pokud obdržíte zprávu \"povoleno\":\n"
-"- ověrte, že máte správně nastavený a fungující DHCP server ve vaší síti."
+"Pokud obdržíš zprávu \"zakázáno\":\n"
+"- pak je síťová karta nastavena na ruční nastavení síťové karty\n"
+"- ověř, že jsi zadal správnou konfiguraci síťové karty\n"
+"Pokud obdržíš zprávu \"povoleno\":\n"
+"- ověr, že máš správně nastavený a fungující DHCP server v síti."
 
 #
 msgid "This test detects your configured LAN-Adapter."
@@ -8005,7 +8004,7 @@ msgid ""
 "Timer overlap in timers.xml detected!\n"
 "Please recheck it!"
 msgstr ""
-"Yjištěno překrytí časovačů v timers.xml!\n"
+"Zjištěno překrytí časovačů v timers.xml!\n"
 "Prosím, překontroluj ho!"
 
 #
@@ -8330,7 +8329,7 @@ msgstr "Aktualizace"
 #
 # File: tmp/enigma2_plugins/genuinedreambox/src/plugin.py, line: 167
 msgid "Update done..."
-msgstr "Aktualizace Vykonána"
+msgstr "Aktualizace vykonána"
 
 #
 # File: tmp/enigma2_plugins/genuinedreambox/src/plugin.py, line: 170
@@ -8399,7 +8398,7 @@ msgstr "Použij"
 
 #
 msgid "Use DHCP"
-msgstr "Použit DHCP"
+msgstr "Použít DHCP"
 
 #
 msgid "Use Interface"
@@ -8430,7 +8429,7 @@ msgstr "Použij Networkwizard k nastavení vybraného síťového adaptéru"
 
 #
 msgid "Use the Networkwizard to configure your Network\n"
-msgstr "Použijte průvodce pro nakonfigurování vaší sítě\n"
+msgstr "Použij průvodce pro nakonfigurování tvé sítě\n"
 
 #
 msgid ""
@@ -8438,9 +8437,9 @@ msgid ""
 "\n"
 "Please set up tuner A"
 msgstr ""
-"Použijte levou a pravou šipku pro změnu.\n"
+"Použij levou a pravou šipku pro změnu.\n"
 "\n"
-"Prosím, nastavte tuner A"
+"Prosím, nastav tuner A"
 
 #
 msgid ""
@@ -8892,7 +8891,7 @@ msgstr ""
 "požadovaný výsledek a stiskni tlačítko OK na dálkovém ovládání, spustí se "
 "vyhledávání.\n"
 "\n"
-"Press exit to get back to the input field."
+"Stiskni exit pro návrat na nové zadání."
 
 #
 msgid ""
@@ -8906,7 +8905,7 @@ msgstr ""
 "Vítej v průvodci vyčištěním.\n"
 "\n"
 "Detekovali jsme, že máš méně než 2MB volné interní paměti.\n"
-"Aby byl zajištěn stabilní provoz STB vnitřní paměť by měla být vyčištěna.\n"
+"Aby byl zajištěn stabilní provoz STB, vnitřní paměť by měla být vyčištěna.\n"
 "Můžeš použít tohoto průvodce pro odebrání některých rozšíření.\n"
 
 #
@@ -8923,7 +8922,7 @@ msgstr ""
 "Pokud chceš připojit STB k Internetu, tento průvodce tě provede základním "
 "nastavením sítě tvého STB.\n"
 "\n"
-"Press OK to start configuring your network"
+"Stiskni OK pro nakonfigurování sítě"
 
 #
 msgid ""
@@ -8999,7 +8998,7 @@ msgstr ""
 
 #
 msgid "Where do you want to backup your settings?"
-msgstr "Kam chceš zazálohovat tvojee nastavení?"
+msgstr "Kam chceš zazálohovat tvoje nastavení?"
 
 #
 msgid "Where to save temporary timeshift recordings?"
@@ -9035,7 +9034,7 @@ msgid ""
 "a standard-compliant DVD that can be played on conventinal DVD players.\n"
 "HDTV recordings can only be burned in proprietary dreambox format."
 msgstr ""
-"S DVDBurn si můžeš udělat kompilace záznamů z pevného diskuSTB.\n"
+"S DVDBurn si můžeš udělat kompilace záznamů z pevného disku STB.\n"
 "Volitelně můžeš přidat upravitelné menu. Můžeš vypálit kompilaci, která "
 "vyhovuje standardu DVD a lze ji přehrávat na běžných DVD přehrávačích.\n"
 "HDTV nahrávky je možné vypálit pouze v proprietárním formátu Dreambox."
@@ -9094,7 +9093,7 @@ msgid ""
 "This allows watching a scrambled service while recording another one."
 msgstr ""
 "S CommonInterfaceAssignment pluginem je možné použít různé CI moduly v STB a "
-"přiřadit vyhrazené poskytovatele/programy nebo caids pro každého z nich.\n"
+"přiřadit vyhrazené poskytovatele/programy nebo caids pro každý z nich.\n"
 "To umožňuje sledovat kódovaný program při nahrávání jiného."
 
 msgid ""
@@ -9160,7 +9159,7 @@ msgstr ""
 
 #
 msgid "Wizard"
-msgstr "Kouzelník"
+msgstr "Průvodce"
 
 #
 msgid "Write error while recording. Disk full?\n"
@@ -9207,7 +9206,7 @@ msgstr "Ano, ale přehraj další video"
 
 #
 msgid "Yes, but play previous video"
-msgstr "Ano. ale přhraj předcházející video"
+msgstr "Ano, ale přehraj předcházející video"
 
 #
 msgid "Yes, do a manual scan now"
@@ -9450,15 +9449,15 @@ msgstr ""
 
 #
 msgid "Your STB will restart after pressing OK on your remote control."
-msgstr "Váš STB se restartuje po stisknutí OK na vašem dálkovém ovladači."
+msgstr "Tvůj STB se restartuje po stisknutí OK na tvém dálkovém ovladači."
 
 #
 msgid ""
 "Your backup succeeded. We will now continue to explain the further upgrade "
 "process."
 msgstr ""
-"Vaše záloha byla úspěšně provedena . Pokračujeme vysvětlením dalšího postupu "
-"aktualizace."
+"Tvoje záloha byla úspěšně provedena . Pokračujeme vysvětlením dalšího "
+"postupu aktualizace."
 
 #
 msgid ""
@@ -9490,7 +9489,7 @@ msgid ""
 "Your dreambox isn't connected to the internet properly. Please check it and "
 "try again."
 msgstr ""
-"Váš STB není správně připojen k internetu. Prosím prověřte to a zkuste to "
+"Tvůj STB není správně připojen k internetu. Prosím prověřt to a zkus to "
 "znova."
 
 #
@@ -9585,7 +9584,7 @@ msgstr "[alternativní úprava]"
 
 #
 msgid "[bouquet edit]"
-msgstr "[editovat buket]"
+msgstr "[editovat bouquet]"
 
 #
 msgid "[favourite edit]"
@@ -9745,7 +9744,7 @@ msgstr "přiřazeny CAIDy:"
 
 #
 msgid "assigned Services/Provider:"
-msgstr "přiřazené Programy/Poskytovateél:"
+msgstr "přiřazené Programy/Poskytovatelé:"
 
 msgid "at beginning"
 msgstr "na začátku"
@@ -9989,11 +9988,11 @@ msgstr "povolit"
 
 #
 msgid "enable bouquet edit"
-msgstr "Povolit úpravu buketu"
+msgstr "Povolit úpravu bouquetu"
 
 #
 msgid "enable favourite edit"
-msgstr "Povolit úpravu oblíbené"
+msgstr "Povolit úpravu oblíbených"
 
 #
 msgid "enable move mode"
@@ -10009,7 +10008,7 @@ msgstr "ukončit úpravu alternativ"
 
 #
 msgid "end bouquet edit"
-msgstr "Ukončit úpravu buketu"
+msgstr "Ukončit úpravu bouquetu"
 
 #
 msgid "end cut here"
@@ -10017,7 +10016,7 @@ msgstr "ukončit střih zde"
 
 #
 msgid "end favourites edit"
-msgstr "Ukončit úpravu oblíbené"
+msgstr "Ukončit úpravu oblíbených"
 
 #
 msgid "equal to"
@@ -10065,7 +10064,7 @@ msgstr "jméno souboru"
 
 #
 msgid "fine-tune your display"
-msgstr "doladit váš display"
+msgstr "doladit display"
 
 #
 msgid "forward to the next chapter"
@@ -10767,7 +10766,7 @@ msgstr "toto nahrávání"
 
 #
 msgid "this service is protected by a parental control pin"
-msgstr "tento programl je chráněný rodičovským zámkem"
+msgstr "tento program je chráněný rodičovským zámkem"
 
 #
 msgid "toggle a cut mark at the current position"
@@ -10877,8 +10876,8 @@ msgid ""
 "your dreambox might be unusable now. Please consult the manual for further "
 "assistance before rebooting your dreambox."
 msgstr ""
-"Váš STB nyní může být nepoužitelný. Prosím konzultujte s manuálem další "
-"pomoc před restartováním STBu."
+"Tvůj STB nyní může být nepoužitelný. Prosím konzultuj s manuálem další pomoc "
+"před restartováním STBu."
 
 #
 msgid "zap"
@@ -10950,7 +10949,7 @@ msgid ""
 "MeoBoot successfully installed. You can restart the plugin now.\n"
 "Have fun !!"
 msgstr ""
-"MeoBoot úspěšně nainstalován. Můžeš nyní pligin restartovat.\n"
+"MeoBoot úspěšně nainstalován. Můžeš nyní plugin restartovat.\n"
 "Bav se !!"
 
 msgid ""
@@ -10973,7 +10972,7 @@ msgid "Delete Image"
 msgstr "Smazat Image"
 
 msgid "Current Running Image: "
-msgstr "Aktuálně Běžící Image: "
+msgstr "Aktuálně běžící Image: "
 
 msgid "MeoBoot Installed on: "
 msgstr "MeoBoot Instalován na: "
@@ -11044,7 +11043,7 @@ msgid "Image Name"
 msgstr "Jméno Image"
 
 msgid "Copy Settings to the new Image"
-msgstr "Kopírovat Nastavení do nového Image"
+msgstr "Kopírovat nastavení do nového Image"
 
 msgid "Sorry, an Image with the name "
 msgstr "Je mi líto, Image s názvem"
@@ -11108,10 +11107,9 @@ msgid ""
 "\n"
 msgstr ""
 "Instrukce:\n"
-"Instalace a aktualizace MeoBootje jednoduché a intuitivní.\n"
+"Instalace a aktualizace MeoBoot je jednoduchá a intuitivní.\n"
 "Pro instalaci nového image v multiboot musíš jenom nahrát soubor *.zip do "
-"složky \"/media/meoboot/MbootUpload\" a stisknout tlačítko <Instaacel "
-"Image>>\n"
+"složky \"/media/meoboot/MbootUpload\" a stisknout tlačítko <Install Image>>\n"
 "\n"
 
 msgid ""
@@ -11259,10 +11257,10 @@ msgid "Play DVDs"
 msgstr "Přehraje DVD"
 
 msgid "Epg Backup: not found."
-msgstr "Epg Záloha: nenalezena"
+msgstr "Epg záloha: nenalezena"
 
 msgid "Automatic Epg Backup:"
-msgstr "Automatická Epg Záloha:"
+msgstr "Automatická Epg záloha:"
 
 msgid "Epg Backup found: "
 msgstr "Nalezena Epg Záloha:"
@@ -11352,7 +11350,7 @@ msgid "World Weather Forecast"
 msgstr "Světová Předpověď Počasí"
 
 msgid "Personal Backup: not found."
-msgstr "Personal Backup: not found."
+msgstr "Osobní Záloha: nenalezena."
 
 msgid "Sorry. Personal Backup found but it is not compatible with the new OE 2"
 msgstr "Je mi líto. Nalezená Osobní Záloha není kompatibilní s novým OE 2"
@@ -11653,7 +11651,7 @@ msgid "ESSID"
 msgstr "ESSID"
 
 msgid "Input Hidden ESSID"
-msgstr "Vlož Skrytý ESSID"
+msgstr "Vlož skrytý ESSID"
 
 msgid "Key Type"
 msgstr "Typ Klíče"
@@ -11726,10 +11724,10 @@ msgstr ""
 "Tento test kontroluje, zda Bezdrátový LAN adaptér je nastaven na "
 "automatickou konfiguraci IP adresy s DHCP.\n"
 "Pokud dostaneš \"zakázán\" zprávu:\n"
-" - pak je tvůj Bezdrátový LAN adaptér nakonfigurován pro ruční IP Nastavení\n"
+" - pak je tvůj Bezdrátový LAN adaptér nakonfigurován pro ruční IP nastavení\n"
 "- ověř, zda jsi zadal správnou IP informaci v dialogu Nastavení Adaptéru.\n"
 "Pokud dostaneš \"povolen\" zprávu:\n"
-"-ověř, že máš nakonfigurovány a pracující DHCP server v síti."
+"- ověř, že máš nakonfigurovány a pracující DHCP server v síti."
 
 msgid "Wait a moment..."
 msgstr "Počkej chvíli..."
@@ -12008,7 +12006,7 @@ msgstr "Je mi líto, Chybí Script Inadynu"
 
 msgid "Sorry no events found matching to the search criteria."
 msgstr ""
-"Je mi líto nalezeny žádné události, odpovídající podmínkám vyhledávání."
+"Je mi líto nenalezeny žádné události, odpovídající podmínkám vyhledávání."
 
 msgid "Clear History"
 msgstr "Vymaž Historii"
@@ -12038,7 +12036,7 @@ msgid "Free: "
 msgstr "Volné: "
 
 msgid "Total in use: "
-msgstr "Celově v použití: "
+msgstr "Celkově v použití: "
 
 msgid "FLASH: "
 msgstr "FLASH: "
@@ -12113,10 +12111,10 @@ msgid "Swap File creation Failed. Check for Available space."
 msgstr "Vytvoření Swap souboru se nezdařilo. Zkontroluj Volné místo."
 
 msgid "Swap file Automatic Startup Disabled"
-msgstr "Automatické Spuštění Swap souboru Zakázáno"
+msgstr "Automatické spuštění Swap souboru Zakázáno"
 
 msgid "Swap file Automatic Startup Enabled"
-msgstr "Automatické Spuštění Swap souboru Povoleno"
+msgstr "Automatické spuštění Swap souboru Povoleno"
 
 msgid "You have to create a Swap File before to activate the autostart."
 msgstr "Než aktivuješ automatické spuštění, musíš vytvořit Swap soubor."
@@ -12200,7 +12198,7 @@ msgid ""
 msgstr ""
 "Omlouvám se, tvoje Paralelní Vesmíry jsou starší než Black Hole svět.\n"
 "Musíš znovu inicializovat systém, naformátovat USB zařízení nebo generovat "
-"Bing Bang.\n"
+"Big Bang.\n"
 
 msgid ""
 "The Big Bang will collapse all of the Parallel Universes into the original "
@@ -12210,11 +12208,11 @@ msgid ""
 "Warning, all of the data stored in your Parallel Universes will be lost.\n"
 "Are you sure you want to start the Bing Bang?"
 msgstr ""
-"Big Bang zhroutí všechny Paralelní Vesmíry do původní Black Hole matice.\n"
+"Big Bang zhroutí všechny Paralelní Vesmíry do původní Black Hole matrice.\n"
 "To znamená, že všechny tvoje Paralelní Vesmíry budou zničeny a vráceny zpět "
 "do časoprostoru Black Hole.\n"
-"Pozor, všechna data uložená v  Paralelních Vesmírů budou ztracena.\n"
-"Jsi si jist, že chceš spustit Bing Bang?"
+"Pozor, všechna data uložená v Paralelních Vesmírech budou ztracena.\n"
+"Jsi si jist, že chceš spustit Big Bang?"
 
 msgid "Jump to..."
 msgstr "Přeskoč do..."
@@ -12229,7 +12227,7 @@ msgid ""
 "its own phisycal space.\n"
 msgstr ""
 "Black Hole detaily:\n"
-"Black Hole je původní matice všech Paralelních Vesmírů a je umśtěna ve "
+"Black Hole je původní matrice všech Paralelních Vesmírů a je umśtěna ve "
 "vlastním fyzickém prostoru.\n"
 
 #, python-format
@@ -12290,7 +12288,7 @@ msgid ""
 "back into Black Hole timespace.\n"
 msgstr ""
 "Big Bang zhroutí všechny Paralelní Vesmíry do původního matrice Black Hole.\n"
-"To znamená, že všechny tvoje Paralelních Vesmíry budou zničeny a vráceny "
+"To znamená, že všechny tvoje Paralelní Vesmíry budou zničeny a vráceny "
 "zpátky do časoprostoru Black Hole.\n"
 
 msgid ""
@@ -12305,7 +12303,7 @@ msgid ""
 "Are you sure you want to start the Bing Bang?"
 msgstr ""
 "Pozor, všechna data uložená v Paralelních Vesmírech budou ztracena.\n"
-"Jsi si jist, že chceš spustit Bing Bang?"
+"Jsi si jist, že chceš spustit Big Bang?"
 
 #, python-format
 msgid "Setup %s Universe"
@@ -12321,7 +12319,7 @@ msgid "Force reboot in Black Hole"
 msgstr "Vynuť reboot v Black Hole"
 
 msgid "Please Wait, the Big Bang is in progress"
-msgstr "Prosím Čekej, běží Big Bang"
+msgstr "Prosím čekej, běží Big Bang"
 
 msgid ""
 "Your Universes have been re-inizialized. You can now start to rebuild your "
@@ -12396,7 +12394,7 @@ msgid "Disable Light Infobar on Zap"
 msgstr "Zakaž Lehký Infobar při Přepnutí"
 
 msgid "Enable Panic button 0 (zap to 1 & clear zap history)"
-msgstr "Povol tlačítko Paniky 0 (1 a vymaž historii)"
+msgstr "Povol tlačítko Paniky 0 (přepni na 1 a vymaž historii)"
 
 msgid "Hide zap errors"
 msgstr "Skryj chyby přepínání"
@@ -12472,7 +12470,7 @@ msgstr ""
 
 msgid "This wizard will help you to format Usb mass storages for Linux.\n"
 msgstr ""
-"Tento průvodce vám pomůže při formátování masového úložiště USB pro Linux.\n"
+"Tento průvodce ti pomůže při formátování masového úložiště USB pro Linux.\n"
 
 msgid ""
 "Please be sure that your usb drive is NOT CONNECTED to your Vu+ box before "
@@ -12527,7 +12525,7 @@ msgid ""
 "Sorry, no new usb storage detected.\n"
 "Be sure to follow wizard instructions."
 msgstr ""
-"Je mi líto, nedetekován žádné nové usb úložiště.\n"
+"Je mi líto, nedetekováno žádné nové usb úložiště.\n"
 "Dbej na dodržování pokynů průvodce."
 
 msgid "Select number of partitions:"
@@ -12676,7 +12674,7 @@ msgid ""
 "Are you sure you want to Remove Server:\n"
 " "
 msgstr ""
-"Jsi si jist, že chceš Odstránit Server:\n"
+"Jsi si jist, že chceš odstranit Server:\n"
 " "
 
 msgid "?"
@@ -12926,7 +12924,7 @@ msgid ""
 "Are you sure you want to Remove Package:\n"
 " "
 msgstr ""
-"Jsi si jist, že chceš Odstránit Balíček:\n"
+"Jsi si jist, že chceš odstranit Balíček:\n"
 " "
 
 msgid "Uninstall Confirmation"
@@ -13000,7 +12998,7 @@ msgid "Package %s upgraded."
 msgstr "Balíček %s upgradován."
 
 msgid "New Settings Package Installation"
-msgstr "Instalace Balíčku Nových Settingů"
+msgstr "Instalace balíčku Nových Settingů"
 
 #, python-format
 msgid ""
@@ -13083,7 +13081,7 @@ msgid "Startup Module:"
 msgstr "Startovací Modul:"
 
 msgid "Current Status:"
-msgstr "Aktuální Stav:"
+msgstr "Aktuální stav:"
 
 msgid "Set Active"
 msgstr "Aktivuj"
@@ -13095,7 +13093,7 @@ msgid "OpenVpn disabled."
 msgstr "OpenVpn Zakázán."
 
 msgid "You have to Activate OpenVpn before to start"
-msgstr "Před spuštěním musíte Aktivovat OpenVPN"
+msgstr "Před spuštěním musíš Aktivovat OpenVPN"
 
 msgid "Active/Autostart enabled"
 msgstr "Aktivní/Autostart povolen"
@@ -13117,7 +13115,7 @@ msgid "Telnet service Enabled."
 msgstr "Služba Telnet povolena."
 
 msgid "Telnet service Disabled."
-msgstr "Služba Telnet Zakázána."
+msgstr "Služba Telnet zakázána."
 
 msgid "Ftpd service type: Vsftpd server (Very Secure FTP Daemon)"
 msgstr "Typ služby Ftpd: Vsftpd server (Velmi Bezpečný FTP Démon)"
@@ -13126,7 +13124,7 @@ msgid "Ftp service Enabled."
 msgstr "Služba Ftp povolena."
 
 msgid "Ftp service Disabled."
-msgstr "Služba Ftp Zakázána."
+msgstr "Služba Ftp zakázána."
 
 msgid "Nfs Server Autostart: "
 msgstr "Nfs Server Autostart: "
@@ -13172,7 +13170,7 @@ msgid ""
 "Sorry you cannot run two UpnP Servers togheter. Please disable minidlna "
 "before to run Mediatomb."
 msgstr ""
-"Je mi líto, nemůžeš mít spouštěny dva servery UPnP najednou. Vypni prosím "
+"Je mi líto, nemůžeš mít spuštěny dva servery UPnP najednou. Vypni prosím "
 "minidlna před spuštěním Mediatomb."
 
 msgid "Mediatomb Server Enabled."
@@ -13192,7 +13190,7 @@ msgid ""
 "Minidlna home site: http://sourceforge.net/projects/minidlna/"
 msgstr ""
 "Minidlna: Black Hole verze UPnP media serveru.\n"
-"Minidln je plně konfigurovaný pro Vu+ a je připraven k práci. Stačí zapnout "
+"Minidlna je plně konfigurovaný pro Vu+ a je připraven k práci. Stačí zapnout "
 "a hrát si.\n"
 "Minidlna obsahuje malé web rozhraní.\n"
 "\n"
@@ -13207,7 +13205,7 @@ msgid ""
 "Sorry you cannot run two UpnP Servers togheter. Please disable Mediatomb "
 "before to run minidlna."
 msgstr ""
-"Je mi líto, nemůžeš mít spouštěny dva servery UPnP najednou. Vypni prosím "
+"Je mi líto, nemůžeš mít spuštěny dva servery UPnP najednou. Vypni prosím "
 "Mediatomb před spuštěním minidlna."
 
 msgid "Minidlna Server Enabled."
@@ -13261,7 +13259,7 @@ msgid ""
 "list of this box. If you change your ip or your channel list is updated, you "
 "will need to rebuild the server database."
 msgstr ""
-"Poznámka: sever je postaven na základě tvojí aktuální IP a aktuálního "
+"POZNÁMKA: sever je postaven na základě tvojí aktuální IP a aktuálního "
 "seznamu kanálů tohoto boxu. Pokud změníš IP adresu, nebo seznam kanálů je "
 "aktualizován, budeš muset znovu sestavit databázi serveru."
 
@@ -13321,11 +13319,11 @@ msgid ""
 "you delete the Bouquets directory that are not really needed BEFORE you "
 "start Mediatomb. This will save alot of memory and resources."
 msgstr ""
-"POZNÁMKA o UPnP: Vzhledem k tomu, UPnP vyžaduje hodně paměti, měl by jsi ho "
-"používat pouze pokud budeš potřebovat pro přístup k STB PS3 nebo jiné "
+"POZNÁMKA o UPnP: Vzhledem k tomu, že UPnP vyžaduje hodně paměti, měl by jsi "
+"ho používat pouze pokud budeš potřebovat pro přístup k STB PS3 nebo jiné "
 "zařízení, které nemůže být namontováno přes Lan. Také po vytvoření serveru "
 "PŘED spuštěním Mediatomb důrazně doporučujeme odstranit adresáře Boquetů, "
-"který ve skutečnosti nejsou potřeba . To ti ušetří spoustu paměti a zdrojů."
+"který ve skutečnosti nejsou potřeba. To ti ušetří spoustu paměti a zdrojů."
 
 msgid "Build Complete."
 msgstr "Build Kompletní."
@@ -13376,7 +13374,7 @@ msgid "Hard Disk Setup"
 msgstr "Nastavení Pevného Disku"
 
 msgid "New Settings Activated."
-msgstr "Nové Nastavení Aktivována"
+msgstr "Nová Nastavení Aktivována"
 
 msgid "xx CAMs Installed"
 msgstr "xx CAMů Nainstalováno"
