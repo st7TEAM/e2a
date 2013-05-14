@@ -177,7 +177,7 @@ self["text"].setText(self.Text)
 currStep = self.numSteps                                
 self.wizard[currStep]["nextstep"] = None
 self.markDone()
-self.bH_close
+self.bH_close()
                 </code> 
         </step>
         <step id="checkWlanstatusend">
