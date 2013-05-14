@@ -1350,9 +1350,10 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		<widget name="key_green" position="550,530" zPosition="1" size="140,40" font="Regular;20" halign="center" valign="center" backgroundColor="#1f771f" transparent="1"/>
 	</screen>"""
 
-	def __init__(self, session):
+	def __init__(self, session, firstrun = False):
 		Screen.__init__(self, session)
 		
+		self.firstrun = firstrun
 		self.list = []
 		ConfigListScreen.__init__(self, self.list)
 		self["lab1"] = Label(_("Retrieving data ..."))
@@ -1367,36 +1368,37 @@ class BhSpeedUp(Screen, ConfigListScreen):
 
 		})
 		self.pluglist = [
-		["Djmount UPnP Client", "djmount"],
-		["MiniDlna UPnP Server", "minidlna"],
-		["Mediatomb UPnP Server", "mediatomb"],
 		["MeoBoot", "meoboot"],
 		["BhWeather", "bhweather"],
 		["BhFullBackup", "bhfullbackup"],
 		["BhPersonalBackup", "bhpersonalbackup"],
 		["BhEpgBackup", "bhepgbackup"],
-		["3GModemManager", "enigma2-plugin-systemplugins-3gmodemmanager"],
 		["AutoResolution", "enigma2-plugin-systemplugins-autoresolution"],
 		["CommonInterfaceAssignment", "enigma2-plugin-systemplugins-commoninterfaceassignment"],
+		["AddStreamUrl", "enigma2-plugin-extensions-addstreamurl"],
+		["PicturePlayer", "enigma2-plugin-extensions-pictureplayer"],
+		["RemoteChannelStreamConverter", "enigma2-plugin-extensions-remotestreamconvert"],
+		["StreamTV", "enigma2-plugin-extensions-streamtv"],
+		["MyTube", "enigma2-plugin-extensions-mytube"],
+		["AutoShutDown", "enigma2-plugin-systemplugins-autoshutdown"],
+		["VuplusEvent", "enigma2-plugin-extensions-vuplusevent"],
+		["3GModemManager", "enigma2-plugin-systemplugins-3gmodemmanager"],
 		["RemoteControlCode", "enigma2-plugin-systemplugins-remotecontrolcode"],
 		["UI3DSetup", "enigma2-plugin-systemplugins-ui3dsetup"],
 		["UIPositionSetup", "enigma2-plugin-systemplugins-uipositionsetup"],
 		["WirelessAccessPoint", "enigma2-plugin-systemplugins-wirelessaccesspoint"],
 		["ZappingModeSelection", "enigma2-plugin-systemplugins-zappingmodeselection"],
-		["AddStreamUrl", "enigma2-plugin-extensions-addstreamurl"],
 		["DVDPlayer", "enigma2-plugin-extensions-dvdplayer"],
-		["PicturePlayer", "enigma2-plugin-extensions-pictureplayer"],
-		["RemoteChannelStreamConverter", "enigma2-plugin-extensions-remotestreamconvert"],
-		["StreamTV", "enigma2-plugin-extensions-streamtv"],
-		["VuplusEvent", "enigma2-plugin-extensions-vuplusevent"],
-		["MyTube", "enigma2-plugin-extensions-mytube"],
-		["AutoShutDown", "enigma2-plugin-systemplugins-autoshutdown"],
-		["HbbTV", "enigma2-plugin-extensions-hbbtv"]
+		["Djmount UPnP Client", "djmount"],
+		["MiniDlna UPnP Server", "minidlna"],
+		["Mediatomb UPnP Server", "mediatomb"]
 		]
 		
 		machine = nab_Detect_Machine()
-		if machine != "vusolo" and machine != "bm750":
+		if machine == "vusolo2":
 			self.pluglist.append(["Web Manual (5.2 Mega)", "vuplus-manual"])
+		if machine != "vusolo":
+			self.pluglist.append(["HbbTV", "enigma2-plugin-extensions-hbbtv"])
 		
 		self.activityTimer = eTimer()
 		self.activityTimer.timeout.get().append(self.updateFeed2)
@@ -1480,8 +1482,11 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		
 		
 	def allDone(self):
-		mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Enigma2 will be now restarted for the changes to take effect.\nPress ok to continue"), MessageBox.TYPE_INFO)
-		mybox.setTitle(_("Info"))
+		if self.firstrun == True:
+			self.close()
+		else:
+			mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Enigma2 will be now restarted for the changes to take effect.\nPress ok to continue"), MessageBox.TYPE_INFO)
+			mybox.setTitle(_("Info"))
 	
 	def hrestEn(self, answer):
 		self.session.open(TryQuitMainloop, 3)
