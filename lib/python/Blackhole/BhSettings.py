@@ -1380,6 +1380,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		["RemoteChannelStreamConverter", "enigma2-plugin-extensions-remotestreamconvert"],
 		["StreamTV", "enigma2-plugin-extensions-streamtv"],
 		["AutoShutDown", "enigma2-plugin-systemplugins-autoshutdown"],
+		["ZappingModeSelection", "enigma2-plugin-systemplugins-zappingmodeselection"],
 		["RemoteControlCode", "enigma2-plugin-systemplugins-remotecontrolcode"],
 		["MyTube", "enigma2-plugin-extensions-mytube"],
 		["VuplusEvent", "enigma2-plugin-extensions-vuplusevent"],
@@ -1387,11 +1388,10 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		["UI3DSetup", "enigma2-plugin-systemplugins-ui3dsetup"],
 		["UIPositionSetup", "enigma2-plugin-systemplugins-uipositionsetup"],
 		["WirelessAccessPoint", "enigma2-plugin-systemplugins-wirelessaccesspoint"],
-		["ZappingModeSelection", "enigma2-plugin-systemplugins-zappingmodeselection"],
 		["DVDPlayer", "enigma2-plugin-extensions-dvdplayer"],
 		["Djmount UPnP Client", "djmount"],
 		["MiniDlna UPnP Server", "minidlna"],
-		["Mediatomb UPnP Server", "mediatomb"]
+		["Mediatomb (alternative) UPnP Server", "mediatomb"]
 		]
 		
 		machine = nab_Detect_Machine()
