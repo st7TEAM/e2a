@@ -87,7 +87,7 @@ self.selectKey("DOWN")
                         <listentry caption="Exit network wizard" step="end" />
                 </list>
         </step>
-	<step id="asknetworktype" nextstep="end">
+	<step id="asknetworktype" nextstep="checkWlanstatusend">
 		<text value="Wireless Lan Setup.\nPress OK to start wireless configuration." />
 		<displaytext value="Wireless network connection setup" />
 		<code>

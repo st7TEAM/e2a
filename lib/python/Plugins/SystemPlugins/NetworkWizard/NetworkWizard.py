@@ -253,8 +253,23 @@ class NetworkWizard(WizardLanguage, Rc):
 		self.session.openWithCallback(self.end_wireless_Plug, WlanSelection)
 	
 	def end_wireless_Plug(self):
-		self.currStep = self.getStepWithID("end")
+		self.InterfaceState = self.internet_on()
+		if self.InterfaceState == True:
+			self.currStep = self.getStepWithID("checkWlanstatusend")
+			self.Text = "Your box is now ready to use.\n\nYour internet connection is working now.\n\nPlease press OK to continue."
+		else:
+			self.currStep = self.getStepWithID("end")
 		self.afterAsyncCode()
+
+	def internet_on(self):
+		from urllib2 import urlopen, URLError
+		try:
+			response=urlopen('http://209.236.115.82',timeout=1)
+			return True
+		except URLError as err: 
+			pass
+		return False
+
 
 	def bH_close(self):
 		from Blackhole.BhSettings import BhSpeedUp
