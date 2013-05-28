@@ -68,6 +68,14 @@
 			<item level="1" text="Audio language selection 4">config.autolanguage.audio_autoselect4</item>
 			<item level="1" text="Prefer AC3">config.autolanguage.audio_defaultac3</item>
 			<item level="1" text="Prefer audio stream stored by service">config.autolanguage.audio_usecache</item>
+			<item level="1" text="Subtitle language selection 1" description="Configure the first subtitle language (highest priority).">config.autolanguage.subtitle_autoselect1</item>
+			<item level="1" text="Subtitle language selection 2" description="Configure the second subtitle language.">config.autolanguage.subtitle_autoselect2</item>
+			<item level="1" text="Subtitle language selection 3" description="Configure the third subtitle language.">config.autolanguage.subtitle_autoselect3</item>
+			<item level="1" text="Subtitle language selection 4" description="Configure the fourth subtitle language.">config.autolanguage.subtitle_autoselect4</item>
+			<item level="1" text="Allow hearing impaired subtitles">config.autolanguage.subtitle_hearingimpaired</item>
+			<item level="1" text="Prefer hearing impaired subtitles">config.autolanguage.subtitle_defaultimpaired</item>
+			<item level="1" text="Prefer DVB-grafical subtitles">config.autolanguage.subtitle_defaultdvb</item>
+			<item level="1" text="Prefer subtitle stored by service">config.autolanguage.subtitle_usecache</item>
 		</setup>
 		<setup key="harddisk" title="Harddisk setup" >
 			<item level="0" text="Harddisk standby after">config.usage.hdd_standby</item>
