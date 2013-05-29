@@ -172,7 +172,7 @@ def InitUsageConfig():
 		("tur Audio_TUR", _("Turkish")),
 		("und", _("Undetermined")),
 		]
-	subtitle_language_choices_language_choices=[	
+	subtitle_language_choices=[	
 		("---", _("None")),
 		("orj dos ory org esl qaa und mis mul ORY ORJ Audio_ORJ", _("Original")),
 		("ara", _("Arabic")),
