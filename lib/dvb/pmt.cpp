@@ -506,32 +506,20 @@ int eDVBServicePMTHandler::getProgramInfo(program &program)
 	audioStream *prev_audio = 0;
 
        int autosub_txt_normal = -1;
-       int autosub_txt_hearing = -1;
-       int autosub_dvb_normal = -1;
-       int autosub_dvb_hearing = -1;
-       int autosub_level =4;
-       
-       std::vector<std::string> autosub_languages;
-       if (!ePythonConfigQuery::getConfigValue("config.autolanguage.subtitle_autoselect1", configvalue) && configvalue != "None")
-       {
-               std::transform(configvalue.begin(), configvalue.end(), configvalue.begin(), tolower);
-               autosub_languages.push_back(configvalue);
-       }
-       if (!ePythonConfigQuery::getConfigValue("config.autolanguage.subtitle_autoselect2", configvalue) && configvalue != "None")
-       {
-               std::transform(configvalue.begin(), configvalue.end(), configvalue.begin(), tolower);
-               autosub_languages.push_back(configvalue);
-       }
-       if (!ePythonConfigQuery::getConfigValue("config.autolanguage.subtitle_autoselect3", configvalue) && configvalue != "None")
-       {
-               std::transform(configvalue.begin(), configvalue.end(), configvalue.begin(), tolower);
-               autosub_languages.push_back(configvalue);
-       }
-       if (!ePythonConfigQuery::getConfigValue("config.autolanguage.subtitle_autoselect4", configvalue) && configvalue != "None")
-       {
-               std::transform(configvalue.begin(), configvalue.end(), configvalue.begin(), tolower);
-               autosub_languages.push_back(configvalue);
-       }
+		int autosub_txt_hearing = -1;
+		int autosub_dvb_normal = -1;
+		int autosub_dvb_hearing = -1;
+		int autosub_level =4;
+
+		std::vector<std::string> autosub_languages;
+		if (!ePythonConfigQuery::getConfigValue("config.autolanguage.subtitle_autoselect1", configvalue) && configvalue != "None")
+			autosub_languages.push_back(configvalue);
+		if (!ePythonConfigQuery::getConfigValue("config.autolanguage.subtitle_autoselect2", configvalue) && configvalue != "None")
+			autosub_languages.push_back(configvalue);
+		if (!ePythonConfigQuery::getConfigValue("config.autolanguage.subtitle_autoselect3", configvalue) && configvalue != "None")
+			autosub_languages.push_back(configvalue);
+		if (!ePythonConfigQuery::getConfigValue("config.autolanguage.subtitle_autoselect4", configvalue) && configvalue != "None")
+			autosub_languages.push_back(configvalue);
 
        program.defaultSubtitleStream = -1;
 
@@ -713,27 +701,26 @@ int eDVBServicePMTHandler::getProgramInfo(program &program)
 										s.composition_page_id = (*it)->getCompositionPageId();
 										s.ancillary_page_id = (*it)->getAncillaryPageId();
 										std::string language = (*it)->getIso639LanguageCode();
-										s.language_code = language;
-//eDebug								("add dvb subtitle %s PID %04x, type %d, composition page %d, ancillary_page %d", s.language_code.c_str(), s.pid, s.subtitling_type, s.composition_page_id, s.ancillary_page_id);
+									s.language_code = language;
+//								eDebug("add dvb subtitle %s PID %04x, type %d, composition page %d, ancillary_page %d", s.language_code.c_str(), s.pid, s.subtitling_type, s.composition_page_id, s.ancillary_page_id);
 
-										if (!language.empty())
+									if (!language.empty())
+									{
+										int x = 1;
+										for (std::vector<std::string>::iterator it2 = autosub_languages.begin();x <= autosub_level && it2 != autosub_languages.end();x++,it2++)
 										{
-											std::transform(language.begin(), language.end(), language.begin(), tolower);
-											int x = 1;
-											for (std::vector<std::string>::iterator it2 = autosub_languages.begin();x <= autosub_level && it2 != autosub_languages.end();x++,it2++)
+											if ((*it2).find(language) != std::string::npos)
 											{
-												if ( (*it2).find(language) != -1 )
-												{
-													autosub_level = x;
-													if (s.subtitling_type >= 0x20)
-														autosub_dvb_hearing = program.subtitleStreams.size();
-													else
-														autosub_dvb_normal = program.subtitleStreams.size();
-													break;
-												}       
+												autosub_level = x;
+												if (s.subtitling_type >= 0x20)
+													autosub_dvb_hearing = program.subtitleStreams.size();
+												else
+													autosub_dvb_normal = program.subtitleStreams.size();
+												break;
 											}
-										}       
-										issubtitle = 1;
+										}
+									}
+									issubtitle = 1;
 										program.subtitleStreams.push_back(s);
 									}
 									break;
@@ -755,29 +742,28 @@ int eDVBServicePMTHandler::getProgramInfo(program &program)
 											case 0x02: // Teletext subtitle page
 											case 0x05: // Teletext subtitle page for hearing impaired pepople
 												language = (*it)->getIso639LanguageCode();
-												s.language_code = language;
-												s.teletext_page_number = (*it)->getTeletextPageNumber();
-												s.teletext_magazine_number = (*it)->getTeletextMagazineNumber();
-//												eDebug("add teletext subtitle %s PID %04x, page number %d, magazine number %d", s.language_code.c_str(), s.pid, s.teletext_page_number, s.teletext_magazine_number);
-												if (!language.empty())
+											s.language_code = language;
+											s.teletext_page_number = (*it)->getTeletextPageNumber();
+											s.teletext_magazine_number = (*it)->getTeletextMagazineNumber();
+//										eDebug("add teletext subtitle %s PID %04x, page number %d, magazine number %d", s.language_code.c_str(), s.pid, s.teletext_page_number, s.teletext_magazine_number);
+											if (!language.empty())
+											{
+												int x = 1;
+												for (std::vector<std::string>::iterator it2 = autosub_languages.begin();x <= autosub_level && it2 != autosub_languages.end();x++,it2++)
 												{
-													std::transform(language.begin(), language.end(), language.begin(), tolower);
-													int x = 1;
-													for (std::vector<std::string>::iterator it2 = autosub_languages.begin();x <= autosub_level && it2 != autosub_languages.end();x++,it2++)
+													if ((*it2).find(language) != std::string::npos)
 													{
-														if ( (*it2).find(language) != -1 )
-														{
-															autosub_level = x;
-															if (s.subtitling_type == 0x05)
-																autosub_txt_hearing = program.subtitleStreams.size();
-															else
-																autosub_txt_normal = program.subtitleStreams.size();
-															break;
-														}       
-													}       
+														autosub_level = x;
+														if (s.subtitling_type == 0x05)
+															autosub_txt_hearing = program.subtitleStreams.size();
+														else
+															autosub_txt_normal = program.subtitleStreams.size();
+														break;
+													}
 												}
-												program.subtitleStreams.push_back(s);
-												issubtitle=1;
+											}
+											program.subtitleStreams.push_back(s);
+											issubtitle=1;
 											default:
 												break;
 											}

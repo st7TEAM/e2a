@@ -2619,6 +2619,32 @@ void eDVBServicePlay::updateDecoder(bool sendSeekableStateChanged)
 
 		m_decoder->setAudioChannel(achannel);
 
+		if (mustPlay && m_decode_demux && m_is_primary)
+		{
+			m_teletext_parser = new eDVBTeletextParser(m_decode_demux);
+			m_teletext_parser->connectNewStream(slot(*this, &eDVBServicePlay::newSubtitleStream), m_new_subtitle_stream_connection);
+			m_teletext_parser->connectNewPage(slot(*this, &eDVBServicePlay::newSubtitlePage), m_new_subtitle_page_connection);
+			m_subtitle_parser = new eDVBSubtitleParser(m_decode_demux);
+			m_subtitle_parser->connectNewPage(slot(*this, &eDVBServicePlay::newDVBSubtitlePage), m_new_dvb_subtitle_page_connection);
+			if (m_timeshift_changed)
+			{
+				ePyObject subs = getCachedSubtitle();
+				if (subs != Py_None)
+				{
+					int type = PyInt_AsLong(PyTuple_GET_ITEM(subs, 0)),
+							pid = PyInt_AsLong(PyTuple_GET_ITEM(subs, 1)),
+							comp_page = PyInt_AsLong(PyTuple_GET_ITEM(subs, 2)), // ttx page
+							anc_page = PyInt_AsLong(PyTuple_GET_ITEM(subs, 3)); // ttx magazine
+					if (type == 0) // dvb
+						m_subtitle_parser->start(pid, comp_page, anc_page);
+					else if (type == 1) // ttx
+						m_teletext_parser->setPageAndMagazine(comp_page, anc_page);
+				}
+				Py_DECREF(subs);
+			}
+			m_teletext_parser->start(program.textPid);
+		}
+
 		/* don't worry about non-existing services, nor pvr services */
 		if (m_dvb_service)
 		{
@@ -2904,11 +2930,13 @@ PyObject *eDVBServicePlay::getCachedSubtitle()
 			std::string configvalue;
 			if (!ePythonConfigQuery::getConfigValue("config.autolanguage.subtitle_usecache", configvalue))
 				usecache = configvalue == "True";
+
 			int stream=program.defaultSubtitleStream;
+			int tmp = m_dvb_service->getCacheEntry(eDVBService::cSUBTITLE);
+
 			if (usecache || stream == -1)
 			{
-				int tmp = m_dvb_service->getCacheEntry(eDVBService::cSUBTITLE);
-				if (tmp != -1)
+				if (tmp != -1 && tmp != 0)
 				{
 					unsigned int data = (unsigned int)tmp;
 					int pid = (data&0xFFFF0000)>>16;
@@ -2923,18 +2951,18 @@ PyObject *eDVBServicePlay::getCachedSubtitle()
 					return tuple;
 				}
 			}
-			if (stream != -1)
+			if (stream != -1 && (tmp != 0 || !usecache))
 			{
 				if (program.subtitleStreams[stream].subtitling_type == 1 )
 				{
 					ePyObject tuple = PyTuple_New(4);
 					PyTuple_SET_ITEM(tuple, 0, PyInt_FromLong(1)); // type teletext
-					PyTuple_SET_ITEM(tuple, 1, PyInt_FromLong(program.subtitleStreams[stream].pid)); 
+					PyTuple_SET_ITEM(tuple, 1, PyInt_FromLong(program.subtitleStreams[stream].pid));
 					PyTuple_SET_ITEM(tuple, 2, PyInt_FromLong(program.subtitleStreams[stream].teletext_page_number & 0xff));
 					PyTuple_SET_ITEM(tuple, 3, PyInt_FromLong(program.subtitleStreams[stream].teletext_magazine_number & 0x07));
 					return tuple;
 				}
-				else 
+				else
 				{
 					ePyObject tuple = PyTuple_New(4);
 					PyTuple_SET_ITEM(tuple, 0, PyInt_FromLong(0)); // type dvb

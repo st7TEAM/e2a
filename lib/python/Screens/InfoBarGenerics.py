@@ -2362,9 +2362,11 @@ class InfoBarSubtitleSupport(object):
 
 	def __updatedInfo(self):
 		subtitle = self.getCurrentServiceSubtitle()
-		if self.__subtitles_enabled:
-			self.setSelectedSubtitle(False)
 		self.setSelectedSubtitle(subtitle and subtitle.getCachedSubtitle())
+		if self.__subtitles_enabled:
+			subtitle.disableSubtitles(self.subtitle_window.instance)
+			self.subtitle_window.hide()
+			self.__subtitles_enabled = False
 		if self.__selected_subtitle:
 			self.setSubtitlesEnable(True)
 
