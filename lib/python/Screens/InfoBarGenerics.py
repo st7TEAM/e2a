@@ -2340,6 +2340,7 @@ class InfoBarTeletextPlugin:
 	def startTeletext(self):
 		self.teletext_plugin(session=self.session, service=self.session.nav.getCurrentService())
 
+
 class InfoBarSubtitleSupport(object):
 	def __init__(self):
 		object.__init__(self)
