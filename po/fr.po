@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-05-01 14:59+0100\n"
+"PO-Revision-Date: 2013-05-25 13:55+0100\n"
 "Last-Translator: niglou\n"
 "Language-Team: french\n"
 "MIME-Version: 1.0\n"
@@ -182,6 +182,13 @@ msgstr "  Mettre en veille"
 
 msgid " Channels list download in progress..."
 msgstr " Téléchargement liste de chaînes en cours..."
+
+msgid ""
+" Fail-%d\n"
+"Press 'EXIT' button!"
+msgstr ""
+" Echec-%d\n"
+"Presser bouton 'EXIT'!"
 
 msgid " Free: "
 msgstr " Libre: "
@@ -460,6 +467,15 @@ msgstr "3. Génèrer un profil WvDial"
 
 msgid "30 minutes"
 msgstr "30 minutes"
+
+msgid "3G Modem Manager"
+msgstr "Gestionnaire Modem 3G"
+
+msgid "3G Modem Manager Config"
+msgstr "Configuration Gestionnaire Modem 3G"
+
+msgid "3G Modem Manager Config Edit"
+msgstr "Editeur Configuration Modem 3G"
 
 msgid "3d mode"
 msgstr "Mode 3d"
@@ -763,6 +779,12 @@ msgstr "Actif"
 msgid "Active CAM"
 msgstr "CAM "
 
+msgid "Active Clients"
+msgstr "Clients Actifs"
+
+msgid "Active Kernel Modules"
+msgstr "Modules Kernel Actifs"
+
 msgid "Active Modules"
 msgstr "Modules actifs"
 
@@ -787,6 +809,9 @@ msgstr "Ajouter"
 
 msgid "Add Bookmark"
 msgstr "Ajouter marque page"
+
+msgid "Add External Epg Server"
+msgstr "Ajouter Serveur EPG Externe"
 
 msgid "Add WLAN configuration?"
 msgstr "Ajouter configuration WLAN"
@@ -958,6 +983,13 @@ msgstr ""
 
 msgid "After event"
 msgstr "Après l'émission"
+
+msgid ""
+"After the start wizard is completed, you need to protect single services. "
+"Refer to your STB's manual on how to do that."
+msgstr ""
+"Quand l'assistant sera terminé, vous devrez protéger chaque service. Voir la "
+"notice du Vu+ pour comment procéder."
 
 msgid ""
 "After the start wizard is completed, you need to protect single services. "
@@ -1318,6 +1350,9 @@ msgstr "ProgAuto supprimée"
 msgid "Autocam Manager"
 msgstr "CAM automatique"
 
+msgid "Autocam Setup"
+msgstr "Paramétrage CamAuto"
+
 msgid "Automatic"
 msgstr "Automatique"
 
@@ -1329,6 +1364,9 @@ msgstr "Sauvegarde auto Epg: "
 
 msgid "Automatic Scan"
 msgstr "Analyse automatique"
+
+msgid "Automatic scan"
+msgstr "Scan Automatique"
 
 msgid "Automatic start time"
 msgstr "Heure démarrage auto"
@@ -1991,6 +2029,12 @@ msgstr "Gestionnaire CamAuto"
 msgid "Black Hole Autocam Setup"
 msgstr "Paramétrage CamAuto"
 
+msgid "Black Hole Backup in progress..."
+msgstr "Sauvegarde en cours..."
+
+msgid "Black Hole Blue Panel"
+msgstr "Bouton Bleu Black Hole"
+
 msgid "Black Hole Cron Manager"
 msgstr "Gérer Cron"
 
@@ -2045,6 +2089,9 @@ msgstr "Sauvegarde complète"
 msgid "Black Hole Full Backup on: "
 msgstr "Sauvegarde complète sur: "
 
+msgid "Black Hole Green Panel"
+msgstr "Bouton Vert Black Hole"
+
 msgid "Black Hole Green Panel Setup"
 msgstr "Param. Bouton Vert Black Hole"
 
@@ -2069,14 +2116,26 @@ msgstr ""
 msgid "Black Hole Message"
 msgstr "Message Black Hole"
 
+msgid "Black Hole Nfs Server Panel"
+msgstr "Menu Serveur NFS Black Hole"
+
 msgid "Black Hole OSD Setup"
 msgstr "Paramétrage Affichages"
 
 msgid "Black Hole Osd Settings"
 msgstr "Réglages Affichages"
 
+msgid "Black Hole Parallel Universes Teleportation"
+msgstr "Téléportation dans Univers Black Hole"
+
+msgid "Black Hole Pcsc Panel"
+msgstr "Menu PcSc Black Hole"
+
 msgid "Black Hole Personal Backup"
 msgstr "Sauvegarde personnelle"
+
+msgid "Black Hole Personal Backup Setup"
+msgstr "Paramétrage Sauvegarde Personnelle"
 
 msgid "Black Hole Preview: click ok to exit"
 msgstr "Prévisualisation :  OK pour sortir"
@@ -2091,6 +2150,9 @@ msgid "Black Hole Shutdown"
 msgstr "Menu Arrêt"
 
 msgid "Black Hole Speed Up"
+msgstr "Accélérer Black Hole"
+
+msgid "Black Hole Speed up"
 msgstr "Accélérer Black Hole"
 
 msgid "Black Hole Statistics"
@@ -2137,6 +2199,9 @@ msgstr "Sauvegarde complète"
 
 msgid "BlackHole Personal Backup"
 msgstr "Sauvegarde personnelle"
+
+msgid "Blindscan"
+msgstr "Scan en Aveugle"
 
 msgid "Blindscan is not supported in "
 msgstr "Blindscan non supporté avec "
@@ -2266,8 +2331,28 @@ msgstr "Bande C"
 msgid "CAM Installed"
 msgstr "CAM Installé"
 
+msgid ""
+"CAM1_NOT_INSERTED\n"
+"Press exit!"
+msgstr ""
+"CAM1_NON_INSERREE\n"
+"Presser exit!"
+
+msgid ""
+"CAM2_NOT_INSERTED\n"
+"Press exit!"
+msgstr ""
+"CAM2_NON_INSERREE\n"
+"Presser exit!"
+
 msgid "CAMs Installed"
 msgstr "CAMs Installés"
+
+msgid "CCcam Info"
+msgstr "Info CCcam"
+
+msgid "CCcam Info Setup"
+msgstr "Paramètres Info CCcam"
 
 msgid "CDInfo"
 msgstr "Infos CD"
@@ -2369,6 +2454,12 @@ msgstr "Catalan"
 
 msgid "Category Name"
 msgstr "Nom Catégorie"
+
+msgid "Cccam Entitlements Info"
+msgstr "Info Droits CCcam"
+
+msgid "Cccam Main Info"
+msgstr "Info Principales CCcam"
 
 msgid "Center DVB subtitles"
 msgstr "Centrer sous-titres DVB"
@@ -2804,6 +2895,9 @@ msgstr "Configuration soumission AutoCrashlog"
 msgid "CrashlogAutoSubmit settings..."
 msgstr "Configuration soumission AutoCrashlog..."
 
+msgid "CrashlogReport Setting"
+msgstr "Paramètres Rapport Crashlog"
+
 msgid ""
 "Crashlogs found!\n"
 "Send them to Dream Multimedia?"
@@ -2862,6 +2956,15 @@ msgstr "Heure création: %s"
 msgid "Croatian"
 msgstr "Croate"
 
+msgid "Cron Manager"
+msgstr "Gestionnaire CRON"
+
+msgid "Cron Setup"
+msgstr "Paramétrage CRON"
+
+msgid "CrossEPG"
+msgstr "CrossEPG"
+
 msgid "CrossEPG - Providers start order"
 msgstr "CrossEPG: Ordre départ Opérateurs"
 
@@ -2879,6 +2982,12 @@ msgstr "Forcer Rechargement EPG"
 
 msgid "CrossEPG Menu"
 msgstr "Menu CrossEpg"
+
+msgid "CrossEPG Providers"
+msgstr "Opérateurs CrossEPG"
+
+msgid "CrossEPG Setup"
+msgstr "Paramétrage CrossEPG"
 
 msgid "CrossEPG automatic actions"
 msgstr "Action Automatiques EPG"
@@ -2978,6 +3087,9 @@ msgstr ""
 "'lancer coupe'.\n"
 "puis chercher la fin, presser OK, choisir 'fin coupe'. C'est tout."
 
+msgid "Cutlist editor"
+msgstr "Editeur Cutlist"
+
 msgid "Cutlist editor..."
 msgstr "éditeur monter/couper..."
 
@@ -3013,6 +3125,9 @@ msgstr "Lecteur DVD"
 
 msgid "DVD Titlelist"
 msgstr "Liste titres DVD"
+
+msgid "DVD Tool"
+msgstr "Outils DVD"
 
 msgid "DVD media toolbox"
 msgstr "Boite outils média DVD"
@@ -3174,6 +3289,9 @@ msgstr "Gestion des Périphériques"
 
 msgid "Devices Manager & Mountpoints"
 msgstr "Gérer et Monter Périphériques"
+
+msgid "Devices Mountpoints Setup"
+msgstr "Paramétrage Montage Périphériques"
 
 msgid ""
 "Devices changes need a system restart to take effects.\n"
@@ -3389,6 +3507,9 @@ msgstr "Voulez-vous faire une autre analyse manuelle des services?"
 msgid "Do you want to download the image to %s ?"
 msgstr "Voulez-vous télécharger l'image vers %s?"
 
+msgid "Do you want to enable the parental control feature on your STB?"
+msgstr "Voulez vous activer le contrôle parental sur votre Vu+?"
+
 msgid "Do you want to enable the parental control feature on your dreambox?"
 msgstr "Voulez-vous activer la fonction contrôle parental sur votre décodeur?"
 
@@ -3451,6 +3572,9 @@ msgstr "Voulez-vous voir plus d'entrées?"
 
 msgid "Do you want to set selected url to the Startpage?"
 msgstr "Attribuer l'URL sélectionnée au Marque Page ?"
+
+msgid "Do you want to shut down?"
+msgstr "Voulez vous éteindre?"
 
 msgid ""
 "Do you want to submit your email address and name so that we can contact you "
@@ -3572,6 +3696,9 @@ msgstr "Téléchargement des services distants"
 msgid "Downloading screenshots. Please wait..."
 msgstr "Téléchargement captures écrans. Veuillez patienter..."
 
+msgid "Downloads Manager"
+msgstr "Gestionnaire Téléchargements"
+
 msgid ""
 "Drive where you save data.\n"
 "The drive MUST be mounted in rw. If you can't see your device here probably "
@@ -3606,6 +3733,15 @@ msgstr "Multi-Boot pour Enigma2"
 
 msgid "EPG Selection"
 msgstr "Sélection EPG"
+
+msgid "EPG Selection Multi"
+msgstr "Selection EPG Multiple"
+
+msgid "EPG Settings"
+msgstr "Paramètres EPG"
+
+msgid "EPG Setup"
+msgstr "Paramétrage EPG"
 
 msgid "EPG encoding"
 msgstr "Encodage EPG"
@@ -4028,6 +4164,9 @@ msgstr "SauvegardeEpg: non trouvée"
 msgid "Epg Backup: not found."
 msgstr "SauvegardeEpg: non trouvée"
 
+msgid "Epg Channels Setup"
+msgstr "Paramétrage Chaines EPG"
+
 msgid "Epg Download complete. Press the red button to exit"
 msgstr "Téléchargement Epg terminé. Appuyer sur bouton rouge pour sortir"
 
@@ -4036,6 +4175,9 @@ msgstr "Réglages Epg"
 
 msgid "Epg Search"
 msgstr "Info EPG"
+
+msgid "Epg Search History"
+msgstr "Historique Recherche EPG"
 
 msgid "Epg Settings"
 msgstr "Réglages Epg"
@@ -4158,6 +4300,9 @@ msgstr "Extensions"
 msgid "Extensions management"
 msgstr "Gestionnaire extensions"
 
+msgid "Extra Kernel Modules Setup"
+msgstr "Paramétrage Modules Kernel"
+
 msgid "Extra Settings"
 msgstr "Autres réglages"
 
@@ -4169,6 +4314,9 @@ msgstr "FEC"
 
 msgid "FILE NOT EXIST : /proc/stb/fp/remote_code"
 msgstr "Fichier inexistant: /proc/stb/fp/remote_code"
+
+msgid "FLASH IS BROKEN"
+msgstr "LE FLASH EST CASSE"
 
 msgid "FLASH: "
 msgstr "FLASH: "
@@ -4200,6 +4348,9 @@ msgstr "Port FTP:"
 
 msgid "Factory reset"
 msgstr "Réinitialisation usine"
+
+msgid "Factory reset fail"
+msgstr "Echec Reset Usine"
 
 msgid "Fail to upgrade!! Retry!!"
 msgstr "Echec mise à jour! Ré-essayez!!"
@@ -4277,6 +4428,16 @@ msgstr "Chercher entrées recherche"
 
 msgid "File"
 msgstr "Fichier"
+
+msgid "File Browser"
+msgstr "Explorateur de Fichiers"
+
+msgid ""
+"File not Found!\n"
+"/proc/bus/nim_sockets"
+msgstr ""
+"Fichier introuvable!\n"
+"/proc/bus/nim_sockets"
 
 msgid ""
 "Files extraction in progress...\n"
@@ -4429,8 +4590,29 @@ msgid "FritzCall shows incoming calls to your Fritz!Box on your STB."
 msgstr ""
 "FritzCall montre des appels entrant vers votre Fritz!Box sur votre STB."
 
+msgid "Front LED OK?"
+msgstr "LED Façade OK?"
+
+msgid ""
+"Front LED OK?\n"
+"\n"
+"yes-ok\n"
+"no-exit"
+msgstr ""
+"LED Façade OK?\n"
+"\n"
+"oui-ok\n"
+"non-exit"
+
 msgid "Front Processor"
 msgstr "Processeur frontal"
+
+msgid ""
+"Front Test OK!\n"
+"Press Exit Key"
+msgstr ""
+"Test façade OK!\n"
+"Presser Exit"
 
 msgid "Front USB Slot"
 msgstr "Slot USB frontal"
@@ -4662,6 +4844,9 @@ msgstr "Temp. DD: "
 msgid "HDD: "
 msgstr "Disque dur: "
 
+msgid "HDMI CEC Configuration"
+msgstr "Configuration HDMI CEC"
+
 msgid "HDMI CEC enabled:"
 msgstr "HDMI CEC activé:"
 
@@ -4682,6 +4867,9 @@ msgstr "Port HTTP"
 
 msgid "HTTPS Port"
 msgstr "Port HTTPS"
+
+msgid "Hard Disk Panel"
+msgstr "Menu Disque Dur"
 
 msgid "Hard Disk Settings"
 msgstr "Réglages Disque dur"
@@ -4921,8 +5109,17 @@ msgstr ""
 msgid "Inactive"
 msgstr "Inactif"
 
+msgid "Inadyn Log"
+msgstr "Log Inadyn"
+
+msgid "Inadyn Manager"
+msgstr "Gestionnaire Inadyn"
+
 msgid "Inadyn Settings"
 msgstr "Réglages Inadyn"
+
+msgid "Inadyn Setup"
+msgstr "Paramètres Inadyn"
 
 msgid "Include"
 msgstr "Inclure"
@@ -5192,6 +5389,9 @@ msgstr "Installation de paquet IPK"
 msgid "Ipkg"
 msgstr "Ipkg"
 
+msgid "Ipkg Installer..."
+msgstr "Installer IPK"
+
 msgid "Ireland"
 msgstr "Irlande"
 
@@ -5353,6 +5553,9 @@ msgstr "Adaptateur réseau local"
 msgid "LAN connection"
 msgstr "Connection LAN"
 
+msgid "LED Brightness Setup"
+msgstr "Paramétrage Luminosité LED"
+
 msgid "LNB"
 msgstr "LNB"
 
@@ -5486,6 +5689,9 @@ msgstr "Emplacement pour enregistrements instantanés"
 msgid "Lock:"
 msgstr "Verrou:"
 
+msgid "Locking Fail Error"
+msgstr "Erreur echec verrouillage"
+
 msgid "Log results to harddisk"
 msgstr "Sauver log sur disque dur"
 
@@ -5507,6 +5713,9 @@ msgid ""
 msgstr ""
 "Limite inférieure de période. Rien avant cette heure ne sera trié. Les "
 "décalages ne sont pas pris en considération!"
+
+msgid "M e d i a  P l a y e r"
+msgstr "Lecteur Médias"
 
 msgid "MA"
 msgstr "MA"
@@ -5546,6 +5755,12 @@ msgstr "MSA"
 
 msgid "MUTE"
 msgstr "MUET"
+
+msgid "Mac address fail"
+msgstr "Echec Mac Adresse"
+
+msgid "Main Menu"
+msgstr "Menu Principal"
 
 msgid "Main menu"
 msgstr "Menu principal"
@@ -5601,14 +5816,23 @@ msgstr "Manuel"
 msgid "Manual Fan control"
 msgstr "Contrôle manuel ventilo"
 
+msgid "Manual Install Bh Packages"
+msgstr "Installation Manuelle Paquets BH"
+
 msgid "Manual Install Bh packges"
 msgstr "Installation manuelle de paquets BH"
+
+msgid "Manual Install Ipk Packages"
+msgstr "Installation Manuelle IPK"
 
 msgid "Manual Install Ipk packges"
 msgstr "Installation manuelle de IPK"
 
 msgid "Manual Scan"
 msgstr "Analyse manuelle"
+
+msgid "Manual scan"
+msgstr "Scan Manuel"
 
 msgid "Manual transponder"
 msgstr "Transpondeur manuel"
@@ -5889,6 +6113,9 @@ msgstr "Options montage"
 msgid "Mount type"
 msgstr "Type montage"
 
+msgid "MountEdit"
+msgstr "Editeur Montage"
+
 msgid "MountManager"
 msgstr "Assistant Montage"
 
@@ -6032,6 +6259,18 @@ msgstr "Lecteur MyTube téléchargement vidéo actif"
 msgid "MyTubePlayer settings"
 msgstr "Paramètres Lecteur MyTube"
 
+msgid "MyTubePlayerHelpScreen..."
+msgstr "Aide MyTubePlayer"
+
+msgid "MyTubePlayerMainScreen..."
+msgstr "Ecran principal MyTubePlayer"
+
+msgid "MyTubeSettingsScreen"
+msgstr "Paramètres MyTubePlayer"
+
+msgid "MyTubeTasksScreen"
+msgstr "Tâches MyTubePlayer"
+
 msgid "MyTubeVideoInfoScreen"
 msgstr "Ecran infos vidéo MyTube"
 
@@ -6090,6 +6329,13 @@ msgstr ""
 
 msgid "NOW"
 msgstr "MAINTENANT"
+
+msgid ""
+"NO_GET_APPNAME\n"
+"Press exit!"
+msgstr ""
+"Pas Nom Appareil\n"
+"Presser exit!"
 
 msgid "NTSC"
 msgstr "NTSC"
@@ -6237,6 +6483,9 @@ msgstr "Configuration réseau..."
 
 msgid "Network Mount"
 msgstr "Monter réseau"
+
+msgid "Network Neighbourhood"
+msgstr "Environnement Réseau"
 
 msgid "Network Setup"
 msgstr "Paramètres réseau"
@@ -6495,6 +6744,9 @@ msgstr "Non, mais commuter vers recherche vidéo."
 msgid "No, do nothing."
 msgstr "Non, ne rien faire."
 
+msgid "No, just start my STB"
+msgstr "Non, démarre mon Vu+"
+
 msgid "No, just start my dreambox"
 msgstr "Non, juste démarrer le Vu+"
 
@@ -6607,6 +6859,9 @@ msgstr "OK, retirer quelques extensions"
 msgid "OSD Settings"
 msgstr "Paramètres OSD"
 
+msgid "OSD Setup"
+msgstr "Paramétrage Affichage"
+
 msgid "OSD transparency"
 msgstr "Transparence OSD"
 
@@ -6639,6 +6894,13 @@ msgstr "Sur même service"
 
 msgid "One"
 msgstr "Un"
+
+msgid ""
+"One hdd test error\n"
+"Press 'EXIT' button!"
+msgstr ""
+"Erreur Test D.Dur\n"
+"Presser bouton 'EXIT'!"
 
 msgid "Online Black Hole image update"
 msgstr "Mise à jour image Black Hole"
@@ -6681,6 +6943,12 @@ msgstr "Seulement sur service: %s"
 msgid "Open Context Menu"
 msgstr "Ouvrir menu contextuel"
 
+msgid "Open EPG Settings"
+msgstr "Paramètres Open EPG"
+
+msgid "Open EPG Setup"
+msgstr "Paramétrage Open EPG"
+
 msgid "Open Startpage"
 msgstr "Ouvrir PageDémarrage"
 
@@ -6698,6 +6966,9 @@ msgstr "Menu VPN -  par Black Hole."
 
 msgid "OpenVpn Enabled. Autostart activated."
 msgstr "OpenVpn Activé. Départ auto activé."
+
+msgid "OpenVpn Log"
+msgstr "Log OpenVpn"
 
 msgid "OpenVpn Panel"
 msgstr "Menu VPN"
@@ -6805,6 +7076,9 @@ msgstr "Paquet %s supprimé"
 msgid "Package %s upgraded."
 msgstr "Paquet %s mis à jour"
 
+msgid "Package Details"
+msgstr "Détails des Paquets"
+
 msgid "Package installed."
 msgstr "Paquet installé"
 
@@ -6834,6 +7108,9 @@ msgstr "Pan&Scan"
 
 msgid "Panel Setup"
 msgstr "Configuration"
+
+msgid "Parallel Universe Setup"
+msgstr "Paramétrage Univers Parallèles"
 
 msgid ""
 "Parallel Universes details:\n"
@@ -6986,6 +7263,16 @@ msgstr "Pilote"
 
 msgid "Pin code needed"
 msgstr "Code Pin requis"
+
+msgid ""
+"Ping test fail\n"
+"Press exit"
+msgstr ""
+"Echec Test Ping\n"
+"Presser exit"
+
+msgid "Ping test pass"
+msgstr "Passe Test Ping"
 
 msgid "Play"
 msgstr "Lire"
@@ -7163,6 +7450,13 @@ msgstr ""
 
 msgid "Please do not change any values unless you know what you are doing!"
 msgstr "Veuillez ne changer aucune valeur avant de savoir ce que vous faites!"
+
+msgid ""
+"Please enable this application in BlackHole Speed Up panel before to "
+"continue."
+msgstr ""
+"Activez cette application dans le menu Accélérer Black Hole avant de "
+"continuer."
 
 msgid "Please enter URL here"
 msgstr "Saisir URL ici."
@@ -7466,6 +7760,9 @@ msgstr "Mouvement du positionneur"
 msgid "Positioner setup"
 msgstr "Paramètres positionneur"
 
+msgid "Positioner setup..."
+msgstr "Paramétrage Positionneur"
+
 msgid "Positioner setup... "
 msgstr "Réglage Positionneur"
 
@@ -7527,6 +7824,27 @@ msgstr "Préparer une nouvelle clé USB pour flasher l'image"
 
 msgid "Preparing... Please wait"
 msgstr "Préparation... Veuillez patienter"
+
+msgid "Press 'EXIT' key to finish tune test."
+msgstr "Presser 'EXIT' pour terminer le test tuner."
+
+msgid "Press Front CH +"
+msgstr "Presser CH+ Façade"
+
+msgid "Press Front CH -"
+msgstr "Presser CH- Façade"
+
+msgid "Press Front STANDBY"
+msgstr "Presser STANDBY Façade"
+
+msgid "Press Front VOL +"
+msgstr "Presser VOL+ Façade"
+
+msgid "Press Front VOL -"
+msgstr "Presser VOL - Façade"
+
+msgid "Press Front Wheel"
+msgstr "Presser rotatif façade"
 
 msgid "Press Green/OK to start the scan"
 msgstr "Bouton Vert / OK pour scanner"
@@ -7637,6 +7955,9 @@ msgstr "Priorité"
 msgid "Process"
 msgstr "Processus"
 
+msgid "Process Info"
+msgstr "Info Processus"
+
 msgid "Progress"
 msgstr "Progression"
 
@@ -7726,6 +8047,13 @@ msgstr "Sortie RF"
 msgid "RGB"
 msgstr "RVB"
 
+msgid ""
+"RS232 Test Failed!\n"
+"Press 'EXIT' button!"
+msgstr ""
+"Echec Test RS232!\n"
+"Presser bouton 'EXIT'!"
+
 msgid "RSS viewer"
 msgstr "Visualisateur RSS"
 
@@ -7737,6 +8065,9 @@ msgstr "Seuil RTS (0~2347)"
 
 msgid "Radio"
 msgstr "Radio"
+
+msgid "RadioInfoBar"
+msgstr "Barre Info Radio"
 
 msgid "Ram Disk"
 msgstr "Disque RAM"
@@ -7903,6 +8234,9 @@ msgstr ""
 
 msgid "Remote Control System Code"
 msgstr "Code système télécommande"
+
+msgid "Remote Control System Code Setting"
+msgstr "Paramètres Code Télécommande"
 
 msgid "Remote channel stream converter"
 msgstr "Convertisseur de flux distant"
@@ -8129,6 +8463,9 @@ msgstr "Retour"
 msgid "Return the Love Event"
 msgstr "Retourner le Love Event"
 
+msgid "Return the Love Event (only for genuine box)"
+msgstr "Reourner le 'Love Event'"
+
 msgid "Return to file browser"
 msgstr "Retour à explorer fichiers"
 
@@ -8255,6 +8592,9 @@ msgstr "Départ auto Samba Activé."
 msgid "Samba Autostart: "
 msgstr "Départ auto Samba: "
 
+msgid "Samba Panel"
+msgstr "Menu Samba"
+
 msgid "Samba/Cifs Panel"
 msgstr "Menu Samba/Cifs"
 
@@ -8263,6 +8603,20 @@ msgstr "Sam"
 
 msgid "Sat / Dish Setup"
 msgstr "Paramétrage Sat / Parabole"
+
+msgid ""
+"Sata & extend hdd test error\n"
+"Press 'EXIT' button!"
+msgstr ""
+"Erreur Test Sata & D.Dur\n"
+"Presser bouton 'EXIT'!"
+
+msgid ""
+"Sata & extend hdd test pass\n"
+"Press 'OK' button!"
+msgstr ""
+"Passe au test Sata & D.Dur\n"
+"Pressez bouton OK!"
 
 msgid "Satellite"
 msgstr "Satellite"
@@ -8339,6 +8693,9 @@ msgstr "Scanner Tout"
 
 msgid "Scan Files..."
 msgstr "Parcourir fichiers..."
+
+msgid "Scan IP"
+msgstr "Scanner IP"
 
 msgid "Scan NFS share"
 msgstr "Voir partage NFS"
@@ -8457,6 +8814,9 @@ msgid ""
 msgstr ""
 "Scanner lamedbs standards triés par satellite avec un positionneur parabole "
 "connecté"
+
+msgid "Scart loop ok?"
+msgstr "Bouclage péritel OK?"
 
 msgid "Scheduled download"
 msgstr "Téléchargement programmé"
@@ -8713,6 +9073,9 @@ msgstr ""
 msgid "Server share"
 msgstr "Serveur partage"
 
+msgid "Servers"
+msgstr "Serveurs"
+
 msgid "Service"
 msgstr "Service"
 
@@ -8826,6 +9189,9 @@ msgstr "Paramètre clé abandonné"
 
 msgid "Settings"
 msgstr "Paramètres"
+
+msgid "Settings Info"
+msgstr "Info Réglages"
 
 msgid "Settings installed:"
 msgstr "Listes disponibles:"
@@ -8975,6 +9341,9 @@ msgstr "Montrer icone de statut dans liste films"
 msgid "Show the Menu window."
 msgstr "Montrer Menu."
 
+msgid "Show the Subtitle..."
+msgstr "Afficher sous titres"
+
 msgid "Show the Virtual keyboard window."
 msgstr "Monter Clavier Virtuel."
 
@@ -9112,6 +9481,26 @@ msgstr "Vitesses du ralenti"
 msgid "Smargo & other Usb card readers chipset ftdi:"
 msgstr "Smargo & lecteurs carte avec chipset ftdi:"
 
+msgid ""
+"Smart Card 1 Error!\n"
+"errorcode=%d"
+msgstr ""
+"Erreur carte 1!\n"
+"code erreur=%d"
+
+msgid ""
+"Smart Card 2 Error!\n"
+"errorcode=%d"
+msgstr ""
+"Erreur carte 2!\n"
+"code erreur=%d"
+
+msgid "Smart Card OK!!"
+msgstr "Carte à puce OK!!"
+
+msgid "Smart Card model type error"
+msgstr "Erreur Type de carte à puce"
+
 msgid "Smart services renaming for XBMC"
 msgstr "Service Renommer pour XBMC"
 
@@ -9135,6 +9524,9 @@ msgstr "Le gestionnaire logiciel gère le logiciel du Vu+"
 
 msgid "Softwaremanager information"
 msgstr "Informations gestionnaire logiciel"
+
+msgid "Softwaremanager..."
+msgstr "Gestionnaire Logiciel"
 
 msgid "Some plugins are not available:\n"
 msgstr "Des plugins ne sont pas disponible:\n"
@@ -9380,6 +9772,9 @@ msgstr "Mettre en veille"
 msgid "Standby:"
 msgstr "Veille:"
 
+msgid "Standbymode Fancontrol settings"
+msgstr "Paramètres Contrôle Ventilo en veille"
+
 msgid "Start"
 msgstr "Démarrer"
 
@@ -9500,6 +9895,12 @@ msgstr "Position enregistrée"
 msgid "Stream podcasts"
 msgstr "Flux podcasts"
 
+msgid "StreamTV List"
+msgstr "Liste StreamTV"
+
+msgid "StreamTV Player"
+msgstr "Lecteur SteamTV"
+
 msgid "StreamTVPlayer"
 msgstr "Lecteur Flux TV"
 
@@ -9514,6 +9915,9 @@ msgstr "liste des sous-services..."
 
 msgid "Subservices"
 msgstr "SousServices"
+
+msgid "Subtitle Selection"
+msgstr "Selection Sous Titres"
 
 msgid "Subtitle alignment"
 msgstr "Alignement sous-titres"
@@ -9565,6 +9969,9 @@ msgstr "Aide \"ScanRapide\"?"
 
 msgid "Swap File Deleted and Autostart Deactivated."
 msgstr "Fichier SWAP Supprimé et départ auto Désactivé."
+
+msgid "Swap File Manager"
+msgstr "Gestion Fichier Echange"
 
 msgid "Swap File Settings"
 msgstr "Réglage Fichier Echange SWAP"
@@ -9754,6 +10161,12 @@ msgstr "Tester votre équipement DiSEqC"
 
 msgid "Test-Messagebox?"
 msgstr "Tester-Messagebox?"
+
+msgid "Testing Smartcard 1..."
+msgstr "Test Carte à puce 1..."
+
+msgid "Testing Smartcard 2..."
+msgstr "Test Carte à puce 2..."
 
 msgid "Testing remote connection"
 msgstr "Test connection distante"
@@ -10650,6 +11063,9 @@ msgstr "Piste"
 msgid "TrafficInfo shows German traffic jams."
 msgstr "TrafficInfo montre les embouteillages Allemands."
 
+msgid "Transcoding Setup"
+msgstr "Paramétrage Transcodage"
+
 msgid "Translation"
 msgstr "Traduction"
 
@@ -10700,6 +11116,9 @@ msgstr "Accorder"
 msgid "Tune failed!"
 msgstr "Echec accord"
 
+msgid "Tune%d %s Locking Fail..."
+msgstr "Echec Verrouillage tuner%d %s"
+
 msgid "Tuner"
 msgstr "Tuner"
 
@@ -10736,6 +11155,9 @@ msgstr "Type"
 msgid "Type of scan"
 msgstr "Type d'analyse"
 
+msgid "UI 3D setup"
+msgstr "Paramétrage Interface 3D"
+
 msgid "UPnP Client Disabled."
 msgstr "Serveur UPnP Désactivé"
 
@@ -10745,11 +11167,17 @@ msgstr "UPnP Client Djmount"
 msgid "UPnP Client Enabled."
 msgstr "Serveur UPnP Activé"
 
+msgid "UPnP Client Panel"
+msgstr "Menu Client UPnP"
+
 msgid "UPnP Server Mediatomb"
 msgstr "Serveur UPnP Mediatomb"
 
 msgid "UPnP Server Minidlna"
 msgstr "Serveur UPnP Minidlna"
+
+msgid "UPnP Server Panel"
+msgstr "Menu Serveur UPnP"
 
 msgid "USALS"
 msgstr "USALS"
@@ -10759,6 +11187,16 @@ msgstr "Clé USB"
 
 msgid "USB stick wizard"
 msgstr "Assistant clé USB"
+
+msgid "USB test error : Success-%d"
+msgstr "Erreur test USB : Succès-%d"
+
+msgid ""
+"USB test pass %d devices\n"
+"Press 'OK' button!"
+msgstr ""
+"Passe test %d appareils USB\n"
+"Presser bouton 'OK'!"
 
 msgid "USB: "
 msgstr "USB: "
@@ -10836,6 +11274,9 @@ msgstr ""
 "/media/meoboot\n"
 "/usr/lib/enigma2/python/Plugins/Extensions/MeoBoot\n"
 "\n"
+
+msgid "Uninstall Panel"
+msgstr "Menu Désinstallation"
 
 msgid "United States"
 msgstr "Etats Unis"
@@ -11091,6 +11532,12 @@ msgstr "Interface Utilisateur"
 msgid "User management"
 msgstr "Gestion utilisateur"
 
+msgid "UserDialog"
+msgstr "Dialogue Utilisateur"
+
+msgid "UserManager"
+msgstr "Gestionnaire Utilisateur"
+
 msgid "Usermanager"
 msgstr "Gestion utilisateur"
 
@@ -11199,6 +11646,12 @@ msgstr "Flux vidéo depuis la page web orf.at"
 
 msgid "VideoEnhancement provides advanced video enhancement settings"
 msgstr "VideoEnhancement fournit des paramètres d'amélioration vidéo"
+
+msgid "VideoEnhancementPreview"
+msgstr "Pré-vue Amélioration Vidéo"
+
+msgid "VideoEnhancementSetup"
+msgstr "Paramétrage Amélioration Vidéo"
 
 msgid "VideoTune helps fine-tuning your tv display"
 msgstr "VideoTune aide aux réglages de l'affichage de votre TV"
@@ -11654,6 +12107,9 @@ msgstr "Que voulez-vous analyser?"
 msgid "What to do with submitted crashlogs?"
 msgstr "Que faire des crashlogs soumis?"
 
+msgid "Wheel RIGHT"
+msgstr "Rotatif à droite"
+
 msgid ""
 "When supporting \"Fast Scan\" the service type is ignored. You don't need to "
 "enable this unless your Image supports \"Fast Scan\" and you are using it."
@@ -11714,6 +12170,21 @@ msgstr "Périphérique LAN sans fil non détecté"
 
 msgid "Wireless Network"
 msgstr "Réseau sans fil"
+
+msgid "Wireless Network AP Scan..."
+msgstr "Scan des AP du Réseau WIFI"
+
+msgid "Wireless Network Adapter Selection..."
+msgstr "Selection Adaptateur Réseau WIFI"
+
+msgid "Wireless Network Configuration..."
+msgstr "Configuration Réseau WIFI"
+
+msgid "Wireless Network Setup Menu..."
+msgstr "Menu Paramétrage Réseau WIFI"
+
+msgid "Wireless Network Status..."
+msgstr "Statut du Réseau WIFI"
 
 msgid "Wireless network connection setup"
 msgstr "Paramètres connection réseau WIFI"
@@ -12588,11 +13059,17 @@ msgstr "recherche distinguant majuscules et minuscules"
 msgid "center"
 msgstr "centrer"
 
+msgid "change channel on timeout"
+msgstr "changer chaine si délai expiré"
+
 msgid "change recording (duration)"
 msgstr "modifier un enregistrement (durée)"
 
 msgid "change recording (endtime)"
 msgstr "modifier un enregistrement (heure de fin)"
+
+msgid "change tuner on timeout"
+msgstr "changer tuner si délai expiré"
 
 msgid "chapters"
 msgstr "chapitres"
@@ -13561,3 +14038,6 @@ msgstr "zap"
 
 msgid "zapped"
 msgstr "zappé"
+
+msgid "zapping interval (sec) "
+msgstr "intervalle zaping (sec) "
