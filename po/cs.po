@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-06-18 18:10+0100\n"
+"PO-Revision-Date: 2013-06-27 18:31+0100\n"
 "Last-Translator: Paolino <pliesko1@gmail.com>\n"
 "Language-Team: Black Hole <vuplus-community.net>\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 "Language: cs\n"
+
+#
+msgid "Build server"
+msgstr "Sestav server"
 
 #
 msgid "Black Hole Blue Panel"
@@ -388,7 +392,7 @@ msgid "Autocam Manager"
 msgstr "Správce Autocam"
 
 msgid "Automatic Epg Backup: "
-msgstr "Automatická záloha EPG:"
+msgstr "Automatická záloha EPG: "
 
 msgid "Automatic start time"
 msgstr "Čas automatického startu"
@@ -1550,7 +1554,7 @@ msgstr ""
 "Tato volba nefunguje s patch crossepg v2"
 
 msgid "Last Search"
-msgstr "Poslední vyhledávání"
+msgstr "Posl. vyhl."
 
 msgid "Last update time: %s"
 msgstr "Čas poslední aktualizace: %s"
@@ -2190,7 +2194,7 @@ msgid "Smart Card model type error"
 msgstr "Chyba typu modelu Smart Card"
 
 msgid "Space"
-msgstr "Mezerník"
+msgstr "Místo"
 
 msgid "Standby Now"
 msgstr "Uspat nyní"
@@ -2759,7 +2763,7 @@ msgid ""
 msgstr ""
 "\n"
 "Vyber si záložní zařízení.\n"
-"Aktuální zařízení:"
+"Aktuální zařízení: "
 
 #
 msgid ""
@@ -3366,7 +3370,7 @@ msgstr "Přidat časovač přepnutí místo časovače záznamu?"
 
 #
 msgid "Added: "
-msgstr "Přidáno:"
+msgstr "Přidáno: "
 
 msgid ""
 "Adds 'search...' to the context menu of the movie list to allow searches."
@@ -4041,7 +4045,7 @@ msgstr "Zrušit"
 
 #
 msgid "Capacity: "
-msgstr "Kapacita:"
+msgstr "Kapacita: "
 
 #
 msgid "Card"
@@ -5733,7 +5737,7 @@ msgstr "Nejdřív vygeneruj styl vzhledu pomocí modulu Ai.HD-Control."
 
 #
 msgid "Flash"
-msgstr "Flashni"
+msgstr "Flash"
 
 #
 msgid "Flashing failed"
@@ -6816,7 +6820,7 @@ msgstr "Mód"
 
 #
 msgid "Model: "
-msgstr "Model:"
+msgstr "Model: "
 
 #
 msgid "Modify existing timers"
@@ -7260,7 +7264,7 @@ msgid "Network test..."
 msgstr "Otestování sítě..."
 
 msgid "Network test: "
-msgstr "Test sítě:"
+msgstr "Test sítě: "
 
 #
 msgid "Network:"
@@ -10891,7 +10895,7 @@ msgid ""
 "Error: "
 msgstr ""
 "Není možné dokončit kontrolu souborového systému.\n"
-"Chyba:"
+"Chyba: "
 
 #
 msgid ""
@@ -10899,7 +10903,7 @@ msgid ""
 "Error: "
 msgstr ""
 "Není možné inicializovat pevný disk.\n"
-"Chyba:"
+"Chyba: "
 
 #
 msgid "Uncommitted DiSEqC command"
@@ -13541,7 +13545,7 @@ msgstr ""
 
 msgid "Sorry, Meoboot can be installed or upgraded only when booted from Flash"
 msgstr ""
-"Je nám líto, Meoboot může být instalován nebo aktualizován pouze tehdy, když "
+"Je mi líto, Meoboot může být instalován nebo aktualizován pouze tehdy, když "
 "je spuštěn z Flash"
 
 msgid ""
@@ -13908,7 +13912,7 @@ msgid "Automatic Epg Backup:"
 msgstr "Automatická EPG záloha:"
 
 msgid "Epg Backup found: "
-msgstr "Nalezena záloha EPG:"
+msgstr "Nalezena záloha EPG: "
 
 msgid "Sorry no device found to store backup."
 msgstr "Je mi líto, nenalezeno zařízení pro uložení zálohy."
@@ -15090,7 +15094,7 @@ msgid "Wait please while scanning your devices..."
 msgstr "Počkej prosím, prohledávám tvoje zařízení .."
 
 msgid "Size: "
-msgstr "Velikost:"
+msgstr "Velikost: "
 
 msgid "   Mount: "
 msgstr "   Přípojný bod: "
@@ -15265,13 +15269,13 @@ msgid "Tun module needed for Openvpn:"
 msgstr "Pro Openvpn je potřebný Tun modul:"
 
 msgid "Module size: "
-msgstr "Velikost modulu:"
+msgstr "Velikost modulu: "
 
 msgid " bytes\n"
 msgstr " bajtů\n"
 
 msgid "Module used by: "
-msgstr "Modul je použit:"
+msgstr "Modul je použit: "
 
 msgid ""
 "Please disable ALL the plugins you don't need to use.\n"
@@ -15681,10 +15685,10 @@ msgid "Removing package"
 msgstr "Odstraňuji balíček"
 
 msgid "Panel Setup"
-msgstr "Nastavení panelu"
+msgstr "Nastav panel"
 
 msgid "Fast Plug"
-msgstr "Rychlé připojení"
+msgstr "Rychle připoj"
 
 msgid "Addons"
 msgstr "Doplňky"
@@ -15720,7 +15724,7 @@ msgid "Configuration Saved"
 msgstr "Konfigurace uložena"
 
 msgid "Vpn Version: "
-msgstr "Verze Vpn:"
+msgstr "Verze Vpn: "
 
 msgid "OpenVPN Panel - by Black Hole Team."
 msgstr "OpenVPN panel - od Black Hole Team."
@@ -15918,7 +15922,7 @@ msgid "Server Enabled"
 msgstr "Server povolen"
 
 msgid "Build Server"
-msgstr "Sestavit server"
+msgstr "Sestav server"
 
 msgid "Disable Server"
 msgstr "Zakaž server"
@@ -16046,16 +16050,16 @@ msgid "CAMs Installed"
 msgstr "Nainstalované CAMy"
 
 msgid "Name: "
-msgstr "Jméno:"
+msgstr "Jméno: "
 
 msgid "Provider: "
-msgstr "Poskytovatel:"
+msgstr "Poskytovatel: "
 
 msgid "Aspect Ratio: "
-msgstr "Poměr stran:"
+msgstr "Poměr stran: "
 
 msgid "Videosize: "
-msgstr "Rozměr obrazu:"
+msgstr "Rozměr obrazu: "
 
 msgid "Ecm Info not available."
 msgstr "Ecm Informace nejsou k dispozici."

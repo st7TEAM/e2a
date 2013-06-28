@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-06-20 19:30+0100\n"
+"PO-Revision-Date: 2013-06-27 18:29+0100\n"
 "Last-Translator: Paolino <pliesko1@gmail.com>\n"
 "Language-Team: Black Hole\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 "Language: sk\n"
+
+#
+msgid "Build server"
+msgstr "Zostav server"
 
 #
 msgid "Black Hole Blue Panel"
@@ -56,7 +60,7 @@ msgstr "Black Hole skiny"
 
 #
 msgid "Red button..."
-msgstr "HbbTV (nie pre Solo), dlhé stlačenie - Vesmíry"
+msgstr "HbbTV, dlhé stlač. - Vesmíry"
 
 #
 msgid "General Dolby Digital delay(ms)"
@@ -263,7 +267,7 @@ msgid "Autocam Manager"
 msgstr "Správca Autocam"
 
 msgid "Automatic Epg Backup: "
-msgstr "Automatická záloha Epg:"
+msgstr "Automatická záloha Epg: "
 
 msgid "Automatic start time"
 msgstr "Čas automatického štartu"
@@ -1589,7 +1593,7 @@ msgstr ""
 
 #
 msgid "Last Search"
-msgstr "Posledné vyhľadávanie"
+msgstr "Posl. vyhľ."
 
 #
 msgid "Last update time: %s"
@@ -2402,7 +2406,7 @@ msgstr "Chyba typu modelu Smart Card"
 
 #
 msgid "Space"
-msgstr "MEDZERNÍK"
+msgstr "Miesto"
 
 #
 msgid "Standby Now"
@@ -2831,7 +2835,7 @@ msgid "change tuner on timeout"
 msgstr "zmeň tuner pri timeoute"
 
 msgid "ecm time: "
-msgstr "čas ecm:"
+msgstr "čas ecm: "
 
 msgid "epgsettings"
 msgstr "nastavenia epg"
@@ -3538,7 +3542,7 @@ msgid "Add zap timer instead of record timer?"
 msgstr "Pridať časovač prepnutia namiesto časovača nahrávania?"
 
 msgid "Added: "
-msgstr "Pridané:"
+msgstr "Pridané: "
 
 msgid ""
 "Adds 'search...' to the context menu of the movie list to allow searches."
@@ -4033,7 +4037,7 @@ msgid "Burn your recordings to DVD"
 msgstr "Napáľ si nahrávky na DVD"
 
 msgid "Bus: "
-msgstr "Zbernica:"
+msgstr "Zbernica: "
 
 msgid ""
 "By enabling this events will not be matched if they don't occur on certain "
@@ -4111,7 +4115,7 @@ msgid "Cancel"
 msgstr "Zrušiť"
 
 msgid "Capacity: "
-msgstr "Kapacita:"
+msgstr "Kapacita: "
 
 msgid "Card"
 msgstr "Karta"
@@ -4503,13 +4507,13 @@ msgid "Current Transponder"
 msgstr "Aktuálny transpondér"
 
 msgid "Current device: "
-msgstr "Aktuálne zariadenie:"
+msgstr "Aktuálne zariadenie: "
 
 msgid "Current settings:"
 msgstr "Aktuálne nastavenia:"
 
 msgid "Current value: "
-msgstr "Aktuálna hodnota:"
+msgstr "Aktuálna hodnota: "
 
 msgid "Current version:"
 msgstr "Aktuálna verzia:"
@@ -4710,7 +4714,7 @@ msgid "Deselect"
 msgstr "Zrušiť výber"
 
 msgid "Details for plugin: "
-msgstr "Údaje o plugine:"
+msgstr "Údaje o plugine: "
 
 msgid "Detected HDD:"
 msgstr "Zistený pevný disk:"
@@ -5001,7 +5005,7 @@ msgid "Driver for Realtek r8712u based wireless-n USB devices."
 msgstr "Ovládač pre Wireless-N USB zariadenia na báze Realtek r8712u."
 
 msgid "Duration: "
-msgstr "Trvanie:"
+msgstr "Trvanie: "
 
 msgid "Dutch"
 msgstr "Holandčina"
@@ -5189,7 +5193,7 @@ msgstr ""
 "hľadáš zvláštne znaky, napr. diakritiku."
 
 msgid "Encrypted: "
-msgstr "Šifrované:"
+msgstr "Šifrované: "
 
 msgid "Encryption"
 msgstr "Šifrovanie"
@@ -5268,7 +5272,7 @@ msgid "Enter the service pin"
 msgstr "Zadaj PIN stanice"
 
 msgid "Enter user and password for host: "
-msgstr "Zadaj užívateľské meno a heslo pre hostiteľa:"
+msgstr "Zadaj užívateľské meno a heslo pre hostiteľa: "
 
 msgid "Enter username:"
 msgstr "Zadaj užívateľské meno:"
@@ -5473,7 +5477,7 @@ msgid "First generate your skin-style with the Ai.HD-Control plugin."
 msgstr "Najprv vytvor štýl skinu ovládacím pluginom Ai.HD."
 
 msgid "Flash"
-msgstr "Flashnúť"
+msgstr "Flash"
 
 msgid "Flashing failed"
 msgstr "Flashnutie zlyhalo"
@@ -5932,7 +5936,7 @@ msgid "Instant record location"
 msgstr "Umiestnenie okamžitého záznamu"
 
 msgid "Interface: "
-msgstr "Rozhranie:"
+msgstr "Rozhranie: "
 
 msgid "Intermediate"
 msgstr "stredný"
@@ -6299,7 +6303,7 @@ msgid "Match title: %s"
 msgstr "Hľadať titul: %s"
 
 msgid "Max. Bitrate: "
-msgstr "Max. dátový tok:"
+msgstr "Max. dátový tok: "
 
 msgid "Maximum duration (in m)"
 msgstr "Maximálne trvanie (v ms)"
@@ -6728,7 +6732,7 @@ msgid "Network test..."
 msgstr "Test siete..."
 
 msgid "Network test: "
-msgstr "Test siete:"
+msgstr "Test siete: "
 
 msgid "Network:"
 msgstr "Sieť:"
@@ -7681,7 +7685,7 @@ msgid "Rating"
 msgstr "Hodnotenie"
 
 msgid "Ratings: "
-msgstr "Hodnotenia:"
+msgstr "Hodnotenia: "
 
 msgid "Really close without saving settings?"
 msgstr "Naozaj zatvoriť bez uloženia nastavení?"
@@ -8576,7 +8580,7 @@ msgid "Signal Strength:"
 msgstr "Sila signálu:"
 
 msgid "Signal: "
-msgstr "Signál:"
+msgstr "Signál: "
 
 msgid "Similar"
 msgstr "Podobné"
@@ -8915,7 +8919,7 @@ msgid "Tags the Timer/Recording will have."
 msgstr "Značky, ktoré budú mať nahrávky časovača."
 
 msgid "Tags: "
-msgstr "Značky:"
+msgstr "Značky: "
 
 msgid "Taiwan"
 msgstr "Taiwan"
@@ -10039,7 +10043,7 @@ msgid "View, edit or delete usernames and passwords for your network."
 msgstr "Zobraziť, upraviť alebo vymazať prístupové mená a heslá do siete."
 
 msgid "Views: "
-msgstr "Zobrazenia:"
+msgstr "Zobrazenia: "
 
 msgid "Virtual KeyBoard"
 msgstr "Virtuálna klávesnica"
@@ -12088,7 +12092,7 @@ msgstr ""
 "prosím tvoje médiá v Black Hole panele zariadení."
 
 msgid "Black Hole Full Backup on: "
-msgstr "Black Hole úplná záloha zapnutá: "
+msgstr "Black Hole úplná záloha na: "
 
 msgid "BlackHole Full Backup"
 msgstr "BlackHole úplná záloha"
@@ -12208,7 +12212,7 @@ msgid "Automatic Epg Backup:"
 msgstr "Automatická záloha Epg:"
 
 msgid "Epg Backup found: "
-msgstr "Nájdená záloha Epg:"
+msgstr "Nájdená záloha Epg: "
 
 msgid "Sorry no device found to store backup."
 msgstr "Je mi ľúto, nenájdené zariadenie pre uloženie zálohy."
@@ -12947,22 +12951,22 @@ msgid "Clear History"
 msgstr "Vymazať históriu"
 
 msgid "Ram in use: "
-msgstr "Ram použitých: "
+msgstr "Ram použ.: "
 
 msgid "Swap in use: "
-msgstr "SWAP použitých: "
+msgstr "SWAP použ.: "
 
 msgid "Flash in use: "
-msgstr "Flash použitých: "
+msgstr "Flash použ.: "
 
 msgid "Cf in use: "
-msgstr "Cf použitých: "
+msgstr "Cf použ.: "
 
 msgid "Usb in use: "
-msgstr "USB použitých: "
+msgstr "USB použ.: "
 
 msgid "Hdd in use: "
-msgstr "Hdd použitých: "
+msgstr "Hdd použ.: "
 
 msgid "Total: "
 msgstr "Celkovo: "
@@ -12971,7 +12975,7 @@ msgid "Free: "
 msgstr "Voľné: "
 
 msgid "Total in use: "
-msgstr "Celkovo použitých: "
+msgstr "Celkovo použ.: "
 
 msgid "FLASH: "
 msgstr "FLASH: "
@@ -13379,7 +13383,7 @@ msgid "Wait please while scanning your devices..."
 msgstr "Počkaj prosím, vyhľadávam tvoje zariadenie..."
 
 msgid "Size: "
-msgstr "Veľkosť:"
+msgstr "Veľkosť: "
 
 msgid "   Mount: "
 msgstr "   Mount: "
@@ -13560,7 +13564,7 @@ msgid " bytes\n"
 msgstr " bajtov\n"
 
 msgid "Module used by: "
-msgstr "Modul je použitý:"
+msgstr "Modul je použitý: "
 
 msgid ""
 "Please disable ALL the plugins you don't need to use.\n"
@@ -14010,7 +14014,7 @@ msgid "Configuration Saved"
 msgstr "Konfigurácia uložená"
 
 msgid "Vpn Version: "
-msgstr "Verzia Vpn:"
+msgstr "Verzia Vpn: "
 
 msgid "OpenVPN Panel - by Black Hole Team."
 msgstr "OpenVPN Panel - od Black Hole tímu."
@@ -14208,7 +14212,7 @@ msgid "Server Enabled"
 msgstr "Server povolený"
 
 msgid "Build Server"
-msgstr "Build server"
+msgstr "Zostav server"
 
 msgid "Disable Server"
 msgstr "Zakáž server"
@@ -14337,16 +14341,16 @@ msgid "CAMs Installed"
 msgstr "Nainštalované CAMy"
 
 msgid "Name: "
-msgstr "Meno:"
+msgstr "Meno: "
 
 msgid "Provider: "
-msgstr "Poskytovaťeľ:"
+msgstr "Poskytovateľ: "
 
 msgid "Aspect Ratio: "
-msgstr "Pomer strán:"
+msgstr "Pomer strán: "
 
 msgid "Videosize: "
-msgstr "Rozmer obrazu:"
+msgstr "Rozmer obrazu: "
 
 msgid "Ecm Info not available."
 msgstr "Ecm informácie nie sú k dispozícii."
@@ -14434,7 +14438,7 @@ msgid "Destination directory"
 msgstr "Cieľový adresár"
 
 msgid "Details for extension: "
-msgstr "Detaily rozšírenia:"
+msgstr "Detaily rozšírenia: "
 
 msgid "Disable Subtitles"
 msgstr "Vypnúť titulky"
