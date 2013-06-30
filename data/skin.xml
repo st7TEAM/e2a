@@ -736,9 +736,9 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <ePixmap pixmap="skin_default/buttons/red30x30.png" position="45,260" size="30,30" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/green30x30.png" position="225,260" size="30,30" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/yellow30x30.png" position="405,260" size="30,30" alphatest="blend"/>
-<widget name="key_red" position="85,262" zPosition="1" size="150,25" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<widget name="key_green" position="265,262" zPosition="1" size="150,25" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<widget name="key_yellow" position="445,262" zPosition="1" size="150,25" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_red" position="85,264" zPosition="1" size="150,25" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_green" position="265,264" zPosition="1" size="150,25" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_yellow" position="445,264" zPosition="1" size="150,25" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 <screen name="DeliteTelnet" position="340,190" size="600,305" title="Telnet Panel">
 <widget name="lab1" position="20,30" size="580,60" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
@@ -748,8 +748,8 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <ePixmap pixmap="skin_default/div-h.png" position="0,245" zPosition="1" size="600,2"/>
 <ePixmap pixmap="skin_default/buttons/red30x30.png" position="125,260" size="150,30" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/green30x30.png" position="325,260" size="150,30" alphatest="blend"/>
-<widget name="key_red" position="125,262" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="key_green" position="325,262" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_red" position="125,264" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_green" position="325,264" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 <screen name="DeliteFtp" position="340,190" size="600,305" title="Ftp Panel">
 <widget name="lab1" position="20,30" size="580,60" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
@@ -759,8 +759,8 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <ePixmap pixmap="skin_default/div-h.png" position="0,245" zPosition="1" size="600,2"/>
 <ePixmap pixmap="skin_default/buttons/red30x30.png" position="125,260" size="150,30" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/green30x30.png" position="325,260" size="150,30" alphatest="blend"/>
-<widget name="key_red" position="125,262" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="key_green" position="325,262" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_red" position="125,264" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_green" position="325,264" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 <screen name="BhNfsServer" position="340,190" size="600,305" title="Black Hole Nfs Server Panel">
 <widget name="lab1" position="20,30" size="230,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
@@ -772,9 +772,9 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <ePixmap pixmap="skin_default/buttons/red30x30.png" position="40,260" size="30,30" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/green30x30.png" position="220,260" size="30,30" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/yellow30x30.png" position="410,260" size="30,30" alphatest="blend"/>
-<widget name="key_red" position="80,262" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<widget name="key_green" position="260,262" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<widget name="key_yellow" position="450,262" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_red" position="80,264" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_green" position="260,264" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_yellow" position="450,264" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 <screen name="Bp_UsbFormat" position="340,190" size="600,305" title="Usb Format Wizard">
 <widget name="lab1" position="20,20" size="580,240" font="Regular;20" backgroundColor="transpBlack" transparent="1"/>
@@ -986,7 +986,7 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (20, 20), png = 1),
 <ePixmap pixmap="skin_default/muteback.png" position="1,1" size="55,50" zPosition="-5" alphatest="blend"/>
 </screen>
 <screen name="menu_mainmenu" position="40,95" size="490,570" title="Main menu" >
-<widget source="menu" render="Listbox" enableWrapAround="1" position="20,20" size="465,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/sysbg.png" transparent="1">
+<widget source="menu" render="Listbox" enableWrapAround="1" position="20,20" size="465,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/mainbg.png" transparent="1">
 <convert type="TemplatedMultiContent">
 {"template": [ MultiContentEntryText(pos = (65,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
 "fonts": [gFont("Regular",24)],
@@ -995,8 +995,8 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (20, 20), png = 1),
 </convert>
 </widget>
 </screen>
-<screen name="menu_setup" position="40,95" size="490,390" title="Setup" >
-<widget source="menu" render="Listbox" enableWrapAround="1" position="20,20" size="465,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/sysbg.png" transparent="1">
+<screen name="menu_setup" position="40,95" size="490,570" title="Setup" >
+<widget source="menu" render="Listbox" enableWrapAround="1" position="20,20" size="465,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/setupbg.png" transparent="1">
 <convert type="TemplatedMultiContent">
 {"template": [ MultiContentEntryText(pos = (65,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
 "fonts": [gFont("Regular",24)],
@@ -1075,49 +1075,14 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (20, 20), png = 1),
 <convert type="ConditionalShowHide" />
 </widget>
 </screen>
-<screen name="menu_scan" position="40,95" size="490,345" title="Service searching" >
-<widget source="menu" render="Listbox" enableWrapAround="1" position="75,20" size="410,315" zPosition="1" scrollbarMode="showNever" transparent="1">
+<screen name="menu_scan" position="40,95" size="490,415" title="Service searching" >
+<widget source="menu" render="Listbox" enableWrapAround="1" position="20,20" size="465,405" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/searchsel.png" backgroundPixmap="skin_default/menu/searchbg.png" transparent="1">
 <convert type="TemplatedMultiContent">
-{"template": [ MultiContentEntryText(pos = (10,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
+{"template": [ MultiContentEntryText(pos = (65,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
 "fonts": [gFont("Regular",24)],
 "itemHeight":45
 }
 </convert>
-</widget>
-<ePixmap pixmap="skin_default/menu/tuner1.png" position="20,20" size="45,45" zPosition="2" alphatest="blend"/>
-<widget source="menu" render="Pixmap" pixmap="skin_default/menu/tuner2.png" position="20,20" size="45,45" zPosition="3" alphatest="blend" transparent="1" >
-<convert type="MenuEntryCompare">tuner_setup</convert>
-<convert type="ConditionalShowHide" />
-</widget>
-<ePixmap pixmap="skin_default/menu/servicel1.png" position="20,65" size="45,45" zPosition="2" alphatest="blend"/>
-<widget source="menu" render="Pixmap" pixmap="skin_default/menu/servicel2.png" position="20,65" size="45,45" zPosition="3" alphatest="blend" transparent="1" >
-<convert type="MenuEntryCompare">default_lists</convert>
-<convert type="ConditionalShowHide" />
-</widget>
-<ePixmap pixmap="skin_default/menu/autos1.png" position="20,110" size="45,45" zPosition="2" alphatest="blend"/>
-<widget source="menu" render="Pixmap" pixmap="skin_default/menu/autos2.png" position="20,110" size="45,45" zPosition="3" alphatest="blend" transparent="1" >
-<convert type="MenuEntryCompare">auto_scan</convert>
-<convert type="ConditionalShowHide" />
-</widget>
-<ePixmap pixmap="skin_default/menu/manuals1.png" position="20,155" size="45,45" zPosition="2" alphatest="blend"/>
-<widget source="menu" render="Pixmap" pixmap="skin_default/menu/manuals2.png" position="20,155" size="45,45" zPosition="3" alphatest="blend" transparent="1" >
-<convert type="MenuEntryCompare">manual_scan</convert>
-<convert type="ConditionalShowHide" />
-</widget>
-<ePixmap pixmap="skin_default/menu/satfinder1.png" position="20,200" size="45,45" zPosition="2" alphatest="blend"/>
-<widget source="menu" render="Pixmap" pixmap="skin_default/menu/satfinder2.png" position="20,200" size="45,45" zPosition="3" alphatest="blend" transparent="1" >
-<convert type="MenuEntryCompare">satfinder</convert>
-<convert type="ConditionalShowHide" />
-</widget>
-<ePixmap pixmap="skin_default/menu/positioner1.png" position="20,245" size="45,45" zPosition="2" alphatest="blend"/>
-<widget source="menu" render="Pixmap" pixmap="skin_default/menu/positioner2.png" position="20,245" size="45,45" zPosition="3" alphatest="blend" transparent="1" >
-<convert type="MenuEntryCompare">positioner_setup</convert>
-<convert type="ConditionalShowHide" />
-</widget>
-<ePixmap pixmap="skin_default/menu/streamc1.png" position="20,290" size="45,45" zPosition="2" alphatest="blend"/>
-<widget source="menu" render="Pixmap" pixmap="skin_default/menu/streamc2.png" position="20,290" size="45,45" zPosition="3" alphatest="blend" transparent="1" >
-<convert type="MenuEntryCompare">streamconvert</convert>
-<convert type="ConditionalShowHide" />
 </widget>
 </screen>
 <screen name="About" position="300,150" size="680,435" title="About" >
@@ -1688,7 +1653,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 MultiContentEntryText(pos = (10, 4), size = (530, 22), flags = RT_HALIGN_LEFT, text = 1), 
 MultiContentEntryText(pos = (50, 28), size = (480, 40), font = 1, flags = RT_HALIGN_LEFT, text = 2), 
 ],
-"fonts": [gFont("Regular", 20), gFont("Regular", 17)],
+"fonts": [gFont("Regular", 18), gFont("Regular", 17)],
 "itemHeight": 70
 }
 </convert>
@@ -1837,10 +1802,10 @@ MultiContentEntryText(pos = (50, 28), size = (480, 40), font = 1, flags = RT_HAL
 <widget name="config" position="10,155" size="520,275" scrollbarMode="showOnDemand" zPosition="1" transparent="1"/>
 <widget name="introduction" position="0,0" size="0,0" transparent="1"/>
 </screen>
-<screen name="ScanSetup" position="230,150" size="820,435" title="Manual scan" >
-<ePixmap position="540,100" size="256,256" pixmap="skin_default/menu/scan.png" zPosition="1" alphatest="on" />
-<widget name="config" position="10,20" size="520,375" transparent="1"/>
-<widget name="introduction" position="10,400" size="520,25" font="Regular;22" halign="center" backgroundColor="transpBlack" transparent="1"/>
+<screen name="ScanSetup" position="210,150" size="860,445" title="Manual scan" >
+<ePixmap position="580,100" size="256,256" pixmap="skin_default/menu/scan.png" zPosition="1" alphatest="on" />
+<widget name="config" position="10,20" size="560,380" transparent="1"/>
+<widget name="introduction" position="10,410" size="560,25" font="Regular;22" halign="center" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 <screen name="ScanSimple" position="230,150" size="820,435" title="Automatic scan" >
 <ePixmap position="540,100" size="256,256" pixmap="skin_default/menu/scan.png" zPosition="1" alphatest="on" />
@@ -2491,6 +2456,7 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 58), size = (0, 0), png = 5), # index
 <widget name="config" position="10,10" size="580,425" zPosition="3" scrollbarMode="showOnDemand" />
 </screen>
 <screen name="PluginManager" position="300,150" size="680,480" title="Extensions management" >
+<eLabel position="0,398" size="680,2" backgroundColor="grey"/>
 <widget source="list" render="Listbox" position="20,5" size="640,357" scrollbarMode="showOnDemand" transparent="1">
 <convert type="TemplatedMultiContent">
 {"templates":
@@ -3756,5 +3722,100 @@ MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (40, 40), png = 1),
 <ePixmap pixmap="skin_default/buttons/green35x35.png" position="480,475" size="35,35" alphatest="blend" />
 <widget name="key_red" position="270,479" zPosition="1" size="200,35" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
 <widget name="key_green" position="530,479" zPosition="1" size="200,35" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1" />
+</screen>
+<screen name="CrossEPG_Setup" position="230,150" size="820,435" title="CrossEPG Setup">
+<widget name="config" position="20,20" size="780,250" transparent="1"/>
+<widget name="information" position="20,290" size="780,135" font="Regular;19" halign="center" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
+<ePixmap pixmap="skin_default/div-h.png" position="0,390" zPosition="1" size="820,2"/>
+<ePixmap pixmap="skin_default/buttons/red35x35.png" position="350,395" size="35,35" alphatest="blend"/>
+<widget name="key_red" position="395,399" size="250,35" zPosition="1" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1"/>
+</screen>>
+<screen name="CrossEPG_Menu" position="230,150" size="820,435" title="CrossEPG">
+<widget source="list" render="Listbox" enableWrapAround="1" position="20,20" size="780,400" zPosition="1" scrollbarMode="showNever" transparent="1">
+<convert type="TemplatedMultiContent">
+{"template": [ MultiContentEntryPixmapAlphaTest(pos = (10, 3), size = (40, 40), png = 0),
+MultiContentEntryText(pos = (70,6), size = (600,32), flags = RT_HALIGN_LEFT, text = 1),
+],
+"fonts": [gFont("Regular", 25)],
+"itemHeight": 45
+}
+</convert>
+</widget>    
+</screen>
+<screen name="CrossEPG_Providers" position="230,150" size="820,435" title="CrossEPG Providers">
+<widget source="list" render="Listbox" enableWrapAround="1" position="20,20" size="780,360" zPosition="1" scrollbarMode="showNever" transparent="1">
+<convert type="TemplatedMultiContent">
+{"template": [ MultiContentEntryText(pos = (10, 1), size = (700, 30), font=0, flags = RT_HALIGN_LEFT, text = 0),
+MultiContentEntryPixmapAlphaTest(pos = (720, 0), size = (40, 40), png = 1),
+],
+"fonts": [gFont("Regular", 20)],
+"itemHeight": 30
+}
+</convert>
+</widget>
+<ePixmap pixmap="skin_default/div-h.png" position="0,385" zPosition="1" size="820,2"/>
+<ePixmap pixmap="skin_default/buttons/red35x35.png" position="20,395" size="35,35" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/green35x35.png" position="220,395" size="35,35" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/yellow35x35.png" position="420,395" size="35,35" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/blue35x35.png" position="620,395" size="35,35" alphatest="blend"/>
+<widget name="key_red" position="65,395" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_green" position="265,395" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_yellow" position="465,395" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_blue" position="665,395" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+</screen>
+<screen name="TranscodingSetup" position="340,190" size="600,370" title="Transcoding Setup">
+<ePixmap pixmap="skin_default/div-h.png" position="0,320" zPosition="1" size="600,2"/>
+<widget name="config" position="10,10" size="580,175" scrollbarMode="showOnDemand" transparent="1"/>
+<widget source="text" render="Label" position="10,200" size="580,120" font="Regular;22" zPosition="2" halign="center" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
+<ePixmap pixmap="skin_default/buttons/red30x30.png" position="150,330" size="150,30" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/green30x30.png" position="350,330" size="150,30" alphatest="blend"/>
+<widget source="key_red" render="Label" position="150,333" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget source="key_green" render="Label" position="350,333" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+</screen>
+<screen name="AutoShutDownConfiguration" position="340,190" size="600,370" title="AutoShutDown Setup">
+<ePixmap pixmap="skin_default/div-h.png" position="0,320" zPosition="1" size="600,2"/>
+<widget name="config" position="10,10" size="580,300" scrollbarMode="showOnDemand" transparent="1"/>
+<ePixmap pixmap="skin_default/buttons/red30x30.png" position="40,330" size="30,30" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/green30x30.png" position="220,330" size="30,30" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/yellow30x30.png" position="410,330" size="30,30" alphatest="blend"/>
+<widget name="buttonred" position="80,333" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="buttongreen" position="260,333" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="buttonyellow" position="450,333" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
+</screen>
+<screen name="LCDdisplayConfig" position="50,80" size="1180,590" title="LCD4linux Settings" >
+<eLabel position="0,545" size="1180,2" backgroundColor="grey" zPosition="5"/>
+<widget name="config" position="10,10" size="600,500" scrollbarMode="showOnDemand" enableWrapAround="1" />
+<widget source="introduction" render="Label" position="5,517" size="580,30" zPosition="10" font="Regular;20" halign="center" foregroundColor="blue" backgroundColor="transpBlack" transparent="1" />
+			
+<widget name="key_red" position="55,555" size="200,35" zPosition="4"  halign="left" backgroundColor="transpBlack" font="Regular;18" transparent="1"/> 
+<widget name="key_green" position="305,555" size="200,35" zPosition="4"  halign="left" backgroundColor="transpBlack" font="Regular;18" transparent="1"/> 
+<widget name="key_yellow" position="555,555" size="200,35" zPosition="4"  halign="left" backgroundColor="transpBlack" font="Regular;18" transparent="1"/> 
+<widget name="key_blue" position="805,555" size="200,35" zPosition="4"  halign="left" backgroundColor="transpBlack" font="Regular;18" transparent="1"/> 
+
+<ePixmap name="red" position="10,555" zPosition="2" size="35,35" pixmap="skin_default/buttons/red35x35.png" alphatest="blend" />
+<ePixmap name="green"  position="260,555" zPosition="2" size="35,35" pixmap="skin_default/buttons/green35x35.png" alphatest="blend" />
+<ePixmap name="yellow" position="510,555" zPosition="2" size="35,35" pixmap="skin_default/buttons/yellow35x35.png" alphatest="blend" />
+<ePixmap name="blue"   position="760,555" zPosition="2" size="35,35" pixmap="skin_default/buttons/blue35x35.png" alphatest="blend" />
+<ePixmap pixmap="skin_default/buttons/key_menu.png" position="1000,565" zPosition="4" size="35,25"  alphatest="blend" />
+
+<widget source="Version" render="Label" position="1090,555" size="60,20" zPosition="1" font="Regular;11" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+<widget source="LibUSB" render="Label" position="1090,570" size="60,20" zPosition="1" font="Regular;11" halign="left" valign="center" foregroundColor="red" backgroundColor="transpBlack" transparent="1" />
+<widget source="About" render="Label" position="950,555" size="100,20" zPosition="1" font="Regular;10" halign="left" valign="center" backgroundColor="transpBlack" transparent="1" />
+
+<widget name="LCD1" position="610,10" zPosition="1" size="570,320" transparent="1" alphatest="on" />
+<widget name="LCD2" position="610,330" zPosition="1" size="570,320" transparent="1" alphatest="on" />
+<widget source="LCD1text" render="Label" position="620,10" size="200,20" zPosition="1" font="Regular;11" halign="left" backgroundColor="transpBlack" transparent="1" />
+<widget source="LCD2text" render="Label" position="620,330" size="200,20" zPosition="1" font="Regular;11" halign="left" backgroundColor="transpBlack" transparent="1" />			
+</screen>
+<screen name="BhPcsc" position="340,190" size="600,305" title="Pcsc Panel">
+<widget name="lab1" position="20,30" size="580,60" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="lab2" position="20,150" size="300,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="labstop" position="320,150" size="150,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
+<widget name="labrun" position="320,150" size="150,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
+<ePixmap pixmap="skin_default/div-h.png" position="0,245" zPosition="1" size="600,2"/>
+<ePixmap pixmap="skin_default/buttons/red30x30.png" position="125,260" size="150,30" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/green30x30.png" position="325,260" size="150,30" alphatest="blend"/>
+<widget name="key_red" position="125,264" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_green" position="325,264" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 </skin> 
