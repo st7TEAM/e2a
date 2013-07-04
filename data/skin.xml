@@ -1,7 +1,7 @@
 <skin>
 <!--
 MX S Line 
-black hole version: 2.0.0
+black hole version: 2.0.4
 skin author: Matrix10
 THIS SKIN IS COPYRIGHT PROTECTED AND IS FOR  BLACK HOLE VU+ IMAGES ONLY.
 The publication of the skin is not permitted without permission of the author - Pls read skin.info
@@ -438,10 +438,10 @@ The publication of the skin is not permitted without permission of the author - 
 <ePixmap pixmap="skin_default/buttons/green35x35.png" position="210,455" size="35,35" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/yellow35x35.png" position="410,455" size="35,35" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/blue35x35.png" position="610,455" size="35,35" alphatest="blend"/>
-<eLabel text="Panel Setup" position="55,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<eLabel text="Fast Plugin" position="255,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<eLabel text="Addon Manager" position="455,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<eLabel text="Script Panel" position="655,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_red" position="55,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_green" position="255,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_yellow" position="455,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_blue" position="655,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
 <widget source="list" render="Listbox" position="20,20" size="510,400" enableWrapAround="1" zPosition="2" scrollbarMode="showOnDemand"  transparent="1">
 <convert type="TemplatedMultiContent">
 {"template": [
@@ -464,10 +464,10 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <ePixmap pixmap="skin_default/buttons/green35x35.png" position="210,455" size="35,35" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/yellow35x35.png" position="410,455" size="35,35" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/blue35x35.png" position="610,455" size="35,35" alphatest="blend"/>
-<eLabel text="Epg Settings" position="55,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<eLabel text="AutoCam" position="255,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<eLabel text="System Info" position="455,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
-<eLabel text="Settings Panel" position="655,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_red" position="55,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_green" position="255,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_yellow" position="455,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_blue" position="655,460" size="250,35" zPosition="1" font="Regular;20" halign="left" backgroundColor="transpBlack" transparent="1"/>
 <widget name="lab1" position="180,5" size="230,25" font="Regular;20" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
 <widget name="lab2" position="180,35" size="190,25" font="Regular;20" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
 <widget name="list" position="20,73" size="400,25" zPosition="2" scrollbarMode="showOnDemand" transparent="1"/>
@@ -3762,15 +3762,6 @@ MultiContentEntryPixmapAlphaTest(pos = (720, 0), size = (40, 40), png = 1),
 <widget name="key_green" position="265,395" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget name="key_yellow" position="465,395" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget name="key_blue" position="665,395" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
-</screen>
-<screen name="TranscodingSetup" position="340,190" size="600,370" title="Transcoding Setup">
-<ePixmap pixmap="skin_default/div-h.png" position="0,320" zPosition="1" size="600,2"/>
-<widget name="config" position="10,10" size="580,175" scrollbarMode="showOnDemand" transparent="1"/>
-<widget source="text" render="Label" position="10,200" size="580,120" font="Regular;22" zPosition="2" halign="center" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
-<ePixmap pixmap="skin_default/buttons/red30x30.png" position="150,330" size="150,30" alphatest="blend"/>
-<ePixmap pixmap="skin_default/buttons/green30x30.png" position="350,330" size="150,30" alphatest="blend"/>
-<widget source="key_red" render="Label" position="150,333" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget source="key_green" render="Label" position="350,333" zPosition="1" size="150,25" font="Regular;20" halign="center" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 <screen name="AutoShutDownConfiguration" position="340,190" size="600,370" title="AutoShutDown Setup">
 <ePixmap pixmap="skin_default/div-h.png" position="0,320" zPosition="1" size="600,2"/>
