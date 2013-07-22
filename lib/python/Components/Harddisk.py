@@ -216,15 +216,23 @@ class Harddisk:
                 return False
 
 	def createPartition(self):
-		cmd = 'printf "8,\n;0,0\n;0,0\n;0,0\ny\n" | sfdisk -f -uS ' + self.disk_path
-		res = system(cmd)
+				
+		if self.diskSize() < 300000:
+			cmd = 'printf "8,\n;0,0\n;0,0\n;0,0\ny\n" | sfdisk -f -uS ' + self.disk_path
+			res = system(cmd)
+		else:
+			cmd = 'parted ' + self.disk_path + ' --script -- mklabel gpt'
+			res = system(cmd)
+			cmd = 'parted ' + self.disk_path + ' --align optimal --script -- mkpart primary 1 100%'
+			res = system(cmd)
+
 		if not self.checkPartionPath(self.partitionPath("1")):
 			print "no exist : ", self.partitionPath("1")
 			return 1
 		return (res >> 8)
 
 	def mkfs(self):
-		cmd = "mkfs.ext3 "
+		cmd = "mkfs.ext4 "
 		if self.diskSize() > 4 * 1024:
 			cmd += "-T largefile "
 		cmd += "-m0 -O dir_index " + self.partitionPath("1")
@@ -276,8 +284,17 @@ class Harddisk:
 
 	def fsck(self):
 		# We autocorrect any failures
-		# TODO: we could check if the fs is actually ext3
-		cmd = "fsck.ext3 -f -p " + self.partitionPath("1")
+		
+		cmd = 'parted ' + self.disk_path + ' --script print > /tmp/ninfo2'
+		res = system(cmd)
+		cmd = "fsck.ext4 -f -p " + self.partitionPath("1")
+		if fileExists("/tmp/ninfo2"):
+			f = open("/tmp/ninfo2",'r')
+			for line in f.readlines():
+				if line.find('ext3') != -1:
+					cmd = "fsck.ext3 -f -p " + self.partitionPath("1")
+			f.close()
+		
 		res = system(cmd)
 		return (res >> 8)
 
