@@ -135,6 +135,8 @@ def InitUsageConfig():
 	config.seek.speeds_backward.addNotifier(updateEnterBackward, immediate_feedback = False)
 
 	config.subtitles = ConfigSubsection()
+	
+	config.subtitles.subtitle_fontsize  = ConfigSelection(choices = ["16", "18", "20", "22", "24", "26", "28", "30", "32", "34", "36", "38", "40", "42", "44", "46", "48", "50", "52", "54"], default = "34")
 	subtitle_delay_choicelist = []
 	for i in range(-900000, 1845000, 45000):
 		if i == 0:

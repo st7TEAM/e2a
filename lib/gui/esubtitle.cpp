@@ -135,6 +135,13 @@ int eSubtitleWidget::event(int event, void *data, void *data2)
 
 		getStyle(style);
 		eWidget::event(event, data, data2);
+		
+		std::string configvalue;
+		int fontsize = 34;
+		if (!ePythonConfigQuery::getConfigValue("config.subtitles.subtitle_fontsize", configvalue))
+		{
+			fontsize = atoi(configvalue.c_str());
+		}
 
 		if (m_pixmap)
 		{
@@ -144,6 +151,9 @@ int eSubtitleWidget::event(int event, void *data, void *data2)
 		} else if (m_page_ok)
 		{
 			int elements = m_page.m_elements.size();
+			
+			subtitleStyles[Subtitle_TTX].font->pointSize=fontsize;
+			
 			painter.setFont(subtitleStyles[Subtitle_TTX].font);
 			for (int i=0; i<elements; ++i)
 			{
@@ -187,6 +197,9 @@ int eSubtitleWidget::event(int event, void *data, void *data2)
 				text = replace_all(text, "&apos;", "'");
 				text = replace_all(text, "&quot;", "\"");
 				text = replace_all(text, "&amp;", "&");
+				
+				subtitleStyles[face].font->pointSize=fontsize;
+			
 				painter.setFont(subtitleStyles[face].font);
 				eRect &area = element.m_area;
 				eRect shadow = area;

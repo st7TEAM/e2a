@@ -62,6 +62,7 @@
 			<item level="2" text="Composition of the recording filenames">config.recording.filename_composition</item>
 		</setup>
 		<setup key="subtitlesetup" title="Subtitle settings">
+		<item level="2" text="Subtitle font size" description="Configure the font size of the subtitles.">config.subtitles.subtitle_fontsize</item>
 		<item level="2" text="Subtitle delay when timing lacks" description="Configure the subtitle delay when timing information is not available.">config.subtitles.subtitle_noPTSrecordingdelay</item>
 		<item level="2" text="Subtitle delay when timing is bad" description="Configure an additional delay to improve subtitle synchronisation.">config.subtitles.subtitle_bad_timing_delay</item>
 	</setup>
