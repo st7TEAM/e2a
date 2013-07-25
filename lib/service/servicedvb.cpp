@@ -3059,42 +3059,44 @@ void eDVBServicePlay::newSubtitlePage(const eDVBTeletextSubtitlePage &page)
 {
 	if (m_subtitle_widget)
 	{
-		int subtitledelay = 0;
-		std::string configvalue;
-		if (!page.m_have_pts && (m_is_pvr || m_timeshift_enabled))
+		pts_t pos = 0;
+		if (m_decoder)
+			m_decoder->getPTS(0, pos);
+//		eDebug("got new subtitle page %lld %lld %d", pos, page.m_pts, page.m_have_pts);
+		if ( !page.m_have_pts && (m_is_pvr || m_timeshift_enabled))
 		{
 			eDebug("Subtitle without PTS and recording");
-			subtitledelay = 315000;
+
+			std::string configvalue;
+			int subtitledelay = 315000;
 			if (!ePythonConfigQuery::getConfigValue("config.subtitles.subtitle_noPTSrecordingdelay", configvalue))
 			{
 				subtitledelay = atoi(configvalue.c_str());
 			}
-		}
-		else
-		{
-			/* check the setting for subtitle delay in live playback, either with pts, or without pts */
-			if (!ePythonConfigQuery::getConfigValue("config.subtitles.subtitle_bad_timing_delay", configvalue))
-			{
-				subtitledelay = atoi(configvalue.c_str());
-			}
-		}
 
-		if (!page.m_have_pts || subtitledelay)
-		{
-			/* we need to modify the page timing */
-			eDVBTeletextSubtitlePage tmppage = page;
-			if (!page.m_have_pts && m_decoder)
-			{
-				m_decoder->getPTS(0, tmppage.m_pts);
-				tmppage.m_have_pts = true;
-			}
-			tmppage.m_pts += subtitledelay;
+			eDVBTeletextSubtitlePage tmppage;
+			tmppage = page;
+			tmppage.m_have_pts = true;
+			tmppage.m_pts = pos + subtitledelay;
 			m_subtitle_pages.push_back(tmppage);
 		}
 		else
 		{
-			/* use the unmodified page */
-			m_subtitle_pages.push_back(page);
+			int subtitledelay = 0;
+			std::string configvalue;
+			if(!ePythonConfigQuery::getConfigValue("config.subtitles.subtitle_bad_timing_delay", configvalue))
+			{
+				subtitledelay = atoi(configvalue.c_str());
+			}
+			if (subtitledelay != 0)
+			{
+				eDVBTeletextSubtitlePage tmppage;
+				tmppage = page;
+				tmppage.m_pts += subtitledelay;
+				m_subtitle_pages.push_back(tmppage);
+			}
+			else
+				m_subtitle_pages.push_back(page);
 		}
 		checkSubtitleTiming();
 	}
@@ -3102,19 +3104,9 @@ void eDVBServicePlay::newSubtitlePage(const eDVBTeletextSubtitlePage &page)
 
 void eDVBServicePlay::checkSubtitleTiming()
 {
-	pts_t pos = 0;
 //	eDebug("checkSubtitleTiming");
 	if (!m_subtitle_widget)
 		return;
-	if (m_subtitle_pages.empty() && m_dvb_subtitle_pages.empty())
-	{
-		return;
-	}
-	if (m_decoder)
-	{
-		m_decoder->getPTS(0, pos);
-	}
-
 	while (1)
 	{
 		enum { TELETEXT, DVB } type;
@@ -3136,10 +3128,15 @@ void eDVBServicePlay::checkSubtitleTiming()
 		else
 			return;
 
+		pts_t pos = 0;
+
+		if (m_decoder)
+			m_decoder->getPTS(0, pos);
+
 //		eDebug("%lld %lld", pos, show_time);
 		int diff = show_time - pos;
 
-		if ((diff / 90) < 20 || diff > 1800000)
+		if ((diff/90)<20 || diff > 1800000 || (type == TELETEXT && !page.m_have_pts))
 		{
 			if (type == TELETEXT)
 			{
@@ -3201,6 +3198,7 @@ void eDVBServicePlay::newDVBSubtitlePage(const eDVBSubtitlePage &p)
 		checkSubtitleTiming();
 	}
 }
+
 
 int eDVBServicePlay::getAC3Delay()
 {
