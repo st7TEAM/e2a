@@ -73,60 +73,63 @@ class DeliteSettings(Screen):
 			self.session.open(DeliteDevicesPanel)
 		elif self.sel == 4:
 			from Screens.Setup import Setup
-			self.session.open(Setup, "autolanguagesetup")
+			self.session.open(Setup, "subtitlesetup")
 		elif self.sel == 5:
-			self.session.open(Bp_UsbFormat)
+			from Screens.Setup import Setup
+			self.session.open(Setup, "autolanguagesetup")
 		elif self.sel == 6:
-			self.session.open(DeliteKernelModules)
+			self.session.open(Bp_UsbFormat)
 		elif self.sel == 7:
+			self.session.open(DeliteKernelModules)
+		elif self.sel == 8:
 			from BhInadyn import DeliteInadyn
 			self.session.open(DeliteInadyn)
-		elif self.sel == 8:
+		elif self.sel == 9:
 			from BhSwap import DeliteSwap
 			self.session.open(DeliteSwap)
-		elif self.sel == 9:
+		elif self.sel == 10:
 			from BhHdd import DeliteHdd
 			self.session.open(DeliteHdd)
-		elif self.sel == 10:
+		elif self.sel == 11:
 			from BhNet import DeliteOpenvpn
 			self.session.open(DeliteOpenvpn)
-		elif self.sel == 11:
+		elif self.sel == 12:
 			from BhNet import DeliteSamba
 			self.session.open(DeliteSamba)
-		elif self.sel == 12:
+		elif self.sel == 13:
 			from BhNet import BhNfsServer
 			self.session.open(BhNfsServer)
-		elif self.sel == 13:
+		elif self.sel == 14:
 			from BhNet import DeliteTelnet
 			self.session.open(DeliteTelnet)
-		elif self.sel == 14:
+		elif self.sel == 15:
 			from BhNet import DeliteFtp
 			self.session.open(DeliteFtp)
-		elif self.sel == 15:
+		elif self.sel == 16:
 			if not fileExists("/usr/bin/djmount"):
 				self.session.open(MessageBox, _("Please enable this application in BlackHole Speed Up panel before to continue."), MessageBox.TYPE_INFO)
 			else:
 				from BhNet import BhDjmount
 				self.session.open(BhDjmount)
-		elif self.sel == 16:
+		elif self.sel == 17:
 			if not fileExists("/usr/bin/mediatomb"):
 				self.session.open(MessageBox, _("Please enable this application in BlackHole Speed Up panel before to continue."), MessageBox.TYPE_INFO)
 			else:
 				from BhNet import BhMediatomb
 				self.session.open(BhMediatomb)
-		elif self.sel == 17:
+		elif self.sel == 18:
 			if not fileExists("/usr/bin/minidlna"):
 				self.session.open(MessageBox, _("Please enable this application in BlackHole Speed Up panel before to continue."), MessageBox.TYPE_INFO)
 			else:
 				from BhNet import BhMinidlna
 				self.session.open(BhMinidlna)
-		elif self.sel == 18:
+		elif self.sel == 19:
 			from BhNet import BhPcsc
 			self.session.open(BhPcsc)
-		elif self.sel == 19:
+		elif self.sel == 20:
 			from BhNet import BhTunerServer
 			self.session.open(BhTunerServer)
-		elif self.sel == 20:
+		elif self.sel == 21:
 			from BhNet import BhNetBrowser
 			self.session.open(BhNetBrowser)
 		else:
@@ -172,120 +175,127 @@ class DeliteSettings(Screen):
 		
 		mypixmap = mypath + "icons/infopanel_osd.png"
 		png = LoadPixmap(mypixmap)
-		name = _("Auto language selection settings")
+		name = _("Subtitle settings")
 		idx = 4
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_osd.png"
+		png = LoadPixmap(mypixmap)
+		name = _("Auto language selection settings")
+		idx = 5
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/swapsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Usb Format Wizard")
-		idx = 5
+		idx = 6
 		res = (name, png, idx)
 		self.list.append(res)
 				
 		mypixmap = mypath + "icons/infopanel_kmod.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Kernel Modules Manager")
-		idx = 6
+		idx = 7
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/inadynsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Inadyn Settings")
-		idx = 7
+		idx = 8
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/swapsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Swap File Settings")
-		idx = 8
+		idx = 9
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/hdsettings.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Hard Disk Settings")
-		idx = 9
+		idx = 10
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_vpn.png"
 		png = LoadPixmap(mypixmap)
 		name = _("OpenVpn Panel")
-		idx = 10
+		idx = 11
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Samba/Cifs Panel")
-		idx = 11
+		idx = 12
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_nfs.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Nfs Server Panel")
-		idx = 12
+		idx = 13
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_telnet.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Telnet Panel")
-		idx = 13
+		idx = 14
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_ftp.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Ftp Panel")
-		idx = 14
-		res = (name, png, idx)
-		self.list.append(res)
-		
-		mypixmap = mypath + "icons/infopanel_samba.png"
-		png = LoadPixmap(mypixmap)
-		name = _("UPnP Client Djmount")
 		idx = 15
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = _("UPnP Server Mediatomb")
+		name = _("UPnP Client Djmount")
 		idx = 16
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = _("UPnP Server Minidlna")
+		name = _("UPnP Server Mediatomb")
 		idx = 17
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = _("Pcsc Panel")
+		name = _("UPnP Server Minidlna")
 		idx = 18
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/infopanel_samba.png"
 		png = LoadPixmap(mypixmap)
-		name = _("Tuner Server")
+		name = _("Pcsc Panel")
 		idx = 19
+		res = (name, png, idx)
+		self.list.append(res)
+		
+		mypixmap = mypath + "icons/infopanel_samba.png"
+		png = LoadPixmap(mypixmap)
+		name = _("Tuner Server")
+		idx = 20
 		res = (name, png, idx)
 		self.list.append(res)
 		
 		mypixmap = mypath + "icons/mountwizard.png"
 		png = LoadPixmap(mypixmap)
 		name = _("Network Browse & Mountpoints")
-		idx = 20
+		idx = 21
 		res = (name, png, idx)
 		self.list.append(res)
 		

@@ -65,6 +65,9 @@
 		<item level="0" text="Subtitle font size" description="Configure the font size of the subtitles.">config.subtitles.subtitle_fontsize</item>
 		<item level="0" text="Subtitle delay when timing lacks" description="Configure the subtitle delay when timing information is not available.">config.subtitles.subtitle_noPTSrecordingdelay</item>
 		<item level="0" text="Subtitle delay when timing is bad" description="Configure an additional delay to improve subtitle synchronisation.">config.subtitles.subtitle_bad_timing_delay</item>
+		<item level="0" text="Yellow DVB subtitles">config.subtitles.dvb_subtitles_yellow</item>
+		<item level="0" text="Centered DVB subtitles">config.subtitles.dvb_subtitles_centered</item>
+		<item level="0" text="DVB subtitle black transparency">config.subtitles.dvb_subtitles_backtrans</item>
 	</setup>
 		<setup key="autolanguagesetup" title="Auto language selection settings">
 			<item level="0" text="Audio language selection 1">config.autolanguage.audio_autoselect1</item>
