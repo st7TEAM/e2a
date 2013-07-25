@@ -3060,15 +3060,23 @@ void eDVBServicePlay::newSubtitlePage(const eDVBTeletextSubtitlePage &page)
 	if (m_subtitle_widget)
 	{
 		int subtitledelay = 0;
+		std::string configvalue;
 		if (!page.m_have_pts && (m_is_pvr || m_timeshift_enabled))
 		{
 			eDebug("Subtitle without PTS and recording");
-			subtitledelay = eConfigManager::getConfigIntValue("config.subtitles.subtitle_noPTSrecordingdelay", 315000);
+			subtitledelay = 315000;
+			if (!ePythonConfigQuery::getConfigValue("config.subtitles.subtitle_noPTSrecordingdelay", configvalue))
+			{
+				subtitledelay = atoi(configvalue.c_str());
+			}
 		}
 		else
 		{
 			/* check the setting for subtitle delay in live playback, either with pts, or without pts */
-			subtitledelay = eConfigManager::getConfigIntValue("config.subtitles.subtitle_bad_timing_delay", 0);
+			if (!ePythonConfigQuery::getConfigValue("config.subtitles.subtitle_bad_timing_delay", configvalue))
+			{
+				subtitledelay = atoi(configvalue.c_str());
+			}
 		}
 
 		if (!page.m_have_pts || subtitledelay)
@@ -3160,8 +3168,12 @@ void eDVBServicePlay::newDVBSubtitlePage(const eDVBSubtitlePage &p)
 			m_decoder->getPTS(0, pos);
 		if ( abs(pos-p.m_show_time)>1800000 && (m_is_pvr || m_timeshift_enabled))
 		{
-			eDebug("Subtitle without PTS and recording");
-			int subtitledelay = eConfigManager::getConfigIntValue("config.subtitles.subtitle_noPTSrecordingdelay", 315000);
+			std::string configvalue;
+			int subtitledelay = 315000;
+			if (!ePythonConfigQuery::getConfigValue("config.subtitles.subtitle_noPTSrecordingdelay", configvalue))
+			{
+				subtitledelay = atoi(configvalue.c_str());
+			}
 
 			eDVBSubtitlePage tmppage;
 			tmppage = p;
@@ -3170,7 +3182,12 @@ void eDVBServicePlay::newDVBSubtitlePage(const eDVBSubtitlePage &p)
 		}
 		else
 		{
-			int subtitledelay = eConfigManager::getConfigIntValue("config.subtitles.subtitle_bad_timing_delay", 0);
+			int subtitledelay = 0;
+			std::string configvalue;
+			if(!ePythonConfigQuery::getConfigValue("config.subtitles.subtitle_bad_timing_delay", configvalue))
+			{
+				subtitledelay = atoi(configvalue.c_str());
+			}
 			if (subtitledelay != 0)
 			{
 				eDVBSubtitlePage tmppage;
