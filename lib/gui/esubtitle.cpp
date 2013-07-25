@@ -1,6 +1,7 @@
 #include <lib/gui/esubtitle.h>
 #include <lib/gdi/grc.h>
 #include <lib/base/estring.h>
+#include <lib/base/nconfig.h> // access to python config
 
 	/*
 		ok, here's much room for improvements.
