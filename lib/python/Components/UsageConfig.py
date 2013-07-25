@@ -134,6 +134,17 @@ def InitUsageConfig():
 
 	config.seek.speeds_backward.addNotifier(updateEnterBackward, immediate_feedback = False)
 
+	config.subtitles = ConfigSubsection()
+	subtitle_delay_choicelist = []
+	for i in range(-900000, 1845000, 45000):
+		if i == 0:
+			subtitle_delay_choicelist.append(("0", _("No delay")))
+		else:
+			subtitle_delay_choicelist.append(("%d" % i, "%2.1f sec" % (i / 90000.)))
+	config.subtitles.subtitle_noPTSrecordingdelay = ConfigSelection(default = "315000", choices = subtitle_delay_choicelist)
+	config.subtitles.subtitle_bad_timing_delay = ConfigSelection(default = "0", choices = subtitle_delay_choicelist)
+	
+	
 	config.autolanguage = ConfigSubsection()
 	audio_language_choices=[
 		("---", _("None")),

@@ -61,6 +61,10 @@
 			<item level="2" text="Limited character set for recording filenames">config.recording.ascii_filenames</item>
 			<item level="2" text="Composition of the recording filenames">config.recording.filename_composition</item>
 		</setup>
+		<setup key="subtitlesetup" title="Subtitle settings">
+		<item level="2" text="Subtitle delay when timing lacks" description="Configure the subtitle delay when timing information is not available.">config.subtitles.subtitle_noPTSrecordingdelay</item>
+		<item level="2" text="Subtitle delay when timing is bad" description="Configure an additional delay to improve subtitle synchronisation.">config.subtitles.subtitle_bad_timing_delay</item>
+	</setup>
 		<setup key="autolanguagesetup" title="Auto language selection settings">
 			<item level="1" text="Audio language selection 1">config.autolanguage.audio_autoselect1</item>
 			<item level="1" text="Audio language selection 2">config.autolanguage.audio_autoselect2</item>
