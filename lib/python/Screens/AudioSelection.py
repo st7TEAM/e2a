@@ -264,8 +264,11 @@ class AudioSelection(Screen, ConfigListScreen):
 			self.colorkey(1)
 
 	def keyYellow(self):
-		if self["key_yellow"].getBoolean():
-			self.colorkey(2)
+#		if self["key_yellow"].getBoolean():
+#			self.colorkey(2)
+		from Screens.Subtitles import Subtitles
+		self.session.open(Subtitles)
+
 
 	def keyBlue(self):
 		if self["key_blue"].getBoolean():
