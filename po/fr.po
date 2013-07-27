@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-05-25 13:55+0100\n"
+"PO-Revision-Date: 2013-07-07 09:37+0100\n"
 "Last-Translator: niglou\n"
 "Language-Team: french\n"
 "MIME-Version: 1.0\n"
@@ -1029,6 +1029,9 @@ msgstr "Tout le temps"
 msgid "All non-repeating timers"
 msgstr "Toutes les tempo non-répétitives"
 
+msgid "Allow hearing impaired subtitles"
+msgstr "Autoriser sous-titres non appairés"
+
 msgid "Allow subtitle language to equal audio language"
 msgstr "Permettre sous-titres même langue que l'audio"
 
@@ -2040,6 +2043,9 @@ msgstr "Gérer Cron"
 
 msgid "Black Hole Cron Setup"
 msgstr "Paramètres Cron"
+
+msgid "Black Hole Devices Manager"
+msgstr "Gestionnaire Périphériques BH"
 
 msgid "Black Hole Devices Mountpoints Setup"
 msgstr "Paramétrage des points de montage"
@@ -4447,7 +4453,7 @@ msgstr ""
 "\n"
 
 msgid "Filesystem Check"
-msgstr "Vérification fichiers sytème"
+msgstr "Vérification fichiers système"
 
 msgid "Filesystem contains uncorrectable errors"
 msgstr "Fichiers système contiennent des erreurs incorrigibles"
@@ -4806,6 +4812,13 @@ msgstr "Redémarrage de l'interface graphique"
 
 msgid ""
 "Gui will be now hard restarted to complete package installation.\n"
+"Press ok to continue"
+msgstr ""
+"L'interface doit redémarrer pour terminer l'installation. \n"
+"Presser OK pour continuer"
+
+msgid ""
+"Gui will be now restarted to complete package installation.\n"
 "Press ok to continue"
 msgstr ""
 "L'interface doit redémarrer pour terminer l'installation. \n"
@@ -5462,6 +5475,9 @@ msgstr "Garder"
 
 msgid "Kernel Modules Manager"
 msgstr "Gérer modules Kernel"
+
+msgid "Kernel Modules Setup"
+msgstr "Param. Modules Kernel"
 
 msgid "Kerni's BrushedAlu-HD skin"
 msgstr "Thème Kerni BrushedAlu-HD"
@@ -6130,7 +6146,7 @@ msgstr ""
 "Démonté"
 
 msgid "Mountpoints"
-msgstr "Points de montage"
+msgstr "Pts de montage"
 
 msgid "Mountpoints management"
 msgstr "Gestionnaire points montage"
@@ -7798,11 +7814,20 @@ msgstr "Transpondeur prédéfini"
 msgid "Prefer AC3"
 msgstr "Préférence AC3"
 
+msgid "Prefer DVB-grafical subtitles"
+msgstr "Préférer sous-titres DVB-Graphiques"
+
 msgid "Prefer DVB-graphical subtitles"
 msgstr "Préférence sous-titres DVB-graphiques"
 
 msgid "Prefer audio stream stored by service"
 msgstr "Préférence audio par service"
+
+msgid "Prefer hearing impaired subtitles"
+msgstr "Préférer sous-titres non appairés"
+
+msgid "Prefer subtitle stored by service"
+msgstr "Préférer sous-titres stockés par service"
 
 msgid "Prefer subtitles for hearing impaired"
 msgstr "Préférence sous-titres différents de l'audio"
@@ -9114,6 +9139,9 @@ msgstr "Référence service"
 msgid "Service scan"
 msgstr "Analyse des services"
 
+msgid "Service searching"
+msgstr "Recherche de service"
+
 msgid ""
 "Service unavailable!\n"
 "Check tuner configuration!"
@@ -9128,7 +9156,7 @@ msgid "Services"
 msgstr "Services"
 
 msgid "Set Acoustic"
-msgstr "Régler acoustique"
+msgstr "Acoustique"
 
 msgid "Set Active"
 msgstr "Activer"
@@ -9252,7 +9280,7 @@ msgid "Show Info"
 msgstr "Montrer infos"
 
 msgid "Show Log"
-msgstr "Montrer Log"
+msgstr "Voir Log"
 
 msgid "Show Message when Recording starts"
 msgstr "Montrer message en démarrant l'enregistrement"
@@ -12806,6 +12834,19 @@ msgstr "Votre démodulateur reboote"
 
 msgid "Your receiver is shutting down"
 msgstr "Votre démodulateur va s'éteindre"
+
+msgid ""
+"Your setopbox is now ready to use.\n"
+"\n"
+"Your internet connection is working now.\n"
+"\n"
+"Please press OK to continue."
+msgstr ""
+"Votre Vu+ est maintenant prêt à l'utilisation.\n"
+"\n"
+"Votre connection internet fonctionne maintenant.\n"
+"\n"
+"Veuillez presser OK pour continuer."
 
 msgid ""
 "Your wireless LAN internet connection could not be started!\n"

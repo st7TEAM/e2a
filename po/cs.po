@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-06-27 18:31+0100\n"
+"PO-Revision-Date: 2013-07-20 12:37+0100\n"
 "Last-Translator: Paolino <pliesko1@gmail.com>\n"
 "Language-Team: Black Hole <vuplus-community.net>\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 "Language: cs\n"
+
+msgid "Service searching"
+msgstr "Vyhledávání stanic"
+
+msgid "Black Hole Devices Manager"
+msgstr "Black Hole správce zařízení"
+
+msgid "Kernel Modules Setup"
+msgstr "Nastavení modulů jádra"
+
+msgid "Allow hearing impaired subtitles"
+msgstr "Povol titulky pro sluchově postižené"
+
+msgid "Prefer hearing impaired subtitles"
+msgstr "Upřednostni titulky pro sluchově postižené"
+
+msgid "Prefer DVB-grafical subtitles"
+msgstr "Upřednostni DVB-grafické titulky"
+
+msgid "Prefer subtitle stored by service"
+msgstr "Upřednostni titulky stanice"
 
 #
 msgid "Build server"
@@ -2194,7 +2215,7 @@ msgid "Smart Card model type error"
 msgstr "Chyba typu modelu Smart Card"
 
 msgid "Space"
-msgstr "Místo"
+msgstr "Mezerník"
 
 msgid "Standby Now"
 msgstr "Uspat nyní"
@@ -5737,7 +5758,7 @@ msgstr "Nejdřív vygeneruj styl vzhledu pomocí modulu Ai.HD-Control."
 
 #
 msgid "Flash"
-msgstr "Flash"
+msgstr "Flashni"
 
 #
 msgid "Flashing failed"
@@ -6920,7 +6941,7 @@ msgstr "Editor přípojných bodů"
 
 #
 msgid "Mounts management"
-msgstr "Správa přípojných bodů"
+msgstr "Správa příp. bodů"
 
 #
 msgid "Move Picture in Picture"
@@ -8691,7 +8712,7 @@ msgstr "Požadovaný typ média:"
 
 #
 msgid "Rescan"
-msgstr "Rescan"
+msgstr "Prohl. znova"
 
 #
 msgid "Reset"
@@ -8987,7 +9008,7 @@ msgstr "Prohledávání souborů..."
 
 #
 msgid "Scan NFS share"
-msgstr "Prohledávat NFS sdílení"
+msgstr "Prohl. NFS sdílení"
 
 #
 msgid "Scan QAM128"
@@ -9078,7 +9099,7 @@ msgstr "Skenování zařízení pro přehratelné mediální soubory"
 
 #
 msgid "Scan range"
-msgstr "Rozsah vyhledávání"
+msgstr "Rozsah vyhl."
 
 msgid ""
 "Scan your network for wireless access points and connect to them using your "
@@ -13545,7 +13566,7 @@ msgstr ""
 
 msgid "Sorry, Meoboot can be installed or upgraded only when booted from Flash"
 msgstr ""
-"Je mi líto, Meoboot může být instalován nebo aktualizován pouze tehdy, když "
+"Je nám líto, Meoboot může být instalován nebo aktualizován pouze tehdy, když "
 "je spuštěn z Flash"
 
 msgid ""
@@ -15993,10 +16014,10 @@ msgid "Pcsc Client Disabled."
 msgstr "Pcsc klient zakázán."
 
 msgid "Set Acoustic"
-msgstr "Nastav Acoustic"
+msgstr "Nast. Acoustic"
 
 msgid "Set Standby"
-msgstr "Nastav Standby"
+msgstr "Nast. Standby"
 
 msgid "Sorry, Hard Disk not Found."
 msgstr "Je mi líto, pevný disk nebyl nalezen."

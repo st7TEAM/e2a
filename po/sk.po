@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-06-27 18:29+0100\n"
+"PO-Revision-Date: 2013-07-20 12:35+0100\n"
 "Last-Translator: Paolino <pliesko1@gmail.com>\n"
 "Language-Team: Black Hole\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 "Language: sk\n"
+
+msgid "Service searching"
+msgstr "Vyhľadávanie staníc"
+
+msgid "Black Hole Devices Manager"
+msgstr "Black Hole správca zariadení"
+
+msgid "Kernel Modules Setup"
+msgstr "Nastavenie modulov kernelu"
+
+msgid "Allow hearing impaired subtitles"
+msgstr "Povoľ titulky pre sluchovo postihnutých"
+
+msgid "Prefer hearing impaired subtitles"
+msgstr "Uprednostni titulky pre sluchovo postihnutých"
+
+msgid "Prefer DVB-grafical subtitles"
+msgstr "Uprednostni grafické DVB titulky"
+
+msgid "Prefer subtitle stored by service"
+msgstr "Uprednostni titulky stanice"
 
 #
 msgid "Build server"
@@ -2406,7 +2427,7 @@ msgstr "Chyba typu modelu Smart Card"
 
 #
 msgid "Space"
-msgstr "Miesto"
+msgstr "MEDZERNÍK"
 
 #
 msgid "Standby Now"
@@ -5477,7 +5498,7 @@ msgid "First generate your skin-style with the Ai.HD-Control plugin."
 msgstr "Najprv vytvor štýl skinu ovládacím pluginom Ai.HD."
 
 msgid "Flash"
-msgstr "Flash"
+msgstr "Flashnúť"
 
 msgid "Flashing failed"
 msgstr "Flashnutie zlyhalo"
@@ -6441,7 +6462,7 @@ msgid "Mounts editor"
 msgstr "Editor prístupových bodov"
 
 msgid "Mounts management"
-msgstr "Správa prístupových bodov"
+msgstr "Správa príst. bodov"
 
 msgid "Move Picture in Picture"
 msgstr "Premiestniť obraz v obraze"
@@ -7864,7 +7885,7 @@ msgid "Required medium type:"
 msgstr "Požadovaný druh média:"
 
 msgid "Rescan"
-msgstr "Znova prehľadať"
+msgstr "Znova prehľ."
 
 msgid "Reset"
 msgstr "Resetovať"
@@ -8103,7 +8124,7 @@ msgid "Scan Files..."
 msgstr "Vyhľadať súbory..."
 
 msgid "Scan NFS share"
-msgstr "Prehľadať zdieľanie NFS"
+msgstr "Prehľ. zdieľ. NFS"
 
 msgid "Scan QAM128"
 msgstr "Prehľadať QAM128"
@@ -8172,7 +8193,7 @@ msgid "Scan devices for playable media files"
 msgstr "Nájsť na zariadeniach prehrateľné súbory"
 
 msgid "Scan range"
-msgstr "Rozsah vyhľadávania"
+msgstr "Rozsah vyhľ."
 
 msgid ""
 "Scan your network for wireless access points and connect to them using your "
@@ -14284,10 +14305,10 @@ msgid "Pcsc Client Disabled."
 msgstr "Pcsc klient zakázaný."
 
 msgid "Set Acoustic"
-msgstr "Nastav Acoustic"
+msgstr "Nast. Acoustic"
 
 msgid "Set Standby"
-msgstr "Nastav Standby"
+msgstr "Nast. Standby"
 
 msgid "Sorry, Hard Disk not Found."
 msgstr "Je mi ľúto, nenájdený pevný disk."

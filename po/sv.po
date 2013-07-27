@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-06-04 14:00+0100\n"
+"PO-Revision-Date: 2013-07-22 00:17+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,2470 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Service searching"
+msgstr "kanalsökning"
+
+msgid "Black Hole Devices Manager"
+msgstr "BH Enhetshanterare"
+
+msgid "Kernel Modules Setup"
+msgstr "Inställningar för startmoduler"
+
+msgid "Allow hearing impaired subtitles"
+msgstr "Tillåt textning för hörselskadade"
+
+msgid "Prefer hearing impaired subtitles"
+msgstr "Välj undertext för hörselskadade"
+
+msgid "Prefer DVB-grafical subtitles"
+msgstr "Välj DVB-grafisk undertext"
+
+msgid "Prefer subtitle stored by service"
+msgstr "Välj undertext lagrad av tjänsten"
+
+msgid "Red button..."
+msgstr "Röd knapp..."
+
+msgid "General Dolby Digital delay(ms)"
+msgstr "Generell Dolby Digital fördröjning(ms)"
+
+msgid "General PCM delay(ms)"
+msgstr "Generell PCM fördröjning(ms)"
+
+msgid "Zap"
+msgstr "Zappa"
+
+msgid "Disable Subtitles"
+msgstr "Avvaktivera undertext"
+
+msgid "Autoresolution..."
+msgstr "Autoupplösning..."
+
+msgid "Your receiver is shutting down"
+msgstr "Din box stängs av"
+
+msgid "Your receiver is rebooting"
+msgstr "Din box startas om"
+
+msgid "The user interface of your receiver is rebooting"
+msgstr "Användargränssnittet på din box startas om"
+
+msgid "The user interface of your receiver is restarting"
+msgstr "Användargränssnittet på din box startas om"
+
+msgid "\tMount: "
+msgstr "\tMontera: "
+
+msgid ""
+"\n"
+"\n"
+"    Ecm Info not available."
+msgstr ""
+"\n"
+"\n"
+"    Ecm Info inte tillgänglig."
+
+msgid ""
+"\n"
+"Black Hole Weather"
+msgstr ""
+"\n"
+"Black Hole Väder"
+
+msgid "  Standby Now"
+msgstr " Viloläge nu"
+
+msgid ""
+" Fail-%d\n"
+"Press 'EXIT' button!"
+msgstr ""
+" Fel-%d\n"
+"Tryck EXIT knappen!"
+
+msgid " Standby Now"
+msgstr " Viloläge nu"
+
+msgid " seconds"
+msgstr " sekunder"
+
+msgid " tuner."
+msgstr " tuner."
+
+msgid ""
+"!!(Empty)\n"
+"Please, Input to the "
+msgstr ""
+"!!(tom)\n"
+"Lägg in till "
+
+msgid "%d  CAMs Installed"
+msgstr "%d CAM Installerade"
+
+msgid "%d providers updated"
+msgstr "%d leverantörer uppdaterade"
+
+msgid "%s channels"
+msgstr "%s kanaler"
+
+msgid "%s of %s"
+msgstr "%s av %s"
+
+msgid "1    Epg Search"
+msgstr "1  Sök EPG"
+
+msgid "1    Settings"
+msgstr "1  Inställningar"
+
+msgid "1. Load a Mobile Broadband Device"
+msgstr "1. Ladda enhet med Mobilt bredband"
+
+msgid "2    Service Info"
+msgstr "2  Kanalinfo"
+
+msgid "2    Single Epg"
+msgstr "2  Singel EPG"
+
+msgid "2. Set up a Mobile Broadband Device"
+msgstr "2. Ställ in enhet för Mobilt bredband"
+
+msgid "3    About"
+msgstr "3  Om"
+
+msgid "3    MultiG Epg"
+msgstr "3   Multi EPG"
+
+msgid "3. Generate a WvDial profile"
+msgstr "3. Generera en WvDial profil"
+
+msgid "4    Last Search"
+msgstr "4 Senaste sökning"
+
+msgid "4. Attempt to Connect"
+msgstr "4. Försöker ansluta"
+
+msgid "5. Done"
+msgstr "5. Klart"
+
+msgid "A/V settings"
+msgstr "A/V inställningar"
+
+msgid "AC3/DTS downmix"
+msgstr "AC3/DTS nedmixning"
+
+msgid "Action for inactivity:"
+msgstr "Åtgärd vid inaktivitet:"
+
+msgid "Addon Succesfully Removed."
+msgstr "Appen avinstallerad."
+
+msgid "Addons Manager"
+msgstr "Apphanterare"
+
+msgid "Addons Parental Control"
+msgstr "Föräldrakontroll för Appar"
+
+msgid "Addons access pin"
+msgstr "PIN kod för Appar"
+
+msgid "Addons access protected"
+msgstr "Appar accessskyddade"
+
+msgid "Addons parental control setup"
+msgstr "Ställ in föräldrakontroll för Appar"
+
+msgid "Adress:"
+msgstr "Adress"
+
+msgid "Aliases db size: %s"
+msgstr "DB storlek för Alias %s"
+
+msgid "Allow subtitle language to equal audio language"
+msgstr "Tillåt textning även vid samma språk på ljud"
+
+msgid "Allow subtitles for hearing impaired"
+msgstr "Tillåt textning för hörselskadade"
+
+msgid "Alternative numbering mode"
+msgstr "Alternativt numreringsläge"
+
+msgid "An EPG downloader"
+msgstr " En nedladdare för EPG"
+
+msgid "Are you sure you want to remove the Package:\n"
+msgstr "Är du säker på att du vill ta bort paketet:\n"
+
+msgid "Attempt to recover lost mounts (in background)"
+msgstr "Försöker att återställa tappade monteringar"
+
+msgid "Auto language selection"
+msgstr "Automatisk språkvalinställning"
+
+msgid "Auto language settings"
+msgstr "Automatisk språkvalinställning"
+
+msgid "AutoBackup"
+msgstr "AutoBackup"
+
+msgid "AutoBackup Configuration"
+msgstr "Inställning för AutoBackup"
+
+msgid "AutoShutDown"
+msgstr "AutoStängAv"
+
+msgid "AutoShutDown Setup"
+msgstr "Konfigurera AutoStängAv"
+
+msgid "AutoShutDown settings"
+msgstr "Inställningar för AutoStängAv"
+
+msgid "AutoShutDown: %s ?"
+msgstr "AutoStängAv: %s ?"
+
+msgid "Autocam Manager"
+msgstr "Inställning av AutoCAM"
+
+msgid "Automatic Epg Backup: "
+msgstr "Automatisk EPG Backup: "
+
+msgid "Automatic start time"
+msgstr "Automatisk starttid"
+
+msgid "Automatically reboot the decoder after a manual download"
+msgstr "Starta om boxen automatiskt efter manuell nedladdning"
+
+msgid "Automatically reboot the decoder after a scheduled download"
+msgstr "\"Starta om boxen automatiskt efter schemalagd nedladdning\""
+
+msgid "BH  Devices Manager"
+msgstr "BH Enhetshanterare"
+
+msgid "BH 3G Modem Manager"
+msgstr "BH 3G Modemhanterare"
+
+msgid "BH 3G Modem Manager Config"
+msgstr "BH 3G Modemhanterare Konfiguration"
+
+msgid "BH 3G Modem Manager Config Edit"
+msgstr "BH 3G Modemhanterare Ändra konfiguration"
+
+msgid "BH About"
+msgstr "BH Om"
+
+msgid "BH Active Clients"
+msgstr "BH Aktiva klienter"
+
+msgid "BH Active Kernel Modules"
+msgstr "BH Aktiva startmoduler"
+
+msgid "BH Addons Manager"
+msgstr "BH Apphanterare"
+
+msgid "BH Audio"
+msgstr "BH Ljud"
+
+msgid "BH Autocam Setup"
+msgstr "BH AutoCAM inställningar"
+
+msgid "BH Blindscan"
+msgstr "BH Blindscan"
+
+msgid "BH Blue Panel"
+msgstr "BH Blå Panel"
+
+msgid "BH Browser Net Neighbourhood"
+msgstr "BH Nätverksbläddrare"
+
+msgid "BH CCcam Info"
+msgstr "BH Cccam info"
+
+msgid "BH CCcam Info Setup"
+msgstr "BH Cccam info inställningar"
+
+msgid "BH CI Assignment"
+msgstr "BH CI tilldelning"
+
+msgid "BH CI assignment"
+msgstr "BH CI tilldelning"
+
+msgid "BH Cccam Entitlements Info"
+msgstr "BH Cccam Entitlements info"
+
+msgid "BH Cccam Main Info"
+msgstr "BH Cccam huvudinfo"
+
+msgid "BH Channel Selection Radio"
+msgstr "BH Kanallista radio"
+
+msgid "BH Channel Selection TV"
+msgstr "BH Kanallista TV"
+
+msgid "BH Choose Tuner"
+msgstr "BH Välj tuner"
+
+msgid "BH Choose bouquet"
+msgstr "BH Välj kanallista"
+
+msgid "BH Choose your Skin "
+msgstr "BH Välj skal"
+
+msgid "BH CrashlogReport Setting"
+msgstr "BH Ställ in crashlograpportering"
+
+msgid "BH Cron Manager"
+msgstr "BH Schemaläggning"
+
+msgid "BH Cron Setup"
+msgstr "BH Ställ in schemaläggning"
+
+msgid "BH Default services lists"
+msgstr "BH Standard kanallista"
+
+msgid "BH Devices Mountpoints Setup"
+msgstr "BH Konfigurera enheters montering"
+
+msgid "BH Downloads Manage"
+msgstr "BH Nedladdningshanterare"
+
+msgid "BH Downloads Manager"
+msgstr "BH Nedladdningshanterare"
+
+msgid "BH EPG MyTubeTasksScreen"
+msgstr "BH EPG MyTube aktivitetsskärm"
+
+msgid "BH EPG MyTubeVideoInfoScreen"
+msgstr "BH EPG MyTube infoskärm"
+
+msgid "BH EPG Selection"
+msgstr "BH EPG val"
+
+msgid "BH EPG Selection Multi"
+msgstr "BH EPG multival"
+
+msgid "BH EPG Settings"
+msgstr "BH EPG inställningar"
+
+msgid "BH EPG Setup"
+msgstr "BH EPG installation"
+
+msgid "BH Electronic Program Guide"
+msgstr "BH Elektronisk Programguide"
+
+msgid "BH Epg Backup"
+msgstr "BH EPG Backup"
+
+msgid "BH Epg Channels Setup"
+msgstr "BH EPG kanalinställning"
+
+msgid "BH EpgPanel:Add Ext. epg Server"
+msgstr "BH EPG panel: lägg till ext. epg källa"
+
+msgid "BH Event View"
+msgstr "BH loggbok"
+
+msgid "BH Extensions management"
+msgstr "BH Utökningshanterare"
+
+msgid "BH Extra Kernel Modules"
+msgstr "BH Extra startmoduler"
+
+msgid "BH Extra Settings"
+msgstr "BH Extra inställningar"
+
+msgid "BH FTP Server Editor"
+msgstr "BH FTP-server hanterare"
+
+msgid "BH Fancontrol Settings in Standby mode"
+msgstr "BH Fläktkontrollinställningar i viloläge"
+
+msgid "BH Fast Plugin Setup"
+msgstr "BH Inställning av SnabbApp"
+
+msgid "BH Feed Settings"
+msgstr "BH Feedinställning"
+
+msgid "BH Feeds Plugins"
+msgstr "BH FeedAppar"
+
+msgid "BH Feeds Settings"
+msgstr "BH Feedinställning"
+
+msgid "BH Ftp Panel"
+msgstr "BH FTP-panel"
+
+msgid "BH Full Backup"
+msgstr "BH Fullbackup"
+
+msgid "BH Green Panel"
+msgstr "BH Grön panel"
+
+msgid "BH Green Panel Setup"
+msgstr "BH Grön panelinställning"
+
+msgid "BH Hard Disk Panel"
+msgstr "BH Hårddiskpanel"
+
+msgid "BH Help..."
+msgstr "BH Hjälp..."
+
+msgid "BH Inadyn Manager"
+msgstr "BH Inadynhanterare"
+
+msgid "BH Inadyn Setup"
+msgstr "BH Inadyninstallation"
+
+msgid "BH Info"
+msgstr "BH Info"
+
+msgid "BH Input"
+msgstr "BH Ingång "
+
+msgid "BH LED Brightness Setup"
+msgstr "BH Inställning LED Ljusstyrka"
+
+msgid "BH Language selection"
+msgstr "BH Språkval"
+
+msgid "BH Live Streaming Links"
+msgstr "BH Livestreaminglänkar"
+
+msgid "BH Live Streaming Links Header"
+msgstr "BH Livestreaminglänkar sidhuvud"
+
+msgid "BH Main Menu"
+msgstr "BH Huvudmeny"
+
+msgid "BH Media Player"
+msgstr "BH Mediaspelare"
+
+msgid "BH Menu HDD"
+msgstr "BH Hårddiskmeny"
+
+msgid "BH Menu Information"
+msgstr "BH Informationsmeny"
+
+msgid "BH Menu Scan"
+msgstr "BH sökningsmeny"
+
+msgid "BH Menu Setup"
+msgstr "BH Installationsmeny"
+
+msgid "BH Menu Shutdown"
+msgstr "BH Avstängningsmeny"
+
+msgid "BH Menu System"
+msgstr "BH System-meny"
+
+msgid "BH MountEdit"
+msgstr "BH Monteringsredigerare"
+
+msgid "BH MountManager"
+msgstr "BH Monteringshanterare"
+
+msgid "BH MountView"
+msgstr "BH Monteringar"
+
+msgid "BH MyTubePlayerHelpScreen..."
+msgstr "BH MyTubespelare hjälp..."
+
+msgid "BH MyTubePlayerMainScreen..."
+msgstr "BH MyTubespelare huvudskärm..."
+
+msgid "BH MyTubeSettingsScreen"
+msgstr "BH MyTube Inställningar..."
+
+msgid "BH Nameserver Setup"
+msgstr "BH Namnserver inställning"
+
+msgid "BH Network Configuration..."
+msgstr "BH Nätverkskonfiguration"
+
+msgid "BH Network Setup"
+msgstr "BH Nätverksinstallation"
+
+msgid "BH Network test..."
+msgstr "BH Nätverkskstest"
+
+msgid "BH Nfs Server Panel"
+msgstr "BH NFS server panel"
+
+msgid "BH OpenVpn Panel"
+msgstr "BH OpenVPN panel"
+
+msgid "BH OpenWebif Configuration "
+msgstr "BH OpenWebif konfiguration"
+
+msgid "BH Osd Settings"
+msgstr "BH OSD inställningar"
+
+msgid "BH Osd Setup"
+msgstr "BH OSD installation"
+
+msgid "BH Package Details"
+msgstr "BH Paketdetaljer"
+
+msgid "BH Packet manager"
+msgstr "BH Pakethanterare"
+
+msgid "BH Parallel Univ... Teleportation"
+msgstr "BH Parallell Univ... Teleportation"
+
+msgid "BH Parallel Universe Setup"
+msgstr "BH Parallell Universe Installation"
+
+msgid "BH Pcsc Panel"
+msgstr "BH PCSC panel"
+
+msgid "BH Personal Backup"
+msgstr "BH Backup av Inställningar"
+
+msgid "BH Personal Backup Setup"
+msgstr "BH Backup Inställningar"
+
+msgid "BH PicturePlayer"
+msgstr "BH Bildvisare"
+
+msgid "BH Plugin browser"
+msgstr "BH Appbläddrare"
+
+msgid "BH Plugin details"
+msgstr "BH Appdetaljer"
+
+msgid "BH Plugin manager activity information"
+msgstr "BH Apphanterare aktivitetsinformation"
+
+msgid "BH Recorded files... /hdd/movie"
+msgstr "BH Inspelade filer..."
+
+msgid "BH Recording paths"
+msgstr "BH Sökvägar till inspelningar"
+
+msgid "BH Remote Control System Code Setting"
+msgstr "BH Fjärrkontroll systemkodsinställning"
+
+msgid "BH Reorder Plugin List"
+msgstr "BH Ordna Applistan"
+
+msgid "BH Return the Love Event (only for genuine box)"
+msgstr "BH Return the Love Event (endast för originalbox)"
+
+msgid "BH Samba Panel"
+msgstr "BH Samba panel"
+
+msgid "BH Satfinder"
+msgstr "BH Satfinder"
+
+msgid "BH Scan IP"
+msgstr "BH Skanna IP"
+
+msgid "BH Script Panel"
+msgstr "BH Skript panel"
+
+msgid "BH Select Location Box"
+msgstr "BH Välj plats"
+
+msgid "BH Select Network Adapter"
+msgstr "BH Välj nätverkskort"
+
+msgid "BH Select Network Interface"
+msgstr "BH Välj nätverksgränssnitt"
+
+msgid "BH Select bouquets to convert"
+msgstr "BH Välj kanallistor att konvertera"
+
+msgid "BH Select provider to add..."
+msgstr "BH Välj leverantör att lägga till"
+
+msgid "BH Select service to add..."
+msgstr "BH Välj kanal att lägga till"
+
+msgid "BH Servers"
+msgstr "BH Servrar"
+
+msgid "BH Service Scan"
+msgstr "BH Kanalsökning"
+
+msgid "BH Serviceinfo"
+msgstr "BH Kanalinfo"
+
+msgid "BH Setup"
+msgstr "BH Installation"
+
+msgid "BH Sleep Timer"
+msgstr "BH Sovtimer"
+
+msgid "BH Software Management"
+msgstr "BH Mjukvaruhantering"
+
+msgid "BH Speed up"
+msgstr "BH Snabba upp"
+
+msgid "BH Statistics"
+msgstr "BH Statistik"
+
+msgid "BH StreamTV List"
+msgstr "BH StreamaTV lista"
+
+msgid "BH Swap File Manager"
+msgstr "BH Swaphanterare"
+
+msgid "BH System Info"
+msgstr "BH Systeminfo"
+
+msgid "BH Telnet Panel"
+msgstr "BH Telnet panel"
+
+msgid "BH Timer Editor"
+msgstr "BH Timerinställningar"
+
+msgid "BH Timer Entry"
+msgstr "BH Timerpost"
+
+msgid "BH Tuner Server Panel"
+msgstr "BH Tunerserver panel"
+
+msgid "BH UI 3D setup"
+msgstr "BH UI 3D inställning"
+
+msgid "BH UPnP Client Panel"
+msgstr "BH UPnP klient panel"
+
+msgid "BH UPnP Minidlna Server Panel"
+msgstr "BH UPnP Minidlna server panel"
+
+msgid "BH UPnP Server Panel"
+msgstr "BH UPnP server panel"
+
+msgid "BH Uninstall Panel"
+msgstr "BH Avinstallation panel"
+
+msgid "BH Usb Format Wizard"
+msgstr "BH USB formateringsguide"
+
+msgid "BH UserDialog"
+msgstr "BH Användardialog"
+
+msgid "BH UserManager"
+msgstr "BH Användarhanterare"
+
+msgid "BH Video Enhancement Setup"
+msgstr "BH Videoförbättringskonfiguration"
+
+msgid "BH Webinterface: Main Setup"
+msgstr "BH Webgränssnitt inställningar"
+
+msgid "BH Welcome..."
+msgstr "BH Välkommen"
+
+msgid "BH Welcome...Net"
+msgstr "BH Välkommen...Nät"
+
+msgid "BH Welcome...SM"
+msgstr "BH Välkommen...SM"
+
+msgid "BH Welcome...Start"
+msgstr "BH Välkommen...Start"
+
+msgid "BH Wireless Net Setup Menu..."
+msgstr "BH Installera trådlöst nätverk..."
+
+msgid "BH Wireless Network AP Scan..."
+msgstr "BH Sök trådlöst nätverk AP..."
+
+msgid "BH Wireless Network Adapter Selection..."
+msgstr "BH Välj trådlöst nätverkskort..."
+
+msgid "BH Wireless Network Configuration..."
+msgstr "BH Konfigurera trådlöst nätverk..."
+
+msgid "BH Wireless Network Status..."
+msgstr "BH Status på trådlöst nätverk..."
+
+msgid "BH Zapping Mode Selection"
+msgstr "BH Välj typ av zappning"
+
+msgid "BH select CAId's"
+msgstr "BH Välj CAId's"
+
+msgid "Background delete option"
+msgstr "Val för bakgrundsborttagning"
+
+msgid "Background delete speed"
+msgstr "Hastighet för Bakgrundsborttagning"
+
+msgid "Backspace Key"
+msgstr "Backspace-tangent"
+
+msgid "Backup location"
+msgstr "Plats för säkerhetskopia"
+
+msgid "Backup running..."
+msgstr "Säkerhetskopiering körs..."
+
+msgid "Black Hole"
+msgstr "Black Hole"
+
+msgid "Black Hole Autocam Manager"
+msgstr "BH AutoCAM hanterare"
+
+msgid "Black Hole Autocam Setup"
+msgstr "BH AutoCAM inställning"
+
+msgid "Black Hole Cron Setup"
+msgstr "BH Schemainställning"
+
+msgid "Black Hole Devices Mountpoints Setup"
+msgstr "BH Monteringspunkts-hanterare"
+
+msgid "Black Hole E2"
+msgstr "Black Hole E2"
+
+msgid "Black Hole E2 Addons Manager"
+msgstr "BH E2 Apphanterare"
+
+msgid "Black Hole E2 Downloads Manager"
+msgstr "BH E2 Nedladdningshanterare"
+
+msgid "Black Hole E2 Manual Install BH Packages"
+msgstr "BH E2 Installera BH appar manuellt"
+
+msgid "Black Hole E2 Manual Install Ipk Packages"
+msgstr "BH E2 Installera .ipk appar manuellt"
+
+msgid "Black Hole E2 Package Details"
+msgstr "BH E2 Paketdetaljer"
+
+msgid "Black Hole E2 Preview"
+msgstr "BH E2 Förhandsvisning"
+
+msgid "Black Hole E2 Statistics"
+msgstr "BH E2 Statistik"
+
+msgid "Black Hole E2 Uninstall Panel"
+msgstr "BH E2 Avinstallation panel"
+
+msgid "Black Hole EPG Setup"
+msgstr "BH EPG Inställningar"
+
+msgid "Black Hole Epg Backup"
+msgstr "BH EPG Backup"
+
+msgid "Black Hole Fast Plugin Setup"
+msgstr "BH Inställning av SnabbApp"
+
+msgid "Black Hole Full Backup"
+msgstr "BH Fullbackup"
+
+msgid "Black Hole Green Panel Setup"
+msgstr "BH Grön panelinställning"
+
+msgid "Black Hole Message"
+msgstr "Black Hole Meddelande"
+
+msgid "Black Hole OSD Setup"
+msgstr "BH OSD installation"
+
+msgid "Black Hole Osd Settings"
+msgstr "BH OSD inställningar"
+
+msgid "Black Hole Personal Backup"
+msgstr "BH Backup av inställningar"
+
+msgid "Black Hole Script Panel"
+msgstr "BH Skript panel"
+
+msgid "Black Hole Tuner Server Panel"
+msgstr "BH Tunerserver panel"
+
+msgid "Black Hole UPnP Minidlna Server Panel"
+msgstr "BH UPnP Minidlna server panel"
+
+msgid "Black Hole Usb Format Wizard"
+msgstr "BH USB formateringsguide"
+
+msgid "Black Hole: choose your experience ... NOW !"
+msgstr "Black Hole: välj din upplevelse... NU !"
+
+msgid "Blindscan is not supported in "
+msgstr "Blindscan är inte supporterat i"
+
+msgid "Blue"
+msgstr "Blå"
+
+msgid "Bookmark"
+msgstr "Bokmärke"
+
+msgid "Bookmark Title"
+msgstr "Bokmärkestitel"
+
+msgid "Bookmark URL"
+msgstr "Bokmärke URL"
+
+msgid "Browser Help"
+msgstr "Bläddringshjälp"
+
+msgid "Browser Start/Stop"
+msgstr "Starta/Stoppa bläddring"
+
+msgid "BrowserMain"
+msgstr "Bläddring - Hem"
+
+msgid "CAM Installed"
+msgstr "CAM installerad"
+
+msgid ""
+"CAM1_NOT_INSERTED\n"
+"Press exit!"
+msgstr ""
+"CAM1_EJ_ISATT\n"
+"Tryck exit!"
+
+msgid ""
+"CAM2_NOT_INSERTED\n"
+"Press exit!"
+msgstr ""
+"CAM2_EJ_ISATT\n"
+"Tryck exit!"
+
+msgid "CF: "
+msgstr "CF:"
+
+msgid "CRD"
+msgstr "CRD"
+
+msgid ""
+"Can't open selected bookmark.\n"
+"   - URL data is empty!!"
+msgstr ""
+"Kan inte öppna valt bokmärke.\n"
+" - URL data tom!"
+
+msgid "Cannot retrieve rytec sources"
+msgstr "Kan inte hämta Rytec-källor"
+
+msgid "Cannot retrieve xepgdb sources"
+msgstr "Kan inte hämta xepgdb-källor"
+
+msgid "Category Name"
+msgstr "Kategorinamn"
+
+msgid "Center DVB subtitles"
+msgstr "Centrera DVB-text"
+
+msgid "Channel Name:"
+msgstr "Kanalnamn"
+
+msgid "Channels count: %s"
+msgstr "Antal kanaler: %s"
+
+msgid "Check updates at time"
+msgstr "Kontrollera uppdateringar vid tid"
+
+msgid "Check updates every"
+msgstr "Kontrollera uppdateringar varje"
+
+msgid "Clear position before scan"
+msgstr "Rensa position före sökning"
+
+msgid "Configure"
+msgstr "Konfigurera"
+
+msgid ""
+"Connect your usb storage to your Vu+ box\n"
+"Press red button to continue when ready.\n"
+msgstr ""
+"Anslut USB-sticka till boxen\n"
+"Tryck röd knapp för att fortsätta.\n"
+
+msgid "Connection in progress"
+msgstr "Ansluter..."
+
+msgid "Connection to remote IP ok"
+msgstr "Anslutning till fjärr-IP OK"
+
+msgid "Continues play (loop)"
+msgstr "Fortsätter spela (loopar)"
+
+msgid "Convert filesystem ext3 to ext4"
+msgstr "Konvertera filsystem, ext3 till ext4"
+
+msgid "Convert remote channel list for streaming"
+msgstr "Konvertera värdkanallista för streaming"
+
+msgid "Converting data"
+msgstr "Konverterar data"
+
+msgid "Could not connect to remote IP"
+msgstr "Kunde inte ansluta till fjärr-IP"
+
+msgid "Create Autoinstall"
+msgstr "Skapa autoinstallation"
+
+msgid "Create more detailed crash log"
+msgstr "Skapa mer detaljerad kraschlog"
+
+msgid "Creation time: %s"
+msgstr "Tid att skapa: %s"
+
+msgid "CrossEPG - Providers start order"
+msgstr "CrossEPG - Leverantörer startordning"
+
+msgid "CrossEPG About"
+msgstr "CrossEPG Om"
+
+msgid "CrossEPG Configuration"
+msgstr "CrossEPG Konfiguration"
+
+msgid "CrossEPG DataBase Information"
+msgstr "CrossEPG Databasinformation"
+
+msgid "CrossEPG Force Reload"
+msgstr "CrossEPG Tvingad laddning"
+
+msgid "CrossEPG Menu"
+msgstr "CrossEPG Meny"
+
+msgid "CrossEPG automatic actions"
+msgstr "CrossEPG Automatfunktioner"
+
+msgid "CrossEPG error: %s"
+msgstr "CrossEPG Fel: %s"
+
+msgid "CrossEPG setup panel"
+msgstr "CrossEPG Inställningspanel"
+
+msgid "Current Page"
+msgstr "Nuvarande sida"
+
+msgid "Current page is already exist."
+msgstr "Nuvarande sida finns redan."
+
+msgid "Currentpage(Bookmark)"
+msgstr "Nuvarande sida(Bokmärke)"
+
+msgid "DVB subtitle black transparency"
+msgstr "DVB undertext svart transparent"
+
+msgid "Daily automatic backup"
+msgstr "Daglig automatisk backup"
+
+msgid "Deepstandby"
+msgstr "Djupt vänteläge"
+
+msgid "Default Cam"
+msgstr "Standard CAM"
+
+msgid "Default Cam: "
+msgstr "Standard CAM: "
+
+msgid "Deflating channels list"
+msgstr "Tömmer kanallista"
+
+msgid "Deflating events"
+msgstr "Tömmer händelser"
+
+msgid "Delete_all_Crashlogs"
+msgstr "Ta bort alla kraschloggar"
+
+msgid "Descramble http streams"
+msgstr "Avkoda http-streams"
+
+msgid "Descriptors db size: %s"
+msgstr "Descriptorers db storlek: %s"
+
+msgid "Devices Manager & Mountpoints"
+msgstr "Enhetshanterare & monteringar"
+
+msgid "Direct Input"
+msgstr "Direktinmatning"
+
+msgid "Direct Input(Bookmark)"
+msgstr "Direktinmatning(Bokmärke)"
+
+msgid "Direct Input(Category)"
+msgstr "Direktinmatning(Kategori)"
+
+msgid "Disable background scanning"
+msgstr "Avvaktivera bagrundssökning"
+
+msgid "Disable shutdown in EPGRefresh time span:"
+msgstr "Avvaktivera avstängning i EPGrefresh tidspann:"
+
+msgid "Disk space to reserve for recordings (in GB)"
+msgstr "Reserverat diskutrymme för inspelningar (i GB)"
+
+msgid "Display > 16:9 content as"
+msgstr "Visa  16:9 innehåll som"
+
+msgid "Display message before playing next movie"
+msgstr "Visa ett meddelande innan nästa inspelning spelas"
+
+msgid "Dlna Browser & UPnP Client"
+msgstr "DLNA bläddring & UPNP klient"
+
+msgid "Dlna Server Minidlna"
+msgstr "DLNA server MiniDLNA"
+
+msgid "Do you want to delete the bookmark?"
+msgstr "Vill du ta bort bokmärket?"
+
+msgid "Do you want to delete the category and the bookmarks?"
+msgstr "Vill du ta bort kategorin och dess bokmärken?"
+
+msgid ""
+"Do you want to install the Addon:\n"
+"  ?"
+msgstr ""
+"Vill du installera Appen:\n"
+"?"
+
+msgid "Do you want to install the Package:\n"
+msgstr "Vill du installera paketet: ?\n"
+
+msgid "Do you want to set selected url to the Startpage?"
+msgstr "Vill du använda vald URL som startsida?"
+
+msgid "Do you want to shut down?"
+msgstr "Vill du stänga av boxen?"
+
+msgid ""
+"Do you want to update Black Hole image?\n"
+"After pressing OK, please wait!"
+msgstr ""
+"Vill du uppdatera Blsck Hole system?\n"
+"Efter att du tryckt OK, vänligen vänta!"
+
+msgid "Down Key"
+msgstr "Neråtknapp"
+
+msgid "Download epg once a day"
+msgstr "Ladda ner EPG dagligen"
+
+msgid "Download from remote failed"
+msgstr "Nerladdning misslyckades"
+
+msgid "Download on tune"
+msgstr "Ladda ner på intunad"
+
+msgid "Downloading XEPGDB"
+msgstr "Laddar ner XEPGDB"
+
+msgid "Downloading channels list"
+msgstr "Laddar ner kanallista"
+
+msgid "Downloading events"
+msgstr "Laddar ner programinfo"
+
+msgid "Downloading remote services"
+msgstr "Laddar ner fjärrtjänster"
+
+msgid ""
+"Drive where you save data.\n"
+"The drive MUST be mounted in rw. If you can't see your device here probably "
+"is mounted as read only or autofs handle it only in read only mode. In case "
+"of mount it manually and try again"
+msgstr ""
+"Enhet där du sparar data. \n"
+"Enheten måste monteras i rw. Om du inte kan se din enhet här, är den "
+"förmodligen är monterad som skrivskyddad eller att autofs hanterar den i "
+"skrivskyddat läge. Försök montera enheten manuellt och försök igen "
+
+msgid "EPG language selection 1"
+msgstr "EPG språkval 1"
+
+msgid "EPG language selection 2"
+msgstr "EPG språkval 2"
+
+msgid "EPG settings"
+msgstr "EPG inställningar"
+
+msgid "Edit the Nameserver configuration of your receiver.\n"
+msgstr "Editera namnserverkonfiguration på boxen.\n"
+
+msgid "Edit the network configuration of your receiver.\n"
+msgstr "Editera nätverkskonfiguration på boxen.\n"
+
+msgid "Enable AutoShutDown:"
+msgstr "Aktivera AutoStängAv"
+
+msgid "Enable Automatic Settings update"
+msgstr "Aktivera automatisk uppdatering av inställningar"
+
+msgid "Enable EIT EPG"
+msgstr "Aktivera EIT EPG"
+
+msgid "Enable MHW EPG"
+msgstr "Aktivera MHW EPG"
+
+msgid "Enable Netmed EPG"
+msgstr "Aktivera Netmed EPG"
+
+msgid "Enable ViaSat EPG"
+msgstr "Aktivera ViaSat EPG"
+
+msgid "Enable action after inactivity:"
+msgstr "Aktivera aktion efter inaktivitet:"
+
+msgid "Enable csv import"
+msgstr "Aktivera CSV import"
+
+msgid "Enable freesat EPG"
+msgstr "Aktivera Freesat EPG"
+
+msgid "Enable teletext caching"
+msgstr "Aktivera undertext-cachning"
+
+msgid "Enter Key"
+msgstr "Ange knapp"
+
+msgid "Enter address"
+msgstr "Ange adress"
+
+msgid "Enter password"
+msgstr "Ange lösenord"
+
+msgid "Enter the pin"
+msgstr "Ange PIN-kod"
+
+msgid "Epg Backup: not found"
+msgstr "EPG backup: finns ej"
+
+msgid "Epg Search"
+msgstr "Sök EPG"
+
+msgid "Epg Settings"
+msgstr "EPG inställningar"
+
+msgid "Events count: %s"
+msgstr "Antal händelser: %s"
+
+msgid "Everywhere"
+msgstr "Överallt"
+
+msgid "Exit the Opera browser."
+msgstr "Avsluta Opera webläsare"
+
+msgid "F i l e l i s t"
+msgstr "F i l l i s t a"
+
+msgid "FLASH IS BROKEN"
+msgstr "FLASH ÄR TRASIG"
+
+msgid "FPGA Upgrade"
+msgstr "FPGA uppgradering"
+
+msgid "FTP Server Editor"
+msgstr "FTP-server editor "
+
+msgid "FTP reading file %d of %d"
+msgstr "FTP läser fil %d av %d"
+
+msgid "FTPport:"
+msgstr "FTP port:"
+
+msgid "Factory reset fail"
+msgstr "Fabrikreset misslyckades"
+
+msgid "Fast Plugin"
+msgstr "SnabbApp"
+
+msgid "Fast Scan"
+msgstr "Snabbsök"
+
+msgid "Fast forward speeds"
+msgstr "Hastighet för snabbspolning"
+
+msgid ""
+"Fast plugin set to: \n"
+"Key: 2x Green"
+msgstr ""
+"SnabbApp satt till: \n"
+"Knapp: 2x Grön"
+
+msgid "Feeds Std."
+msgstr "Feeds Std."
+
+msgid "File"
+msgstr "Fil"
+
+msgid ""
+"File not Found!\n"
+"/proc/bus/nim_sockets"
+msgstr ""
+"Fil inte hittad\n"
+"/proc/bus/nim_sockets"
+
+msgid "Force csv import now"
+msgstr "Tvinga CSV import nu"
+
+msgid "Force epg reload"
+msgstr "Tvinga EPG laddning"
+
+msgid "Force epg reload on boot"
+msgstr "Tvinga EPG laddning vid uppstart"
+
+msgid "Force epg.dat conversion now"
+msgstr "Tvinga epg.dat konvertering nu"
+
+msgid "Frequency:"
+msgstr "Frekvens:"
+
+msgid "Front LED OK?"
+msgstr "Front LED OK?"
+
+msgid ""
+"Front LED OK?\n"
+"\n"
+"yes-ok\n"
+"no-exit"
+msgstr ""
+"Front LED OK?\n"
+"\n"
+"ja-ok\n"
+"nej-exit"
+
+msgid ""
+"Front Test OK!\n"
+"Press Exit Key"
+msgstr ""
+"Front Test OK!\n"
+"Tryck Exit knappen"
+
+msgid "Function Not Yet Available"
+msgstr "Funktionen finns inte annu"
+
+msgid "Gateway : "
+msgstr "Gateway : "
+
+msgid "General AC3 delay"
+msgstr "Generell AC3 fördröjning"
+
+msgid "General Dolby Digital Delay (ms)"
+msgstr "Generell Dolby Digital fördröjning (ms)"
+
+msgid "General PCM delay"
+msgstr "Generell PCM fördröjning"
+
+msgid "Go to next page."
+msgstr "Gå till nästa sida."
+
+msgid "Go to previous page."
+msgstr "Gå till föregående sida."
+
+msgid "Go to standby"
+msgstr "Sätt boxen i viloläge"
+
+msgid "HARD DISK"
+msgstr "HÅRDDISK"
+
+msgid "HD list"
+msgstr "HD lista"
+
+msgid "HDD Space"
+msgstr "HDD utrymme"
+
+msgid "HDD Temp"
+msgstr "HDD temp"
+
+msgid "HDD temp:"
+msgstr "HDD temp:"
+
+msgid "HDD temp: "
+msgstr "HDD temp:"
+
+msgid "Hashes count: %s"
+msgstr "Hash-antal %s"
+
+msgid "HbbTV Applications"
+msgstr "HbbTV Applikationer"
+
+msgid ""
+"HbbTV Browser was not running.\n"
+"Please running browser before start HbbTV Application."
+msgstr ""
+"HbbTV bläddrare är inte startad\n"
+"Starta den innan du startar HbbTV applikationen"
+
+msgid "HbbTV Plugin"
+msgstr "HbbTV Appen"
+
+msgid "Headers db size: %s"
+msgstr "Rubriker db storlek: %s"
+
+msgid "Hide channel list in radio mode"
+msgstr "Dölj kanallistan i Radioläge"
+
+msgid "IN % UNIVERSE"
+msgstr "I % UNIVERSUM"
+
+msgid "IP Address : "
+msgstr "IPadress: "
+
+msgid "Icons"
+msgstr "Ikoner"
+
+msgid ""
+"If you want to connect your box to the internet, this wizard will guide you "
+msgstr ""
+"Om du vill ansluta boxen till internet så kan du kan du använda denna guide"
+
+msgid "Ifconfig"
+msgstr "ifconfig"
+
+msgid ""
+"Import *.csv and *.bin from %s/import or %s/import\n"
+"(*.bin are binaries with a csv as stdout)"
+msgstr ""
+"Importera *.csv och *.bin från %s/importera eller %s/importera\n"
+"(*.bin är binärer med en csv som stdout)"
+
+msgid "Include AIT in http streams"
+msgstr "Inkludera AIT i http-streams"
+
+msgid "Include ECM in http streams"
+msgstr "Inkludera ECM i http-streams"
+
+msgid "Include EIT in http streams"
+msgstr "Inkludera EIT i http-streams"
+
+msgid "Indexes db size: %s"
+msgstr "Index db storlek: %s"
+
+msgid "Info about database"
+msgstr "Info om databas"
+
+msgid "Initial Fast Forward Speed"
+msgstr "Initial snabbspolningsfart"
+
+msgid "Initial fast forward speed"
+msgstr "Initial snabbspolningsfart"
+
+msgid "Initial rewind speed"
+msgstr "Initial bakåtspolningsfart"
+
+msgid "Internal Epg settings"
+msgstr "Intern EPG-inställning"
+
+msgid "Internal flash"
+msgstr "Intern flash"
+
+msgid "Internal flash (unsuggested)"
+msgstr "Intern flash (rekommenderas ej)"
+
+msgid "Internal hdd only"
+msgstr "Endast intern HDD"
+
+msgid "Invalid "
+msgstr "Ogiltig "
+
+msgid ""
+"Invalid URL!!(Empty)\n"
+"Please, Input to the URL."
+msgstr ""
+"Ogiltig URL!!(Tom)\n"
+"Mata in URL."
+
+msgid "Invalid URL. Please check again!!"
+msgstr "Ogiltig URL. Kolla upp igen!!"
+
+msgid "Invert"
+msgstr "Invertera"
+
+msgid "It will move the mouse pointer down."
+msgstr "Det flyttar ner muspekaren."
+
+msgid "It will move the mouse pointer left."
+msgstr "Det flyttar muspekaren åt vänster."
+
+msgid "It will move the mouse pointer right."
+msgstr "Det flyttar muspekaren åt höger."
+
+msgid "It will move the mouse pointer up."
+msgstr "Det flyttar upp muspekaren."
+
+msgid "Keyboard Deutsch"
+msgstr "Tyskt tangentbord"
+
+msgid "Keyboard English"
+msgstr "Engelskt tangentbord"
+
+msgid "Keyboard Layout"
+msgstr "Tangentbordslayout"
+
+msgid ""
+"Lamedb used for epg.dat conversion.\n"
+"This option doesn't work with crossepg patch v2"
+msgstr ""
+"Lamedb används för epg.dat konvertering.\n"
+"Denna option fungerar ej med CrossEPG patch v2"
+
+msgid "Last Search"
+msgstr "Senaste sökning"
+
+msgid "Last update time: %s"
+msgstr "Senast uppdaterad %s"
+
+msgid "Left Key"
+msgstr "Vänster tangent"
+
+msgid "Left Mouse Button"
+msgstr "Vänster musknapp"
+
+msgid "Limit character set for recording filenames"
+msgstr "Begränsa teckenuppsättning för inspelningsfilnamn"
+
+msgid "Loading data"
+msgstr "Laddar data"
+
+msgid "Locking Fail Error"
+msgstr "Låsningsfel"
+
+msgid "MHW2 providers"
+msgstr "MHW2 providers"
+
+msgid "Mac address fail"
+msgstr "MAC-adressfel"
+
+msgid "Maintain old EPG data for"
+msgstr "Bibehåll gammal EPG-data för"
+
+msgid "Make your selection"
+msgstr "Gör ditt val"
+
+msgid "Margin after record (minutes)"
+msgstr "Marginal efter inspelning (min)"
+
+msgid "Memory"
+msgstr "Minne"
+
+msgid "Merging XEPGDB"
+msgstr "Sammanfogar XEPGDB"
+
+msgid "Message timeout (sec):"
+msgstr "Meddelande timeout (s):"
+
+msgid ""
+"Model: %s %s\n"
+"Size: %s\n"
+"Device: /dev/%s"
+msgstr ""
+"Modell: %s %s\n"
+"Storlek: %s\n"
+"Enhet: /dev/%s"
+
+msgid "Mount again"
+msgstr "Montera igen"
+
+msgid "MountView"
+msgstr "Monteringsvy"
+
+msgid "Mouse"
+msgstr "Mus"
+
+msgid "Move down"
+msgstr "Flytta ner"
+
+msgid "Move up"
+msgstr "Flytta upp"
+
+msgid "My favorite"
+msgstr "Min favorit"
+
+msgid ""
+"NO_GET_APPNAME\n"
+"Press exit!"
+msgstr ""
+"NO_GET_APPNAME\n"
+"Tryck exit!"
+
+msgid "Netstat"
+msgstr "Netstat"
+
+msgid "Network Browser & Mountpoints"
+msgstr "Nätverksbläddring & monteringar"
+
+msgid "No backup present"
+msgstr "Det finns ingen backup"
+
+msgid "No bouquets selected"
+msgstr "Inga favoritlistor valda"
+
+msgid "No detected HbbTV applications."
+msgstr "Inga hittade HbbTV applikationer."
+
+msgid "No package installed. Nothing to setup."
+msgstr "Inga paket installerade, inget att konfigurera."
+
+msgid "OK = Menu"
+msgstr "OK=Meny"
+
+msgid "OSD transparency"
+msgstr "OSD transparens"
+
+msgid "Offline decode delay (ms)"
+msgstr "Offline avkodningsfördröjning (ms)"
+
+msgid ""
+"One hdd test error\n"
+"Press 'EXIT' button!"
+msgstr ""
+"Ett HDD-test fel\n"
+"Tryck EXIT-knappen!"
+
+msgid "Online Feeds Extensions"
+msgstr "Online feeds: Utökningar"
+
+msgid "Online Feeds all Packages"
+msgstr "Online feeds: Alla paket"
+
+msgid ""
+"Only for opentv providers.\n"
+"If you zap on channel used from a provider it download the epg in background"
+msgstr ""
+"Endast för OpenTV leverantören.\n"
+"Om du zappar till kanal som leverantör använder, laddas EPG-data ner i "
+"bakgrunden"
+
+msgid "Open Startpage"
+msgstr "Öppna startsida"
+
+msgid "Open URL"
+msgstr "Öppna URL"
+
+msgid "OpenTV providers"
+msgstr "OpenTV leverantörer"
+
+msgid "Opera Browser"
+msgstr "Opera webbläsare"
+
+msgid ""
+"Opera Browser was not running.\n"
+"Please running browser using [File]>[Start/Stop] menu."
+msgstr ""
+"Opera webbläsare körs inte.\n"
+"Kör webbläsaren med [File]>{Start/Stop] menyn. "
+
+msgid "Opera Web Browser"
+msgstr "Opera webbläsare"
+
+msgid "Opera Web Browser Plugin v1.0"
+msgstr "Opera webbläsare App v1.0"
+
+msgid "Osd 3D setup"
+msgstr "OSD 3D inställningar"
+
+msgid "Osd Position setup"
+msgstr "OSD Positionsinställningar"
+
+msgid "Osd settings"
+msgstr "OSD-inställningar"
+
+msgid "P l a y l i s t"
+msgstr "S p e l l i s t a"
+
+msgid ""
+"PLEASE READ!\n"
+"No disk found. An hard drive or an usb pen is HARDLY SUGGESTED. If you still "
+"want use your internal flash pay attention to:\n"
+"(1) If you don't have enough free space your box may completely block and "
+"you need to flash it again\n"
+"(2) Many write operations on your internal flash may damage your flash memory"
+msgstr ""
+"OBS!\n"
+"Ingen HDD/USB hittad. En hårddisk eller en USB-sticka är starkt "
+"rekommenderat. Om du trots detta vill använda flash, observera:\n"
+"(1) Om du inte har tillräckligt med ledigt utrymme kan boxen hänga upp sig "
+"och du måste installera om systemet\n"
+"(2) Många skrivoperationer på intern flash kan skada flashminnet permanent"
+
+msgid "PageDown Key"
+msgstr "SidaNer tangent"
+
+msgid "PageUp Key"
+msgstr "SidaUpp tangent"
+
+msgid "Parsing"
+msgstr "Analysrerar"
+
+msgid "Parsing channels list"
+msgstr "Analysrerar kanallista"
+
+msgid "Parsing events"
+msgstr "Analysrerar händelser"
+
+msgid "Parsing titles"
+msgstr "Analysrerar titlar"
+
+msgid "Passive:"
+msgstr "Passiv:"
+
+msgid "Percentage Left"
+msgstr "Procent vänster"
+
+msgid "Percentage Right"
+msgstr "Procent höger"
+
+msgid "Personal Backup:"
+msgstr "Backup inställningar:"
+
+msgid "Personal Backup: "
+msgstr "Backup inställningar:"
+
+msgid ""
+"Picons LCD changes need gui restart to take effects.\n"
+"Restart Gui now?"
+msgstr ""
+"LCD-picons ändringar behöver gränssnittomstart för att ta.\n"
+"Starta om gränsnittet nu?"
+
+msgid ""
+"Ping test fail\n"
+"Press exit"
+msgstr ""
+"Pingtest misslyckades\n"
+"Tryck exit"
+
+msgid "Ping test pass"
+msgstr "Pingtest OK"
+
+msgid "Play next (return to movie list)"
+msgstr "Spela nästa (tillbaka till inspelningslistan)"
+
+msgid "Play next (return to previous service)"
+msgstr "Spela nästa (tillbaka till TV)"
+
+msgid ""
+"Please check again.\n"
+"Frequency : start value is larger than stop value."
+msgstr ""
+"Fel värde.\n"
+"Frekvens : startvärdet är större än slutvärdet."
+
+msgid ""
+"Please check again.\n"
+"Start frequency must be between 950 and 2150."
+msgstr ""
+"Fel värde.\n"
+"Startfrekvensen måste ligga mellan 950 och 2150."
+
+msgid ""
+"Please check again.\n"
+"Start symbolrate must be between 2MHz and 45MHz."
+msgstr ""
+"Fel värde.\n"
+"Startsymbolhastigheten måste ligga mellan 2Mhz och 45Mhz."
+
+msgid ""
+"Please check again.\n"
+"Stop frequency must be between 950 and 2150."
+msgstr ""
+"Fel värde.\n"
+"Stoppfrekvensen måste ligga mellan 950 och 2150."
+
+msgid ""
+"Please check again.\n"
+"Stop symbolrate must be between 2MHz and 45MHz."
+msgstr ""
+"Fel värde.\n"
+"Stoppsymbolhastigheten måste ligga mellan 2Mhz och 45Mhz."
+
+msgid ""
+"Please check again.\n"
+"Symbolrate : start value is larger than stop value."
+msgstr ""
+"Fel värde.\n"
+"Symbolhastigheten: startvärdet är större än slutvärtet."
+
+msgid "Please choose an HbbTV application."
+msgstr "Välj en HbbTV applikation"
+
+msgid "Please choose one."
+msgstr "Välj en."
+
+msgid "Please choose."
+msgstr "Välj."
+
+msgid "Please configure crossepg before start downloader"
+msgstr "Konfigurera CrossEPG innan du börjar ledladdningen"
+
+msgid ""
+"Please enable this application in BlackHole Speed Up panel before to "
+"continue."
+msgstr "Aktivera denna applikation i Black Hole SnabbaUpp innan du fortsätter."
+
+msgid "Please enter URL here"
+msgstr "Ange URL här"
+
+msgid "Please setup your tuner configuration."
+msgstr "Konfigurera din tuner."
+
+msgid "Please use Virtual Keyboard for text rows only (e.g. Custom Command)"
+msgstr "Använd virtuellt tangentbord endast för textrader"
+
+msgid ""
+"Please wait while %s\n"
+" %s ..."
+msgstr ""
+"Vänligen vänta medans %s\n"
+"%s ..."
+
+msgid "Polarity"
+msgstr "Polaritet"
+
+msgid "Position of completed timers in timerlist"
+msgstr "Position för klara timerinspelningar i timerlistan"
+
+msgid "Positioner setup... "
+msgstr "Lägesinställning"
+
+msgid "Prefer DVB-graphical subtitles"
+msgstr "Välj DVB-grafisk undertext"
+
+msgid "Prefer subtitles for hearing impaired"
+msgstr "Välj undertext för hörselskadade"
+
+msgid "Prefer subtitles stored by service"
+msgstr "Välj undertext lagrad av tjänsten"
+
+msgid "Preference"
+msgstr "Preferens"
+
+msgid "Preferred lamedb"
+msgstr "Föredragen lamedb"
+
+msgid "Preferred tuner"
+msgstr "Föredragen tuner"
+
+msgid "Press 'EXIT' key to finish tune test."
+msgstr "Tryck EXIT knappen för att avsluta tuningtest"
+
+msgid "Press Front CH +"
+msgstr "Tryck front CH +"
+
+msgid "Press Front CH -"
+msgstr "Tryck front CH -"
+
+msgid "Press Front STANDBY"
+msgstr "Tryck front STANDBY"
+
+msgid "Press Front VOL +"
+msgstr "Tryck front VOL +"
+
+msgid "Press Front VOL -"
+msgstr "Tryck front VOL -"
+
+msgid "Press Front Wheel"
+msgstr "Tryck fronthjul"
+
+msgid "Press Green/OK to start the scan"
+msgstr "Tryck Grön/OK för att starta sökning"
+
+msgid "Press OK to start scanning"
+msgstr "Tryck OK för att starta sökning"
+
+msgid "Progress"
+msgstr "Progress"
+
+msgid "Progress Bar Left"
+msgstr "Vänster Progressbar"
+
+msgid "Progress Bar Right"
+msgstr "Höger Progressbar"
+
+msgid "Progress Small"
+msgstr "Progress Liten"
+
+msgid "Providers start order"
+msgstr "Leverantör startordning"
+
+msgid ""
+"RS232 Test Failed!\n"
+"Press 'EXIT' button!"
+msgstr ""
+"RS232 test fel!\n"
+"Tryck 'EXIT' knappen!"
+
+msgid "Read %s"
+msgstr "Läser %s"
+
+msgid "Reading channels"
+msgstr "Läser kanaler"
+
+msgid "Reading summaries"
+msgstr "Läser sammanfattningar"
+
+msgid "Reading titles"
+msgstr "Läser titlar"
+
+msgid "Reboot after a manual download"
+msgstr "Starta om efter manuell nedladdning"
+
+msgid "Reboot after a scheduled download"
+msgstr "Starta om efter schemalagd nedladdning"
+
+msgid "Record settings"
+msgstr "Inspelningsinställningar"
+
+msgid "Red"
+msgstr "Röd"
+
+msgid "Refresh rate"
+msgstr "Uppdateringsfrekvens"
+
+msgid ""
+"Reload epg at every boot.\n"
+"Normally it's not necessary but recover epg after an enigma2 crash"
+msgstr ""
+"Ladda om EPG i varje omstart.\n"
+"Normalt är det inte nödvändigt men återställer EPG efter en E2 krasch"
+
+msgid "Remote channel stream converter"
+msgstr "Fjärrkanal streamkonverterare"
+
+msgid "Remote channel stream converter "
+msgstr "Fjärrkanal streamkonverterare"
+
+msgid "Remove completed timers after (days)"
+msgstr "Ta bort färdiga timers efter (dagar)"
+
+msgid "Remove items from trash can after (days)"
+msgstr "Rensa papperskorgen efter (dagar)\""
+
+msgid "Reorder Plugin List"
+msgstr "Ordna Applistan"
+
+msgid "Reset AutoShutDown settings to defaults?"
+msgstr "Återställa AutoStängAv inställningar till standardvärde?"
+
+msgid "Restore Backups"
+msgstr "Återställ backuper"
+
+msgid "Restore running..."
+msgstr "Återställ running..."
+
+msgid "Return"
+msgstr "Återgå"
+
+msgid "Rewrap teletext subtitles"
+msgstr "Ändra radbrytning på undertext"
+
+msgid "Right Key"
+msgstr "Höger tangent"
+
+msgid "Right Mouse Button"
+msgstr "Höger musknapp"
+
+msgid "Running script"
+msgstr "Kör skript"
+
+msgid ""
+"Sata & extend hdd test error\n"
+"Press 'EXIT' button!"
+msgstr ""
+"SATA & utöka HDD testfel\n"
+"Tryck'EXIT' knappen!"
+
+msgid ""
+"Sata & extend hdd test pass\n"
+"Press 'OK' button!"
+msgstr ""
+"SATA & utöka HDD test OK\n"
+"Tryck'OK' knappen!"
+
+msgid "Satscan"
+msgstr "Satskann"
+
+msgid "Saving data"
+msgstr "Sparar data"
+
+msgid "Scan All"
+msgstr "Sök alla"
+
+msgid "Scan band"
+msgstr "Sök band"
+
+msgid "Scan circular polarisation"
+msgstr "Sök cirkulär polarisation"
+
+msgid "Scan found transponders"
+msgstr "Sök hittade transpondrar"
+
+msgid "Scan only FTA services"
+msgstr "Sök endast fria kanaler"
+
+msgid "Scan start frequency"
+msgstr "Sök startfrekvens"
+
+msgid "Scan start symbolrate"
+msgstr "Sök startsymbolhastighet"
+
+msgid "Scan stop frequency"
+msgstr "Sök stopfrekvens"
+
+msgid "Scan stop symbolrate"
+msgstr "Sök stopsymbolhastighet"
+
+msgid "Scart loop ok?"
+msgstr "SCART-loop ok?"
+
+msgid "Scheduled download"
+msgstr "Schemalagd nedladdning"
+
+msgid "Scheduled download at"
+msgstr "Schemalagd nedladdning kl"
+
+msgid "Scheduled download disabled"
+msgstr "Schemalagd nedladdning avaktiverad"
+
+msgid "Script Panel"
+msgstr "Skript panel"
+
+msgid "Scripts providers"
+msgstr "Skriptleverantörer"
+
+msgid "Select Network Interface"
+msgstr "Välj nätverkskort"
+
+msgid "Select Video Output..."
+msgstr "Välj Bild Utsignal..."
+
+msgid "Select a remote server IP first"
+msgstr "Välj en fjärrserver IP först"
+
+msgid "Select bouquets to convert"
+msgstr "Välj en kanallista att konvertera"
+
+msgid "Select files/folders to backup..."
+msgstr "Välj filer/mappar att säkerhetskopiera"
+
+msgid "Select the Swap File device:"
+msgstr "Välj enhet för swapfil"
+
+msgid "Select your provider, and press OK to start the scan"
+msgstr "Välj din leverantör och tryck OK för att börja söka"
+
+msgid "Set as Startpage"
+msgstr "Sätt som startsida"
+
+msgid "Set server IP"
+msgstr "Sätt server IP"
+
+msgid "Show 'Force reload' as plugin"
+msgstr "Visa 'Tvinga ladda' som App"
+
+msgid "Show EIT now/next in infobar"
+msgstr "Visa EIT nu/nästa i info-fält"
+
+msgid "Show SNR percentage instead of dB value"
+msgstr "Visa SNR-procent istället för dB-värde"
+
+msgid "Show animation while busy"
+msgstr "Visa animation när du väntar"
+
+msgid "Show as extension"
+msgstr "Visa som utökning"
+
+msgid "Show as plugin"
+msgstr "Visa som App"
+
+msgid "Show background in radio mode"
+msgstr "Visa bakgrund i radioläge"
+
+msgid "Show channel numbers in channel selection"
+msgstr "Visa kanalnummer i kanallistan"
+
+msgid "Show crossepg in extensions menu"
+msgstr "Visa CrossEPG i utökningsmenyn"
+
+msgid "Show crossepg in plugin menu"
+msgstr "Visa CrossEPG i Appar"
+
+msgid "Show crypto info in infobar"
+msgstr "Visa cryptoinfo i info-fält"
+
+msgid "Show in Extensions/Plugins:"
+msgstr "Visa i Utökningar/Appar"
+
+msgid "Show message before inactivity action:"
+msgstr "Visa meddelande före inaktivitetsaktion:"
+
+msgid "Show message when recording starts"
+msgstr "Visa meddelande när inspelning startas"
+
+msgid "Show movie lengths in movielist"
+msgstr "Visa filmlängd i inspelningslistan"
+
+msgid "Show second infobar"
+msgstr "Visa nästa info-fält"
+
+msgid "Show status icons in movielist"
+msgstr "Visa statusikoner i inspelningslistan"
+
+msgid "Show the Menu window."
+msgstr "Visa huvudmeny-fönstret"
+
+msgid "Show the Virtual keyboard window."
+msgstr "Visa virtuellt tangentbordsfönster"
+
+msgid "Slideshow Mode"
+msgstr "Bildspelsmode"
+
+msgid "Slideshow Time"
+msgstr "Bildspelstid"
+
+msgid "Slow motion speeds"
+msgstr "Slow-motion hastigheter"
+
+msgid ""
+"Smart Card 1 Error!\n"
+"errorcode=%d"
+msgstr ""
+"Smart Card 1 fel!\n"
+"errorcode=%d"
+
+msgid ""
+"Smart Card 2 Error!\n"
+"errorcode=%d"
+msgstr ""
+"Smart Card 2 fel!\n"
+"errorcode=%d"
+
+msgid "Smart Card OK!!"
+msgstr "Smart Card OK!!"
+
+msgid "Smart Card model type error"
+msgstr "Smart Card modeltyp fel"
+
+msgid "Space"
+msgstr "Utrymme"
+
+msgid "Standby Now"
+msgstr "Viloläge nu"
+
+msgid "Start Page"
+msgstr "Startsida"
+
+msgid "Start/Stop"
+msgstr "Start/Stopp"
+
+msgid "Starting converter"
+msgstr "Startar konverterare"
+
+msgid "Starting downloader"
+msgstr "Startar nerladdare"
+
+msgid "Starting importer"
+msgstr "Startar importerare"
+
+msgid "Startpage"
+msgstr "Startsida"
+
+msgid "Storage device"
+msgstr "Lagringsenhet"
+
+msgid "Subtitle alignment"
+msgstr "Undertext justering"
+
+msgid "Subtitle border width"
+msgstr "Undertext kantvidd"
+
+msgid "Subtitle delay when timing lacks"
+msgstr "Undertext fördröjning vid timerfel"
+
+msgid "Subtitle font size"
+msgstr "Undertext fontstorlek"
+
+msgid "Subtitle language selection 1"
+msgstr "Undertext språkval 1"
+
+msgid "Subtitle language selection 2"
+msgstr "Undertext språkval 2"
+
+msgid "Subtitle language selection 3"
+msgstr "Undertext språkval 3"
+
+msgid "Subtitle language selection 4"
+msgstr "Undertext språkval 4"
+
+msgid "Subtitle position"
+msgstr "Undertext position"
+
+msgid "Subtitle settings"
+msgstr "Undertext inställningar"
+
+msgid "Swap File created."
+msgstr "Swapfil skapad"
+
+msgid "Swap File creation Failed. Check for available space."
+msgstr "Gick inte att skapa swapfil, kolla tillgängligt utrymme. "
+
+msgid "Swap already disabled."
+msgstr "Swap redan avaktiverad"
+
+msgid ""
+"Swap file is active.\n"
+"Remove it before to create a new swap space."
+msgstr ""
+"Swapfil är aktiv.\n"
+"Ta bort den innan du försöker skapa en ny."
+
+msgid "Swap status: disabled"
+msgstr "Swapstatus: avaktiverad"
+
+msgid "Switch to keyboard/mouse mode."
+msgstr "Vaxla till tangentbord/musläge"
+
+msgid "System Info"
+msgstr "Systeminfo"
+
+msgid "Teletext subtitle color"
+msgstr "Undertext färg"
+
+msgid "Telnetport:"
+msgstr "Telnetport:"
+
+msgid "Test the network configuration of your receiver.\n"
+msgstr "Testa nätverkskonfigurationen i din box.\n"
+
+msgid "Testing Smartcard 1..."
+msgstr "Testar Smartcard 1..."
+
+msgid "Testing Smartcard 2..."
+msgstr "Testar Smartcard 2..."
+
+msgid "Testing remote connection"
+msgstr "Testar uppkoppling"
+
+msgid "The User Interface of your receiver is restarting"
+msgstr "Användargränssnittet på din box startas om"
+
+msgid ""
+"The user interface of your receiver is restarting\n"
+"due to an error in mytest.py"
+msgstr ""
+"Användargränssnittet på din box startas om\n"
+"på grund av ett fel i mytest.py"
+
+msgid ""
+"The wizard will now try to identify your connected usb storage.\n"
+"Press red button to continue.\n"
+msgstr ""
+"Guiden kommer nu att försöka identifiera din USB-sticka.\n"
+"Tryck röd knapp för att fortsätta.\n"
+
+msgid "This plugin will show you the uptime"
+msgstr "Denna App kommer att visa boxens upptid"
+
+msgid "This script shows Network Connections"
+msgstr "Detta skript visar nätverkskopplingar"
+
+msgid "This script shows Network Interfaces Informations"
+msgstr "Detta skript visar info om nätverkskorten"
+
+msgid "This script will delete all crash-logs from /media/hdd"
+msgstr "Detta skript tar bort alla kraschloggar från /media/hdd"
+
+msgid "This script will show you the up time"
+msgstr "Detta skript visar din upptid"
+
+msgid "This script will show you the uptime"
+msgstr "Detta skript visar din upptid"
+
+msgid ""
+"This test checks whether your Wireless LAN Adapter is set up for automatic "
+"IP Address configuration with DHCP.\n"
+"If you get a 'disabled' message:\n"
+" - then your Wireless LAN Adapter is configured for manual IP Setup\n"
+"- verify thay you have entered correct IP informations in the AdapterSetup "
+"dialog.\n"
+"If you get an 'enabeld' message:\n"
+"-verify that you have a configured and working DHCP Server in your network."
+msgstr ""
+"Detta test kontrollerar om din trådlösa nätverksadapter är inställd för "
+"automatisk IP-adress med DHCP.\n"
+"Om du får ett 'avaktiverad' meddelande:\n"
+"- Då är din trådlösa nätverksadapter konfigurerad för manuell IP adress.\n"
+"- Kontrollera att du har angett rätt IP-information i Adapterinställning.\n"
+"Om du får ett \"aktiverad\" meddelande:\n"
+"-kontrollera att du har en konfigurerad och fungerande DHCP-server i ditt "
+"nätverk."
+
+msgid "Time for inactivity (min):"
+msgstr "Tid för inaktivitet (min):"
+
+msgid "Time for scheduled daily download"
+msgstr "Tid för daglig schemalagd nedladdning"
+
+msgid "Time in standby for power off (min):"
+msgstr "Tid i viloläge tills avstängning (min):"
+
+msgid "Tools"
+msgstr "Verktyg"
+
+msgid "Total size: %s"
+msgstr "Total storlek %s"
+
+msgid "Tune%d %s Locking Fail..."
+msgstr "Tuning%d %s Låsning misslyckades."
+
+msgid "USB test error : Success-%d"
+msgstr "USB-test fel : succé-%d"
+
+msgid ""
+"USB test pass %d devices\n"
+"Press 'OK' button!"
+msgstr ""
+"USB-test OK %d enheter\n"
+"Tryck 'OK' knappen!"
+
+msgid ""
+"Unattended upgrade in progress\n"
+"Please wait until your receiver reboots\n"
+"This may take a few minutes"
+msgstr ""
+"Obevakad uppgradering pågår\n"
+"Vänta tills boxen startar om\n"
+"Detta kan ta några minuter"
+
+msgid "Up Key"
+msgstr "Upp tangent"
+
+msgid "Update rytec providers"
+msgstr "Uppdatera Rytec leverantörer"
+
+msgid "Update xepgdb providers"
+msgstr "Uppdatera XEPGDB leverantörer"
+
+msgid "Updating rytec providers..."
+msgstr "Uppdaterar Rytec leverantörer..."
+
+msgid "Updating xepgdb providers..."
+msgstr "Uppdaterar XEPGDB leverantörer..."
+
+msgid "Upgrade FPGA.."
+msgstr "Uppgradera FPGA"
+
+msgid "Uptime"
+msgstr "Upptid"
+
+msgid "Use IP"
+msgstr "Använd IP"
+
+msgid "Use address"
+msgstr "Använd adress"
+
+msgid "Use fastscan channel names"
+msgstr "Använd Snabbsök kanalnamn"
+
+msgid "Use fastscan channel numbering"
+msgstr "Använd Snabbsök kanalnummer"
+
+msgid "Use original DVB subtitle position"
+msgstr "Använd standard DVB-undertextposition"
+
+msgid "Use original teletext position"
+msgstr "Använd standard undertextposition"
+
+msgid "Use trash can in movielist"
+msgstr "Använd papperskorgen i inspelningslistan"
+
+msgid "User Interface"
+msgstr "Användargränsnitt"
+
+msgid "User interface"
+msgstr "Användargränsnitt"
+
+msgid "Using a Wireless module as access point"
+msgstr "Använda en trådlös enhet som accesspunkt"
+
+msgid "Using a Wireless module as access point."
+msgstr "Använda en trådlös enhet som accesspunkt."
+
+msgid "Version: %s"
+msgstr "Version: %s"
+
+msgid "Video output"
+msgstr "Bild Utsignal"
+
+msgid "Virtual Keyboard"
+msgstr "Virtuellt tangentbord"
+
+msgid ""
+"WARNING! Blindscan may make the tuner malfunction on a VU+ receiver. A "
+"reboot afterwards may be required to return to proper tuner function.\n"
+"\n"
+msgstr ""
+"VARNING! Blindscan kan göra så att tunern slutar att fungera på din box. En "
+"omstart kan behövas för att tunern ska fungera fullt ut igen.\n"
+"\n"
+
+msgid "Wait please while scanning your box devices..."
+msgstr "Vänta medan din box söker efter enheter..."
+
+msgid "Wait please,"
+msgstr "Vänta,"
+
+msgid "Wait while starting Cam"
+msgstr "Vänta CAM startas"
+
+msgid ""
+"Welcome.\n"
+"\n"
+"If you want to connect your box to the Internet, this wizard will guide you "
+"through the basic network setup of your Vu+ box.\n"
+"\n"
+"Press OK to start configuring your network"
+msgstr ""
+"Välkommen.\n"
+"\n"
+"Om du vill ansluta din box till internet kommer denna guide att hjälpa dig "
+"sätta upp basfunktionerna för din box.\n"
+"\n"
+"Tryck OK för att starta nätverkskonfigurationen"
+
+msgid "Wheel RIGHT"
+msgstr "Hjul HÖGER"
+
+msgid ""
+"When the decoder is in standby opentv providers will be automatically "
+"downloaded every hour.\n"
+"XMLTV providers will be always downloaded only once a day"
+msgstr ""
+"När boxen är i viloläge kommer OpenTV leverantörer att laddas ner "
+"automatiskt varje timme.\n"
+"XMLTV leverantörer laddas endast ned en gång per dygn"
+
+msgid "XEPGDB providers"
+msgstr "XEPGDB leverantörer"
+
+msgid "XMLTV providers"
+msgstr "XMLTV leverantörer"
+
+msgid "Yellow DVB subtitles"
+msgstr "Gula DVB-undertexter"
+
+msgid "Yellow external subtitles"
+msgstr "Gula externa undertexter"
+
+msgid "You are already in %s universe.."
+msgstr "Du är redan i %s universum."
+
+msgid ""
+"Your frontprocessor will be upgraded\n"
+"Please wait until your receiver reboots\n"
+"This may take a few minutes"
+msgstr ""
+"Din frontprocessor kommer att uppgraderas\n"
+"Vänta tills boxen startats om\n"
+"Det kan ta några minuter"
+
+msgid "autolanguagesetup"
+msgstr "inställning för automatiskt språk"
+
+msgid "browse your local pictures"
+msgstr "Bläddra bland bilder"
+
+msgid "cancel"
+msgstr "avbryt"
+
+msgid "center"
+msgstr "centrera"
+
+msgid "change channel on timeout"
+msgstr "byt kanal vid timeout"
+
+msgid "change tuner on timeout"
+msgstr "byt tuner vid timeout"
+
+msgid "ecm time: "
+msgstr "ECM tid:"
+
+msgid "epgsettings"
+msgstr "EPGinställningar"
+
+msgid "every hour (only in standby)"
+msgstr "varje timme (endast i viloläge)"
+
+msgid "fixed"
+msgstr "Fixat"
+
+msgid "from: "
+msgstr "från: "
+
+msgid "hi_low"
+msgstr "hög_låg"
+
+msgid "high"
+msgstr "hög"
+
+msgid "horizontal_vertical"
+msgstr "horisontal_vertikal"
+
+msgid "low"
+msgstr "låg"
+
+msgid "main lamedb"
+msgstr "huvudsaklig lamedb"
+
+msgid "no transparency"
+msgstr "Ingen transparens"
+
+msgid "once a day"
+msgstr "dagligen"
+
+msgid "original"
+msgstr "original"
+
+msgid "protocol: "
+msgstr "protokoll:"
+
+msgid "prov: "
+msgstr "lev:"
+
+msgid "reader: "
+msgstr "läsare:"
+
+msgid "recording"
+msgstr "Spelar in"
+
+msgid "scan type(DVB-S)"
+msgstr "Sök typ(DVB-S)"
+
+msgid "start opera web browser"
+msgstr "starta Opera webläsare"
+
+msgid "starting"
+msgstr "startar"
+
+msgid "stop Service on Start"
+msgstr "stoppa tjänst vis start"
+
+msgid "stopping"
+msgstr "stoppar"
+
+msgid "subtitlesetup"
+msgstr "Undertext konfiguration"
+
+msgid "unused in Vu Duo"
+msgstr "Används ej i Vu+ Duo"
+
+msgid "unused in Vu Solo"
+msgstr "Används ej i Vu+ Solo"
+
+msgid "unused in Vu Ultimo"
+msgstr "Används ej i Vu+ Ultimo"
+
+msgid "userinterface"
+msgstr "användargränsnitt"
+
+msgid "view webcams around the world"
+msgstr "Visa webkameror runt om i världen"
+
+msgid "white"
+msgstr "Vit"
+
+msgid "zapping interval (sec) "
+msgstr "zappningsintervall (s) "
 
 #
 msgid ""
@@ -403,7 +2867,7 @@ msgid "A BackToTheRoots-Skin .. but with Warp-8 speed."
 msgstr "Ett TillbakaTillGrunden-skal .. men med Warp-8 fart."
 
 msgid "A BackToTheRoots-Skin .. or good old times."
-msgstr "Ett TillbakaTillRötterna-skal .. eller gamla goda tider."
+msgstr "Ett TillbakaTillGrunden-skal .. eller gamla goda tider."
 
 msgid "A basic ftp client"
 msgstr "En enkel ftp klient"
@@ -2077,7 +4541,7 @@ msgstr "Ta bort"
 
 #
 msgid "Delete crashlogs"
-msgstr "Ta bort crashlogs"
+msgstr "Ta bort krashloggar"
 
 #
 msgid "Delete entry"
@@ -2320,7 +4784,7 @@ msgid "Do you want to download the image to %s ?"
 msgstr "Vill du ladda ner operativsystem till %s ?"
 
 msgid "Do you want to enable the parental control feature on your dreambox?"
-msgstr "Vill du aktivera föräldrarkontroll på boxen?"
+msgstr "Vill du aktivera föräldrakontroll på boxen?"
 
 #
 msgid "Do you want to enter a username and password for this host?\n"
@@ -2502,7 +4966,7 @@ msgid ""
 "to not disturb the current TV program."
 msgstr ""
 "EGPrefresh kommer automatiskt att switcha till en användardefinierad kanal "
-"när boxen inte används (i stanbyläge och om inga inspelningar körs) för att "
+"när boxen inte används (i viloläge och om inga inspelningar körs) för att "
 "uppdatera EPG informationen från dessa kanaler.\n"
 "På boxar med flera tuners kan detta köras i bakgrunden trots att boxen "
 "används och inte är standby eller spelar in."
@@ -5089,7 +7553,7 @@ msgstr "BiB konfiguration"
 
 #
 msgid "PicturePlayer"
-msgstr "Bildspelare"
+msgstr "Bildvisare"
 
 #
 #. TRANSLATORS: (aspect ratio policy: black bars on left/right) in doubt, keep english term.
@@ -5116,10 +7580,10 @@ msgid "Play DVD"
 msgstr "Spela DVD"
 
 msgid "Play Internet Radio downloaded from Last.FM"
-msgstr "Spela upp internetradio nerladdad frpn Last.FM"
+msgstr "Spela upp internetradio nedladdad frpn Last.FM"
 
 msgid "Play Internet Radio downloaded from ShoutCast"
-msgstr "Spela upp internetradio nerladdad frpn ShoutCast."
+msgstr "Spela upp internetradio nedladdad frpn ShoutCast."
 
 #
 msgid "Play Music..."
@@ -5171,7 +7635,7 @@ msgid ""
 "Please be aware, that anyone can disable the parental control, if you have "
 "not set a PIN."
 msgstr ""
-"Varning! Tänka på att vem som helst kan avvaktivera föräldrarkontroll om du "
+"Varning! Tänka på att vem som helst kan avvaktivera föräldrakontroll om du "
 "inte satt en PIN-kod."
 
 #
@@ -5520,8 +7984,8 @@ msgid ""
 "Power state to change to after recordings. Select \"standard\" to not change "
 "the default behavior of enigma2 or values changed by yourself."
 msgstr ""
-"Strömläge efter inspelning. Väl \"standard\" för att inte ändra standard för "
-"Enigma2 eller värde ändrat av dig."
+"Strömläge efter inspelning. Välj \"standard\" för att inte ändra standard "
+"för Enigma2 eller värde ändrat av dig."
 
 #
 msgid "Power threshold in mA"
@@ -5937,7 +8401,7 @@ msgstr "Byt namn"
 
 #
 msgid "Rename crashlogs"
-msgstr "Byt namn på crashlogs"
+msgstr "Byt namn på krashloggar"
 
 msgid "Rename your movies"
 msgstr "Ändra namn på inspelat material."
@@ -6967,7 +9431,7 @@ msgid "Software update"
 msgstr "Mjukvaruuppdatera"
 
 msgid "SoftwareManager manages your STB software"
-msgstr "SoftwareManager hanterar mjukvara på boxen."
+msgstr "Mjukvaruhanteraren hanterar mjukvara på boxen."
 
 msgid "Softwaremanager information"
 msgstr "Mjukvaruhanterare Information"
@@ -7189,11 +9653,11 @@ msgstr "Underkanaler"
 
 #
 msgid "Subtitle selection"
-msgstr "Textningsval"
+msgstr "Undertext val"
 
 #
 msgid "Subtitles"
-msgstr "Textning"
+msgstr "Undertextning"
 
 #
 msgid "Sun"
@@ -7409,7 +9873,7 @@ msgid ""
 "The PicturePlayer displays your photos on the TV.\n"
 "You can view them as thumbnails or slideshow."
 msgstr ""
-"PicturePlayer visar dina foton på TVn.\n"
+"Bildvisaren visar dina foton på TVn.\n"
 "Du kan visa dom som tumnagelbelder eller som bildspel."
 
 msgid ""
@@ -8707,10 +11171,10 @@ msgid "WeatherPlugin shows weatherforecasts on your STB."
 msgstr "WeatherPlugin visar väderleksrapporter på boxen."
 
 msgid "Weatherforecast on your STB"
-msgstr "Väderleksrapporter på boxen."
+msgstr "Väderleksrapporter på boxen"
 
 msgid "Web-Bouquet-Editor for PC"
-msgstr "Web-kanallisteditor för PC."
+msgstr "Web-kanallisteditor för PC"
 
 #
 msgid "Webinterface"
@@ -8886,7 +11350,7 @@ msgstr "Vad vill du söka efter?"
 
 #
 msgid "What to do with submitted crashlogs?"
-msgstr "Vad ska ske med skickade crashlogs?"
+msgstr "Vad ska ske med skickade krashloggar?"
 
 msgid ""
 "When supporting \"Fast Scan\" the service type is ignored. You don't need to "
@@ -8970,7 +11434,7 @@ msgid ""
 "With IMDb you can display downloaded movie information (rating, poster, "
 "cast, synopsis etc.) about the selected event."
 msgstr ""
-"Med IMDb kan du visa nerladdad filminformation (betyg, fodral, cast, "
+"Med IMDb kan du visa nedladdad filminformation (betyg, fodral, cast, "
 "sammanfattning etc.) om den valda filmen."
 
 msgid "With MovieRetitle you can rename your movies."
@@ -8986,7 +11450,7 @@ msgid ""
 "With OFDb you can display downloaded movie information (rating, poster, "
 "cast, synopsis etc.) about the selected event."
 msgstr ""
-"Med OFDb kan du visa nerladdad filminformation (betyg, fodral, cast, "
+"Med OFDb kan du visa nedladdad filminformation (betyg, fodral, cast, "
 "sammanfattning etc.) om den valda filmen."
 
 msgid "With WebcamViewer you can watch webcams on your TV Screen."
@@ -9026,7 +11490,7 @@ msgid ""
 "crashlogs found on your hard drive to Dream Multimedia."
 msgstr ""
 "Med CrashlogAutoSubmit-appen är det möjligt att automatiskt maila "
-"krashloggfiler som finns på hårddisken till Dream Multimedia."
+"kraschloggfiler som finns på hårddisken till Dream Multimedia."
 
 msgid ""
 "With the DefaultServicesScanner plugin you can scan default lamedbs sorted "
@@ -9162,7 +11626,7 @@ msgstr "Ja, återställ inställningarna nu"
 
 #
 msgid "Yes, returning to movie list"
-msgstr "Ja, återvänd till listan för inspelningar"
+msgstr "Ja, tillbaka till inspelningslistan"
 
 #
 msgid "Yes, view the tutorial"
@@ -9500,7 +11964,7 @@ msgid "Zap between commercials"
 msgstr "Zappa mellan reklam."
 
 msgid "ZapStatistic shows the watched services with some statistics."
-msgstr "ZapStatistic visar lite statistik på de kanaler som tittats på."
+msgstr "ZapStatistik visar lite statistik på de kanaler som tittats på."
 
 msgid "Zoom into letterboxed/anamorph movies"
 msgstr "Zooma in i letterbox / anamorfa filmer"
@@ -9646,7 +12110,7 @@ msgstr "lägg till kanaler"
 
 #
 msgid "add to parental protection"
-msgstr "lägg till föräldraskydd"
+msgstr "lägg till föräldrakontroll"
 
 #
 msgid "advanced"
@@ -10406,7 +12870,7 @@ msgstr "ta bort post"
 
 #
 msgid "remove from parental protection"
-msgstr "ta bort från föräldraskydd"
+msgstr "ta bort från föräldrakontroll"
 
 msgid "remove new found flag"
 msgstr "ta bort hittat-ny flagga"
@@ -10677,7 +13141,7 @@ msgstr "byt till nästa ljudspår"
 
 #
 msgid "switch to the next subtitle language"
-msgstr "byt till nästa textningsspråk"
+msgstr "byt till nästa språk för undertextning"
 
 #
 msgid "template file"
@@ -10701,7 +13165,7 @@ msgstr "skifta en klippmarkering på nuvarande position"
 
 #
 msgid "toggle time, chapter, audio, subtitle info"
-msgstr "skifta tid, kapitel, ljud, textningsinfo"
+msgstr "skifta tid, kapitel, ljud, undertextningsinfo"
 
 msgid "tuner is not supported"
 msgstr "tuner stöds inte"
@@ -11327,7 +13791,7 @@ msgid "Path to save Personal Backup"
 msgstr "Sökväg till säkerhetskopia av inställningar"
 
 msgid "Backup complete !"
-msgstr "Säkerhetskopiering klar !"
+msgstr "Säkerhetskopiering klar! Tryck OK!"
 
 msgid "BlackHole Personal Backup"
 msgstr "BH Backup Inställningar"
@@ -11827,7 +14291,7 @@ msgid "HOLD"
 msgstr "VÄNTA"
 
 msgid "Zapping Mode"
-msgstr "Typ av zappning"
+msgstr "Zappläge"
 
 msgid ""
 "SET FAILED!\n"
@@ -11837,10 +14301,10 @@ msgstr ""
 "Vänligen uppdatera till senaste drivrutin"
 
 msgid "ZappingModeSelection"
-msgstr "ZappingModeSelection"
+msgstr "ZappLägesVal"
 
 msgid "Zapping Mode Selection"
-msgstr "Zapping Mode Selection"
+msgstr "Val av zappläge"
 
 msgid "Can not open 'fan_pwm'"
 msgstr "Kan inte öppna 'fan_pwm'"
@@ -11858,7 +14322,7 @@ msgid "Manual Fan control"
 msgstr "Manuell fläktkontroll"
 
 msgid "setup Fancontol inStandby mode"
-msgstr "Ställ in fläktkontroll i vänteläge"
+msgstr "Ställ in fläktkontroll i viloläge"
 
 msgid "Activate Inadyn"
 msgstr "Inadyn aktiv"
@@ -12707,7 +15171,7 @@ msgid "Wait Please... Epg Download in progress...."
 msgstr "Var god vänta, EPG Laddas ner..."
 
 msgid "Epg Download complete. Press the red button to exit"
-msgstr "Nerladddning av EPG klar, tryck röd knapp för att avsluta"
+msgstr "Nedladddning av EPG klar, tryck röd knapp för att avsluta"
 
 msgid ""
 "Wrong file format. Only bz2 and gzip files are allowed (.dat.gz .dat.bz2)."
@@ -12867,7 +15331,7 @@ msgid "Shouts sent by users:\t"
 msgstr "Shouts skickade av användare:\t"
 
 msgid "Top downloaded File:\t"
-msgstr "Flest nerladdade filer:\t"
+msgstr "Flest nedladdade filer:\t"
 
 msgid "Total Downloads:     \t"
 msgstr "Totalt antal nedladdningar:     \t"
