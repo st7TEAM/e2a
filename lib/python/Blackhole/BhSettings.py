@@ -1402,6 +1402,9 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		["Djmount UPnP Client", "djmount"],
 		["MiniDlna UPnP Server", "minidlna"],
 		["Mediatomb (alternative) UPnP Server", "mediatomb"]
+		["Coherence UPnP Renderer","enigma2-plugin-extensions-upnpmediarenderer"]
+		["Coherence UPnP Browser","enigma2-plugin-extensions-upnpbrowser"]
+		["Coherence UPnP Server","enigma2-plugin-extensions-upnpmediaserver"]
 		]
 		
 		machine = nab_Detect_Machine()
