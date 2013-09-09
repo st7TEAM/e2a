@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-07-20 12:35+0100\n"
+"PO-Revision-Date: 2013-09-02 20:15+0100\n"
 "Last-Translator: Paolino <pliesko1@gmail.com>\n"
 "Language-Team: Black Hole\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 "Language: sk\n"
+
+msgid "ext4 - recommended for meoboot"
+msgstr "ext4 - doporučené pre meoboot a HDD >BH2.0.5"
+
+msgid "Subtitle delay when timing is bad"
+msgstr "Oneskorenie titulkov pri zlom časovaní"
+
+msgid "Centered DVB subtitles"
+msgstr "Vystredené DVB titulky"
+
+msgid "No delay"
+msgstr "Bez oneskorenia"
+
+msgid "full transparency"
+msgstr "úplná priehľadnosť"
 
 msgid "Service searching"
 msgstr "Vyhľadávanie staníc"
@@ -2427,7 +2442,7 @@ msgstr "Chyba typu modelu Smart Card"
 
 #
 msgid "Space"
-msgstr "MEDZERNÍK"
+msgstr "Miesto"
 
 #
 msgid "Standby Now"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-07-15 20:17+0100\n"
+"PO-Revision-Date: 2013-08-31 11:14+0100\n"
 "Last-Translator: SuperGlud <sgl@si-data.no>\n"
 "Language-Team: jazzydane <dreambox@ingmar.dk>\n"
 "MIME-Version: 1.0\n"
@@ -695,7 +695,7 @@ msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Auto kapitel oprettelse hvert ? minut (0=aldrig) "
 
 msgid "Auto flesh"
-msgstr "Auti flash"
+msgstr "Auto flash"
 
 msgid "Auto scart switching"
 msgstr "Auto Scart skift"
@@ -755,10 +755,10 @@ msgid "Begin time"
 msgstr "Start tid"
 
 msgid "Behavior of 'pause' when paused"
-msgstr "Opførsel af 'pause' ved aktivering"
+msgstr "Opførsel for 'pause' ved aktivering"
 
 msgid "Behavior of 0 key in PiP-mode"
-msgstr "Opførsel af 0 tast i PiP-type"
+msgstr "Opførsel for 0 tast i PiP-type"
 
 msgid "Behavior when a movie is started"
 msgstr "Opførsel når en film startes"
@@ -829,7 +829,7 @@ msgid "Catalan"
 msgstr "Katalansk"
 
 msgid "Change bouquets in quickzap"
-msgstr "Skifte pakke i hurtigzap"
+msgstr "Skift pakke i hurtigzap"
 
 msgid "Change pin code"
 msgstr "Skifte pin kode"
@@ -844,7 +844,7 @@ msgid "Channel Selection"
 msgstr "Kanal Vælger"
 
 msgid "Channel not in services list"
-msgstr "Kanalen er ikke kanal oplistningen"
+msgstr "Kanalen er ikke i kanallisten"
 
 msgid "Channel:"
 msgstr "Kanal:"
@@ -904,10 +904,10 @@ msgid "Cleanup Wizard"
 msgstr "Oprydningsassistent"
 
 msgid "Cleanup Wizard settings"
-msgstr "Indstilling af oprydningshjælper"
+msgstr "Indstillinger for oprydningsassistenten"
 
 msgid "CleanupWizard"
-msgstr "Oprydningshjælper"
+msgstr "Oprydningsassistent"
 
 msgid "Clear before scan"
 msgstr "Slet før søgning"
@@ -964,7 +964,7 @@ msgid "Configuration Mode"
 msgstr "Konfigurations Type"
 
 msgid "Configuration for the Webinterface"
-msgstr "Konfiguration af WebInterface"
+msgstr "Konfiguration af Webinterface"
 
 msgid "Configure interface"
 msgstr "Opsætning af interface"
@@ -1052,7 +1052,7 @@ msgid "Create DVD-ISO"
 msgstr "Opret DVD-ISO"
 
 msgid "Create movie folder failed"
-msgstr "Oprette Movie folder fejlede"
+msgstr "Oprettelse af Movie folder fejlede"
 
 msgid "Creating directory %s failed."
 msgstr "Oprettelse af mappen %s mislykkedes."
@@ -1127,7 +1127,7 @@ msgid "Date"
 msgstr "Dato"
 
 msgid "Decide if you want to enable or disable the Cleanup Wizard."
-msgstr "Vælg om du vil aktivere eller deaktivere oprydningshjælpen."
+msgstr "Vælg om du vil aktivere eller deaktivere oprydningsassistenten."
 
 msgid "Decide what should be done when crashlogs are found."
 msgstr "Bestem hvad der skal ske, når der er fundet en nedbrudslog."
@@ -1136,7 +1136,7 @@ msgid "Decide what should happen to the crashlogs after submission."
 msgstr "Bestem hvad der skal ske med nedbrudslogge efter afsendelsen."
 
 msgid "Deep Standby"
-msgstr "Afbryde"
+msgstr "Dyb standby"
 
 msgid "Default"
 msgstr "Standard"
@@ -1145,7 +1145,7 @@ msgid "Default Settings"
 msgstr "Standard opsætning"
 
 msgid "Default movie location"
-msgstr "Standardplacering af film"
+msgstr "Standardplacering for film"
 
 msgid "Default services lists"
 msgstr "Standard kanallister "
@@ -1169,7 +1169,7 @@ msgid ""
 "Delete no more configured satellite\n"
 "%s?"
 msgstr ""
-"Slette ikke konfigurede satelliter\n"
+"Slet ikke konfigurede satelliter\n"
 "%s?"
 
 msgid "Description"
@@ -1425,7 +1425,7 @@ msgid "Edit the Nameserver configuration of your STB.\n"
 msgstr "Ændre Navneserver konfiguration på din STB.\n"
 
 msgid "Edit the network configuration of your STB.\n"
-msgstr "Ændre din netværks konfiguration på  STBen.\n"
+msgstr "Ændre netværks konfiguration på din STB.\n"
 
 msgid "Edit title"
 msgstr "Rediger titel"
@@ -1491,7 +1491,7 @@ msgid "Encryption:"
 msgstr "Kryptering:"
 
 msgid "End time"
-msgstr "Stop tid"
+msgstr "Slut tid"
 
 msgid "EndTime"
 msgstr "SlutTid"
@@ -1552,7 +1552,7 @@ msgid "Execution finished!!"
 msgstr "Kommandoen udført!!"
 
 msgid "Exif"
-msgstr "Afslut"
+msgstr "Exif"
 
 msgid "Exit"
 msgstr "Afslut"
@@ -1588,7 +1588,7 @@ msgid "Extended Software Plugin"
 msgstr "Udvidet software plugin"
 
 msgid "Extensions"
-msgstr "Ekstra menu"
+msgstr "Udvidelser"
 
 msgid "Extensions management"
 msgstr "Håndtering af udvidelser"
@@ -1621,7 +1621,7 @@ msgid "Fast Forward speeds"
 msgstr "Spol frem hastigheder"
 
 msgid "Fast epoch"
-msgstr "Hurtig epoch"
+msgstr "Hurtig epoke"
 
 msgid "Favourites"
 msgstr "Favoritter"
@@ -1657,7 +1657,7 @@ msgid "Format"
 msgstr "Formatere"
 
 msgid "Frame size in full view"
-msgstr "Billed størrelse i fuld "
+msgstr "Billed størrelse i fuld visning"
 
 msgid "French"
 msgstr "Fransk"
@@ -1700,13 +1700,13 @@ msgid "Gateway"
 msgstr "Router adresse"
 
 msgid "General AC3 Delay"
-msgstr "Almindelig AC3 forsinkelse"
+msgstr "Generel AC3 forsinkelse"
 
 msgid "General AC3 delay (ms)"
 msgstr "Generel AC3 forsinkelse (ms)"
 
 msgid "General PCM Delay"
-msgstr "Almindelig PCM forsinkelse"
+msgstr "Generel PCM forsinkelse"
 
 msgid "General PCM delay (ms)"
 msgstr "Generel PCM forsinkelse (ms)"
@@ -1812,7 +1812,7 @@ msgstr "Under udførelse"
 
 msgid ""
 "In order to record a timer, the TV was switched to the recording service!\n"
-msgstr "For at optage via timer, er TV skiftet til optage kanal!\n"
+msgstr "For at optage via timer, er TV skiftet til optage kanalen!\n"
 
 msgid "Include your email and name (optional) in the mail?"
 msgstr "Inkluder din email og navn (valgfrit) i emailen?"
@@ -1839,7 +1839,7 @@ msgid "Init"
 msgstr "Initialiser"
 
 msgid "Initial location in new timers"
-msgstr "Oprindelig placering i nye timere"
+msgstr "Oprindelig placering for nye timere"
 
 msgid "Initialize"
 msgstr "Formatere"
@@ -1866,7 +1866,7 @@ msgid "Install local extension"
 msgstr "Installer lokal udvidelse"
 
 msgid "Install or remove finished."
-msgstr "Installer og fjern færdige."
+msgstr "Installer eller fjern er afsluttet."
 
 msgid "Install settings, skins, software..."
 msgstr "Installer opsætning, grafisk tema, software..."
@@ -2028,7 +2028,7 @@ msgid "Location"
 msgstr "Placering"
 
 msgid "Location for instant recordings"
-msgstr "Placering af umiddelbare optagelser"
+msgstr "Placering for umiddelbare optagelser"
 
 msgid "Lock:"
 msgstr "Lås:"
@@ -2415,10 +2415,10 @@ msgid ""
 "Please setup your tuner settings before you start a service scan."
 msgstr ""
 "Intet at søge!\n"
-"Venligst opsæt Tuner indstilling op før du starter søgning."
+"Venligst opsæt Tuner indstilling før du starter søgning."
 
 msgid "Now Playing"
-msgstr "Nu Afspilles"
+msgstr "Nu afspilles"
 
 msgid ""
 "Now, use the contrast setting to turn up the brightness of the background as "
@@ -2820,7 +2820,7 @@ msgid "Prev"
 msgstr "Forrige"
 
 msgid "Preview menu"
-msgstr "Fremvisnnigsmenu"
+msgstr "Fremvisningsmenu"
 
 msgid "Primary DNS"
 msgstr "Primær DNS"
@@ -2859,7 +2859,7 @@ msgid "Quickzap"
 msgstr "Hurtigskift"
 
 msgid "RC Menu"
-msgstr "Fjernbetjenings menu"
+msgstr "Fjernbetjeningsmenu"
 
 msgid "RF output"
 msgstr "RF Udgang"
@@ -2886,7 +2886,7 @@ msgid "Really exit the subservices quickzap?"
 msgstr "Vil du afslutte underkanals hurtigskift?"
 
 msgid "Really reboot now?"
-msgstr "Virkelig reboote nu?"
+msgstr "Virkelig genstarte nu?"
 
 msgid "Really restart now?"
 msgstr "Virkelig genstarte nu?"
@@ -2898,7 +2898,7 @@ msgid "Reboot"
 msgstr "Genstart"
 
 msgid "Reception Settings"
-msgstr "Modtage Indstillinger"
+msgstr "Modtage indstillinger"
 
 msgid "Record"
 msgstr "Optage"
@@ -3003,13 +3003,13 @@ msgid "Resolution"
 msgstr "Opløsning"
 
 msgid "Restart"
-msgstr "Genstarte"
+msgstr "Genstart"
 
 msgid "Restart GUI"
-msgstr "Genstarte GUI"
+msgstr "Genstart GUI"
 
 msgid "Restart GUI now?"
-msgstr "Genstarte GUI nu?"
+msgstr "Genstart GUI nu?"
 
 msgid "Restart network"
 msgstr "Genstart netværk"
@@ -3018,7 +3018,7 @@ msgid "Restart test"
 msgstr "Genstart Test"
 
 msgid "Restart your network connection and interfaces.\n"
-msgstr "Genstart din netværk opkobling og interfaces.\n"
+msgstr "Genstart din netværksopkobling og interfaces.\n"
 
 msgid "Restore"
 msgstr "Gendanne"
@@ -3027,10 +3027,10 @@ msgid "Restore backups"
 msgstr "Gendan backup"
 
 msgid "Restore is running..."
-msgstr "Genopretning kører..."
+msgstr "Genopretning er igang..."
 
 msgid "Restore running"
-msgstr "Gendanelse afvikles"
+msgstr "Gendannelse er igang"
 
 msgid "Restore system settings"
 msgstr "Gendan system opsætning"
@@ -3039,7 +3039,7 @@ msgid "Resume from last position"
 msgstr "Genoptag fra sidste position"
 
 msgid "Resuming playback"
-msgstr "Genoptag afspilning"
+msgstr "Genoptagelse af afspilning"
 
 msgid "Return to file browser"
 msgstr "Tilbage til fil oversigt"
@@ -3114,13 +3114,13 @@ msgid "Save"
 msgstr "Gem"
 
 msgid "Save Playlist"
-msgstr "Gemme Spilleliste"
+msgstr "Gem spilleliste"
 
 msgid "Scaler sharpness"
 msgstr "Skaler skarphed"
 
 msgid "Scaling Mode"
-msgstr "Skalerings Type"
+msgstr "Skaleringstype"
 
 msgid "Scan "
 msgstr "Søgning"
@@ -3338,7 +3338,7 @@ msgid "Set limits"
 msgstr "Indstil limits"
 
 msgid "Settings"
-msgstr "Indstillings menu"
+msgstr "Indstillingsmenu"
 
 msgid "Setup"
 msgstr "Indstillinger"
@@ -3549,7 +3549,7 @@ msgid "Stop"
 msgstr "Stop"
 
 msgid "Stop Timeshift?"
-msgstr "Stoppe tidsforskydning?"
+msgstr "Stop tidsforskydning?"
 
 msgid "Stop current event and disable coming events"
 msgstr "Stop nuværende program og deaktiver kommende programmer"
@@ -3570,7 +3570,7 @@ msgid "Stop testing plane after # successful transponders"
 msgstr "Stop afprøvning af flade efter # fungerende transpondere"
 
 msgid "Store position"
-msgstr "Gemme position"
+msgstr "Gem position"
 
 msgid "Stored position"
 msgstr "Gemt position"
@@ -3664,14 +3664,14 @@ msgid ""
 "Thank you for using the wizard.\n"
 "Please press OK to continue."
 msgstr ""
-"Tak for brug af hjælperen.\n"
+"Tak for brug af assistenten.\n"
 "Tryk venligst OK for at fortsætte."
 
 msgid ""
 "Thank you for using the wizard. Your box is now ready to use.\n"
 "Please press OK to start using your STB."
 msgstr ""
-"Tak fordi du brugte Startassistenten. Din STB er nu klar til brug .\n"
+"Tak fordi du brugte startassistenten. Din STB er nu klar til brug .\n"
 "Tryk venligst OK, for at starte den."
 
 msgid ""
@@ -3684,7 +3684,7 @@ msgstr ""
 "afspiller)? "
 
 msgid "The backup failed. Please choose a different backup location."
-msgstr "Backup'en fejlede. Venligst vælg en anden måde at lave backup på."
+msgstr "Backup'en fejlede. Venligst vælg et anden sted at placere backupen."
 
 msgid ""
 "The directory %s is not writable.\n"
@@ -3950,7 +3950,7 @@ msgid "Timeshift"
 msgstr "Tidsforskydning"
 
 msgid "Timeshift location"
-msgstr "Placering af tidsforskydning"
+msgstr "Placering for tidsforskydning"
 
 msgid "Timeshift not possible!"
 msgstr "Tidsforskydning ikke mulig!."
@@ -4426,7 +4426,7 @@ msgid ""
 "Really do a factory reset?"
 msgstr ""
 "Når du anvender fabrik gendannelse mister du ALLE dine indstillingsdata\n"
-"(Inclusive buketter, kanallister, satellit data ...)\n"
+"(Inklusiv buketter, kanallister, satellit data ...)\n"
 "Efter afsluttet fabriksgendannelse genstartes STB'en automatisk!\n"
 "\n"
 "Udfør fabriksgendannelse?"
@@ -5316,7 +5316,7 @@ msgid "show EPG..."
 msgstr "vis EPG..."
 
 msgid "show Infoline"
-msgstr "vis infoinje"
+msgstr "vis infolinje"
 
 msgid "show all"
 msgstr "vis alle"

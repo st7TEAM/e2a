@@ -5,14 +5,29 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-07-20 12:37+0100\n"
-"Last-Translator: Paolino <pliesko1@gmail.com>\n"
+"PO-Revision-Date: 2013-09-06 15:15+0100\n"
+"Last-Translator: paolino <pliesko1@gmail.com>\n"
 "Language-Team: Black Hole <vuplus-community.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 "Language: cs\n"
+
+msgid "ext4 - recommended for meoboot"
+msgstr "ext4 - doporučeno pro meoboot nebo HDD >BH2.0.5"
+
+msgid "Subtitle delay when timing is bad"
+msgstr "Zpoždění titulků při špatném časování"
+
+msgid "Centered DVB subtitles"
+msgstr "Vystředěné DVB titulky"
+
+msgid "No delay"
+msgstr "Bez zpoždění"
+
+msgid "full transparency"
+msgstr "plná průhlednost"
 
 msgid "Service searching"
 msgstr "Vyhledávání stanic"
@@ -2215,7 +2230,7 @@ msgid "Smart Card model type error"
 msgstr "Chyba typu modelu Smart Card"
 
 msgid "Space"
-msgstr "Mezerník"
+msgstr "Místo"
 
 msgid "Standby Now"
 msgstr "Uspat nyní"
@@ -5758,7 +5773,7 @@ msgstr "Nejdřív vygeneruj styl vzhledu pomocí modulu Ai.HD-Control."
 
 #
 msgid "Flash"
-msgstr "Flashni"
+msgstr "Flash"
 
 #
 msgid "Flashing failed"

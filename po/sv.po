@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-07-22 00:17+0100\n"
+"PO-Revision-Date: 2013-08-16 23:36+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Restore Complete, Click OK to restart the box"
+msgstr "Återställning klar, tryck OK för att starta om"
 
 msgid "Service searching"
 msgstr "kanalsökning"
@@ -250,6 +253,9 @@ msgstr "Starta om boxen automatiskt efter manuell nedladdning"
 msgid "Automatically reboot the decoder after a scheduled download"
 msgstr "\"Starta om boxen automatiskt efter schemalagd nedladdning\""
 
+msgid "BH Update Channels List"
+msgstr "BH Uppdatera listan"
+
 msgid "BH  Devices Manager"
 msgstr "BH Enhetshanterare"
 
@@ -326,7 +332,7 @@ msgid "BH CrashlogReport Setting"
 msgstr "BH Ställ in crashlograpportering"
 
 msgid "BH Cron Manager"
-msgstr "BH Schemaläggning"
+msgstr "Schemaläggning"
 
 msgid "BH Cron Setup"
 msgstr "BH Ställ in schemaläggning"
@@ -1598,16 +1604,16 @@ msgid "PageUp Key"
 msgstr "SidaUpp tangent"
 
 msgid "Parsing"
-msgstr "Analysrerar"
+msgstr "Analyserar"
 
 msgid "Parsing channels list"
-msgstr "Analysrerar kanallista"
+msgstr "Analyserar kanallista"
 
 msgid "Parsing events"
-msgstr "Analysrerar händelser"
+msgstr "Analyserar händelser"
 
 msgid "Parsing titles"
-msgstr "Analysrerar titlar"
+msgstr "Analyserar titlar"
 
 msgid "Passive:"
 msgstr "Passiv:"
@@ -1833,10 +1839,10 @@ msgstr ""
 "Normalt är det inte nödvändigt men återställer EPG efter en E2 krasch"
 
 msgid "Remote channel stream converter"
-msgstr "Fjärrkanal streamkonverterare"
+msgstr "Streama fjärrkanallista"
 
 msgid "Remote channel stream converter "
-msgstr "Fjärrkanal streamkonverterare"
+msgstr "Streama fjärrkanallista "
 
 msgid "Remove completed timers after (days)"
 msgstr "Ta bort färdiga timers efter (dagar)"
@@ -1943,10 +1949,10 @@ msgid "Select Video Output..."
 msgstr "Välj Bild Utsignal..."
 
 msgid "Select a remote server IP first"
-msgstr "Välj en fjärrserver IP först"
+msgstr "Välj fjärrboxens IP först"
 
 msgid "Select bouquets to convert"
-msgstr "Välj en kanallista att konvertera"
+msgstr "Välj en fjärrkanallista att streama"
 
 msgid "Select files/folders to backup..."
 msgstr "Välj filer/mappar att säkerhetskopiera"
@@ -2104,7 +2110,7 @@ msgid "Subtitle position"
 msgstr "Undertext position"
 
 msgid "Subtitle settings"
-msgstr "Undertext inställningar"
+msgstr "Inställningar Undertext"
 
 msgid "Swap File created."
 msgstr "Swapfil skapad"
@@ -3125,6 +3131,9 @@ msgstr "Lägg till markör"
 msgid "Add a new NFS or CIFS mount point to your STB."
 msgstr "Lägg till ny NFS eller CIFS monteringspunkt i boxen."
 
+msgid "Add a new NFS or CIFS mount point to your setopbox."
+msgstr "Lägg till ny NFS eller CIFS monteringspunkt i boxen."
+
 #
 msgid "Add a new title"
 msgstr "Lägg till ny titel"
@@ -3893,6 +3902,9 @@ msgstr "Ändra stegstorlek"
 
 #
 msgid "Change the hostname of your STB."
+msgstr "Byt hostnamn på boxen."
+
+msgid "Change the hostname of your setopbox."
 msgstr "Byt hostnamn på boxen."
 
 msgid "Changelog"
@@ -6674,9 +6686,7 @@ msgstr "Monteringshanterare"
 msgid ""
 "Mounted/\n"
 "Unmounted"
-msgstr ""
-"Monterad/\n"
-"Omonterad"
+msgstr "Montering"
 
 #
 msgid "Mountpoints management"
@@ -7953,7 +7963,7 @@ msgid "Portuguese"
 msgstr "Portugisiska"
 
 msgid "Position of finished Timers in Timerlist"
-msgstr "Position av slutförda timers i timerlistan."
+msgstr "Position av slutförda timers i timerlistan"
 
 #
 msgid "Positioner"
@@ -8018,7 +8028,7 @@ msgstr "Tryck OK för aktivera valt utseende."
 
 #
 msgid "Press OK to activate the settings."
-msgstr "Tryck OK för aktivera inställningarna."
+msgstr "Tryck OK för att aktivera."
 
 #
 msgid "Press OK to collapse this host"
@@ -8034,7 +8044,7 @@ msgstr "Tryck OK för att ändra inställningar."
 
 #
 msgid "Press OK to expand this host"
-msgstr "Tryck OK för att expandera den här värden"
+msgstr "Tryck OK för att visa denna enhet"
 
 #
 #, python-format
@@ -8396,8 +8406,68 @@ msgid "Removing directory %s failed. (Maybe not empty.)"
 msgstr "Ta bort mappen %s misslyckades. (Troligen ej tom.)"
 
 #
+msgid "Setup Advanced Movie Selection"
+msgstr "Inställn. Inspelningslistan"
+
 msgid "Rename"
 msgstr "Byt namn"
+
+msgid "Sort by Date (1->9)"
+msgstr "Sortera efter datum >"
+
+msgid "Sort by Date (9->1)"
+msgstr "Sortera efter datum <"
+
+msgid "Sort by date (ascending)"
+msgstr "Sortera efter datum >"
+
+msgid "Sort by date (decending)"
+msgstr "Sortera efter datum <"
+
+msgid "Mark as seen"
+msgstr "Mrk som sedd"
+
+msgid "Mark as unseen"
+msgstr "Mrk som osedd"
+
+msgid "Mark movie as seen"
+msgstr "Markera som sedd"
+
+msgid "Mark movie as unseen"
+msgstr "Markera som osedd"
+
+msgid "Home"
+msgstr "Hem"
+
+msgid "Sort alphabetically"
+msgstr "Sortera alfabetiskt"
+
+msgid "Sort by Description"
+msgstr "Sortera efter beskr."
+
+msgid "Alphabetic sort"
+msgstr "Sortera alfabetiskt"
+
+msgid "Sort by description"
+msgstr "Sortera efter beskrivning"
+
+msgid "Filename:"
+msgstr "Filnamn"
+
+msgid "Movietitle:"
+msgstr "Titel:"
+
+msgid "Description:"
+msgstr "Beskrivning:"
+
+msgid "Location:"
+msgstr "Plats:"
+
+msgid "Sorted:"
+msgstr "Sorterad efter:"
+
+msgid "Movie location:"
+msgstr "Inspelningsplats:"
 
 #
 msgid "Rename crashlogs"
@@ -11095,6 +11165,9 @@ msgstr "Visa texttv..."
 msgid "View, edit or delete mountpoints on your STB."
 msgstr "Visa, ändra eller ta bort monteringspunkter på boxen."
 
+msgid "View, edit or delete mountpoints on your setopbox."
+msgstr "Visa, ändra eller ta bort monteringspunkter på boxen."
+
 #
 msgid "View, edit or delete usernames and passwords for your network."
 msgstr "Visa, ändra eller ta bort användarnamn och lösenord på ditt nätverk."
@@ -11583,6 +11656,12 @@ msgstr "Ja, alltid"
 
 msgid "Yes, and delete this movie"
 msgstr "Ja, och ta bort den här inspelningen"
+
+msgid "Yes, and after deleting return to movie list"
+msgstr "Ja, och ta bort och återvänd till inspelningslistan"
+
+msgid "No, but start endless loop"
+msgstr "Nej, men starta oändlig loop"
 
 #
 msgid "Yes, and don't ask again"
@@ -13365,7 +13444,13 @@ msgid "MeoBoot Installed on: "
 msgstr "MeoBoot installerat på:"
 
 msgid "Used: "
+msgstr "Använt: "
+
+msgid "Used:"
 msgstr "Använt:"
+
+msgid "Movie search"
+msgstr "Sök"
 
 msgid "   Available: "
 msgstr "   Tillgängligt:"
@@ -13779,13 +13864,13 @@ msgid "Archive Extraction\t\t\t"
 msgstr "Arkivextrahering\t\t\t"
 
 msgid "Merge directory "
-msgstr "Sammanfoga mappar"
+msgstr "Sammanfoga mappar "
 
 msgid "Restore "
-msgstr "Återställ"
+msgstr "Återställ "
 
 msgid "Merge "
-msgstr "Sammanfoga"
+msgstr "Sammanfoga "
 
 msgid "Path to save Personal Backup"
 msgstr "Sökväg till säkerhetskopia av inställningar"
@@ -13868,7 +13953,7 @@ msgid "Phone :"
 msgstr "Telefon:"
 
 msgid "Manual"
-msgstr "Handbok"
+msgstr "Manuellt"
 
 msgid "Modem Manager"
 msgstr "Modemhanterare"
@@ -13892,7 +13977,7 @@ msgid "Current settings (interface : br0)"
 msgstr "Nuvarande inställningar (gränssnitt : br0)"
 
 msgid "Wireless Lan Device is not detected."
-msgstr "Trådlös nätverksenhet inte detekterad."
+msgstr "Trådlös nätverksenhet inte hittad."
 
 msgid "Use AP Mode"
 msgstr "Använd AP läge"
@@ -14331,7 +14416,7 @@ msgid "Time Update in Minutes:"
 msgstr "Tiduppdatering i minuter:"
 
 msgid "Username:"
-msgstr "Användarnamn:"
+msgstr "Anv. namn:"
 
 msgid "Password:"
 msgstr "Lösenord:"
@@ -14407,10 +14492,19 @@ msgid "Hdd in use: "
 msgstr "Hårddisk som används:"
 
 msgid "Total: "
-msgstr "Totalt:"
+msgstr "Totalt: "
 
 msgid "Free: "
+msgstr "Ledigt: "
+
+msgid "Total:"
+msgstr "Totalt:"
+
+msgid "Free:"
 msgstr "Ledigt:"
+
+msgid "Name:"
+msgstr "Namn:"
 
 msgid "Total in use: "
 msgstr "Tatalt som används:"
@@ -14707,8 +14801,11 @@ msgstr "Dina Universum har återställts. Du kan nu börja bygga dina världar."
 msgid "Black Hole Speed Up"
 msgstr "Snabba upp Black Hole"
 
+msgid "Black Hole Speed up"
+msgstr "Snabba upp Black Hole"
+
 msgid "Black Hole Cron Manager"
-msgstr "BH Schemaläggning"
+msgstr "Schemaläggning"
 
 msgid "Osd Settings"
 msgstr "OSD-inställningar"
@@ -15036,7 +15133,7 @@ msgid "Path to save Epg File:"
 msgstr "Sökväg för EPG-fil:"
 
 msgid "Available Providers:"
-msgstr "Tillgängliga leverantörer:"
+msgstr "Leverantörer:"
 
 msgid "Global Settings"
 msgstr "Huvudinställning"
@@ -15102,10 +15199,10 @@ msgid "Epg stream channel:"
 msgstr "EPG stream kanal:"
 
 msgid "Enable Automatic EPG Refresh"
-msgstr "Aktivera automatisk EPG-uppdatering"
+msgstr "Auto EPG-uppdatering"
 
 msgid "Refresh EPG every day at time:"
-msgstr "Uppdatera EPG varje dag klockan:"
+msgstr "Uppdatera EPG varje dag kl:"
 
 msgid "Command to execute after EPG Refresh:"
 msgstr "Kommando att köra efter EPG-uppdatering:"
@@ -15123,7 +15220,7 @@ msgid "deepstandby"
 msgstr "Djupt vänteläge"
 
 msgid "Refresh EPG every day at time"
-msgstr "Uppdatera EPG varje dag vid tiden"
+msgstr "Uppdatera EPG varje dag kl:"
 
 msgid "Command to execute after EPG Refresh"
 msgstr "Kommando att köra efter EPG-uppdatering"
@@ -15150,7 +15247,7 @@ msgid "Max days to download"
 msgstr "Max antal dagar att ladda ner"
 
 msgid "Update List"
-msgstr "Lista på uppdateringar"
+msgstr "Uppdatera"
 
 msgid "Wait please download in progress ..."
 msgstr "Vänligen vänta nedladdning pågår..."
@@ -15751,15 +15848,21 @@ msgid "Set Default CAM"
 msgstr "Standard CAM"
 
 msgid "Active CAM"
-msgstr "Aktiv CAM"
+msgstr "Aktiv: "
 
 msgid "Autocam"
 msgstr "Autocam"
+
+msgid "Auto Cam"
+msgstr "AutoCAM"
 
 msgid "Sys Info"
 msgstr "Systeminfo"
 
 msgid "Extra Settings"
+msgstr "BH-inställningar"
+
+msgid "Extra Setting"
 msgstr "BH-inställningar"
 
 msgid "CAMs Installed"
