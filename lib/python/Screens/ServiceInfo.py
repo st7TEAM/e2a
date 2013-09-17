@@ -207,6 +207,7 @@ class ServiceInfo(Screen):
 			elif frontendDataOrg["tuner_type"] == "DVB-T":
 				return ((_("NIM"), ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H')[frontendData["tuner_number"]], TYPE_TEXT),
 						(_("Type"), frontendData["tuner_type"], TYPE_TEXT),
+						(_("System"), frontendData["system"], TYPE_TEXT),
 						(_("Frequency"), frontendData["frequency"], TYPE_VALUE_DEC),
 						(_("Inversion"), frontendData["inversion"], TYPE_TEXT),
 						(_("Bandwidth"), frontendData["bandwidth"], TYPE_VALUE_DEC),
@@ -216,6 +217,10 @@ class ServiceInfo(Screen):
 						(_("Transmission mode"), frontendData["transmission_mode"], TYPE_TEXT),
 						(_("Guard interval"), frontendData["guard_interval"], TYPE_TEXT),
 						(_("Hierarchy info"), frontendData["hierarchy_information"], TYPE_TEXT))
+				if frontendData.has_key("plp_id"):
+					data += ((_("PLP ID"), frontendData["plp_id"], TYPE_VALUE_DEC), )
+				return data
+
 		return [ ]
 
 	def fillList(self, Labels):
