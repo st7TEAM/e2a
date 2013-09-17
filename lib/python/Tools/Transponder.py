@@ -86,7 +86,7 @@ def ConvertToHumanReadable(tp, type = None):
 			eDVBFrontendParametersTerrestrial.FEC_5_6 : "5/6",
 			eDVBFrontendParametersTerrestrial.FEC_6_7 : "6/7",
 			eDVBFrontendParametersTerrestrial.FEC_7_8 : "7/8",
-			eDVBFrontendParametersTerrestrial.FEC_8_9 : "8/9"}.get(tp.get("code_rate_lp"))
+			eDVBFrontendParametersTerrestrial.FEC_8_9 : "8/9"}.get(tp.get("code_rate_lp", " "))
 		ret["code_rate_hp"] = {
 			eDVBFrontendParametersTerrestrial.FEC_Auto : _("Auto"),
 			eDVBFrontendParametersTerrestrial.FEC_1_2 : "1/2",
@@ -95,13 +95,13 @@ def ConvertToHumanReadable(tp, type = None):
 			eDVBFrontendParametersTerrestrial.FEC_5_6 : "5/6",
 			eDVBFrontendParametersTerrestrial.FEC_6_7 : "6/7",
 			eDVBFrontendParametersTerrestrial.FEC_7_8 : "7/8",
-			eDVBFrontendParametersTerrestrial.FEC_8_9 : "8/9"}.get(tp.get("code_rate_hp"))
+			eDVBFrontendParametersTerrestrial.FEC_8_9 : "8/9"}.get(tp.get("code_rate_hp", " "))
 		ret["constellation"] = {
 			eDVBFrontendParametersTerrestrial.Modulation_Auto : _("Auto"),
 			eDVBFrontendParametersTerrestrial.Modulation_QPSK : "QPSK",
 			eDVBFrontendParametersTerrestrial.Modulation_QAM16 : "QAM16",
 			eDVBFrontendParametersTerrestrial.Modulation_QAM64 : "QAM64",
-			eDVBFrontendParametersTerrestrial.Modulation_QAM256 : "QAM256"}.get(tp.get("constellation"))
+			eDVBFrontendParametersTerrestrial.Modulation_QAM256 : "QAM256"}.get(tp.get("constellation", " "))
 		ret["transmission_mode"] = {
 			eDVBFrontendParametersTerrestrial.TransmissionMode_Auto : _("Auto"),
 			eDVBFrontendParametersTerrestrial.TransmissionMode_1k : "1k",
@@ -109,7 +109,7 @@ def ConvertToHumanReadable(tp, type = None):
 			eDVBFrontendParametersTerrestrial.TransmissionMode_4k : "4k",
 			eDVBFrontendParametersTerrestrial.TransmissionMode_8k : "8k",
 			eDVBFrontendParametersTerrestrial.TransmissionMode_16k : "16k",
-			eDVBFrontendParametersTerrestrial.TransmissionMode_32k : "32k"}.get(tp.get("transmission_mode"))
+			eDVBFrontendParametersTerrestrial.TransmissionMode_32k : "32k"}.get(tp.get("transmission_mode", " "))
 		ret["guard_interval"] = {
 			eDVBFrontendParametersTerrestrial.GuardInterval_Auto : _("Auto"),
 			eDVBFrontendParametersTerrestrial.GuardInterval_19_256 : "19/256",
