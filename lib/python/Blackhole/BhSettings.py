@@ -1406,7 +1406,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		["Dlna Browser (Djmount Client)", "enigma2-plugin-extensions-dlnabrowser"],
 		["MiniDlna UPnP Server", "enigma2-plugin-extensions-dlnaserver"],
 		["Mediatomb UPnP Server (alternative)", "mediatomb"],
-		["Coherence UPnP Server (alternative for dvb stream)","enigma2-plugin-extensions-upnpmediaserver"]
+		["Coherence UPnP Server (alternative for dvb stream)","enigma2-plugin-extensions-upnpmediaserver"],
 		["Coherence UPnP Renderer for dvb stream","enigma2-plugin-extensions-upnpmediarenderer"]
 		]
 		
