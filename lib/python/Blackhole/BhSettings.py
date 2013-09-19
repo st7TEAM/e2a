@@ -109,8 +109,10 @@ class DeliteSettings(Screen):
 			if not fileExists("/usr/bin/djmount"):
 				self.session.open(MessageBox, _("Please enable this application in BlackHole Speed Up panel before to continue."), MessageBox.TYPE_INFO)
 			else:
-				from BhNet import BhDjmount
-				self.session.open(BhDjmount)
+#				from BhNet import BhDjmount
+#				self.session.open(BhDjmount)
+				from Plugins.Extensions.DLNABrowser.plugin import DLNADeviceBrowser
+				self.session.open(DLNADeviceBrowser)
 		elif self.sel == 17:
 			if not fileExists("/usr/bin/mediatomb"):
 				self.session.open(MessageBox, _("Please enable this application in BlackHole Speed Up panel before to continue."), MessageBox.TYPE_INFO)
@@ -121,8 +123,10 @@ class DeliteSettings(Screen):
 			if not fileExists("/usr/bin/minidlna"):
 				self.session.open(MessageBox, _("Please enable this application in BlackHole Speed Up panel before to continue."), MessageBox.TYPE_INFO)
 			else:
-				from BhNet import BhMinidlna
-				self.session.open(BhMinidlna)
+#				from BhNet import BhMinidlna
+#				self.session.open(BhMinidlna)
+				from Plugins.Extensions.DLNAServer.plugin import DLNAServer
+				self.session.open(DLNAServer)
 		elif self.sel == 19:
 			from BhNet import BhPcsc
 			self.session.open(BhPcsc)
@@ -1399,10 +1403,11 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		["UIPositionSetup", "enigma2-plugin-systemplugins-uipositionsetup"],
 		["WirelessAccessPoint", "enigma2-plugin-systemplugins-wirelessaccesspoint"],
 		["DVDPlayer", "enigma2-plugin-extensions-dvdplayer"],
-		["Djmount UPnP Client", "djmount"],
-		["MiniDlna UPnP Server", "minidlna"],
-		["Mediatomb (alternative) UPnP Server", "mediatomb"],
-		["Coherence UPnP Renderer (dvb stream)","enigma2-plugin-extensions-upnpmediarenderer"]
+		["Dlna Browser (Djmount Client)", "enigma2-plugin-extensions-dlnabrowser"],
+		["MiniDlna UPnP Server", "enigma2-plugin-extensions-dlnaserver"],
+		["Mediatomb UPnP Server (alternative)", "mediatomb"],
+		["Coherence UPnP Server (alternative for dvb stream)","enigma2-plugin-extensions-upnpmediaserver"]
+		["Coherence UPnP Renderer for dvb stream","enigma2-plugin-extensions-upnpmediarenderer"]
 		]
 		
 		machine = nab_Detect_Machine()
