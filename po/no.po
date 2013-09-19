@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-09-17 19:31+0100\n"
+"PO-Revision-Date: 2013-08-05 15:06+0100\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -16,31 +16,6 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 # *** BEGIN of non translatable added by paolino
-msgid "Subtitle delay when timing is bad"
-msgstr "Undertekst forsinkelse når ute av synk"
-
-msgid "Centered DVB subtitles"
-msgstr "Sentrert DVB undertekst"
-
-msgid "No delay"
-msgstr "Ingen forsinkelse"
-
-msgid "full transparency"
-msgstr "full gjennomsiktighet"
-
-msgid ""
-"Your Dreambox is now ready to use.\n"
-"\n"
-"Your internet connection is working now.\n"
-"\n"
-"Please press OK to continue."
-msgstr ""
-"Din VU+ er nå klar til bruk.\n"
-"\n"
-"Din internett forbindelse virker nå.\n"
-"\n"
-"Vennligst trykk OK for å gå videre."
-
 msgid "Red button..."
 msgstr "Rød knapp..."
 
@@ -66,7 +41,7 @@ msgstr "Autooppløsning..."
 
 #
 msgid "Your receiver is shutting down"
-msgstr "Din VU+ slås av..."
+msgstr "Din mottaker slås av"
 
 #
 msgid "Your receiver is rebooting"
@@ -74,11 +49,11 @@ msgstr "Din Vu+ starter nå på nytt..."
 
 #
 msgid "The user interface of your receiver is rebooting"
-msgstr "Brukergrensesnittet starter nå på nytt..."
+msgstr "Enigma2 starter nå på nytt..."
 
 #
 msgid "The user interface of your receiver is restarting"
-msgstr "Brukergrensesnittet starter nå på nytt..."
+msgstr "Enigma2 starter nå på nytt..."
 
 # *** END of non translatable added by paolino
 msgid "\tMount: "
@@ -223,7 +198,7 @@ msgid "Are you sure you want to remove the Package:\n"
 msgstr "Er du sikker på at du vil fjerne pakken:\n"
 
 msgid "Attempt to recover lost mounts (in background)"
-msgstr "Prøver å finne tapte tilkoblinger (i bakgrunnen)"
+msgstr "Prøver å finne tapte mounter (i bakgrunnen)"
 
 msgid "Auto language selection"
 msgstr "Auto språk utvalg"
@@ -349,7 +324,7 @@ msgid "BH Default services lists"
 msgstr "BH Standard kanal liste"
 
 msgid "BH Devices Mountpoints Setup"
-msgstr "BH Enhets Tilkoblings Oppsett"
+msgstr "BH Enhets Mountpunkt Oppsett"
 
 msgid "BH Downloads Manage"
 msgstr "BH Nedlaste Behandling"
@@ -484,13 +459,13 @@ msgid "BH Menu System"
 msgstr "BH Meny System"
 
 msgid "BH MountEdit"
-msgstr "BH TilkoblingsEditering"
+msgstr "BH MountEditering"
 
 msgid "BH MountManager"
-msgstr "BH Tilkoblings Behandling"
+msgstr "BH Mount Behandling"
 
 msgid "BH MountView"
-msgstr "BH TilkoblingsVisning"
+msgstr "BH MountVisning"
 
 msgid "BH MyTubePlayerHelpScreen..."
 msgstr "BH MyTubePlayerHjelpeSkjerm..."
@@ -535,7 +510,7 @@ msgid "BH Packet manager"
 msgstr "BH Pakke behandling"
 
 msgid "BH Parallel Univ... Teleportation"
-msgstr "BH Parallelt Univ... Teleportering"
+msgstr "BH Parallelt Univ... Teleportasjon"
 
 msgid "BH Parallel Universe Setup"
 msgstr "BH Paralleltl Univers Oppsett"
@@ -562,7 +537,7 @@ msgid "BH Plugin manager activity information"
 msgstr "BH Modul behandling aktivitets info"
 
 msgid "BH Recorded files... /hdd/movie"
-msgstr "BH Innspilte filer... /hdd/movie"
+msgstr "BH Innspillte filer... /hdd/movie"
 
 msgid "BH Recording paths"
 msgstr "BH Opptaks baner"
@@ -619,7 +594,7 @@ msgid "BH Setup"
 msgstr "BH Oppsett"
 
 msgid "BH Sleep Timer"
-msgstr "BH Innsoving"
+msgstr "BH Sove Tid"
 
 msgid "BH Software Management"
 msgstr "BH Programvare Behandling"
@@ -745,7 +720,7 @@ msgid "Black Hole Cron Setup"
 msgstr "Black Hole Cron Oppsett"
 
 msgid "Black Hole Devices Mountpoints Setup"
-msgstr "Black Hole Enhets Tilkoblings Oppsett"
+msgstr "Black Hole Enhets Mountpunkt Oppsett"
 
 msgid "Black Hole E2"
 msgstr "Black Hole E2"
@@ -1004,7 +979,7 @@ msgid "Descriptors db size: %s"
 msgstr "Descriptors db size: %s"
 
 msgid "Devices Manager & Mountpoints"
-msgstr "Enhets Behandler & Tilkobling"
+msgstr "Enhets Behandler & Mountpunkt"
 
 msgid "Direct Input"
 msgstr "Direkte Innsetting"
@@ -1096,9 +1071,9 @@ msgid ""
 "of mount it manually and try again"
 msgstr ""
 "Enhet hvor du lagrer data.\n"
-"Enheten må tilkobles i rw. Hvis du ikke kan se enheten her er den nok "
-"tilkoblet som kun  les eller autofs håndter den i kun les modus. I tilfelle "
-"kan du tilkoble den manuelt og prøve om gjen."
+"Enheten må mountes i rw. Hvis du ikke kan se enheten her er den nok mountet "
+"som kun  les eller autofs håndter den i kun les modus. I tilfelle kan du "
+"mounte den manuelt og prøve om gjen."
 
 msgid "EPG language selection 1"
 msgstr "EPG språkvalg 1"
@@ -1484,10 +1459,10 @@ msgstr ""
 "Enhet: /dev/%s"
 
 msgid "Mount again"
-msgstr "Tilkoble om igjen"
+msgstr "Mount om igjen"
 
 msgid "MountView"
-msgstr "TilkoblingsVisning"
+msgstr "MountView"
 
 msgid "Mouse"
 msgstr "Mus"
@@ -1512,7 +1487,7 @@ msgid "Netstat"
 msgstr "Netstat"
 
 msgid "Network Browser & Mountpoints"
-msgstr "Nettverks Søking & Tilkobling"
+msgstr "Nettverks Søker & Mountpunkt"
 
 msgid "No backup present"
 msgstr "Ingen sikkerhetskopi"
@@ -1552,7 +1527,7 @@ msgid ""
 "Only for opentv providers.\n"
 "If you zap on channel used from a provider it download the epg in background"
 msgstr ""
-"Kun til åpentv tilbydere.\n"
+"Kun til opentv tilbydere.\n"
 "Hvis du zapper på kanal brukt av tilbyder, laster epg ned i bakgrunnen"
 
 msgid "Open Startpage"
@@ -1645,7 +1620,7 @@ msgid ""
 "Restart Gui now?"
 msgstr ""
 "Omstart er nødvendig for at LCD Picons endringer virker.\n"
-"Omstarte brukergrensesnittet nå?"
+"Omstarte Enigma2 nå?"
 
 msgid ""
 "Ping test fail\n"
@@ -1850,8 +1825,7 @@ msgid ""
 "Normally it's not necessary but recover epg after an enigma2 crash"
 msgstr ""
 "Omlast epg ved hver oppstart.\n"
-"Normalt ikke nødvendig, men gjenoppretter epg etter en brukergrensesnitt "
-"kræsj"
+"Normalt ikke nødvendig, men gjenoppretter epg etter en Enigma2 kræsj"
 
 msgid "Remote channel stream converter"
 msgstr "Fjern kanal stream omformer"
@@ -1988,7 +1962,7 @@ msgid "Show 'Force reload' as plugin"
 msgstr "Vis `Tving omlast` som modul"
 
 msgid "Show EIT now/next in infobar"
-msgstr "Vis EIT nå/neste i infovindu"
+msgstr "Vis EIT nå/neste i infobar"
 
 msgid "Show SNR percentage instead of dB value"
 msgstr "Vis SNR prosent i stedet for dB verdi"
@@ -2015,7 +1989,7 @@ msgid "Show crossepg in plugin menu"
 msgstr "Vis crossepg i modul meny"
 
 msgid "Show crypto info in infobar"
-msgstr "Vis crypto info i infovindu"
+msgstr "Vis crypto info i infobar"
 
 msgid "Show in Extensions/Plugins:"
 msgstr "Vis i Utvidelser/Moduler:"
@@ -2030,7 +2004,7 @@ msgid "Show movie lengths in movielist"
 msgstr "Vis filmlengde i filmlisten"
 
 msgid "Show second infobar"
-msgstr "Vis det andre infovindu "
+msgstr "Vis infobar to"
 
 msgid "Show status icons in movielist"
 msgstr "Vis status ikoner i filmlisten"
@@ -2131,7 +2105,7 @@ msgid "Subtitle position"
 msgstr "Undertekst posisjon"
 
 msgid "Subtitle settings"
-msgstr "Undertekst Innstillinger"
+msgstr "Undertekst innstilling"
 
 msgid "Swap File created."
 msgstr "Swap Fil er laget."
@@ -2197,7 +2171,7 @@ msgid "This plugin will show you the uptime"
 msgstr "Denne modulen viser oppetiden"
 
 msgid "This script shows Network Connections"
-msgstr "Dette skript viser Nettverks Forbindelser"
+msgstr "Dette skript viser Nettverks Tilkoblinger"
 
 msgid "This script shows Network Interfaces Informations"
 msgstr "Dette skript viser Nettverks Grensesnitt Informasjon"
@@ -2466,7 +2440,7 @@ msgid "reader: "
 msgstr "leser: "
 
 msgid "recording"
-msgstr "tar opp"
+msgstr "spiller inn"
 
 msgid "scan type(DVB-S)"
 msgstr "søke type(DVB-S)"
@@ -2883,11 +2857,11 @@ msgstr "9"
 
 #
 msgid "<Current movielist location>"
-msgstr "<Gjeldende filmliste plassering>"
+msgstr "<Gjeldende filmliste sted>"
 
 #
 msgid "<Default movie location>"
-msgstr "<Standard opptaks plassering>"
+msgstr "<Standard Film plassering>"
 
 #
 msgid "<Last timer location>"
@@ -2937,7 +2911,7 @@ msgid ""
 "A finished record timer wants to set your\n"
 "STB to standby. Do that now?"
 msgstr ""
-"Et avsluttet tidsopptak ønsker å sette din VU+\n"
+"Ett avsluttet tidsopptak ønsker å sette din VU+\n"
 "i dvalemodus. Skal det gjøres nå ?"
 
 #
@@ -2945,7 +2919,7 @@ msgid ""
 "A finished record timer wants to shut down\n"
 "your STB. Shutdown now?"
 msgstr ""
-"Et avsluttet tidsopptak ønsker å slå av din VU+.\n"
+"Ett avluttet tidsopptak ønsker å slå av din VU+.\n"
 "Skal den slås av nå ?"
 
 #
@@ -2966,7 +2940,7 @@ msgid ""
 "A mount entry with this name already exists!\n"
 "Update existing entry and continue?\n"
 msgstr ""
-"En tilkoblings oppføring med dette navnet eksisterer allerede! \n"
+"En mount oppføring med dette navnet eksisterer allerede! \n"
 "\vOppdater eksisterende oppføring og fortsett? \n"
 
 msgid "A nice looking HD skin from Kerni"
@@ -2987,7 +2961,7 @@ msgid ""
 "A record has been started:\n"
 "%s"
 msgstr ""
-"Opptak har startet:\n"
+"Ett opptak har startet:\n"
 "%s"
 
 #
@@ -2995,7 +2969,7 @@ msgid ""
 "A recording is currently running.\n"
 "What do you want to do?"
 msgstr ""
-"Opptak kjører fortsatt.\n"
+"En innspilling kjører fortsatt.\n"
 "Hva vil du gjøre?"
 
 #
@@ -3003,16 +2977,16 @@ msgid ""
 "A recording is currently running. Please stop the recording before trying to "
 "configure the positioner."
 msgstr ""
-"Opptak kjører fortsatt. Vennligst stopp opptak før du prøver å konfigurere "
-"motoren."
+"En innspilling kjører fortsatt. Vennligst stopp innspillingen før du prøver "
+"å konfigurere motoren."
 
 #
 msgid ""
 "A recording is currently running. Please stop the recording before trying to "
 "start the satfinder."
 msgstr ""
-"Opptak kjører fortsatt. Vennligst stopp opptak før du prøver å starte "
-"satellittfinneren."
+"En innspilling kjører fortsatt. Vennligst stopp innspillingen før du prøver "
+"å starte satellittfinneren."
 
 #
 #, python-format
@@ -3169,7 +3143,7 @@ msgstr "Legge til markør"
 
 #
 msgid "Add a new NFS or CIFS mount point to your STB."
-msgstr "Legg til en ny NFS eller CIFS tikobling til din VU+"
+msgstr "Legg til en ny NFS eller CIFS mount point til STB din."
 
 #
 msgid "Add a new title"
@@ -3181,17 +3155,17 @@ msgstr "Legg til nettverks innstilling?"
 
 #
 msgid "Add new AutoTimer"
-msgstr "Legg til nytt Autotidsopptak"
+msgstr "Legg til ny Autotidsopptak"
 
 #
 msgid "Add new network mount point"
-msgstr "Legg til ny nettverks tilkobling"
+msgstr "Legg til nytt nettverks mountpunkt"
 
 msgid "Add similar timer on conflict"
 msgstr "Legg til lignende tidsopptak ved konflikt"
 
 msgid "Add tags to recorded movies"
-msgstr "Legg til tagger på innspilte filmer"
+msgstr "Legg til tagger på innspillte filmer"
 
 #
 msgid "Add timer"
@@ -3231,8 +3205,8 @@ msgid ""
 "Adds enigma2 settings and dreambox model informations like SN, rev... if "
 "enabled."
 msgstr ""
-"Tilfører brukergrensesnitt innstillinger og VU+ modell informasjon som SN, "
-"rev ... hvis aktivert"
+"Tilfører Enigma2 innstillinger og VU+  modell informasjon som SN, rev ... "
+"hvis aktivert"
 
 #
 msgid "Adds network configuration if enabled."
@@ -3327,7 +3301,7 @@ msgid "All non-repeating timers"
 msgstr "Alle ikke-repeterende tidsopptak "
 
 msgid "Allow to search recordings"
-msgstr "Tillat opptaks søk "
+msgstr "Tillat opptak søk "
 
 #
 msgid "Allow zapping via Webinterface"
@@ -3443,15 +3417,15 @@ msgid ""
 "Are you sure you want to restore your Enigma2 backup?\n"
 "Enigma2 will restart after the restore"
 msgstr ""
-"Sikker på at du vil gjenopprette brukergrensesnitt sikkerhetskopi?\n"
-"Brukergrensesnittet starter igjen etter gjenopprettingen"
+"Sikker på at du vil gjenopprette Enigma2 sikkerhetskopi?\n"
+"Enigma2 starter igjen etter gjenopprettingen"
 
 #
 msgid ""
 "Are you sure you want to save this network mount?\n"
 "\n"
 msgstr ""
-"Er du sikker på at du vil lagre denne nettverks tilkobling?\n"
+"Er du sikker på at du vil lagre denne nettverks mount?\n"
 "\n"
 
 #
@@ -3672,10 +3646,10 @@ msgid "Back"
 msgstr "Tilbake"
 
 msgid "Back, lower USB Slot"
-msgstr "Nedre-Bak USB Plass"
+msgstr "Nedre-Bak  USB Slot"
 
 msgid "Back, upper USB Slot"
-msgstr "Øvre-Bak USB Plass"
+msgstr "Øvre-Bak  USB Slot"
 
 #
 msgid "Background"
@@ -3727,15 +3701,15 @@ msgstr "Oppsett av 0 key i BiB modus"
 
 #
 msgid "Behavior when a movie is started"
-msgstr "Oppførsel når opptak blir startet"
+msgstr "Oppførsel når en film blir startet"
 
 #
 msgid "Behavior when a movie is stopped"
-msgstr "Oppførsel når opptak blir stoppet"
+msgstr "Oppførsel når en film blir stoppet"
 
 #
 msgid "Behavior when a movie reaches the end"
-msgstr "Oppførsel når opptak når slutten"
+msgstr "Oppførsel når en film når slutten"
 
 #
 msgid "Bitrate:"
@@ -3833,7 +3807,7 @@ msgstr ""
 msgid ""
 "By pressing the OK Button on your remote control, the info bar is being "
 "displayed."
-msgstr "Ved å trykke OK på din fjernkontroll, vises infovindu."
+msgstr "Ved å trykke OK på din fjernkontroll, vises infobaren."
 
 #
 msgid "C"
@@ -3924,7 +3898,7 @@ msgstr "Bytt bouquet i hurtigzap"
 
 #
 msgid "Change default recording offset?"
-msgstr "Endre standard opptaks margin?"
+msgstr "Endre standard innspillings margin?"
 
 #
 msgid "Change hostname"
@@ -4071,7 +4045,7 @@ msgid ""
 "Cleanup timerlist, orphaned movie files and setting backups automatically "
 "according to specfied rules."
 msgstr ""
-"Slette tidsopptak listen, adopterte filmfiler og oppsetts sikkerhetskopi "
+"Slette tidsopptak listen, adoptere filmfiler og oppsetts sikkerhetskopi "
 "automatisk i henhold til spesifikke regler."
 
 msgid ""
@@ -4175,7 +4149,7 @@ msgid "Complex (allows mixing audio tracks and aspects)"
 msgstr "Kompleks (tillater blandede lydspor og aspekter )"
 
 msgid "Composition of the recording filenames"
-msgstr "Opptaks filnavn komposisjon"
+msgstr "Innspillings filnavn komposisjon"
 
 #
 msgid "Configuration Mode"
@@ -4260,7 +4234,7 @@ msgid "Contrast"
 msgstr "Kontrast"
 
 msgid "Control recording completely by service"
-msgstr "Kontrollere opptak  etter kanaltype"
+msgstr "Kontrollere innspilling etter kanaltype"
 
 msgid "Control your STB with your Web browser."
 msgstr "Kontrollere din VU+ med din nettleser."
@@ -4346,11 +4320,11 @@ msgstr "Lag nytt Autotidsopptak ."
 
 #
 msgid "Create a new timer using the classic editor"
-msgstr "Legg til nytt tidsopptak ved bruk av klassisk editor"
+msgstr "Legg til ny tidsopptak ved bruk av klassisk editor"
 
 #
 msgid "Create a new timer using the wizard"
-msgstr "Legg til nytt tidsopptak ved bruk av veiviser"
+msgstr "Legg til ny tidsopptak ved bruk av veiviser"
 
 #
 msgid "Create movie folder failed"
@@ -4440,10 +4414,10 @@ msgid "Cut"
 msgstr "Klipp ut"
 
 msgid "Cut your movies"
-msgstr "Klipp dine opptak"
+msgstr "Klipp dine filmer"
 
 msgid "Cut your movies."
-msgstr "Klipp dine opptak."
+msgstr "Klipp dine filmer."
 
 msgid "CutListEditor allows you to edit your movies"
 msgstr "Med CutList Editor kan du redigere dine filmer "
@@ -4564,7 +4538,7 @@ msgstr "Standard innstillinger"
 
 #
 msgid "Default movie location"
-msgstr "Standard opptaks plassering"
+msgstr "Standard film plassering"
 
 #
 msgid "Default services lists"
@@ -4612,7 +4586,7 @@ msgstr "Sletting feilet!"
 
 #
 msgid "Delete mount"
-msgstr "Slette tilkobling"
+msgstr "Slette mount"
 
 #
 #, python-format
@@ -4710,7 +4684,7 @@ msgstr "Deaktiver feillogg rapport"
 
 #
 msgid "Disable timer"
-msgstr "Deaktiver innsoving "
+msgstr "Deaktiver tidsopptak "
 
 #
 msgid "Disabled"
@@ -5091,10 +5065,10 @@ msgid "Edit settings"
 msgstr "Endre innstillinger"
 
 msgid "Edit tags of recorded movies"
-msgstr "Endre tags av innspilte filmer"
+msgstr "Endre tags fra innspillte filmer"
 
 msgid "Edit tags of recorded movies."
-msgstr "Endre tags av innspilte filmer"
+msgstr "Endre tags fra innspillte filmer"
 
 #
 msgid "Edit the Nameserver configuration of your STB.\n"
@@ -5210,7 +5184,7 @@ msgstr ""
 
 #
 msgid "Enable timer"
-msgstr "Aktiver innsoving "
+msgstr "Aktiver sove tid "
 
 #
 msgid "Enabled"
@@ -5280,7 +5254,7 @@ msgid ""
 "\n"
 "© 2006 - Stephan Reichholf"
 msgstr ""
-"Enigma2 Skinvelger\n"
+"Enigma2 Skinselector\n"
 "\n"
 "Får du problemer, vennligst kontakt\n"
 "stephan@reichholf.net\n"
@@ -5653,7 +5627,7 @@ msgid "FritzCall shows incoming calls to your Fritz!Box on your STB."
 msgstr "FritzCall viser innkommende samtaler til din Fritz!Box på din VU+."
 
 msgid "Front USB Slot"
-msgstr "Front USB Plass"
+msgstr "Front USB Slot"
 
 msgid "Frontend for /tmp/mmi.socket"
 msgstr "Frontend for /tmp/mmi.socket"
@@ -5672,7 +5646,7 @@ msgid ""
 "GUI needs a restart to apply a new skin\n"
 "Do you want to Restart the GUI now?"
 msgstr ""
-"Brukergrensesnittet startes om igjen for aktivering av nytt skin\n"
+"Enigma2 startes om igjen for aktivering av nytt skin\n"
 "Vil du starte om nå?"
 
 msgid "GUI that allows user to change the ftp- / telnet password."
@@ -5991,7 +5965,7 @@ msgstr "Er igang"
 #
 msgid ""
 "In order to record a timer, the TV was switched to the recording service!\n"
-msgstr "For å gjøre et tidsopptak, har VU+ byttet til kanalen for opptak!\n"
+msgstr "For å gjøre ett tidsopptak, har VU+ byttet til kanalen for opptak!\n"
 
 #
 msgid "Include"
@@ -6028,11 +6002,11 @@ msgstr "Info"
 
 #
 msgid "InfoBar"
-msgstr "Infovindu"
+msgstr "InfoBar"
 
 #
 msgid "Infobar timeout"
-msgstr "Infovindu tidsavbrudd"
+msgstr "Infobar timeout"
 
 #
 msgid "Information"
@@ -6433,7 +6407,7 @@ msgstr "Last"
 
 #
 msgid "Load Length of Movies in Movielist"
-msgstr "Last filmlengde til Filmer i listen"
+msgstr "Legg inn filmlengde til Filmer"
 
 #
 msgid "Load feed on startup:"
@@ -6724,43 +6698,43 @@ msgstr "Mest sett"
 
 #
 msgid "Mount failed"
-msgstr "Tilkobling feilet"
+msgstr "Mounting feilet"
 
 #
 msgid "Mount informations"
-msgstr "Tilkoblings info"
+msgstr "Mount informasjon"
 
 #
 msgid "Mount options"
-msgstr "Tilkoblings valg"
+msgstr "Mount valg"
 
 #
 msgid "Mount type"
-msgstr "Tikoblings type"
+msgstr "Mount type"
 
 #
 msgid "MountManager"
-msgstr "Tilkoblings Behandling"
+msgstr "Mount behandling"
 
 #
 msgid ""
 "Mounted/\n"
 "Unmounted"
 msgstr ""
-"Tilkoblet/\n"
-"Ikke tilkoblet"
+"Mounted/\n"
+"Unmounted"
 
 #
 msgid "Mountpoints management"
-msgstr "Tilkoblings behandling"
+msgstr "Mountpunkt behandling"
 
 #
 msgid "Mounts editor"
-msgstr "Tilkoblings Redigering"
+msgstr "Mounts editor"
 
 #
 msgid "Mounts management"
-msgstr "Tilkobling"
+msgstr "Mountpunkt "
 
 #
 msgid "Move Picture in Picture"
@@ -6824,7 +6798,7 @@ msgstr "Flytt vestover"
 
 #
 msgid "Movie location"
-msgstr "Opptaks plassering"
+msgstr "Film plassering"
 
 msgid ""
 "MovieTagger adds tags to recorded movies to sort a large list of movies."
@@ -6839,7 +6813,7 @@ msgstr ""
 
 #
 msgid "Movielist menu"
-msgstr "Opptaksliste Meny"
+msgstr "Filmliste Meny"
 
 #
 msgid "Multi EPG"
@@ -7075,7 +7049,7 @@ msgstr "Nettverks konfigurasjon"
 
 #
 msgid "Network Mount"
-msgstr "Nettverks Tilkobling"
+msgstr "Nettverks mount"
 
 #
 msgid "Network Setup"
@@ -7190,7 +7164,7 @@ msgstr "Ingen visbare filer på dette medie funnet!"
 
 #
 msgid "No event info found, recording indefinitely."
-msgstr "Ingen EPG-data funnet. Start ubegrenset opptak ."
+msgstr "Ingen EPG-data funnet. Start ubegrenset innspilling."
 
 #
 msgid ""
@@ -7316,7 +7290,7 @@ msgstr ""
 
 #
 msgid "No, but play video again"
-msgstr "Nei, men spill om igjen"
+msgstr "Nei, men spill film om igjen"
 
 #
 msgid "No, but restart from begin"
@@ -7324,11 +7298,11 @@ msgstr "Nei, men start fra begynnelsen"
 
 #
 msgid "No, but switch to video entries."
-msgstr "Nei, men bytt til video oppføringer."
+msgstr "Nei, men bytt til film oppføringer."
 
 #
 msgid "No, but switch to video search."
-msgstr "Nei, men bytt til video søk."
+msgstr "Nei, men bytt til film søk."
 
 #
 msgid "No, do nothing."
@@ -7458,11 +7432,11 @@ msgstr "Av"
 
 #
 msgid "Offset after recording (in m)"
-msgstr "Margin etter opptak (i m)"
+msgstr "Offset etter innspilling (i m)"
 
 #
 msgid "Offset before recording (in m)"
-msgstr "Margin før opptak (i m)"
+msgstr "Offset før innspilling (i m)"
 
 #
 msgid "On"
@@ -7599,8 +7573,8 @@ msgid ""
 "Partnerbox allows editing a remote STB's record timers and stream its TV  "
 "program."
 msgstr ""
-"Partnerbox tillater redigering av en annen mottakers opptak og streamer TV "
-"program."
+"Partnerbox tillater redigering av en annen mottakers innspillinger og "
+"streamer TV program."
 
 #
 msgid "Password"
@@ -7688,7 +7662,7 @@ msgid "Play video again"
 msgstr "Spill video om igjen"
 
 msgid "Play videos from PC on your STB"
-msgstr "Spill av videoer fra PC på din VU+"
+msgstr "Spill filmer fra PC på din VU+"
 
 msgid "Playback of Youtube through a PC"
 msgstr "Avspilling avYoutube gjennom en PC"
@@ -7700,7 +7674,7 @@ msgid "Player for Network and Internet Streams."
 msgstr "Spiller til Nettverks og Internett Streaming"
 
 msgid "Plays your favorite music and videos"
-msgstr "Spiller av din favoritt musikk og video"
+msgstr "Spiller av din favoritt musikk og filmer"
 
 #
 msgid "Please Reboot"
@@ -7723,7 +7697,7 @@ msgstr ""
 
 #
 msgid "Please change recording endtime"
-msgstr "Vennligst endre sluttid for opptak "
+msgstr "Vennligst endre sluttid for innspilling"
 
 #
 msgid "Please check your network settings!"
@@ -7837,11 +7811,11 @@ msgstr "Vennligst velg en spilleliste"
 
 #
 msgid "Please select a standard feed or try searching for videos."
-msgstr "Vennligst velg en standard feed eller søk etter video."
+msgstr "Vennligst velg en standard feed eller søk etter filmer."
 
 #
 msgid "Please select a subservice to record..."
-msgstr "Vennligst velg en underkanal for opptak..."
+msgstr "Vennligst velg en underkanal for innspilling"
 
 #
 msgid "Please select a subservice..."
@@ -7868,7 +7842,7 @@ msgstr "Velg tag for å filtrere..."
 
 #
 msgid "Please select the movie path..."
-msgstr "Vennligst velg bane for lagring av opptak..."
+msgstr "Vennligst velg bane for lagring av film..."
 
 #
 msgid ""
@@ -7931,7 +7905,7 @@ msgstr "Vennligst vent, aktiverer din nettverk konfigurering..."
 
 #
 msgid "Please wait for activation of your network mount..."
-msgstr "Vennligst vent, aktiverer din nettverks tilkobling... "
+msgstr "Vennligst vent, aktiverer ditt nettverks mount... "
 
 #
 msgid "Please wait while removing selected package..."
@@ -7939,7 +7913,7 @@ msgstr "Vennligst vent, fjerner valgt pakke..."
 
 #
 msgid "Please wait while removing your network mount..."
-msgstr "Vennligst vent, fjerner din nettverks tilkobling..."
+msgstr "Vennligst vent, fjerner din nettverks mount..."
 
 #
 msgid "Please wait while scanning is in progress..."
@@ -7951,7 +7925,7 @@ msgstr "Vennligst vent , søker etter fjernbare pakker..."
 
 #
 msgid "Please wait while updating your network mount..."
-msgstr "Vennligst vent, oppdaterer din nettverks tilkobling..."
+msgstr "Vennligst vent, oppdaterer ditt nettverks mount..."
 
 #
 msgid "Please wait while we configure your network..."
@@ -8131,11 +8105,11 @@ msgstr "Trykk OK for å få flere detaljer om %s"
 
 #
 msgid "Press OK to mount this share!"
-msgstr "Trykk OK for å tilkoble denne delingen!"
+msgstr "Trykk OK for å mount denne delingen!"
 
 #
 msgid "Press OK to mount!"
-msgstr "Trykk OK for å tilkoble!"
+msgstr "Trykk OK for å mount!"
 
 #
 msgid "Press OK to save settings."
@@ -8365,11 +8339,11 @@ msgstr "Opptak begrenset grunnet motstridende tidsopptak %s"
 
 #
 msgid "Recorded files..."
-msgstr "Innspilte filer..."
+msgstr "Innspillte filer..."
 
 #
 msgid "Recording"
-msgstr "Tar opp"
+msgstr "Spiller inn"
 
 #
 msgid "Recording paths"
@@ -8381,11 +8355,11 @@ msgstr "Opptak er i gang eller starter snart!"
 
 #
 msgid "Recordings"
-msgstr "Opptak "
+msgstr "Innspillinger"
 
 #
 msgid "Recordings always have priority"
-msgstr "Opptak har alltid prioritet"
+msgstr "Innspillinger har alltid prioritet"
 
 msgid "Redirect notifications to Growl, Snarl, Prowl or Syslog"
 msgstr "Omdirigere meldinger til Growl, Snarl, Prowl eller Syslog"
@@ -8492,7 +8466,7 @@ msgid "Rename crashlogs"
 msgstr "Endre feillogg navn"
 
 msgid "Rename your movies"
-msgstr "Gi nytt navn til opptak"
+msgstr "Gi nytt navn til dine filmer"
 
 #
 msgid "Repeat"
@@ -8504,7 +8478,7 @@ msgstr "Gjentagelses Type"
 
 #
 msgid "Repeating event currently recording... What do you want to do?"
-msgstr "Gjentagende event holder på med en opptak... Hva vil du gjøre?"
+msgstr "Gjentagende event holder på med en innspilling... Hva vil du gjøre?"
 
 #
 msgid "Repeats"
@@ -8566,11 +8540,11 @@ msgstr "Omstart"
 
 #
 msgid "Restart GUI"
-msgstr "Omstart Brukergrensesnitt"
+msgstr "Omstart Enigma2"
 
 #
 msgid "Restart GUI now?"
-msgstr "Omstarte Brukergrensesnittet nå?"
+msgstr "Omstarte Enigma2 nå?"
 
 #
 msgid "Restart network"
@@ -8640,7 +8614,7 @@ msgstr "Gå tilbake til filleser"
 
 #
 msgid "Return to movie list"
-msgstr "Gå tilbake til opptaksliste"
+msgstr "Gå tilbake til filmliste"
 
 #
 msgid "Return to previous service"
@@ -8999,7 +8973,7 @@ msgid "Security service not running."
 msgstr "Sikkerhets tjeneste kjører ikke."
 
 msgid "See service-epg (and PiP) from other channels in an infobar."
-msgstr "Se kanal-epg (og PiP) fra andre kanaler i et infovindu."
+msgstr "Se kanal-epg (og PiP) fra andre kanaler i en infobar."
 
 #
 msgid "Seek"
@@ -9031,7 +9005,7 @@ msgstr "Velg Nettverksadapter"
 
 #
 msgid "Select a movie"
-msgstr "Velg opptak"
+msgstr "Velg film"
 
 #
 msgid "Select a timer to import"
@@ -9043,7 +9017,7 @@ msgstr "Velg lydspor"
 
 #
 msgid "Select bouquet to record on"
-msgstr "Velg opptaks bouquet"
+msgstr "Velg innspillings bouquet"
 
 #
 msgid "Select channel to record from"
@@ -9051,7 +9025,7 @@ msgstr "Velg kanal å ta opp fra"
 
 #
 msgid "Select channel to record on"
-msgstr "Velg opptaks kanal"
+msgstr "Velg innspillings kanal"
 
 msgid "Select desired image from feed list"
 msgstr "Velg ønsket image fra feed liste"
@@ -9083,7 +9057,7 @@ msgstr "Velg pakke"
 
 #
 msgid "Select provider to add..."
-msgstr "Velg tilbyder å legge til..."
+msgstr "Velg tilbyder..."
 
 #
 msgid "Select refresh rate"
@@ -9320,7 +9294,7 @@ msgstr "Vis Info"
 
 #
 msgid "Show Message when Recording starts"
-msgstr "Vis melding når opptak starter"
+msgstr "Hvis melding når opptak starter"
 
 #
 msgid "Show WLAN Status"
@@ -9328,7 +9302,7 @@ msgstr "Vis WLAN Status"
 
 #
 msgid "Show blinking clock in display during recording"
-msgstr "Vis blinkende klokke i display under opptak "
+msgstr "Vis blinkende klokke i display under innspilling"
 
 #
 msgid "Show event-progress in channel selection"
@@ -9343,15 +9317,15 @@ msgstr "Vis info skjerm"
 
 #
 msgid "Show infobar on channel change"
-msgstr "Vis infovindu ved kanalbytte"
+msgstr "Vis infobar ved kanalbytte"
 
 #
 msgid "Show infobar on event change"
-msgstr "Vis infovindu ved programbytte"
+msgstr "Vis infobar ved programbytte"
 
 #
 msgid "Show infobar on skip forward/backward"
-msgstr "Vis infovindu ved hopp fram/tilbake"
+msgstr "Vis infobar ved hopp fram/tilbake"
 
 msgid "Show notification on conflicts"
 msgstr "Vis melding ved konflikt"
@@ -9482,7 +9456,7 @@ msgstr "Sove Tid"
 
 #
 msgid "Sleep timer action:"
-msgstr "Innsovings handling:"
+msgstr "Sove tid handling:"
 
 #
 msgid "Slideshow Interval (sec.)"
@@ -9717,7 +9691,7 @@ msgstr "Stopp nåværende event med ikke de som kommer"
 
 #
 msgid "Stop playing this movie?"
-msgstr "Stoppe avspilling av opptak?"
+msgstr "Stoppe avspilling av denne filmen?"
 
 #
 msgid "Stop test"
@@ -10163,11 +10137,11 @@ msgstr "Skin er i KingSize-oppløsning 1024x576"
 
 #
 msgid "The sleep timer has been activated."
-msgstr "Innsoving har blitt aktivert"
+msgstr "Sove Tid har blitt aktivert"
 
 #
 msgid "The sleep timer has been disabled."
-msgstr "Innsoving har blitt deaktivert"
+msgstr "Sove Tid har blitt deaktivert"
 
 #
 msgid "The timer file (timers.xml) is corrupt and could not be loaded."
@@ -10518,7 +10492,7 @@ msgstr "Tidsopptak valg"
 
 #
 msgid "Timer status:"
-msgstr "Innsovings status:"
+msgstr "Sove tid status:"
 
 #
 msgid "Timer type"
@@ -10528,14 +10502,14 @@ msgid ""
 "Timerliste, verwaiste Film-Dateien und Einstellungs-Sicherungen automatisch "
 "bereinigen."
 msgstr ""
-"Tidsopptak liste, automatisk rydde opp opptaksfiler og oppsetts "
+"Tidsopptak liste, automatisk rydde opp filmfiler og oppsetts "
 "sikkerhetskopier."
 
 msgid ""
 "Timerliste, verwaiste Film-Dateien und Einstellungs-Sicherungen nach "
 "einstellbaren Regeln automatisch bereinigen."
 msgstr ""
-"Tidsopptaks liste, automatisk rydde opp opptaksfiler og oppsetts "
+"Tidsopptak liste, automatisk rydde opp filmfiler og oppsetts "
 "sikkerhetskopier."
 
 #
@@ -10688,7 +10662,7 @@ msgstr "Tuner "
 
 #
 msgid "Tuner Slot"
-msgstr "Tuner Plass"
+msgstr "Tuner Slot"
 
 #
 msgid "Tuner configuration"
@@ -11194,7 +11168,7 @@ msgstr "Vis teletext..."
 
 #
 msgid "View, edit or delete mountpoints on your STB."
-msgstr "Se, endre eller slett tilkobling på din VU+."
+msgstr "Se, endre eller slett mountpunkt på din VU+."
 
 #
 msgid "View, edit or delete usernames and passwords for your network."
@@ -11487,7 +11461,7 @@ msgstr "Hvor vil du lagre sikkerhetskopi av dine innstillinger?"
 
 #
 msgid "Where to save temporary timeshift recordings?"
-msgstr "Hvor lagre midlertidig timeshift opptak?"
+msgstr "Hvor lagre midlertidig timeshift innspilling?"
 
 #
 msgid "Wireless LAN"
@@ -11648,7 +11622,7 @@ msgstr "Veiviser"
 
 #
 msgid "Write error while recording. Disk full?\n"
-msgstr "Skrivefeil under opptak. Er disken full?\n"
+msgstr "Skrivefeil under innspilling. Er disken full?\n"
 
 #
 msgid "Write failed!"
@@ -11675,7 +11649,7 @@ msgstr "Ja, alltid"
 
 #
 msgid "Yes, and delete this movie"
-msgstr "Ja, og slett opptak"
+msgstr "Ja, og slett film"
 
 #
 msgid "Yes, and don't ask again"
@@ -11718,7 +11692,7 @@ msgstr "Ja, legg tilbake innstillingene nå"
 
 #
 msgid "Yes, returning to movie list"
-msgstr "Ja, og returner til opptakslisten"
+msgstr "Ja, og returner til filmlisten"
 
 #
 msgid "Yes, view the tutorial"
@@ -11856,8 +11830,8 @@ msgid ""
 "You have chosen to restore your settings. Enigma2 will restart after "
 "restore. Please press OK to start the restore now."
 msgstr ""
-"Du har valgt å gjenopprette dine innstillinger. Brukergrensesnittet "
-"omstartes etter gjenoppretting. Trykk OK for å gjenopprette nå."
+"Du har valgt å gjenopprette dine innstillinger. Enigma2 blir omstartet etter "
+"gjenoppretting. Trykk OK for å gjenopprette nå."
 
 #
 #, python-format
@@ -11893,7 +11867,7 @@ msgid ""
 "\n"
 "You can go back a step by pressing EXIT on your remote."
 msgstr ""
-"Du har lagt til et nytt Autotidsopptak. Vil du legge den til listen?\n"
+"Du har lagt til en ny Autotidsopptak. Vil du legge den til listen?\n"
 "\n"
 "Du kan gå tilbake ett steg ved å trykke EXIT."
 
@@ -12008,15 +11982,15 @@ msgstr "Ditt nettverk virker ikke. Vennligst prøv igjen."
 
 #
 msgid "Your network mount has been activated."
-msgstr "Din nettverks tilkobling er aktivert."
+msgstr "Ditt nettverks mount er aktivert."
 
 #
 msgid "Your network mount has been removed."
-msgstr "Din nettverks tilkobling er fjernet."
+msgstr "Ditt nettverks mount er fjernet."
 
 #
 msgid "Your network mount has been updated."
-msgstr "Din nettverks tilkobling er oppdatert."
+msgstr "Ditt nettverks mount er oppdatert."
 
 #
 msgid ""
@@ -12170,19 +12144,19 @@ msgstr "Legg til markør..."
 
 #
 msgid "add recording (enter recording duration)"
-msgstr "start opptak (skriv inn opptakets lengde)"
+msgstr "legg til innspilling (skriv inn innspillingens lengde)"
 
 #
 msgid "add recording (enter recording endtime)"
-msgstr "start opptak (skriv inn opptakets sluttid)"
+msgstr "legg til innspilling (skriv inn innspillingens sluttid)"
 
 #
 msgid "add recording (indefinitely)"
-msgstr "start opptak (uendelig)"
+msgstr "legg til innspilling (uendelig)"
 
 #
 msgid "add recording (stop after current event)"
-msgstr "start opptak (stopp etter nåværende)"
+msgstr "legg til innspilling (stop etter nåværende)"
 
 #
 msgid "add service to bouquet"
@@ -12307,11 +12281,11 @@ msgstr "case-sensitive søk"
 
 #
 msgid "change recording (duration)"
-msgstr "endre opptak (lengde)"
+msgstr "endre innspilling (lengde)"
 
 #
 msgid "change recording (endtime)"
-msgstr "endre opptak (sluttid)"
+msgstr "endre innspilling (sluttid)"
 
 #
 msgid "chapters"
@@ -12371,7 +12345,7 @@ msgid "creates virtual series folders from episodes"
 msgstr "lager virtuelle seriemapper fra episoder"
 
 msgid "creates virtual series folders from sets of recorded episodes"
-msgstr "lager virtuelle seriemapper fra sett med innspilte episoder"
+msgstr "lager virtuelle seriemapper fra sett med innspillte episoder"
 
 #, python-format
 msgid "currently installed image: %s"
@@ -12520,7 +12494,7 @@ msgstr "avslutt mediaspiller"
 
 #
 msgid "exit movielist"
-msgstr "avslutt opptaksliste"
+msgstr "avslutt filmliste"
 
 #
 msgid "exit nameserver configuration"
@@ -12660,7 +12634,7 @@ msgstr "hopp til forrige markerte posisjon"
 
 #
 msgid "leave movie player..."
-msgstr "avslutte opptaks avspiller..."
+msgstr "avslutte film avspiller..."
 
 #
 msgid "left"
@@ -12755,7 +12729,7 @@ msgstr "flytt opp til forrige oppføring"
 
 #
 msgid "movie list"
-msgstr "opptaksliste"
+msgstr "filmliste"
 
 #
 msgid "multinorm"
@@ -12783,7 +12757,7 @@ msgstr "ingen CAId valgt"
 
 #
 msgid "no CI slots found"
-msgstr "ingen CI plasser funnet"
+msgstr "ingen CI slots funnet"
 
 #
 msgid "no HDD found"
@@ -12918,7 +12892,7 @@ msgstr "spill inn"
 
 #
 msgid "recording..."
-msgstr "tar opp..."
+msgstr "spiller inn..."
 
 #
 msgid "red"
@@ -13029,7 +13003,7 @@ msgid "seconds"
 msgstr "sekunder"
 
 msgid "see service-epg (and PiP) from channels in an infobar"
-msgstr "se kanal-epg (og PiP) fra kanaler i infovindu"
+msgstr "se kanal-epg (og PiP) fra kanaler i infobar"
 
 #
 msgid "select"
@@ -13057,13 +13031,13 @@ msgstr "velg film"
 
 #
 msgid "select the movie path"
-msgstr "velg sted  for lagring av opptak"
+msgstr "velg bane  for lagring av film"
 
 msgid "service PIN"
 msgstr "kanal PIN"
 
 msgid "set enigma2 to standby-mode after startup"
-msgstr "sett brukergrensesnitt til dvalemodus etter oppstart"
+msgstr "sett enigma2 til dvalemodus etter oppstart"
 
 #
 msgid "sets the Audio Delay (LipSync)"
@@ -13246,7 +13220,7 @@ msgstr "tekstfarge"
 
 #
 msgid "this recording"
-msgstr "dette opptak "
+msgstr "denne innspillingen"
 
 #
 msgid "this service is protected by a parental control pin"
@@ -13412,7 +13386,7 @@ msgid ""
 "green button to format your device."
 msgstr ""
 "Velkommen til MeoBoot installasjon.\n"
-"Sorry, ser ut som det ikke er noen Linux formatterte enheter tilkoblet til "
+"Sorry, ser ut som det ikke er noen Linux formatterte enheter montert til "
 "din  Vu+. For å installere MeoBoot trenger du en Linux formattert part1 "
 "enhet. Trykk på grønn knapp for å formattere."
 
@@ -13453,7 +13427,7 @@ msgid "Boot Image"
 msgstr "Boot Image"
 
 msgid "Delete Image"
-msgstr "Slett Image"
+msgstr "Slett Bilde"
 
 msgid "Current Running Image: "
 msgstr "Kjørende Image: "
@@ -13565,7 +13539,7 @@ msgid "Your Vu+ will freeze during the installation process."
 msgstr "Din Vu+kommer til å \"fryse\" under installasjons prosessen."
 
 msgid "Please: DO NOT reboot your Vu+ and turn off the power.\n"
-msgstr "Vennligst: IKKE slå av din VU+ og slå av strømmen.\n"
+msgstr "Vennligst: IKKE start din Vu+ om igjen og skru av strømmen.\n"
 
 msgid "The new image will be installed and auto booted in few minutes."
 msgstr "Det nye Image vil bli installert og autostartet om få minutter."
@@ -14309,7 +14283,7 @@ msgid "FILE NOT EXIST : /proc/stb/fp/remote_code"
 msgstr "FIL FINNES IKKE : /proc/stb/fp/remote_code"
 
 msgid "GUI restart now, press 'OK' button."
-msgstr "Brukergrensesnitt omstart nå, trykk 'OK'."
+msgstr "Enigma2 omstart nå, trykk 'OK'."
 
 msgid "Keep"
 msgstr "Behold"
@@ -14607,7 +14581,7 @@ msgid "Execute"
 msgstr "Utfør"
 
 msgid "Teleportation"
-msgstr "Teleportering"
+msgstr "Teleportation"
 
 msgid "Black Hole apps"
 msgstr "Black Hole Applikasjoner "
@@ -14619,16 +14593,16 @@ msgid "Backup Menu"
 msgstr "Sikkerhetskopi Meny"
 
 msgid "Black Hole Shutdown"
-msgstr "Avslutt Black Hole"
+msgstr "Black Hole Slå av"
 
 msgid "Restart Gui"
-msgstr "Omstart Brukergrensesnitt"
+msgstr "Omstart Enigma2"
 
 msgid "Hard Reset"
 msgstr "Hard Omstart"
 
 msgid "Set Sleeptimer"
-msgstr "Innsoving"
+msgstr "Sette Sove Tid"
 
 msgid "Black Hole Weather"
 msgstr "Black Hole Værmelding"
@@ -14692,7 +14666,7 @@ msgid ""
 "Warning, all of the data stored in your Parallel Universes will be lost.\n"
 "Are you sure you want to start the Bing Bang?"
 msgstr ""
-"Big Bang vil kollapse alle Parallelle Universer inn til originalt Black Hole "
+"Big Bang vil kollape alle Parallelle Universer inn til originalt Black Hole "
 "matrix.\n"
 "Dette vil si at Parallelle Universer blir ødelagt og gjort til Black Hole "
 "tidsrom.\n"
@@ -14782,7 +14756,7 @@ msgid ""
 "Universe before you start the Big Bang."
 msgstr ""
 "Av denne grunn må du redde deg selv med å hoppe tilbake til  Black Hole "
-"Universe før du starter Big Bang."
+"Universe før du startet Big Bang."
 
 msgid ""
 "Warning, all of the data stored in your Parallel Universes will be lost.\n"
@@ -14875,10 +14849,10 @@ msgid "Tuner Server"
 msgstr "Tuner Server"
 
 msgid "Network Browse & Mountpoints"
-msgstr "Nettverk & Tilkobling"
+msgstr "Nettverk & Mountpunkt"
 
 msgid "Disable Light Infobar on Zap"
-msgstr "Tilbakestille Lett infovindu ved Zap"
+msgstr "Tilbakestille Lett Infobar ved Zap"
 
 msgid "Enable Panic button 0 (zap to 1 & clear zap history)"
 msgstr "Aktiver Panikk knapp 0 (zap til 1 & slett zap minne)"
@@ -14890,13 +14864,13 @@ msgid "Hide CI messages"
 msgstr "Skjule CI beskjeder"
 
 msgid "Hide Infobar Timeout in sec.:"
-msgstr "Skjule Infovindu Tidsavbrudd i sek:"
+msgstr "Skjule Infobar Timeout i sek:"
 
 msgid "Enable Panic button 0"
 msgstr "Aktiver Panikk knapp  0"
 
 msgid "Hide Infobar Timeout in sec."
-msgstr "Skjule Infovindu Tidsavbrudd i sek:"
+msgstr "Skjule Infobar Timeout i sek:"
 
 msgid "reboot"
 msgstr "reboot"
@@ -14924,7 +14898,7 @@ msgstr ""
 "For å taste egen kommando må du sette inn forhåndsdefinert kommando: None"
 
 msgid "Mountpoints"
-msgstr "Tilkobling"
+msgstr "Mountpunkt"
 
 msgid "Wait please while scanning your devices..."
 msgstr "Søker, vennligst vent..."
@@ -14933,7 +14907,7 @@ msgid "Size: "
 msgstr "Størrelse: "
 
 msgid "   Mount: "
-msgstr "   Tilkobling: "
+msgstr "   Mount: "
 
 msgid ""
 "\n"
@@ -14967,8 +14941,8 @@ msgid ""
 "If your usb drive is connected and mounted you have to poweroff your box, "
 "remove the usb device and reboot.\n"
 msgstr ""
-"Hvis din usb harddisk er koblet til og tilkoblet må du slå av din VU+, "
-"fjerne usb enheten og starte om igjen.\n"
+"Hvis din usb harddisk er koblet til og montert må du slå av din VU+, fjerne "
+"usb enheten og starte om igjen.\n"
 
 msgid ""
 "Push red button to continue when you are ready and your usb is "
@@ -15120,14 +15094,14 @@ msgid ""
 "Enigma2 will be now restarted for the changes to take effect.\n"
 "Press ok to continue"
 msgstr ""
-"Brukergrensesnitt startes om igjen for at endringer skal virke.\n"
-"Trykk OK for å fortsette."
+"Enigma2 startes om igjen for at endringer skal virke.\n"
+"Trykk OK"
 
 msgid "Enable OpenTv Epg Loader"
 msgstr "Aktiver OpenTv Epg Loader"
 
 msgid "Enable EIT now/next in Infobar"
-msgstr "Aktiver EIT nå/neste i Infovindu"
+msgstr "Aktiver EIT nå/neste i Infobar"
 
 msgid "Enable EIT Epg"
 msgstr "Aktiver EIT Epg"
@@ -15238,10 +15212,10 @@ msgid "Command to execute after EPG Refresh"
 msgstr "Kommando å legge til etter EPG Refresh"
 
 msgid "Click Ok to restart gui and activate changes."
-msgstr "Trykk OK for å omstarte brukergrensesnitt og aktivere endringer."
+msgstr "Trykk OK for å omstarte Enigma2  for å aktivere endringer."
 
 msgid "Gui Restart."
-msgstr "Brukergrensesnitt Omstart."
+msgstr "Enigma2 Omstart."
 
 msgid "Server Name:"
 msgstr "Server navn:"
@@ -15297,7 +15271,7 @@ msgid "In %s universe"
 msgstr "I %s universe"
 
 msgid "Addons Download Manager"
-msgstr "Laste ned Tillegg"
+msgstr "Nedlastings Behandling for Tillegg"
 
 msgid "Online Feeds Settings update"
 msgstr "Feeds innstillings oppdatering"
@@ -15340,10 +15314,10 @@ msgstr ""
 "Du må laste opp en ipk pakke i /tmp katalogen for å installere Tillegg"
 
 msgid "Black Hole Addons Plugins"
-msgstr "Black Hole Tillegg"
+msgstr "Black Hole Tilleggs Moduler"
 
 msgid "Black Hole Feeds Plugins"
-msgstr "Black Hole Feeds"
+msgstr "Black Hole Feeds Moduler"
 
 msgid "Black Hole Image Skins"
 msgstr "Black Hole Image Skins"
@@ -15380,9 +15354,8 @@ msgid ""
 "Gui will be now restarted to complete package installation.\n"
 "Press ok to continue"
 msgstr ""
-"Brukergrensesnittet kommer til å starte om igjen for at endringer skal "
-"virke.\n"
-"Trykk ok for å fortsette."
+"Enigma2 kommer til å starte om igjen for at endringer skal virke.\n"
+"Trykk ok for å fortsette"
 
 msgid "Black Hole Preview: click ok to exit"
 msgstr "Black Hole forhåndsvisning: trykk ok for å gå tilbake"
@@ -15417,9 +15390,9 @@ msgid ""
 "effect.\n"
 "Press ok to continue"
 msgstr ""
-"Tillegg fjernet. Brukergrensesnittet kommer til å starte om igjen for at "
-"endringer skal virke.\n"
-"Trykk OK for å fortsette."
+"Tillegg fjernet. Enigma2 kommer til å starte om igjen for at endringer skal "
+"virke.\n"
+"Trykk OK for å fortsette"
 
 msgid ""
 "Black Hole Image Statistics:\n"
@@ -15715,7 +15688,7 @@ msgid ""
 "using nfs, cifs, UPnP or any other network mountpoint.\n"
 msgstr ""
 "Du kan få tilgang til tuner(e) på din boks fra klienter på internt Lan ved å "
-"bruke nfs, cifs, UPnP og andre nettverks tilkobling.\n"
+"bruke nfs, cifs, UPnP og andre nettverks mountpunkt.\n"
 
 msgid "The tuner of the server (this box) has to be avaliable."
 msgstr "Tuneren til serveren(denne boksen) må være ledig."
@@ -15777,7 +15750,7 @@ msgid ""
 "the client /media/hdd folder. Then you can access the tuners server channel "
 "list from the client Media player -> Harddisk -> tuner.\n"
 msgstr ""
-"1) For å koble til via Lan må du tilkoble /media/hdd mappen på boksen i "
+"1) For å koble til via Lan må du mounte /media/hdd mappen på boksen i "
 "klientens /media/hdd mappe. Da kan du få tilgang til tuner server "
 "kanallisten fra klientens Media spiller-> Harddisk -> tuner.\n"
 
@@ -15801,7 +15774,7 @@ msgid ""
 msgstr ""
 "NB om UPnP: Fordi UPnP krever mye minne, bør du kun bruke den hvis du "
 "trenger å få tilgang til boksen fra PS3 eller andre enheter som ikke kan "
-"tilkobles via Lan. OG, etter serveren er bygget råder vi deg til å slette "
+"mountes via Lan. OG, etter serveren er bygget råder vi deg til å slette "
 "bouquets katalogen som ikke egentlig trengs før du starter Mediatomb. Dette "
 "vil spare mye minne og ressurser."
 
@@ -15872,7 +15845,7 @@ msgid "Sys Info"
 msgstr "Sys Info"
 
 msgid "Extra Settings"
-msgstr "Ekstra Innstilling"
+msgstr "Ekstra innstillinger"
 
 msgid "CAMs Installed"
 msgstr "CAM`er Installert"
