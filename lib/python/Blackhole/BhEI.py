@@ -221,9 +221,16 @@ class Nab_ExtraInfobar(Screen):
 		in_gbox = 0
 		mycaid = "0000"
 		mycaid_check = False
-		if fileExists("/tmp/ecm.info"):
+
+		try:
 			f = open("/tmp/ecm.info",'r')
- 			for line in f.readlines():
+			lines = f.readlines()
+			f.close()
+		except:
+			lines = ""
+		
+		if lines:
+			for line in lines:
 				line = line.strip()
 				pos = line.find('CaID')
 				if pos > 1:
@@ -265,10 +272,7 @@ class Nab_ExtraInfobar(Screen):
 							self["button_spider"].show()
 						else:
 							self["button_fta"].show()
-						
-						nmsg += " decode: " + x1
-					
-					
+						nmsg += " decode: " + x1				
 					elif x[0] == "address":
 						netinfo += "Address:" + x1
 					elif x[0] == "from":
@@ -281,8 +285,7 @@ class Nab_ExtraInfobar(Screen):
 					elif x[0] == "hops":
 						netinfo += "   Hops:" + x1
 					elif x[0] == "ecm time":
-						netinfo += "   Ecm time:" + x1
- 			f.close()
+						netinfo += "   Ecm time:" + x1		
 			
 			if in_gbox == 1:
 				if fileExists("/tmp/share.info"):
