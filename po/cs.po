@@ -5,14 +5,134 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-09-06 15:15+0100\n"
-"Last-Translator: paolino <pliesko1@gmail.com>\n"
+"PO-Revision-Date: 2013-09-25 20:03+0100\n"
+"Last-Translator: Paolino <pliesko1@gmail.com>\n"
 "Language-Team: Black Hole <vuplus-community.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.5\n"
 "Language: cs\n"
+
+msgid "Mount Point"
+msgstr "Přípojný bod"
+
+msgid "Server"
+msgstr "Server"
+
+msgid "User ID"
+msgstr "ID uživatele"
+
+msgid "Enable mount automatically while start"
+msgstr "Povol připojení automaticky při startu"
+
+msgid "NetDrive Setup"
+msgstr "Nastavení NetDrive"
+
+msgid "Network Drive Setup"
+msgstr "Nastavení disku sítě"
+
+msgid "NetDrive Setup > Mount Point"
+msgstr "NetDrive nastavení > Přípojný bod"
+
+msgid "Device Browser"
+msgstr "Prohlížeč zařízení"
+
+msgid "Setting"
+msgstr "Nastavení"
+
+msgid "Reload Device"
+msgstr "Znovu načíst zařízení"
+
+msgid "DLNA Server"
+msgstr "DLNA Server"
+
+msgid "Black Hole UPnP Server Panel"
+msgstr "Black Hole panel serveru UPnP"
+
+msgid "Mini DLNA Runcher"
+msgstr ""
+
+msgid "DeviceList Refresh Interval"
+msgstr "Interval dotazování seznamu zařízení"
+
+msgid "Slideshow Interval"
+msgstr "Slideshow interval"
+
+msgid "Video Directory"
+msgstr "Složka videa"
+
+msgid "Music Directory"
+msgstr "Složka hudby"
+
+msgid "Picture Directory"
+msgstr "Složka obrázků"
+
+msgid "Enable Logging"
+msgstr "Povol logování"
+
+msgid "    - Log Level"
+msgstr "    - Úroveň Log"
+
+msgid "    - Log Directory"
+msgstr "    - Složka Log"
+
+msgid "Enable Autostart for DLNA Server"
+msgstr "Povol autostart pro DLNA Server"
+
+msgid "debug"
+msgstr "debug"
+
+msgid "warn"
+msgstr "upozorni"
+
+msgid "error"
+msgstr "chyba"
+
+msgid "Show Device"
+msgstr "Zobraz zařízení"
+
+msgid "Up"
+msgstr "Nahoru"
+
+msgid "Top"
+msgstr ""
+
+msgid "Empty Directory!!"
+msgstr "Prázdná složka!!"
+
+msgid "Can't play selected file. It is unknown file extension."
+msgstr "Nemůžu přehrát soubor. Neznámý typ souboru."
+
+msgid "Auto paginate on last entry:"
+msgstr "Auto ostránkování při posl. zadání:"
+
+msgid "Reset tv-screen after playback:"
+msgstr "Reset obrazovky po přehrání:"
+
+msgid "Youtube Username (reopen plugin on change):"
+msgstr "Youtube jméno (restart pluginu při změně):"
+
+msgid "Youtube Password (reopen plugin on change):"
+msgstr "Youtube heslo (restart pluginu při změně):"
+
+msgid "Enable Parental Control"
+msgstr "Povolit rodičovský zámek"
+
+msgid "Add service name to stream information"
+msgstr "Přidej jméno stanice do infa o streamu"
+
+msgid "DLNAStreamPlayer"
+msgstr "DLNA Stream přehrávač"
+
+msgid "Please wait, Loading image."
+msgstr "Prosím čekej, načítá se image."
+
+msgid "DLNA/uPnP Browser"
+msgstr "DLNA/uPnP prohlížeč"
+
+msgid "Select Directory"
+msgstr "Vyber adresář"
 
 msgid "ext4 - recommended for meoboot"
 msgstr "ext4 - doporučeno pro meoboot nebo HDD >BH2.0.5"
@@ -8401,7 +8521,7 @@ msgstr "Priorita"
 
 #
 msgid "Process"
-msgstr "Zpracuj"
+msgstr "Proces"
 
 #
 msgid "Properties of current title"

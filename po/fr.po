@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-07-07 09:37+0100\n"
+"PO-Revision-Date: 2013-08-10 11:57+0100\n"
 "Last-Translator: niglou\n"
 "Language-Team: french\n"
 "MIME-Version: 1.0\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.3\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SourceCharset: iso-8859-15\n"
 
 msgid "\tMount: "
@@ -2476,6 +2476,9 @@ msgstr "Centrer image sur la bordure inférieure"
 msgid "Center screen at the upper border"
 msgstr "Centrer image sur la bordure supérieure"
 
+msgid "Centered DVB subtitles"
+msgstr "Sous-titres DVB centrés"
+
 msgid "Cf in use: "
 msgstr "Cf utilisé: "
 
@@ -3115,7 +3118,7 @@ msgid "DUAL LAYER DVD"
 msgstr "DVD DOUBLE COUCHE"
 
 msgid "DVB subtitle black transparency"
-msgstr "Sous-titre noir transparent"
+msgstr "Transparence Sous-titre noir"
 
 msgid "DVB-S"
 msgstr "DVB-S"
@@ -6615,6 +6618,9 @@ msgstr ""
 "Pas de données sur le transpondeur!\n"
 "(Temps dépassé en lisant PAT)"
 
+msgid "No delay"
+msgstr "Aucun retard"
+
 msgid "No description available."
 msgstr "Description non disponible."
 
@@ -9953,6 +9959,9 @@ msgstr "Alignement sous-titres"
 msgid "Subtitle border width"
 msgstr "Largeur bordure sous-titres"
 
+msgid "Subtitle delay when timing is bad"
+msgstr "Retard Sous-titres quand synchro mauvaise"
+
 msgid "Subtitle delay when timing lacks"
 msgstr "Retard sous-titres quand temps manque"
 
@@ -12707,6 +12716,19 @@ msgstr ""
 "Veuillez confirmer si c'était intentionnel, sinon il sera retiré."
 
 msgid ""
+"Your Dreambox is now ready to use.\n"
+"\n"
+"Your internet connection is working now.\n"
+"\n"
+"Please press OK to continue."
+msgstr ""
+"Votre Vu+ est maintenant prêt à l'utilisation.\n"
+"\n"
+"Votre connection internet fonctionne maintenant.\n"
+"\n"
+"Veuillez presser OK pour continuer."
+
+msgid ""
 "Your STB is now ready to use.\n"
 "\n"
 "Your internet connection is working now.\n"
@@ -13333,6 +13355,9 @@ msgstr "espace disque libre"
 
 msgid "from: "
 msgstr "de: "
+
+msgid "full transparency"
+msgstr "Transparence Totale"
 
 msgid "go to deep standby"
 msgstr "mettre en veille profonde"

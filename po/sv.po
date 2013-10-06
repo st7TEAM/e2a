@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-08-16 23:36+0100\n"
+"PO-Revision-Date: 2013-09-26 09:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,126 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SourceCharset: utf-8\n"
+
+msgid "Mount Point"
+msgstr "Monteringspunkt"
+
+msgid "Enable Parental Control"
+msgstr "Aktivera Föräldrakontroll"
+
+msgid "Add service name to stream information"
+msgstr "Lägg till kanalnamn i streaminfo"
+
+msgid "DLNAStreamPlayer"
+msgstr "DLNA Streamspelare"
+
+msgid "Please wait, Loading image."
+msgstr "Vänligen vänta, laddar system."
+
+msgid "DLNA/uPnP Browser"
+msgstr "DLNA/uPnP bläddring"
+
+msgid "Select Directory"
+msgstr "Välj Mapp"
+
+msgid "Server"
+msgstr "Server"
+
+msgid "User ID"
+msgstr "Användar ID"
+
+msgid "Enable mount automatically while start"
+msgstr "Montera automatiskt vid uppstart"
+
+msgid "NetDrive Setup"
+msgstr "Nätmappning inst."
+
+msgid "Network Drive Setup"
+msgstr "Nätverksdisk inst."
+
+msgid "NetDrive Setup > Mount Point"
+msgstr "Nätmappning inst. > Monteringspunkt"
+
+msgid "Device Browser"
+msgstr "Lista enheter"
+
+msgid "Setting"
+msgstr "Inställning"
+
+msgid "Reload Device"
+msgstr "Ladda om Enhet"
+
+msgid "DLNA Server"
+msgstr "DLNA Server"
+
+msgid "Black Hole UPnP Server Panel"
+msgstr "Black Hole UPnP Serverpanel"
+
+msgid "Mini DLNA Runcher"
+msgstr "Mini DLNA Runcher"
+
+msgid "DeviceList Refresh Interval"
+msgstr "Uppdateringsintervall enhetslista"
+
+msgid "Slideshow Interval"
+msgstr "Intervall för bildspel"
+
+msgid "Video Directory"
+msgstr "Videomapp"
+
+msgid "Music Directory"
+msgstr "Musikmapp"
+
+msgid "Picture Directory"
+msgstr "Bildmapp"
+
+msgid "Enable Logging"
+msgstr "Aktivera loggning"
+
+msgid "    - Log Level"
+msgstr "    - Loggnivå"
+
+msgid "    - Log Directory"
+msgstr "    - Mapp för logg"
+
+msgid "Enable Autostart for DLNA Server"
+msgstr "Aktivera Autostart för DLNA Server"
+
+msgid "debug"
+msgstr "felsök"
+
+msgid "warn"
+msgstr "varna"
+
+msgid "error"
+msgstr "Fel"
+
+msgid "Show Device"
+msgstr "Visa enhet"
+
+msgid "Up"
+msgstr "Upp"
+
+msgid "Top"
+msgstr "Topp"
+
+msgid "Empty Directory!!"
+msgstr "Tom mapp!!"
+
+msgid "Can't play selected file. It is unknown file extension."
+msgstr "Kan inte spela vald fil. Det är en okänt filändelse."
+
+msgid "Auto paginate on last entry:"
+msgstr "Sidnumrera sista posten automatiskt:"
+
+msgid "Reset tv-screen after playback:"
+msgstr "Återställ TV-skärm efter uppspelning"
+
+msgid "Youtube Username (reopen plugin on change):"
+msgstr "Youtube användarnamn (öppna App igen vid ändring):"
+
+msgid "Youtube Password (reopen plugin on change):"
+msgstr "Youtube lösenord (öppna App igen vid ändring):"
 
 msgid "Restore Complete, Click OK to restart the box"
 msgstr "Återställning klar, tryck OK för att starta om"

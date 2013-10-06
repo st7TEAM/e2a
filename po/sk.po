@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-09-02 20:15+0100\n"
+"PO-Revision-Date: 2013-09-25 20:23+0100\n"
 "Last-Translator: Paolino <pliesko1@gmail.com>\n"
 "Language-Team: Black Hole\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,126 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 "Language: sk\n"
+
+msgid "Mount Point"
+msgstr "Prípojný bod"
+
+msgid "Server"
+msgstr "Server"
+
+msgid "User ID"
+msgstr "ID užívateľa"
+
+msgid "Enable mount automatically while start"
+msgstr "Povoľ pripojenie automaticky pri štarte"
+
+msgid "NetDrive Setup"
+msgstr "Nastavenie NetDrive"
+
+msgid "Network Drive Setup"
+msgstr "Nastavenie zariadenia siete"
+
+msgid "NetDrive Setup > Mount Point"
+msgstr "NetDrive nastavenie > Prípojný bod"
+
+msgid "Device Browser"
+msgstr "Prehliadač zariadení"
+
+msgid "Setting"
+msgstr "Nastavenie"
+
+msgid "Reload Device"
+msgstr "Znova nahraj zariadenie"
+
+msgid "DLNA Server"
+msgstr "DLNA Server"
+
+msgid "Black Hole UPnP Server Panel"
+msgstr "Black Hole UPnP panel serveru"
+
+msgid "Mini DLNA Runcher"
+msgstr ""
+
+msgid "DeviceList Refresh Interval"
+msgstr "Interval obnovenia zozn. zariadení"
+
+msgid "Slideshow Interval"
+msgstr "Interval slideshow"
+
+msgid "Video Directory"
+msgstr "Zložka videa"
+
+msgid "Music Directory"
+msgstr "Zložka hudby"
+
+msgid "Picture Directory"
+msgstr "Zložka obrázkov"
+
+msgid "Enable Logging"
+msgstr "Povoliť logovanie"
+
+msgid "    - Log Level"
+msgstr "    - Úroveň Log"
+
+msgid "    - Log Directory"
+msgstr "    - Zložka Log"
+
+msgid "Enable Autostart for DLNA Server"
+msgstr "Povoliť autoštart pre DLNA server"
+
+msgid "debug"
+msgstr "debug"
+
+msgid "warn"
+msgstr "upozorni"
+
+msgid "error"
+msgstr "chyba"
+
+msgid "Show Device"
+msgstr "Ukáž zariadenie"
+
+msgid "Up"
+msgstr "Hore"
+
+msgid "Top"
+msgstr "Top"
+
+msgid "Empty Directory!!"
+msgstr "Prázdna zložka !!"
+
+msgid "Can't play selected file. It is unknown file extension."
+msgstr "Nemôžem prehrať súbor. Neznámy typ súboru."
+
+msgid "Auto paginate on last entry:"
+msgstr "Autostránkovanie pri poslednom zadaní:"
+
+msgid "Reset tv-screen after playback:"
+msgstr "Zresetuj obrazovku po prehraní:"
+
+msgid "Youtube Username (reopen plugin on change):"
+msgstr "Youtube meno (reštart pluginu pri zmene):"
+
+msgid "Youtube Password (reopen plugin on change):"
+msgstr "Youtube heslo (reštart pluginu pri zmene):"
+
+msgid "Enable Parental Control"
+msgstr "Povoliť rodičovskú kontrolu"
+
+msgid "Add service name to stream information"
+msgstr "Pridaj meno stanice do informácie streamu"
+
+msgid "DLNAStreamPlayer"
+msgstr "Prehrávač DLNA Stream"
+
+msgid "Please wait, Loading image."
+msgstr "Počkaj prosím, nahrávam image."
+
+msgid "DLNA/uPnP Browser"
+msgstr "DLNA/uPnP prehliadač"
+
+msgid "Select Directory"
+msgstr "Zvoľ zložku"
 
 msgid "ext4 - recommended for meoboot"
 msgstr "ext4 - doporučené pre meoboot a HDD >BH2.0.5"
@@ -5513,7 +5633,7 @@ msgid "First generate your skin-style with the Ai.HD-Control plugin."
 msgstr "Najprv vytvor štýl skinu ovládacím pluginom Ai.HD."
 
 msgid "Flash"
-msgstr "Flashnúť"
+msgstr "Flash"
 
 msgid "Flashing failed"
 msgstr "Flashnutie zlyhalo"
