@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-08-31 11:14+0100\n"
-"Last-Translator: SuperGlud <sgl@si-data.no>\n"
-"Language-Team: jazzydane <dreambox@ingmar.dk>\n"
+"PO-Revision-Date: 2013-10-26 16:52+0100\n"
+"Last-Translator: SuperGlud\n"
+"Language-Team: None\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -130,7 +130,7 @@ msgid " updates available."
 msgstr " opdateringer tilgængelig."
 
 msgid " wireless networks found!"
-msgstr " trådløst neværk fundet!"
+msgstr " trådløst netværk fundet!"
 
 msgid "#000000"
 msgstr "#000000"
@@ -163,7 +163,7 @@ msgid "#ffffffff"
 msgstr "#ffffffff"
 
 msgid "%H:%M"
-msgstr "%T:%M"
+msgstr "%H:%M"
 
 msgid "%d jobs are running in the background!"
 msgstr "%d jobs kører i baggrunden!"
@@ -221,7 +221,7 @@ msgid "1.2"
 msgstr "1.2"
 
 msgid "12V output"
-msgstr "12V udgang"
+msgstr "12V output"
 
 msgid "13 V"
 msgstr "13 V"
@@ -230,16 +230,16 @@ msgid "16:10"
 msgstr "16:10"
 
 msgid "16:10 Letterbox"
-msgstr "16:10 letterbox"
+msgstr "16:10 Letterbox"
 
 msgid "16:10 PanScan"
-msgstr "16:10 panscan"
+msgstr "16:10 PanScan"
 
 msgid "16:9"
 msgstr "16:9"
 
 msgid "16:9 Letterbox"
-msgstr "16:9 letterbox"
+msgstr "16:9 Letterbox"
 
 msgid "16:9 always"
 msgstr "16:9 altid"
@@ -263,10 +263,10 @@ msgid "4:3"
 msgstr "4:3"
 
 msgid "4:3 Letterbox"
-msgstr "4:3 letterbox"
+msgstr "4:3 Letterbox"
 
 msgid "4:3 PanScan"
-msgstr "4:3 panscan"
+msgstr "4:3 PanScan"
 
 msgid "5"
 msgstr "5"
@@ -301,6 +301,9 @@ msgstr "<Seneste timer placering>"
 msgid "<unknown>"
 msgstr "<ukendt>"
 
+msgid "?"
+msgstr "?"
+
 msgid "??"
 msgstr "??"
 
@@ -329,7 +332,7 @@ msgstr ""
 "din STB. Nedluk nu?"
 
 msgid "A graphical EPG for all services of an specific bouquet"
-msgstr "Grafisk EPG for alle kanaler i en specifik buket"
+msgstr "En grafisk EPG for alle kanaler i en specifik kanalliste"
 
 msgid ""
 "A mount entry with this name already exists!\n"
@@ -357,7 +360,7 @@ msgid ""
 "configure the positioner."
 msgstr ""
 "En optagelse er igang. Stop, venligst denne optagelse før konfigurering af "
-"Motoren."
+"motoren."
 
 msgid ""
 "A recording is currently running. Please stop the recording before trying to "
@@ -366,7 +369,7 @@ msgstr ""
 "En optagelse er igang. Stop, venligst denne optagelse før start af Satfinder."
 
 msgid "A required tool (%s) was not found."
-msgstr "Et nødvendigt værktøj (%s) ikke fundet."
+msgstr "Et nødvendigt værktøj (%s) blev ikke fundet."
 
 msgid "A search for available updates is currently in progress."
 msgstr "Søgning efter tilgængelige opdateringer er aktuelt i gang."
@@ -395,13 +398,13 @@ msgstr ""
 "din STB. Nedluk nu?"
 
 msgid "A small overview of the available icon states and actions."
-msgstr "En lille oversigt over mulige ikon tilstande og hndlinger."
+msgstr "En lille oversigt over mulige ikon tilstande og handlinger."
 
 msgid ""
 "A timer failed to record!\n"
 "Disable TV and try again?\n"
 msgstr ""
-"Timeroptagelse slået fejl.\n"
+"Timeroptagelse mislykkedes.\n"
 "Skift kanal og prøv igen?\n"
 
 msgid "A/V Settings"
@@ -414,10 +417,10 @@ msgid "AB"
 msgstr "AB"
 
 msgid "AC3 default"
-msgstr "AC3 Standard"
+msgstr "AC3 som standard"
 
 msgid "AC3 downmix"
-msgstr "AC3 Nedmix"
+msgstr "AC3 nedmix"
 
 msgid "Abort"
 msgstr "Afbryd"
@@ -435,10 +438,10 @@ msgid "Accesspoint:"
 msgstr "Accesspoint:"
 
 msgid "Action on long powerbutton press"
-msgstr "Aktion ved langt powerknap tryk"
+msgstr "Handling ved langvarigt tryk på tænd/sluk knappen"
 
 msgid "Action on short powerbutton press"
-msgstr "Handling ved kortvarigt tryk på tændknappen"
+msgstr "Handling ved kortvarigt tryk på tænd/sluk knappen"
 
 msgid "Action:"
 msgstr "Handling:"
@@ -447,7 +450,7 @@ msgid "Activate Picture in Picture"
 msgstr "Aktiver Billed i Billed"
 
 msgid "Activate network settings"
-msgstr "Aktiver netværks indstilling"
+msgstr "Aktiver netværksindstilling"
 
 msgid "Active"
 msgstr "Aktiv"
@@ -469,7 +472,7 @@ msgid "Add Bookmark"
 msgstr "Tilføj bogmærke"
 
 msgid "Add WLAN configuration?"
-msgstr "Tilføj WLAN opsætning?"
+msgstr "Tilføj WLAN konfiguration?"
 
 msgid "Add a mark"
 msgstr "Tilføj en markør"
@@ -481,7 +484,7 @@ msgid "Add a new title"
 msgstr "Tilføj en ny titel"
 
 msgid "Add network configuration?"
-msgstr "tilføj netværksopsætning?"
+msgstr "tilføj netværkskonfiguration?"
 
 msgid "Add new AutoTimer"
 msgstr "Tilføj ny automatisk timer"
@@ -499,7 +502,7 @@ msgid "Add title"
 msgstr "Tilføj titel"
 
 msgid "Add to bouquet"
-msgstr "Tilføj til pakke..."
+msgstr "Tilføj til kanalliste"
 
 msgid "Add to favourites"
 msgstr "Tilføj til favoritter"
@@ -508,7 +511,7 @@ msgid "Add zap timer instead of record timer?"
 msgstr "Tilføj zap timer i stedet for optagelsestimer?"
 
 msgid "Added: "
-msgstr "Tilføjet:"
+msgstr "Tilføjet: "
 
 msgid ""
 "Adds enigma2 settings and dreambox model informations like SN, rev... if "
@@ -518,10 +521,10 @@ msgstr ""
 "hvis aktiveret"
 
 msgid "Adds network configuration if enabled."
-msgstr "Tilføjer netværksopsætning hvis aktiveret."
+msgstr "Tilføjer netværkskonfiguration hvis aktiveret."
 
 msgid "Adds wlan configuration if enabled."
-msgstr "Tilføjer wlan opsætning hvis aktiveret."
+msgstr "Tilføjer wlan konfiguration hvis aktiveret."
 
 msgid ""
 "Adjust the color settings so that all the color shades are distinguishable, "
@@ -531,7 +534,7 @@ msgid ""
 msgstr ""
 "Juster alle farver, så alle farvebjælker kan næsten tydes, men optræder så "
 "gennemtrængende som muligt. Er du tilfreds med resultatet, tryk OK for at "
-"lukke Video-Finjustering, eller brug nummer knapper, for at vælge andre "
+"lukke Video-finjusteringen, eller brug nummer knapper, for at vælge andre "
 "testbilleder."
 
 msgid "Advanced Options"
@@ -547,7 +550,7 @@ msgid "Advanced Video Enhancement Setup"
 msgstr "Avanceret opsætning af videoforbedring"
 
 msgid "Advanced Video Setup"
-msgstr "Avanceret video indstilling"
+msgstr "Avanceret videoindstilling"
 
 msgid "Advanced restore"
 msgstr "Avanceret gendannelse"
@@ -593,10 +596,10 @@ msgid "Always ask before sending"
 msgstr "Spørg altid inden afsendelse"
 
 msgid "An empty filename is illegal."
-msgstr "Et tomt filnavn er ugyldigt."
+msgstr "Et tomt filnavn er ikke tilladt."
 
 msgid "An error occured."
-msgstr "Der opstod en fejl"
+msgstr "Der opstod en fejl."
 
 msgid "An unknown error occured!"
 msgstr "Der opstod en ukendt fejl!"
@@ -611,7 +614,7 @@ msgid ""
 "Are you sure you want to activate this network configuration?\n"
 "\n"
 msgstr ""
-"Er du sikker på, at du vil aktivere denne netværks opsætning?\n"
+"Er du sikker på, at du vil aktivere denne netværkskonfiguration?\n"
 "\n"
 
 msgid ""
@@ -642,7 +645,7 @@ msgid ""
 "Are you sure you want to restore your Enigma2 backup?\n"
 "Enigma2 will restart after the restore"
 msgstr ""
-"Er du sikker på, at du vil gendanne dit Enigma2 backup?\n"
+"Er du sikker på, at du vil gendanne din Enigma2 backup?\n"
 "Enigma2 vil genstarte efter gendannelsen"
 
 msgid ""
@@ -695,10 +698,10 @@ msgid "Auto chapter split every ? minutes (0=never)"
 msgstr "Auto kapitel oprettelse hvert ? minut (0=aldrig) "
 
 msgid "Auto flesh"
-msgstr "Auto flash"
+msgstr "Auto flesh"
 
 msgid "Auto scart switching"
-msgstr "Auto Scart skift"
+msgstr "Auto scart skift"
 
 msgid "Automatic"
 msgstr "Automatisk"
@@ -785,13 +788,13 @@ msgid "Brightness"
 msgstr "Lysstyrke"
 
 msgid "Burn DVD"
-msgstr "Brænde DVD"
+msgstr "Brænd DVD"
 
 msgid "Burn existing image to DVD"
 msgstr "Brænd eksisterende image til DVD"
 
 msgid "Bus: "
-msgstr "Bus:"
+msgstr "Bus: "
 
 msgid ""
 "By pressing the OK Button on your remote control, the info bar is being "
@@ -805,7 +808,7 @@ msgid "C-Band"
 msgstr "C-Bånd"
 
 msgid "CI assignment"
-msgstr "CI  tildeling"
+msgstr "CI tildeling"
 
 msgid "CVBS"
 msgstr "CVBS"
@@ -829,7 +832,7 @@ msgid "Catalan"
 msgstr "Katalansk"
 
 msgid "Change bouquets in quickzap"
-msgstr "Skift pakke i hurtigzap"
+msgstr "Skift kanalliste i hurtigzap"
 
 msgid "Change pin code"
 msgstr "Skifte pin kode"
@@ -871,7 +874,7 @@ msgid "Choose Tuner"
 msgstr "Vælg Tuner"
 
 msgid "Choose a wireless network"
-msgstr "Vælg et trådæøst netværk"
+msgstr "Vælg et trådløst netværk"
 
 msgid "Choose backup files"
 msgstr "Vælg backup filer"
@@ -880,7 +883,7 @@ msgid "Choose backup location"
 msgstr "Vælg backup placering"
 
 msgid "Choose bouquet"
-msgstr "Vælg pakke"
+msgstr "Vælg kanalliste"
 
 msgid "Choose target folder"
 msgstr "Vælg folder du vil bruge"
@@ -940,7 +943,7 @@ msgid "Committed DiSEqC command"
 msgstr "Kommiteret DiSEqC kommando"
 
 msgid "Common Interface"
-msgstr "CA Modul"
+msgstr "Common interface"
 
 msgid "Common Interface Assignment"
 msgstr "Common interface tildeling"
@@ -976,7 +979,7 @@ msgid "Configure your internal LAN"
 msgstr "Konfigurer dit interne LAN"
 
 msgid "Configure your network again"
-msgstr "Opsæt dit netværk påny"
+msgstr "Opsæt dit netværk igen"
 
 msgid "Configure your wireless LAN again"
 msgstr "Konfigurer dit trådløse LAN igen"
@@ -1007,6 +1010,9 @@ msgstr "Indholdet kan ikke være på DVD'en!"
 
 msgid "Continue"
 msgstr "Fortsæt"
+
+msgid "Continue ->"
+msgstr "Fortsæt ->"
 
 msgid "Continue in background"
 msgstr "Fortsæt i baggrunden"
@@ -1046,19 +1052,19 @@ msgid ""
 "Send them to Dream Multimedia?"
 msgstr ""
 "Nedbrudslogninger fundet!\n"
-"Send dem til Dream Multimedia?"
+"Send dem til Vu+?"
 
 msgid "Create DVD-ISO"
 msgstr "Opret DVD-ISO"
 
 msgid "Create movie folder failed"
-msgstr "Oprettelse af Movie folder fejlede"
+msgstr "Oprettelse af Movie folder mislykkedes"
 
 msgid "Creating directory %s failed."
 msgstr "Oprettelse af mappen %s mislykkedes."
 
 msgid "Creating partition failed"
-msgstr "Oprettelse af partition fejlede"
+msgstr "Oprettelse af partition mislykkedes"
 
 msgid "Croatian"
 msgstr "Kroatisk"
@@ -1148,7 +1154,7 @@ msgid "Default movie location"
 msgstr "Standardplacering for film"
 
 msgid "Default services lists"
-msgstr "Standard kanallister "
+msgstr "Standard kanallister"
 
 msgid "Delay"
 msgstr "Forsinkelse"
@@ -1163,7 +1169,7 @@ msgid "Delete entry"
 msgstr "Slet indgang"
 
 msgid "Delete failed!"
-msgstr "Sletning fejlede!"
+msgstr "Sletning mislykkedes!"
 
 msgid ""
 "Delete no more configured satellite\n"
@@ -1267,6 +1273,13 @@ msgstr ""
 "Vil du virkelig kontrollere filsystemet?\n"
 "Dette kan tage lang tid!"
 
+msgid ""
+"Do you really want to delete %s\n"
+"%s?"
+msgstr ""
+"Vil du virkelig slette %s\n"
+"%s?"
+
 msgid "Do you really want to delete %s?"
 msgstr "Vil du virkelig slette %s?"
 
@@ -1275,7 +1288,7 @@ msgid ""
 "the plugin \"%s\"?"
 msgstr ""
 "Vil du virkelig downloade\n"
-"pluginet \"%s\"?"
+"dette plugin \"%s\"?"
 
 msgid "Do you really want to exit?"
 msgstr "Ønsker du virkelig at afslutte?"
@@ -1294,13 +1307,13 @@ msgid "Do you really want to remove your bookmark of %s?"
 msgstr "Vil du virkelig fjerne dit bogmærke af %s?"
 
 msgid "Do you want to burn this collection to DVD medium?"
-msgstr "Vil du brænde denne kollektion til DVD media?"
+msgstr "Vil du brænde denne kollektion til DVD medie?"
 
 msgid "Do you want to do a service scan?"
-msgstr "Vil du lave en kanal søgning?"
+msgstr "Vil du lave en kanalsøgning?"
 
 msgid "Do you want to do another manual service scan?"
-msgstr "Vil du lave en anden manuel søgning?"
+msgstr "Vil du lave en anden manuel kanalsøgning?"
 
 msgid "Do you want to enable the parental control feature on your dreambox?"
 msgstr "Vil du aktivere forældre kontrol muligheden på din STB?"
@@ -1362,7 +1375,7 @@ msgid "Done - Installed or upgraded %d packages"
 msgstr "Færdig - Installerede og opgraderede %d pakker"
 
 msgid "Done - Installed, upgraded or removed %d packages with %d errors"
-msgstr "Færdig - Installeret, opgraferet eller fjernet %d pakker med %d fejl"
+msgstr "Færdig - Installeret, opgraderet eller fjernet %d pakker med %d fejl"
 
 msgid "Download"
 msgstr "Download"
@@ -1384,6 +1397,9 @@ msgstr "Henter"
 
 msgid "Downloading plugin information. Please wait..."
 msgstr "Henter plugin informationer. Vent venligst..."
+
+msgid "Duration: "
+msgstr "Varighed: "
 
 msgid "Dutch"
 msgstr "Hollandsk"
@@ -1422,10 +1438,10 @@ msgid "Edit settings"
 msgstr "Ændre indstillinger"
 
 msgid "Edit the Nameserver configuration of your STB.\n"
-msgstr "Ændre Navneserver konfiguration på din STB.\n"
+msgstr "Ændre navneserver konfiguration på din STB.\n"
 
 msgid "Edit the network configuration of your STB.\n"
-msgstr "Ændre netværks konfiguration på din STB.\n"
+msgstr "Ændre netværkskonfiguration på din STB.\n"
 
 msgid "Edit title"
 msgstr "Rediger titel"
@@ -1443,7 +1459,7 @@ msgid "Enable /media"
 msgstr "Aktiver /medier"
 
 msgid "Enable 5V for active antenna"
-msgstr "Aktivere 5V for aktiv antenne"
+msgstr "Aktiver 5V for aktiv antenne"
 
 msgid "Enable Cleanup Wizard?"
 msgstr "Aktiver oprydningshjælper?"
@@ -1461,10 +1477,10 @@ msgid "Enable HTTPS Authentication"
 msgstr "Aktiver HTTPS autorisation"
 
 msgid "Enable Streaming Authentication"
-msgstr "Aktiver Streaming autorisation"
+msgstr "Aktiver streaming autorisation"
 
 msgid "Enable multiple bouquets"
-msgstr "Aktivere multi pakker"
+msgstr "Aktivere multikanallister"
 
 msgid "Enable parental control"
 msgstr "Aktivere forældre kontrol?"
@@ -1491,10 +1507,10 @@ msgid "Encryption:"
 msgstr "Kryptering:"
 
 msgid "End time"
-msgstr "Slut tid"
+msgstr "Sluttid"
 
 msgid "EndTime"
-msgstr "SlutTid"
+msgstr "Sluttid"
 
 msgid "English"
 msgstr "Engelsk"
@@ -1515,7 +1531,7 @@ msgstr ""
 "© 2006 - Stephan Reichholf"
 
 msgid "Enter main menu..."
-msgstr "Åbne hoved menu..."
+msgstr "Åbne hovedmenu..."
 
 msgid "Enter the service pin"
 msgstr "Skriv service koden"
@@ -1534,7 +1550,7 @@ msgid ""
 "Retry?"
 msgstr ""
 "Fejl: %s\n"
-"Prøve igen?"
+"Prøv igen?"
 
 msgid "Estonian"
 msgstr "Estisk"
@@ -1684,10 +1700,10 @@ msgid "Frisian"
 msgstr "Frisisk"
 
 msgid "Frontprocessor version: %d"
-msgstr "Frontprocessor Version: %d"
+msgstr "Frontprocessor version: %d"
 
 msgid "Fsck failed"
-msgstr "Fsck fejlede"
+msgstr "Fsck mislykkedes"
 
 msgid ""
 "GUI needs a restart to apply a new skin\n"
@@ -1717,6 +1733,9 @@ msgstr "Genre"
 msgid "German"
 msgstr "Tysk"
 
+msgid "Germany"
+msgstr "Tyskland"
+
 msgid "Getting plugin information. Please wait..."
 msgstr "Henter plugin information. Vent venligst..."
 
@@ -1729,17 +1748,44 @@ msgstr "Gå til position"
 msgid "Graphical Multi EPG"
 msgstr "Grafisk multi EPG"
 
+msgid "Great Britain"
+msgstr "Storbritannien"
+
 msgid "Greek"
 msgstr "Græsk"
 
 msgid "Green boost"
 msgstr "Grøn forstærkning"
 
+msgid "HDD: "
+msgstr "HDD: "
+
+msgid "HDMI CEC enabled:"
+msgstr "HDMI CEC aktiveret:"
+
+msgid "HDMI-CEC"
+msgstr "HDMI-CEC"
+
+msgid "HDMI-CEC Configuration"
+msgstr "HDMI-CEC Konfiguration"
+
+msgid "HEX"
+msgstr "HEX"
+
+msgid "HOLD"
+msgstr "HOLD"
+
 msgid "HTTP Port"
 msgstr "HTTP Port"
 
 msgid "HTTPS Port"
 msgstr "HTTPS Port"
+
+msgid "Hard Disk Settings"
+msgstr "Harddisk indstillinger"
+
+msgid "Hard Disk Setup"
+msgstr "Harddisk opsætning"
 
 msgid "Harddisk"
 msgstr "Harddisk..."
@@ -1748,10 +1794,19 @@ msgid "Harddisk setup"
 msgstr "Harddisk opsætning"
 
 msgid "Harddisk standby after"
-msgstr "Harddisk slumre efter:"
+msgstr "Harddisk slumre efter"
+
+msgid "Have fun !!"
+msgstr "God fornøjelse !!"
 
 msgid "High bitrate support"
 msgstr "Høj bitrate understøtning"
+
+msgid "Holland"
+msgstr "Holland"
+
+msgid "Hong Kong"
+msgstr "Hong Kong"
 
 msgid "Horizontal"
 msgstr "Horisontal"
@@ -1823,11 +1878,14 @@ msgstr "Øget spænding"
 msgid "Index"
 msgstr "Oversigt"
 
+msgid "India"
+msgstr "Indien"
+
 msgid "Info"
 msgstr "Info"
 
 msgid "InfoBar"
-msgstr "InfoBjælke"
+msgstr "Infobjælke"
 
 msgid "Infobar timeout"
 msgstr "Infobar tid"
@@ -1841,11 +1899,14 @@ msgstr "Initialiser"
 msgid "Initial location in new timers"
 msgstr "Oprindelig placering for nye timere"
 
+msgid "Initialization"
+msgstr "Formatering"
+
 msgid "Initialize"
 msgstr "Formatere"
 
 msgid "Initializing Harddisk..."
-msgstr "Initialiserer harddisk..."
+msgstr "Formaterer harddisk..."
 
 msgid "Input"
 msgstr "Indgang"
@@ -1870,6 +1931,9 @@ msgstr "Installer eller fjern er afsluttet."
 
 msgid "Install settings, skins, software..."
 msgstr "Installer opsætning, grafisk tema, software..."
+
+msgid "Installation Confirm"
+msgstr "Installation bekræftet"
 
 msgid "Installation finished."
 msgstr "Installation afsluttet"
@@ -1953,7 +2017,7 @@ msgid "LOF/H"
 msgstr "LOF/H"
 
 msgid "LOF/L"
-msgstr "LOF/V"
+msgstr "LOF/L"
 
 msgid "Language"
 msgstr "Sprog"
@@ -2039,6 +2103,9 @@ msgstr "Log resultaterne til harddisken"
 msgid "Long Keypress"
 msgstr "Langt tastetryk"
 
+msgid "Long filenames"
+msgstr "Lange filenavne"
+
 msgid "Longitude"
 msgstr "Længdegrad"
 
@@ -2064,13 +2131,19 @@ msgid "Make this mark just a mark"
 msgstr "Lave dette mærke til kun et mærke"
 
 msgid "Manage extensions"
-msgstr "Håndter udvidelser"
+msgstr "Administrer udvidelser"
+
+msgid "Manage local files"
+msgstr "Administrer lokale filer"
 
 msgid "Manage your receiver's software"
-msgstr "Styring af din modtagers software"
+msgstr "Administrer din modtagers software"
 
 msgid "Manual Scan"
 msgstr "Manuel søgning"
+
+msgid "Manual configuration"
+msgstr "Manuel konfiguration"
 
 msgid "Manual transponder"
 msgstr "Manuel transponder"
@@ -2108,14 +2181,20 @@ msgstr "Besked"
 msgid "Message..."
 msgstr "Besked..."
 
+msgid "Method"
+msgstr "Metode"
+
+msgid "Mexico"
+msgstr "Mexico"
+
 msgid "Mkfs failed"
-msgstr "Mkfs fejlede"
+msgstr "Mkfs mislykkedes"
 
 msgid "Mode"
 msgstr "Type"
 
 msgid "Model: "
-msgstr "Model:"
+msgstr "Model: "
 
 msgid "Modulation"
 msgstr "Modulation"
@@ -2136,7 +2215,7 @@ msgid "Mosquito noise reduction"
 msgstr "Mosquito støjreduktion"
 
 msgid "Mount failed"
-msgstr "Mount fejlede"
+msgstr "Mount mislykkedes"
 
 msgid "Move Picture in Picture"
 msgstr "Flytte Billed i Billed"
@@ -2163,7 +2242,10 @@ msgid "Multiple service support"
 msgstr "Multi kanal support"
 
 msgid "Multisat"
-msgstr "Mange satellitter"
+msgstr "Multisat"
+
+msgid "Music"
+msgstr "Musik"
 
 msgid "Mute"
 msgstr "Lyd fra"
@@ -2189,6 +2271,12 @@ msgstr "NTSC"
 msgid "Name"
 msgstr "Navn"
 
+msgid "Name :"
+msgstr "Navn :"
+
+msgid "Name: "
+msgstr "Navn: "
+
 msgid "Nameserver"
 msgstr "Navneserver"
 
@@ -2201,6 +2289,9 @@ msgstr "Navneserver opsætning"
 msgid "Nameserver settings"
 msgstr "Navneserver indstillinger"
 
+msgid "NetMask"
+msgstr "Netmaske"
+
 msgid "Netmask"
 msgstr "Netmaske"
 
@@ -2208,34 +2299,40 @@ msgid "Network"
 msgstr "Netværk"
 
 msgid "Network Configuration..."
-msgstr "Netværks opsætning..."
+msgstr "Netværkskonfiguration..."
 
 msgid "Network Mount"
-msgstr "Netværks indstilling"
+msgstr "Netværksindstilling"
 
 msgid "Network Setup"
-msgstr "Netværks opsætning"
+msgstr "Netværksopsætning"
 
 msgid "Network Wizard"
 msgstr "Netværk opsætningshjælper"
 
 msgid "Network scan"
-msgstr "Netværks søgning"
+msgstr "Netværkssøgning"
 
 msgid "Network setup"
-msgstr "Netværks opsætning"
+msgstr "Netværksopsætning"
 
 msgid "Network test"
-msgstr "Netværks test"
+msgstr "Netværkstest"
 
 msgid "Network test..."
-msgstr "Netværks test..."
+msgstr "Netværkstest..."
+
+msgid "Network test: "
+msgstr "Netværkstest: "
 
 msgid "Network:"
 msgstr "Netværk:"
 
 msgid "NetworkWizard"
 msgstr "Netværksassistenten"
+
+msgid "Never"
+msgstr "Aldrig"
 
 msgid "New"
 msgstr "Ny"
@@ -2252,13 +2349,16 @@ msgstr "Nej"
 msgid "No (supported) DVDROM found!"
 msgstr "Ingen (understøttet) DVDROM fundet!"
 
+msgid "No AP detected."
+msgstr "Intet AP fundet."
+
 msgid "No Connection"
 msgstr "Ingen forbindelse"
 
 msgid "No HDD found or HDD not initialized!"
 msgstr ""
-"Ingen HDD fundet eller\n"
-"HDD ikke initialiseret!."
+"Ingen Harddisk fundet eller\n"
+"Harddisk ikke initialiseret!."
 
 msgid "No backup needed"
 msgstr "Ingen backup nødvendig"
@@ -2292,8 +2392,14 @@ msgstr ""
 msgid "No free tuner!"
 msgstr "Ingen fri tuner!"
 
+msgid "No information..."
+msgstr "Ingen information..."
+
 msgid "No network connection available."
 msgstr "Ingen tilgængelig netværksforbindelse."
+
+msgid "No network devices found!"
+msgstr "Ingen netværksenhed fundet!"
 
 msgid "No networks found"
 msgstr "Ingen fundne netværk"
@@ -2382,8 +2488,14 @@ msgstr "Nej, gør intet."
 msgid "No, just start my dreambox"
 msgstr "Nej, bare start min STB"
 
+msgid "No, never"
+msgstr "Nej, aldrig"
+
 msgid "No, not now"
 msgstr "Nej, ikke nu"
+
+msgid "No, remove them."
+msgstr "Nej, fjern dem."
 
 msgid "No, scan later manually"
 msgstr "Nej, søg senere manuelt"
@@ -2402,6 +2514,12 @@ msgstr "Nord"
 
 msgid "Norwegian"
 msgstr "Norsk"
+
+msgid "Not after"
+msgstr "Ikke efter"
+
+msgid "Not before"
+msgstr "Ikke før"
 
 msgid ""
 "Not enough diskspace. Please free up some diskspace and try again. (%d MB "
@@ -2439,7 +2557,7 @@ msgid "OK, remove another extensions"
 msgstr "OK, fjern en anden udvidelse"
 
 msgid "OK, remove some extensions"
-msgstr "OK, fjern nog udvidelser"
+msgstr "OK, fjern nogle udvidelser"
 
 msgid "OSD Settings"
 msgstr "OSD indstilling"
@@ -2449,6 +2567,9 @@ msgstr "OSD synlighed"
 
 msgid "Off"
 msgstr "Fra"
+
+msgid "Ok"
+msgstr "Ok"
 
 msgid "On"
 msgstr "Til"
@@ -2504,17 +2625,29 @@ msgstr "Forældrekontrol opsætning"
 msgid "Parental control type"
 msgstr "Forældrekontrol type"
 
+msgid "Partition size"
+msgstr "Partitionsstørrelse"
+
+msgid "Partitioning..."
+msgstr "Partitionering..."
+
 msgid "Password"
 msgstr "Kodeord"
 
 msgid "Pause movie at end"
 msgstr "Pause ved filmslutning"
 
+msgid "Phone :"
+msgstr "Telefon :"
+
 msgid "Phone number"
 msgstr "Telefonnummer"
 
 msgid "PiPSetup"
 msgstr "PiP opsætning"
+
+msgid "Picons Packages"
+msgstr "Picons Pakker"
 
 msgid "PicturePlayer"
 msgstr "Billed afspiller"
@@ -2585,7 +2718,7 @@ msgid "Please do not change any values unless you know what you are doing!"
 msgstr "Venligst ikke ændre værdier hvis du ikke ved hvad du gør!"
 
 msgid "Please enter a name for the new bouquet"
-msgstr "Indtast venligst navn for ny pakke"
+msgstr "Indtast venligst navn for den nye kanalliste"
 
 msgid "Please enter a name for the new marker"
 msgstr "Indtast venligst navn for ny markør"
@@ -2697,7 +2830,7 @@ msgstr ""
 "knappen."
 
 msgid "Please wait for activation of your network configuration..."
-msgstr "Vent venligt på aktivering af din netværks opsætning..."
+msgstr "Vent venligt på aktivering af din netværkskonfiguration..."
 
 msgid "Please wait while removing selected package..."
 msgstr "Vent venligst mens de valgte pakker fjernes..."
@@ -2862,7 +2995,7 @@ msgid "RC Menu"
 msgstr "Fjernbetjeningsmenu"
 
 msgid "RF output"
-msgstr "RF Udgang"
+msgstr "RF udgang"
 
 msgid "RGB"
 msgstr "RGB"
@@ -2936,6 +3069,9 @@ msgstr "Fjern"
 msgid "Remove Bookmark"
 msgstr "Fjern bogmærke"
 
+msgid "Remove Confirmation"
+msgstr "Fjern bekræftelse"
+
 msgid "Remove Plugins"
 msgstr "Fjerne plugins"
 
@@ -2988,7 +3124,7 @@ msgid "Repeats"
 msgstr "Gentagelser"
 
 msgid "Reset"
-msgstr "Genstart"
+msgstr "Nulstil"
 
 msgid "Reset and renumerate title names"
 msgstr "Nulstiller og genoptæller titel navne"
@@ -2997,7 +3133,7 @@ msgid "Reset video enhancement settings to system defaults?"
 msgstr "Gendan indstilling af videoforbedring til systemets standard?"
 
 msgid "Reset video enhancement settings to your last configuration?"
-msgstr "Gendan indstilling af videoforbedring til din seneste opsætning?"
+msgstr "Gendan indstilling af videoforbedring til din seneste konfiguration?"
 
 msgid "Resolution"
 msgstr "Opløsning"
@@ -3015,13 +3151,16 @@ msgid "Restart network"
 msgstr "Genstart netværk"
 
 msgid "Restart test"
-msgstr "Genstart Test"
+msgstr "Genstart test"
 
 msgid "Restart your network connection and interfaces.\n"
 msgstr "Genstart din netværksopkobling og interfaces.\n"
 
 msgid "Restore"
-msgstr "Gendanne"
+msgstr "Gendan"
+
+msgid "Restore "
+msgstr "Gendan "
 
 msgid "Restore backups"
 msgstr "Gendan backup"
@@ -3060,7 +3199,16 @@ msgid "Rotor turning speed"
 msgstr "Motor dreje hastighed"
 
 msgid "Running"
-msgstr "Aktiveret"
+msgstr "Kører"
+
+msgid "Running !"
+msgstr "Kører !"
+
+msgid "Running in testmode"
+msgstr "Kører i testmode"
+
+msgid "Russia"
+msgstr "Rusland"
 
 msgid "Russian"
 msgstr "Russisk"
@@ -3149,6 +3297,9 @@ msgstr "Søge SR6875"
 msgid "Scan SR6900"
 msgstr "Søge SR6900"
 
+msgid "Scan Wireless AP"
+msgstr "Søge trådløse AP"
+
 msgid "Scan Wireless Networks"
 msgstr "Søge trådløse netværk"
 
@@ -3218,7 +3369,7 @@ msgid "Select"
 msgstr "Vælg"
 
 msgid "Select HDD"
-msgstr "Vælg Filsystem"
+msgstr "Vælg harddisk"
 
 msgid "Select Location"
 msgstr "Vælg placering"
@@ -3293,7 +3444,7 @@ msgid "Service has been added to the favourites."
 msgstr "Kanal er nu tilføjet favoritter."
 
 msgid "Service has been added to the selected bouquet."
-msgstr "Kanal er tilføjet den valgte pakke."
+msgstr "Kanal er tilføjet til den valgte kanalliste."
 
 msgid ""
 "Service invalid!\n"
@@ -3327,9 +3478,6 @@ msgstr "Kanaler"
 
 msgid "Set Voltage and 22KHz"
 msgstr "Sætter spænding og 22KHz"
-
-msgid "Set available internal memory threshold for the warning."
-msgstr "Trådløs netværkstilstand"
 
 msgid "Set interface as default Interface"
 msgstr "Sætter interfacet som standard interface"
@@ -3424,6 +3572,9 @@ msgstr "Enkelt transponder"
 msgid "Singlestep (GOP)"
 msgstr "Enkelt trin (GOP)"
 
+msgid "Size: "
+msgstr "Størrelse: "
+
 msgid "Skin"
 msgstr "Grafisk tema"
 
@@ -3471,6 +3622,9 @@ msgstr "Nogle plugins er ikke tilstede:\n"
 
 msgid "Sorry MediaScanner is not installed!"
 msgstr "Desværre, MediaScanner er ikke installeret!"
+
+msgid "Sorry Personal Backup not found."
+msgstr "Beklager, ingen personlig backup fundet."
 
 msgid "Sorry no backups found!"
 msgstr "Beklager, ingen backup fundet!"
@@ -3522,7 +3676,7 @@ msgid "Standby / Restart"
 msgstr "Standby / Genstart"
 
 msgid "Start Webinterface"
-msgstr "Start WebInterface"
+msgstr "Start Webinterface"
 
 msgid "Start from the beginning"
 msgstr "Start fra begyndelsen"
@@ -3569,6 +3723,9 @@ msgstr "Stop afprøvning af flade efter # fejlende transpondere"
 msgid "Stop testing plane after # successful transponders"
 msgstr "Stop afprøvning af flade efter # fungerende transpondere"
 
+msgid "Stopped"
+msgstr "Stoppet"
+
 msgid "Store position"
 msgstr "Gem position"
 
@@ -3594,7 +3751,10 @@ msgid "Sunday"
 msgstr "Søndag"
 
 msgid "Swap Services"
-msgstr "Bytte kanaler"
+msgstr "Byt kanaler"
+
+msgid "Sweden"
+msgstr "Sverige"
 
 msgid "Swedish"
 msgstr "Svensk"
@@ -3607,6 +3767,9 @@ msgstr "Skift til forrige underkanal"
 
 msgid "System"
 msgstr "System"
+
+msgid "System:"
+msgstr "System:"
 
 msgid "TRANSLATOR_INFO"
 msgstr ""
@@ -3651,14 +3814,17 @@ msgstr "Afprøv DiSEqC indstillinger"
 msgid "Test Type"
 msgstr "Afprøv type"
 
+msgid "Test again"
+msgstr "Test igen"
+
 msgid "Test mode"
 msgstr "Test type"
 
 msgid "Test the network configuration of your STB.\n"
-msgstr "Test netværks konfiguration på din STB.\n"
+msgstr "Test netværkskonfiguration på din STB.\n"
 
 msgid "Test-Messagebox?"
-msgstr "Test-Beskedbox?"
+msgstr "Test-beskedbox?"
 
 msgid ""
 "Thank you for using the wizard.\n"
@@ -3684,7 +3850,8 @@ msgstr ""
 "afspiller)? "
 
 msgid "The backup failed. Please choose a different backup location."
-msgstr "Backup'en fejlede. Venligst vælg et anden sted at placere backupen."
+msgstr ""
+"Backup'en mislykkedes. Venligst vælg et anden sted at placere backupen."
 
 msgid ""
 "The directory %s is not writable.\n"
@@ -3898,7 +4065,7 @@ msgid "Thu"
 msgstr "Tor"
 
 msgid "Thumbnails"
-msgstr "Miniaturbilleder"
+msgstr "Miniaturebilleder"
 
 msgid "Thursday"
 msgstr "Torsdag"
@@ -4019,19 +4186,19 @@ msgid "Tune"
 msgstr "Tune"
 
 msgid "Tune failed!"
-msgstr "Tuning fejlede!"
+msgstr "Tuning mislykkedes!"
 
 msgid "Tuner"
 msgstr "Tuner"
 
 msgid "Tuner "
-msgstr "Tuner"
+msgstr "Tuner "
 
 msgid "Tuner Slot"
 msgstr "Tuner slot"
 
 msgid "Tuner configuration"
-msgstr "Tuner opsætning"
+msgstr "Tuner konfiguration"
 
 msgid "Tuner status"
 msgstr "Tuner status"
@@ -4056,6 +4223,9 @@ msgstr "USB stick"
 
 msgid "USB stick wizard"
 msgstr "USB stick assistenten"
+
+msgid "USB: "
+msgstr "USB: "
 
 msgid "Ukrainian"
 msgstr "Ukrainsk"
@@ -4099,7 +4269,7 @@ msgid "Universal LNB"
 msgstr "Universal LNB"
 
 msgid "Unmount failed"
-msgstr "Unmount fejlede"
+msgstr "Unmount mislykkedes"
 
 msgid "Unsupported"
 msgstr "Ikke understøttet"
@@ -4129,7 +4299,7 @@ msgid "Use"
 msgstr "Brug"
 
 msgid "Use DHCP"
-msgstr "Brug (DHCP)"
+msgstr "Brug DHCP"
 
 msgid "Use Interface"
 msgstr "Benyt interface"
@@ -4181,6 +4351,9 @@ msgstr "Brugerdefineret"
 
 msgid "Username"
 msgstr "Brugernavn"
+
+msgid "Username:"
+msgstr "Brugernavn:"
 
 msgid "VCR scart"
 msgstr "Scart / Video"
@@ -4402,7 +4575,7 @@ msgid ""
 msgstr ""
 "Din STB ønsker dig Velkommen.\n"
 "\n"
-"Denne Start assistenten vil føre dig igennem grundopsætningen af din STB.\n"
+"Denne startassistent vil føre dig igennem grundopsætningen af din STB.\n"
 "Tryk venligst OK på fjernbetjeningen, for at gå til næste trin."
 
 msgid "Welcome..."
@@ -4426,7 +4599,7 @@ msgid ""
 "Really do a factory reset?"
 msgstr ""
 "Når du anvender fabrik gendannelse mister du ALLE dine indstillingsdata\n"
-"(Inklusiv buketter, kanallister, satellit data ...)\n"
+"(Inklusiv kanallister, kanaler, satellit data ...)\n"
 "Efter afsluttet fabriksgendannelse genstartes STB'en automatisk!\n"
 "\n"
 "Udfør fabriksgendannelse?"
@@ -4461,11 +4634,14 @@ msgstr "Ja"
 msgid "Yes to all"
 msgstr "Ja til alt"
 
+msgid "Yes, always"
+msgstr "Ja, altid"
+
 msgid "Yes, and delete this movie"
 msgstr "Ja, og slet denne film"
 
 msgid "Yes, and don't ask again"
-msgstr "Ja, og sprørg ikke igen"
+msgstr "Ja, og spørg ikke igen"
 
 msgid "Yes, backup my settings!"
 msgstr "Ja, start kopiering af mine indstillinger!"
@@ -4533,7 +4709,7 @@ msgid ""
 "You chose not to install anything. Please press OK finish the install wizard."
 msgstr ""
 "Du valgte ikke at installere noget. Venligst tryk OK for at afslutte "
-"installations assistenten."
+"installationsassistenten."
 
 msgid ""
 "You have chosen to backup your settings. Please press OK to start the backup "
@@ -4644,7 +4820,7 @@ msgid "Your name (optional):"
 msgstr "Dit navn (valgfrit):"
 
 msgid "Your network configuration has been activated."
-msgstr "Din netværks opsætning er blevet aktiveret."
+msgstr "Din netværkskonfiguration er blevet aktiveret."
 
 msgid ""
 "Your wireless LAN internet connection could not be started!\n"
@@ -4667,7 +4843,7 @@ msgid "[alternative edit]"
 msgstr "[Alternativ ændring]"
 
 msgid "[bouquet edit]"
-msgstr "[Pakke redigering]"
+msgstr "[Kanalliste redigering]"
 
 msgid "[favourite edit]"
 msgstr "[Favorit redigering]"
@@ -4686,7 +4862,7 @@ msgid "abort alternatives edit"
 msgstr "afbryd alternativ redigering"
 
 msgid "abort bouquet edit"
-msgstr "afbryd pakke redigering"
+msgstr "afbryd kanalliste redigering"
 
 msgid "abort favourites edit"
 msgstr "afbryd favorit redigering"
@@ -4695,10 +4871,10 @@ msgid "about to start"
 msgstr "er ved at starte"
 
 msgid "activate current configuration"
-msgstr "aktiver den aktuelle opsætning"
+msgstr "aktiver den aktuelle konfiguration"
 
 msgid "activate network adapter configuration"
-msgstr "aktiver opsætning for netværksadapter"
+msgstr "aktiver konfiguration for netværksadapter"
 
 msgid "add Provider"
 msgstr "tilføj udbyder"
@@ -4716,7 +4892,7 @@ msgid "add bookmark"
 msgstr "tilføj bogmærke"
 
 msgid "add bouquet"
-msgstr "tilføj pakke..."
+msgstr "tilføj kanalliste"
 
 msgid "add directory to playlist"
 msgstr "tilføj mappe til spilleliste"
@@ -4743,10 +4919,13 @@ msgid "add recording (stop after current event)"
 msgstr "tilføj optagelse (stop efter nuværende program)"
 
 msgid "add service to bouquet"
-msgstr "tilføj kanal til pakke"
+msgstr "tilføj kanal til kanalliste"
 
 msgid "add service to favourites"
 msgstr "tilføj kanal til favoritter"
+
+msgid "add services"
+msgstr "tilføj kanaler"
 
 msgid "add to parental protection"
 msgstr "tilføj til forældre beskyttelse"
@@ -4836,7 +5015,7 @@ msgid "continue"
 msgstr "fortsæt"
 
 msgid "copy to bouquets"
-msgstr "kopier til pakker"
+msgstr "kopier til kanalliste"
 
 msgid "could not be removed"
 msgstr "kunne ikke fjernes"
@@ -4867,6 +5046,9 @@ msgstr "slette gemt spilleliste"
 
 msgid "delete..."
 msgstr "slet..."
+
+msgid "description"
+msgstr "beskrivelse"
 
 msgid "disable"
 msgstr "deaktiver"
@@ -4899,25 +5081,25 @@ msgid "empty"
 msgstr "tom"
 
 msgid "enable"
-msgstr "tilslut"
+msgstr "aktiver"
 
 msgid "enable bouquet edit"
-msgstr "åbne pakkeredigering"
+msgstr "aktiver kanallisteredigering"
 
 msgid "enable favourite edit"
-msgstr "åbne favoritredigering"
+msgstr "aktiver favoritredigering"
 
 msgid "enable move mode"
-msgstr "åbne flyttetype"
+msgstr "aktiver flyttetype"
 
 msgid "enabled"
-msgstr "Tilsluttet"
+msgstr "aktiveret"
 
 msgid "end alternatives edit"
 msgstr "afslut alternativ redigering"
 
 msgid "end bouquet edit"
-msgstr "afslut pakkeredigering"
+msgstr "afslut kanallisteredigering"
 
 msgid "end cut here"
 msgstr "afslut klip her"
@@ -4938,10 +5120,10 @@ msgid "exit movielist"
 msgstr "luk filmliste"
 
 msgid "exit nameserver configuration"
-msgstr "luk navneserver opsætning"
+msgstr "luk navneserver konfiguration"
 
 msgid "exit network adapter configuration"
-msgstr "luk netværksadapter opsætning"
+msgstr "luk netværksadapter konfiguration"
 
 msgid "exit network interface list"
 msgstr "luk netværk interfaceoversigt"
@@ -4981,6 +5163,9 @@ msgstr "grøn"
 
 msgid "hear radio..."
 msgstr "høre radio..."
+
+msgid "height"
+msgstr "højde"
 
 msgid "help..."
 msgstr "hjælp..."
@@ -5138,11 +5323,23 @@ msgstr "ingen timeout"
 msgid "none"
 msgstr "ingen"
 
+msgid "not configured"
+msgstr "ikke konfigureret"
+
 msgid "not locked"
 msgstr "ikke låst"
 
+msgid "not set"
+msgstr "ikke sat"
+
+msgid "not supported"
+msgstr "ikke understøttet"
+
 msgid "not used"
 msgstr "ikke anvendt"
+
+msgid "nothing"
+msgstr "Intet"
 
 msgid "nothing connected"
 msgstr "Intet tilsluttet"
@@ -5162,11 +5359,14 @@ msgstr "til"
 msgid "on READ ONLY medium."
 msgstr "på LÆS KUN medie"
 
+msgid "on Weekday"
+msgstr "på ugedag"
+
 msgid "once"
 msgstr "en gang"
 
 msgid "open nameserver configuration"
-msgstr "åbn navneserver opsætning"
+msgstr "åbn navneserver konfiguration"
 
 msgid "open servicelist"
 msgstr "åbne kanalliste"
@@ -5203,6 +5403,9 @@ msgstr "forrige kanal"
 
 msgid "previous channel in history"
 msgstr "forrige sete kanal"
+
+msgid "reboot"
+msgstr "genstart"
 
 msgid "record"
 msgstr "optage"
@@ -5256,7 +5459,7 @@ msgid "repeated"
 msgstr "gentaget"
 
 msgid "rewind to the previous chapter"
-msgstr "kør tilbage til forrige kapitel"
+msgstr "gå tilbage til forrige kapitel"
 
 msgid "right"
 msgstr "højre"
@@ -5442,10 +5645,16 @@ msgid "this service is protected by a parental control pin"
 msgstr "denne service er beskyttet af forældre kontrol "
 
 msgid "toggle a cut mark at the current position"
-msgstr "flytte en klippe markør til nuværende position"
+msgstr "flytte en klippemarkør til nuværende position"
 
 msgid "toggle time, chapter, audio, subtitle info"
 msgstr "skift mellem tid, kapitel, lyd, undertekst info"
+
+msgid "top"
+msgstr "top"
+
+msgid "tuner is not supported"
+msgstr "tuner er ikke understøttet"
 
 msgid "unconfirmed"
 msgstr "ubekræftet"
@@ -5459,6 +5668,9 @@ msgstr "ukendt kanal"
 msgid "user defined"
 msgstr "brugerdefineret"
 
+msgid "version:"
+msgstr "version:"
+
 msgid "vertical"
 msgstr "vertikal"
 
@@ -5469,7 +5681,7 @@ msgid "view recordings..."
 msgstr "se optagelser..."
 
 msgid "wait for ci..."
-msgstr "vent på CA..."
+msgstr "vent på ci..."
 
 msgid "wait for mmi..."
 msgstr "vent på mmi..."
