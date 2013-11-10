@@ -3728,8 +3728,10 @@ MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (40, 40), png = 1),
 <widget name="config" position="20,20" size="780,250" transparent="1"/>
 <widget name="information" position="20,290" size="780,135" font="Regular;19" halign="center" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
 <ePixmap pixmap="skin_default/div-h.png" position="0,390" zPosition="1" size="820,2"/>
-<ePixmap pixmap="skin_default/buttons/red35x35.png" position="350,395" size="35,35" alphatest="blend"/>
-<widget name="key_red" position="395,399" size="250,35" zPosition="1" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1"/>
+<ePixmap pixmap="skin_default/buttons/red35x35.png" position="250,395" size="35,35" alphatest="blend"/>
+<ePixmap pixmap="skin_default/buttons/green35x35.png" position="510,395" size="35,35" alphatest="blend"/>
+<widget name="key_red" position="300,395" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
+<widget name="key_green" position="560,395" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
 </screen>>
 <screen name="CrossEPG_Menu" position="230,150" size="820,435" title="CrossEPG">
 <widget source="list" render="Listbox" enableWrapAround="1" position="20,20" size="780,400" zPosition="1" scrollbarMode="showNever" transparent="1">
