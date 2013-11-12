@@ -41,11 +41,11 @@ The publication of the skin is not permitted without permission of the author - 
 <color name="LabelForeground" color="#ffffff"/>
 <color name="ListboxBackground" color="#22000000"/>
 <color name="ListboxForeground" color="#8d8d8d"/>
-<color name="ListboxSelectedBackground" color="#22000000"/>
+<color name="ListboxSelectedBackground" color="#004080"/>
 <color name="ListboxSelectedForeground" color="#ffffff"/>
-<color name="ListboxMarkedBackground" color="#22000000"/>
+<color name="ListboxMarkedBackground" color="#004080"/>
 <color name="ListboxMarkedForeground" color="#ff4a4a"/>
-<color name="ListboxMarkedAndSelectedBackground" color="#22000000"/>
+<color name="ListboxMarkedAndSelectedBackground" color="#004080"/>
 <color name="ListboxMarkedAndSelectedForeground" color="#ff2f2f"/>
 <color name="WindowTitleForeground" color="#ffffff"/>
 <color name="WindowTitleBackground" color="#22000000"/>
@@ -481,10 +481,10 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <widget name="Ecmtext" position="20,247" size="500,190" font="Regular;18" halign="left" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 <screen name="DeliteAddons" position="40,95" size="490,570" title="Addons Manager" >
-<widget source="list" render="Listbox" enableWrapAround="1" position="20,20" size="465,540" zPosition="2" scrollbarMode="showNever" transparent="1">
+<widget source="list" render="Listbox" enableWrapAround="1" position="10,20" size="470,540" zPosition="2" scrollbarMode="showNever" transparent="1">
 <convert type="TemplatedMultiContent">
-{"template": [ MultiContentEntryText(pos = (60,9), size = (405,32), flags = RT_HALIGN_LEFT, text = 0),
-MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (40, 40), png = 1),
+{"template": [ MultiContentEntryText(pos = (70,9), size = (405,32), flags = RT_HALIGN_LEFT, text = 0),
+MultiContentEntryPixmapAlphaTest(pos = (10, 3), size = (40, 40), png = 1),
 ],
 "fonts": [gFont("Regular", 24)],
 "itemHeight": 45
@@ -493,10 +493,10 @@ MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (40, 40), png = 1),
 </widget>    
 </screen>
 <screen name="Nab_downArea" position="40,95" size="490,570" title="Downloads Manager" >
-<widget source="list" render="Listbox" enableWrapAround="1" position="20,20" size="465,540" zPosition="2" scrollbarMode="showNever" transparent="1">
+<widget source="list" render="Listbox" enableWrapAround="1" position="10,20" size="470,540" zPosition="2" scrollbarMode="showNever" transparent="1">
 <convert type="TemplatedMultiContent">
-{"template": [ MultiContentEntryText(pos = (60,9), size = (405,32), flags = RT_HALIGN_LEFT, text = 0),
-MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (40, 40), png = 1),
+{"template": [ MultiContentEntryText(pos = (70,9), size = (405,32), flags = RT_HALIGN_LEFT, text = 0),
+MultiContentEntryPixmapAlphaTest(pos = (10, 3), size = (40, 40), png = 1),
 ],
 "fonts": [gFont("Regular", 24)],
 "itemHeight": 45
@@ -580,7 +580,7 @@ MultiContentEntryText(pos = (15, 0), size = (570, 35), flags = RT_HALIGN_LEFT|RT
 <widget name="key_red" position="395,399" size="250,35" zPosition="1" font="Regular;24" halign="left" backgroundColor="transpBlack" transparent="1"/>
 </screen>>
 <screen name="DeliteSettings" position="40,95" size="490,570" title="Black Hole Settings" >
-<widget source="list" render="Listbox" enableWrapAround="1" position="23,20" size="477,540" zPosition="2" scrollbarMode="showNever" transparent="1">
+<widget source="list" render="Listbox" enableWrapAround="1" position="10,20" size="470,540" zPosition="2" scrollbarMode="showNever" transparent="1">
 <convert type="TemplatedMultiContent">
 {"template": [ MultiContentEntryText(pos = (60,9), size = (405,32), flags = RT_HALIGN_LEFT, text = 0),
 MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (40, 40), png = 1),
@@ -608,7 +608,7 @@ MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (40, 40), png = 1),
 <widget name="lcactive" position="10,170" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="blend"/>
 <widget name="lab6" position="50,170" size="550,32" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget name="lab3" position="10,225" size="320,32" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="labsize" position="330,225" size="120,32" font="Regular;20" halign="center" valign="center" backgroundColor="#091f51"/>
+<widget name="labsize" position="330,225" size="120,32" font="Regular;20" halign="center" valign="center" backgroundColor="#004080"/>
 <ePixmap pixmap="skin_default/div-h.png" position="0,285" zPosition="1" size="600,2"/>
 <ePixmap pixmap="skin_default/buttons/red30x30.png" position="260,300" size="30,30" alphatest="blend"/>
 <widget name="key_red" position="300,302" zPosition="1" size="150,30" font="Regular;22" halign="left" backgroundColor="transpBlack" transparent="1"/>
@@ -641,17 +641,17 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <widget name="lactive" position="10,10" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="blend"/>
 <widget name="lab1" position="50,10" size="350,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget name="lab2" position="10,50" size="400,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="labtime" position="410,50" size="100,30" font="Regular;20" valign="center" backgroundColor="#091f51"/>
+<widget name="labtime" position="410,50" size="100,30" font="Regular;20" valign="center" backgroundColor="#004080"/>
 <widget name="lab3" position="10,100" size="150,30" font="Regular;20" valign="center" transparent="1"/>
-<widget name="labuser" position="160,100" size="410,30" font="Regular;20" valign="center" backgroundColor="#091f51"/>
+<widget name="labuser" position="160,100" size="410,30" font="Regular;20" valign="center" backgroundColor="#004080"/>
 <widget name="lab4" position="10,150" size="150,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="labpass" position="160,150" size="410,30" font="Regular;20" valign="center" backgroundColor="#091f51"/>
+<widget name="labpass" position="160,150" size="410,30" font="Regular;20" valign="center" backgroundColor="#004080"/>
 <widget name="lab5" position="10,200" size="150,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="labalias" position="160,200" size="410,30" font="Regular;20" valign="center" backgroundColor="#091f51"/>
+<widget name="labalias" position="160,200" size="410,30" font="Regular;20" valign="center" backgroundColor="#004080"/>
 <widget name="sinactive" position="10,250" zPosition="1" pixmap="skin_default/icons/ninactive.png" size="32,32" alphatest="blend"/>
 <widget name="sactive" position="10,250" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="blend"/>
 <widget name="lab6" position="50,250" size="100,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="labsys" position="160,250" size="410,30" font="Regular;20" valign="center" backgroundColor="#091f51"/>
+<widget name="labsys" position="160,250" size="410,30" font="Regular;20" valign="center" backgroundColor="#004080"/>
 <widget name="lab7" position="10,300" size="150,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget name="labstop" position="160,300" size="150,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
 <widget name="labrun" position="160,300" size="150,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
@@ -679,9 +679,9 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <widget name="lactive" position="10,10" zPosition="2" pixmap="skin_default/icons/nactive.png" size="32,32" alphatest="blend"/>
 <widget name="lab1" position="50,10" size="260,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget name="lab2" position="10,100" size="150,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="labplace" position="160,100" size="220,30" font="Regular;20" valign="center" backgroundColor="#091f51"/>
+<widget name="labplace" position="160,100" size="220,30" font="Regular;20" valign="center" backgroundColor="#004080"/>
 <widget name="lab3" position="10,150" size="150,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="labsize" position="160,150" size="220,30" font="Regular;20" valign="center" backgroundColor="#091f51"/>
+<widget name="labsize" position="160,150" size="220,30" font="Regular;20" valign="center" backgroundColor="#004080"/>
 <widget name="lab4" position="10,200" size="150,30" font="Regular;20" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget name="labstop" position="160,200" size="150,30" font="Regular;20" valign="center" halign="center" backgroundColor="red"/>
 <widget name="labrun" position="160,200" size="150,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green"/>
@@ -987,7 +987,7 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (20, 20), png = 1),
 <ePixmap pixmap="skin_default/muteback.png" position="1,1" size="55,50" zPosition="-5" alphatest="blend"/>
 </screen>
 <screen name="menu_mainmenu" position="40,95" size="490,570" title="Main menu" >
-<widget source="menu" render="Listbox" enableWrapAround="1" position="20,20" size="465,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/mainbg.png" transparent="1">
+<widget source="menu" render="Listbox" enableWrapAround="1" position="10,20" size="470,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/mainbg.png" transparent="1">
 <convert type="TemplatedMultiContent">
 {"template": [ MultiContentEntryText(pos = (65,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
 "fonts": [gFont("Regular",24)],
@@ -997,7 +997,7 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (20, 20), png = 1),
 </widget>
 </screen>
 <screen name="menu_setup" position="40,95" size="490,570" title="Setup" >
-<widget source="menu" render="Listbox" enableWrapAround="1" position="20,20" size="465,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/setupbg.png" transparent="1">
+<widget source="menu" render="Listbox" enableWrapAround="1" position="10,20" size="470,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/setupbg.png" transparent="1">
 <convert type="TemplatedMultiContent">
 {"template": [ MultiContentEntryText(pos = (65,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
 "fonts": [gFont("Regular",24)],
@@ -1007,7 +1007,7 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (20, 20), png = 1),
 </widget>
 </screen>
 <screen name="menu_system" position="40,95" size="490,570" title="System" >
-<widget source="menu" render="Listbox" enableWrapAround="1" position="20,20" size="465,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/sysbg.png" transparent="1">
+<widget source="menu" render="Listbox" enableWrapAround="1" position="10,20" size="470,540" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/sysbg.png" transparent="1">
 <convert type="TemplatedMultiContent">
 {"template": [ MultiContentEntryText(pos = (65,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
 "fonts": [gFont("Regular",24)],
@@ -1017,9 +1017,9 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (20, 20), png = 1),
 </widget>
 </screen>
 <screen name="menu_shutdown" position="40,95" size="490,300" title="Shutdown" >
-<widget source="menu" render="Listbox" enableWrapAround="1" position="75,20" size="410,270" zPosition="1" scrollbarMode="showNever" transparent="1">
+<widget source="menu" render="Listbox" enableWrapAround="1" position="10,20" size="470,270" zPosition="1" scrollbarMode="showNever" transparent="1">
 <convert type="TemplatedMultiContent">
-{"template": [ MultiContentEntryText(pos = (10,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
+{"template": [ MultiContentEntryText(pos = (75,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
 "fonts": [gFont("Regular",24)],
 "itemHeight":45
 }
@@ -1057,9 +1057,9 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (20, 20), png = 1),
 </widget>
 </screen>
 <screen name="menu_information" position="40,95" size="490,130" title="Information" >
-<widget source="menu" render="Listbox" enableWrapAround="1" position="75,20" size="410,90" zPosition="1" scrollbarMode="showNever" transparent="1">
+<widget source="menu" render="Listbox" enableWrapAround="1" position="10,20" size="470,90" zPosition="1" scrollbarMode="showNever" transparent="1">
 <convert type="TemplatedMultiContent">
-{"template": [ MultiContentEntryText(pos = (10,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
+{"template": [ MultiContentEntryText(pos = (75,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
 "fonts": [gFont("Regular",24)],
 "itemHeight":45
 }
@@ -1077,7 +1077,7 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 7), size = (20, 20), png = 1),
 </widget>
 </screen>
 <screen name="menu_scan" position="40,95" size="490,415" title="Service searching" >
-<widget source="menu" render="Listbox" enableWrapAround="1" position="20,20" size="465,405" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/searchsel.png" backgroundPixmap="skin_default/menu/searchbg.png" transparent="1">
+<widget source="menu" render="Listbox" enableWrapAround="1" position="10,20" size="470,405" zPosition="1" scrollbarMode="showNever" selectionPixmap="skin_default/menu/syssel.png" backgroundPixmap="skin_default/menu/searchbg.png" transparent="1">
 <convert type="TemplatedMultiContent">
 {"template": [ MultiContentEntryText(pos = (65,9), size = (400,32), flags = RT_HALIGN_LEFT, text =0) ],
 "fonts": [gFont("Regular",24)],
@@ -1159,7 +1159,7 @@ MultiContentEntryText(pos = (535, 0), size = (105, 25),  font = 1, flags = RT_HA
 </screen>
 <screen name="ChannelSelection" position="70,78" size="1140,592" title="Channel Selection">
 <eLabel position="800,35" size="2,513" backgroundColor="grey"/>
-<widget name="list" position="10,35" size="780,512" scrollbarMode="showOnDemand" foregroundColor="#bbbbbb" foregroundColorServiceNotAvail="#666666" colorServiceDescription="#7f7f7f" colorServiceDescriptionSelected="#3c9dff" colorEventProgressbarBorderSelected="#ffffff" serviceItemHeight="32" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;23" transparent="1"/>
+<widget name="list" position="10,35" size="780,512" scrollbarMode="showOnDemand" foregroundColor="#bbbbbb" foregroundColorServiceNotAvail="#666666" colorServiceDescription="#7f7f7f" colorServiceDescriptionSelected="#ffffff" colorEventProgressbarBorderSelected="#ffffff" serviceItemHeight="32" serviceNumberFont="Regular;22" serviceNameFont="Regular;24" serviceInfoFont="Regular;23" transparent="1"/>
 <eLabel position="0,548" size="1140,2" backgroundColor="grey"/>
 <ePixmap pixmap="skin_default/buttons/red35x35.png" position="5,0" size="35,35" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/green35x35.png" position="205,0" size="35,35" alphatest="blend"/>
@@ -1209,7 +1209,7 @@ MultiContentEntryText(pos = (535, 0), size = (105, 25),  font = 1, flags = RT_HA
 </widget>
 </screen>
 <screen name="ChannelSelectionRadio" position="82,85" size="1116,280" title="Channel Selection">
-<widget name="list" position="10,5" size="1096,227" scrollbarMode="showOnDemand" foregroundColor="#bbbbbb" foregroundColorServiceNotAvail="#666666" colorEventProgressbarSelected="#0070eb" colorServiceDescription="#7f7f7f" colorServiceDescriptionSelected="#75bbff" serviceNumberFont="Regular;22" serviceNameFont="Regular;22" serviceInfoFont="Regular;22" colorEventProgressbarBorderSelected="#ffffff" transparent="1"/>
+<widget name="list" position="10,5" size="1096,227" scrollbarMode="showOnDemand" foregroundColor="#bbbbbb" foregroundColorServiceNotAvail="#666666" colorEventProgressbarSelected="#ffffff" colorServiceDescription="#7f7f7f" colorServiceDescriptionSelected="#ffffff" serviceNumberFont="Regular;22" serviceNameFont="Regular;22" serviceInfoFont="Regular;22" colorEventProgressbarBorderSelected="#ffffff" transparent="1"/>
 <eLabel position="0,238" size="1116,2" backgroundColor="grey"/>
 <ePixmap pixmap="skin_default/buttons/red35x35.png" position="40,245" size="35,35" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/green35x35.png" position="310,245" size="35,35" alphatest="blend"/>
@@ -2891,7 +2891,7 @@ MultiContentEntryText(pos = (10, 2), size = (570, 30), flags = RT_HALIGN_LEFT|RT
 <widget name="statuslab" position="10,340" size="580,70" font="Regular;22" valign="center" foregroundColor="#FFC000"/>
 </screen>
 <screen name="DeliteAutocamMan" position="230,150" size="820,435" title="Autocam Manager">
-<widget name="defaultcam" position="20,20" size="780,35" font="Regular;24" halign="center" valign="center" backgroundColor="#091f51" />
+<widget name="defaultcam" position="20,20" size="780,35" font="Regular;24" halign="center" valign="center" backgroundColor="#004080" />
 <widget source="list" render="Listbox" position="20,70" size="780,350" scrollbarMode="showOnDemand" transparent="1" >
 <convert type="StringList" />
 </widget>
@@ -3676,10 +3676,10 @@ MultiContentEntryText(pos = (65, 6), size = (450, 54), font=0, flags = RT_HALIGN
 <widget source="key_blue" render="Label" position="655,425" size="250,35" zPosition="1" font="Regular;22" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 <screen name="BhSetupGreen" position="40,95" size="490,130" title="BH Green Panel Setup" >
-<widget source="list" render="Listbox" enableWrapAround="1" position="20,20" size="465,90" zPosition="2" scrollbarMode="showNever" transparent="1">
+<widget source="list" render="Listbox" enableWrapAround="1" position="10,20" size="470,90" zPosition="2" scrollbarMode="showNever" transparent="1">
 <convert type="TemplatedMultiContent">
-{"template": [ MultiContentEntryText(pos = (60,9), size = (405,32), flags = RT_HALIGN_LEFT, text = 0),
-MultiContentEntryPixmapAlphaTest(pos = (0, 3), size = (40, 40), png = 1),
+{"template": [ MultiContentEntryText(pos = (70,9), size = (405,32), flags = RT_HALIGN_LEFT, text = 0),
+MultiContentEntryPixmapAlphaTest(pos = (10, 3), size = (40, 40), png = 1),
 ],
 "fonts": [gFont("Regular", 24)],
 "itemHeight": 45
