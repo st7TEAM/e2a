@@ -34,6 +34,7 @@ The publication of the skin is not permitted without permission of the author - 
 <font filename="nmsbd.ttf" name="Regular" scale="100"/>
 <font filename="ae_AlMateen.ttf" name="Replacement" scale="100" replacement="1"/>
 <font filename="tuxtxt.ttf" name="Console" scale="100"/>
+<font filename="titles.ttf" name="titles" scale="136"/>
 </fonts>
 <windowstyle type="skinned" id="0">
 <title offset="30,23" font="Regular;30"/>
@@ -1910,10 +1911,10 @@ MultiContentEntryText(pos = (50, 28), size = (480, 40), font = 1, flags = RT_HAL
 <widget name="config" position="20,20" size="640,385" zPosition="1" scrollbarMode="showOnDemand" transparent="1"/>
 </screen>
 <subtitles>
-<sub name="Subtitle_TTX" font="Regular;40" foregroundColor="#ffffff" shadowColor="#40101010" shadowOffset="-3,-3" />
-<sub name="Subtitle_Regular" font="Regular;38" foregroundColor="#ffffff" shadowColor="#40101010" shadowOffset="-3,-3" />
-<sub name="Subtitle_Bold" font="Replacement;40" foregroundColor="#ffffff" shadowColor="#40101010" shadowOffset="-3,-3" />
-<sub name="Subtitle_Italic" font="Regular;38" foregroundColor="#ffffff" shadowColor="#40101010" shadowOffset="-3,-3" />
+<sub name="Subtitle_TTX" font="titles;34" foregroundColor="#ffffff" shadowColor="#000000" shadowOffset="3,3" />
+<sub name="Subtitle_Regular" font="titles;34" foregroundColor="#ffffff" shadowColor="#000000" shadowOffset="3,3" />
+<sub name="Subtitle_Bold" font="titles;34" foregroundColor="#ffffff" shadowColor="#000000" shadowOffset="3,3" />
+<sub name="Subtitle_Italic" font="titles;34" foregroundColor="#ffffff" shadowColor="#000000" shadowOffset="3,3" />
 </subtitles>
 <screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent"/>    
 <screen name="TimerEdit" position="90,95" size="1100,560" title="Timer Edit">
