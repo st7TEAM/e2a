@@ -218,7 +218,7 @@ class VideoHardware:
 
 		for port in port_choices:
 			desc = port
-			if desc == 'DVI' and self.isHDMIAvailable(hw_type):
+			if desc == 'DVI':
 				desc = 'HDMI'
 			if desc == 'DVI-PC' and self.isHDMI_PCAvailable(hw_type):
 				desc = 'HDMI-PC'
