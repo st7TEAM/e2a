@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-07 11:08+0000\n"
-"PO-Revision-Date: 2013-10-26 15:50+0100\n"
+"PO-Revision-Date: 2013-12-09 19:01+0100\n"
 "Last-Translator: roddis\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -12,6 +12,88 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: iso-8859-15\n"
 "X-Generator: Poedit 1.5.5\n"
+
+msgid "Expand your universe."
+msgstr "Utvid ditt univers."
+
+msgid "Umount"
+msgstr "Avtilkoble"
+
+msgid "Fail to update!!"
+msgstr "Oppdatering feilet!!"
+
+msgid ""
+"Reboot after %d seconds.\n"
+"Press the OK to reboot now."
+msgstr ""
+"Omstart etter %d sekunder.\n"
+"Trykk OK for å starte om nå."
+
+msgid "Mount a FTP server"
+msgstr "Tilkoble en FTP server"
+
+msgid "VU standby"
+msgstr "VU dvalemodus"
+
+msgid "VU DeepStandby"
+msgstr "VU DypDvalemodus"
+
+msgid "Nothing"
+msgstr "Ingenting"
+
+msgid "VU wakeup"
+msgstr "VU våkne opp"
+
+msgid "TV wakeup"
+msgstr "TV våkne opp"
+
+msgid "TV + A/V wakeup"
+msgstr "TV + A/V våkne opp"
+
+msgid "Source active"
+msgstr "Aktiv kilde"
+
+msgid "TV standby"
+msgstr "TV dvalemodus"
+
+msgid "TV + A/V standby"
+msgstr "TV + A/V dvalemodus"
+
+msgid "Source inactive"
+msgstr "Inaktiv kilde"
+
+msgid "no A/V Receiver"
+msgstr "ingen A/V Receiver"
+
+msgid "Serial log enabled :"
+msgstr "Serie logg aktivert:"
+
+msgid "Most shared"
+msgstr "Mest delt"
+
+msgid "Trending videos"
+msgstr "Trend videoer"
+
+msgid "My Subscriptions"
+msgstr "Mine Abonnementer"
+
+msgid "My Favorites"
+msgstr "Mine Favoritter "
+
+msgid "My History"
+msgstr "Min Historie"
+
+msgid "My Watch Later"
+msgstr "Min Se Senere"
+
+msgid "My Recommendations"
+msgstr "Mine Anbefalinger"
+
+msgid "My Uploads"
+msgstr "Mine Opplastinger"
+
+msgid "OpenWebif url: http://yourip:port"
+msgstr "OpenWebif url: http://dinip:port"
 
 msgid "Edit Timers and scan for new Events"
 msgstr "Søke etter programmer automatisk"
@@ -230,7 +312,7 @@ msgid "Can't play selected file. It is unknown file extension."
 msgstr "Kan ikke spille av fil. Det er en ukjent filutvidelse. "
 
 msgid "Auto paginate on last entry:"
-msgstr "Auto nummerer ved siste inntast:"
+msgstr "Auto nummerer ved siste oppføring:"
 
 msgid "Reset tv-screen after playback:"
 msgstr "Tilbakestill tv-skjerm etter avspilling:"
@@ -258,7 +340,7 @@ msgid ""
 "Advanced options and settings."
 msgstr ""
 "\n"
-"Avanserte alternativer og innstillinger"
+"Avanserte alternativer og innstillinger."
 
 msgid ""
 "\n"
@@ -272,7 +354,7 @@ msgid ""
 "Backup your STB settings."
 msgstr ""
 "\n"
-"Sikkerhetskopier VU+ innstillinger "
+"Sikkerhetskopier VU+ innstillinger."
 
 msgid ""
 "\n"
@@ -293,14 +375,14 @@ msgid ""
 "Edit the upgrade source address."
 msgstr ""
 "\n"
-"Endre oppgraderings kilde"
+"Endre oppgraderingskilde."
 
 msgid ""
 "\n"
 "Manage extensions or plugins for your STB"
 msgstr ""
 "\n"
-"Behandle utvidelser eller moduler for din Vu+"
+"Behandle utvidelser eller moduler for din Vu+."
 
 msgid ""
 "\n"
@@ -335,7 +417,7 @@ msgid ""
 "Restore your STB with a new firmware."
 msgstr ""
 "\n"
-"\vGjenopprett VU+ med en ny fastvare ."
+"\vOppgrader VU+ med en ny fastvare ."
 
 msgid ""
 "\n"
@@ -1845,10 +1927,10 @@ msgid "BH Feed Settings"
 msgstr "BH Feed Oppsett"
 
 msgid "BH Feeds Plugins"
-msgstr "BH Feed Moduler"
+msgstr "BH Feeds Moduler"
 
 msgid "BH Feeds Settings"
-msgstr "BH Feeds Oppsett"
+msgstr "BH Kanalliste Nedlastning "
 
 msgid "BH Ftp Panel"
 msgstr "BH Ftp Panel"
@@ -1878,7 +1960,7 @@ msgid "BH Info"
 msgstr "BH Info"
 
 msgid "BH Input"
-msgstr "BH Input"
+msgstr "BH Inngang"
 
 msgid "BH LED Brightness Setup"
 msgstr "BH LED Lysstyrke Oppsett"
@@ -2079,7 +2161,7 @@ msgid "BH Timer Editor"
 msgstr "BH Tidsopptak Editor"
 
 msgid "BH Timer Entry"
-msgstr "BH Timer Entry"
+msgstr "BH Tidsopptak Oppføring"
 
 msgid "BH Tuner Server Panel"
 msgstr "BH Tuner Server Panel"
@@ -2214,10 +2296,10 @@ msgid "Begin time"
 msgstr "Starttid"
 
 msgid "Behavior of 'pause' when paused"
-msgstr "Oppførsel for 'pause'-knappen i pause-modus"
+msgstr "Oppførsel til 'pause'-knappen i pause-modus"
 
 msgid "Behavior of 0 key in PiP-mode"
-msgstr "Oppsett av 0 key i BiB modus"
+msgstr "Oppførsel til 0 tast i BiB-modus"
 
 msgid "Behavior when a movie is started"
 msgstr "Oppførsel når opptak blir startet"
@@ -2738,10 +2820,10 @@ msgid "Choice filesystem."
 msgstr "Velg filsystem."
 
 msgid "Choose A/V-Receiver HDMI input:"
-msgstr "Velg A/V-Receiver HDMI input:"
+msgstr "Velg A/V-Receiver HDMI inngang:"
 
 msgid "Choose TV HDMI input:"
-msgstr "Velg TV HDMI input:"
+msgstr "Velg TV HDMI inngang:"
 
 msgid "Choose Tuner"
 msgstr "Velg Tuner"
@@ -2765,7 +2847,7 @@ msgid "Choose target folder"
 msgstr "Velg folder du vil bruke"
 
 msgid "Choose upgrade source"
-msgstr "Velg oppgraderings kilde"
+msgstr "Velg oppgraderingskilde"
 
 msgid "Choose your Skin"
 msgstr "Velg ditt Skin"
@@ -3359,7 +3441,7 @@ msgid "Delay x seconds after service started"
 msgstr "Forsinke x sekunder etter kanalstart"
 
 msgid "Delete"
-msgstr "Slette"
+msgstr "Slett"
 
 msgid "Delete Confirmation"
 msgstr "Bekrefte sletting"
@@ -3371,7 +3453,7 @@ msgid "Delete crashlogs"
 msgstr "Slette feillogger"
 
 msgid "Delete entry"
-msgstr "Slett inntastet"
+msgstr "Slett denne"
 
 msgid "Delete failed!"
 msgstr "Sletting feilet!"
@@ -3461,13 +3543,13 @@ msgid "Dir:"
 msgstr "Katalog:"
 
 msgid "Direct Input"
-msgstr "Direkte Innsetting"
+msgstr "Direkte Inngang"
 
 msgid "Direct Input(Bookmark)"
-msgstr "Direkte Innsetting(Bokmerke)"
+msgstr "Direkte Inngang(Bokmerke)"
 
 msgid "Direct Input(Category)"
-msgstr "Direkte Innsetting(Kategori)"
+msgstr "Direkte Inngang(Kategori)"
 
 msgid "Direct playback of Youtube videos"
 msgstr "Direkte avspilling av Youtube videoer"
@@ -3751,7 +3833,7 @@ msgid "Don't lose the chance to get the gift."
 msgstr "Ikke mist sjansen til å få gaven."
 
 msgid "Don't stop current event but disable coming events"
-msgstr "Ikke stopp nåværende event men slå av kommende events"
+msgstr "Ikke stopp nåværende program, slå av kommende program"
 
 msgid "Done - Installed or upgraded %d packages"
 msgstr "Ferdig - Installerte eller oppgraderte %d pakker"
@@ -3954,7 +4036,7 @@ msgid "Edit title"
 msgstr "Endre tittel"
 
 msgid "Edit upgrade source url."
-msgstr "Endre oppgraderingskilde url"
+msgstr "Endre oppgraderingskilde url."
 
 msgid "EditSetting"
 msgstr "Rediger oppsett"
@@ -4000,13 +4082,13 @@ msgid "Enable 1080p30 Mode"
 msgstr "Aktiver 1080p30 Modus"
 
 msgid "Enable 128 bit (Input 26 hex keys)"
-msgstr "Aktiver 128 bit (Input 26 hex keys)"
+msgstr "Aktiver 128 bit (Innsett 26 hex nøkler)"
 
 msgid "Enable 5V for active antenna"
 msgstr "Aktiver 5V for aktiv antenne"
 
 msgid "Enable 64 bit (Input 10 hex keys)"
-msgstr " Aktiver 64 bit (Input 10 hex keys)"
+msgstr " Aktiver 64 bit (Innsett 10 hex nøkler)"
 
 msgid "Enable 720p24 Mode"
 msgstr "Aktiver 720p24 Modus"
@@ -4377,7 +4459,7 @@ msgid "Exit editor"
 msgstr "Avslutt editor"
 
 msgid "Exit input device selection."
-msgstr "Avslutt inndata enhetsvalg"
+msgstr "Avslutt inndata enhetsvalg."
 
 msgid "Exit network wizard"
 msgstr "Avslutt nettverks veiviseren"
@@ -5310,10 +5392,10 @@ msgid "Initializing Harddisk..."
 msgstr "Initialiserer Harddisk..."
 
 msgid "Input"
-msgstr "Input"
+msgstr "Inngang"
 
 msgid "Input Hidden ESSID"
-msgstr "Input skjult ESSID"
+msgstr "Innsett skjult ESSID"
 
 msgid "Input device setup"
 msgstr "Inndataenhets oppsett"
@@ -5331,7 +5413,7 @@ msgid "Install Confirmation"
 msgstr "Installerings bekreftelse"
 
 msgid "Install Image"
-msgstr "Installert Image"
+msgstr "Installer Image"
 
 msgid "Install a new image with a USB stick"
 msgstr "Installer et nytt image med en USB penn"
@@ -6983,13 +7065,13 @@ msgstr ""
 "Trykk 'EXIT' knappen!"
 
 msgid "Online Black Hole image update"
-msgstr "Black Hole image oppdatering"
+msgstr "Black Hole Image oppdatering"
 
 msgid "Online Feeds Extensions"
 msgstr "Internett Feeds Utvidelser"
 
 msgid "Online Feeds Settings update"
-msgstr "Feeds innstillings oppdatering"
+msgstr "Kanalliste Nedlastning "
 
 msgid "Online Feeds all Packages"
 msgstr "Internett Feeds alle Pakker"
@@ -8394,10 +8476,10 @@ msgid "Repeats"
 msgstr "Gjentagelser"
 
 msgid "Replace the minute input for the seek functions with a seekbar."
-msgstr "Erstatte minutter input til søke funksjoner med en seekbar."
+msgstr "Erstatt minutt innsetting til søke funksjoner med en søkebar."
 
 msgid "Replace the rewind  input with a seekbar"
-msgstr "Erstatte bakoverspole input med seekbar"
+msgstr "Erstatt bakoverspole innsetting med søkebar."
 
 msgid "Reply timeout"
 msgstr "Tidsavbrudd svar"
@@ -9053,7 +9135,7 @@ msgid "Select upgrade source to edit."
 msgstr "Velg oppgraderings kilde"
 
 msgid "Select video input with up/down buttons"
-msgstr "Velg video inn med opp/ned knappene"
+msgstr "Velg video inngang med opp/ned knappene"
 
 msgid "Select video mode"
 msgstr "Velg videotype"
@@ -9234,7 +9316,7 @@ msgid "Settings"
 msgstr "Innstillinger"
 
 msgid "Settings installed:"
-msgstr "Innstillinger installert:"
+msgstr "Kanallister:  "
 
 msgid "Setup"
 msgstr "Oppsett"
@@ -9894,10 +9976,10 @@ msgid "Stop Timeshift?"
 msgstr "Stopp Tidsbytte?"
 
 msgid "Stop current event and disable coming events"
-msgstr "Stopp nåværende event og stop kommende events"
+msgstr "Stopp nåværende program og slå av kommende programmer"
 
 msgid "Stop current event but not coming events"
-msgstr "Stopp nåværende event med ikke de som kommer"
+msgstr "Stopp nåværende program, men ikke de som kommer"
 
 msgid "Stop playing this movie?"
 msgstr "Stoppe avspilling av opptak?"
@@ -10883,7 +10965,7 @@ msgid "Time to execute command or script"
 msgstr "Tid til å utføre kommandoen eller skript"
 
 msgid "Time/Date Input"
-msgstr "Tid/Dato Input"
+msgstr "Tid/Dato Innsetting"
 
 msgid "Timer"
 msgstr "Tidsopptak "
@@ -10898,7 +10980,7 @@ msgid "Timer Type"
 msgstr "Tidsopptak Type"
 
 msgid "Timer entry"
-msgstr "Tidsopptak inntast"
+msgstr "Tidsopptak oppføring"
 
 msgid "Timer log"
 msgstr "Tidsopptak logg"
@@ -11347,7 +11429,7 @@ msgid "Upgrade Firmware.."
 msgstr "Oppgrader Fastvare..."
 
 msgid "Upgrade finished."
-msgstr "Oppgradering ferdig."
+msgstr "Oppdatering ferdig."
 
 msgid ""
 "Upgrade found.\n"
@@ -12155,7 +12237,7 @@ msgid "With EPGSearch you can search through the EPG and create timers."
 msgstr "Med EPGSøk kan du søke gjennom EPG og lage tidsopptak ."
 
 msgid "With Genuine STB you can verify the authenticity of your STB."
-msgstr "With Genuine STB kan du fastslå ektheten til din mottaker"
+msgstr "With Genuine STB kan du fastslå ektheten til din mottaker."
 
 msgid ""
 "With IMDb you can display downloaded movie information (rating, poster, "
@@ -12450,7 +12532,7 @@ msgid ""
 "respective plugin.After installation you find the settings as \"Hide Plugins"
 "\" under Setup / System."
 msgstr ""
-"Du kan bruke dette modul til å dynamisk gjemme moduler fra Utvidelses eller "
+"Du kan bruke denne modul til å dynamisk gjemme moduler fra Utvidelses eller "
 "modul menyen uten at du trenger å modifisere kildekoden til modulen. Etter "
 "installering finner du innstillinger som \"Gjem Moduler\" under Oppsett / "
 "System."
@@ -12560,16 +12642,16 @@ msgid "You must set at least one Command"
 msgstr "Du må ha minst en kommando"
 
 msgid ""
-"You need a PC connected to your dreambox. If you need further instructions, "
+"You need a PC connected to your STB. If you need further instructions, "
 "please visit the website http://www.dm7025.de.\n"
-"Your dreambox will now be halted. After you have performed the update "
+"Your STB will now be halted. After you have performed the update "
 "instructions from the website, your new firmware will ask you to restore "
 "your settings."
 msgstr ""
-"Du trenger en PC koblet til din VU+. Trenger du videre informasjonvennligst "
+"Du trenger en PC koblet til din VU+. Trenger du videre informasjon vennligst "
 "gå til Websiden http://www.vuplus.com.\n"
-"Din VU+vil nå bli stoppet. Etter du har gjennomført oppdaterings- "
-"instruksjonene fra websiden, vil din nye fastvare spørre deg om å legge inn "
+"Din VU+ vil nå bli stoppet. Etter at du har gjennomført oppdaterings- "
+"instruksjonene fra nettsiden, vil din nye fastvare spørre deg om å legge inn "
 "igjen innstillingene."
 
 msgid ""
@@ -13078,7 +13160,7 @@ msgid "delete file"
 msgstr "Slett fil"
 
 msgid "delete playlist entry"
-msgstr "slett post i spillliste"
+msgstr "slett oppføring i spillliste"
 
 msgid "delete saved playlist"
 msgstr "Slett lagret spilleliste"
@@ -13789,7 +13871,7 @@ msgid "stop Service on Start"
 msgstr "stopp Kanal ved Start"
 
 msgid "stop entry"
-msgstr "stopp entry"
+msgstr "stopp oppføring"
 
 msgid "stop recording"
 msgstr "stopp opptak"
