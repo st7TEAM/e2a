@@ -123,7 +123,7 @@ class DeliteEpgPanel(Screen):
 			out.write("Satmate_sky.UK,ext_dat,http://hqsatellite.com/satmate/skyuk_epg.dat.gz,7,none\n")
 			out.write("Rytec_SKYDE,ext_dat,http://www.vuplus-community.net/rytec/germany/epg.dat.gz,7,none\n")
 		
-			out.write("Sky-Ita,opentv,Marco Polo,1:0:1:E31:16A8:FBFF:820000:0:0:0:,0\n")
+			out.write("Sky-Ita,opentv,NationalGeo,1:0:1:E39:16A8:FBFF:820000:0:0:0:,0\n")
 			out.write("Sky-Uk,opentv,Hip Hop,1:0:2:FD1:7D4:2:11A0000:0:0:0:,0\n")
 			
 			out.write("Rytec-BE-NL,ext_dat,http://www.vuplus-community.net/rytec/benl/epg.dat.gz,7,none\n")
