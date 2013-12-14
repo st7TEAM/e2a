@@ -1415,7 +1415,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 			self.pluglist.append(["Web Manual (5.2 Mega)", "vuplus-manual"])
 		if machine != "vusolo":
 			self.pluglist.append(["HbbTV", "enigma2-plugin-extensions-hbbtv"])
-		if machine == "vusolo" || machine == "bm750" machine == "vuuno":
+		if machine == "vusolo" or machine == "bm750" or machine == "vuuno":
 			self.pluglist.append(["Wmv, Wma, Asf media support", "gst-ffmpeg"])
 		
 		self.activityTimer = eTimer()
