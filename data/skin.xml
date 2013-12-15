@@ -485,6 +485,9 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <ePixmap pixmap="skin_default/menu/arrow1.png" position="75,560" size="48,48" alphatest="blend"/>
 <ePixmap pixmap="skin_default/menu/exit2.png" position="1150,48" size="48,48" alphatest="blend"/>
 <ePixmap pixmap="skin_default/menu/bluep.png" position="80,43" size="65,65" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/arrow_h.png" position="60,138" size="48,48" alphatest="blend"/>
+<ePixmap pixmap="skin_default/menu/ok2.png" position="540,138" size="48,48" alphatest="blend"/>
+<eLabel position="60,323" size="460,2" backgroundColor="grey" zPosition="10" />
 <widget source="Title" render="Label" position="300,40" size="680,50" halign="center" font="Regular;42" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
 <ePixmap pixmap="skin_default/buttons/red35x35.png" position="180,650" size="35,35" alphatest="blend"/>
 <ePixmap pixmap="skin_default/buttons/green35x35.png" position="450,650" size="35,35" alphatest="blend"/>
@@ -494,16 +497,16 @@ MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (100, 40), png = 2),
 <widget name="key_green" position="500,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget name="key_yellow" position="770,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
 <widget name="key_blue" position="1040,650" size="220,35" zPosition="1" font="Regular;24" halign="left" valign="center" backgroundColor="transpBlack" transparent="1"/>
-<widget name="lab1" position="640,485" size="210,25" font="Regular;20" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
-<widget name="lab2" position="200,120" size="210,25" font="Regular;20" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
-<widget name="list" position="60,158" size="450,25" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="skin_default/menu/button540x25.png" transparent="1"/>
-<widget name="lab3" position="60,191" size="200,25" font="Regular;20" halign="left" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-<widget name="activecam" position="180,191" size="230,25" font="Regular;20" halign="left" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/> 
-<widget name="Ilab1" position="60,225" size="410,25" font="Regular;20" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-<widget name="Ilab2" position="60,250" size="410,25" font="Regular;20" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-<widget name="Ilab3" position="60,275" size="410,25" font="Regular;20" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-<widget name="Ilab4" position="60,300" size="410,25" font="Regular;20" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
-<widget name="Ecmtext" position="60,335" size="560,220" font="Regular;18" halign="left" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+<widget name="lab1" position="640,487" size="300,30" font="Regular;24" zPosition="2" foregroundColor="blue" backgroundColor="transpBlack" transparent="1"/>
+<widget name="lab2" position="220,115" size="210,25" font="Regular;20" zPosition="2" backgroundColor="transpBlack" transparent="1"/>
+<widget name="list" position="117,148" size="410,25" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="skin_default/menu/button540x25.png" transparent="1"/>
+<widget name="lab3" position="60,186" size="200,25" font="Regular;20" halign="left" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+<widget name="activecam" position="180,186" size="230,25" font="Regular;20" halign="left" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/> 
+<widget name="Ilab1" position="60,220" size="410,25" font="Regular;20" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+<widget name="Ilab2" position="60,245" size="410,25" font="Regular;20" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+<widget name="Ilab3" position="60,270" size="410,25" font="Regular;20" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+<widget name="Ilab4" position="60,295" size="410,25" font="Regular;20" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
+<widget name="Ecmtext" position="60,330" size="560,220" font="Regular;18" halign="left" zPosition="2" foregroundColor="grey" backgroundColor="transpBlack" transparent="1"/>
 </screen>
 <screen name="DeliteAddons" position="0,0" size="1280,720" title="Addons Manager" flags="wfNoBorder">
 <widget source="session.VideoPicture" render="Pig" position="640,130" size="570,335" zPosition="3" backgroundColor="#ff000000"/>
