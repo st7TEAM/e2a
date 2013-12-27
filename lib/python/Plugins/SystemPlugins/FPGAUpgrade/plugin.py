@@ -185,7 +185,7 @@ class UpgradeStatus(Screen):
 			ERROR_MSG = ''
 			ERROR_CODE = int(self.status) * -1
 			ERROR_MSG = self.parent.FPGA.get_error_msg(ERROR_CODE, ERROR_MSG)
-			self.status_bar.setText("Fail to update!!")
+			self.status_bar.setText(_("Fail to update!!"))
 			self["info"].setText(_("Error[%d] : %s.\nPress OK to exit." % (self.status, ERROR_MSG)))
 			self.timer_check_progress.stop()
 			self.is_done = 1
@@ -201,7 +201,7 @@ class UpgradeStatus(Screen):
 			self.keyExit()
 		self.exit_count = self.exit_count + 1
 		#self.instance.setTitle("%s (%d)" % (self.title_str, (self.timeout-self.exit_count)))
-		self["info"].setText("Reboot after %d seconds.\nPress the OK to reboot now." %(self.timeout-self.exit_count)) 
+		self["info"].setText(_("Reboot after %d seconds.\nPress the OK to reboot now.") %(self.timeout-self.exit_count)) 
 
 	def keyExit(self):
 		if self.need_restart:
@@ -392,5 +392,5 @@ def main(session, **kwargs):
         session.open(FPGAUpgrade)
                                                            
 def Plugins(**kwargs):            
-	return PluginDescriptor(name=_("FPGA Upgrade"), description="Upgrade FPGA..", where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main)
+	return PluginDescriptor(name=_("FPGA Upgrade"), description=_("Upgrade FPGA.."), where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main)
 

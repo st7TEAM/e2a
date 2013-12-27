@@ -66,8 +66,8 @@ class Blindscan(ConfigListScreen, Screen):
 				"cancel": self.keyCancel,
 			}, -2)
 			self["key_red"] = StaticText(_("Exit"))
-			self["key_green"] = StaticText("Scan")
-			self["key_blue"] = StaticText("Scan All")
+			self["key_green"] = StaticText(_("Scan"))
+			self["key_blue"] = StaticText(_("Scan All"))
 			self["introduction"] = Label(_("Press Green/OK to start the scan"))
 			self.createSetup()
 		else :
@@ -395,7 +395,7 @@ class Blindscan(ConfigListScreen, Screen):
 		
 		self.makeNimSocket(nimName)
 		if self.binName is None:
-			self.session.open(MessageBox, "Blindscan is not supported in " + nimName + " tuner.", MessageBox.TYPE_ERROR)
+			self.session.open(MessageBox, _("Blindscan is not supported in ") + nimName + " tuner.", MessageBox.TYPE_ERROR)
 			print nimName + " is not support blindscan."
 			return
 
@@ -591,5 +591,5 @@ def main(session, **kwargs):
 	session.open(Blindscan)
                                                            
 def Plugins(**kwargs):            
-	return PluginDescriptor(name=_("Blindscan"), description="scan type(DVB-S)", where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main)
+	return PluginDescriptor(name=_("Blindscan"), description=_("scan type(DVB-S)"), where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main)
 

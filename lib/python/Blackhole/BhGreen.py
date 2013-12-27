@@ -113,7 +113,7 @@ class DeliteGreenPanel(Screen):
 
 
 	def NotYet(self):
-		mybox = self.session.open(MessageBox, "Function Not Yet Available", MessageBox.TYPE_INFO)
+		mybox = self.session.open(MessageBox, _("Function Not Yet Available"), MessageBox.TYPE_INFO)
 		mybox.setTitle(_("Info"))
 
 

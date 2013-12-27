@@ -35,7 +35,7 @@ class DeliteHdd(Screen):
 		self["lab1"] = Label(_("Status:"))
 		self["labstop"] = Label(_("Standby"))
 		self["labrun"] = Label(_("Running"))
-		self["key_red"] = Label("Standby Now")
+		self["key_red"] = Label(_("Standby Now"))
 		self["key_green"] = Label(_("Set Acoustic"))
 		self["key_yellow"] = Label(_("Set Standby"))
 		

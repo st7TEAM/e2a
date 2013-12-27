@@ -161,7 +161,7 @@ class DeliteAddons(Screen):
 		elif self.sel == 7:
 			self.session.open(addonsParentalConfig)
 		else:
-			nobox = self.session.open(MessageBox, "Function Not Yet Available", MessageBox.TYPE_INFO)
+			nobox = self.session.open(MessageBox, _("Function Not Yet Available"), MessageBox.TYPE_INFO)
 			nobox.setTitle(_("Info"))
 			
 	def StatsDone(self):
@@ -594,8 +594,8 @@ class Nab_ShowDownFile(Screen):
 	def __init__(self, session, myidf):
 		Screen.__init__(self, session)
 
-		self["key_green"] = Label("Download")
-		self["key_yellow"] = Label("Preview")
+		self["key_green"] = Label(_('Download'))
+		self["key_yellow"] = Label(_('Preview'))
 		self["infotext"] = ScrollLabel()
 		self.tcat = ""
 		
@@ -786,10 +786,10 @@ class Nab_downPanel(Screen):
 			rc = system(cmd)
 			if fileExists("/usr/sbin/nab_e2_restart.sh"):
 				rc = system("rm -f /usr/sbin/nab_e2_restart.sh")
-				mybox = self.session.openWithCallback(self.hrestEn, MessageBox, "Gui will be now hard restarted to complete package installation.\nPress ok to continue", MessageBox.TYPE_INFO)
+				mybox = self.session.openWithCallback(self.hrestEn, MessageBox, _("Gui will be now hard restarted to complete package installation.\nPress ok to continue"), MessageBox.TYPE_INFO)
 				mybox.setTitle(_("Info"))
 			else:
-				mybox = self.session.open(MessageBox, "Addon Succesfully Installed.", MessageBox.TYPE_INFO)
+				mybox = self.session.open(MessageBox, _("Addon Succesfully Installed."), MessageBox.TYPE_INFO)
 				mybox.setTitle(_("Info"))
 				self.close()
 

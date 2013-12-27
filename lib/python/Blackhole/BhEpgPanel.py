@@ -1245,7 +1245,7 @@ class DeliteDownChannels(Screen):
 		Screen.__init__(self, session)
 		
 		self.provider = provider
-		msg = "Wait please," + provider + _(" Channels list download in progress...")
+		msg = _("Wait please,") + provider + _(" Channels list download in progress...")
 		self["lab1"] = Label(msg)
 		self["key_red"] = Label(_("Close"))
 		
@@ -1371,9 +1371,9 @@ class DeliteDownEpgNow(Screen):
 			try:
 				filein = urlopen(myurl, timeout = 5)
 			except HTTPError, e:
-    				self["lab1"].setText("Sorry, Connection Failed.")
+    				self["lab1"].setText(_("Sorry, Connection Failed."))
 			except URLError, e:
-    				self["lab1"].setText("Sorry, Connection Failed.")
+    				self["lab1"].setText(_("Sorry, Connection Failed."))
 			else:
 				fileout = open(myepgfile, "wb")
 				while True:

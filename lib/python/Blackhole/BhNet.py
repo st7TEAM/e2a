@@ -272,7 +272,7 @@ class DeliteSamba(Screen):
 		rc = system("ps > /tmp/nvpn.tmp")
 		self["labrun"].hide()
 		self["labstop"].hide()
-		self["labactive"].setText("Disabled")
+		self["labactive"].setText(_("Disabled"))
 		self.my_samba_active = False
 		self.my_samba_run = False
 		

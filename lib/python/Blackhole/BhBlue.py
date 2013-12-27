@@ -355,7 +355,7 @@ class DeliteAutocamMan(Screen):
 				continue
 			elif parts[0] == "deldefault":
 				defaultcam = self.GetCamName(parts[1])
-				self["defaultcam"].setText("Default Cam:  " + defaultcam)
+				self["defaultcam"].setText(_("Default Cam:  ") + defaultcam)
 			else:
 				text = parts[2] + "\t" + self.GetCamName(parts[1])
 				res = (text, parts[0])

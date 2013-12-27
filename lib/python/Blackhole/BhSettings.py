@@ -140,7 +140,7 @@ class DeliteSettings(Screen):
 			self.noYet()
 		
 	def noYet(self):
-		nobox = self.session.open(MessageBox, "Function Not Yet Available", MessageBox.TYPE_INFO)
+		nobox = self.session.open(MessageBox, _("Function Not Yet Available"), MessageBox.TYPE_INFO)
 		nobox.setTitle(_("Info"))
 	
 		
@@ -830,7 +830,7 @@ class DeliteSetupDevicePanelConf(Screen, ConfigListScreen):
 		ConfigListScreen.__init__(self, self.list)
 		self["key_red"] = Label(_("Save"))
 		self["key_green"] = Label(_("Cancel"))
-		self["Linconn"] = Label("Wait please while scanning your box devices...")
+		self["Linconn"] = Label(_("Wait please while scanning your box devices..."))
 		
 		self["actions"] = ActionMap(["WizardActions", "ColorActions"],
 		{
@@ -1414,7 +1414,7 @@ class BhSpeedUp(Screen, ConfigListScreen):
 		if machine == "vusolo2":
 			self.pluglist.append(["Web Manual (5.2 Mega)", "vuplus-manual"])
 		if machine != "vusolo":
-			self.pluglist.append(["HbbTV", "enigma2-plugin-extensions-hbbtv"])
+			self.pluglist.append(["Opera browser & HbbTV", "enigma2-plugin-extensions-hbbtv"])
 		if machine == "vusolo" or machine == "bm750" or machine == "vuuno":
 			self.pluglist.append(["Wmv, Wma, Asf media support", "gst-ffmpeg"])
 		
