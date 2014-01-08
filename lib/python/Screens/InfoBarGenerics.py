@@ -1918,6 +1918,7 @@ class InfoBarSubserviceSelection:
 			del self.selectedSubservice
 
 from Components.Sources.HbbtvApplication import HbbtvApplication
+gHbbtvApplication = HbbtvApplication()
 class InfoBarRedButton:
 	def __init__(self):
 		if not (config.misc.rcused.value == 1):
@@ -1925,7 +1926,7 @@ class InfoBarRedButton:
 				{
 					"activateRedButton": (self.activateRedButton, _("Red button...")),
 				})
-			self["HbbtvApplication"] = HbbtvApplication()
+			self["HbbtvApplication"] = gHbbtvApplication
 		else:
 			self["HbbtvApplication"] = Boolean(fixed=0)
 			self["HbbtvApplication"].name = "" #is this a hack?
