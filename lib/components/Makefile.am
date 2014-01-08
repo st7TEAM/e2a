@@ -8,9 +8,11 @@ noinst_LIBRARIES = libenigma_components.a
 
 libenigma_components_a_SOURCES = \
 	file_eraser.cpp \
-	scan.cpp
+	scan.cpp \
+	tuxtxtapp.cpp
 
 componentsincludedir = $(pkgincludedir)/lib/components
 componentsinclude_HEADERS = \
 	file_eraser.h \
-	scan.h
+	scan.h \
+	tuxtxtapp.h
