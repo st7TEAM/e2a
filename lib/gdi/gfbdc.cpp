@@ -13,7 +13,19 @@ gFBDC::gFBDC()
 
 	if (!fb->Available())
 		eFatal("no framebuffer available");
-
+		
+        fb->getMode(m_xres, m_yres, m_bpp);
+        
+        /* we can only use one of these three modes: */
+        if (!((m_xres == 720 && m_yres == 576)
+                || (m_xres == 1280 && m_yres == 720)
+                || (m_xres == 1920 && m_yres == 1080)))
+        {
+        	/* fallback to a decent default */
+        	m_xres = 720;
+        	m_yres = 576;
+        }
+        
 	surface.clut.data = 0;
 	setResolution(1280, 720); // default res
 	reloadSettings();
