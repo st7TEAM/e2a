@@ -26,7 +26,7 @@ class About(Screen):
 		
 		self["ImageVersion"] = StaticText("Build: " + about.getEnigmaVersionString())
 		
-		self["FPVersion"] = StaticText("Team Homesite: vuplus-community.net")
+		self["FPVersion"] = StaticText("DevloPeMent: ST7TEAM FROM NEW SOURCE CODE")
 		
 		self["TunerHeader"] = StaticText(_("Detected NIMs:"))
 
