@@ -161,8 +161,10 @@ int main(int argc, char **argv)
 	for (int i = 0xfe80; i < 0xff00; ++i)
 		eTextPara::forceReplacementGlyph(i);
 
-        eWidgetDesktop dsk(my_dc->size()); 
-	eWidgetDesktop dsk_lcd(my_lcd_dc->size());
+//	eWidgetDesktop dsk(eSize(720, 576));
+	eWidgetDesktop dsk(eSize(1280, 720));
+	
+        eWidgetDesktop dsk_lcd(my_lcd_dc->size());
 
 	dsk.setStyleID(0);
 	dsk_lcd.setStyleID(my_lcd_dc->size().width() == 96 ? 2 : 1);
