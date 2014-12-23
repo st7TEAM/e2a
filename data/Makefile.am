@@ -1,4 +1,4 @@
-SUBDIRS = countries fonts defaults extensions keymaps skin_default Vu_HD 
+SUBDIRS = countries fonts defaults extensions keymaps skin_default  
 
 dist_pkgdata_DATA = \
 	defaultsatlists.xml \
