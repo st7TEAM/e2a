@@ -64,24 +64,16 @@ class DeliteBluePanel(Screen):
 		}, -1)
 		
 	def nInfo(self):
-		m = self.checkKern()
-		if m == 1:
-			self.session.open(DeliteInfo)
+		self.session.open(DeliteInfo)
 
 	def Settings(self):
-		m = self.checkKern()
-		if m == 1:
-			self.session.open(DeliteSettings)
+		self.session.open(DeliteSettings)
 		
 	def autoCam(self):
-		m = self.checkKern()
-		if m == 1:
-			self.session.open(DeliteAutocamMan)
+		self.session.open(DeliteAutocamMan)
 		
 	def keyRed(self):
-		m = self.checkKern()
-		if m == 1:
-			self.session.open(DeliteEpgPanel)
+		self.session.open(DeliteEpgPanel)
 
 	def populate_List(self):
 		self.camnames = {}
@@ -189,10 +181,6 @@ class DeliteBluePanel(Screen):
 
 	def keyOk(self):
 		
-		m = self.checkKern()
-		if m != 1:
-			return
-			
 		self.sel = self["list"].getCurrent()
 		self.newcam = self.camnames[self.sel]
 		
