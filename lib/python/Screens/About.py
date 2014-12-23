@@ -16,17 +16,12 @@ class About(Screen):
 		bhVer = f.readline().strip()
 		f.close()
 		
-		bhRev = ""
-		f = open("/etc/bhrev",'r')
-		bhRev = f.readline().strip()
-		f.close()
-
-		self["EnigmaVersion"] = StaticText("Firmware: " + bhVer + " " + bhRev)
+		self["EnigmaVersion"] = StaticText("Firmware: " + bhVer + " ")
 #		self["ImageVersion"] = StaticText("Image: " + about.getImageVersionString())
 		
 		self["ImageVersion"] = StaticText("Build: " + about.getEnigmaVersionString())
 		
-		self["FPVersion"] = StaticText("DevloPeMent: ST7TEAM FROM NEW SOURCE CODE")
+		self["FPVersion"] = StaticText("DevlopeMent: ST7TEAM FROM NEW SOURCE CODE")
 		
 		self["TunerHeader"] = StaticText(_("Detected NIMs:"))
 
